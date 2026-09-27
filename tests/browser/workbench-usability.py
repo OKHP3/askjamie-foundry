@@ -9,6 +9,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import zipfile
 from contextlib import closing
 from pathlib import Path
 
@@ -43,6 +44,10 @@ DRAFT_FIELDS = [
     "output_contract",
     "constraints",
     "target",
+    "trigger",
+    "conversion_notes",
+    "adapter_platform",
+    "tool_requirements",
     "phase",
     "evidence",
     "client_org",
@@ -212,11 +217,23 @@ async def main() -> None:
                 assert any("New project" in item for item in focus_labels), focus_labels
 
                 await page.get_by_role("button", name="＋ New project").click()
-                await page.get_by_role("radio", name="Blank capability").check()
+                await page.get_by_role("radio", name="Portable Agent Skill").check()
                 await page.get_by_role("button", name="Create draft").click()
                 await page.wait_for_load_state("networkidle")
                 await page.get_by_role("tab", name="Brief").click()
                 await page.get_by_label("Title").fill("Usability check")
+                await expect(page.get_by_label("Kind", exact=True)).to_have_value("agent-skill")
+                await page.get_by_label("Slug", exact=True).fill("usability-check")
+                await page.get_by_label("Audience", exact=True).fill("Capability authors")
+                await page.get_by_label("Purpose", exact=True).fill("Check a reusable skill package.")
+                await page.get_by_label("Skill trigger", exact=True).fill("Use when checking a reusable skill package.")
+                await page.get_by_role("tab", name="Behavior", exact=True).click()
+                await page.get_by_label("Instructions", exact=True).fill("Review scope and return the next step.")
+                await page.get_by_label("Output contract", exact=True).fill("A bounded next step.")
+                await page.get_by_role("tab", name="Evidence", exact=True).click()
+                await page.get_by_label("Source text", exact=True).fill("Synthetic browser fixture.")
+                await page.get_by_label("Source reference", exact=True).fill("CI synthetic source")
+                await page.get_by_label("Conversion mapping and losses", exact=True).fill("Host behavior unverified.")
                 await page.get_by_role("button", name="Save changes").click()
                 await expect(page.locator(".success-box")).to_contain_text(
                     "Saved. The desk has a new revision."
@@ -224,6 +241,13 @@ async def main() -> None:
                 await expect(page.locator("#live-region")).to_contain_text(
                     re.compile(r"Project saved|Saved")
                 )
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                async with page.expect_download() as download_info:
+                    await page.get_by_role("button", name="Download private ZIP", exact=True).click()
+                download = await download_info.value
+                with zipfile.ZipFile(await download.path()) as archive:
+                    assert "skills/usability-check/SKILL.md" in archive.namelist()
+                    assert json.loads(archive.read("adapters/plan.json"))["installable"] is False
 
                 project = await page.evaluate(
                     """async () => {
