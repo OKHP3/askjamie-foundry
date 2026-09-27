@@ -22,20 +22,19 @@ governance:
   naming_pattern: "askjamie-[code]-[slug]"
   agents_doc: AGENTS.md
 
-deployment_surfaces:
-  - name: openai-custom-gpt
-    status: "[planned | active | deprecated | none]"
-    url: ""
-  - name: microsoft-copilot
-    status: "[planned | active | deprecated | none]"
-    url: ""
-  - name: gemini-gem
-    status: "[planned | active | deprecated | none]"
-    url: ""
+# Portable source first; host packages require separate evidence.
+packaging:
+  product_kind: agent-skill
+  portable_skill: true
+  adapter_status: unverified-plan
+  capability_path: capabilities/[REPO_NAME]
+  storage: private-external
+
+deployment_surfaces: []
 
 visibility_control:
-  visibility: "[private | public]"
-  public_graduation_allowed: true
+  visibility: private
+  public_graduation_allowed: false
   # For client overlays, set these:
   # client_org: "[org-slug]"
   # visibility_lock: permanent-private

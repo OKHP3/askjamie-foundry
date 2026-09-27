@@ -1,5 +1,14 @@
 # Changelog
 
+
+## 2026-09-27: Portable skills and capability subtrees
+
+- Make Agent Skills the default workbench product, preserving legacy drafts.
+- Export skill source, conversion review, and explicit plugin/connector plans.
+- Define capability subtrees with nine planned migration records and source lineage.
+- Keep private capabilities outside the public checkout and enforce public-subtree gates.
+- Update schemas, scaffold, contributor guidance, and orientation source. No Pages release.
+
 ## Unreleased
 
 - Recovered seven completed Replit commits with preserved history: clearer

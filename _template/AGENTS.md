@@ -48,6 +48,8 @@ encapsulate? What deployment surfaces does it support?]
 docs/       Design notes, research, governance docs for this capability
 origin/     Source prompts and raw instruction text (pre-refinement)
 skill/      Refined, deployable prompt and skill artifacts
+skills/     Portable Agent Skill products with named SKILL.md entry points
+adapters/   Host-specific plugin and connector packages
 prompts/    Versioned prompt files ready for deployment surfaces
 research/   Supporting research, competitive analysis, references
 tests/      Evaluation prompts, expected outputs, regression checks

@@ -84,5 +84,20 @@ properties:
           type: string
         notes:
           type: string
+        migration:
+          type: object
+          required: [destination, status, storage, source_commit]
+          additionalProperties: false
+          properties:
+            destination:
+              type: string
+              pattern: '^capabilities/[a-z0-9]+(-[a-z0-9]+)*$'
+            status:
+              enum: [planned, source-inventoried, imported, verified]
+            storage:
+              enum: [private-external, public-subtree]
+            source_commit:
+              type: string
+              pattern: '^$|^[a-f0-9]{40}$|^[a-f0-9]{64}$'
 
 additionalProperties: false

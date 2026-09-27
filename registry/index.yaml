@@ -1,6 +1,6 @@
 schema_version: "1.0"
 foundry: OKHP3/AskJamie-FoundRy
-updated: "2026-06-04"
+updated: "2026-09-27"
 
 # ---------------------------------------------------------------------------
 # Registry of all child repositories governed by AskJamie FoundRy
@@ -15,6 +15,11 @@ repositories:
   # ── Core Capabilities ────────────────────────────────────────────────────
 
   - repo: OKHP3/askjamie-aj01-resume-representative
+    migration:
+      destination: capabilities/askjamie-aj01-resume-representative
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "AskJamie™ — Résumé Representative"
     code: aj01
     family: core-capability
@@ -28,6 +33,11 @@ repositories:
     notes: "Historical staged source material was removed from this checkout on 2026-07-27."
 
   - repo: OKHP3/askjamie-aj02-professional-portfolio
+    migration:
+      destination: capabilities/askjamie-aj02-professional-portfolio
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "AskJamie™ — Professional Portfolio"
     code: aj02
     family: core-capability
@@ -40,6 +50,11 @@ repositories:
     notes: "Planned. Not yet scaffolded."
 
   - repo: OKHP3/askjamie-aj03-enterprise-sleuth
+    migration:
+      destination: capabilities/askjamie-aj03-enterprise-sleuth
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "AskJamie™ — Enterprise Sleuth"
     code: aj03
     family: enterprise-sleuth
@@ -52,6 +67,11 @@ repositories:
     notes: "Planned. Not yet scaffolded."
 
   - repo: OKHP3/askjamie-aj04-brandguard
+    migration:
+      destination: capabilities/askjamie-aj04-brandguard
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "AskJamie™ — BrandGuard"
     code: aj04
     family: brandguard
@@ -66,6 +86,11 @@ repositories:
   # ── BrandGuard Sentinels ─────────────────────────────────────────────────
 
   - repo: OKHP3/askjamie-brg00-builders-firstsource
+    migration:
+      destination: capabilities/askjamie-brg00-builders-firstsource
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "BrandGuard — Builders FirstSource"
     code: brg00
     family: brandguard
@@ -81,6 +106,11 @@ repositories:
     notes: "Historical staged source material was removed from this checkout on 2026-07-27. Client overlay, permanently private."
 
   - repo: OKHP3/askjamie-brg01-lego
+    migration:
+      destination: capabilities/askjamie-brg01-lego
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "BrandGuard — LEGO"
     code: brg01
     family: brandguard
@@ -91,6 +121,11 @@ repositories:
     notes: "Planned."
 
   - repo: OKHP3/askjamie-brg12-mathews-archery
+    migration:
+      destination: capabilities/askjamie-brg12-mathews-archery
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "BrandGuard — Mathews Archery"
     code: brg12
     family: brandguard
@@ -103,6 +138,11 @@ repositories:
   # ── Client Overlays ───────────────────────────────────────────────────────
 
   - repo: OKHP3/buildersfirstsource-askjamie-aj03-enterprise-sleuth
+    migration:
+      destination: capabilities/buildersfirstsource-askjamie-aj03-enterprise-sleuth
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "Builders FirstSource × AskJamie Enterprise Sleuth"
     code: aj03
     family: client-overlay
@@ -115,6 +155,11 @@ repositories:
     notes: "Planned. Client overlay — permanently private."
 
   - repo: OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth
+    migration:
+      destination: capabilities/cvshealth-askjamie-aj03-enterprise-sleuth
+      status: planned
+      storage: private-external
+      source_commit: ""
     display_name: "CVS Health × AskJamie Enterprise Sleuth"
     code: aj03
     family: client-overlay
