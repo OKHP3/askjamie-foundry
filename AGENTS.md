@@ -36,6 +36,7 @@ This relay owns:
 - `.agents/skills/`: project-local Agent Skills and their evaluation resources
 - `assets/`: shared AskJamie brand assets
 - `public/`: read-only Pages orientation source, separate from private authoring
+  (including social previews, browser icons, and the orientation web manifest)
 - `scripts/`: Python governance utilities
 - `workbench/`: local application, static interface and public Skillz metadata snapshot
 - `tests/`: application and governance regression checks
@@ -45,6 +46,10 @@ examples under `docs/github-workflows/` remain reference files.
 The Pages workflow is manually dispatched only; merging source does not
 authorize publication. The manifest's `surface_boundary` separates public
 orientation from the loopback workbench. Hosted authoring remains design-only.
+The public URL is `https://okhp3.github.io/askjamie-foundry/` (lowercase).
+Presentation assets and their release checks are documented in
+`docs/presentation-assets.md`; the web manifest identifies public orientation,
+not an installed or offline authoring application.
 
 This repository owns its local workbench runtime. It does not own sibling
 application implementations, hosted production configuration, or public release
