@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Reworked the README around the FoundRy experience, working entry links,
+  cross-platform startup instructions, and a linked presentation-asset directory.
+- Added original AskJamie workshop artwork, social-card metadata, browser and
+  home-screen icons, a Safari pinned-tab mark, and a public-site web manifest.
+  Kept private authoring separate and Pages publication manual.
+- Corrected the live Pages check to the verified lowercase repository path,
+  `/askjamie-foundry/`; the former mixed-case URL returned 404.
+
 - Recovered seven completed Replit commits with preserved history: clearer
   draft recovery identities, safe rapid project switching, a pinned mentor
   deferral record, and manual Pages content verification and recovery guidance.
