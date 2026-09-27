@@ -1,8 +1,12 @@
 # AskJamie FoundRy
 
-> The R&D forge of AskJamie™ — where reasoning models, conversation flows,
-> personal knowledge systems, BrandGuard frameworks, and assistant behaviors
-> are shaped and tempered.
+Portable Agent Skills, composed into plugins and connectors for the platforms
+people choose. Existing Custom GPTs and prompts are conversion inputs.
+
+The local workbench creates private skill packages and target adapter plans.
+Capability projects move toward governed `capabilities/` subtrees, preserving
+source identity and private controls. Start with the
+[skill-first operating model](docs/skill-first-foundry.md).
 
 ---
 
@@ -82,9 +86,8 @@ adopted, adapted, deferred, or out of scope.
 ```text
 OKHP3/OverKill-Hill          ← Universe governance
   └── OKHP3/AskJamie-FoundRy ← This repository (relay FoundRy)
-        ├── askjamie-aj##-*   ← Core capability repos
-        ├── askjamie-brg##-*  ← BrandGuard repos
-        └── [client]-askjamie-*  ← Client overlay repos
+        └── capabilities/    ← Publicly graduated capability subtrees
+Private capabilities retain the same layout outside this public checkout.
 ```
 
 | Layer | URL / Repo |
@@ -103,7 +106,7 @@ OKHP3/OverKill-Hill          ← Universe governance
 
 **AskJamie FoundRy** is a public-source, owner-local capability-building application and governance
 relay. Author assistants, decision tools and guided workflows; save revisions,
-record evidence, and export governed child-repository packages.
+record evidence, and export portable skills with governed plugin/connector plans.
 
 The durable asset is the **capability and knowledge architecture**. A Custom
 GPT, Copilot agent, Gemini Gem, website page, or local agent is only a
@@ -120,12 +123,13 @@ for that area.
 
 | Folder | What It Is | Docs |
 |---|---|---|
-| [`_template/`](_template/) | Canonical starter scaffold — copy this to create any new AskJamie child repo | [ABOUT.md](_template/ABOUT.md) |
+| [`_template/`](_template/) | Canonical capability scaffold for private packages and reviewed subtrees | [ABOUT.md](_template/ABOUT.md) |
 | [`registry/`](registry/) | Authoritative catalog of all 9 governed child repos plus the triage intake log | [README.md](registry/README.md) |
 | [`schemas/`](schemas/) | YAML schemas for `manifest.yaml` and `registry/index.yaml` validation | [README.md](schemas/README.md) |
 | [`docs/`](docs/) | Relay design, governance reference, naming conventions, migration guide, ecosystem map | [README.md](docs/README.md) |
 | [`scripts/`](scripts/) | Python utilities: manifest validator, registry health check, filename normalizer | [README.md](scripts/README.md) |
 | [`assets/`](assets/) | Shared AskJamie™ brand standards and identity assets | [README.md](assets/README.md) |
+| [`capabilities/`](capabilities/) | Reviewed public capability subtree namespace | [README.md](capabilities/README.md) |
 
 ### Capability Registry
 
@@ -167,7 +171,7 @@ up-to-date registry of all governed child repositories.
 
 ## Relay Responsibilities
 
-- Maintain AskJamie child repository scaffolds in `_template/`
+- Maintain portable skill and adapter scaffolds in `_template/`
 - Maintain the child repo registry in `registry/index.yaml`
 - Maintain manifest and registry schemas in `schemas/`
 - Publish governance guidance for AskJamie, BrandGuard, and client-overlay repos
@@ -177,12 +181,13 @@ up-to-date registry of all governed child repositories.
 
 ## Working in This Repository
 
-### Creating a New Child Repository
+### Creating a Capability
 
-1. Copy `_template/` contents into the new repo.
-2. Fill in `manifest.yaml` with correct lineage, naming, and visibility fields.
-3. Add an entry to `registry/index.yaml`.
-4. Follow naming conventions in `docs/naming-conventions.md`.
+1. Create a private Agent Skill draft in the workbench or copy `_template/` into private storage.
+2. Preserve source and define the trigger, procedure, output contract, and conversion gaps.
+3. Add plugin/connector adapter requirements for each intended platform and evaluate behavior.
+4. Record the planned subtree in `registry/index.yaml`. Import into public `capabilities/`
+   only after explicit public graduation. Follow [the migration contract](docs/skill-first-foundry.md).
 
 ### Validating Manifests
 

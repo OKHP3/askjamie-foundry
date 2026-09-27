@@ -17,6 +17,7 @@ import yaml
 
 from .model import InputError, run_decision, validate_answer_nodes, validate_graph
 from .store import Store, utc_now
+from .packaging import PRODUCT_KINDS, package_files, packaging_errors
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -88,7 +89,7 @@ def repo_name(project: dict[str, Any]) -> str:
 
 
 def validate_project(project: dict[str, Any]) -> dict[str, Any]:
-    errors: list[str] = []
+    errors: list[str] = packaging_errors(project)
     warnings: list[str] = []
     for field in REQUIRED_EXPORT_FIELDS:
         if not project.get(field, "").strip():
@@ -227,9 +228,16 @@ def _manifest(project: dict[str, Any]) -> dict[str, Any]:
         "brand": {"brand_domain": "askjamie", "trademark": "AskJamie™", "capability_code": project["code"]},
         "lineage": lineage,
         "governance": {"naming_pattern": repo_name(project), "agents_doc": "AGENTS.md"},
+        "packaging": {
+            "product_kind": project["kind"],
+            "portable_skill": project["kind"] in PRODUCT_KINDS,
+            "adapter_status": "unverified-plan" if project["kind"] in PRODUCT_KINDS else "none",
+            "capability_path": f"capabilities/{repo_name(project)}",
+            "storage": "private-external",
+        },
         "deployment_surfaces": [
             {"name": name, "status": "none", "url": ""}
-            for name in ("openai-custom-gpt", "microsoft-copilot", "gemini-gem")
+            for name in (() if project["kind"] in PRODUCT_KINDS else ("openai-custom-gpt", "microsoft-copilot", "gemini-gem"))
         ],
         "visibility_control": visibility,
         "maintainers": [{"handle": "OKHP3", "role": "owner"}],
@@ -291,6 +299,10 @@ def _generated_files(project: dict[str, Any], store: Store) -> dict[str, bytes]:
         "repo": f"OKHP3/{repo}", "display_name": project["title"], "code": project["code"],
         "family": project["family"], "status": "draft", "visibility": "private",
         "public_graduation_allowed": False,
+        "migration": {
+            "destination": f"capabilities/{repo}", "status": "planned",
+            "storage": "private-external", "source_commit": "",
+        },
         **({"parent_capability": canonical_parent} if canonical_parent else {}),
         **({"client_org": project["client_org"]} if project["client_org"] else {}),
         **({"visibility_lock": project["visibility_lock"]} if project["visibility_lock"] else {}),
@@ -323,6 +335,19 @@ def _generated_files(project: dict[str, Any], store: Store) -> dict[str, bytes]:
         "research/skills.json": json.dumps(selected_skills, ensure_ascii=False, indent=2) + "\n",
         "exports/evaluation-records.json": json.dumps({"project_revision": project["revision"], "evaluations": store.evaluations(project["id"])}, ensure_ascii=False, indent=2) + "\n",
     }
+    files.update(package_files(project))
+    if project["kind"] in PRODUCT_KINDS:
+        files["README.md"] = files["README.md"].replace(
+            "Read `skill/instructions.md` and `prompts/system.md`.",
+            f"Start with `skills/{project['slug']}/SKILL.md`. Review `docs/conversion.md` and `adapters/plan.json`. "
+            "The skill folder is portable source. The adapter plan is not an installable plugin or connector.",
+        )
+        files["README.md"] += (
+            f"\n## Capability subtree\n\nPlanned relative destination: `capabilities/{repo}`. "
+            "This package is private. Keep it in private storage outside the public FoundRy checkout. "
+            "A subtree path is not publication approval. Legacy repository identity is retained for lineage.\n"
+        )
+        files[f"skills/{project['slug']}/LICENSE.md"] = (TEMPLATE_PATH / "LICENSE.md").read_text(encoding="utf-8")
     if project["kind"] == "decision-tool":
         files["decision.json"] = json.dumps(project["decision"], ensure_ascii=False, indent=2) + "\n"
         files["index.html"] = _decision_html(project)
