@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Corrected the October 1 technology refresh scope and Python 3.11/3.12 security-line references.
 - Reworked the README around the FoundRy experience, working entry links,
   cross-platform startup instructions, and a linked presentation-asset directory.
 - Added original AskJamie workshop artwork, social-card metadata, browser and

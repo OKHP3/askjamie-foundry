@@ -1,7 +1,10 @@
 # Technology inventory and update policy
 
-Inventory baseline assembled 2026-09-18 America/Chicago; its linked sources were
-retrieved 2026-10-01 UTC. The automated release watch was rerun 2026-10-01 UTC.
+Inventory baseline assembled 2026-09-18 America/Chicago; its original linked
+sources were retrieved 2026-09-19 UTC. The Python, npm, and OpenSSL release
+sources called out in the October 1 targeted refresh were rechecked 2026-10-01
+UTC; other entries retain their earlier source-observation dates unless noted.
+The automated release watch was rerun 2026-10-01 UTC.
 Question: what does this solution use, how current is it, and how will later
 stable releases reach it with evidence of compatibility?
 
@@ -35,7 +38,7 @@ above. These are dated observations, not perpetual latest-version claims.
 
 | Technology | In place / evidence | Latest stable and primary source | Update route |
 |---|---|---|---|
-| Python / CPython | Required CI floor `3.11`; a separate CI job follows latest stable `3.x`. Project guidance reports successful verification under `3.11.15` and `3.14.5`. This Windows audit process itself reports **3.14.0rc1**, a prerelease, and is not the stable runtime baseline. | [3.14.8; 3.11 line 3.11.16; 3.12 line 3.12.14](https://www.python.org/downloads/) | Latest stable CI plus separately validated host migrations |
+| Python / CPython | Required CI floor `3.11`; a separate CI job follows latest stable `3.x`. Project guidance reports successful verification under `3.11.15` and `3.14.5`. This Windows audit process itself reports **3.14.0rc1**, a prerelease, and is not the stable runtime baseline. | [3.14.8](https://www.python.org/downloads/release/python-3148/); [3.11 security line 3.11.17](https://www.python.org/downloads/release/python-31117/); [3.12 security line 3.12.15](https://www.python.org/downloads/release/python-31215/) | Latest stable CI plus separately validated host migrations |
 | Python standard library | `http.server`, `sqlite3`, `json`, `zipfile`, `hashlib`, `urllib`, `unittest`, `venv`, etc. follow the interpreter | [Same Python release](https://docs.python.org/3/library/) | Update Python; no individual pip pins. HTTP server remains loopback-only. |
 | PyYAML | `6.0.3` pinned in `requirements.txt`, installed on both hosts | [6.0.3](https://pypi.org/project/PyYAML/) | Current; Dependabot PRs |
 | jsonschema | `4.26.0` pinned in `requirements.txt`, installed on both hosts | [4.26.0](https://pypi.org/project/jsonschema/) | Current; Dependabot PRs |
@@ -170,9 +173,11 @@ not an application dependency update. The zlib watch now reads the official
 upstream GitHub release API because `zlib.net` returned HTTP 403 to the hosted
 runner; this changes the lookup source, not the reviewed version (`1.3.2`).
 
-On 2026-10-01, the release watch reported Python `3.14.8`, npm `12.2.0` and
-OpenSSL `4.0.3`. The review baselines now record those upstream releases. No
-host runtime, application dependency or managed workspace was changed. The
+On 2026-10-01, the targeted release review rechecked Python `3.14.8` and its
+security-maintenance lines `3.11.17` and `3.12.15`, npm `12.2.0`, and OpenSSL
+`4.0.3`. The review baselines record those upstream observations. Other
+inventory rows were not re-probed as part of this targeted refresh. No host
+runtime, application dependency or managed workspace was changed. The
 `AVAILABLE` pip `26.2.1` entry remains installation tooling, not a package pin.
 
 ## Migration and merge plan
