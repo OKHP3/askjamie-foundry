@@ -78,6 +78,7 @@ def check_registry(
     valid_visibilities = {"private", "public"}
 
     seen_repos = set()
+    seen_destinations = set()
     seen_codes = defaultdict(list)
     stats = defaultdict(lambda: defaultdict(int))
 
@@ -131,6 +132,19 @@ def check_registry(
         # Locked repos should not be public
         if visibility_lock == "permanent-private" and visibility == "public":
             errors.append(f"{prefix}: visibility is 'public' but visibility_lock is permanent-private")
+
+        migration = entry.get("migration")
+        if migration:
+            destination = migration["destination"]
+            if destination in seen_destinations:
+                errors.append(f"{prefix}: duplicate capability destination: {destination}")
+            seen_destinations.add(destination)
+            if migration["storage"] == "public-subtree" and (
+                visibility != "public" or graduation is not True or protected
+            ):
+                errors.append(f"{prefix}: public subtree requires approved public visibility and graduation")
+            if migration["status"] != "planned" and not migration["source_commit"]:
+                errors.append(f"{prefix}: migration beyond planned requires a source commit")
 
         # Stats
         if family:

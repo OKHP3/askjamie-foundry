@@ -71,7 +71,7 @@
     live.setAttribute("role", state.error ? "alert" : "status");
     live.removeAttribute("aria-live");
   };
-  const draftDefaults = (kind = "assistant") => ({
+  const draftDefaults = (kind = "agent-skill") => ({
     title: "",
     slug: "",
     code: "aj05",
@@ -84,7 +84,11 @@
     instructions: "",
     output_contract: "",
     constraints: "",
-    target: "offline-specification",
+    target: "portable-agent-skill",
+    trigger: "",
+    conversion_notes: "",
+    adapter_platform: "",
+    tool_requirements: "",
     phase: "draft",
     evidence: "",
     client_org: "",
@@ -157,6 +161,10 @@
     "output_contract",
     "constraints",
     "target",
+    "trigger",
+    "conversion_notes",
+    "adapter_platform",
+    "tool_requirements",
     "phase",
     "evidence",
     "client_org",
@@ -550,8 +558,8 @@
     [
       [
         "blank",
-        "Blank capability",
-        "A clean brief for an assistant or new idea.",
+        "Portable Agent Skill",
+        "A portable skill, with optional plugin or connector adapters.",
       ],
       [
         "decision-tool",
@@ -878,12 +886,26 @@
       field("Kind", "kind", p.kind, {
         select: true,
         options: [
-          ["assistant", "Assistant"],
+          ["agent-skill", "Portable Agent Skill"],
+          ["plugin", "Plugin adapter plan"],
+          ["connector", "Connector adapter plan"],
+          ["assistant", "Legacy assistant"],
           ["decision-tool", "Decision tool"],
           ["workflow", "Workflow"],
         ],
       }),
       field("Audience", "audience", p.audience),
+      field("Skill trigger", "trigger", p.trigger || "", {
+        full: true, textarea: true,
+        hint: "Describe what the skill does and when to use it. Required for skills and adapter plans, up to 1024 characters.",
+      }),
+      field("Adapter platform", "adapter_platform", p.adapter_platform || "", {
+        hint: "For plugin/connector plans, name the intended host and format/version. Compatibility remains unverified.",
+      }),
+      field("Tool and permission requirements", "tool_requirements", p.tool_requirements || "", {
+        full: true, textarea: true,
+        hint: "Record MCP, API, app, authentication, permission, and fallback requirements. Do not enter secrets.",
+      }),
       field("Purpose", "purpose", p.purpose, { full: true, textarea: true }),
       field("Constraints", "constraints", p.constraints, {
         full: true,
@@ -892,6 +914,9 @@
       field("Delivery target", "target", p.target, {
         select: true,
         options: [
+          ["portable-agent-skill", "Portable Agent Skill"],
+          ["plugin-adapter", "Plugin adapter"],
+          ["connector-adapter", "Connector adapter"],
           ["offline-specification", "Offline specification"],
           ["openai-custom-gpt", "OpenAI Custom GPT"],
           ["microsoft-copilot", "Microsoft Copilot"],
@@ -1307,6 +1332,10 @@
         full: true,
         hint: "A provenance note or stable locator. This does not fetch remote content.",
       }),
+      field("Conversion mapping and losses", "conversion_notes", p.conversion_notes || "", {
+        full: true, textarea: true,
+        hint: "Map source behaviors to skills, references, adapters, exclusions, or blockers. Record missing files and acceptance checks.",
+      }),
       field("Evidence notes", "evidence", p.evidence, {
         full: true,
         textarea: true,
@@ -1520,7 +1549,7 @@
   }
   async function createProject(kind) {
     if (!canLeaveCurrent()) return;
-    kind = kind === "blank" ? "assistant" : kind;
+    kind = kind === "blank" ? "agent-skill" : kind;
     const payload = template(kind);
     try {
       const saved = await api("/api/projects", {
@@ -2003,7 +2032,7 @@
       }
       const kind = new FormData(event.currentTarget).get("template");
       event.currentTarget.closest("dialog").close();
-      createProject(kind === "blank" ? "assistant" : kind);
+      createProject(kind === "blank" ? "agent-skill" : kind);
     });
   document
     .getElementById("new-project-button")

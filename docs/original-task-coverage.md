@@ -4,6 +4,19 @@ Assessment date: 2026-09-08. This note maps the original 24 AskJamie Found-Ry
 proposal tasks from the [website proposal packet](https://github.com/OKHP3/AskJamie/blob/171bf5c/assets/docs/coop-pertition-agent-backlog-2026-09-07.md)
 to the current repository evidence on or after `main@3ea4316`.
 
+## 2026-10-05 evidence addendum
+
+The dated matrix below is retained as the September assessment. Its F21 partial
+label is superseded: `navigate_with_confirmation()` in
+`tests/browser/workbench-usability.py` exercises both canceled and confirmed
+unsaved navigation, including return to the projects view. The acceptance record
+in `docs/acceptance/usability.md` also records both outcomes. Browser acceptance
+passed on reviewed head `f091c1d313957ceed4a73d815d5c488588d8549e` in
+[run 37354390192](https://github.com/OKHP3/askjamie-foundry/actions/runs/37354390192).
+No duplicate navigation implementation or regression is outstanding on this
+evidence. Human screen-reader acceptance remains separate from these automated
+checks, and the original proposal numbering remains separate from issue 6.
+
 ## Scope note
 
 The original F01-F24 queue was an upstream proposal, not the later issue-6

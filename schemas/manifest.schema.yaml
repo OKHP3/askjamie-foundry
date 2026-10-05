@@ -94,6 +94,54 @@ properties:
         type: string
         default: "AGENTS.md"
 
+  packaging:
+    type: object
+    required: [product_kind, portable_skill, adapter_status, capability_path, storage]
+    additionalProperties: false
+    allOf:
+      - if:
+          properties:
+            product_kind:
+              enum: [agent-skill, plugin, connector]
+        then:
+          properties:
+            portable_skill:
+              const: true
+            adapter_status:
+              const: unverified-plan
+        else:
+          properties:
+            portable_skill:
+              const: false
+            adapter_status:
+              const: none
+    properties:
+      product_kind:
+        enum: [agent-skill, plugin, connector, assistant, decision-tool, workflow]
+      portable_skill:
+        type: boolean
+      adapter_status:
+        enum: [none, unverified-plan]
+      capability_path:
+        type: string
+        pattern: '^capabilities/[a-z0-9]+(-[a-z0-9]+)*$'
+      storage:
+        enum: [private-external, public-subtree]
+
+  product_direction:
+    type: object
+    required: [primary, composition, layout, legacy_inputs]
+    additionalProperties: false
+    properties:
+      primary:
+        const: portable-agent-skills
+      composition:
+        const: host-specific-plugin-and-connector-adapters
+      layout:
+        const: capability-subtrees
+      legacy_inputs:
+        const: preserve-for-conversion
+
   deployment_surfaces:
     type: array
     items:
@@ -213,4 +261,27 @@ properties:
     pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
     description: ISO 8601 date the manifest was last updated.
 
+allOf:
+  - if:
+      required: [packaging]
+      properties:
+        packaging:
+          properties:
+            storage:
+              const: public-subtree
+    then:
+      properties:
+        visibility_control:
+          required: [visibility, public_graduation_allowed]
+          properties:
+            visibility:
+              const: public
+            public_graduation_allowed:
+              const: true
+            bfs_firewall:
+              const: false
+          not:
+            anyOf:
+              - required: [client_org]
+              - required: [visibility_lock]
 additionalProperties: false

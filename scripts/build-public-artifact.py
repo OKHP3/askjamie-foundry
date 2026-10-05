@@ -44,7 +44,7 @@ GA4_SCRIPT_URL = (
 REQUIRED_SEO_MARKERS = (
     "<title>AskJamie FoundRy | A careful place to shape capability</title>",
     f'<link rel="canonical" href="{PAGES_BASE_URL}" />',
-    f'<meta property="og:image" content="{PAGES_BASE_URL}social-card.png"',
+    f'<meta property="og:image" content="{PAGES_BASE_URL}assets/social-preview.jpg"',
     '<meta name="twitter:card" content="summary_large_image" />',
 )
 REQUIRED_ANALYTICS_MARKERS = (
@@ -84,11 +84,14 @@ def check() -> None:
     for marker in REQUIRED_ANALYTICS_MARKERS:
         if marker not in html:
             raise SystemExit(f"public artifact is missing required GA4 tracking: {marker}")
-    private_html = (ROOT / "workbench" / "static" / "index.html").read_text(
-        encoding="utf-8"
-    )
-    if GA4_MEASUREMENT_ID in private_html or "googletagmanager.com/gtag/js" in private_html:
-        raise SystemExit("private workbench must not include public Pages GA4 tracking")
+    for private_path in (ROOT / "workbench" / "static").rglob("*"):
+        if private_path.is_file() and private_path.suffix in {".html", ".js", ".css"}:
+            private_text = private_path.read_text(encoding="utf-8")
+            if GA4_MEASUREMENT_ID in private_text or "googletagmanager.com/gtag/js" in private_text:
+                raise SystemExit(
+                    "private workbench must not include public Pages GA4 tracking: "
+                    f"{private_path.relative_to(ROOT)}"
+                )
     if re.search(r'href="/|src="/', html):
         raise SystemExit("public artifact contains a root-relative asset path")
     for marker in FORBIDDEN:

@@ -8,7 +8,9 @@ import shutil
 import tempfile
 import time
 import unittest
+import importlib.util
 from pathlib import Path
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -18,16 +20,34 @@ SCRIPT = ROOT / "scripts" / "build-public-artifact.py"
 class PublicArtifactTests(unittest.TestCase):
     def test_ga4_tracking_is_limited_to_public_pages(self):
         public_html = (ROOT / "public/index.html").read_text(encoding="utf-8")
-        workbench_html = (ROOT / "workbench/static/index.html").read_text(
-            encoding="utf-8"
-        )
         self.assertIn(
             "https://www.googletagmanager.com/gtag/js?id=G-VJ1BKXS27H",
             public_html,
         )
         self.assertIn('gtag("config", "G-VJ1BKXS27H")', public_html)
-        self.assertNotIn("G-VJ1BKXS27H", workbench_html)
-        self.assertNotIn("googletagmanager.com/gtag/js", workbench_html)
+        for private_path in (ROOT / "workbench/static").rglob("*"):
+            if private_path.is_file() and private_path.suffix in {".html", ".js", ".css"}:
+                private_text = private_path.read_text(encoding="utf-8")
+                self.assertNotIn("G-VJ1BKXS27H", private_text, private_path.name)
+                self.assertNotIn("googletagmanager.com/gtag/js", private_text, private_path.name)
+
+    def test_public_check_rejects_analytics_in_private_html_or_javascript(self):
+        spec = importlib.util.spec_from_file_location("public_artifact_check", SCRIPT)
+        checker = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(checker)
+        for filename, forbidden in (
+            ("index.html", "https://www.googletagmanager.com/gtag/js"),
+            ("app.js", "G-VJ1BKXS27H"),
+        ):
+            with self.subTest(filename=filename), tempfile.TemporaryDirectory() as temp_dir:
+                isolated = Path(temp_dir)
+                shutil.copytree(ROOT / "public", isolated / "public")
+                private = isolated / "workbench/static"
+                private.mkdir(parents=True)
+                (private / filename).write_text(forbidden, encoding="utf-8")
+                with patch.object(checker, "ROOT", isolated), patch.object(checker, "SOURCE", isolated / "public"):
+                    with self.assertRaisesRegex(SystemExit, "private workbench must not include"):
+                        checker.check()
 
     def test_public_artifact_builds_with_relative_assets_and_no_private_runtime(self):
         result = subprocess.run(
@@ -50,7 +70,7 @@ class PublicArtifactTests(unittest.TestCase):
             html,
         )
         self.assertIn(
-            '<meta property="og:image" content="https://okhp3.github.io/askjamie-foundry/social-card.png" />',
+            '<meta property="og:image" content="https://okhp3.github.io/askjamie-foundry/assets/social-preview.jpg" />',
             html,
         )
         self.assertIn('<meta name="twitter:card" content="summary_large_image" />', html)

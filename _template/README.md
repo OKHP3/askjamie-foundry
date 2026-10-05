@@ -32,24 +32,29 @@ it exists within the AskJamie™ ecosystem.]
 docs/       Design notes, research, and governance docs
 origin/     Source prompts (raw, pre-refinement)
 skill/      Refined, deployable prompt artifacts
+skills/     Portable products, each with <name>/SKILL.md and supporting files
+adapters/   Host-specific plugin/connector plans and tested integrations
 prompts/    Versioned prompt files ready for deployment
 research/   Supporting research and references
 tests/      Evaluation prompts and regression checks
 schemas/    Local YAML/JSON schemas
 assets/     Brand assets and images
-exports/    Deployment exports (GPT JSON, Copilot YAML, etc.)
+exports/    Versioned private packages and evaluation evidence
 archive/    Retired versions and deprecated content
 ```
 
 ---
 
-## Deployment Surfaces
+## Product and Adapter Status
 
 | Surface | Status | Notes |
 |---|---|---|
-| OpenAI Custom GPT | [status] | [link or notes] |
-| Microsoft Copilot | [status] | [link or notes] |
-| Gemini Gem | [status] | [link or notes] |
+| Portable Agent Skill | draft | Define a trigger, procedure, references, and tests |
+| Plugin/connector adapter | unverified plan | Select a host and verify its current package contract |
+
+Preserve legacy GPT source in `origin/`. Record source mapping and losses before
+claiming conversion. Do not claim installation or host compatibility without
+target-specific tests. Private capability subtrees stay outside the public relay.
 
 ---
 

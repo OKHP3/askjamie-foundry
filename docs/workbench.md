@@ -1,5 +1,21 @@
 # AskJamie Found-Ry workbench
 
+## Portable skills and adapters
+
+New drafts default to Portable Agent Skill. Choose Plugin adapter plan or Connector
+adapter plan under Kind when composing a skill with external tools. Record a Skill
+trigger, source, reusable Instructions and Output contract. Adapter plans also
+require Adapter platform and Tool and permission requirements. Record conversion
+mapping and losses under Evidence. Do not put credentials in any draft field.
+
+Download produces `skills/<slug>/SKILL.md`, supporting procedure and license,
+`docs/conversion.md`, and `adapters/plan.json` alongside existing governance and
+source evidence. The plan is not installable; host compatibility remains unverified.
+Read [the product and migration contract](skill-first-foundry.md). Legacy kinds,
+backups, revision history, supplied-response checks, and decision runners remain
+supported. Existing drafts are not automatically converted.
+
+
 Build an interpretive capability from an idea, test its decisions, and keep the
 source and evidence with the result. Everything stays on this computer.
 

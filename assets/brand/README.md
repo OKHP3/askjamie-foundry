@@ -15,15 +15,22 @@ Shared AskJamie™ brand assets for use across the FoundRy and child repositorie
 
 ## Usage
 
+The FoundRy README and public website use the linked
+[presentation assets](../../docs/presentation-assets.md): original workshop
+artwork, social preview, and icon derivatives of the existing public A mark.
+Their canonical files live in [`public/`](../../public/) so the Pages build
+includes them. The standards documents below remain authoritative.
+
 - Reference these files when creating new capability READMEs, GPT configurations,
   or deployment surface assets.
 - Do not modify these files without updating the version in the filename
   (e.g., `askjamie-brand-standards-v2.pdf`).
 - These assets may be referenced by child repos but should not be copied into them.
   Link or cite from this location.
-- The wide cover is also published as `public/social-card.png` for public-page
-  Open Graph and Twitter previews. Set a GitHub repository social preview or
-  Replit project cover separately in that service’s settings; the repository
+- The recovered Replit cover is retained as `public/social-card.png`, an alternate
+  to the canonical workshop JPEG used by the README and public social metadata.
+  Set a GitHub repository social preview or Replit project cover separately in
+  that service's settings; the repository
   does not change account avatars or external project branding automatically.
 
 ## Brand Identity Quick Reference

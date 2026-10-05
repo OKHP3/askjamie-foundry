@@ -1,5 +1,13 @@
 # AskJamie Found-Ry project overview
 
+## Current product direction
+
+Portable skills are now the default workbench product; plugin/connector outputs
+are unverified adapter plans. Capability subtree destinations and private storage
+rules are recorded in [the skill-first contract](docs/skill-first-foundry.md).
+This source change does not establish Replit runtime parity or deploy Pages.
+
+
 Public-source AskJamie capability-building application and governance workbench.
 Local drafts and protected exports remain private.
 The local application authors assistant specifications, decision tools and

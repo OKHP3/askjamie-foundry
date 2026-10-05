@@ -1,10 +1,36 @@
 # AGENTS.md: AskJamie-FoundRy
 
+## Skill-first product direction, 2026-09-27
+
+The owner directed conversion from Custom GPT workbenches to portable Agent
+Skills, then host-specific plugins and connectors. AskJamie owns this regional
+implementation. Existing GPTs and prompts are preserved migration inputs.
+The product contract is `docs/skill-first-foundry.md`.
+
+- Use `skills/<name>/SKILL.md` for capability products and `adapters/` for host
+  packages. `.agents/skills/` remains contributor tooling.
+- Prefer capability subtrees at `capabilities/<existing-capability-slug>/`.
+  Registry `repo` identities remain lineage, with explicit migration records.
+- Every registry entry requires migration destination, status, storage, and
+  source commit fields. Package kind, portability, and adapter status must agree
+  with the manifest schema; adapter plans remain unverified.
+- Private capabilities stay outside this public checkout using the same layout.
+  Do not import private Git history or clear permanent-private protections.
+- The workbench exports skill source and unverified adapter plans. Never describe
+  plans as installable plugins, functioning connectors, or universal compatibility.
+- Preserve legacy assistant/decision/workflow drafts and exports. Do not rewrite
+  old drafts automatically. Model evaluations and host tests need separate evidence.
+
+This direction supersedes child-repository creation as the default product layout
+in older guidance below. Remote retirement and actual source imports are separate
+migration work. AutoCAD remains R10.
+
+
 ## Project identity
 
 This repository is the intentionally public AskJamie FoundRy relay. Its confirmed role is
-to translate parent OKHP3 governance into child-repository scaffolds, schemas,
-registry records, documentation, and staged capability assets.
+to translate parent OKHP3 governance into portable skills, target adapters,
+capability subtree scaffolds, schemas, registry records, and documentation.
 
 It is a public-source development and governance workbench with a local single-user
 application under `workbench/`. Python serves a plain HTML/CSS/JavaScript
@@ -28,7 +54,8 @@ governed child repositories without losing lineage or visibility controls.
 
 This relay owns:
 
-- `_template/`: the starter scaffold for child repositories
+- `_template/`: the capability scaffold for portable skills and adapters
+- `capabilities/`: the public subtree namespace for graduated capabilities
 - `registry/`: the authoritative child-repository catalog and intake log
 - `schemas/`: manifest and registry schemas
 - `docs/`: relay design, governance, naming, migration, and ecosystem guidance
@@ -36,6 +63,7 @@ This relay owns:
 - `.agents/skills/`: project-local Agent Skills and their evaluation resources
 - `assets/`: shared AskJamie brand assets
 - `public/`: read-only Pages orientation source, separate from private authoring
+  (including social previews, browser icons, and the orientation web manifest)
 - `scripts/`: Python governance utilities
 - `workbench/`: local application, static interface and public Skillz metadata snapshot
 - `tests/`: application and governance regression checks
@@ -45,6 +73,10 @@ examples under `docs/github-workflows/` remain reference files.
 The Pages workflow is manually dispatched only; merging source does not
 authorize publication. The manifest's `surface_boundary` separates public
 orientation from the loopback workbench. Hosted authoring remains design-only.
+The public URL is `https://okhp3.github.io/askjamie-foundry/` (lowercase).
+Presentation assets and their release checks are documented in
+`docs/presentation-assets.md`; the web manifest identifies public orientation,
+not an installed or offline authoring application.
 
 This repository owns its local workbench runtime. It does not own sibling
 application implementations, hosted production configuration, or public release
@@ -88,7 +120,7 @@ Read these files first when orienting to a task:
 Capability repositories inherit this directory contract from `_template/`:
 
 ```text
-docs/ origin/ skill/ prompts/ research/ tests/
+docs/ origin/ skills/ adapters/ skill/ prompts/ research/ tests/
 schemas/ assets/ exports/ archive/
 ```
 
@@ -201,6 +233,8 @@ mentoring does not require a shared application runtime. See `docs/ecosystem-map
 - Keep all workbench projects and generated packages private by default.
 - Never clear protection flags or client identity after a draft becomes protected.
 - Treat selected Skillz metadata as references, not executable or verified skills.
+- Public orientation analytics must remain outside private workbench assets and
+  generated packages. Check the public build guard before a Pages release.
 - Label supplied-response checks distinctly from model execution; there are no
   model-provider calls in the local runtime.
 - A valid package is not public graduation, a created remote repository, or an

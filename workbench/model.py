@@ -31,6 +31,10 @@ DRAFT_FIELDS = {
     "workflow_steps",
     "decision",
     "eval_cases",
+    "trigger",
+    "conversion_notes",
+    "adapter_platform",
+    "tool_requirements",
 }
 
 FAMILIES = {
@@ -41,7 +45,7 @@ FAMILIES = {
     "conversation-design",
     "rag-experiment",
 }
-KINDS = {"assistant", "decision-tool", "workflow"}
+KINDS = {"agent-skill", "plugin", "connector", "assistant", "decision-tool", "workflow"}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 CODE_RE = re.compile(r"^(?:aj(?:0[1-9]|[1-9][0-9])|brg[0-9]{2})$")
 NODE_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$")
@@ -60,7 +64,7 @@ def default_draft() -> dict[str, Any]:
         "slug": "",
         "code": "aj05",
         "family": "core-capability",
-        "kind": "assistant",
+        "kind": "agent-skill",
         "purpose": "",
         "audience": "",
         "source_text": "",
@@ -68,7 +72,11 @@ def default_draft() -> dict[str, Any]:
         "instructions": "",
         "output_contract": "",
         "constraints": "",
-        "target": "offline-specification",
+        "target": "portable-agent-skill",
+        "trigger": "",
+        "conversion_notes": "",
+        "adapter_platform": "",
+        "tool_requirements": "",
         "phase": "draft",
         "evidence": "",
         "client_org": "",
@@ -117,6 +125,7 @@ def normalize_draft(raw: Any, *, allow_revision: bool = False) -> tuple[dict[str
         "title", "slug", "code", "family", "kind", "purpose", "audience",
         "source_reference", "target", "phase", "client_org", "parent_capability",
         "visibility_lock",
+        "trigger", "adapter_platform",
     }
     for field in DRAFT_FIELDS - {"bfs_firewall", "skill_ids", "workflow_steps", "decision", "eval_cases"}:
         draft[field] = _clean_text(draft[field], field, MAX_SHORT if field in short_fields else MAX_TEXT)
@@ -127,6 +136,9 @@ def normalize_draft(raw: Any, *, allow_revision: bool = False) -> tuple[dict[str
     if draft["phase"] not in {"draft", "shaping", "evidence", "review"}:
         raise InputError("phase must be one of: draft, shaping, evidence, review")
     if draft["target"] not in {
+        "portable-agent-skill",
+        "plugin-adapter",
+        "connector-adapter",
         "offline-specification",
         "openai-custom-gpt",
         "microsoft-copilot",
@@ -134,7 +146,7 @@ def normalize_draft(raw: Any, *, allow_revision: bool = False) -> tuple[dict[str
         "workflow-checklist",
     }:
         raise InputError(
-            "target must be one of: offline-specification, openai-custom-gpt, "
+            "target must be one of: portable-agent-skill, plugin-adapter, connector-adapter, offline-specification, openai-custom-gpt, "
             "microsoft-copilot, gemini-gem, workflow-checklist"
         )
     if draft["code"] and not CODE_RE.fullmatch(draft["code"]):

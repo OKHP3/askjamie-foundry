@@ -1,6 +1,40 @@
 # Changelog
 
+## 2026-10-05: Replit presentation recovery
+
+- Recover the Replit Agent's avatar/cover alternatives, crawler files and public
+  analytics configuration without adding generated provider storage locators.
+- Preserve the published workshop artwork, canonical icons and portable-skill
+  direction while reconciling the two source histories.
+- Guard private workbench HTML, JavaScript and CSS against public analytics.
+- Correct the dated F21 coverage assessment using existing browser evidence.
+
+## 2026-10-05: Portable skill integration
+
+- Reconcile the portable skill changes with the published README and presentation assets.
+- Require migration metadata on every registry entry and reject contradictory package claims.
+- Add regression coverage for missing migration records and all six package kinds.
+- Align the workbench data contract and manifest Pages URL with the released surface.
+
+
+## 2026-09-27: Portable skills and capability subtrees
+
+- Make Agent Skills the default workbench product, preserving legacy drafts.
+- Export skill source, conversion review, and explicit plugin/connector plans.
+- Define capability subtrees with nine planned migration records and source lineage.
+- Keep private capabilities outside the public checkout and enforce public-subtree gates.
+- Update schemas, scaffold, contributor guidance, and orientation source. No Pages release.
+
 ## Unreleased
+
+- Corrected the October 1 technology refresh scope and Python 3.11/3.12 security-line references.
+- Reworked the README around the FoundRy experience, working entry links,
+  cross-platform startup instructions, and a linked presentation-asset directory.
+- Added original AskJamie workshop artwork, social-card metadata, browser and
+  home-screen icons, a Safari pinned-tab mark, and a public-site web manifest.
+  Kept private authoring separate and Pages publication manual.
+- Corrected the live Pages check to the verified lowercase repository path,
+  `/askjamie-foundry/`; the former mixed-case URL returned 404.
 
 - Recovered seven completed Replit commits with preserved history: clearer
   draft recovery identities, safe rapid project switching, a pinned mentor
