@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <radialGradient id="wash" cx="76%" cy="46%" r="68%">
+      <stop offset="0" stop-color="#35464a"/>
+      <stop offset=".48" stop-color="#292723"/>
+      <stop offset="1" stop-color="#201b18"/>
+    </radialGradient>
+    <pattern id="grain" width="90" height="90" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="13" r="1" fill="#ece6df" opacity=".12"/>
+      <circle cx="46" cy="60" r=".8" fill="#ece6df" opacity=".1"/>
+      <circle cx="76" cy="28" r=".7" fill="#d9ae6a" opacity=".12"/>
+      <path d="M16 77h10M60 10h7" stroke="#ece6df" stroke-width=".6" opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="640" fill="url(#wash)"/>
+  <rect width="1280" height="640" fill="url(#grain)" opacity=".5"/>
+  <path d="M72 90h1136M72 550h1136" stroke="#ece6df" stroke-opacity=".16"/>
+  <circle cx="116" cy="139" r="26" fill="none" stroke="#61b5c5" stroke-width="2"/>
+  <path d="m104 151 11-25 13 25m-19-9h14" fill="none" stroke="#ece6df" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="158" y="146" fill="#ece6df" font-family="Trebuchet MS, Avenir Next, sans-serif" font-size="23" font-weight="700" letter-spacing="1">ASKJAMIE</text>
+  <text x="304" y="146" fill="#a99b91" font-family="Trebuchet MS, Avenir Next, sans-serif" font-size="23" letter-spacing="1">FOUNDRY</text>
+  <text x="1208" y="143" text-anchor="end" fill="#61b5c5" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.6">PUBLIC ORIENTATION / PRIVATE FABRICATION</text>
+  <text x="82" y="285" fill="#ece6df" font-family="Trebuchet MS, Avenir Next, sans-serif" font-size="69" font-weight="500" letter-spacing="-2.5">Make the next step</text>
+  <text x="82" y="371" fill="#61b5c5" font-family="Trebuchet MS, Avenir Next, sans-serif" font-size="76" font-weight="500" letter-spacing="-3">easier to see.</text>
+  <text x="84" y="429" fill="#b7aaa0" font-family="Arial, sans-serif" font-size="20">Interpretive capabilities, evidence, and careful next steps.</text>
+  <text x="84" y="507" fill="#d9ae6a" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.1">ASKJAMIE.BOT  ·  PRIVATE WORKBENCH  ·  PUBLIC SOURCE</text>
+  <g transform="translate(960 335)" fill="none">
+    <circle r="176" stroke="#8fc6a1" stroke-opacity=".23"/>
+    <circle r="132" stroke="#d9ae6a" stroke-opacity=".4"/>
+    <circle r="88" stroke="#61b5c5" stroke-opacity=".68"/>
+    <path d="M-224 118 224-118" stroke="#ece6df" stroke-opacity=".2" stroke-dasharray="5 9"/>
+    <circle r="39" fill="#61b5c5" stroke="#a9e4eb" stroke-opacity=".5"/>
+    <path d="m-16 17 15-35 18 35M-8 5H9" stroke="#13282b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-174" cy="-28" r="4" fill="#d9ae6a"/>
+    <circle cx="153" cy="88" r="4" fill="#8fc6a1"/>
+    <circle cx="66" cy="-145" r="3" fill="#ece6df"/>
+  </g>
+  <text x="1208" y="591" text-anchor="end" fill="#a99b91" font-family="Arial, sans-serif" font-size="12" letter-spacing="1.4">READ-ONLY PUBLIC GUIDE  /  ASKJAMIE FOUNDRY</text>
+</svg>

@@ -11,7 +11,7 @@
 The public Pages artifact is a read-only orientation to the AskJamie ecosystem:
 [`public/`](public/) is source-backed and contains no private state or authoring
 controls. Its expected project-site path is
-`https://okhp3.github.io/AskJamie-FoundRy/`, subject to a separately approved
+`https://okhp3.github.io/askjamie-foundry/`, subject to a separately approved
 Pages release.
 
 ## Recovering a bad Pages publication

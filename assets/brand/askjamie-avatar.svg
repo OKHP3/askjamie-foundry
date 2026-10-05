@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="36%" cy="26%" r="90%">
+      <stop offset="0" stop-color="#342c27"/>
+      <stop offset="1" stop-color="#201b18"/>
+    </radialGradient>
+    <pattern id="grain" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="12" r="1" fill="#ece6df" opacity=".12"/>
+      <circle cx="47" cy="60" r=".8" fill="#d9ae6a" opacity=".12"/>
+      <path d="M20 72h8M62 17h5" stroke="#ece6df" stroke-width=".6" opacity=".1"/>
+    </pattern>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="108" fill="url(#grain)" opacity=".5"/>
+  <circle cx="256" cy="256" r="174" fill="none" stroke="#61b5c5" stroke-width="3"/>
+  <circle cx="256" cy="256" r="144" fill="none" stroke="#d9ae6a" stroke-width="1.5" opacity=".55"/>
+  <path d="m163 354 88-199 98 199M198 292h108" fill="none" stroke="#ece6df" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="382" cy="139" r="8" fill="#8fc6a1"/>
+  <circle cx="132" cy="326" r="6" fill="#d9ae6a"/>
+</svg>

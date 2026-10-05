@@ -2,3 +2,4 @@
 - [Browser acceptance executable](browser-acceptance-executable.md) — Playwright browser tests need an explicit executable path in this workspace.
 - [GitHub Branch Protection API](github-branch-protection.md) — user-owned repositories reject reviewer dismissal restrictions in protection payloads.
 - [Package installation side effects](package-installation-side-effects.md) — keep browser tooling isolated and review project metadata after package-manager installs.
+- [Port 5000 auto-detection](replit-port-detection.md) — temporary shell servers may add `.replit` port mappings; use the config validator to remove incidental entries.
