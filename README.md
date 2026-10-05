@@ -8,6 +8,11 @@
 
 Shape. Test. Refine.
 
+Portable Agent Skills are the default product. Compose them with separately
+verified plugins and connectors for the platforms people choose. Existing
+Custom GPTs and prompts remain conversion inputs. Start with the
+[skill-first operating model](docs/skill-first-foundry.md).
+
 AskJamie FoundRy is the workshop behind assistants, decision guides, and steady
 workflows. Bring an idea, define who it helps, shape its behavior, and keep the
 evidence beside the result. Export a governed package when it is ready for review.
@@ -27,6 +32,9 @@ computer, with private drafts and local storage.
 
 ## What you can make
 
+- **Portable skills with a clear trigger.** Export a self-contained skill folder,
+  source provenance, and conversion notes. Plugin and connector exports include
+  an unverified adapter plan that requires separate host packaging and testing.
 - **Assistants with a clear brief.** Define purpose, audience, instructions,
   constraints, and an output contract. Export editable instructions and
   specifications for your chosen deployment platform.
@@ -116,6 +124,7 @@ appear after a separately approved manual Pages release.
 | Area | What you will find |
 |---|---|
 | [`workbench/`](workbench/) | Local application and public Skillz metadata snapshot |
+| [`capabilities/`](capabilities/) | Reviewed public capability subtree namespace; private capabilities stay outside this checkout |
 | [`_template/`](_template/ABOUT.md) | Starter scaffold for governed child repositories |
 | [`registry/`](registry/README.md) | Child catalog and candidate intake decisions |
 | [`schemas/`](schemas/README.md) | Manifest and registry validation contracts |

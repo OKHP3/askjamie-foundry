@@ -1,5 +1,11 @@
 schema_version: "1.0"
 
+product_direction:
+  primary: portable-agent-skills
+  composition: host-specific-plugin-and-connector-adapters
+  layout: capability-subtrees
+  legacy_inputs: preserve-for-conversion
+
 identity:
   repo: OKHP3/AskJamie-FoundRy
   display_name: AskJamie FoundRy
@@ -52,7 +58,7 @@ surface_boundary:
   public_artifact:
     kind: static-pages-orientation
     path: public/
-    expected_url: https://okhp3.github.io/AskJamie-FoundRy/
+    expected_url: https://okhp3.github.io/askjamie-foundry/
     access: read-only
     contains_private_state: false
   private_workbench:
@@ -74,4 +80,4 @@ maintainers:
     role: owner
 
 created: "2024-01-01"
-updated: "2026-09-10"
+updated: "2026-10-05"

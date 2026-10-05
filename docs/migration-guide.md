@@ -1,5 +1,14 @@
 # Migration Guide — AskJamie FoundRy
 
+## Skill-first migration
+
+The current migration path is legacy GPT/source -> portable Agent Skill -> tested
+host adapters. Consolidate reviewed public capabilities under `capabilities/`.
+Private projects use the same relative layout outside this public repository.
+Follow [the source-preserving migration contract](skill-first-foundry.md) before
+using the historical child-repository procedure below. Never import private history.
+
+
 This guide covers migrating pre-standard content and legacy-named repos into
 the current AskJamie FoundRy governance structure.
 

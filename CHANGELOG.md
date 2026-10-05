@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-05: Portable skill integration
+
+- Reconcile the portable skill changes with the published README and presentation assets.
+- Require migration metadata on every registry entry and reject contradictory package claims.
+- Add regression coverage for missing migration records and all six package kinds.
+- Align the workbench data contract and manifest Pages URL with the released surface.
+
+
+## 2026-09-27: Portable skills and capability subtrees
+
+- Make Agent Skills the default workbench product, preserving legacy drafts.
+- Export skill source, conversion review, and explicit plugin/connector plans.
+- Define capability subtrees with nine planned migration records and source lineage.
+- Keep private capabilities outside the public checkout and enforce public-subtree gates.
+- Update schemas, scaffold, contributor guidance, and orientation source. No Pages release.
+
 ## Unreleased
 
 - Corrected the October 1 technology refresh scope and Python 3.11/3.12 security-line references.

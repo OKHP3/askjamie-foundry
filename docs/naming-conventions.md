@@ -1,5 +1,15 @@
 # Naming Conventions — AskJamie FoundRy
 
+## Capability subtree and product paths
+
+Retain existing capability repository slugs as `capabilities/<slug>/` directory
+names. Use `skills/<skill-name>/SKILL.md` for portable products, with lowercase
+ASCII letters, digits, single interior hyphens, and at most 64 characters in the
+skill name. Host-specific packages belong under `adapters/`. Brand spelling does
+not change repository URLs, source identity, or privacy. Existing repository-name
+patterns below remain valid identifiers and migration lineage.
+
+
 ## Canonical Patterns
 
 ### Core Capability Repositories

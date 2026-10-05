@@ -1,5 +1,13 @@
 # registry/
 
+## Subtree migration records
+
+The nine existing records retain their source identities, statuses, and privacy.
+Each has a planned `migration.destination`, `storage`, `status`, and `source_commit`.
+No source imports are complete. Private destinations are outside this public
+checkout. See [the migration contract](../docs/skill-first-foundry.md).
+
+
 **Role:** Authoritative catalog and intake log for all child repositories governed by this relay.  
 **Owner:** OKHP3/AskJamie-FoundRy  
 **Rule:** The registry is the source of truth. A repo not in `index.yaml` is not formally governed.

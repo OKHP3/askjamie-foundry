@@ -1,5 +1,16 @@
 # Governance Reference — AskJamie FoundRy
 
+## Current product and storage contract
+
+Portable Agent Skills are the primary product. Plugin and connector packages use
+host-specific adapters. Capability subtrees replace separate child repositories
+as the preferred layout; legacy repository identities remain lineage.
+Follow [the skill-first contract](skill-first-foundry.md). Earlier child-repository
+rules below still apply to retained sources and private capabilities.
+Public subtree imports require public graduation; private and protected sources
+remain outside this public checkout. A path or package does not confer access control.
+
+
 ## Authority Chain
 
 ```text
