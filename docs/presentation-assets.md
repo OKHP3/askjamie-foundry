@@ -17,6 +17,7 @@ no game artwork or branding was copied.
 | [`icons/`](../public/icons/) | 16/32 px favicons, 180 px Apple touch icon, 192/512 px bookmark icons, maskable 512 px icon, Safari monochrome mark |
 | [`site.webmanifest`](../public/site.webmanifest) | Public-site name, browser display mode, relative start URL/scope, theme, and icons |
 | [`index.html`](../public/index.html) | Canonical URL, Open Graph, Twitter large-image card, image dimensions/alt text, and WebSite structured data |
+| [`robots.txt`](../public/robots.txt) and [`sitemap.xml`](../public/sitemap.xml) | Crawler guidance and the canonical lowercase orientation URL |
 
 The maskable icon has an opaque background. Its ring and A fit within the central
 80%-diameter circle. It shares the regular square icon's pixels because that
@@ -53,6 +54,24 @@ introduced. PNG icons are browser-rendered derivatives of `app-icon.svg`.
 
 The local workbench remains a separate loopback-only application. Nothing in
 these public assets adds hosted authoring, model execution, or client access.
+
+## Recovered Replit alternatives and analytics
+
+The Replit Agent's earlier presentation assets are retained with source lineage:
+[`assets/brand/askjamie-avatar.svg`](../assets/brand/askjamie-avatar.svg) and its
+512 px PNG, plus the editable social-card SVG and 1280 by 640 cover PNG.
+[`public/social-card.png`](../public/social-card.png) and the root PNG favicon
+and touch-icon files retain those alternatives. They do not replace the
+canonical JPEG, ICO or `icons/` references in the published HTML and manifest.
+External project/avatar/social-preview settings still require separate service
+updates and readback.
+
+The owner-supplied GA4 Measurement ID `G-VJ1BKXS27H` loads only in the public
+orientation HTML. The build check requires its loader/configuration and rejects
+the measurement ID or loader in private workbench HTML, JavaScript or CSS.
+Private drafts, exports and workbench interactions are not an analytics surface.
+The source checks do not prove third-party collection or analytics reports.
+Visitor disclosure and tracking-choice behavior remain a separate owner decision.
 
 ## Verification and release
 

@@ -233,6 +233,8 @@ mentoring does not require a shared application runtime. See `docs/ecosystem-map
 - Keep all workbench projects and generated packages private by default.
 - Never clear protection flags or client identity after a draft becomes protected.
 - Treat selected Skillz metadata as references, not executable or verified skills.
+- Public orientation analytics must remain outside private workbench assets and
+  generated packages. Check the public build guard before a Pages release.
 - Label supplied-response checks distinctly from model execution; there are no
   model-provider calls in the local runtime.
 - A valid package is not public graduation, a created remote repository, or an

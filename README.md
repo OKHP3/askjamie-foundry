@@ -112,6 +112,7 @@ The banner is conceptual artwork, not an application screenshot.
 | **Web manifest** | [Name, theme, scope, and icons](public/site.webmanifest) |
 | **Sharing and search metadata** | [Canonical URL, Open Graph, Twitter card, and structured data](public/index.html) |
 | **Brand standards** | [PDF](assets/brand/askjamie-brand-standards.pdf) · [Editable Word document](assets/brand/askjamie-brand-standards.docx) |
+| **Recovered project avatar and cover alternatives** | [SVG/PNG source assets](assets/brand/README.md), with separate service-setting updates |
 
 The icon and manifest links identify the **public orientation site**. They do not
 install the private workbench or promise offline use. See the

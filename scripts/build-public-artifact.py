@@ -17,7 +17,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "public"
 OUTPUT = ROOT / "dist" / "pages"
-REQUIRED = ("index.html", "styles.css", ".nojekyll")
+REQUIRED = (
+    "index.html",
+    "styles.css",
+    ".nojekyll",
+    "site.webmanifest",
+    "social-card.png",
+    "robots.txt",
+    "sitemap.xml",
+)
 FORBIDDEN = (
     "/api/",
     ".foundry-data",
@@ -26,9 +34,24 @@ FORBIDDEN = (
     "sessionStorage",
     "fetch(",
 )
+PAGES_BASE_URL = "https://okhp3.github.io/askjamie-foundry/"
 EXPECTED_PAGES_PATH = "/askjamie-foundry/"
-LIVE_REQUIRED_MARKERS = (
+GA4_MEASUREMENT_ID = "G-VJ1BKXS27H"
+GA4_SCRIPT_URL = (
+    "https://www.googletagmanager.com/gtag/js"
+    f"?id={GA4_MEASUREMENT_ID}"
+)
+REQUIRED_SEO_MARKERS = (
     "<title>AskJamie FoundRy | A careful place to shape capability</title>",
+    f'<link rel="canonical" href="{PAGES_BASE_URL}" />',
+    f'<meta property="og:image" content="{PAGES_BASE_URL}assets/social-preview.jpg"',
+    '<meta name="twitter:card" content="summary_large_image" />',
+)
+REQUIRED_ANALYTICS_MARKERS = (
+    GA4_SCRIPT_URL,
+    f'gtag("config", "{GA4_MEASUREMENT_ID}")',
+)
+LIVE_REQUIRED_MARKERS = REQUIRED_SEO_MARKERS + REQUIRED_ANALYTICS_MARKERS + (
     "PUBLIC ORIENTATION / PRIVATE FABRICATION",
     "This page is read-only.",
     "loopback-only local",
@@ -55,6 +78,20 @@ def check() -> None:
     html = (SOURCE / "index.html").read_text(encoding="utf-8")
     if "<title>" not in html or 'name="description"' not in html:
         raise SystemExit("public artifact requires a title and description")
+    for marker in REQUIRED_SEO_MARKERS:
+        if marker not in html:
+            raise SystemExit(f"public artifact is missing required SEO metadata: {marker}")
+    for marker in REQUIRED_ANALYTICS_MARKERS:
+        if marker not in html:
+            raise SystemExit(f"public artifact is missing required GA4 tracking: {marker}")
+    for private_path in (ROOT / "workbench" / "static").rglob("*"):
+        if private_path.is_file() and private_path.suffix in {".html", ".js", ".css"}:
+            private_text = private_path.read_text(encoding="utf-8")
+            if GA4_MEASUREMENT_ID in private_text or "googletagmanager.com/gtag/js" in private_text:
+                raise SystemExit(
+                    "private workbench must not include public Pages GA4 tracking: "
+                    f"{private_path.relative_to(ROOT)}"
+                )
     if re.search(r'href="/|src="/', html):
         raise SystemExit("public artifact contains a root-relative asset path")
     for marker in FORBIDDEN:
@@ -65,8 +102,17 @@ def check() -> None:
             continue
         if not (SOURCE / reference).is_file():
             raise SystemExit(f"public artifact reference does not exist: {reference}")
+    robots = (SOURCE / "robots.txt").read_text(encoding="utf-8")
+    sitemap = (SOURCE / "sitemap.xml").read_text(encoding="utf-8")
+    if f"Sitemap: {PAGES_BASE_URL}sitemap.xml" not in robots:
+        raise SystemExit("public robots.txt must point to the canonical sitemap")
+    if f"<loc>{PAGES_BASE_URL}</loc>" not in sitemap:
+        raise SystemExit("public sitemap.xml must include the canonical Pages URL")
     subprocess.run(["node", "--check", str(SOURCE / "site.js")], check=False) if (SOURCE / "site.js").exists() else None
-    print("Public artifact check passed: read-only, relative, and self-contained.")
+    print(
+        "Public artifact check passed: read-only, relative assets, required metadata, "
+        "and public-only GA4 tracking."
+    )
 
 
 def build() -> None:

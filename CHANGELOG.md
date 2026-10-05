@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-05: Replit presentation recovery
+
+- Recover the Replit Agent's avatar/cover alternatives, crawler files and public
+  analytics configuration without adding generated provider storage locators.
+- Preserve the published workshop artwork, canonical icons and portable-skill
+  direction while reconciling the two source histories.
+- Guard private workbench HTML, JavaScript and CSS against public analytics.
+- Correct the dated F21 coverage assessment using existing browser evidence.
+
 ## 2026-10-05: Portable skill integration
 
 - Reconcile the portable skill changes with the published README and presentation assets.

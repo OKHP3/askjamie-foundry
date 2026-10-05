@@ -77,7 +77,7 @@ The public Pages artifact in `public/` is a read-only orientation surface. It
 contains relationship and source links only. It does not load the local API,
 registry, Skillz snapshot, SQLite state, drafts, client records, secrets, or
 generated packages. Its expected project-site path is
-`https://okhp3.github.io/AskJamie-FoundRy/`.
+`https://okhp3.github.io/askjamie-foundry/`.
 
 The authoring surface remains the Python workbench on `127.0.0.1`, with private
 state in ignored `.foundry-data/`. Public source visibility never proves hosted
