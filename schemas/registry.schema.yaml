@@ -42,6 +42,7 @@ properties:
         - status
         - visibility
         - public_graduation_allowed
+        - migration
       properties:
         repo:
           type: string

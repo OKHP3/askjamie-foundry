@@ -98,6 +98,23 @@ properties:
     type: object
     required: [product_kind, portable_skill, adapter_status, capability_path, storage]
     additionalProperties: false
+    allOf:
+      - if:
+          properties:
+            product_kind:
+              enum: [agent-skill, plugin, connector]
+        then:
+          properties:
+            portable_skill:
+              const: true
+            adapter_status:
+              const: unverified-plan
+        else:
+          properties:
+            portable_skill:
+              const: false
+            adapter_status:
+              const: none
     properties:
       product_kind:
         enum: [agent-skill, plugin, connector, assistant, decision-tool, workflow]

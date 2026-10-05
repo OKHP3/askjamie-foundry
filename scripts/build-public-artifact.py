@@ -26,7 +26,7 @@ FORBIDDEN = (
     "sessionStorage",
     "fetch(",
 )
-EXPECTED_PAGES_PATH = "/AskJamie-FoundRy/"
+EXPECTED_PAGES_PATH = "/askjamie-foundry/"
 LIVE_REQUIRED_MARKERS = (
     "<title>AskJamie FoundRy | A careful place to shape capability</title>",
     "PUBLIC ORIENTATION / PRIVATE FABRICATION",

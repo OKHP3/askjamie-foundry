@@ -11,6 +11,9 @@ The product contract is `docs/skill-first-foundry.md`.
   packages. `.agents/skills/` remains contributor tooling.
 - Prefer capability subtrees at `capabilities/<existing-capability-slug>/`.
   Registry `repo` identities remain lineage, with explicit migration records.
+- Every registry entry requires migration destination, status, storage, and
+  source commit fields. Package kind, portability, and adapter status must agree
+  with the manifest schema; adapter plans remain unverified.
 - Private capabilities stay outside this public checkout using the same layout.
   Do not import private Git history or clear permanent-private protections.
 - The workbench exports skill source and unverified adapter plans. Never describe
@@ -60,6 +63,7 @@ This relay owns:
 - `.agents/skills/`: project-local Agent Skills and their evaluation resources
 - `assets/`: shared AskJamie brand assets
 - `public/`: read-only Pages orientation source, separate from private authoring
+  (including social previews, browser icons, and the orientation web manifest)
 - `scripts/`: Python governance utilities
 - `workbench/`: local application, static interface and public Skillz metadata snapshot
 - `tests/`: application and governance regression checks
@@ -69,6 +73,10 @@ examples under `docs/github-workflows/` remain reference files.
 The Pages workflow is manually dispatched only; merging source does not
 authorize publication. The manifest's `surface_boundary` separates public
 orientation from the loopback workbench. Hosted authoring remains design-only.
+The public URL is `https://okhp3.github.io/askjamie-foundry/` (lowercase).
+Presentation assets and their release checks are documented in
+`docs/presentation-assets.md`; the web manifest identifies public orientation,
+not an installed or offline authoring application.
 
 This repository owns its local workbench runtime. It does not own sibling
 application implementations, hosted production configuration, or public release

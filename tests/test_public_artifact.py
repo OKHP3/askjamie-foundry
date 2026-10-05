@@ -34,7 +34,7 @@ class PublicArtifactTests(unittest.TestCase):
 
     def test_public_artifact_is_served_as_a_pages_style_subpath(self):
         with tempfile.TemporaryDirectory() as temp_dir:
-            pages_root = Path(temp_dir) / "AskJamie-FoundRy"
+            pages_root = Path(temp_dir) / "askjamie-foundry"
             subprocess.run([sys.executable, str(SCRIPT), "--build"], cwd=ROOT, check=True)
             shutil.copytree(ROOT / "dist/pages", pages_root)
             probe = socket.socket()
@@ -50,11 +50,11 @@ class PublicArtifactTests(unittest.TestCase):
                 import urllib.request
 
                 # The static artifact itself is deliberately independent of the
-                # Pages host. Relative links remain valid under /AskJamie-FoundRy/.
+                # Pages host. Relative links remain valid under /askjamie-foundry/.
                 for _ in range(40):
                     try:
                         response = urllib.request.urlopen(
-                            f"http://127.0.0.1:{port}/AskJamie-FoundRy/", timeout=0.2
+                            f"http://127.0.0.1:{port}/askjamie-foundry/", timeout=0.2
                         )
                         break
                     except OSError:
@@ -68,7 +68,7 @@ class PublicArtifactTests(unittest.TestCase):
                         sys.executable,
                         str(SCRIPT),
                         "--check-live",
-                        f"http://127.0.0.1:{port}/AskJamie-FoundRy/",
+                        f"http://127.0.0.1:{port}/askjamie-foundry/",
                     ],
                     cwd=ROOT,
                     capture_output=True,
@@ -77,7 +77,7 @@ class PublicArtifactTests(unittest.TestCase):
                 self.assertEqual(live_check.returncode, 0, live_check.stderr)
                 self.assertIn("Live Pages check passed", live_check.stdout)
                 css = urllib.request.urlopen(
-                    f"http://127.0.0.1:{port}/AskJamie-FoundRy/styles.css", timeout=2
+                    f"http://127.0.0.1:{port}/askjamie-foundry/styles.css", timeout=2
                 )
                 self.assertEqual(css.status, 200)
             finally:
@@ -100,7 +100,7 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn("deployed repository subpath is wrong", wrong_path.stderr)
 
         with tempfile.TemporaryDirectory() as temp_dir:
-            pages_root = Path(temp_dir) / "AskJamie-FoundRy"
+            pages_root = Path(temp_dir) / "askjamie-foundry"
             pages_root.mkdir()
             html = (ROOT / "public/index.html").read_text(encoding="utf-8")
             pages_root.joinpath("index.html").write_text(
@@ -124,7 +124,7 @@ class PublicArtifactTests(unittest.TestCase):
                                 sys.executable,
                                 str(SCRIPT),
                                 "--check-live",
-                                f"http://127.0.0.1:{port}/AskJamie-FoundRy/",
+                                f"http://127.0.0.1:{port}/askjamie-foundry/",
                             ],
                             cwd=ROOT,
                             capture_output=True,

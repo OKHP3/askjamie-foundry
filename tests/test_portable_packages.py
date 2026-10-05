@@ -13,7 +13,7 @@ import jsonschema
 from workbench.model import InputError, default_draft, normalize_draft
 from workbench.service import export_project, validate_project
 from workbench.store import Store
-from test_workbench import draft
+from test_workbench import decision_graph, draft
 import test_registry_validation as registry_tests
 
 
@@ -100,6 +100,25 @@ class PortablePackageTests(unittest.TestCase):
             for field in ("kind", "trigger", "adapter_platform", "tool_requirements", "conversion_notes"):
                 self.assertEqual(project[field], saved[field])
 
+    def test_schema_rejects_contradictory_package_claims(self):
+        schema = yaml.safe_load((Path(__file__).resolve().parents[1] / "schemas/manifest.schema.yaml").read_text(encoding="utf-8"))
+        validator = jsonschema.Draft202012Validator(schema)
+        for kind in ("agent-skill", "plugin", "connector", "assistant", "decision-tool", "workflow"):
+            with self.subTest(kind=kind):
+                project = self.project(kind=kind, adapter_platform="Example host",
+                                       tool_requirements="Owner-authenticated read-only access.",
+                                       decision=decision_graph(),
+                                       workflow_steps=["Check the brief."])
+                with zipfile.ZipFile(io.BytesIO(export_project(project, self.store)[1])) as archive:
+                    manifest = yaml.safe_load(archive.read("manifest.yaml"))
+                validator.validate(manifest)
+                for field, value in (("portable_skill", not manifest["packaging"]["portable_skill"]),
+                                     ("adapter_status", "none" if manifest["packaging"]["adapter_status"] == "unverified-plan" else "unverified-plan")):
+                    invalid = copy.deepcopy(manifest)
+                    invalid["packaging"][field] = value
+                    with self.assertRaises(jsonschema.ValidationError):
+                        validator.validate(invalid)
+
 
 class SubtreeMigrationTests(unittest.TestCase):
     def setUp(self):
@@ -128,6 +147,13 @@ class SubtreeMigrationTests(unittest.TestCase):
         entry["visibility"] = "public"
         entry["migration"].update(storage="public-subtree", status="source-inventoried", source_commit="a" * 40)
         self.assertEqual([], self.check(data))
+
+    def test_every_entry_requires_migration_metadata(self):
+        for index in range(len(self.data["repositories"])):
+            with self.subTest(index=index):
+                data = copy.deepcopy(self.data)
+                data["repositories"][index].pop("migration")
+                self.assertTrue(self.check(data))
 
 
 if __name__ == "__main__":

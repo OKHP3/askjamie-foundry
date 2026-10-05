@@ -11,6 +11,12 @@ Shared AskJamie™ brand assets for use across the FoundRy and child repositorie
 
 ## Usage
 
+The FoundRy README and public website use the linked
+[presentation assets](../../docs/presentation-assets.md): original workshop
+artwork, social preview, and icon derivatives of the existing public A mark.
+Their canonical files live in [`public/`](../../public/) so the Pages build
+includes them. The standards documents below remain authoritative.
+
 - Reference these files when creating new capability READMEs, GPT configurations,
   or deployment surface assets.
 - Do not modify these files without updating the version in the filename
