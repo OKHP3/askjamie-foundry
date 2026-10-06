@@ -292,3 +292,5 @@ verified baseline commands and re-read this file before completing the change.
 - [OKHP3/OverKill-Hill](https://github.com/OKHP3/OverKill-Hill): parent universe governance
 - [OKHP3/OverKill-Hill-FoundRy](https://github.com/OKHP3/OverKill-Hill-FoundRy): parent relay
 - [OKHP3/AskJamie-FoundRy](https://github.com/OKHP3/AskJamie-FoundRy): this repository
+
+## Imported Claude Cowork project instructions
