@@ -1,0 +1,62 @@
+{
+  "assignment_id": "A08",
+  "backlog_ids": ["AF-23", "AF-24", "AF-25"],
+  "base_sha": "0e340c5ee18396c8de59aa0b7d01780d0dce83e4",
+  "worker_thread_id": "01a10de4-ff34-7442-a23d-d14501ddc40a",
+  "model": "GPT-6 (model variant not exposed in this task context)",
+  "reasoning_effort": "unknown",
+  "budget_receipt": {
+    "goal": {
+      "threadId": "01a10de4-ff34-7442-a23d-d14501ddc40a",
+      "objective": "Complete bounded A08 preparation/validation assignment from its brief; change only its named private output folder and return evidence paths.",
+      "status_at_creation": "active",
+      "tokensUsed_at_creation": 0,
+      "timeUsedSeconds_at_creation": 0,
+      "createdAt_unix": 1791234479,
+      "budget_receipt": {"requested_token_budget": 30000, "registered": false, "reason": "create_goal call returned remainingTokens:null and no completionBudgetReport"}
+    },
+    "enforcement": "The 30000 token allocation is advisory; the goal API did not enforce a budget.",
+    "final_usage": {"tokensUsed": 108957, "timeUsedSeconds": 369, "goal_status": "complete"}
+  },
+  "budget_cap": 30000,
+  "preparation_status": "complete",
+  "underlying_task_statuses": {
+    "AF-23": "not_complete; migration remains planned for all nine registry entries; source/privacy review and pilot/import verification evidence are missing",
+    "AF-24": "read_only_crosswalk_complete; historical BRG02-BRG11 catalog discrepancy is refreshed against current repository and main-branch metadata",
+    "AF-25": "not_started; exact remotes are confirmed, but maintainer decisions on governance membership, lineage, and privacy controls remain required"
+  },
+  "evidence_status": "19 of 19 metadata-only repository lookups and 19 of 19 main-branch tip lookups returned exact canonical identities, visibility, archive/default-branch state, timestamps, and current commit SHAs. No repository files were fetched.",
+  "outputs": [
+    {"path": "outputs/crosswalk.csv", "status": "created", "rows": 19},
+    {"path": "outputs/task-packet.md", "status": "created"},
+    {"path": "outputs/result.json", "status": "created"}
+  ],
+  "checks": [
+    {"check": "Pinned source reads", "result": "passed", "evidence": "git show at base SHA for AGENTS.md, docs/agent-collaboration.md, registry/index.yaml, schemas/registry.schema.yaml, docs/migration-guide.md, docs/current-state-and-maturation.md, docs/askjamie-repository-inventory.md"},
+    {"check": "Current GitHub metadata", "result": "passed", "evidence": "Connected GitHub GET metadata calls on 2026-10-05 for all 19 exact repository names and branches/main"},
+    {"check": "Local Git working-tree status", "result": "blocked_once", "evidence": "git status --short --branch stopped by dubious-ownership safeguard; no global safe.directory change was made"},
+    {"check": "Registry/schema validator", "result": "not_run", "reason": "Read-only crosswalk; no source changes"}
+  ],
+  "blockers": [
+    "A06 source/privacy review accepted output was not supplied; implementation remains gated.",
+    "The owner must decide whether BRG02-BRG11 are in the current governance catalog and set their lineage/privacy/public-graduation controls.",
+    "Metadata and branch tip SHAs do not prove child content identity, migration/import, verification, pilot success, or graduation.",
+    "The requested 30000 token budget was not enforced by create_goal; final goal receipt reports 108957 tokens used."
+  ],
+  "discovered_tasks": [],
+  "next_action": "Obtain A06's accepted source/privacy review and maintainer decisions for BRG02-BRG11. Then the governance integrator can prepare a scoped AF-25 registry proposal; keep migration status planned until AF-23 closure evidence exists.",
+  "publication": {
+    "requested_by_user": true,
+    "repository": "OKHP3/AskJamie-FoundRy",
+    "branch": "codex/a08-catalog-crosswalk-20261005",
+    "base_branch": "main",
+    "files": [
+      "docs/research/2026-10-05-catalog-migration/crosswalk.csv",
+      "docs/research/2026-10-05-catalog-migration/task-packet.md",
+      "docs/research/2026-10-05-catalog-migration/result.json"
+    ],
+    "status": "PR open; protected checks and merge pending",
+    "pull_request_url": "https://github.com/OKHP3/askjamie-foundry/pull/42",
+    "merge_status": "not_merged"
+  }
+}
