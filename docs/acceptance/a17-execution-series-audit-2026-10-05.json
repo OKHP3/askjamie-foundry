@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "assignment_id": "A17",
+  "date": "2026-10-05",
+  "status": "accepted",
+  "audit_kind": "independent execution-series audit",
+  "scope": [
+    "original backlog coverage",
+    "AF-36 separation",
+    "dependency integrity",
+    "allocation accounting",
+    "evidence and completion boundaries"
+  ],
+  "source_snapshot": {
+    "version": "audit-inputs-v1",
+    "base_sha": "0e340c5ee18396c8de59aa0b7d01780d0dce83e4",
+    "frozen_manifest_verified": true
+  },
+  "results": {
+    "original_backlog_ids": 26,
+    "original_ids_mapped_exactly_once": true,
+    "AF_36_separate_assignment": true,
+    "dependencies_resolved": true,
+    "dependency_graph_acyclic": true,
+    "lifetime_worker_slots_assigned": 17,
+    "worker_slots_available": 30,
+    "reserved_slots": 13,
+    "allocation_tokens": {
+      "workers": 60000000,
+      "coordinator": 20000000,
+      "total": 80000000
+    },
+    "model_effort_metadata": "gpt-6-luna / low",
+    "enforced_small_duty_caps_claimed": false
+  },
+  "historical_snapshot_finding": {
+    "assignment_id": "A16",
+    "backlog_id": "AF-36",
+    "finding": "Coordinator snapshot lacked a completed execution usage receipt and still described the patch as proposed.",
+    "status": "superseded by later public integration record"
+  },
+  "current_status": {
+    "AF_36": "public coordination record reports integrated validator output fix and cp1252 regression evidence",
+    "A17": "accepted independent coordination audit",
+    "formal_five_pass_review": "not-run",
+    "formal_review_decision": "defer-for-evidence"
+  },
+  "blocked_inputs": [
+    "authoritative prior capture-intake",
+    "versioned session-handoff and destination",
+    "governing PRD/version and its relationship to the skill-first direction"
+  ],
+  "privacy": {
+    "individual_worker_usage_receipts_included": false,
+    "private_worker_packets_included": false,
+    "local_paths_included": false
+  },
+  "source_paths": [
+    "docs/agent-delegation-series-2026-10-05.md",
+    "docs/agent-delegation-series-2026-10-05.json",
+    "docs/acceptance/af-17-five-pass-review-design.md"
+  ],
+  "current_main_sha_at_preparation": "b12e6c5ae780c88dbd609cd2789024b9ea067818"
+}
