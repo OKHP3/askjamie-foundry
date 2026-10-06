@@ -6,7 +6,7 @@ Complete the bounded read-only AF-23, AF-24, and AF-25 evidence review for nine 
 
 ## Inputs and evidence
 
-- Source repository, read-only: `C:/Users/jamie/OKH-Local/04_GitHub_Mirrors/askjamie-foundry`.
+- Source repository, read-only: `OKHP3/AskJamie-FoundRy`.
 - Pinned base: `0e340c5ee18396c8de59aa0b7d01780d0dce83e4`.
 - Read `AGENTS.md` and `docs/agent-collaboration.md` once before source inspection. Owner directions there establish portable skills, private state outside the public source checkout, unverified adapters, and no private-history import.
 - Pinned resources: `registry/index.yaml`, `schemas/registry.schema.yaml`, `docs/migration-guide.md`, `docs/current-state-and-maturation.md`, and `docs/askjamie-repository-inventory.md` at the pinned base.
@@ -49,7 +49,7 @@ The first working-tree `git status --short --branch` attempt was read-only and f
 ## Acceptance and closure evidence
 
 - `crosswalk.csv` has 19 rows: nine governed registry records and ten inventory-only BRG02-BRG11 records, with historical and current dates separated, exact current `main` tip SHAs, current visibility, archive/default-branch state, and privacy classification.
-- `result.json` records the pinned base, current thread, tool-reported goal receipt/usage, statuses, blockers, outputs, and checks.
+- `result.json` records the pinned base, metadata-only evidence, statuses, blockers, outputs, and checks. Private session and resource receipts remain outside public Git.
 - Preparation acceptance is met when the artifacts are present and the claims above match the cited pinned resources and metadata responses. This closes the bounded crosswalk preparation only; AF-23 migration and AF-25 registry reconciliation remain incomplete.
 
 ## Retry and stop rule
@@ -66,4 +66,4 @@ None. The remaining decisions and implementation gates belong to existing AF-23/
 
 ## Publication follow-up
 
-After the bounded evidence preparation was complete, the user requested saving and committing all changes to main origin. The files in this directory are copies of the private task outputs, staged on branch `codex/a08-catalog-crosswalk-20261005` for a reviewable pull request because `main` is protected. The initial read-only scope applied to the original A08 preparation; this publication step followed the user's later explicit instruction. PR #42 is open at https://github.com/OKHP3/askjamie-foundry/pull/42. Protected checks and merge remain pending.
+After bounded evidence preparation, the user requested saving and committing the changes to main origin. [PR #42](https://github.com/OKHP3/askjamie-foundry/pull/42) merged the metadata crosswalk at `ac2c1cc7bb3715fd6eeba1415eb2338bbad3a80a`. This directory is a public metadata summary; original private worker identities, workstation paths and resource receipts remain outside public Git. The initial read-only scope applied to the original preparation. Public-source integration followed the owner's later instruction and protected PR checks.
