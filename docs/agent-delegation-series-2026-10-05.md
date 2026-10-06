@@ -206,6 +206,14 @@ Inputs: AF-28 encoding failure evidence; Isolated source branch.
 
 Closure: AF-36 source fix and regression evidence; arbitrary Unicode input/path encoding is outside this narrow fix.
 
+## A15 preparation status, 2026-10-06
+
+The bounded owner handoff packet is prepared. This is preparation only; AF-01 and AF-02 remain open or conditional.
+
+- AF-01 remains open until Jamie names the intended Replit connector account and confirms it resolves this exact application.
+- AF-02 is conditional. No Replit credential repair is needed for the completed source release. If a future Replit push is needed, Jamie completes sign-in personally and the integration owner independently verifies the task-branch push against origin.
+- No Replit login, credential change, Git push, or deployment was performed for this preparation. Detailed worker files and receipts remain private.
+
 ## Five passes, currently not run
 
 Confirm the authoritative intake, handoff and PRD, finish the requirement ledger, freeze the delivered revision and define suitable independent outcome evidence before execution. Use separate evidence, outcome and safety-portability role contexts for each pass. Agreement requires a falsifiable challenge; disagreement requires evidence-led negotiation. Record shared-model/source limitations and human-owned disputes.

@@ -408,7 +408,7 @@
       "reasoning_effort": "low",
       "lifetime_token_allocation": 2000000,
       "initial_duty_target": 16000,
-      "preparation": "accepted bounded packet",
+      "preparation": "accepted bounded packet; owner handoff prepared 2026-10-06; underlying AF-01/AF-02 gates remain open or conditional",
       "required_inputs": [
         "Selected existing Replit account and authenticated workspace"
       ],
