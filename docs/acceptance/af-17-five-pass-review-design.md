@@ -94,4 +94,3 @@ Next action: the coordinator resolves the gates above, freezes the source/eviden
 - `AGENTS.md` and `docs/agent-collaboration.md`: public-source/private-state and collaboration boundaries.
 - `.agents/skills/okhp3-equilibrium-review/SKILL.md` and its `references/review-protocol.md` and `references/role-prompts.md`: role contracts, conditional escalation, decision states, and structured outputs.
 - Assignment release candidate: `0e340c5ee18396c8de59aa0b7d01780d0dce83e4`.
-
