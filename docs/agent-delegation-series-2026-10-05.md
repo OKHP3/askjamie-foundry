@@ -32,7 +32,7 @@ Before a new duty in an existing thread, subtract all previous usage from its li
 | A16 | AF-36 | Make Windows validator output portable | A10 |
 | A17 | Coordination audit | Independent execution-series audit | Frozen coordination packet |
 
-All original IDs are assigned once. A17 independently verified coverage, acyclic dependencies, full allocation and evidence boundaries. This audit does not substitute for the formal PRD review. Prepared worksheets and prompts do not close their underlying host, human or source-input tasks.
+All original IDs are assigned once. A17 independently verified coverage, acyclic dependencies, full allocation and evidence boundaries. Read the [public-safe A17 execution audit](acceptance/a17-execution-series-audit-2026-10-05.md). This audit does not substitute for the formal PRD review. Prepared worksheets and prompts do not close their underlying host, human or source-input tasks.
 
 A10 completed bounded Windows checks after its network access was resolved: the baseline public build and 93-test suite passed with one POSIX-only skip; the baseline validators exposed cp1252 output failures. Loopback startup and UTF-8 follow-up came from separate superintendent evidence. This integration applies A16's ASCII output fix and adds direct cp1252 valid/invalid-input regression coverage. It also refreshes A11's public metadata while preserving all prior selected IDs. Final merge and check receipts belong in issue #39.
 
