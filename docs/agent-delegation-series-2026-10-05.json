@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "coordination_issue": "https://github.com/OKHP3/askjamie-foundry/issues/39",
+  "preparation_base_sha": "0e340c5ee18396c8de59aa0b7d01780d0dce83e4",
+  "scope": "AskJamie FoundRy only",
+  "allocation": {
+    "delegate_slots": 30,
+    "per_delegate": 2000000,
+    "delegate_total": 60000000,
+    "superintendent": 20000000,
+    "total": 80000000,
+    "spawned_slots": 17,
+    "reserved_slots": 13,
+    "reserved_tokens": 26000000
+  },
+  "formal_review": {
+    "status": "not-run",
+    "decision": "defer-for-evidence",
+    "missing": "Authoritative prior intake, handoff and governing PRD identities"
+  },
+  "assignments": [
+    {
+      "assignment_id": "A01",
+      "backlog_ids": [
+        "AF-11",
+        "AF-12",
+        "AF-13"
+      ],
+      "duty": "Find authoritative prior records",
+      "dependencies": [],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 30000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Exact prior intake, handoff and governing PRD identities"
+      ],
+      "procedure": [
+        "Search scoped repository and linked editorial records",
+        "Separate candidate records from confirmed authority",
+        "Record versioned pointers or the smallest missing input"
+      ],
+      "closure": "Owner confirms authoritative records; no substitute PRD by inference",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A02",
+      "backlog_ids": [
+        "AF-14"
+      ],
+      "duty": "Prepare requirement traceability",
+      "dependencies": [
+        "A01"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 20000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "A01 confirmed records"
+      ],
+      "procedure": [
+        "Assign stable requirement IDs",
+        "Distinguish commissioned requirements from proposals",
+        "Map each requirement to source, delivered evidence and closure"
+      ],
+      "closure": "Every in-scope requirement has traceable evidence or an explicit gap",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A03",
+      "backlog_ids": [
+        "AF-15"
+      ],
+      "duty": "Freeze review resources",
+      "dependencies": [
+        "A01",
+        "A02"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 20000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "A01 records",
+        "A02 requirement ledger",
+        "Final delivered revision"
+      ],
+      "procedure": [
+        "Freeze source revision and resource hashes",
+        "Record audience, decision question and acceptance criteria",
+        "Give every reviewer the same frozen packet"
+      ],
+      "closure": "Complete packet with confirmed source bounds; invalidate on relevant source change",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A04",
+      "backlog_ids": [
+        "AF-16",
+        "AF-21"
+      ],
+      "duty": "Design independent outcome evaluation",
+      "dependencies": [
+        "A06"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 20000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Selected owner pilot",
+        "Independent domain evaluator"
+      ],
+      "procedure": [
+        "Define rubric and baseline before optimization",
+        "Separate author-visible development cases from evaluator-held cases",
+        "After the pilot, record actual outputs and known failure limits"
+      ],
+      "closure": "Independent case custody and real host outcome evidence; supplied responses labeled separately",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A05",
+      "backlog_ids": [
+        "AF-17"
+      ],
+      "duty": "Prepare five-pass review execution",
+      "dependencies": [
+        "A01",
+        "A02",
+        "A03",
+        "A04"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 25000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "A01 through A03 complete",
+        "Appropriate A04 evidence"
+      ],
+      "procedure": [
+        "Run the five passes described below",
+        "Use separate evidence, outcome and safety-portability role contexts",
+        "Conditionally challenge agreement or negotiate disagreement",
+        "Record objections, decisions and traceable next tasks"
+      ],
+      "closure": "Human report and machine record from five actual passes; currently not-run",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A06",
+      "backlog_ids": [
+        "AF-18",
+        "AF-19",
+        "AF-20"
+      ],
+      "duty": "Prepare pilot and source-loss mapping",
+      "dependencies": [],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 20000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Owner-selected task and rights-cleared source"
+      ],
+      "procedure": [
+        "Inventory exact source assets and hashes",
+        "Record privacy and distribution rights",
+        "Map preserved, changed and unavailable behavior",
+        "Use an exported skill in the chosen external host and collect owner friction"
+      ],
+      "closure": "Source dossier, semantic-loss map and accepted real pilot; no bulk private history import",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A07",
+      "backlog_ids": [
+        "AF-22"
+      ],
+      "duty": "Define native adapter acceptance",
+      "dependencies": [
+        "A06",
+        "A04"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 20000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "A06 pilot/source",
+        "Chosen target host and authorized integration"
+      ],
+      "procedure": [
+        "Verify current native package format and permissions",
+        "Implement one isolated host adapter",
+        "Exercise install, allowed tools, refusal, missing authentication and recovery"
+      ],
+      "closure": "Actual native host evidence; adapter plans remain unverified until tested",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A08",
+      "backlog_ids": [
+        "AF-23",
+        "AF-24",
+        "AF-25"
+      ],
+      "duty": "Inspect catalog and migration truth",
+      "dependencies": [
+        "A06"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 30000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Current metadata crosswalk",
+        "Source/privacy evidence for migration",
+        "Maintainer catalog decisions"
+      ],
+      "procedure": [
+        "Compare governed entries with the historical inventory",
+        "Separate remote existence from governance membership",
+        "Advance one migration record only with source and verification evidence",
+        "Reconcile intended registry relationships through a scoped PR"
+      ],
+      "closure": "Schema-valid factual records with lineage and permanent-private controls preserved",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A09",
+      "backlog_ids": [
+        "AF-27"
+      ],
+      "duty": "Prepare human accessibility acceptance",
+      "dependencies": [],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 20000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Human tester",
+        "Chosen browser and assistive-technology versions"
+      ],
+      "procedure": [
+        "Use isolated synthetic state",
+        "Exercise create, edit, save, errors, recovery, evaluation and export",
+        "Record spoken announcements, focus and keyboard behavior"
+      ],
+      "closure": "Actual human accessibility results and scoped defects; automated DOM evidence is separate",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A10",
+      "backlog_ids": [
+        "AF-28"
+      ],
+      "duty": "Validate isolated stable Windows setup",
+      "dependencies": [],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 40000,
+      "preparation": "bounded validation complete with separated coordinator evidence",
+      "required_inputs": [
+        "Isolated supported stable Windows interpreter"
+      ],
+      "procedure": [
+        "Install pinned dependencies in an isolated environment",
+        "Run governance validators, public build and application suite",
+        "Start loopback with synthetic private state and stop it",
+        "Preserve failures and separate worker evidence from coordinator checks"
+      ],
+      "closure": "Exact environment and direct check receipts; baseline output defect routed to AF-36",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A11",
+      "backlog_ids": [
+        "AF-29"
+      ],
+      "duty": "Assess metadata snapshot freshness",
+      "dependencies": [],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 25000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Fixed public catalog provenance",
+        "Historical-reference retention policy"
+      ],
+      "procedure": [
+        "Compare stable IDs and substantive metadata at exact revisions",
+        "Retain absent historical IDs with their original immutable links",
+        "Review normalized metadata and offline export compatibility through a checked PR"
+      ],
+      "closure": "332 current entries plus 31 retained historical entries; no existing IDs discarded",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A12",
+      "backlog_ids": [
+        "AF-30",
+        "AF-35"
+      ],
+      "duty": "Prepare mentoring and graduation gates",
+      "dependencies": [
+        "A06",
+        "A04",
+        "A08"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 18000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "A06 pilot",
+        "A04 acceptance",
+        "A08 lineage",
+        "Owner decisions"
+      ],
+      "procedure": [
+        "Prepare one bounded mentor proposal",
+        "Obtain and record the response before claiming a round trip",
+        "Record regional adaptation",
+        "Graduate or retire a capability only after recovery and explicit decision"
+      ],
+      "closure": "Recorded mentor response or capability-specific release decision; sibling writes are a separate workstream",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A13",
+      "backlog_ids": [
+        "AF-31",
+        "AF-32"
+      ],
+      "duty": "Prepare branding and analytics decisions",
+      "dependencies": [],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 20000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Owner-selected canonical images",
+        "Intended public analytics behavior"
+      ],
+      "procedure": [
+        "Choose exact external setting changes",
+        "Apply only supported authorized settings and read them back",
+        "Resolve disclosure and tracking-choice wording",
+        "Verify actual public behavior"
+      ],
+      "closure": "Visible settings and public behavior evidence; no legal conclusion inferred",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A14",
+      "backlog_ids": [
+        "AF-33",
+        "AF-34"
+      ],
+      "duty": "Bound hosting and model-assistance options",
+      "dependencies": [
+        "A06",
+        "A04"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 18000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Useful manual pilot",
+        "Owner scope and provider/data-routing decisions"
+      ],
+      "procedure": [
+        "Record continued deferral or a concrete hosting scope",
+        "If commissioned, prove access/isolation and recovery",
+        "Measure model assistance against a defined baseline and budget"
+      ],
+      "closure": "Explicit deferral or measured authorized implementation; current authoring remains loopback-only",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A15",
+      "backlog_ids": [
+        "AF-01",
+        "AF-02"
+      ],
+      "duty": "Prepare Replit access handoff",
+      "dependencies": [],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 16000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "Selected existing Replit account and authenticated workspace"
+      ],
+      "procedure": [
+        "Inspect Shell branch, remotes, status and divergence",
+        "Distinguish connector login, Shell authentication and workflow scope",
+        "Preserve histories and use fast-forward or protected PR reconciliation",
+        "Verify the workspace after integration"
+      ],
+      "closure": "Direct authenticated workspace evidence; no credential transfer or paid execution",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    },
+    {
+      "assignment_id": "A16",
+      "backlog_ids": [
+        "AF-36"
+      ],
+      "duty": "Make Windows validator output portable",
+      "dependencies": [
+        "A10"
+      ],
+      "model": "gpt-6-luna",
+      "reasoning_effort": "low",
+      "lifetime_token_allocation": 2000000,
+      "initial_duty_target": 25000,
+      "preparation": "accepted bounded packet",
+      "required_inputs": [
+        "AF-28 encoding failure evidence",
+        "Isolated source branch"
+      ],
+      "procedure": [
+        "Replace unencodable CLI output decorations with ASCII",
+        "Verify valid and invalid input under cp1252",
+        "Preserve validation semantics",
+        "Pass required checks and merge through a protected PR"
+      ],
+      "closure": "AF-36 source fix and regression evidence; arbitrary Unicode input/path encoding is outside this narrow fix",
+      "handoff": "Return ID, exact source revision, actual checks, outputs, remaining gates and next action. Keep private evidence outside public Git."
+    }
+  ],
+  "independent_coordination_audit": {
+    "assignment_id": "A17",
+    "status": "accepted",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "low",
+    "lifetime_token_allocation": 2000000,
+    "scope": "Coverage, acyclic dependencies, allocation and evidence boundaries; not the formal five-pass PRD review"
+  },
+  "dispatch": {
+    "maximum_executing_workers_per_batch": 3,
+    "worker_spawn_allowed": false,
+    "source_edits": "Claim the shared issue first; isolated task branch; single integration owner; protected PR"
+  },
+  "evidence_boundary": "Private worker identities, logs, account locators, draft data and coordination paths remain outside this public record."
+}

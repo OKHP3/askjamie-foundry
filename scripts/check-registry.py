@@ -96,7 +96,7 @@ def check_registry(
                 errors.append(f"{prefix}: duplicate repo entry: {repo!r}")
             seen_repos.add(repo)
             if not repo.startswith("OKHP3/"):
-                errors.append(f"{prefix}: repo must start with 'OKHP3/' — got {repo!r}")
+                errors.append(f"{prefix}: repo must start with 'OKHP3/' - got {repo!r}")
 
         code = entry.get("code", "")
         family = entry.get("family", "")
@@ -155,9 +155,9 @@ def check_registry(
 
 def print_summary(repositories, stats):
     total = len(repositories)
-    print(f"\n{'─'*50}")
-    print(f"  AskJamie FoundRy — Registry Summary")
-    print(f"{'─'*50}")
+    print(f"\n{'-'*50}")
+    print("  AskJamie FoundRy - Registry Summary")
+    print(f"{'-'*50}")
     print(f"  Total repositories: {total}")
     print()
 
@@ -165,7 +165,7 @@ def print_summary(repositories, stats):
         print(f"  {family}:")
         for status, count in sorted(stats[family].items()):
             print(f"    {status:12s}  {count}")
-    print(f"{'─'*50}")
+    print(f"{'-'*50}")
 
     # Public candidates
     public_candidates = [
@@ -215,11 +215,11 @@ def main():
         if errors:
             print(f"Errors found ({len(errors)}):")
             for e in errors:
-                print(f"  ✗ {e}")
-            print(f"\n❌ FAIL — registry health check failed with {len(errors)} error(s)")
+                print(f"  ERROR: {e}")
+            print(f"\nFAIL - registry health check failed with {len(errors)} error(s)")
             sys.exit(1)
         else:
-            print("✅ PASS — registry/index.yaml is healthy")
+            print("PASS - registry/index.yaml is healthy")
             sys.exit(0)
     else:
         sys.exit(1 if errors else 0)
