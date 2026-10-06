@@ -40,7 +40,7 @@ def validate_with_jsonschema(manifest: dict, schema: dict, manifest_path: str) -
     errors = []
     validator = jsonschema.Draft202012Validator(schema)
     for error in sorted(validator.iter_errors(manifest), key=lambda e: list(e.path)):
-        path = " → ".join(str(p) for p in error.path) if error.path else "(root)"
+        path = " > ".join(str(p) for p in error.path) if error.path else "(root)"
         errors.append(f"  [{path}] {error.message}")
     return errors
 
@@ -63,11 +63,11 @@ def structural_checks(manifest: dict, manifest_path: str) -> list[str]:
 
     repo = identity.get("repo", "")
     if repo and not repo.startswith("OKHP3/"):
-        errors.append(f"  identity.repo must start with 'OKHP3/' — got: {repo!r}")
+        errors.append(f"  identity.repo must start with 'OKHP3/' - got: {repo!r}")
 
     slug = identity.get("slug", "")
     if slug and not re.match(r"^[a-z0-9-]+$", slug):
-        errors.append(f"  identity.slug must be lowercase alphanumeric+hyphens — got: {slug!r}")
+        errors.append(f"  identity.slug must be lowercase alphanumeric+hyphens - got: {slug!r}")
 
     valid_types = {"core-capability", "brandguard", "enterprise-sleuth",
                    "client-overlay", "conversation-design", "rag-experiment", "foundry-relay"}
@@ -84,9 +84,9 @@ def structural_checks(manifest: dict, manifest_path: str) -> list[str]:
     parent = lineage.get("parent_foundry", "")
     repo_type = identity.get("type", "")
     if parent and repo_type != "foundry-relay" and parent != "OKHP3/AskJamie-FoundRy":
-        errors.append(f"  lineage.parent_foundry must be 'OKHP3/AskJamie-FoundRy' — got: {parent!r}")
+        errors.append(f"  lineage.parent_foundry must be 'OKHP3/AskJamie-FoundRy' - got: {parent!r}")
     elif parent and repo_type == "foundry-relay" and not parent.startswith("OKHP3/"):
-        errors.append(f"  lineage.parent_foundry must start with 'OKHP3/' — got: {parent!r}")
+        errors.append(f"  lineage.parent_foundry must start with 'OKHP3/' - got: {parent!r}")
 
     vc = manifest.get("visibility_control", {})
     visibility_lock = vc.get("visibility_lock", "")
@@ -99,7 +99,7 @@ def structural_checks(manifest: dict, manifest_path: str) -> list[str]:
     for date_field in ["created", "updated"]:
         val = manifest.get(date_field, "")
         if val and not date_pattern.match(str(val)):
-            errors.append(f"  {date_field} must be ISO 8601 (YYYY-MM-DD) — got: {val!r}")
+            errors.append(f"  {date_field} must be ISO 8601 (YYYY-MM-DD) - got: {val!r}")
 
     maintainers = manifest.get("maintainers", [])
     if not maintainers:
@@ -154,10 +154,10 @@ def main():
                 print(e)
 
     if errors:
-        print(f"\n❌ FAIL — {len(errors)} error(s) found in {manifest_path}")
+        print(f"\nFAIL - {len(errors)} error(s) found in {manifest_path}")
         sys.exit(1)
     else:
-        print(f"\n✅ PASS — {manifest_path} is valid")
+        print(f"\nPASS - {manifest_path} is valid")
         sys.exit(0)
 
 

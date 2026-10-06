@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "sourceRepository": "https://github.com/OKHP3/skillz",
+  "sourceCommit": "b5309bca91f63d7477d6e1144369e19e4a875932",
+  "generatedAt": "2026-10-03T03:51:48.284Z",
+  "retrievedAt": "2026-10-05T21:32:56.545459+00:00",
+  "sourceCatalogUrl": "https://okhp3.github.io/skillz/data/catalog.json",
+  "sourceCatalogSha256": "1262ecd04492a15e65d1a882c39e6d24cfa181c9639e7dc51b7c9c09763cd05c",
+  "previousSourceCommit": "1a8686ce386928cccef04b53ac6bb98e0ab40b61",
+  "previousCount": 342,
+  "currentCatalogCount": 332,
+  "retainedHistoricalCount": 31,
+  "combinedSnapshotCount": 363,
+  "addedIds": [
+    "askjamie/okhp3-askjamie-email-draft",
+    "community/specification-authoring",
+    "context-extraction/okhp3-thread-extract-grok",
+    "copilot/okhp3-sharepoint-content-auditor",
+    "copilot/okhp3-sharepoint-list-schema-design",
+    "glee-fully/okhp3-glee-fully-wwgd-review",
+    "murderbird/okhp3-murderbird-argument-audit",
+    "murderbird/okhp3-murderbird-thesis-forge",
+    "openclaw/okhp3-openclaw-capture-note",
+    "openclaw/okhp3-openclaw-linkedin-drop",
+    "openclaw/okhp3-openclaw-mermaid-lint",
+    "openclaw/okhp3-openclaw-persona-route",
+    "openclaw/okhp3-openclaw-repo-pulse",
+    "openclaw/okhp3-openclaw-research-packet",
+    "openclaw/okhp3-openclaw-skillz-sync",
+    "openclaw/okhp3-openclaw-stack-status",
+    "replit/okhp3-replit-repository-janitor",
+    "replit/okhp3-replit-task-executor",
+    "universal/okhp3-github-mirror-janitor",
+    "universal/okhp3-repository-creator",
+    "universal/okhp3-repository-settings"
+  ],
+  "absentCurrentIdsRetained": [
+    "askjamie/okhp3-askjamie-chatgpt-migrate",
+    "askjamie/okhp3-askjamie-extract-chatgpt",
+    "askjamie/okhp3-askjamie-extract-claude",
+    "askjamie/okhp3-askjamie-repo-creator",
+    "askjamie/okhp3-askjamie-repo-organizer",
+    "askjamie/okhp3-askjamie-style-registry",
+    "askjamie/okhp3-askjamie-thread-context",
+    "community/create-readme",
+    "community/create-specification",
+    "community/data-migration",
+    "community/playwright-automation-fill-in-form",
+    "community/playwright-explore-website",
+    "community/playwright-generate-test",
+    "community/readme-blueprint-generator",
+    "community/refactor",
+    "community/review-and-refactor",
+    "community/update-specification",
+    "community/webapp-testing",
+    "context-extraction/okhp3-thread-context-extraction-grok",
+    "glee-fully/okhp3-glee-fully-chatgpt-migrate",
+    "glee-fully/okhp3-glee-fully-extract-chatgpt",
+    "glee-fully/okhp3-glee-fully-extract-claude",
+    "glee-fully/okhp3-glee-fully-repo-creator",
+    "glee-fully/okhp3-glee-fully-repo-organizer",
+    "glee-fully/okhp3-glee-fully-style-registry",
+    "glee-fully/okhp3-glee-fully-thread-context",
+    "replit/okhp3-replit-repl-janitor",
+    "universal/okhp3-foundry-repo-creator",
+    "universal/okhp3-repl-repo-janitor",
+    "universal/sp-build-auditor",
+    "universal/sp-list-architect"
+  ],
+  "substantiveChanges": [
+    {
+      "id": "community/browser-testing",
+      "fields": [
+        "description",
+        "evidenceStatus"
+      ]
+    },
+    {
+      "id": "community/refactoring-best-practices",
+      "fields": [
+        "evidenceStatus"
+      ]
+    }
+  ],
+  "retentionReason": "Preserve existing draft selections and original immutable links. Catalog absence is not proof of deletion or renaming.",
+  "importBoundary": "Public metadata only; no skill bodies, private child content or runtime network access."
+}

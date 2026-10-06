@@ -145,6 +145,10 @@ python3 scripts/build-public-artifact.py --build
 python3 -m unittest discover -s tests -v
 ```
 
+The 2026-10-05 stable Windows check used Python 3.12.14. Governance CLI
+decorations use ASCII, with cp1252 success and invalid-manifest regressions.
+This does not establish arbitrary Unicode input or pathname compatibility.
+
 Start the app with `python3 -m workbench --port 8765`, then open
 `http://127.0.0.1:8765`. It binds to loopback only. Private local state lives in
 ignored `.foundry-data/`; use `--data-dir` to choose another private directory.
@@ -233,6 +237,8 @@ mentoring does not require a shared application runtime. See `docs/ecosystem-map
 - Keep all workbench projects and generated packages private by default.
 - Never clear protection flags or client identity after a draft becomes protected.
 - Treat selected Skillz metadata as references, not executable or verified skills.
+- The metadata refresh retains historical IDs and original immutable source
+  links when absent from the current catalog. See `workbench/data/README.md`.
 - Public orientation analytics must remain outside private workbench assets and
   generated packages. Check the public build guard before a Pages release.
 - Label supplied-response checks distinctly from model execution; there are no
@@ -246,6 +252,10 @@ mentoring does not require a shared application runtime. See `docs/ecosystem-map
 Follow [the collaboration protocol](docs/agent-collaboration.md) for shared work
 across ChatGPT/Codex, Claude, GitHub Copilot, and Replit. Keep AGENTS.md canonical;
 platform-specific instruction files are pointers, not competing policies.
+
+The public continuation record is `docs/agent-delegation-series-2026-10-05.md`,
+with machine-readable duties alongside it. Private worker packets remain outside
+this checkout. Preparation acceptance does not close gated underlying tasks.
 
 Use the owner's larger ChatGPT allocation for substantial implementation and
 integration reasoning, Claude for bounded independent review when available,

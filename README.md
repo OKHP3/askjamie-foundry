@@ -181,6 +181,11 @@ planned. [AGENTS.md](AGENTS.md) is the contributor authority; the
 [collaboration protocol](docs/agent-collaboration.md) records how work is claimed
 and handed off. [Changelog](CHANGELOG.md) · [License](LICENSE.md).
 
+The [delegation series](docs/agent-delegation-series-2026-10-05.md) and
+[machine-readable duties](docs/agent-delegation-series-2026-10-05.json) preserve
+the next tasks, dependencies, allocation and required evidence. Private worker
+packets remain outside this public repository.
+
 Built by **Jamie Hill**, within [OverKill Hill P³](https://overkillhill.com/).
 
 *Clear context. Useful capabilities. A more considered next step.*

@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-05: Delegated maintenance integration
+
+- Save the public continuation plan and machine-readable duties for all 26
+  remaining backlog entries, AF-36, and the full 80,000,000-token allocation.
+  Keep private worker evidence outside Git and formal PRD review deferred.
+- Use ASCII governance CLI decorations so Windows cp1252 output does not fail
+  on success messages, summaries, or the covered invalid-manifest diagnostics.
+  Add direct subprocess regressions while preserving validation rules.
+- Refresh public Skillz metadata from fixed commit
+  `b5309bca91f63d7477d6e1144369e19e4a875932`: 332 current catalog entries plus
+  31 historical entries retained with original immutable links. Preserve all
+  previously selectable IDs and document the 21 additions and two substantive
+  shared-entry changes. No skill bodies or runtime networking are added.
+- Preserve the owner's imported Claude Cowork instructions heading.
+
 ## 2026-10-05: Replit presentation recovery
 
 - Recover the Replit Agent's avatar/cover alternatives, crawler files and public
