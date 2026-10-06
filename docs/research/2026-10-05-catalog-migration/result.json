@@ -44,8 +44,8 @@
     "The requested 30000 token budget was not enforced by create_goal; final goal receipt reports 108957 tokens used."
   ],
   "discovered_tasks": [],
-  "next_action": "Obtain A06's accepted source/privacy review and maintainer decisions for BRG02-BRG11. Then the governance integrator can prepare a scoped AF-25 registry proposal; keep migration status planned until AF-23 closure evidence exists."
-  ,"publication": {
+  "next_action": "Obtain A06's accepted source/privacy review and maintainer decisions for BRG02-BRG11. Then the governance integrator can prepare a scoped AF-25 registry proposal; keep migration status planned until AF-23 closure evidence exists.",
+  "publication": {
     "requested_by_user": true,
     "repository": "OKHP3/AskJamie-FoundRy",
     "branch": "codex/a08-catalog-crosswalk-20261005",
@@ -55,8 +55,8 @@
       "docs/research/2026-10-05-catalog-migration/task-packet.md",
       "docs/research/2026-10-05-catalog-migration/result.json"
     ],
-    "status": "staged; PR creation pending",
-    "pull_request_url": null,
+    "status": "PR open; protected checks and merge pending",
+    "pull_request_url": "https://github.com/OKHP3/askjamie-foundry/pull/42",
     "merge_status": "not_merged"
   }
 }
