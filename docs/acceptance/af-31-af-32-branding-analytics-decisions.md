@@ -1,6 +1,7 @@
 # AF-31 and AF-32: branding and analytics decisions
 
-**Status:** preparation published; external setting changes and analytics behavior remain pending owner decisions.  
+**Status:** preparation published; external setting changes and analytics behavior remain pending owner decisions.
+
 **Source reviewed:** `OKHP3/askjamie-foundry` main at `828b94d4c90ee9d5e13189763ebc0b75a2843fdb`. The referenced implementation files are unchanged from preparation baseline `0e340c5ee18396c8de59aa0b7d01780d0dce83e4`.
 
 ## AF-31: external project branding
