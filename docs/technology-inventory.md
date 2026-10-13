@@ -4,7 +4,9 @@ Inventory baseline assembled 2026-09-18 America/Chicago; its original linked
 sources were retrieved 2026-09-19 UTC. The Python, npm, and OpenSSL release
 sources called out in the October 1 targeted refresh were rechecked 2026-10-01
 UTC; other entries retain their earlier source-observation dates unless noted.
-The automated release watch was rerun 2026-10-01 UTC.
+The automated release watch was rerun 2026-10-01 UTC. A separate October 13
+review records Python, SQLite, Node Current, and Mermaid upstream observations
+below; other rows keep their stated observation dates.
 Question: what does this solution use, how current is it, and how will later
 stable releases reach it with evidence of compatibility?
 
@@ -38,11 +40,11 @@ above. These are dated observations, not perpetual latest-version claims.
 
 | Technology | In place / evidence | Latest stable and primary source | Update route |
 |---|---|---|---|
-| Python / CPython | Required CI floor `3.11`; a separate CI job follows latest stable `3.x`. Project guidance reports successful verification under `3.11.15` and `3.14.5`. This Windows audit process itself reports **3.14.0rc1**, a prerelease, and is not the stable runtime baseline. | [3.14.8](https://www.python.org/downloads/release/python-3148/); [3.11 security line 3.11.17](https://www.python.org/downloads/release/python-31117/); [3.12 security line 3.12.15](https://www.python.org/downloads/release/python-31215/) | Latest stable CI plus separately validated host migrations |
+| Python / CPython | Required CI floor `3.11`; a separate CI job follows latest stable `3.x`. Project guidance reports successful verification under `3.11.15` and `3.14.5`. This Windows audit process itself reports **3.14.0rc1**, a prerelease, and is not the stable runtime baseline. | [3.15.0](https://www.python.org/downloads/release/python-3150/), reviewed October 13; [3.11 security line 3.11.17](https://www.python.org/downloads/release/python-31117/); [3.12 security line 3.12.15](https://www.python.org/downloads/release/python-31215/) | Latest stable CI plus separately validated host migrations |
 | Python standard library | `http.server`, `sqlite3`, `json`, `zipfile`, `hashlib`, `urllib`, `unittest`, `venv`, etc. follow the interpreter | [Same Python release](https://docs.python.org/3/library/) | Update Python; no individual pip pins. HTTP server remains loopback-only. |
 | PyYAML | `6.0.3` pinned in `requirements.txt`, installed on both hosts | [6.0.3](https://pypi.org/project/PyYAML/) | Current; Dependabot PRs |
 | jsonschema | `4.26.0` pinned in `requirements.txt`, installed on both hosts | [4.26.0](https://pypi.org/project/jsonschema/) | Current; Dependabot PRs |
-| SQLite | Windows Python `3.49.1`; Replit Python `3.51.1`; used by `workbench/store.py` | [3.53.4](https://sqlite.org/changes.html) | Python/host distribution, then backup/import and transaction tests |
+| SQLite | Windows Python `3.49.1`; Replit Python `3.51.1`; used by `workbench/store.py` | [3.54.0](https://sqlite.org/releaselog/3_54_0.html), reviewed October 13 | Python/host distribution, then backup/import and transaction tests |
 | LibYAML | PyYAML extension `0.2.5` observed on both hosts; `.replit` also declares unpinned `libyaml` | [0.2.5](https://github.com/yaml/libyaml/releases/tag/0.2.5) | PyYAML wheel/Nix package; declaration does not prove system library bytes |
 | OpenSSL | Windows Python `3.0.16`; Replit Python `3.6.0` | [4.0.3; supported 3.6 line 3.6.5; 3.5 LTS line 3.5.9](https://openssl-library.org/source/) | Python/host distribution security updates. Do not manually replace interpreter libraries. 4.1.0 prereleases excluded. |
 | zlib / zlib-ng | Stable audit Python zlib `1.3.1`; prerelease Python `1.3.1.zlib-ng` compatibility string; actual zlib-ng release unknown | [zlib 1.3.2](https://github.com/madler/zlib/releases/tag/v1.3.2); [zlib-ng 2.3.3](https://github.com/zlib-ng/zlib-ng/releases/tag/2.3.3) | Python distribution; ZIP export/import tests |
@@ -88,7 +90,7 @@ That freeze is evidence for that Python/OS combination, not a universal lock.
 | JSON Schema | Explicit Draft 2020-12 in both schemas | [Draft 2020-12](https://json-schema.org/specification) | Current; deliberate schema migrations |
 | TOML | `.replit` uses TOML 1.0-compatible syntax; platform parser unknown | [TOML 1.1.0](https://toml.io/en/) | Use Replit-supported syntax |
 | Markdown / GFM | Documentation/export text; renderer unpinned | [CommonMark 0.31.2](https://spec.commonmark.org/); [GFM 0.29-gfm](https://github.github.com/gfm/) | Viewer-managed; preview changed documents |
-| Mermaid | Fences in `docs/ecosystem-map.md` and `threat_model.md`; no bundled library | [12.0.0](https://registry.npmjs.org/mermaid/latest) | GitHub manages its renderer; its installed version was not measured |
+| Mermaid | Fences in `docs/ecosystem-map.md` and `threat_model.md`; no bundled library | [12.2.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4012.2.0), reviewed October 13 | GitHub manages its renderer; its installed version was not measured |
 | ZIP / DEFLATE | Python `zipfile` exports/backups | [Python zipfile contract](https://docs.python.org/3/library/zipfile.html) | Follows Python/zlib, verify export/restore |
 
 PDF/DOCX files are reference assets, not installed document engines. Skillz
@@ -112,7 +114,7 @@ below do not establish an earlier run's resolved SHA or embedded Node engine.
 | Replit | Managed workspace, no platform pin | [Replit configuration reference](https://docs.replit.com/replit-app/configuration) |
 | Nixpkgs channel | `.replit`: `stable-25_05` | [Upstream 26.05](https://nixos.org/blog/announcements/2026/nixos-2605/) |
 | Nix | Replit reports Nix 2.31.1 with Determinate Nix 3.11.2 | [Upstream stable manual 2.34.9](https://nix.dev/manual/nix/stable/); [Determinate fork v2.35.2](https://github.com/DeterminateSystems/nix/releases/tag/v2.35.2) |
-| Node.js | Replit module `nodejs-24`; Windows/Replit versions `24.13.0` / `24.11.1` were observed in the dated source inventory, not re-probed in this refresh | [LTS 24.21.0; stable Current 26.10.0](https://nodejs.org/dist/index.json) |
+| Node.js | Replit module `nodejs-24`; Windows/Replit versions `24.13.0` / `24.11.1` were observed in the dated source inventory, not re-probed in this refresh | [LTS 24.21.0](https://nodejs.org/dist/index.json); [Current 26.11.1](https://nodejs.org/en/blog/release/v26.11.1), Current reviewed October 13 |
 | npm | Windows/Replit `11.6.2` in the dated source inventory, not re-probed in this refresh; seven skill package manifests have no third-party dependencies | [12.2.0](https://registry.npmjs.org/npm/latest) |
 | PostgreSQL | Replit module `postgresql-16`, CLI 16.10; no application driver/import/query dependency | [18.6; 16 line 16.15](https://www.postgresql.org/docs/release/) |
 | Bash | Replit 5.2.37; post-merge and CI scripts | [5.3](https://www.gnu.org/software/bash/manual/bash.html), [patches through 020](https://ftp.gnu.org/gnu/bash/bash-5.3-patches/) |
@@ -179,6 +181,26 @@ security-maintenance lines `3.11.17` and `3.12.15`, npm `12.2.0`, and OpenSSL
 inventory rows were not re-probed as part of this targeted refresh. No host
 runtime, application dependency or managed workspace was changed. The
 `AVAILABLE` pip `26.2.1` entry remains installation tooling, not a package pin.
+
+## October 13 upstream review dispositions
+
+This review accepts four official upstream release observations. It changes the
+review ledger, not installed software, runtime pins, dependencies, private data,
+GitHub's Mermaid renderer, or publication settings. Older installed-version
+observations above remain dated; they have not been re-probed.
+
+| Upstream release | Evidence and disposition | Remaining boundary |
+|---|---|---|
+| [Python 3.15.0](https://www.python.org/downloads/release/python-3150/) | Stable release dated October 9. Existing [compatibility run 38226895801](https://github.com/OKHP3/askjamie-foundry/actions/runs/38226895801) passed 96 tests on Python 3.15.0 at `4218f63dd02cd98ccbcec647c6c670f2decd13af`. Accept the upstream observation and existing CI compatibility evidence. | The supported Python 3.11 floor remains. Host migration, interpreter libraries, and installed environments require separate validation. |
+| [SQLite 3.54.0](https://sqlite.org/releaselog/3_54_0.html) | Stable release dated October 9. Accept upstream availability; defer installation to the Python or host distribution. | No 3.54 runtime adoption or backup/import compatibility is claimed. Earlier installed SQLite versions remain a host review item. |
+| [Node Current 26.11.1](https://nodejs.org/en/blog/release/v26.11.1) | Accept the informational Current-channel observation. | Keep the Node 24 LTS development line. No installation or migration is implied. |
+| [Mermaid 12.2.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4012.2.0) | Accept the immutable upstream release observation. This repository only has Mermaid documentation fences. | GitHub manages rendering; its actual deployed version is unknown. No bundled runtime, renderer replacement, or diagram compatibility claim. |
+
+The existing release watch remains strict: new `UPDATE`, `REVIEW`, and `UNKNOWN`
+results remain visible failures on scheduled and manual runs. This disposition
+does not resolve security findings, incomplete scanner coverage, hosted-workbench
+approvals, or any owner-held migration decision. Future releases require another
+recorded review. No Pages deployment is requested.
 
 ## Migration and merge plan
 
