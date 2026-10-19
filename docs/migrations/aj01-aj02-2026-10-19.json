@@ -59,8 +59,8 @@
   "replit": {
     "parent": {
       "status": "reported-synchronized-and-validated",
-      "observed_head": "0d91d5f8735b4e76f19750a3045f866af463bc88",
-      "freshly_fetched_origin_main": "0d91d5f8735b4e76f19750a3045f866af463bc88",
+      "observed_head": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
+      "freshly_fetched_origin_main": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
       "ahead": 0,
       "behind": 0,
       "working_tree": "reported-clean",
@@ -69,9 +69,18 @@
         "zip_restore": "both-passed",
         "manifests": "parent-and-both-children-passed",
         "registry": "passed",
-        "regression_tests": 99
+        "regression_tests": 100,
+        "replit_configurations": "both-passed-Git-blob-size-and-SHA-256"
       },
-      "evidence": "Replit Agent report after actual Shell fetch/update/checks. These checks validate this stated revision, not later changes."
+      "evidence": "Recorded execution receipt at the stated revision, reported by Replit Agent after actual Shell synchronization and checks. Later documentation revisions do not inherit unperformed runtime checks. Current rollout status remains in issue 58.",
+      "prior_validation": [
+        {
+          "revision": "0d91d5f8735b4e76f19750a3045f866af463bc88",
+          "regression_tests": 99,
+          "status": "historical-source-import-checkpoint"
+        }
+      ],
+      "identity_readback": "Machine-generated JSON contained equal 40-character local and remote revisions, 0/0 divergence and clean working status; root parsed and checked every field."
     },
     "aj01": {
       "observed_head": "19ba544fe86bfc3a57c841e443353da0c2d39d08",
@@ -123,8 +132,30 @@
     "source_preservation": "passed-local: 873 Git blob IDs, sizes and SHA-256 hashes after reconstruction; ZIP restore runs in required Python CI",
     "model_execution": "not-run",
     "deployment": "not-run",
-    "replit_parent": "Source parity, original snapshot recovery, manifests, registry and 99 tests passed at 0d91d5f8735b4e76f19750a3045f866af463bc88, reported by Replit Agent.",
+    "replit_parent": "Source parity, both original snapshot restores, both recovered configuration identities, manifests, registry and 100 tests passed at 231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076, reported by Replit Agent. Root checked the machine-generated identity readback.",
     "gpt_retry": "Browser connection failed before page state; no live settings or originals captured."
   },
-  "next_action": "Verify and integrate the Replit configuration capture and source-routing notices, then obtain actual GPT configuration or an explicit partial-port brief. Keep original Repls until ignored-state and history recovery is accepted."
+  "next_action": "Obtain actual configured GPT source or an explicit partial-port brief. Independently compare the inaccessible Windows mirrors and assess ignored child-Repl state and full Git-history recovery. Complete website-link rollout through its tracked PR. Do not reschedule the completed tracked configuration capture or initial parent synchronization.",
+  "source_routing": {
+    "aj01": {
+      "pr": "https://github.com/OKHP3/askjamie-aj01-resume-representative/pull/2",
+      "merged_commit": "2b4e99a8dc4bb83e1168bfd594d55120e384dc6e",
+      "status": "merged-canonical-source-notice"
+    },
+    "aj02": {
+      "pr": "https://github.com/OKHP3/askjamie-aj02-professional-portfolio/pull/3",
+      "merged_commit": "41fed26afa8aafb279308e0eae5d7c980aa09bfe",
+      "status": "merged-canonical-source-notice"
+    },
+    "website": {
+      "pr": "https://github.com/OKHP3/askjamie/pull/117",
+      "purpose": "Link existing migration notices to corresponding canonical capability source; PR and deployment checks are authoritative for rollout state."
+    }
+  },
+  "completed_units": [
+    "pinned-GitHub-snapshot-consolidation",
+    "tracked-Replit-configuration-comparison-and-original-byte-capture",
+    "parent-Replit-synchronization-and-validation-at-recorded-revision",
+    "standalone-source-development-routing"
+  ]
 }
