@@ -23,3 +23,7 @@ The owner authorized this current public-source snapshot import on 2026-10-19.
 No Git history, Windows-only files, ignored state, Replit-only commits or live
 GPT configuration is included. Those sources require separate reconciliation.
 Original repositories and entry points remain available.
+
+The later [Replit configuration capture](replit/README.md) preserves the
+tracked local environment delta separately. It does not modify this original
+GitHub snapshot or capture ignored state and source history.

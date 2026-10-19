@@ -5,7 +5,7 @@
   "integration_owner": "Codex",
   "base_sha": "ac9917e2cfc2e86c10a9829613750fea9b67652b",
   "branch": "codex/aj01-aj02-migration-20261019",
-  "status": "github-source-snapshots-imported-platform-migration-incomplete",
+  "status": "github-source-imported-parent-replit-synchronized-local-config-deltas-preserved",
   "owner_decisions": {
     "public_children": true,
     "date": "2026-10-19",
@@ -57,27 +57,59 @@
     }
   ],
   "replit": {
-    "parent": "inspection-timed-out-retry-busy",
+    "parent": {
+      "status": "reported-synchronized-and-validated",
+      "observed_head": "0d91d5f8735b4e76f19750a3045f866af463bc88",
+      "freshly_fetched_origin_main": "0d91d5f8735b4e76f19750a3045f866af463bc88",
+      "ahead": 0,
+      "behind": 0,
+      "working_tree": "reported-clean",
+      "validation": {
+        "original_snapshot_integrity": "both-passed",
+        "zip_restore": "both-passed",
+        "manifests": "parent-and-both-children-passed",
+        "registry": "passed",
+        "regression_tests": 99
+      },
+      "evidence": "Replit Agent report after actual Shell fetch/update/checks. These checks validate this stated revision, not later changes."
+    },
     "aj01": {
-      "observed_head": "8e3918426ff8a38abd795d91d74fef894c58c854",
-      "cached_origin_main": "8e3918426ff8a38abd795d91d74fef894c58c854",
-      "remote_ahead_of_cached_base": 2,
-      "unowned_configuration_edit": true
+      "observed_head": "19ba544fe86bfc3a57c841e443353da0c2d39d08",
+      "github_snapshot": "6744330681e0ddc55d6542aaa783cb9944df3092",
+      "working_tree": "reported-clean",
+      "tracked_configuration_delta": "preserved-exact-original-in-origin/replit",
+      "substantive_capability_delta": "none-identified-by-bounded-tracked-comparison",
+      "ignored_state": {
+        "total": 422,
+        "cache": 11,
+        "platform_skill_mcp": 401,
+        "local_state": 10,
+        "captured": false
+      },
+      "source_history_recovery": "not-archived",
+      "ownership": "unknown; no active owner inferred from local agent state"
     },
     "aj02": {
       "observed_head": "e2c56979b86c1bbd4084089392d04dbda609cb42",
-      "cached_origin_main": "5b29132b0eacdb8bce609e946ed948e430b6a3a3",
-      "local_ahead_of_cached_base": 1,
-      "remote_ahead_of_cached_base": 1,
+      "github_snapshot": "d45a598ab57acae7a41f887a9208e86a264d7cda",
       "working_tree": "reported-clean",
-      "live_comparison": "not-run"
+      "tracked_configuration_delta": "preserved-exact-original-in-origin/replit",
+      "substantive_capability_delta": "none-identified-by-bounded-tracked-comparison",
+      "ignored_state": {
+        "total": 421,
+        "cache": 11,
+        "mcp": 2,
+        "installed_skill_support": 399,
+        "local_state": 9,
+        "captured": false
+      },
+      "source_history_recovery": "not-archived",
+      "ownership": "platform task query reported no active task"
     }
   },
   "exceptions": [
+    "Replit configuration originals preserved; ignored platform/tooling/editor state remains in original Repls and requires disposition before retirement.",
     "Current GitHub snapshot bytes imported; Git history and local-only/ignored state are not independently archived or reconciled.",
-    "AJ01 unowned Replit configuration edit must be preserved.",
-    "AJ02 local commit must be compared and preserved.",
-    "Parent Replit actual checkout and ownership not verified.",
     "Configured GPT instructions, knowledge, actions and starters not captured.",
     "AJ01 DOCX source reviewed as general guidance; PDF semantic equivalence, factual currency and component reuse rights remain unverified.",
     "AJ02 root licensing unresolved; seed packs lack source corpus/prompt material.",
@@ -90,7 +122,9 @@
     "required_pr_checks": "Required against the actual PR head before protected-main integration; evidence is linked from PR 59 and issue 58.",
     "source_preservation": "passed-local: 873 Git blob IDs, sizes and SHA-256 hashes after reconstruction; ZIP restore runs in required Python CI",
     "model_execution": "not-run",
-    "deployment": "not-run"
+    "deployment": "not-run",
+    "replit_parent": "Source parity, original snapshot recovery, manifests, registry and 99 tests passed at 0d91d5f8735b4e76f19750a3045f866af463bc88, reported by Replit Agent.",
+    "gpt_retry": "Browser connection failed before page state; no live settings or originals captured."
   },
-  "next_action": "Verify current import head with required CI, then reconcile inaccessible Windows and Replit-only state and capture actual GPT configuration before portable conversion or cutover."
+  "next_action": "Verify and integrate the Replit configuration capture and source-routing notices, then obtain actual GPT configuration or an explicit partial-port brief. Keep original Repls until ignored-state and history recovery is accepted."
 }
