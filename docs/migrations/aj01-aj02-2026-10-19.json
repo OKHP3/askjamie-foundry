@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-19",
+  "issue": "https://github.com/OKHP3/askjamie-foundry/issues/58",
+  "owner": "Jamie",
+  "integration_owner": "Codex",
+  "base_sha": "ac9917e2cfc2e86c10a9829613750fea9b67652b",
+  "branch": "codex/aj01-aj02-migration-20261019",
+  "status": "github-source-snapshots-imported-platform-migration-incomplete",
+  "owner_decisions": {
+    "public_children": true,
+    "date": "2026-10-19",
+    "scope": [
+      "aj01",
+      "aj02"
+    ],
+    "private_state_remains_private": true,
+    "permanent_private_controls_unchanged": true
+  },
+  "sources": [
+    {
+      "code": "aj01",
+      "repo": "OKHP3/askjamie-aj01-resume-representative",
+      "source_commit": "6744330681e0ddc55d6542aaa783cb9944df3092",
+      "visibility": "public",
+      "destination": "capabilities/askjamie-aj01-resume-representative",
+      "tracked_file_count": 392,
+      "migration_status": "imported",
+      "source_bytes_imported": 2013468,
+      "source_sha256_verified": 392,
+      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
+      "configured_gpt_capture": "unverified",
+      "skill_status": "not-authored",
+      "model_evaluations": "not-run",
+      "host_acceptance": "not-run",
+      "retirement": "not-authorized-for-execution",
+      "source_tree": "c81f19ea464c4a09e911c2c993db080b661dddd6",
+      "local_mirror_parity": "not-verified-access-denied"
+    },
+    {
+      "code": "aj02",
+      "repo": "OKHP3/askjamie-aj02-professional-portfolio",
+      "source_commit": "d45a598ab57acae7a41f887a9208e86a264d7cda",
+      "visibility": "public",
+      "destination": "capabilities/askjamie-aj02-professional-portfolio",
+      "tracked_file_count": 481,
+      "migration_status": "imported",
+      "source_bytes_imported": 1880192,
+      "source_sha256_verified": 481,
+      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
+      "configured_gpt_capture": "unverified",
+      "skill_status": "not-authored",
+      "model_evaluations": "not-run",
+      "host_acceptance": "not-run",
+      "retirement": "not-authorized-for-execution",
+      "source_tree": "23d58eda7f15273918db1adc9bc8e3ac70edbaf8",
+      "local_mirror_parity": "not-verified-access-denied"
+    }
+  ],
+  "replit": {
+    "parent": "inspection-timed-out-retry-busy",
+    "aj01": {
+      "observed_head": "8e3918426ff8a38abd795d91d74fef894c58c854",
+      "cached_origin_main": "8e3918426ff8a38abd795d91d74fef894c58c854",
+      "remote_ahead_of_cached_base": 2,
+      "unowned_configuration_edit": true
+    },
+    "aj02": {
+      "observed_head": "e2c56979b86c1bbd4084089392d04dbda609cb42",
+      "cached_origin_main": "5b29132b0eacdb8bce609e946ed948e430b6a3a3",
+      "local_ahead_of_cached_base": 1,
+      "remote_ahead_of_cached_base": 1,
+      "working_tree": "reported-clean",
+      "live_comparison": "not-run"
+    }
+  },
+  "exceptions": [
+    "Current GitHub snapshot bytes imported; Git history and local-only/ignored state are not independently archived or reconciled.",
+    "AJ01 unowned Replit configuration edit must be preserved.",
+    "AJ02 local commit must be compared and preserved.",
+    "Parent Replit actual checkout and ownership not verified.",
+    "Configured GPT instructions, knowledge, actions and starters not captured.",
+    "AJ01 DOCX source reviewed as general guidance; PDF semantic equivalence, factual currency and component reuse rights remain unverified.",
+    "AJ02 root licensing unresolved; seed packs lack source corpus/prompt material.",
+    "AJ02 website retrieval inconclusive; browser verification pending.",
+    "ChatGPT/Claude project and thread inventory not established."
+  ],
+  "validation": {
+    "local_structural": "Passed: 873 source blob/size/SHA-256 checks, both complete Git tree reconstructions, local documentation links and unchanged seven private registry records.",
+    "python": "unavailable-in-local-session",
+    "required_pr_checks": "Required against the actual PR head before protected-main integration; evidence is linked from PR 59 and issue 58.",
+    "source_preservation": "passed-local: 873 Git blob IDs, sizes and SHA-256 hashes after reconstruction; ZIP restore runs in required Python CI",
+    "model_execution": "not-run",
+    "deployment": "not-run"
+  },
+  "next_action": "Verify current import head with required CI, then reconcile inaccessible Windows and Replit-only state and capture actual GPT configuration before portable conversion or cutover."
+}

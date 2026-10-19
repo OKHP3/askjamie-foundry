@@ -85,6 +85,16 @@ exists or is operational.
 
 ## Current status
 
+Owner direction, 2026-10-19: AJ01 and AJ02 are public children of this public
+parent. Their complete pinned GitHub snapshots are preserved unchanged under
+origin/repository with per-file SHA-256 and Git identities. Registry migration
+status imported records this source consolidation only. GPT capture, local and
+Replit reconciliation, component reuse rights, skill conversion, host validation
+and retirement remain open. Archived contributor tooling and instructions are
+historical inputs, not active product entry points. Verify preservation with
+python scripts/verify-source-snapshots.py --restore-check. See
+docs/migrations/aj01-aj02-2026-10-19.md. Private controls remain unchanged.
+
 Confirmed by `manifest.yaml`:
 
 - Type: `foundry-relay`
@@ -124,9 +134,10 @@ docs/ origin/ skills/ adapters/ skill/ prompts/ research/ tests/
 schemas/ assets/ exports/ archive/
 ```
 
-The root repository has no nested Git repositories or submodules. Historical
-capability folders and their staged archive copies are no longer present in this
-checkout.
+The root repository has no nested Git repositories or submodules. Earlier
+staged archive copies remain absent. AJ01 and AJ02 current source snapshots
+are preserved under their capability origin/repository directories; no original
+Git history is imported.
 
 ## Runtime and validation
 
