@@ -4,9 +4,10 @@
 
 The nine records retain source identities and catalog lifecycle statuses. On
 2026-10-19 Jamie selected public destinations for AJ01 and AJ02. Their source
-commits are pinned and public metadata scaffolds exist, but their source
-migrations remain planned. Seven other entries retain their private controls.
-No source-byte import is complete. See [the selected-child migration plan](../docs/migrations/aj01-aj02-2026-10-19.md)
+commits are pinned and complete tracked snapshots are preserved unchanged under
+each capability origin/repository directory. Their migration status is imported;
+source consolidation does not imply skill or host acceptance. Seven other
+entries retain their private controls. See [the selected-child migration plan](../docs/migrations/aj01-aj02-2026-10-19.md)
 and [the migration contract](../docs/skill-first-foundry.md).
 
 

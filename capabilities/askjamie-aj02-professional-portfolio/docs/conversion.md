@@ -8,17 +8,17 @@ Semantic-loss risk: high.
 This is a proposed architecture and acceptance plan, not a completed conversion.
 
 Blockers: configured GPT instructions, uploaded knowledge and actions are
-unverified; original-byte preservation and component rights are incomplete;
+unverified; component reuse rights remain unresolved;
 Replit-only work needs reconciliation. AJ02 also has unresolved legacy licensing and placeholder corpus/prompt source.
 
 ## Source inventory
 
 | Asset | Status | Portable value | Proposed destination | Evidence |
 |---|---|---|---|---|
-| Tracked repository files | Available as metadata; 481 files | Complete file enumeration and Git identities | origin/source-index.json | Exact source commit d45a598ab57acae7a41f887a9208e86a264d7cda |
+| Tracked repository files | Imported exact snapshot; 481 files | Original bytes, SHA-256 and Git identities | origin/repository/ and origin/source-index.json | Exact source commit d45a598ab57acae7a41f887a9208e86a264d7cda |
 | Source README and manifest | Available; reviewed | Identity, intended workflow and source pointers | Preserved origin, followed by reviewed documentation | Pinned repository files |
 | Three build seed packs | Partial: seed text reviewed; source corpus/prompt folders are placeholders | Initial portfolio procedures and rubric ideas | Preserved origin; reviewed references later | Pinned tree and selected text reads |
-| Contributor tooling | Available as metadata | Separate maintenance capability | Separate preservation/disposition record | 429 files under .agents plus nine promotion-mirror files |
+| Contributor tooling | Original bytes preserved | Separate maintenance capability | Historical source snapshot only | 429 files under .agents plus nine promotion-mirror files |
 | Configured GPT source | Unverified | Actual instructions, knowledge, actions and starters | Approved source archive and behavior map | GPT URL is a pointer; settings not captured |
 | Replit-only work | Partial | Workspace configuration and local history | Separate recovery archive before reconciliation | Agent-reported Shell observations in migration plan |
 | Historical Notion record | Located and read privately | Intended capability scope | Existing anchor and routing links | Existing page retained; no page move performed |
@@ -63,7 +63,7 @@ Replit-only work needs reconciliation. AJ02 also has unresolved legacy licensing
 
 | Order | Action | Acceptance | Dependency |
 |---|---|---|---|
-| 1 | Preserve repository snapshots and Replit-only work | Original bytes, SHA-256 manifest and successful restore | Confirm source/workspace custody |
+| 1 | Preserve Replit-only work and Git history separately | Repository snapshot imported; remaining state has explicit custody and restore evidence | Original sources retained |
 | 2 | Preserve configured GPT source | Instructions, knowledge, actions, starters and exclusions inventoried | Working authenticated access or owner export |
 | 3 | Clear rights and privacy per component | Explicit public-use/distribution decision and attribution | Preserved originals |
 | 4 | Rewrite selected behavior as a portable skill | Owner-reviewed behavior and loss map; explicit missing features | Source and rights dossier |

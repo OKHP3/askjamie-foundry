@@ -5,7 +5,7 @@
   "integration_owner": "Codex",
   "base_sha": "ac9917e2cfc2e86c10a9829613750fea9b67652b",
   "branch": "codex/aj01-aj02-migration-20261019",
-  "status": "public-scaffolds-prepared-source-migration-incomplete",
+  "status": "github-source-snapshots-imported-platform-migration-incomplete",
   "owner_decisions": {
     "public_children": true,
     "date": "2026-10-19",
@@ -24,15 +24,17 @@
       "visibility": "public",
       "destination": "capabilities/askjamie-aj01-resume-representative",
       "tracked_file_count": 392,
-      "migration_status": "planned",
-      "source_bytes_imported": 0,
-      "source_sha256_verified": 0,
-      "restoration_test": "not-run",
+      "migration_status": "imported",
+      "source_bytes_imported": 2013468,
+      "source_sha256_verified": 392,
+      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
       "configured_gpt_capture": "unverified",
       "skill_status": "not-authored",
       "model_evaluations": "not-run",
       "host_acceptance": "not-run",
-      "retirement": "not-authorized-for-execution"
+      "retirement": "not-authorized-for-execution",
+      "source_tree": "c81f19ea464c4a09e911c2c993db080b661dddd6",
+      "local_mirror_parity": "not-verified-access-denied"
     },
     {
       "code": "aj02",
@@ -41,15 +43,17 @@
       "visibility": "public",
       "destination": "capabilities/askjamie-aj02-professional-portfolio",
       "tracked_file_count": 481,
-      "migration_status": "planned",
-      "source_bytes_imported": 0,
-      "source_sha256_verified": 0,
-      "restoration_test": "not-run",
+      "migration_status": "imported",
+      "source_bytes_imported": 1880192,
+      "source_sha256_verified": 481,
+      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
       "configured_gpt_capture": "unverified",
       "skill_status": "not-authored",
       "model_evaluations": "not-run",
       "host_acceptance": "not-run",
-      "retirement": "not-authorized-for-execution"
+      "retirement": "not-authorized-for-execution",
+      "source_tree": "23d58eda7f15273918db1adc9bc8e3ac70edbaf8",
+      "local_mirror_parity": "not-verified-access-denied"
     }
   ],
   "replit": {
@@ -70,23 +74,23 @@
     }
   },
   "exceptions": [
-    "Original repository bytes/history not independently archived or restored.",
+    "Current GitHub snapshot bytes imported; Git history and local-only/ignored state are not independently archived or reconciled.",
     "AJ01 unowned Replit configuration edit must be preserved.",
     "AJ02 local commit must be compared and preserved.",
     "Parent Replit actual checkout and ownership not verified.",
     "Configured GPT instructions, knowledge, actions and starters not captured.",
-    "AJ01 knowledge document content and component rights pending.",
+    "AJ01 DOCX source reviewed as general guidance; PDF semantic equivalence, factual currency and component reuse rights remain unverified.",
     "AJ02 root licensing unresolved; seed packs lack source corpus/prompt material.",
     "AJ02 website retrieval inconclusive; browser verification pending.",
     "ChatGPT/Claude project and thread inventory not established."
   ],
   "validation": {
-    "local_structural": "passed: JSON, 873 unique inventory rows, counts/bytes, source pins, local Markdown links, fences, source-capture labels, unchanged seven private records",
+    "local_structural": "Source snapshot integrity passed; final documentation and CI checks pending.",
     "python": "unavailable-in-local-session",
-    "required_pr_checks": "pending",
-    "source_preservation": "not-run",
+    "required_pr_checks": "pending-current-source-import-head",
+    "source_preservation": "passed-local: 873 Git blob IDs, sizes and SHA-256 hashes after reconstruction; ZIP restore runs in required Python CI",
     "model_execution": "not-run",
     "deployment": "not-run"
   },
-  "next_action": "Preserve and reconcile AJ01 source/Replit-only work and capture configured GPT source before conversion or retirement."
+  "next_action": "Verify current import head with required CI, then reconcile inaccessible Windows and Replit-only state and capture actual GPT configuration before portable conversion or cutover."
 }

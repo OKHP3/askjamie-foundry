@@ -1,20 +1,21 @@
 # Capability subtrees
 
-This is the destination namespace for reviewed public AskJamie capabilities.
+AJ01 and AJ02 are public children with complete pinned GitHub source snapshots:
 
-AJ01 and AJ02 now have owner-approved public child metadata scaffolds:
+- [Resume Representative](askjamie-aj01-resume-representative/README.md): 392 files.
+- [Professional Portfolio](askjamie-aj02-professional-portfolio/README.md): 481 files.
 
-- [Resume Representative](askjamie-aj01-resume-representative/README.md)
-- [Professional Portfolio](askjamie-aj02-professional-portfolio/README.md)
+Each preserves original bytes and filenames in origin/repository, with a
+per-file SHA-256 and Git identity index. Registry status imported records source
+consolidation. Portable skills, configured GPT source, local/Replit differences,
+component reuse rights and host acceptance remain separate work. Follow the
+[migration record](../docs/migrations/aj01-aj02-2026-10-19.md).
 
-Their file indexes preserve source identities, not original file bytes. Source
-imports, portable skills, host acceptance and retirement remain pending. Follow
-the [staged migration plan](../docs/migrations/aj01-aj02-2026-10-19.md).
+Use capabilities/<existing-capability-slug>/ with portable products in skills/
+and target adapters in adapters/. Historical contributor tooling inside the
+source snapshots is not activated or promoted. Consult
+[the migration contract](../docs/skill-first-foundry.md) and
+[registry records](../registry/index.yaml).
 
-Use `capabilities/<existing-capability-slug>/` with the canonical `_template/`
-layout, portable products in `skills/` and target adapters in `adapters/`.
-Consult [the migration contract](../docs/skill-first-foundry.md) and
-[registry migration records](../registry/index.yaml).
-
-Private capability material belongs outside this public checkout. A directory
-is not an access boundary. Every permanent-private entry remains protected.
+Private capability material stays outside this public checkout. All
+permanent-private entries remain protected.

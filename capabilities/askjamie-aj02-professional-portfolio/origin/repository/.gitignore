@@ -1,0 +1,56 @@
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+*.pyc
+*.pyo
+__pycache__/
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Logs
+*.log
+logs/
+*.err
+
+# Environment
+.env
+.env.local
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Node modules (if needed)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Sensitive data
+secrets.yaml
+credentials.json
+api_keys.txt

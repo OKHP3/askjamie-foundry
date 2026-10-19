@@ -20,8 +20,8 @@ governance:
   naming_pattern: "askjamie-[code]-[slug]"
   agents_doc: "../../AGENTS.md"
 
-# Metadata scaffold only. Packaging is intentionally absent until product
-# source, rights, conversion and acceptance records support a package kind.
+# Source snapshot imported. Packaging remains absent until configured GPT
+# source, component rights, conversion and acceptance support a package kind.
 visibility_control:
   visibility: public
   public_graduation_allowed: true

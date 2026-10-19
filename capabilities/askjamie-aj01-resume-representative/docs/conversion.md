@@ -8,17 +8,17 @@ Semantic-loss risk: high.
 This is a proposed architecture and acceptance plan, not a completed conversion.
 
 Blockers: configured GPT instructions, uploaded knowledge and actions are
-unverified; original-byte preservation and component rights are incomplete;
+unverified; component reuse rights remain unresolved;
 Replit-only work needs reconciliation. AJ01 product prompt source is absent from the inspected tree.
 
 ## Source inventory
 
 | Asset | Status | Portable value | Proposed destination | Evidence |
 |---|---|---|---|---|
-| Tracked repository files | Available as metadata; 392 files | Complete file enumeration and Git identities | origin/source-index.json | Exact source commit 6744330681e0ddc55d6542aaa783cb9944df3092 |
+| Tracked repository files | Imported exact snapshot; 392 files | Original bytes, SHA-256 and Git identities | origin/repository/ and origin/source-index.json | Exact source commit 6744330681e0ddc55d6542aaa783cb9944df3092 |
 | Source README and manifest | Available; reviewed | Identity, intended workflow and source pointers | Preserved origin, followed by reviewed documentation | Pinned repository files |
-| 17 knowledge documents | Partial: file metadata, without binary content or rights review | Potential resume, HR and hiring references | Preserved origin; reviewed references later | Pinned tree and selected text reads |
-| Contributor tooling | Available as metadata | Separate maintenance capability | Separate preservation/disposition record | 344 files under .agents plus nine promotion-mirror files |
+| 17 knowledge documents | Original bytes preserved; component reuse rights pending | Potential resume, HR and hiring references | Preserved origin; reviewed references later | Pinned tree and selected text reads |
+| Contributor tooling | Original bytes preserved | Separate maintenance capability | Historical source snapshot only | 344 files under .agents plus nine promotion-mirror files |
 | Configured GPT source | Unverified | Actual instructions, knowledge, actions and starters | Approved source archive and behavior map | GPT URL is a pointer; settings not captured |
 | Replit-only work | Partial | Workspace configuration and local history | Separate recovery archive before reconciliation | Agent-reported Shell observations in migration plan |
 | Historical Notion record | Located and read privately | Intended capability scope | Existing anchor and routing links | Existing page retained; no page move performed |
@@ -63,7 +63,7 @@ Replit-only work needs reconciliation. AJ01 product prompt source is absent from
 
 | Order | Action | Acceptance | Dependency |
 |---|---|---|---|
-| 1 | Preserve repository snapshots and Replit-only work | Original bytes, SHA-256 manifest and successful restore | Confirm source/workspace custody |
+| 1 | Preserve Replit-only work and Git history separately | Repository snapshot imported; remaining state has explicit custody and restore evidence | Original sources retained |
 | 2 | Preserve configured GPT source | Instructions, knowledge, actions, starters and exclusions inventoried | Working authenticated access or owner export |
 | 3 | Clear rights and privacy per component | Explicit public-use/distribution decision and attribution | Preserved originals |
 | 4 | Rewrite selected behavior as a portable skill | Owner-reviewed behavior and loss map; explicit missing features | Source and rights dossier |
