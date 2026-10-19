@@ -85,6 +85,13 @@ exists or is operational.
 
 ## Current status
 
+Owner direction, 2026-10-19: AJ01 and AJ02 are public children of this public
+parent. Their capability directories currently contain metadata scaffolds and
+tracked-file indexes only; source-byte import, GPT capture, host validation and
+retirement remain pending. Their registry migrations stay planned with pinned
+source commits. See docs/migrations/aj01-aj02-2026-10-19.md. This does not change
+private runtime data or any permanent-private capability.
+
 Confirmed by `manifest.yaml`:
 
 - Type: `foundry-relay`

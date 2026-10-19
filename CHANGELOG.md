@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-19: AJ01 and AJ02 public child migration preparation
+
+- Record the owner-approved public child destinations and exact inspected
+  source commits while retaining planned migration status.
+- Add capability metadata scaffolds, complete tracked-file indexes and separate
+  conversion/loss/acceptance dossiers for Resume Representative and
+  Professional Portfolio. No source bytes or Git history are imported.
+- Document Replit-only work, source rights and GPT-capture gaps, ordered cutover,
+  rollback and separate retirement gates. Preserve every private protection.
+- Check public-subtree manifests against the registry in the existing Python
+  test suite; keep publication and hosted behavior outside structural checks.
+
 ## 2026-10-05: Delegated maintenance integration
 
 - Save the public continuation plan and machine-readable duties for all 26

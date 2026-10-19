@@ -5,6 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import yaml
+import jsonschema
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("registry_check", ROOT / "scripts/check-registry.py")
@@ -23,6 +24,23 @@ class RegistryValidationTests(unittest.TestCase):
 
     def test_current_registry_passes(self):
         self.assertEqual([], self.check(self.data))
+
+    def test_public_subtrees_have_matching_valid_manifests(self):
+        schema = yaml.safe_load((ROOT / "schemas/manifest.schema.yaml").read_text(encoding="utf-8"))
+        validator = jsonschema.Draft202012Validator(schema)
+        for entry in self.data["repositories"]:
+            if entry["migration"]["storage"] != "public-subtree":
+                continue
+            with self.subTest(repo=entry["repo"]):
+                manifest_path = ROOT / entry["migration"]["destination"] / "manifest.yaml"
+                manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+                self.assertEqual([], list(validator.iter_errors(manifest)))
+                self.assertEqual(entry["repo"], manifest["identity"]["repo"])
+                self.assertEqual(self.data["foundry"], manifest["lineage"]["parent_foundry"])
+                self.assertEqual(entry["code"], manifest["brand"]["capability_code"])
+                self.assertEqual(entry["visibility"], manifest["visibility_control"]["visibility"])
+                self.assertEqual(entry["public_graduation_allowed"],
+                                 manifest["visibility_control"]["public_graduation_allowed"])
 
     def test_malformed_shapes_fail_without_traceback(self):
         for value in [None, [], {"repositories": "wrong"}, {**self.data, "repositories": [None]}]:

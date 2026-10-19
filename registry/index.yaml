@@ -1,6 +1,6 @@
 schema_version: "1.0"
 foundry: OKHP3/AskJamie-FoundRy
-updated: "2026-09-27"
+updated: "2026-10-19"
 
 # ---------------------------------------------------------------------------
 # Registry of all child repositories governed by AskJamie FoundRy
@@ -18,36 +18,36 @@ repositories:
     migration:
       destination: capabilities/askjamie-aj01-resume-representative
       status: planned
-      storage: private-external
-      source_commit: ""
+      storage: public-subtree
+      source_commit: "6744330681e0ddc55d6542aaa783cb9944df3092"
     display_name: "AskJamie™ — Résumé Representative"
     code: aj01
     family: core-capability
     status: active
-    visibility: private
+    visibility: public
     public_graduation_allowed: true
     description: >
       Career, HR, and resume hybridization assistant. Covers dynamic resume
       generation, cover letter synthesis, hiring history analysis, and
       market-value compensation guidance.
-    notes: "Historical staged source material was removed from this checkout on 2026-07-27."
+    notes: "Public child scaffold approved 2026-10-19. Tracked-file inventory exists; source-byte preservation, configured GPT capture, Replit reconciliation and conversion remain pending. Historical staged source was removed 2026-07-27."
 
   - repo: OKHP3/askjamie-aj02-professional-portfolio
     migration:
       destination: capabilities/askjamie-aj02-professional-portfolio
       status: planned
-      storage: private-external
-      source_commit: ""
+      storage: public-subtree
+      source_commit: "d45a598ab57acae7a41f887a9208e86a264d7cda"
     display_name: "AskJamie™ — Professional Portfolio"
     code: aj02
     family: core-capability
     status: draft
-    visibility: private
+    visibility: public
     public_graduation_allowed: true
     description: >
       Public-facing professional portfolio capability. Surfaces curated work
       history and capability demonstrations for external audiences.
-    notes: "Planned. Not yet scaffolded."
+    notes: "Public child scaffold approved 2026-10-19. Tracked-file inventory exists; source-byte preservation, configured GPT capture, Replit reconciliation, licensing and conversion remain pending."
 
   - repo: OKHP3/askjamie-aj03-enterprise-sleuth
     migration:

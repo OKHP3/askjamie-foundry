@@ -2,10 +2,12 @@
 
 ## Subtree migration records
 
-The nine existing records retain their source identities, statuses, and privacy.
-Each has a planned `migration.destination`, `storage`, `status`, and `source_commit`.
-No source imports are complete. Private destinations are outside this public
-checkout. See [the migration contract](../docs/skill-first-foundry.md).
+The nine records retain source identities and catalog lifecycle statuses. On
+2026-10-19 Jamie selected public destinations for AJ01 and AJ02. Their source
+commits are pinned and public metadata scaffolds exist, but their source
+migrations remain planned. Seven other entries retain their private controls.
+No source-byte import is complete. See [the selected-child migration plan](../docs/migrations/aj01-aj02-2026-10-19.md)
+and [the migration contract](../docs/skill-first-foundry.md).
 
 
 **Role:** Authoritative catalog and intake log for all child repositories governed by this relay.  
@@ -33,8 +35,8 @@ any client/firewall flags.
 
 | Repo | Code | Family | Status | Visibility |
 |---|---|---|---|---|
-| `askjamie-aj01-resume-representative` | `aj01` | core-capability | active | private |
-| `askjamie-aj02-professional-portfolio` | `aj02` | core-capability | draft | private |
+| `askjamie-aj01-resume-representative` | `aj01` | core-capability | active | public |
+| `askjamie-aj02-professional-portfolio` | `aj02` | core-capability | draft | public |
 | `askjamie-aj03-enterprise-sleuth` | `aj03` | enterprise-sleuth | draft | private |
 | `askjamie-aj04-brandguard` | `aj04` | brandguard | draft | private |
 | `askjamie-brg00-builders-firstsource` | `brg00` | brandguard | active | private 🔒 |
