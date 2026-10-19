@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-19: Replit consolidation execution
+
+- Synchronize the parent Replit workspace with the merged source import and
+  record actual revision equality, recovery checks and 99 passing tests.
+- Preserve both original local Replit configuration deltas with byte, Git blob
+  and SHA-256 verification, separate from immutable GitHub snapshots.
+- Keep ignored state, unpublished source history, GPT capture, component reuse
+  rights, skill conversion and retirement duties explicit.
+
 ## 2026-10-19: AJ01 and AJ02 source consolidation
 
 - Import all 873 tracked files from the two pinned public GitHub snapshots

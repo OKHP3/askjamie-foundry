@@ -20,7 +20,7 @@ Replit-only work needs reconciliation. AJ01 product prompt source is absent from
 | 17 knowledge documents | Original bytes preserved; component reuse rights pending | Potential resume, HR and hiring references | Preserved origin; reviewed references later | Pinned tree and selected text reads |
 | Contributor tooling | Original bytes preserved | Separate maintenance capability | Historical source snapshot only | 344 files under .agents plus nine promotion-mirror files |
 | Configured GPT source | Unverified | Actual instructions, knowledge, actions and starters | Approved source archive and behavior map | GPT URL is a pointer; settings not captured |
-| Replit-only work | Partial | Workspace configuration and local history | Separate recovery archive before reconciliation | Agent-reported Shell observations in migration plan |
+| Replit-only work | Configuration original captured and hash-verified; ignored state/history outstanding | Local Python environment delta; no additional tracked product material identified | origin/replit/ | Agent-returned original bytes, independently checked Git blob/SHA-256; local history and ownership limits remain explicit |
 | Historical Notion record | Located and read privately | Intended capability scope | Existing anchor and routing links | Existing page retained; no page move performed |
 
 ## Capability map

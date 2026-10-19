@@ -10,6 +10,7 @@ with original filenames, bytes and provenance. Registry migration status is
 `imported`. This records source consolidation only. Portable skill conversion,
 configured GPT capture, Replit reconciliation and host acceptance remain open.
 
+- [Preserved Replit environment delta](origin/replit/README.md)
 - [Preservation scope and licensing](origin/README.md)
 - [Per-file source and SHA-256 index](origin/source-index.json)
 - [Conversion dossier](docs/conversion.md)
