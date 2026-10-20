@@ -1,0 +1,38 @@
+---
+# GPT Manifest for AskJamie-GPT-AJ02
+# GPT-AJ02: AskJamie™ — Professional Portfolio
+
+gpt:
+  id: gpt-aj02
+  name: "AskJamie™ — Professional Portfolio"
+  description: "Not a résumé. A clone of your best self. An always-on conversational sales engine for individuals and small teams."
+  version: "0.1.0"
+  
+repository:
+  name: AskJamie-GPT-AJ02
+  owner: OKHP3
+  url: https://github.com/OKHP3/AskJamie-GPT-AJ02
+
+structure:
+  src:
+    corpus: "Source documents, knowledge base materials"
+    transcripts: "Conversation logs and interaction history"
+  prompts: "System prompts and instructions"
+  eval: "Evaluation tests and benchmarks"
+  build: "Compiled knowledge packs and build artifacts"
+  ops: "Operational scripts and tooling"
+
+build_artifacts:
+  - build/knowledge-pack.md
+  - build/prompt-pack.md
+  - build/eval-pack.md
+
+metadata:
+  created: "2025-12-21"
+  author: "OKHP3"
+  license: "TBD"
+  tags:
+    - portfolio
+    - gpt
+    - askjamie
+    - conversational-ai

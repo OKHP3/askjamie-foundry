@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "observed_date": "2026-10-19",
+  "source_repository": "OKHP3/askjamie-aj02-professional-portfolio",
+  "source_kind": "replit-workspace-configuration",
+  "source_commit": "e2c56979b86c1bbd4084089392d04dbda609cb42",
+  "github_snapshot_commit": "d45a598ab57acae7a41f887a9208e86a264d7cda",
+  "observation_method": "Replit Agent returned the committed configuration as base64, with byte count, Git blob identity and SHA-256. Root decoded the original bytes and independently matched all three values, then verified the only byte difference from the preserved GitHub configuration is the added module line.",
+  "scope": "One environment-configuration file only. Original GitHub snapshot, source Git history, ignored data and platform runtime are separate.",
+  "substantive_capability_delta": "none identified by bounded tracked-file comparison",
+  "module_declaration": "modules = [\"python-base-3.13\"]",
+  "applied_to_parent_runtime": false,
+  "files": [
+    {
+      "source_path": ".replit",
+      "preserved_path": "origin/replit/.replit",
+      "size_bytes": 120,
+      "sha256": "77c87709f48093ebb5508dc38bc80e1f2aaf165a931f76611dd1c0f3d2f1ba89",
+      "github_snapshot_sha256": "d38bd512a4cfbb123ee82aaad98b5c0a65d54a86898447874ebf718acfcd567d",
+      "git_blob": "27d02896cb369a9a0299f13201fd8e1d76ff62fc"
+    }
+  ],
+  "ignored_state": {
+    "total": 421,
+    "cache": 11,
+    "mcp": 2,
+    "installed_skill_support": 399,
+    "local_state": 9,
+    "captured": false,
+    "values_read": false,
+    "disposition": "retain original Repl; portability/customization and preservation value unestablished"
+  },
+  "ownership": "platform task query reported no active task",
+  "source_history_preserved": false,
+  "retirement_authorized": false,
+  "commit_identity_evidence": "Replit Agent Shell report; the unpublished local commit itself was not independently fetched from GitHub.",
+  "excerpt_discrepancy": "The displayed diff used a scalar module string. Original base64 bytes, Git blob and SHA-256 agree on the list-valued declaration retained here. Raw original bytes control over the display excerpt."
+}

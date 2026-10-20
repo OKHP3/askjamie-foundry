@@ -1,0 +1,25 @@
+version: 2
+
+# Dependabot creates reviewable pull requests instead of silently changing
+# the repository. Add package ecosystems here when the project gains a
+# corresponding manifest or lockfile.
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  # Future examples:
+  # - package-ecosystem: npm
+  #   directory: "/"
+  #   schedule:
+  #     interval: weekly
+  # - package-ecosystem: pip
+  #   directory: "/"
+  #   schedule:
+  #     interval: weekly

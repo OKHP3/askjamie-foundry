@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-19",
+  "issue": "https://github.com/OKHP3/askjamie-foundry/issues/58",
+  "owner": "Jamie",
+  "integration_owner": "Codex",
+  "base_sha": "ac9917e2cfc2e86c10a9829613750fea9b67652b",
+  "branch": "codex/aj01-aj02-migration-20261019",
+  "status": "github-source-imported-parent-replit-synchronized-local-config-deltas-preserved",
+  "owner_decisions": {
+    "public_children": true,
+    "date": "2026-10-19",
+    "scope": [
+      "aj01",
+      "aj02"
+    ],
+    "private_state_remains_private": true,
+    "permanent_private_controls_unchanged": true
+  },
+  "sources": [
+    {
+      "code": "aj01",
+      "repo": "OKHP3/askjamie-aj01-resume-representative",
+      "source_commit": "6744330681e0ddc55d6542aaa783cb9944df3092",
+      "visibility": "public",
+      "destination": "capabilities/askjamie-aj01-resume-representative",
+      "tracked_file_count": 392,
+      "migration_status": "imported",
+      "source_bytes_imported": 2013468,
+      "source_sha256_verified": 392,
+      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
+      "configured_gpt_capture": "unverified",
+      "skill_status": "not-authored",
+      "model_evaluations": "not-run",
+      "host_acceptance": "not-run",
+      "retirement": "not-authorized-for-execution",
+      "source_tree": "c81f19ea464c4a09e911c2c993db080b661dddd6",
+      "local_mirror_parity": "not-verified-access-denied"
+    },
+    {
+      "code": "aj02",
+      "repo": "OKHP3/askjamie-aj02-professional-portfolio",
+      "source_commit": "d45a598ab57acae7a41f887a9208e86a264d7cda",
+      "visibility": "public",
+      "destination": "capabilities/askjamie-aj02-professional-portfolio",
+      "tracked_file_count": 481,
+      "migration_status": "imported",
+      "source_bytes_imported": 1880192,
+      "source_sha256_verified": 481,
+      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
+      "configured_gpt_capture": "unverified",
+      "skill_status": "not-authored",
+      "model_evaluations": "not-run",
+      "host_acceptance": "not-run",
+      "retirement": "not-authorized-for-execution",
+      "source_tree": "23d58eda7f15273918db1adc9bc8e3ac70edbaf8",
+      "local_mirror_parity": "not-verified-access-denied"
+    }
+  ],
+  "replit": {
+    "parent": {
+      "status": "reported-synchronized-and-validated",
+      "observed_head": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
+      "freshly_fetched_origin_main": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
+      "ahead": 0,
+      "behind": 0,
+      "working_tree": "reported-clean",
+      "validation": {
+        "original_snapshot_integrity": "both-passed",
+        "zip_restore": "both-passed",
+        "manifests": "parent-and-both-children-passed",
+        "registry": "passed",
+        "regression_tests": 100,
+        "replit_configurations": "both-passed-Git-blob-size-and-SHA-256"
+      },
+      "evidence": "Recorded execution receipt at the stated revision, reported by Replit Agent after actual Shell synchronization and checks. Later documentation revisions do not inherit unperformed runtime checks. Current rollout status remains in issue 58.",
+      "prior_validation": [
+        {
+          "revision": "0d91d5f8735b4e76f19750a3045f866af463bc88",
+          "regression_tests": 99,
+          "status": "historical-source-import-checkpoint"
+        }
+      ],
+      "identity_readback": "Machine-generated JSON contained equal 40-character local and remote revisions, 0/0 divergence and clean working status; root parsed and checked every field."
+    },
+    "aj01": {
+      "observed_head": "19ba544fe86bfc3a57c841e443353da0c2d39d08",
+      "github_snapshot": "6744330681e0ddc55d6542aaa783cb9944df3092",
+      "working_tree": "reported-clean",
+      "tracked_configuration_delta": "preserved-exact-original-in-origin/replit",
+      "substantive_capability_delta": "none-identified-by-bounded-tracked-comparison",
+      "ignored_state": {
+        "total": 422,
+        "cache": 11,
+        "platform_skill_mcp": 401,
+        "local_state": 10,
+        "captured": false
+      },
+      "source_history_recovery": "not-archived",
+      "ownership": "unknown; no active owner inferred from local agent state"
+    },
+    "aj02": {
+      "observed_head": "e2c56979b86c1bbd4084089392d04dbda609cb42",
+      "github_snapshot": "d45a598ab57acae7a41f887a9208e86a264d7cda",
+      "working_tree": "reported-clean",
+      "tracked_configuration_delta": "preserved-exact-original-in-origin/replit",
+      "substantive_capability_delta": "none-identified-by-bounded-tracked-comparison",
+      "ignored_state": {
+        "total": 421,
+        "cache": 11,
+        "mcp": 2,
+        "installed_skill_support": 399,
+        "local_state": 9,
+        "captured": false
+      },
+      "source_history_recovery": "not-archived",
+      "ownership": "platform task query reported no active task"
+    }
+  },
+  "exceptions": [
+    "Replit configuration originals preserved; ignored platform/tooling/editor state remains in original Repls and requires disposition before retirement.",
+    "Current GitHub snapshot bytes imported; Git history and local-only/ignored state are not independently archived or reconciled.",
+    "Configured GPT instructions, knowledge, actions and starters not captured.",
+    "AJ01 DOCX source reviewed as general guidance; PDF semantic equivalence, factual currency and component reuse rights remain unverified.",
+    "AJ02 root licensing unresolved; seed packs lack source corpus/prompt material.",
+    "AJ02 website retrieval inconclusive; browser verification pending.",
+    "ChatGPT/Claude project and thread inventory not established."
+  ],
+  "validation": {
+    "local_structural": "Passed: 873 source blob/size/SHA-256 checks, both complete Git tree reconstructions, local documentation links and unchanged seven private registry records.",
+    "python": "unavailable-in-local-session",
+    "required_pr_checks": "Required against the actual PR head before protected-main integration; evidence is linked from PR 59 and issue 58.",
+    "source_preservation": "passed-local: 873 Git blob IDs, sizes and SHA-256 hashes after reconstruction; ZIP restore runs in required Python CI",
+    "model_execution": "not-run",
+    "deployment": "not-run",
+    "replit_parent": "Source parity, both original snapshot restores, both recovered configuration identities, manifests, registry and 100 tests passed at 231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076, reported by Replit Agent. Root checked the machine-generated identity readback.",
+    "gpt_retry": "Browser connection failed before page state; no live settings or originals captured."
+  },
+  "next_action": "Obtain actual configured GPT source or an explicit partial-port brief. Independently compare the inaccessible Windows mirrors and assess ignored child-Repl state and full Git-history recovery. Read the separate website PR for its rollout state. Do not reschedule the completed tracked configuration capture or initial parent synchronization.",
+  "source_routing": {
+    "aj01": {
+      "pr": "https://github.com/OKHP3/askjamie-aj01-resume-representative/pull/2",
+      "merged_commit": "2b4e99a8dc4bb83e1168bfd594d55120e384dc6e",
+      "status": "merged-canonical-source-notice"
+    },
+    "aj02": {
+      "pr": "https://github.com/OKHP3/askjamie-aj02-professional-portfolio/pull/3",
+      "merged_commit": "41fed26afa8aafb279308e0eae5d7c980aa09bfe",
+      "status": "merged-canonical-source-notice"
+    },
+    "website": {
+      "pr": "https://github.com/OKHP3/askjamie/pull/117",
+      "purpose": "Link existing migration notices to corresponding canonical capability source; PR and deployment checks are authoritative for rollout state."
+    }
+  },
+  "completed_units": [
+    "pinned-GitHub-snapshot-consolidation",
+    "tracked-Replit-configuration-comparison-and-original-byte-capture",
+    "parent-Replit-synchronization-and-validation-at-recorded-revision",
+    "standalone-source-development-routing"
+  ]
+}

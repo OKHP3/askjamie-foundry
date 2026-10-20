@@ -130,6 +130,7 @@ class SubtreeMigrationTests(unittest.TestCase):
     def test_private_or_protected_entry_cannot_enter_public_subtree(self):
         for index in (0, 4, 7):
             data = copy.deepcopy(self.data)
+            data["repositories"][index]["visibility"] = "private"
             data["repositories"][index]["migration"]["storage"] = "public-subtree"
             self.assertTrue(self.check(data))
 
@@ -138,6 +139,8 @@ class SubtreeMigrationTests(unittest.TestCase):
                              ("destination", self.data["repositories"][1]["migration"]["destination"]),
                              ("status", "imported"), ("source_commit", "invented")):
             data = copy.deepcopy(self.data)
+            if field == "status":
+                data["repositories"][0]["migration"]["source_commit"] = ""
             data["repositories"][0]["migration"][field] = value
             self.assertTrue(self.check(data))
 

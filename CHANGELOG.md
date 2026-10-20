@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-10-19: Replit consolidation execution
+
+- Synchronize the parent Replit workspace with the merged source import and
+  record actual revision equality, recovery checks and 99 passing tests.
+- Preserve both original local Replit configuration deltas with byte, Git blob
+  and SHA-256 verification, separate from immutable GitHub snapshots.
+- Keep ignored state, unpublished source history, GPT capture, component reuse
+  rights, skill conversion and retirement duties explicit.
+
+## 2026-10-19: AJ01 and AJ02 source consolidation
+
+- Import all 873 tracked files from the two pinned public GitHub snapshots
+  under their capability origin/repository directories, preserving original
+  bytes and filenames without importing Git history or activating tooling.
+- Record SHA-256, Git blob and tree identities, original paths, source pins and
+  preserved destinations. Add an offline integrity and ZIP restore check.
+- Mark these two registry migrations imported. Keep skill conversion, local
+  and Replit reconciliation, component reuse rights and host acceptance open.
+- Add capability manifests and separate conversion/loss/acceptance dossiers.
+- Document Replit-only work, source rights and GPT-capture gaps, ordered cutover,
+  rollback and separate retirement gates. Preserve every private protection.
+- Check public-subtree manifests against the registry in the existing Python
+  test suite; keep publication and hosted behavior outside structural checks.
+
 ## 2026-10-05: Delegated maintenance integration
 
 - Save the public continuation plan and machine-readable duties for all 26

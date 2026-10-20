@@ -79,9 +79,13 @@ compatibility and lineage. Each entry now has a `migration` record:
 | `status` | `planned`, `source-inventoried`, `imported`, or `verified` |
 | `source_commit` | Exact source commit; empty means not yet inspected |
 
-All nine current entries remain private and planned. Their source repositories
-have not been inspected or imported by this change. Existing `active` values
-describe catalog lifecycle, not migration completion or remote existence.
+As of 2026-10-19, AJ01 and AJ02 have owner-approved public child destinations,
+complete tracked GitHub snapshots with original bytes, SHA-256 indexes and
+pinned source commits. Their registry migrations are imported. Portable skills,
+configured GPT capture, component reuse rights and platform reconciliation remain
+open; source import does not establish working replacement behavior. The other
+seven migrations remain planned with private storage. Existing `active` values describe catalog lifecycle, not
+migration completion or remote existence. See the [selected-child plan](migrations/aj01-aj02-2026-10-19.md).
 Private capabilities use the same relative layout in private storage **outside
 this public checkout**. Permanent-private locks remain permanent.
 
