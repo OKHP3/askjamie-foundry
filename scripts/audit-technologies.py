@@ -78,6 +78,16 @@ def stable_release(watch: dict, body: str) -> str:
                    f.get("upload_time_iso_8601", "9999") <= now for f in files):
                 versions.append(version)
         return newest(versions)
+    if kind == "github-tagged":
+        prefix = watch["tag_prefix"]
+        if not isinstance(data, list):
+            raise ValueError("Expected GitHub release list")
+        versions = [release["tag_name"][len(prefix):]
+                    for release in data
+                    if not release.get("draft") and not release.get("prerelease")
+                    and release.get("tag_name", "").startswith(prefix)
+                    and re.fullmatch(r"\d+(?:\.\d+){1,3}", release["tag_name"][len(prefix):])]
+        return newest(versions)
     if kind == "github":
         if data.get("draft") or data.get("prerelease"):
             raise ValueError("GitHub returned a draft or prerelease")

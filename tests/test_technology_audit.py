@@ -67,6 +67,19 @@ class TechnologyAuditTests(unittest.TestCase):
         self.assertEqual(audit.stable_release({"kind": "node-lts"}, body), "24.10.0")
         self.assertEqual(audit.stable_release({"kind": "node-current"}, body), "26.1.0")
 
+    def test_github_tagged_release_ignores_sibling_packages_and_unreleased_tags(self):
+        watch = {"kind": "github-tagged", "tag_prefix": "mermaid@",
+                 "url": "https://api.github.com/repos/mermaid-js/mermaid/releases?per_page=100",
+                 "reviewed": "12.1.0"}
+        releases = [{"tag_name": "@mermaid-js/tiny@99.0.0"},
+                    {"tag_name": "mermaid@12.2.0", "draft": False, "prerelease": False},
+                    {"tag_name": "mermaid@12.3.0-rc.1"},
+                    {"tag_name": "mermaid@12.4.0", "prerelease": True},
+                    {"tag_name": "mermaid@12.5.0", "draft": True}]
+        self.assertEqual(audit.check(watch, lambda _: json.dumps(releases))["status"], "REVIEW")
+        self.assertEqual(audit.stable_release(watch, json.dumps(releases)), "12.2.0")
+        self.assertEqual(audit.check(watch, lambda _: "[]")["status"], "UNKNOWN")
+
     def test_browser_dependency_is_discovered_and_dependabot_covers_it(self):
         entries = audit.discover(ROOT)
         playwright = next(row for row in entries if row["name"] == "playwright")

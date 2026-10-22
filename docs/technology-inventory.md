@@ -221,9 +221,13 @@ the local release audit alone is not that check.
 | [npm 12.2.1](https://github.com/npm/cli/releases/tag/v12.2.1) | October 14 patch release with an install-strategy bug fix and dependency updates. Record upstream availability for optional developer tooling. | Installed npm versions were not re-probed or changed. |
 
 The October 21 local audit timed out on initial npm and Mermaid registry
-lookups. A retry resolved npm `12.2.1`; Mermaid remained `UNKNOWN` locally.
-The PR and replacement main-branch run must verify live lookup coverage
-before these alert threads are completed.
+lookups. A retry resolved npm `12.2.1`; Mermaid also timed out in the PR's
+hosted runner. The Mermaid watch now reads the official GitHub release list,
+filters the `mermaid@` package tags, and rejects drafts and prereleases. A
+missing matching release still reports `UNKNOWN`; the source change does not
+silence the gate or alter the reviewed version. The PR and replacement
+main-branch runs must verify live lookup coverage before these alert threads
+are completed.
 
 ## Migration and merge plan
 
