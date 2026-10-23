@@ -66,6 +66,9 @@
 
 ## Unreleased
 
+- Prefer official HTTPS Ubuntu archive mirrors for the hosted Playwright
+  dependency install while preserving the security mirror, package checks, and
+  all browser acceptance gates.
 - Record OpenSSL 4.1.0 as an upstream observation only; defer installation to
   Python or host distributions and preserve the no-compatibility-claim boundary.
 - Update the browser test Playwright pin and matching browser inventory to
