@@ -66,6 +66,8 @@
 
 ## Unreleased
 
+- Record OpenSSL 4.1.0 as an upstream observation only; defer installation to
+  Python or host distributions and preserve the no-compatibility-claim boundary.
 - Update the browser test Playwright pin and matching browser inventory to
   `1.64.1`; retain the release watch and pull request browser acceptance gates.
 - Corrected the October 1 technology refresh scope and Python 3.11/3.12 security-line references.
