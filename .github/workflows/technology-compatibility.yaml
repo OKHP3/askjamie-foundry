@@ -141,6 +141,28 @@ jobs:
             requirements.txt
             tests/browser/requirements.txt
 
+      - name: Prefer official HTTPS Ubuntu archives
+        run: |
+          set -euo pipefail
+          mirrors=/etc/apt/apt-mirrors.txt
+          sudo test -f "$mirrors"
+          sudo grep -Fq 'http://azure.archive.ubuntu.com/ubuntu/' "$mirrors" || {
+            echo "Expected hosted-runner Azure Ubuntu mirror entry was not found" >&2
+            exit 1
+          }
+          sudo grep -Fq 'https://security.ubuntu.com/ubuntu/' "$mirrors" || {
+            echo "Expected hosted-runner Ubuntu security mirror entry was not found" >&2
+            exit 1
+          }
+          sudo sed -i 's#http://azure.archive.ubuntu.com/ubuntu/#https://archive.ubuntu.com/ubuntu/#' "$mirrors"
+          if sudo grep -Eq '^[[:space:]]*http://' "$mirrors"; then
+            echo "An HTTP Ubuntu archive entry remains in the hosted-runner mirror map" >&2
+            exit 1
+          fi
+          sudo grep -Fq 'https://archive.ubuntu.com/ubuntu/' "$mirrors"
+          sudo grep -Fq 'https://security.ubuntu.com/ubuntu/' "$mirrors"
+          sudo cat "$mirrors"
+
       - name: Install pinned browser-test dependencies
         run: |
           python -m pip install --requirement requirements.txt
