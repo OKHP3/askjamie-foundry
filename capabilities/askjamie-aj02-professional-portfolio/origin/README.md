@@ -17,7 +17,10 @@ or host configuration. Original links and placeholders are preserved, including
 links that require the former repository context. Root FoundRy governance and
 the capability conversion dossier control new work.
 
-The original manifest records license TBD and the snapshot has no root license. This preservation does not apply the parent MIT license to these legacy files or clear redistribution rights for a new product.
+The original manifest records license TBD, and the preserved snapshot has no
+root license file. The FoundRy root LICENSE.md is proprietary; this import
+preserves the source snapshot and does not resolve reuse rights for legacy
+content or a separately distributed capability product.
 
 The owner authorized this current public-source snapshot import on 2026-10-19.
 No Git history, Windows-only files, ignored state, Replit-only commits or live
