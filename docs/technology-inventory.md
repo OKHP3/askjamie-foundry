@@ -48,9 +48,9 @@ above. These are dated observations, not perpetual latest-version claims.
 | LibYAML | PyYAML extension `0.2.5` observed on both hosts; `.replit` also declares unpinned `libyaml` | [0.2.5](https://github.com/yaml/libyaml/releases/tag/0.2.5) | PyYAML wheel/Nix package; declaration does not prove system library bytes |
 | OpenSSL | Windows Python `3.0.16`; Replit Python `3.6.0` | [4.0.3; supported 3.6 line 3.6.5; 3.5 LTS line 3.5.9](https://openssl-library.org/source/) | Python/host distribution security updates. Do not manually replace interpreter libraries. 4.1.0 prereleases excluded. |
 | zlib / zlib-ng | Stable audit Python zlib `1.3.1`; prerelease Python `1.3.1.zlib-ng` compatibility string; actual zlib-ng release unknown | [zlib 1.3.2](https://github.com/madler/zlib/releases/tag/v1.3.2); [zlib-ng 2.3.3](https://github.com/zlib-ng/zlib-ng/releases/tag/2.3.3) | Python distribution; ZIP export/import tests |
-| Playwright for Python | `1.64.0` pinned in `tests/browser/requirements.txt`; merged in [PR #57](https://github.com/OKHP3/AskJamie-FoundRy/pull/57). The earlier Replit checkout test count was a dated observation, not a current host probe. | [1.64.0](https://pypi.org/project/playwright/) | Current; Dependabot proposes later releases for review and browser acceptance |
-| Playwright Chromium/headless shell | CI installs Chromium paired with the pinned Playwright version. The prior `1.63.0` browser revision was a dated observation. | [1.64.0 browser manifest](https://github.com/microsoft/playwright/blob/v1.64.0/packages/playwright-core/browsers.json) | Install browsers paired with Playwright; exact resolved revision is run evidence, not consumer Chrome stable. |
-| Playwright auxiliary binaries | The pinned Playwright package supplies its own browser and helper revision manifest. Firefox and WebKit are not installed by this CI workflow. | [1.64.0 browser manifest](https://github.com/microsoft/playwright/blob/v1.64.0/packages/playwright-core/browsers.json) | Managed with Playwright; revision IDs are not upstream semantic versions |
+| Playwright for Python | `1.64.1` pinned in `tests/browser/requirements.txt`; `1.64.0` was merged in [PR #57](https://github.com/OKHP3/AskJamie-FoundRy/pull/57). The earlier Replit checkout test count was a dated observation, not a current host probe. | [1.64.1](https://pypi.org/project/playwright/1.64.1/) | Dependabot proposes later releases for review; require browser acceptance before merging |
+| Playwright Chromium/headless shell | CI installs Chromium paired with the pinned Playwright version. The prior `1.63.0` browser revision was a dated observation. | [1.64.1 browser manifest](https://github.com/microsoft/playwright/blob/v1.64.1/packages/playwright-core/browsers.json) | Install browsers paired with Playwright; exact resolved revision is run evidence, not consumer Chrome stable. |
+| Playwright auxiliary binaries | The pinned Playwright package supplies its own browser and helper revision manifest. Firefox and WebKit are not installed by this CI workflow. | [1.64.1 browser manifest](https://github.com/microsoft/playwright/blob/v1.64.1/packages/playwright-core/browsers.json) | Managed with Playwright; revision IDs are not upstream semantic versions |
 
 The isolated Windows audit venv was created with Python 3.12.10 and both
 existing requirements files. It is validation evidence; the default interpreter
@@ -68,7 +68,7 @@ No transitive lockfile is checked in. Fresh installs resolve parent constraints.
 | referencing | 0.37.0 | 0.37.0 | [0.37.0](https://pypi.org/project/referencing/) | jsonschema |
 | rpds-py | 2026.6.3 | 2026.5.1 | [2026.6.3](https://pypi.org/project/rpds-py/) | Python/Rust binary wheel; no solution-owned Rust build toolchain |
 | typing-extensions | 4.16.0 | Not reported by initial probe | [4.16.0](https://pypi.org/project/typing-extensions/) | Conditional referencing dependency and pyee dependency; probe omission does not establish absence |
-| pyee | 13.0.1 | 13.0.1 | [15.0.0](https://pypi.org/project/pyee/15.0.0/) | Playwright 1.64.0 requires `<15,>=13`; do not force 15 |
+| pyee | 13.0.1 | 13.0.1 | [15.0.0](https://pypi.org/project/pyee/15.0.0/) | Playwright 1.64.1 requires `<15,>=13`; do not force 15 |
 | greenlet | 3.5.6 | 3.5.5 | [3.5.6](https://pypi.org/project/greenlet/) | Playwright permits `>=3.1.1,<4` |
 | pip | 25.0.1 | 25.0.1 | [26.2.1](https://pypi.org/project/pip/) | Host tooling; prerelease Windows Python separately had 25.1.1 |
 
@@ -228,6 +228,18 @@ missing matching release still reports `UNKNOWN`; the source change does not
 silence the gate or alter the reviewed version. The PR and replacement
 main-branch runs must verify live lookup coverage before these alert threads
 are completed.
+
+## October 23 Playwright patch disposition
+
+The October 23 technology watch found PyPI stable Playwright `1.64.1` while the
+browser test requirements still pinned `1.64.0`. The patch updates that direct
+pin and the current inventory references. The existing compatibility workflow
+installs Chromium from the selected Playwright package and runs browser
+acceptance on pull requests; the release watch checks the pin against PyPI.
+Keep both checks enabled for future browser dependency updates. PyPI metadata
+for `1.64.1` retains the existing `pyee<15,>=13` and `greenlet<4.0.0,>=3.1.1`
+constraints, so no transitive pin or lockfile change is needed. This is a test
+dependency update only; it does not claim a host runtime migration.
 
 ## Migration and merge plan
 

@@ -66,6 +66,8 @@
 
 ## Unreleased
 
+- Update the browser test Playwright pin and matching browser inventory to
+  `1.64.1`; retain the release watch and pull request browser acceptance gates.
 - Corrected the October 1 technology refresh scope and Python 3.11/3.12 security-line references.
 - Reworked the README around the FoundRy experience, working entry links,
   cross-platform startup instructions, and a linked presentation-asset directory.
