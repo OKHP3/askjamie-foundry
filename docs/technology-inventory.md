@@ -46,7 +46,7 @@ above. These are dated observations, not perpetual latest-version claims.
 | jsonschema | `4.26.0` pinned in `requirements.txt`, installed on both hosts | [4.26.0](https://pypi.org/project/jsonschema/) | Current; Dependabot PRs |
 | SQLite | Windows Python `3.49.1`; Replit Python `3.51.1`; used by `workbench/store.py` | [3.54.1](https://sqlite.org/releaselog/3_54_1.html), reviewed October 21 | Python/host distribution, then backup/import and transaction tests |
 | LibYAML | PyYAML extension `0.2.5` observed on both hosts; `.replit` also declares unpinned `libyaml` | [0.2.5](https://github.com/yaml/libyaml/releases/tag/0.2.5) | PyYAML wheel/Nix package; declaration does not prove system library bytes |
-| OpenSSL | Windows Python `3.0.16`; Replit Python `3.6.0` | [4.0.3; supported 3.6 line 3.6.5; 3.5 LTS line 3.5.9](https://openssl-library.org/source/) | Python/host distribution security updates. Do not manually replace interpreter libraries. 4.1.0 prereleases excluded. |
+| OpenSSL | Windows Python `3.0.16`; Replit Python `3.6.0` (dated observations, not re-probed) | [4.1.0](https://github.com/openssl/openssl/releases/tag/openssl-4.1.0), observed October 23; [official branch releases and support dates](https://openssl-library.org/source/) | Upstream observation only. Defer any installation to Python/host distributions. The 4.1 feature release has potentially incompatible changes; no compatibility or security-impact assessment is claimed. Do not manually replace interpreter libraries. OpenSSL 4.0.3 remains supported through May 14, 2027. |
 | zlib / zlib-ng | Stable audit Python zlib `1.3.1`; prerelease Python `1.3.1.zlib-ng` compatibility string; actual zlib-ng release unknown | [zlib 1.3.2](https://github.com/madler/zlib/releases/tag/v1.3.2); [zlib-ng 2.3.3](https://github.com/zlib-ng/zlib-ng/releases/tag/2.3.3) | Python distribution; ZIP export/import tests |
 | Playwright for Python | `1.64.1` pinned in `tests/browser/requirements.txt`; `1.64.0` was merged in [PR #57](https://github.com/OKHP3/AskJamie-FoundRy/pull/57). The earlier Replit checkout test count was a dated observation, not a current host probe. | [1.64.1](https://pypi.org/project/playwright/1.64.1/) | Dependabot proposes later releases for review; require browser acceptance before merging |
 | Playwright Chromium/headless shell | CI installs Chromium paired with the pinned Playwright version. The prior `1.63.0` browser revision was a dated observation. | [1.64.1 browser manifest](https://github.com/microsoft/playwright/blob/v1.64.1/packages/playwright-core/browsers.json) | Install browsers paired with Playwright; exact resolved revision is run evidence, not consumer Chrome stable. |
@@ -240,6 +240,19 @@ Keep both checks enabled for future browser dependency updates. PyPI metadata
 for `1.64.1` retains the existing `pyee<15,>=13` and `greenlet<4.0.0,>=3.1.1`
 constraints, so no transitive pin or lockfile change is needed. This is a test
 dependency update only; it does not claim a host runtime migration.
+
+## October 23 OpenSSL upstream review disposition
+
+The official OpenSSL source listing and `openssl-4.1.0` release tag show
+OpenSSL 4.1.0 as the stable 4.1 release on October 23, 2026. Record that
+upstream observation in the release-watch baseline. The release notes describe
+4.1.0 as a feature release, list potentially incompatible changes, and document
+DTLS known issues. This disposition accepts upstream availability only; it is
+not an OpenSSL security-impact assessment, compatibility result, or installation
+decision. Defer any installation to the Python or host distribution. The dated
+Windows Python 3.0.16 and Replit Python 3.6.0 observations remain unchanged and
+unverified. The official source listing continues to show OpenSSL 4.0.3 as
+supported through May 14, 2027. Do not manually replace interpreter libraries.
 
 ## Migration and merge plan
 
