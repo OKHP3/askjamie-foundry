@@ -11,9 +11,9 @@ consolidation. Portable skills, configured GPT source, local/Replit differences,
 component reuse rights and host acceptance remain separate work. Follow the
 [migration record](../docs/migrations/aj01-aj02-2026-10-19.md).
 
-Use capabilities/<existing-capability-slug>/ with portable products in skills/
-and target adapters in adapters/. Historical contributor tooling inside the
-source snapshots is not activated or promoted. Consult
+Use `capabilities/<existing-capability-slug>/` with portable products in
+`skills/` and target adapters in
+`adapters/`. Historical contributor tooling inside the source snapshots is not activated or promoted. Consult
 [the migration contract](../docs/skill-first-foundry.md) and
 [registry records](../registry/index.yaml).
 
