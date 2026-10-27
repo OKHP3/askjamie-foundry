@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "record_key": "issue-58-aj01-aj02-migration",
+  "thread_id": null,
+  "review_date": "2026-10-27",
+  "obligations": [
+    {
+      "id": "O01",
+      "obligation": "Consolidate AJ01 and AJ02 as FoundRy children",
+      "source": "Original October 19 migration request; local folders or GitHub alternative approved",
+      "acceptance": "Both pinned complete source trees and lineage preserved under capabilities; originals retained",
+      "status": "verified complete",
+      "owner": "Codex migration integration",
+      "evidence": [
+        "PR59",
+        "A1",
+        "B_REMOTE"
+      ],
+      "note": "873 files / 3,893,660 bytes; current source tree identities unchanged."
+    },
+    {
+      "id": "O02",
+      "obligation": "Preserve child Replit tracked differences",
+      "source": "Approved migration execution and October 19 configuration capture",
+      "acceptance": "Compare child tracked content and retain exact configuration originals separately",
+      "status": "verified complete",
+      "owner": "Codex migration integration",
+      "evidence": [
+        "PR60",
+        "A1"
+      ],
+      "note": "Two 120-byte originals match recorded Git blob and SHA-256; no child config activated at parent root."
+    },
+    {
+      "id": "O03",
+      "obligation": "Catalog the deployed Resume Representative GPT",
+      "source": "Explicit request for two GPT catalog agents and four Skillz families",
+      "acceptance": "Owner-visible configuration, version, knowledge originals, action/app schemas and safe characterization fully inventoried or owner-accepted exceptions",
+      "status": "blocked",
+      "owner": "Codex integration; Jamie supplies owner-visible source",
+      "evidence": [
+        "GPT_PACKET",
+        "DOSSIER_AJ01"
+      ],
+      "note": "0/21 live configuration groups, 0 uploaded originals, 0 behavior probes. Repository candidates are secondary evidence."
+    },
+    {
+      "id": "O04",
+      "obligation": "Catalog the deployed Professional Portfolio GPT",
+      "source": "Same explicit two-agent request, AJ02 editor and deployed URL",
+      "acceptance": "Owner-visible configuration, version, knowledge originals, action/app schemas and safe characterization fully inventoried or owner-accepted exceptions",
+      "status": "blocked",
+      "owner": "Codex integration; Jamie supplies owner-visible source",
+      "evidence": [
+        "GPT_PACKET",
+        "DOSSIER_AJ02"
+      ],
+      "note": "0/22 live configuration groups, 0 uploaded originals, 0 behavior probes. Seed packs do not establish deployed behavior."
+    },
+    {
+      "id": "O05",
+      "obligation": "Use and preserve the requested methods and discovery work",
+      "source": "Explicit four Skillz-family request; worker handoffs",
+      "acceptance": "Both read-only worker records retained with provenance, gaps and reproducible next steps",
+      "status": "verified complete",
+      "owner": "Codex migration integration",
+      "evidence": [
+        "GPT_PACKET",
+        "A2"
+      ],
+      "note": "Both original reports and inventories remain in the six-entry private packet; four worker hashes match its manifest. Method pin 7830bbfd5c08803589ed09d39197d5edfabe0c95."
+    },
+    {
+      "id": "O06",
+      "obligation": "Preserve recoverable source history",
+      "source": "Migration preservation and bounded October 19 history-recovery unit",
+      "acceptance": "Restore-tested reachable GitHub histories retained privately, with scope and limits explicit",
+      "status": "verified complete",
+      "owner": "Codex migration integration; owner retains custody",
+      "evidence": [
+        "HISTORY_RECEIPT",
+        "A3"
+      ],
+      "note": "Bounded October 19 GitHub-history recovery only: AJ01 33 commits/4 refs, AJ02 30/5. Current bundle hashes and bundle verify agree. Does not close O07."
+    },
+    {
+      "id": "O07",
+      "obligation": "Reconcile unique local and unpublished state before retirement",
+      "source": "Original preservation goal; current closeout preservation gate",
+      "acceptance": "Meaningful Windows/Replit local-only commits, ignored state and assets have explicit custody/disposition; recovery payloads retained appropriately",
+      "status": "blocked",
+      "owner": "Migration workstream, issue 58; existing Replit task 54 individual owner unestablished",
+      "evidence": [
+        "HISTORY_RECEIPT",
+        "REPLIT_CURRENT"
+      ],
+      "note": "Original child Repls and local commits retained; ignored state and sibling Windows local-only contents not fully assessed; off-platform history retention and any historical LFS/external assets unverified."
+    },
+    {
+      "id": "O08",
+      "obligation": "Validate parent Replit consolidation and current parity",
+      "source": "Approved consolidation execution; recorded parent synchronization",
+      "acceptance": "Actual parent revision identified; migration integrity/restore verified; parity checked against fresh intended remote without overwriting work",
+      "status": "blocked",
+      "owner": "Codex integration, coordinated with existing Replit task 54",
+      "evidence": [
+        "PR61",
+        "REPLIT_CURRENT",
+        "A3"
+      ],
+      "note": "Historical sync and 100 repository tests passed at 231ee5b; October 27 restore passes at 820b031. Fresh ls-remote confirms a1d17e7 while checkout/cached origin are 820b031. No sync while existing task 54 ownership/state reconciliation remains unresolved."
+    },
+    {
+      "id": "O09",
+      "obligation": "Establish canonical development routing",
+      "source": "Executed repository/website/Notion migration unit",
+      "acceptance": "Both standalone notices and original website URLs route to corresponding FoundRy source, preserving existing access and anchors",
+      "status": "verified complete",
+      "owner": "Codex migration integration",
+      "evidence": [
+        "ROUTING_AJ01",
+        "ROUTING_AJ02",
+        "WEBSITE117",
+        "A4",
+        "NOTION_READBACK"
+      ],
+      "note": "Both current source notices verified; normal HTTP GETs return 200 and exact FoundRy plus original GPT links. This is source routing, not a replacement service."
+    },
+    {
+      "id": "O10",
+      "obligation": "Resolve component rights and factual reuse",
+      "source": "Conversion dossiers and preservation boundary adopted in migration",
+      "acceptance": "Specific reused material has source, current facts, privacy and distribution rights cleared",
+      "status": "blocked",
+      "owner": "Jamie acceptance authority; Codex prepares evidence",
+      "evidence": [
+        "LICENSE67",
+        "DOSSIER_AJ01",
+        "DOSSIER_AJ02"
+      ],
+      "note": "FoundRy root is proprietary. AJ01 source MIT is preserved but component rights/currency remain; AJ02 legacy license TBD remains unresolved."
+    },
+    {
+      "id": "O11",
+      "obligation": "Produce accepted portable capability behavior",
+      "source": "Migration direction and existing conversion dossiers; dependent on primary capture",
+      "acceptance": "Observed semantics mapped to reviewed procedures/references/adapters; required cases run with actual outputs and selected-host evidence",
+      "status": "blocked",
+      "owner": "Codex integration; Jamie capability/host acceptance",
+      "evidence": [
+        "DOSSIER_AJ01",
+        "DOSSIER_AJ02"
+      ],
+      "note": "Both dossiers need_source_artifacts; product skills absent. Three cases/four expectations each are designs only; no model, with/without-skill or host results."
+    },
+    {
+      "id": "O12",
+      "obligation": "Cut over and decommission accepted original surfaces",
+      "source": "Original multi-stage migration includes validation/decommissioning",
+      "acceptance": "Replacement access accepted, meaningful assets recoverable, explicit per-surface retirement decision and rollback proven",
+      "status": "blocked",
+      "owner": "Jamie per-surface authority; Codex executes authorized unit",
+      "evidence": [
+        "MIGRATION_RECORD",
+        "ISSUE58"
+      ],
+      "note": "No applicable retirement decision or accepted source loss found. Conversation archival authority does not retire repos, Repls or GPTs."
+    },
+    {
+      "id": "O13",
+      "obligation": "Establish exact thread identity and history/attachment coverage",
+      "source": "October 27 closeout request, sections 1 and 3",
+      "acceptance": "Exact conversation identity and accessible history/attachments reviewed; material omissions obtained before full completion",
+      "status": "uncertain",
+      "owner": "Codex integration; Jamie supplies missing provenance/content if access remains unavailable",
+      "evidence": [
+        "COVERAGE"
+      ],
+      "note": "Exact thread ID/title/URL and exhaustive raw pre-compaction history not exposed. Three 11,726-byte Markdown attachments return no readable text. No equality or contents inferred from their sizes."
+    },
+    {
+      "id": "O14",
+      "obligation": "Preserve a self-contained closeout and continuation",
+      "source": "October 27 closeout request, section 5",
+      "acceptance": "Ledger, decisions, artifact destinations, validation/holds and resume instructions durably saved in existing project home with privacy boundaries",
+      "status": "unfinished",
+      "owner": "Codex integration",
+      "evidence": [
+        "THIS_PACKAGE"
+      ],
+      "note": "Package authored for issue-58-aj01-aj02-migration, a project record key, not an invented thread ID. Remote persistence/review evidence must be recorded before this row can pass."
+    },
+    {
+      "id": "O15",
+      "obligation": "Reconcile scoped version control",
+      "source": "October 27 closeout request, section 6; protected-main workflow",
+      "acceptance": "Only intended public-safe changes committed on intended remote/branch, exact revision checked, review/publication state distinguished",
+      "status": "unfinished",
+      "owner": "Codex integration; repository reviewer for protected-main integration",
+      "evidence": [
+        "LOCAL_STATE",
+        "AUTOMATION"
+      ],
+      "note": "Existing clean main and two owner stashes preserved. Local Git metadata read-only; use existing GitHub connector branch/PR. No merge or deployment assumed."
+    },
+    {
+      "id": "O16",
+      "obligation": "Perform two distinct quality passes",
+      "source": "October 27 closeout request, sections 7 and 8",
+      "acceptance": "Pass A verifies actual files/results; independent Pass B challenges requirements, claims and privacy; corrections checked",
+      "status": "unfinished",
+      "owner": "Codex Pass A; independent closeout_obligation_review Pass B",
+      "evidence": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "B_REMOTE"
+      ],
+      "note": "Implementation evidence gathered; final package review and affected-check rerun still required."
+    },
+    {
+      "id": "O17",
+      "obligation": "Archive this exact conversation only after every gate",
+      "source": "October 27 closeout request, section 9",
+      "acceptance": "All obligations complete or explicitly retired, artifacts/remote persistence verified, no dependent work; supported exact-thread archive and verification",
+      "status": "blocked",
+      "owner": "Codex integration",
+      "evidence": [
+        "O03",
+        "O04",
+        "O07",
+        "O10",
+        "O11",
+        "O12",
+        "O13",
+        "REPLIT_CURRENT"
+      ],
+      "note": "Mandatory source/coverage work and existing dependent tasks remain. No supported exact-chat history/archive control is currently exposed. No archive attempted."
+    }
+  ]
+}
