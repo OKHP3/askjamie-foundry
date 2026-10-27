@@ -125,6 +125,13 @@
       "status": "passed",
       "method": "Public-safe dated receipt prepended to existing FoundRy Notion anchor using smallest insert; exact receipt/draftPR/blocked state read back. Six native child page/database reference tags unchanged.",
       "privacy": "No private artifact identifiers or filesystem paths included in public-safe receipt."
+    },
+    {
+      "id": "A8",
+      "pass": "A",
+      "status": "passed",
+      "method": "Corrected checkpoint71e5e2f: all five remote files read as base64 and matched exact local bytes/Git blob identities; API diff contains exactly five intended documentation files. Run40457158860 has all four jobs completed success on that exact SHA, including both Python validations, public artifact and browser acceptance.",
+      "scope": "Corrected substantive package checkpoint. Subsequent receipt-only metadata revision requires its own PR-head check receipt."
     }
   ],
   "ci": [
@@ -228,9 +235,45 @@
     "verified_checkpoint_ci": "https://github.com/OKHP3/askjamie-foundry/actions/runs/40456307112",
     "checkpoint_all_four_jobs": "success",
     "remote_scope": "API comparison confirms exactly five intended documentation files and expected blob identities",
-    "final_revision_receipt": "Exact final branch/commit and checks will be recorded in PR70 and issue58 after final package corrections",
+    "final_revision_receipt": "The exact final receipt-only commit and its own CI checks will be verified and recorded in this same PR70 and issue58 before the execution final response. No merge or deployment is implied.",
     "merged": false,
-    "deployed": false
+    "deployed": false,
+    "corrected_checkpoint_revision": "71e5e2f3e0cd3ecb42eb61a6a5455f9c12c55cf4",
+    "corrected_checkpoint_tree": "8e1a35843850d5b1b00eeb085a6c49ec9b10119c",
+    "corrected_checkpoint_ci": "https://github.com/OKHP3/askjamie-foundry/actions/runs/40457158860",
+    "corrected_checkpoint_all_four_jobs": "success",
+    "corrected_checkpoint_payloads": [
+      {
+        "path": "docs/migrations/aj01-aj02-2026-10-19-closeout/README.md",
+        "bytes": 17184,
+        "git_blob": "a4d15a394cfbaac55a035017b8e01006e25adcd2",
+        "sha256": "c82db2cb0ec426c561689dcf364c1ead6293dd5f0a8f686c3898f90dba108b1a"
+      },
+      {
+        "path": "docs/migrations/aj01-aj02-2026-10-19-closeout/ledger.json",
+        "bytes": 12695,
+        "git_blob": "1b25193cc75d592ea028976f10b27868b61c4ca4",
+        "sha256": "35d73c25826fb549d253cc365817e3d9822ed437df80af9e9d856c1354ced7d8"
+      },
+      {
+        "path": "docs/migrations/aj01-aj02-2026-10-19-closeout/evidence.json",
+        "bytes": 18280,
+        "git_blob": "198d11b218717fb831bd590ade519f931f4a9940",
+        "sha256": "eb14f872c2232d1f7815d4c6ac2cf63087548cfddb8025fa904487b6dfd599ca"
+      },
+      {
+        "path": "docs/migrations/aj01-aj02-2026-10-19.json",
+        "bytes": 14243,
+        "git_blob": "b654da4845744752ab1f7c1fe1ff78ff8c9ebb02",
+        "sha256": "1df4ac733aebe04fe0b41882465e30686dbe12b055f9738cd82c3e9f9c9d68c1"
+      },
+      {
+        "path": "docs/migrations/aj01-aj02-2026-10-19.md",
+        "bytes": 15133,
+        "git_blob": "e8b1e1a69351e3e71125cfaf46858ea05de5f3d8",
+        "sha256": "39bfa07481445e866e21657019e1959502da6976567a252bc335b19c99f01381"
+      }
+    ]
   },
   "archive": {
     "eligible": false,
@@ -308,5 +351,14 @@
       "targeted_result": "Independent final narrow recheck passed; no remaining concrete content defect. Product/host stage remains conditional/uncertain."
     }
   ],
-  "scope_qualification": "Visible primary requests confirm consolidation, deployed-GPT cataloging, migration validation and eventual decommissioning. Conversion dossiers preserve proposed portable-product/host methods, not fresh authorization. O10/O11 remain conditional/uncertain until applicable scope is established; mandatory capture/coverage/state holds independently prevent archival."
+  "scope_qualification": "Visible primary requests confirm consolidation, deployed-GPT cataloging, migration validation and eventual decommissioning. Conversion dossiers preserve proposed portable-product/host methods, not fresh authorization. O10/O11 remain conditional/uncertain until applicable scope is established; mandatory capture/coverage/state holds independently prevent archival.",
+  "final_receipt": {
+    "outcome": "BLOCKED - NOT READY TO ARCHIVE",
+    "completed": "Source consolidation, tracked configuration originals, source routing and bounded GitHub history recovery reverified; stale records corrected; 17-row ledger/coverage/continuation persisted; separate private provenance receipt and existing Notion anchor updated/read back.",
+    "not_completed": "Primary deployed GPT catalogs, meaningful unique-state/custody reconciliation, current parent Replit parity and exact conversation/history/attachment coverage. Proposed product/host stage remains uncertain scope; original surfaces not retired.",
+    "review": "Pass A actual artifact checks and independent Pass B content challenge passed with explicit substantive holds.",
+    "version_control": "Existing PR70 on intended remote; corrected substantive checkpoint71e5e2f exact bytes and all4 CI jobs verified. Final receipt-only revision will be checked in the same PR.",
+    "archive": "Not attempted; mandatory holds and dependent Replit tasks remain, exact identity/control unavailable.",
+    "continuation": "Supply exact conversation URL/title and missing transcript/readable three Markdown inputs; recover both owner-visible GPT source/knowledge packages or restore supported editor access. Then coordinate task54/state preservation and resume only approved scope."
+  }
 }

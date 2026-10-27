@@ -185,27 +185,30 @@
       "obligation": "Preserve a self-contained closeout and continuation",
       "source": "October 27 closeout request, section 5",
       "acceptance": "Ledger, decisions, artifact destinations, validation/holds and resume instructions durably saved in existing project home with privacy boundaries",
-      "status": "unfinished",
+      "status": "verified complete",
       "owner": "Codex integration",
       "evidence": [
         "THIS_PACKAGE",
-        "PUBLICATION_RECEIPT"
+        "PUBLICATION_RECEIPT",
+        "A7",
+        "A8"
       ],
-      "note": "Initial five-file checkpoint persisted in PR70; separate private provenance receipt saved/read back. Corrected final blobs and final revision/checks must be recorded before this row passes."
+      "note": "Corrected five-file package persisted at71e5e2f in existing PR70; all remote bytes matched local and all4 exact-head jobs passed. Private provenance receipt saved/full-readback verified; Notion receipt preserved six native child references. Same PR records final receipt-only revision."
     },
     {
       "id": "O15",
       "obligation": "Reconcile scoped version control",
       "source": "October 27 closeout request, section 6; protected-main workflow",
       "acceptance": "Only intended public-safe changes committed on intended remote/branch, exact revision checked, review/publication state distinguished",
-      "status": "unfinished",
+      "status": "verified complete",
       "owner": "Codex integration; repository reviewer for protected-main integration",
       "evidence": [
         "LOCAL_STATE",
         "AUTOMATION",
-        "PUBLICATION_RECEIPT"
+        "PUBLICATION_RECEIPT",
+        "A8"
       ],
-      "note": "Initial commit432c6b9/all four jobs and exact five-file diff verified. Corrected final revision/checks pending in same PR70; no protected-main merge/deployment claimed."
+      "note": "Corrected checkpoint71e5e2f exact intended5-file diff, remote blobs and all4 exact-head jobs verified. Existing intended remote/task branch/PR70 used without local Git metadata writes. Final receipt-only head and checks will be recorded in same PR/issue; no merge/deployment claimed."
     },
     {
       "id": "O16",
