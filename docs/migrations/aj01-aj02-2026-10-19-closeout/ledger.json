@@ -128,30 +128,32 @@
     },
     {
       "id": "O10",
-      "obligation": "Resolve component rights and factual reuse",
-      "source": "Conversion dossiers and preservation boundary adopted in migration",
-      "acceptance": "Specific reused material has source, current facts, privacy and distribution rights cleared",
-      "status": "blocked",
+      "obligation": "Clarify component rights before any new reuse",
+      "source": "Current closeout confidentiality requirement; preservation/reuse boundary and conversion dossiers, with product reuse still a proposed dependent stage",
+      "acceptance": "Original license context retained; establish applicable approved scope and component privacy/distribution/currency decisions before any new reuse, rather than treating original-byte preservation as rights clearance",
+      "status": "uncertain",
       "owner": "Jamie acceptance authority; Codex prepares evidence",
       "evidence": [
         "LICENSE67",
         "DOSSIER_AJ01",
         "DOSSIER_AJ02"
       ],
-      "note": "FoundRy root is proprietary. AJ01 source MIT is preserved but component rights/currency remain; AJ02 legacy license TBD remains unresolved."
+      "note": "Original licenses preserved. FoundRy root is proprietary; AJ01 source MIT and AJ02 legacy TBD do not clear every component for a new product. New reuse/factual modernization is conditional scope, not a confirmed additional deliverable.",
+      "scope_class": "conditional-before-new-reuse"
     },
     {
       "id": "O11",
-      "obligation": "Produce accepted portable capability behavior",
-      "source": "Migration direction and existing conversion dossiers; dependent on primary capture",
-      "acceptance": "Observed semantics mapped to reviewed procedures/references/adapters; required cases run with actual outputs and selected-host evidence",
-      "status": "blocked",
+      "obligation": "Resolve proposed portable-product and host scope",
+      "source": "Existing assistant-authored conversion dossiers and project direction; visible user requests explicitly establish consolidation, deployed-GPT cataloging, validation and eventual decommissioning",
+      "acceptance": "Find an applicable user decision confirming this dependent product/host stage or obtain a concrete approved brief before treating skill conversion, with/without-skill evaluation or a selected host as committed deliverables",
+      "status": "uncertain",
       "owner": "Codex integration; Jamie capability/host acceptance",
       "evidence": [
         "DOSSIER_AJ01",
         "DOSSIER_AJ02"
       ],
-      "note": "Both dossiers need_source_artifacts; product skills absent. Three cases/four expectations each are designs only; no model, with/without-skill or host results."
+      "note": "Dossiers propose portable skills/host tests; no applicable explicit product/host decision is established in accessible primary history. No authored product skill or model/host results exist. Preserve the proposal without manufacturing a commitment.",
+      "scope_class": "proposed-dependent-stage"
     },
     {
       "id": "O12",
@@ -186,9 +188,10 @@
       "status": "unfinished",
       "owner": "Codex integration",
       "evidence": [
-        "THIS_PACKAGE"
+        "THIS_PACKAGE",
+        "PUBLICATION_RECEIPT"
       ],
-      "note": "Package authored for issue-58-aj01-aj02-migration, a project record key, not an invented thread ID. Remote persistence/review evidence must be recorded before this row can pass."
+      "note": "Initial five-file checkpoint persisted in PR70; separate private provenance receipt saved/read back. Corrected final blobs and final revision/checks must be recorded before this row passes."
     },
     {
       "id": "O15",
@@ -199,25 +202,29 @@
       "owner": "Codex integration; repository reviewer for protected-main integration",
       "evidence": [
         "LOCAL_STATE",
-        "AUTOMATION"
+        "AUTOMATION",
+        "PUBLICATION_RECEIPT"
       ],
-      "note": "Existing clean main and two owner stashes preserved. Local Git metadata read-only; use existing GitHub connector branch/PR. No merge or deployment assumed."
+      "note": "Initial commit432c6b9/all four jobs and exact five-file diff verified. Corrected final revision/checks pending in same PR70; no protected-main merge/deployment claimed."
     },
     {
       "id": "O16",
       "obligation": "Perform two distinct quality passes",
       "source": "October 27 closeout request, sections 7 and 8",
       "acceptance": "Pass A verifies actual files/results; independent Pass B challenges requirements, claims and privacy; corrections checked",
-      "status": "unfinished",
+      "status": "verified complete",
       "owner": "Codex Pass A; independent closeout_obligation_review Pass B",
       "evidence": [
         "A1",
         "A2",
         "A3",
         "A4",
-        "B_REMOTE"
+        "B_REMOTE",
+        "A6",
+        "A7",
+        "B_FINAL"
       ],
-      "note": "Implementation evidence gathered; final package review and affected-check rerun still required."
+      "note": "Pass A checked actual bytes/trees/configurations, restores, packet integrity, paths, served links and bounded privacy. Independent Pass B challenged final content, found and rechecked corrections, then accepted the blocked continuation package. Exact final remote/CI gates remain separate in O14/O15."
     },
     {
       "id": "O17",
@@ -230,8 +237,6 @@
         "O03",
         "O04",
         "O07",
-        "O10",
-        "O11",
         "O12",
         "O13",
         "REPLIT_CURRENT"

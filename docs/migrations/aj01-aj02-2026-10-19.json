@@ -58,7 +58,7 @@
   ],
   "replit": {
     "parent": {
-      "status": "reported-synchronized-and-validated",
+      "status": "historical-synchronized-and-validated-at-recorded-revision",
       "observed_head": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
       "freshly_fetched_origin_main": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
       "ahead": 0,
@@ -104,8 +104,18 @@
         "live_remote_checked_at_utc": "2026-10-27T05:25:57Z",
         "live_remote_method": "Replit Agent reports non-mutating git ls-remote origin refs/heads/main exited 0; root independently queried GitHub branch API.",
         "live_remote_object_present_locally": false,
-        "current_ahead_behind": "not-computable-without-fetch; live remote object absent locally"
-      }
+        "current_ahead_behind": "not-computable-without-fetch; live remote object absent locally",
+        "windows_graph_check": {
+          "method": "Read-only git merge-base --is-ancestor and rev-list --left-right --count on the existing Windows graph",
+          "from": "820b03148cca9df75684d84e2fb2c2664f3082c8",
+          "to": "a1d17e72a39cf58f9ffcdf8e0182ce481501f975",
+          "ancestor_exit": 0,
+          "ahead": 0,
+          "behind": 5,
+          "independent_reviewer_confirmed": true
+        }
+      },
+      "receipt_scope": "Historical October19 receipt at 231ee5b; use current_review for October27 parity. Later documentation/technology revisions do not inherit unperformed runtime checks."
     },
     "aj01": {
       "observed_head": "19ba544fe86bfc3a57c841e443353da0c2d39d08",
@@ -148,7 +158,7 @@
     "AJ01 component reuse rights, PDF semantic review and factual currency remain unverified; source MIT does not clear every component.",
     "AJ02 original license TBD remains unresolved; FoundRy root is proprietary, as clarified by PR 67.",
     "Current parent Replit checkout/cached origin are 820b031 while fresh live remote main is a1d17e7. Preserve unique-state/ownership boundaries before synchronization.",
-    "Portable product skills, model/host acceptance, replacement access and per-surface retirement decisions remain absent.",
+    "Portable product/host implementation is proposed dependent scope requiring an applicable user decision; replacement access and per-surface retirement remain gated.",
     "Exact conversation identity/full raw historical coverage and three unreadable Markdown attachment payloads remain closeout holds. Unassigned ChatGPT/Claude corpora are not invented scope."
   ],
   "validation": {
@@ -162,7 +172,7 @@
     "gpt_retry": "Browser connection failed before page state; no live settings or originals captured.",
     "current_review": "See aj01-aj02-2026-10-19-closeout/evidence.json for current check scope, limitations, separate monitor failures and two-pass review."
   },
-  "next_action": "Obtain owner-visible source/knowledge originals for both GPTs and resolve exact-thread/attachment coverage. Coordinate existing Replit task54 to preserve meaningful unique state before parent sync. Continue rights/portable behavior/host acceptance only from actual source. No original surface or conversation is eligible for successful archival.",
+  "next_action": "Obtain owner-visible source/knowledge originals for both GPTs and resolve exact-thread/attachment coverage. Coordinate existing Replit task54 to preserve meaningful unique state before parent sync. Confirm applicable product/host scope before treating the proposed conversion methods as committed deliverables, and use actual source before any approved reuse. No original surface or conversation is eligible for successful archival.",
   "source_routing": {
     "aj01": {
       "pr": "https://github.com/OKHP3/askjamie-aj01-resume-representative/pull/2",
@@ -228,5 +238,6 @@
       "Historical LFS/external payloads",
       "Host-level confidentiality/durability"
     ]
-  }
+  },
+  "scope_qualification": "Visible primary requests confirm consolidation, deployed-GPT cataloging, migration validation and eventual decommissioning. Conversion dossiers preserve proposed portable-product/host methods, not fresh authorization. O10/O11 remain conditional/uncertain until applicable scope is established; mandatory capture/coverage/state holds independently prevent archival."
 }
