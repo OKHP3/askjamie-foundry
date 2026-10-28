@@ -5,7 +5,7 @@
   "integration_owner": "Codex",
   "base_sha": "ac9917e2cfc2e86c10a9829613750fea9b67652b",
   "branch": "codex/aj01-aj02-migration-20261019",
-  "status": "github-source-imported-parent-replit-synchronized-local-config-deltas-preserved",
+  "status": "source-consolidation-and-routing-verified-full-migration-blocked",
   "owner_decisions": {
     "public_children": true,
     "date": "2026-10-19",
@@ -27,7 +27,7 @@
       "migration_status": "imported",
       "source_bytes_imported": 2013468,
       "source_sha256_verified": 392,
-      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
+      "restoration_test": "Original bytes and tree verified in current Windows checkout; existing Python ZIP restore verifier passed at parent Replit 820b03148cca9df75684d84e2fb2c2664f3082c8 on 2026-10-27.",
       "configured_gpt_capture": "unverified",
       "skill_status": "not-authored",
       "model_evaluations": "not-run",
@@ -46,7 +46,7 @@
       "migration_status": "imported",
       "source_bytes_imported": 1880192,
       "source_sha256_verified": 481,
-      "restoration_test": "local-reconstruction-and-readback-passed; Python-ZIP-restore-check-required-in-CI",
+      "restoration_test": "Original bytes and tree verified in current Windows checkout; existing Python ZIP restore verifier passed at parent Replit 820b03148cca9df75684d84e2fb2c2664f3082c8 on 2026-10-27.",
       "configured_gpt_capture": "unverified",
       "skill_status": "not-authored",
       "model_evaluations": "not-run",
@@ -58,7 +58,7 @@
   ],
   "replit": {
     "parent": {
-      "status": "reported-synchronized-and-validated",
+      "status": "historical-synchronized-and-validated-at-recorded-revision",
       "observed_head": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
       "freshly_fetched_origin_main": "231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076",
       "ahead": 0,
@@ -80,7 +80,42 @@
           "status": "historical-source-import-checkpoint"
         }
       ],
-      "identity_readback": "Machine-generated JSON contained equal 40-character local and remote revisions, 0/0 divergence and clean working status; root parsed and checked every field."
+      "identity_readback": "Machine-generated JSON contained equal 40-character local and remote revisions, 0/0 divergence and clean working status; root parsed and checked every field.",
+      "current_review": {
+        "observed_at_utc": "2026-10-27T05:23:47Z",
+        "head": "820b03148cca9df75684d84e2fb2c2664f3082c8",
+        "cached_origin_main": "820b03148cca9df75684d84e2fb2c2664f3082c8",
+        "worktree_clean": true,
+        "cached_ahead": 0,
+        "cached_behind": 0,
+        "fresh_remote_parity": "failed-current-checkout-behind-live-remote",
+        "task54": {
+          "state": "IN_PROGRESS",
+          "blocker": "WAITING_FOR_INPUT",
+          "individual_owner": "unestablished",
+          "description": "Compare Windows mirrors and Replit checkouts, preserve unique local/ignored work before synchronization; no specific input question or individual owner recorded."
+        },
+        "task55": {
+          "state": "PENDING",
+          "scope": "Capture AJ01/AJ02 GPT behavior and source assets"
+        },
+        "writes_performed": false,
+        "live_remote_main": "a1d17e72a39cf58f9ffcdf8e0182ce481501f975",
+        "live_remote_checked_at_utc": "2026-10-27T05:25:57Z",
+        "live_remote_method": "Replit Agent reports non-mutating git ls-remote origin refs/heads/main exited 0; root independently queried GitHub branch API.",
+        "live_remote_object_present_locally": false,
+        "current_ahead_behind": "not-computable-without-fetch; live remote object absent locally",
+        "windows_graph_check": {
+          "method": "Read-only git merge-base --is-ancestor and rev-list --left-right --count on the existing Windows graph",
+          "from": "820b03148cca9df75684d84e2fb2c2664f3082c8",
+          "to": "a1d17e72a39cf58f9ffcdf8e0182ce481501f975",
+          "ancestor_exit": 0,
+          "ahead": 0,
+          "behind": 5,
+          "independent_reviewer_confirmed": true
+        }
+      },
+      "receipt_scope": "Historical October19 receipt at 231ee5b; use current_review for October27 parity. Later documentation/technology revisions do not inherit unperformed runtime checks."
     },
     "aj01": {
       "observed_head": "19ba544fe86bfc3a57c841e443353da0c2d39d08",
@@ -95,7 +130,7 @@
         "local_state": 10,
         "captured": false
       },
-      "source_history_recovery": "not-archived",
+      "source_history_recovery": "Unpublished child-Repl history remains unarchived; separate October 19 reachable GitHub-history bundle retained privately and verified.",
       "ownership": "unknown; no active owner inferred from local agent state"
     },
     "aj02": {
@@ -112,30 +147,32 @@
         "local_state": 9,
         "captured": false
       },
-      "source_history_recovery": "not-archived",
+      "source_history_recovery": "Unpublished child-Repl history remains unarchived; separate October 19 reachable GitHub-history bundle retained privately and verified.",
       "ownership": "platform task query reported no active task"
     }
   },
   "exceptions": [
-    "Replit configuration originals preserved; ignored platform/tooling/editor state remains in original Repls and requires disposition before retirement.",
-    "Current GitHub snapshot bytes imported; Git history and local-only/ignored state are not independently archived or reconciled.",
-    "Configured GPT instructions, knowledge, actions and starters not captured.",
-    "AJ01 DOCX source reviewed as general guidance; PDF semantic equivalence, factual currency and component reuse rights remain unverified.",
-    "AJ02 root licensing unresolved; seed packs lack source corpus/prompt material.",
-    "AJ02 website retrieval inconclusive; browser verification pending.",
-    "ChatGPT/Claude project and thread inventory not established."
+    "Configured GPT instructions, knowledge originals, actions/apps, starters and deployed revision remain uncaptured; both catalogs blocked.",
+    "Meaningful local-only Windows/Replit state, unpublished child-Repl histories, custody and off-platform recovery remain unresolved; original workspaces retained.",
+    "October 19 reachable GitHub histories were privately bundled and independently restored. This does not prove unpublished Replit state, historical LFS/external payloads or off-platform durability.",
+    "AJ01 component reuse rights, PDF semantic review and factual currency remain unverified; source MIT does not clear every component.",
+    "AJ02 original license TBD remains unresolved; FoundRy root is proprietary, as clarified by PR 67.",
+    "Current parent Replit checkout/cached origin are 820b031 while fresh live remote main is a1d17e7. Preserve unique-state/ownership boundaries before synchronization.",
+    "Portable product/host implementation is proposed dependent scope requiring an applicable user decision; replacement access and per-surface retirement remain gated.",
+    "Exact conversation identity/full raw historical coverage and three unreadable Markdown attachment payloads remain closeout holds. Unassigned ChatGPT/Claude corpora are not invented scope."
   ],
   "validation": {
     "local_structural": "Passed: 873 source blob/size/SHA-256 checks, both complete Git tree reconstructions, local documentation links and unchanged seven private registry records.",
     "python": "unavailable-in-local-session",
-    "required_pr_checks": "Required against the actual PR head before protected-main integration; evidence is linked from PR 59 and issue 58.",
-    "source_preservation": "passed-local: 873 Git blob IDs, sizes and SHA-256 hashes after reconstruction; ZIP restore runs in required Python CI",
+    "required_pr_checks": "Historical PRs 59-61 passed their final-head required checks; current base a1d17e7 compatibility run 40294838915 all four jobs succeeded. Closeout revision needs its own exact-head results.",
+    "source_preservation": "873 current Windows payloads match original sizes/Git blobs/SHA-256 and both Git trees; existing Replit Python verifier with ZIP restore passed again on 2026-10-27 at 820b031.",
     "model_execution": "not-run",
-    "deployment": "not-run",
+    "deployment": "Website source-routing publication verified via PR117, release 39321873468, current site revision f43155c run39820147691, and 2026-10-27 HTTP GETs. No replacement capability service or new FoundRy release deployed.",
     "replit_parent": "Source parity, both original snapshot restores, both recovered configuration identities, manifests, registry and 100 tests passed at 231ee5bf642c9ad0d226f9d7f9fc8f9f8f97e076, reported by Replit Agent. Root checked the machine-generated identity readback.",
-    "gpt_retry": "Browser connection failed before page state; no live settings or originals captured."
+    "gpt_retry": "Browser connection failed before page state; no live settings or originals captured.",
+    "current_review": "See aj01-aj02-2026-10-19-closeout/evidence.json for current check scope, limitations, separate monitor failures and two-pass review."
   },
-  "next_action": "Obtain actual configured GPT source or an explicit partial-port brief. Independently compare the inaccessible Windows mirrors and assess ignored child-Repl state and full Git-history recovery. Read the separate website PR for its rollout state. Do not reschedule the completed tracked configuration capture or initial parent synchronization.",
+  "next_action": "Obtain owner-visible source/knowledge originals for both GPTs and resolve exact-thread/attachment coverage. Coordinate existing Replit task54 to preserve meaningful unique state before parent sync. Confirm applicable product/host scope before treating the proposed conversion methods as committed deliverables, and use actual source before any approved reuse. No original surface or conversation is eligible for successful archival.",
   "source_routing": {
     "aj01": {
       "pr": "https://github.com/OKHP3/askjamie-aj01-resume-representative/pull/2",
@@ -149,13 +186,58 @@
     },
     "website": {
       "pr": "https://github.com/OKHP3/askjamie/pull/117",
-      "purpose": "Link existing migration notices to corresponding canonical capability source; PR and deployment checks are authoritative for rollout state."
+      "purpose": "Preserve both original page/GPT destinations and add exact corresponding canonical FoundRy source links.",
+      "status": "published-and-http-verified",
+      "merged_commit": "a98f6b56b6cf6f26057e5847c25c898f18eeef0a",
+      "current_source_revision": "f43155c2db3dce863b1313dee8ad47622592daed",
+      "http_checked_at": "2026-10-27T05:23:48Z"
     }
   },
   "completed_units": [
     "pinned-GitHub-snapshot-consolidation",
     "tracked-Replit-configuration-comparison-and-original-byte-capture",
     "parent-Replit-synchronization-and-validation-at-recorded-revision",
-    "standalone-source-development-routing"
-  ]
+    "standalone-source-development-routing",
+    "published-website-source-routing",
+    "bounded-reachable-GitHub-history-bundle-and-restore"
+  ],
+  "last_reviewed": "2026-10-27",
+  "closeout_record": "aj01-aj02-2026-10-19-closeout/README.md",
+  "historical_observations": {
+    "at_revision": "5e281723dd038ee3031c50014b9b64869b673be0",
+    "note": "Earlier receipt preserved in Git history and dated Markdown. These quoted fields were later superseded by bounded history recovery and website publication evidence.",
+    "exceptions": [
+      "Replit configuration originals preserved; ignored platform/tooling/editor state remains in original Repls and requires disposition before retirement.",
+      "Current GitHub snapshot bytes imported; Git history and local-only/ignored state are not independently archived or reconciled.",
+      "Configured GPT instructions, knowledge, actions and starters not captured.",
+      "AJ01 DOCX source reviewed as general guidance; PDF semantic equivalence, factual currency and component reuse rights remain unverified.",
+      "AJ02 root licensing unresolved; seed packs lack source corpus/prompt material.",
+      "AJ02 website retrieval inconclusive; browser verification pending.",
+      "ChatGPT/Claude project and thread inventory not established."
+    ],
+    "website_deployment": "not-run"
+  },
+  "history_recovery": {
+    "scope": "October 19 reachable GitHub refs/objects only; original repositories and Repls retained",
+    "location": "Private parent-Replit recovery manifest retains exact owner locators; not published here",
+    "aj01": {
+      "bytes": 1207269,
+      "sha256": "5b8b4a7822a963b234c39ed30e128de9cd7938474b255de1e67c7d47c99ad21c",
+      "refs": 4,
+      "reachable_commits": 33
+    },
+    "aj02": {
+      "bytes": 795921,
+      "sha256": "8222608f99cf8aeaf6f2ff365a4cd19082481ab4abdcd671aa338c19b840b8c3",
+      "refs": 5,
+      "reachable_commits": 30
+    },
+    "not_proven": [
+      "Off-platform retention",
+      "Unpublished child-Repl commits or ignored assets",
+      "Historical LFS/external payloads",
+      "Host-level confidentiality/durability"
+    ]
+  },
+  "scope_qualification": "Visible primary requests confirm consolidation, deployed-GPT cataloging, migration validation and eventual decommissioning. Conversion dossiers preserve proposed portable-product/host methods, not fresh authorization. O10/O11 remain conditional/uncertain until applicable scope is established; mandatory capture/coverage/state holds independently prevent archival."
 }
