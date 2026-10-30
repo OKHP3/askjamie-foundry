@@ -1,4 +1,4 @@
-# AJ01/AJ02 migration disposition addendum — 2026-10-30
+# AJ01/AJ02 migration disposition addendum: 2026-10-30
 
 ## Purpose and record boundary
 
@@ -40,10 +40,17 @@ from the child Replit Git histories.
 
 ## Remaining gaps and limits
 
-- Neither configured GPT's current instructions, knowledge originals,
-  actions/apps, starters, deployed revision, nor behavior has been captured or
-  verified. Repository files do not establish the deployed GPT configuration
-  or behavior. No private GPT configuration was copied into this repository.
+- AJ02 owner-editor observation saw configured instructions, starters, enabled
+  capabilities, and one PNG listed under Knowledge. A freshly loaded saved
+  editor showed that PNG. The full instructions and image bytes were not
+  preserved, and the original pending editor draft could not be inspected.
+  Deployed behavior and revision equivalence were not tested.
+- AJ01's GPT page could not be loaded. This does not establish that the GPT was
+  deleted or reveal its configuration. Its configured instructions, starters,
+  knowledge, actions/apps, deployed revision, and behavior remain unknown.
+- Repository files do not establish either deployed GPT's complete
+  configuration or behavior. No private GPT configuration or image bytes were
+  copied into this repository.
 - AJ01 component reuse rights, PDF semantic equivalence, and factual currency
   remain unresolved. AJ02 licensing remains unresolved; its corpus and prompt
   locations remain placeholders. FoundRy root licensing is proprietary.
