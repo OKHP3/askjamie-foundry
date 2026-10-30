@@ -33,6 +33,11 @@ compatibility. Verify discovery, full-procedure loading, and synthetic behavior
 in the actual host separately. FoundRy's authoring workbench does not itself
 execute model calls or automatically load these capability skills.
 
+AJ02 version 0.2.0 adds source-derived voice, output, conflict and safety
+behaviors and guards against unsupported process and intermediary claims. Its
+version-specific Replit development comparison is pending; prior observations
+are historical and do not validate this revised version.
+
 Six earlier manual synthetic Free Mode cases passed in separate visible
 conversations for the private 0.1.0 candidate texts. They are development
 observations, not an unseen holdout, a without-skill benchmark, or proof for a
