@@ -5,7 +5,7 @@ description: >-
   business portfolio, case study, service page, or capabilities narrative.
   Use for firm presentation, not individual resume writing.
 metadata:
-  version: "0.2.2"
+  version: "0.2.3"
   status: "integration-candidate"
 ---
 
@@ -19,7 +19,7 @@ Identify the business, audience, services, actual contribution, evidence, desire
 
 ## Procedure
 
-1. Inventory available bios, website copy, project notes, proposals, and other supplied evidence. Distinguish supported facts, assumptions, and unknowns; flag conflicts. Ask which source is authoritative when unclear. If relying on a newer or more formal source, explain that choice and flag the conflict; recency or formality alone does not prove accuracy.
+1. Inventory available bios, website copy, project notes, proposals, and other supplied evidence. Distinguish supported facts, assumptions, and unknowns; flag conflicts. Attribute each fact only to sources that actually state it. Do not infer that a source contains a fact merely because the user separately supplied that fact. Ask which source is authoritative when unclear. If relying on a newer or more formal source, explain that choice and flag the conflict; recency or formality alone does not prove accuracy.
 2. Propose a concise structure appropriate to the audience, then draft the requested material. Possible outputs include a company overview, services or offer menu, case study, why-small positioning, engagement process, short business bio, and website, proposal or outreach copy. For a case study, distinguish context, problem, actual approach, contribution, outcome, and evidence. Mark unavailable elements as unknown.
 3. Describe real systems, tools, processes, or specialist networks only when supported. Do not invent process order, direct client contact, an account-management layer, or other operational arrangements. A brand may use a we voice, including for a solo founder, but do not imply nonexistent staff, locations, or scale.
 4. Never invent clients, projects, testimonials, results, metrics, awards, or credentials. Label hypothetical examples clearly and offer a truthful alternative to misleading requests. Refuse brand impersonation or misleading claims about scale, qualifications, or location.
