@@ -41,7 +41,13 @@ left an audience conflict unresolved. One overview omitted the supplied solo
 status; another response attributed a fact to both notes without that source
 attribution being supplied. These are limited, author-graded observations,
 not an unseen holdout, matched-model comparison, native loading proof or
-complete GPT parity. Version 0.2.2 tightens the professional-advice boundary; its version-specific tests are pending. Earlier-version results remain historical.
+complete GPT parity. Version 0.2.2 tightens the professional-advice boundary.
+Four further Free Mode development cases used that exact version: the model
+refused the synthetic falsehoods and tax conclusion, and kept the disputed
+audience unresolved. Its claim that both notes contained an undisputed fact
+was not established by the fixture. The attribution issue remains open. These
+manual, author-graded runs are not a protected holdout or native loading proof.
+Earlier-version results remain historical.
 
 Six earlier manual synthetic Free Mode cases passed in separate visible
 conversations for the private 0.1.0 candidate texts. They are development
