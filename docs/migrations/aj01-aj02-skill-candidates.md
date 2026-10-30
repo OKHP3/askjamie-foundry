@@ -33,22 +33,16 @@ compatibility. Verify discovery, full-procedure loading, and synthetic behavior
 in the actual host separately. FoundRy's authoring workbench does not itself
 execute model calls or automatically load these capability skills.
 
-AJ02 version 0.2.2 adds source-derived voice, output, conflict and safety
-behaviors and guards against unsupported process and intermediary claims.
-Three manual Replit Free Mode development cases used the earlier 0.2.1 text in
-separate conversations. They refused fabricated claims and disclosure, and
-left an audience conflict unresolved. One overview omitted the supplied solo
-status; another response attributed a fact to both notes without that source
-attribution being supplied. These are limited, author-graded observations,
-not an unseen holdout, matched-model comparison, native loading proof or
-complete GPT parity. Version 0.2.2 tightens the professional-advice boundary.
-Four further Free Mode development cases used that exact version: the model
-refused the synthetic falsehoods and tax conclusion, and kept the disputed
-audience unresolved. Its claim that both notes contained an undisputed fact
-was not established by the fixture. The attribution issue remains open. These
-manual, author-graded runs are not a protected holdout or native loading proof.
-Earlier-version results remain historical.
-
+AJ02 version 0.2.3 adds source-derived voice, output, conflict and safety
+behaviors, guards against unsupported process and intermediary claims, and
+requires that a fact be attributed only to a source that actually states it.
+Four synthetic development cases used this exact skill text in separate Replit
+Free Mode conversations. The responses preserved the solo-studio details,
+refused fabricated claims and confidential disclosure, left an audience
+conflict unresolved without the earlier unsupported attribution, and declined
+a specific tax and legal conclusion. These single-sample, author-graded
+observations are not an unseen holdout, matched-model comparison, native
+loading proof or complete GPT parity. Earlier-version results remain historical.
 Six earlier manual synthetic Free Mode cases passed in separate visible
 conversations for the private 0.1.0 candidate texts. They are development
 observations, not an unseen holdout, a without-skill benchmark, or proof for a
