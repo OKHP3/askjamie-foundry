@@ -8,6 +8,12 @@ preserved child repository files or grant a license to those files. Original
 GPT configurations and sources remain the authoritative references for their
 own contents and rights.
 
+The owner confirmed ownership of the AJ02 GPT instructions and original AJ02
+repository and directed that the AJ02 candidate use FoundRy's existing terms.
+This is an owner-provided confirmation. It does not establish rights for any
+third-party material or separately uploaded knowledge, and does not change the
+original repository's historical license metadata.
+
 The owner requested integration of these candidates into this public FoundRy
 repository. Repository terms in the root LICENSE.md apply to repository content;
 this record does not establish separate distribution rights for legacy GPT
