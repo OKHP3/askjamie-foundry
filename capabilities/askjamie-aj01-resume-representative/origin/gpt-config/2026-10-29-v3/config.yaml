@@ -1,0 +1,69 @@
+# Live configuration capture for GPT-AJ01 (Résumé Representative by AskJamie™)
+# Captured 2026-10-29 from the ChatGPT GPT record (gizmo endpoint) by the owner's
+# authenticated session. Read-only capture; nothing was edited in ChatGPT.
+schema_version: "1.0"
+captured_at: "2026-10-29T22:45:00-05:00"
+capture_method: "ChatGPT backend gizmo record, owner session, browser pane"
+
+gpt:
+  id: "g-691fb05c86c881919eec171e62fe1e00"
+  public_url: "https://chatgpt.com/g/g-691fb05c86c881919eec171e62fe1e00-resume-representative-by-askjamietm"
+  name: "Résumé Representative by AskJamie™"
+  description: "An interactive résumé persona for Jamie Hill that can explain, defend, and contextualize his career — and, when invited, apply the same logic to your own résumé, cover letter, and market‑value questions in a post‑COVID, ATS‑driven hiring world."
+  created_at: "2025-11-21T00:20:44Z"
+  updated_at: "2026-10-24T22:32:39Z"
+  version: 3
+  live_version: 3          # equal: no unpublished draft at capture time
+  sharing: "link"          # "Anyone with a link"
+  tags: [public, pinned]
+  recommended_model: null  # "No Recommended Model"
+
+instructions:
+  file: "instructions.md"
+  characters: 6625
+  sha256: "351329c1b0f5fce5d530ea1ec252da7260133caf056c9279410a85baa1639a47"
+  hash_note: "UTF-8 bytes, no trailing newline; matches the SHA-256 computed in-browser from the live record"
+
+conversation_starters:
+  - "“Walk me through Jamie Hill’s career story like you’re talking to a hiring manager.”"
+  - "“Here’s a job description — how would Jamie tailor his résumé and LinkedIn profile to it?”"
+  - "“Use Jamie’s dynamic résumé framework to help me rewrite *my* résumé for this role.”"
+  - "“Based on the Market Value & Compensation file, what salary range makes sense for someone like Jamie in an Enterprise Architect role in Dallas vs remote?”"
+  - "“Draft a one‑page cover letter in Jamie’s voice for a cloud/enterprise architecture leadership role at a mid‑size tech‑forward company.”"
+  - "“Explain how post‑COVID hybrid and remote hiring change how we should read Jamie’s résumé — and mine.”"
+
+capabilities:
+  web_search: true      # tool: browser
+  canvas: true          # tool: canvas
+  code_interpreter: true  # tool: python
+  image_generation: false
+actions: []             # none configured
+
+knowledge_files:        # as attached to the live GPT
+  - name: "8375f974-220c-4592-872e-3d6159e4c342.png"
+    type: "image/png"
+    bytes: 304380
+    uploaded_at: "2025-11-22T15:15:59Z"
+  - name: "edb06227-37ed-4946-bdad-a292b2a793f2.png"
+    type: "image/png"
+    bytes: 304380
+    uploaded_at: "2025-11-22T15:16:44Z"
+
+findings:
+  - id: F1
+    severity: high
+    summary: "Instructions route to six named knowledge files; none are attached. Only two same-size PNG images are attached."
+    named_but_missing:
+      - "Resume – Jamie Hill (LinkedIn export)"
+      - "Dynamic Resume Generation Knowledge File (2025 Edition)"
+      - "AskJamie™: Dynamic Cover Letter Knowledge File"
+      - "Ask Jamie: Market Value & Compensation Knowledge File"
+      - "Psychology & Sociology of Post‑COVID Hiring"
+      - "History & Tradition of Hiring in the U.S."
+    repo_candidates: "origin/repository/knowledge/ holds probable matches for five of six (all except the LinkedIn export); mapping unconfirmed"
+  - id: F2
+    severity: high
+    summary: "Guardrail 3.2 ('Do not claim Jamie is actively job-seeking or available for hire') is stale after the 2026-10-09 role end."
+  - id: F3
+    severity: medium
+    summary: "docs/conversion.md capability map reflects documented intent, not this configuration; the live GPT also covers cover letters, compensation, hiring-history teaching, and applying the framework to the user's own materials."
