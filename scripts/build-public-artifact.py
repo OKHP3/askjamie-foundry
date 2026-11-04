@@ -13,7 +13,7 @@ import subprocess
 import time
 from html.parser import HTMLParser
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 from pathlib import Path
 
@@ -67,6 +67,11 @@ LIVE_REQUIRED_MARKERS = REQUIRED_SEO_MARKERS + REQUIRED_ANALYTICS_MARKERS + (
     "loopback-only local",
     "no draft or private database is loaded here.",
     "Read-only orientation",
+)
+LIVE_REQUIRED_ASSETS = (
+    ("stylesheet", "styles.css"),
+    ("icon", "favicon.ico"),
+    ("social image", "assets/social-preview.jpg"),
 )
 APPROVED_EXTERNAL_LINKS = (
     PAGES_BASE_URL,
@@ -260,6 +265,38 @@ def check_pages_repository_identity() -> None:
         )
 
 
+def check_live_asset(asset_url: str, asset_type: str) -> None:
+    """Fail when a representative deployed asset does not return HTTP 200."""
+
+    request = Request(
+        asset_url,
+        headers={
+            "Cache-Control": "no-cache",
+            "User-Agent": "AskJamie-FoundRy-pages-smoke-test",
+        },
+    )
+    try:
+        with urlopen(request, timeout=30) as response:
+            status = response.status
+    except HTTPError as error:
+        status = error.code
+    except URLError as error:
+        raise SystemExit(
+            "live Pages check failed: "
+            f"could not fetch {asset_type} asset {asset_url}: {error.reason}"
+        ) from error
+    except TimeoutError as error:
+        raise SystemExit(
+            f"live Pages check failed: timed out fetching {asset_type} asset {asset_url}"
+        ) from error
+
+    if status != 200:
+        raise SystemExit(
+            "live Pages check failed: deployed "
+            f"{asset_type} asset {asset_url} returned HTTP {status} instead of HTTP 200"
+        )
+
+
 def check_live(page_url: str) -> None:
     """Verify the deployed Pages URL serves the intended public artifact."""
 
@@ -341,9 +378,13 @@ def check_live(page_url: str) -> None:
                 "live Pages check failed: deployed content contains forbidden "
                 f"private/runtime marker: {marker}"
             )
+    asset_base_url = final_url.rstrip("/") + "/"
+    for asset_type, asset_path in LIVE_REQUIRED_ASSETS:
+        check_live_asset(urljoin(asset_base_url, asset_path), asset_type)
     print(
         "Live Pages check passed: HTTP 200, expected repository subpath, "
-        "public orientation markers, and external links verified."
+        "public orientation markers, external links, stylesheet, icon, "
+        "and social image verified."
     )
 
 

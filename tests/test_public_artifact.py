@@ -305,22 +305,107 @@ class PublicArtifactTests(unittest.TestCase):
         response.status = 200
         response.geturl.return_value = page_url
         response.read.return_value = (ROOT / "public/index.html").read_bytes()
+        asset_responses = []
+        for _ in checker.LIVE_REQUIRED_ASSETS:
+            asset_response = MagicMock()
+            asset_response.__enter__.return_value = asset_response
+            asset_response.status = 200
+            asset_responses.append(asset_response)
 
         with (
             patch.object(
                 checker,
                 "urlopen",
-                side_effect=[URLError("temporary connection reset"), response],
+                side_effect=[
+                    URLError("temporary connection reset"),
+                    response,
+                    *asset_responses,
+                ],
             ) as mocked_urlopen,
             patch.object(checker.time, "sleep") as mocked_sleep,
             patch("builtins.print") as mocked_print,
         ):
             checker.check_live(page_url)
 
-        self.assertEqual(mocked_urlopen.call_count, 2)
+        self.assertEqual(mocked_urlopen.call_count, 2 + len(checker.LIVE_REQUIRED_ASSETS))
         mocked_sleep.assert_called_once_with(2)
         mocked_print.assert_called_once()
         self.assertIn("Live Pages check passed", mocked_print.call_args.args[0])
+
+    def test_live_check_probes_stylesheet_icon_and_social_image_without_network_access(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        page_response = MagicMock()
+        page_response.__enter__.return_value = page_response
+        page_response.status = 200
+        page_response.geturl.return_value = page_url
+        page_response.read.return_value = (ROOT / "public/index.html").read_bytes()
+        asset_responses = []
+        for _ in checker.LIVE_REQUIRED_ASSETS:
+            response = MagicMock()
+            response.__enter__.return_value = response
+            response.status = 200
+            asset_responses.append(response)
+
+        with (
+            patch.object(
+                checker,
+                "urlopen",
+                side_effect=[page_response, *asset_responses],
+            ) as mocked_urlopen,
+            patch("builtins.print") as mocked_print,
+        ):
+            checker.check_live(page_url)
+
+        requested_urls = [
+            call.args[0].full_url for call in mocked_urlopen.call_args_list
+        ]
+        self.assertEqual(
+            requested_urls,
+            [
+                page_url,
+                *(
+                    f"{page_url}{asset_path}"
+                    for _, asset_path in checker.LIVE_REQUIRED_ASSETS
+                ),
+            ],
+        )
+        self.assertIn("stylesheet, icon, and social image verified", mocked_print.call_args.args[0])
+
+    def test_live_check_reports_missing_asset_url_and_http_status_without_network_access(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        page_response = MagicMock()
+        page_response.__enter__.return_value = page_response
+        page_response.status = 200
+        page_response.geturl.return_value = page_url
+        page_response.read.return_value = (ROOT / "public/index.html").read_bytes()
+        missing_icon_url = f"{page_url}favicon.ico"
+        stylesheet_response = MagicMock()
+        stylesheet_response.__enter__.return_value = stylesheet_response
+        stylesheet_response.status = 200
+
+        with patch.object(
+            checker,
+            "urlopen",
+            side_effect=[
+                page_response,
+                stylesheet_response,
+                HTTPError(
+                    missing_icon_url,
+                    404,
+                    "Not Found",
+                    None,
+                    None,
+                ),
+            ],
+        ):
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        self.assertIn("icon asset", str(raised.exception))
+        self.assertIn(missing_icon_url, str(raised.exception))
+        self.assertIn("returned HTTP 404 instead of HTTP 200", str(raised.exception))
 
     def test_live_check_rejects_redirect_to_wrong_repository_path_without_network_access(self):
         checker = load_checker()
