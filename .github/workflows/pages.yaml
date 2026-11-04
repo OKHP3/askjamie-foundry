@@ -28,6 +28,20 @@ jobs:
       artifact_file_count: ${{ steps.release_record.outputs.artifact_file_count }}
       expected_pages_path: ${{ steps.release_record.outputs.expected_pages_path }}
     steps:
+      - name: Record manual release initiator
+        env:
+          RELEASE_ACTOR: ${{ github.actor }}
+        run: |
+          python - <<'PY'
+          import os
+
+          actor = os.environ["RELEASE_ACTOR"]
+          actor = actor.replace("\\", "\\\\").replace("`", "\\`").replace("\n", " ")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+              stream.write("## Pages release request\n\n")
+              stream.write(f"- Started by: `{actor}`\n")
+          PY
+
       - name: Checkout repository
         uses: actions/checkout@v7
 
