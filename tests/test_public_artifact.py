@@ -298,6 +298,31 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertEqual(mocked_urlopen.call_count, 5)
         self.assertEqual(mocked_sleep.call_count, 4)
 
+    def test_live_check_recovers_after_transient_failure_without_network_access(self):
+        checker = load_checker()
+        page_url = f"http://example.test{PAGES_PATH}"
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = page_url
+        response.read.return_value = (ROOT / "public/index.html").read_bytes()
+
+        with (
+            patch.object(
+                checker,
+                "urlopen",
+                side_effect=[URLError("temporary connection reset"), response],
+            ) as mocked_urlopen,
+            patch.object(checker.time, "sleep") as mocked_sleep,
+            patch("builtins.print") as mocked_print,
+        ):
+            checker.check_live(page_url)
+
+        self.assertEqual(mocked_urlopen.call_count, 2)
+        mocked_sleep.assert_called_once_with(2)
+        mocked_print.assert_called_once()
+        self.assertIn("Live Pages check passed", mocked_print.call_args.args[0])
+
     def test_live_check_rejects_redirect_to_wrong_repository_path_without_network_access(self):
         checker = load_checker()
         page_url = f"http://example.test{PAGES_PATH}"
