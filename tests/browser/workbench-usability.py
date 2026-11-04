@@ -578,15 +578,21 @@ async def main() -> None:
 
                 await page.route(delayed_project_url, delay_first_project)
                 race_prompts: list[str] = []
+                race_prompt_types: list[str] = []
 
                 async def accept_race_dialog(dialog) -> None:
                     race_prompts.append(dialog.message)
+                    race_prompt_types.append(dialog.type)
                     await dialog.accept()
 
                 page.once("dialog", accept_race_dialog)
-                await original_row.click()
+                await original_row.focus()
+                await expect(original_row).to_be_focused()
+                await original_row.press("Enter")
                 page.once("dialog", accept_race_dialog)
-                await duplicate_row.click()
+                await duplicate_row.focus()
+                await expect(duplicate_row).to_be_focused()
+                await duplicate_row.press("Enter")
                 await page.wait_for_function(
                     """expected => document.querySelector("#field-title")?.value === expected""",
                     arg=duplicate_title,
@@ -595,6 +601,7 @@ async def main() -> None:
                 # Wait for the older response too, so a late overwrite fails here.
                 await page.wait_for_load_state("networkidle")
                 assert len(race_prompts) == 2, race_prompts
+                assert race_prompt_types == ["confirm", "confirm"], race_prompt_types
                 assert "Unsaved draft stays safe" in race_prompts[0], race_prompts
                 assert duplicate_title[:50] in race_prompts[1], race_prompts
                 assert await page.get_by_label("Title").input_value() == duplicate_title
