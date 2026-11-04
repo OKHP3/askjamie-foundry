@@ -452,6 +452,67 @@ async def main() -> None:
                 await page.get_by_label("Title").wait_for()
                 assert await page.get_by_label("Title").input_value() == duplicate_title
                 assert await page.locator(".save-state").inner_text() == "Saved locally"
+
+                await page.get_by_label("Title").fill("")
+                await page.get_by_role("button", name="Save changes").click()
+                await page.get_by_text("Saved. The desk has a new revision.").wait_for()
+                await page.locator(".save-state").filter(has_text="Saved locally").wait_for()
+                fallback_row = page.locator(".project-row").filter(
+                    has=page.locator(
+                        "strong", has_text=re.compile(r"^Untitled capability$")
+                    )
+                )
+                assert await fallback_row.count() == 1
+
+                await original_row.click()
+                await page.get_by_label("Title").wait_for()
+                assert await page.get_by_label("Title").input_value() == "Unsaved draft stays safe"
+                await page.get_by_label("Title").fill("Unsaved original remains")
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+
+                fallback_prompt: dict[str, str] = {}
+
+                async def dismiss_fallback_switch(dialog) -> None:
+                    fallback_prompt["type"] = dialog.type
+                    fallback_prompt["message"] = dialog.message
+                    await dialog.dismiss()
+
+                page.once("dialog", dismiss_fallback_switch)
+                await fallback_row.click()
+                assert fallback_prompt.get("type") == "confirm", fallback_prompt
+                fallback_message = fallback_prompt.get("message", "")
+                assert fallback_message.startswith(
+                    "This project has unsaved changes. Leave without saving and open ["
+                ), fallback_prompt
+                assert "[Untitled capability · " in fallback_message, fallback_prompt
+                assert fallback_message.endswith("]?"), fallback_prompt
+                assert await page.get_by_label("Title").input_value() == "Unsaved original remains"
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+                saved_titles = await page.evaluate(
+                    """async () => (await (await fetch('/api/projects')).json()).projects.map((item) => item.title)"""
+                )
+                assert "Unsaved original remains" not in saved_titles, saved_titles
+                assert "" in saved_titles, saved_titles
+
+                page.once("dialog", lambda dialog: dialog.accept())
+                await fallback_row.click()
+                await page.get_by_label("Title").wait_for()
+                assert await page.get_by_label("Title").input_value() == ""
+                assert await page.locator(".save-state").inner_text() == "Saved locally"
+
+                await page.get_by_label("Title").fill(duplicate_title)
+                await page.get_by_role("button", name="Save changes").click()
+                await page.get_by_text("Saved. The desk has a new revision.").wait_for()
+                await page.locator(".save-state").filter(has_text="Saved locally").wait_for()
+                await original_row.click()
+                await page.get_by_label("Title").wait_for()
+                await page.get_by_label("Title").fill("Unsaved original remains")
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+                page.once("dialog", lambda dialog: dialog.accept())
+                await duplicate_row.click()
+                await page.get_by_label("Title").wait_for()
+                assert await page.get_by_label("Title").input_value() == duplicate_title
+
                 await page.get_by_label("Title").fill("Unsaved duplicate remains")
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
 
