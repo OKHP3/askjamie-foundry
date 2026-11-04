@@ -550,6 +550,38 @@ async def main() -> None:
                     for project_id, item in race_projects.items()
                     if item["title"] == duplicate_title
                 )
+                delayed_history_path = f"/api/projects/{original_id}/history"
+                delayed_history_url = f"**{delayed_history_path}"
+                history_request_started = asyncio.Event()
+                history_request_finished = asyncio.Event()
+
+                async def delay_first_history(route) -> None:
+                    history_request_started.set()
+                    await asyncio.sleep(0.75)
+                    await route.continue_()
+                    history_request_finished.set()
+
+                await page.route(delayed_history_url, delay_first_history)
+                page.once("dialog", lambda dialog: dialog.accept())
+                await original_row.click()
+                await asyncio.wait_for(history_request_started.wait(), timeout=5)
+                page.once("dialog", lambda dialog: dialog.accept())
+                await duplicate_row.click()
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                await asyncio.wait_for(history_request_finished.wait(), timeout=5)
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                assert (
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                    in await page.locator(".editor-head p").inner_text()
+                )
+                await page.unroute(delayed_history_url, delay_first_history)
+                await page.get_by_label("Title").fill("Unsaved duplicate remains")
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+
                 delayed_project_path = f"/api/projects/{original_id}"
                 delayed_project_url = f"**{delayed_project_path}"
                 delayed_request = {"seen": False}
