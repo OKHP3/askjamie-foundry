@@ -25,6 +25,12 @@ def load_checker():
     return checker
 
 
+PAGES_CONTRACT = load_checker()
+PAGES_PATH = PAGES_CONTRACT.EXPECTED_PAGES_PATH
+PAGES_BASE_URL = PAGES_CONTRACT.PAGES_BASE_URL
+PAGES_REPOSITORY_NAME = PAGES_CONTRACT.PAGES_REPOSITORY_NAME
+
+
 class PublicArtifactTests(unittest.TestCase):
     def test_ga4_tracking_is_limited_to_public_pages(self):
         public_html = (ROOT / "public/index.html").read_text(encoding="utf-8")
@@ -74,11 +80,11 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertTrue((ROOT / "dist/pages/styles.css").is_file())
         self.assertTrue((ROOT / "dist/pages/.nojekyll").is_file())
         self.assertIn(
-            '<link rel="canonical" href="https://okhp3.github.io/askjamie-foundry/" />',
+            f'<link rel="canonical" href="{PAGES_BASE_URL}" />',
             html,
         )
         self.assertIn(
-            '<meta property="og:image" content="https://okhp3.github.io/askjamie-foundry/assets/social-preview.jpg" />',
+            f'<meta property="og:image" content="{PAGES_BASE_URL}assets/social-preview.jpg" />',
             html,
         )
         self.assertIn('<meta name="twitter:card" content="summary_large_image" />', html)
@@ -102,10 +108,16 @@ class PublicArtifactTests(unittest.TestCase):
             (ROOT / "dist/pages/social-card.png").read_bytes(),
             (ROOT / "assets/brand/askjamie-cover.png").read_bytes(),
         )
+        repository_name = PAGES_CONTRACT.PAGES_REPOSITORY_IDENTITY.split("/", 1)[1]
+        self.assertEqual(PAGES_PATH, f"/{repository_name.lower()}/")
+        self.assertEqual(
+            PAGES_BASE_URL,
+            f"https://{PAGES_CONTRACT.PAGES_REPOSITORY_IDENTITY.split('/', 1)[0].lower()}.github.io{PAGES_PATH}",
+        )
 
     def test_public_artifact_is_served_as_a_pages_style_subpath(self):
         with tempfile.TemporaryDirectory() as temp_dir:
-            pages_root = Path(temp_dir) / "askjamie-foundry"
+            pages_root = Path(temp_dir) / PAGES_REPOSITORY_NAME
             subprocess.run([sys.executable, str(SCRIPT), "--build"], cwd=ROOT, check=True)
             shutil.copytree(ROOT / "dist/pages", pages_root)
             probe = socket.socket()
@@ -121,11 +133,12 @@ class PublicArtifactTests(unittest.TestCase):
                 import urllib.request
 
                 # The static artifact itself is deliberately independent of the
-                # Pages host. Relative links remain valid under /askjamie-foundry/.
+                # Pages-style hosting; relative links remain valid under the
+                # repository-derived project subpath.
                 for _ in range(40):
                     try:
                         response = urllib.request.urlopen(
-                            f"http://127.0.0.1:{port}/askjamie-foundry/", timeout=0.2
+                            f"http://127.0.0.1:{port}{PAGES_PATH}", timeout=0.2
                         )
                         break
                     except OSError:
@@ -139,7 +152,7 @@ class PublicArtifactTests(unittest.TestCase):
                         sys.executable,
                         str(SCRIPT),
                         "--check-live",
-                        f"http://127.0.0.1:{port}/askjamie-foundry/",
+                        f"http://127.0.0.1:{port}{PAGES_PATH}",
                     ],
                     cwd=ROOT,
                     capture_output=True,
@@ -148,7 +161,7 @@ class PublicArtifactTests(unittest.TestCase):
                 self.assertEqual(live_check.returncode, 0, live_check.stderr)
                 self.assertIn("Live Pages check passed", live_check.stdout)
                 css = urllib.request.urlopen(
-                    f"http://127.0.0.1:{port}/askjamie-foundry/styles.css", timeout=2
+                    f"http://127.0.0.1:{port}{PAGES_PATH}styles.css", timeout=2
                 )
                 self.assertEqual(css.status, 200)
                 for asset in (
@@ -162,7 +175,7 @@ class PublicArtifactTests(unittest.TestCase):
                     "sitemap.xml",
                 ):
                     response = urllib.request.urlopen(
-                        f"http://127.0.0.1:{port}/askjamie-foundry/{asset}", timeout=2
+                        f"http://127.0.0.1:{port}{PAGES_PATH}{asset}", timeout=2
                     )
                     self.assertEqual(response.status, 200, asset)
             finally:
@@ -185,7 +198,7 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn("deployed repository subpath is wrong", wrong_path.stderr)
 
         with tempfile.TemporaryDirectory() as temp_dir:
-            pages_root = Path(temp_dir) / "askjamie-foundry"
+            pages_root = Path(temp_dir) / PAGES_REPOSITORY_NAME
             pages_root.mkdir()
             html = (ROOT / "public/index.html").read_text(encoding="utf-8")
             pages_root.joinpath("index.html").write_text(
@@ -209,7 +222,7 @@ class PublicArtifactTests(unittest.TestCase):
                                 sys.executable,
                                 str(SCRIPT),
                                 "--check-live",
-                                f"http://127.0.0.1:{port}/askjamie-foundry/",
+                                f"http://127.0.0.1:{port}{PAGES_PATH}",
                             ],
                             cwd=ROOT,
                             capture_output=True,
@@ -228,7 +241,7 @@ class PublicArtifactTests(unittest.TestCase):
 
     def test_live_check_retries_transient_http_failures_without_network_access(self):
         checker = load_checker()
-        page_url = "http://example.test/askjamie-foundry/"
+        page_url = f"http://example.test{PAGES_PATH}"
         failures = [
             URLError("connection reset"),
             HTTPError(page_url, 503, "Service Unavailable", None, None),
@@ -249,7 +262,7 @@ class PublicArtifactTests(unittest.TestCase):
 
     def test_live_check_rejects_redirect_to_wrong_repository_path_without_network_access(self):
         checker = load_checker()
-        page_url = "http://example.test/askjamie-foundry/"
+        page_url = f"http://example.test{PAGES_PATH}"
         response = MagicMock()
         response.__enter__.return_value = response
         response.status = 200
@@ -260,9 +273,21 @@ class PublicArtifactTests(unittest.TestCase):
                 checker.check_live(page_url)
 
         message = str(raised.exception)
-        self.assertIn("expected '/askjamie-foundry/'", message)
+        self.assertIn(f"expected {PAGES_PATH!r}", message)
         self.assertIn("got '/unexpected-path/'", message)
         mocked_urlopen.assert_called_once()
+
+    def test_repository_rename_fails_with_actionable_message(self):
+        checker = load_checker()
+        with patch.dict(checker.os.environ, {"PAGES_REPOSITORY": "OKHP3/renamed-foundry"}):
+            with self.assertRaises(SystemExit) as raised:
+                checker.check()
+
+        message = str(raised.exception)
+        self.assertIn("Pages repository identity changed", message)
+        self.assertIn("OKHP3/AskJamie-FoundRy", message)
+        self.assertIn("OKHP3/renamed-foundry", message)
+        self.assertIn("Update PAGES_REPOSITORY_IDENTITY", message)
 
 
 if __name__ == "__main__":

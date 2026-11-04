@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import shutil
 import subprocess
@@ -34,8 +35,14 @@ FORBIDDEN = (
     "sessionStorage",
     "fetch(",
 )
-PAGES_BASE_URL = "https://okhp3.github.io/askjamie-foundry/"
-EXPECTED_PAGES_PATH = "/askjamie-foundry/"
+# Canonical GitHub repository identity for this Pages site. The project Pages
+# path is derived from its repository name, so a rename cannot silently drift.
+PAGES_REPOSITORY_IDENTITY = "OKHP3/AskJamie-FoundRy"
+PAGES_REPOSITORY_OWNER, PAGES_REPOSITORY_NAME = PAGES_REPOSITORY_IDENTITY.split("/", 1)
+EXPECTED_PAGES_PATH = f"/{PAGES_REPOSITORY_NAME.lower()}/"
+PAGES_BASE_URL = (
+    f"https://{PAGES_REPOSITORY_OWNER.lower()}.github.io{EXPECTED_PAGES_PATH}"
+)
 GA4_MEASUREMENT_ID = "G-VJ1BKXS27H"
 GA4_SCRIPT_URL = (
     "https://www.googletagmanager.com/gtag/js"
@@ -70,6 +77,7 @@ LIVE_EXTERNAL_LINKS = (
 
 
 def check() -> None:
+    check_pages_repository_identity()
     if not SOURCE.is_dir():
         raise SystemExit("public artifact directory is missing")
     for name in REQUIRED:
@@ -130,9 +138,23 @@ def normalized_path(url: str) -> str:
     return path if path == "/" else f"{path.rstrip('/')}/"
 
 
+def check_pages_repository_identity() -> None:
+    """Fail early when the workflow is running from a renamed repository."""
+
+    actual = os.environ.get("PAGES_REPOSITORY")
+    if actual and actual.casefold() != PAGES_REPOSITORY_IDENTITY.casefold():
+        raise SystemExit(
+            "Pages repository identity changed: "
+            f"expected {PAGES_REPOSITORY_IDENTITY!r}, got {actual!r}. "
+            "Update PAGES_REPOSITORY_IDENTITY and the public canonical URLs "
+            "before releasing from the renamed repository."
+        )
+
+
 def check_live(page_url: str) -> None:
     """Verify the deployed Pages URL serves the intended public artifact."""
 
+    check_pages_repository_identity()
     requested = urlparse(page_url)
     if requested.scheme not in {"http", "https"} or not requested.netloc:
         raise SystemExit(f"live Pages check failed: invalid page URL: {page_url}")

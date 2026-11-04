@@ -6,6 +6,9 @@ name: AskJamie Pages (manual release)
 on:
   workflow_dispatch:
 
+env:
+  PAGES_REPOSITORY: ${{ github.repository }}
+
 permissions:
   contents: read
   pages: write
