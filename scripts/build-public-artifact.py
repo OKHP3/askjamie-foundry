@@ -269,6 +269,13 @@ def check_live(page_url: str) -> None:
         raise SystemExit(
             f"live Pages check failed: {page_url} returned HTTP {status} instead of HTTP 200"
         )
+    expected_host = urlparse(PAGES_BASE_URL).hostname
+    actual_host = urlparse(final_url).hostname
+    if actual_host is None or actual_host.casefold() != expected_host.casefold():
+        raise SystemExit(
+            "live Pages check failed: deployed URL redirected to an unexpected host; "
+            f"expected {expected_host!r}, got {actual_host!r}"
+        )
     if normalized_path(final_url) != EXPECTED_PAGES_PATH:
         raise SystemExit(
             "live Pages check failed: deployed URL redirected to the wrong "

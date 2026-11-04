@@ -185,19 +185,17 @@ class PublicArtifactTests(unittest.TestCase):
                     self.fail("static artifact server did not become ready")
                 self.assertEqual(response.status, 200)
                 self.assertIn("AskJamie FoundRy", response.read().decode("utf-8"))
-                live_check = subprocess.run(
-                    [
-                        sys.executable,
-                        str(SCRIPT),
-                        "--check-live",
+                checker = load_checker()
+                with (
+                    patch.object(
+                        checker,
+                        "PAGES_BASE_URL",
                         f"http://127.0.0.1:{port}{PAGES_PATH}",
-                    ],
-                    cwd=ROOT,
-                    capture_output=True,
-                    text=True,
-                )
-                self.assertEqual(live_check.returncode, 0, live_check.stderr)
-                self.assertIn("Live Pages check passed", live_check.stdout)
+                    ),
+                    patch("builtins.print") as mocked_print,
+                ):
+                    checker.check_live(f"http://127.0.0.1:{port}{PAGES_PATH}")
+                self.assertIn("Live Pages check passed", mocked_print.call_args.args[0])
                 css = urllib.request.urlopen(
                     f"http://127.0.0.1:{port}{PAGES_PATH}styles.css", timeout=2
                 )
@@ -253,33 +251,34 @@ class PublicArtifactTests(unittest.TestCase):
                 stderr=subprocess.DEVNULL,
             )
             try:
+                import urllib.request
+
                 for _ in range(40):
                     try:
-                        live_check = subprocess.run(
-                            [
-                                sys.executable,
-                                str(SCRIPT),
-                                "--check-live",
-                                f"http://127.0.0.1:{port}{PAGES_PATH}",
-                            ],
-                            cwd=ROOT,
-                            capture_output=True,
-                            text=True,
-                        )
-                        if live_check.returncode == 0 or "missing expected" in live_check.stderr:
-                            break
+                        urllib.request.urlopen(
+                            f"http://127.0.0.1:{port}{PAGES_PATH}", timeout=0.2
+                        ).close()
+                        break
                     except OSError:
-                        pass
-                    time.sleep(0.05)
-                self.assertNotEqual(live_check.returncode, 0)
-                self.assertIn("missing expected public marker", live_check.stderr)
+                        time.sleep(0.05)
+                else:
+                    self.fail("static artifact server did not become ready")
+                checker = load_checker()
+                with patch.object(
+                    checker,
+                    "PAGES_BASE_URL",
+                    f"http://127.0.0.1:{port}{PAGES_PATH}",
+                ):
+                    with self.assertRaises(SystemExit) as raised:
+                        checker.check_live(f"http://127.0.0.1:{port}{PAGES_PATH}")
+                self.assertIn("missing expected public marker", str(raised.exception))
             finally:
                 server.terminate()
                 server.wait(timeout=3)
 
     def test_live_check_retries_transient_http_failures_without_network_access(self):
         checker = load_checker()
-        page_url = f"http://example.test{PAGES_PATH}"
+        page_url = PAGES_BASE_URL
         failures = [
             URLError("connection reset"),
             HTTPError(page_url, 503, "Service Unavailable", None, None),
@@ -300,7 +299,7 @@ class PublicArtifactTests(unittest.TestCase):
 
     def test_live_check_recovers_after_transient_failure_without_network_access(self):
         checker = load_checker()
-        page_url = f"http://example.test{PAGES_PATH}"
+        page_url = PAGES_BASE_URL
         response = MagicMock()
         response.__enter__.return_value = response
         response.status = 200
@@ -325,11 +324,12 @@ class PublicArtifactTests(unittest.TestCase):
 
     def test_live_check_rejects_redirect_to_wrong_repository_path_without_network_access(self):
         checker = load_checker()
-        page_url = f"http://example.test{PAGES_PATH}"
+        page_url = PAGES_BASE_URL
         response = MagicMock()
         response.__enter__.return_value = response
         response.status = 200
-        response.geturl.return_value = "http://example.test/unexpected-path/"
+        expected_host = checker.urlparse(PAGES_BASE_URL).hostname
+        response.geturl.return_value = f"https://{expected_host}/unexpected-path/"
         response.read.return_value = b""
         with patch.object(checker, "urlopen", return_value=response) as mocked_urlopen:
             with self.assertRaises(SystemExit) as raised:
@@ -338,6 +338,25 @@ class PublicArtifactTests(unittest.TestCase):
         message = str(raised.exception)
         self.assertIn(f"expected {PAGES_PATH!r}", message)
         self.assertIn("got '/unexpected-path/'", message)
+        mocked_urlopen.assert_called_once()
+
+    def test_live_check_rejects_redirect_to_unexpected_host_with_valid_content_without_network_access(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = f"https://unexpected.example{PAGES_PATH}"
+        response.read.return_value = (ROOT / "public/index.html").read_bytes()
+        with patch.object(checker, "urlopen", return_value=response) as mocked_urlopen:
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        message = str(raised.exception)
+        expected_host = checker.urlparse(checker.PAGES_BASE_URL).hostname
+        self.assertIn("redirected to an unexpected host", message)
+        self.assertIn(f"expected {expected_host!r}", message)
+        self.assertIn("got 'unexpected.example'", message)
         mocked_urlopen.assert_called_once()
 
     def test_repository_rename_fails_with_actionable_message(self):
