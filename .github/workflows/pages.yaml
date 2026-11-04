@@ -22,6 +22,11 @@ jobs:
   build:
     name: Build read-only Pages artifact
     runs-on: ubuntu-latest
+    outputs:
+      source_commit: ${{ steps.release_record.outputs.source_commit }}
+      artifact_sha256: ${{ steps.release_record.outputs.artifact_sha256 }}
+      artifact_file_count: ${{ steps.release_record.outputs.artifact_file_count }}
+      expected_pages_path: ${{ steps.release_record.outputs.expected_pages_path }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -33,6 +38,43 @@ jobs:
 
       - name: Build public artifact
         run: python scripts/build-public-artifact.py --build
+
+      - name: Record source and artifact identity
+        id: release_record
+        env:
+          EXPECTED_SOURCE_COMMIT: ${{ github.sha }}
+        run: |
+          SOURCE_COMMIT="$(git rev-parse HEAD)"
+          if [ "${SOURCE_COMMIT}" != "${EXPECTED_SOURCE_COMMIT}" ]; then
+            echo "Checked-out commit does not match the workflow source commit." >&2
+            exit 1
+          fi
+          export SOURCE_COMMIT
+          python scripts/build-public-artifact.py --release-info > "$RUNNER_TEMP/pages-release-info.json"
+          python - "$RUNNER_TEMP/pages-release-info.json" <<'PY'
+          import json
+          import os
+          import sys
+
+          with open(sys.argv[1], encoding="utf-8") as stream:
+              info = json.load(stream)
+          outputs = {
+              "source_commit": os.environ["SOURCE_COMMIT"],
+              "artifact_sha256": info["artifact_sha256"],
+              "artifact_file_count": info["file_count"],
+              "expected_pages_path": info["expected_pages_path"],
+          }
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as stream:
+              for name, value in outputs.items():
+                  stream.write(f"{name}={value}\n")
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+              stream.write("## Pages release source\n\n")
+              stream.write(f"- Source commit: `{outputs['source_commit']}`\n")
+              stream.write(f"- Artifact SHA-256: `{outputs['artifact_sha256']}`\n")
+              stream.write(f"- Artifact files: {outputs['artifact_file_count']}\n")
+              stream.write(f"- Expected Pages path: `{outputs['expected_pages_path']}`\n")
+          PY
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
@@ -63,8 +105,46 @@ jobs:
         uses: actions/deploy-pages@v5
 
       - name: Verify deployed page content
+        id: live_check
         env:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           set -euo pipefail
           python scripts/build-public-artifact.py --check-live "${PAGE_URL}"
+
+      - name: Record deployment and smoke-test result
+        if: always()
+        env:
+          DEPLOYMENT_RESULT: ${{ steps.deployment.outcome }}
+          LIVE_CHECK_RESULT: ${{ steps.live_check.outcome }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          SOURCE_COMMIT: ${{ needs.build.outputs.source_commit }}
+          ARTIFACT_SHA256: ${{ needs.build.outputs.artifact_sha256 }}
+          ARTIFACT_FILE_COUNT: ${{ needs.build.outputs.artifact_file_count }}
+          EXPECTED_PAGES_PATH: ${{ needs.build.outputs.expected_pages_path }}
+        run: |
+          python - <<'PY'
+          import os
+
+          def safe(value):
+              return value.replace("\\", "\\\\").replace("`", "\\`").replace("\n", " ")
+
+          values = {
+              "deployment": os.environ.get("DEPLOYMENT_RESULT") or "not run",
+              "live_check": os.environ.get("LIVE_CHECK_RESULT") or "not run",
+              "page_url": os.environ.get("PAGE_URL") or "not available",
+              "source_commit": os.environ.get("SOURCE_COMMIT") or "not available",
+              "artifact_sha256": os.environ.get("ARTIFACT_SHA256") or "not available",
+              "artifact_file_count": os.environ.get("ARTIFACT_FILE_COUNT") or "not available",
+              "expected_pages_path": os.environ.get("EXPECTED_PAGES_PATH") or "not available",
+          }
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+              stream.write("## Pages deployment result\n\n")
+              stream.write(f"- Deployment action: `{safe(values['deployment'])}`\n")
+              stream.write(f"- Live content check: `{safe(values['live_check'])}`\n")
+              stream.write(f"- Smoke-test target: `{safe(values['page_url'])}`\n")
+              stream.write(f"- Source commit: `{safe(values['source_commit'])}`\n")
+              stream.write(f"- Artifact SHA-256: `{safe(values['artifact_sha256'])}`\n")
+              stream.write(f"- Artifact files: `{safe(values['artifact_file_count'])}`\n")
+              stream.write(f"- Expected Pages path: `{safe(values['expected_pages_path'])}`\n")
+          PY

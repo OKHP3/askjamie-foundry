@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import os
 import re
 import shutil
@@ -165,6 +167,41 @@ def build() -> None:
     print(f"Built {OUTPUT.relative_to(ROOT).as_posix()}")
 
 
+def release_info(output_dir: Path | None = None) -> dict[str, str | int]:
+    """Return a stable identity for the built public files only."""
+
+    artifact_dir = OUTPUT if output_dir is None else output_dir
+    if not artifact_dir.is_dir():
+        raise SystemExit(
+            f"built Pages artifact is missing: {artifact_dir}; run --build first"
+        )
+
+    files = sorted(path for path in artifact_dir.rglob("*") if path.is_file())
+    if not files:
+        raise SystemExit(f"built Pages artifact is empty: {artifact_dir}")
+
+    digest = hashlib.sha256()
+    for path in files:
+        relative_path = path.relative_to(artifact_dir).as_posix()
+        file_digest = hashlib.sha256()
+        file_size = 0
+        with path.open("rb") as stream:
+            for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+                file_digest.update(chunk)
+                file_size += len(chunk)
+        digest.update(relative_path.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(str(file_size).encode("ascii"))
+        digest.update(b"\0")
+        digest.update(file_digest.digest())
+
+    return {
+        "artifact_sha256": digest.hexdigest(),
+        "file_count": len(files),
+        "expected_pages_path": EXPECTED_PAGES_PATH,
+    }
+
+
 def normalized_path(url: str) -> str:
     """Normalize a Pages path while preserving the root path."""
 
@@ -273,10 +310,17 @@ if __name__ == "__main__":
         metavar="PAGE_URL",
         help="fetch and verify the deployed Pages URL",
     )
+    parser.add_argument(
+        "--release-info",
+        action="store_true",
+        help="print JSON identity for the built public artifact",
+    )
     args = parser.parse_args()
     if args.check_live:
         check_live(args.check_live)
     elif args.build:
         build()
+    elif args.release_info:
+        print(json.dumps(release_info(), sort_keys=True))
     else:
         check()

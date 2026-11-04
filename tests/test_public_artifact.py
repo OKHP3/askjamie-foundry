@@ -327,6 +327,28 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn("OKHP3/renamed-foundry", message)
         self.assertIn("Update PAGES_REPOSITORY_IDENTITY", message)
 
+    def test_release_info_hash_is_stable_and_scoped_to_artifact_files(self):
+        checker = load_checker()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temporary_root = Path(temp_dir)
+            first_artifact = temporary_root / "first"
+            second_artifact = temporary_root / "second"
+            first_artifact.mkdir()
+            second_artifact.mkdir()
+            (first_artifact / "index.html").write_bytes(b"<main>public</main>")
+            (first_artifact / "assets.css").write_bytes(b"body{}")
+            (second_artifact / "assets.css").write_bytes(b"body{}")
+            (second_artifact / "index.html").write_bytes(b"<main>public</main>")
+            (temporary_root / "private-workbench.sqlite").write_bytes(b"not included")
+
+            first = checker.release_info(first_artifact)
+            second = checker.release_info(second_artifact)
+
+        self.assertEqual(first, second)
+        self.assertEqual(first["file_count"], 2)
+        self.assertEqual(first["expected_pages_path"], checker.EXPECTED_PAGES_PATH)
+        self.assertEqual(len(first["artifact_sha256"]), 64)
+
 
 if __name__ == "__main__":
     unittest.main()
