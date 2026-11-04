@@ -246,5 +246,187 @@
       ],
       "note": "Mandatory source/coverage work and existing dependent tasks remain. No supported exact-chat history/archive control is currently exposed. No archive attempted."
     }
-  ]
+  ],
+  "revalidations": {
+    "2026-11-04": {
+      "thread_id": null,
+      "disposition": "BLOCKED - NOT READY TO ARCHIVE",
+      "obligations": [
+        {
+          "id": "O01",
+          "status": "verified complete",
+          "note": "Both original trees and all 873 payloads passed fresh Windows integrity and ZIP restore. The one later AJ01 source-repository commit changes technology-audit documentation only; it does not change the pinned import.",
+          "evidence": [
+            "SNAPSHOTS",
+            "AJ01_DELTA"
+          ]
+        },
+        {
+          "id": "O02",
+          "status": "verified complete",
+          "note": "The original child runtime configs remain separate preserved inputs. Later tracked comparison is recorded in PR71; no parent config activation is implied.",
+          "evidence": [
+            "PR71",
+            "SNAPSHOTS"
+          ]
+        },
+        {
+          "id": "O03",
+          "status": "blocked",
+          "note": "PR76 preserves the October 29 AJ01 v3 instruction field, metadata, and a reported live baseline of 13 conversations/130 prompts with scoring gaps. Original uploaded payloads and complete revision coverage are not proven. The privacy correction is already owned in PR77.",
+          "evidence": [
+            "PR74",
+            "PR76",
+            "PR77"
+          ]
+        },
+        {
+          "id": "O04",
+          "status": "blocked",
+          "note": "PR74 records a privately retained displayed instruction field and limited preview observations. Original image bytes, complete revision coverage and deployed behavior equivalence remain unverified.",
+          "evidence": [
+            "PR74",
+            "PR72"
+          ]
+        },
+        {
+          "id": "O05",
+          "status": "verified complete",
+          "note": "Both original worker reports and the discovery packet remain indexed in the established private evidence home. Reused the October 27 packet validation; no new agent capture is claimed.",
+          "evidence": [
+            "HISTORICAL",
+            "COVERAGE"
+          ]
+        },
+        {
+          "id": "O06",
+          "status": "verified complete",
+          "note": "Retains the bounded October 19 GitHub-history receipt. PR71/PR73 record separate self-contained child-history restores on named refs; bundle bytes were not reopened in this pass. None of these proves ignored files or historical external payloads.",
+          "evidence": [
+            "HISTORICAL",
+            "PR71",
+            "PR73"
+          ]
+        },
+        {
+          "id": "O07",
+          "status": "blocked",
+          "note": "Child Repl unrecovered local/platform-managed state is explicitly retired by the owner decision recorded in PR73, with loss accepted. Later tracked comparison is recorded in PR71. This session could not inspect unique Windows sibling state; the accepted loss does not apply to it.",
+          "evidence": [
+            "PR71",
+            "PR73",
+            "WINDOWS"
+          ],
+          "owner": "Issue 58 migration integration owner; Jamie for Windows state disposition"
+        },
+        {
+          "id": "O08",
+          "status": "blocked",
+          "note": "PR78 preserves reported Replit-only history and restores snapshot paths, with five checks on its exact draft head. Its recorded review-branch parity is not three-way canonical main parity. Task54 cancellation is recorded; PR78 is already owned and carries a governance decision provenance hold. Live checkout, active workers, selected mode and runtime were not reverified.",
+          "evidence": [
+            "PR78",
+            "REPLIT_CLAIM",
+            "REPLIT"
+          ],
+          "owner": "Existing PR78 integration owner; Jamie for the governance decision"
+        },
+        {
+          "id": "O09",
+          "status": "verified complete",
+          "note": "Prior accepted public source routing and Notion continuity remain evidenced in PR70/issue58. No routing edits or new deployment. An independent current live-site fetch returned no usable observation, so the October runtime evidence is not restated as current.",
+          "evidence": [
+            "HISTORICAL",
+            "PR70"
+          ]
+        },
+        {
+          "id": "O10",
+          "status": "uncertain",
+          "note": "PR72 records AJ02 instruction/repository ownership and bounded candidate authorization. That does not resolve AJ01 reuse rights or attachment/third-party rights, source currency or readiness for a broader publication.",
+          "evidence": [
+            "PR72",
+            "PR74"
+          ]
+        },
+        {
+          "id": "O11",
+          "status": "unfinished",
+          "note": "The bounded AJ01/AJ02 candidate work is now concrete in draft PR72. Four manually supplied AJ02 skill-text samples are author-graded development results. The November 4 Free Mode record reports native discovery/invocation unavailable. Do not infer a merged candidate, model equivalence, approved host or cutover.",
+          "evidence": [
+            "PR72"
+          ],
+          "scope_class": "bounded-candidates-with-unapproved-broader-host-scope",
+          "source": "PR72 records bounded candidate direction including AJ02 ownership; broader host/release direction remains unverified",
+          "acceptance": "Validate and review the bounded candidate under its existing owner; any native activation, broader conversion, host release or cutover requires its own acceptance evidence and authority.",
+          "owner": "Existing PR72 integration owner; Jamie for scope and acceptance"
+        },
+        {
+          "id": "O12",
+          "status": "blocked",
+          "note": "Both child Repls are owner-reported deleted with scoped accepted loss in PR73. No retirement decision verified for original GitHub repos, GPTs, website paths or Notion anchors. Do not repeat child deletion or infer broad consent.",
+          "evidence": [
+            "PR73",
+            "ISSUE58"
+          ]
+        },
+        {
+          "id": "O13",
+          "status": "uncertain",
+          "note": "All five associated pasted Markdown files are now readable. The three older copies render identical closeout directions; the two newer ones are consolidated closeout directions, not GPT exports or a source transcript. Exact conversation title, URL/ID and full raw pre-compaction coverage remain unavailable.",
+          "evidence": [
+            "COVERAGE"
+          ]
+        },
+        {
+          "id": "O14",
+          "status": "verified complete",
+          "note": "Existing PR70 package is merged and remains the durable project record; this dated review augments the same three files. Existing private receipt remains available and historical.",
+          "evidence": [
+            "PR70",
+            "COVERAGE"
+          ]
+        },
+        {
+          "id": "O15",
+          "status": "unfinished",
+          "note": "Prior documentation PR70 merged and is content-equivalent at the reviewed paths. The current scoped continuation follows the existing review workflow; exact head, required CI and integration status are maintained in the linked issue receipt and follow-up PR. No merge or deployment authorized here.",
+          "evidence": [
+            "PR70",
+            "ISSUE58"
+          ]
+        },
+        {
+          "id": "O16",
+          "status": "verified complete",
+          "note": "Fresh Pass A validates applicable artifacts; independent Pass B challenges provenance, scope, concurrency and archive eligibility. Final artifact-level checks and review are in the maintained receipt. These checks do not pass the underlying GPT/Replit acceptance gates.",
+          "evidence": [
+            "PASS_A",
+            "PASS_B",
+            "ISSUE58"
+          ]
+        },
+        {
+          "id": "O17",
+          "status": "blocked",
+          "note": "Mandatory deployed-source coverage, relevant state/runtime and exact-thread coverage gates remain open. Pending assigned PR work is not completed by this receipt. No supported exact-chat archive control was exposed; no archive attempted.",
+          "evidence": [
+            "COVERAGE",
+            "PR72",
+            "PR78",
+            "ISSUE58"
+          ]
+        }
+      ],
+      "scoped_dispositions": [
+        {
+          "scope": "Unrecovered local/platform-managed state of both deleted child Repls only",
+          "status": "explicitly retired",
+          "source": "PR73",
+          "limit": "Accepted loss; not evidence of backup or recovery. Windows sibling state and other surfaces excluded."
+        }
+      ],
+      "base_commit": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+      "overlay_contract": "Join each dated row to obligations by ID. Source, acceptance and owner are inherited unless explicitly overridden. The October 27 entries remain historical."
+    }
+  }
 }
