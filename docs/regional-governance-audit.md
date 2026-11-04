@@ -126,6 +126,10 @@ owner_approval:
   status: DEFERRED
   decision: defer
   decided_at: "2026-09-17"
+  mentor_review:
+    repository: OKHP3/OverKill-Hill-FoundRy
+    revision: 8de1eb212d8db193fd22eb85bf0843f366a0c1a7
+    path: scripts/public-graduation-audit.py
 ```
 
 The report is evidence about the audit run. It is not itself evidence that the
@@ -211,15 +215,24 @@ decision: defer
 owner: OKHP3
 decided_at: "YYYY-MM-DD"
 registry_sha256: "<digest from the reviewed report>"
+mentor_review:
+  repository: OKHP3/OverKill-Hill-FoundRy
+  revision: "<pinned commit>"
+  path: scripts/public-graduation-audit.py
 publication_decision: not-authorized
 hosting_decision: not-authorized
 ```
 
 `decision` must be `approve`, `defer`, or `reject`. The record applies only to
 the named adaptation, scope, registry digest, publication boundary, and hosting
-boundary. It cannot be reused for a different registry state, a publication
-release, or a hosting decision. An approval also does not authorize hosted
-authoring, model calls, child-repository creation, or public graduation.
+boundary, and pinned mentor repository revision and source path. The audit
+rejects the record if its `mentor_review.repository`, `mentor_review.revision`,
+or `mentor_review.path` differs from the current pinned review in
+`scripts/regional-governance-audit.py`; a changed revision or path therefore
+requires a new dated decision. It cannot be reused for a different registry
+state, mentor source, a publication release, or a hosting decision. An approval
+also does not authorize hosted authoring, model calls, child-repository
+creation, or public graduation.
 
 The original 2026-09-17 decision was `defer`. The 2026-11-04 boundary review
 records a new, limited approval for the read-only evidence-review method; it

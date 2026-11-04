@@ -134,6 +134,19 @@ def approval_status(
         for key, expected in required.items()
         if approval.get(key) != expected
     ]
+    mentor_binding = approval.get("mentor_review")
+    expected_mentor_binding = {
+        key: MENTOR_REVIEW[key] for key in ("repository", "revision", "path")
+    }
+    if not isinstance(mentor_binding, dict):
+        problems.append("mentor_review binding must be a mapping")
+        mentor_binding = None
+    else:
+        for key, expected in expected_mentor_binding.items():
+            if mentor_binding.get(key) != expected:
+                problems.append(
+                    f"mentor_review.{key} does not match the pinned mentor review"
+                )
     decision = approval.get("decision")
     if decision not in {"approve", "defer", "reject"}:
         problems.append("decision must be approve, defer, or reject")
@@ -180,17 +193,18 @@ def approval_status(
         "path": str(approval_path),
         "decision": decision,
         "decided_at": decided_at,
+        "mentor_review": mentor_binding,
         "boundary_review": boundary_review,
         "reason": (
-            f"Exact scope, adaptation, registry digest, and release boundaries "
-            f"recorded with decision: {decision}."
+            f"Exact scope, adaptation, registry digest, pinned mentor review, "
+            f"and release boundaries recorded with decision: {decision}."
             if not problems
             else "; ".join(problems)
         ),
         "next_check": (
-            "Renew this limited approval after any registry digest or boundary-control change."
+            "Renew this decision after any registry digest, boundary-control, or mentor revision/path change."
             if status == "APPROVED" and not problems
-            else "Obtain or renew a dated decision tied to the exact adaptation, scope, digest, and release boundaries."
+            else "Obtain or renew a dated decision tied to the exact adaptation, scope, registry digest, mentor revision/path, and release boundaries."
         ),
     }
 
@@ -274,13 +288,13 @@ def build_report(
             "next_check": "Revalidate the four controls after any relevant implementation change and review later mentor revisions separately.",
         },
         {
-            "claim": "Owner decision exists for this exact adaptation, scope, and registry state.",
+            "claim": "Owner decision exists for this exact adaptation, scope, registry state, and pinned mentor source.",
             "tier": "CONFIRMED"
             if approval["status"] in {"APPROVED", "DEFERRED", "REJECTED"}
             else "UNKNOWN",
             "evidence": [approval["path"]] if approval["path"] else [],
             "consequence_if_false": "A design review could be mistaken for authorization to adopt or publish.",
-            "next_check": "Obtain or renew a dated owner decision tied to this adaptation, scope, registry digest, and release boundaries.",
+            "next_check": "Obtain or renew a dated decision tied to this adaptation, scope, registry digest, mentor revision/path, and release boundaries.",
         },
     ]
     return {
@@ -324,7 +338,7 @@ def build_report(
             "The reviewed mentor behavior may differ in a later revision.",
             "Regional adaptation has not received implementation review.",
         ] + ([
-            "Owner has not recorded a valid decision for this exact adaptation, scope, digest, and release boundary."
+            "Owner has not recorded a valid decision for this exact adaptation, scope, registry digest, pinned mentor source, and release boundaries."
         ] if approval["status"] not in {"APPROVED", "DEFERRED", "REJECTED"} else []),
     }
 
@@ -338,7 +352,7 @@ def main() -> int:
     parser.add_argument(
         "--owner-approval",
         type=Path,
-        help="Read an owner decision record tied to the adaptation, scope, and digest.",
+        help="Read an owner decision record tied to the adaptation, scope, digest, and pinned mentor source.",
     )
     parser.add_argument(
         "--require-approval",

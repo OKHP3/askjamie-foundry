@@ -5,6 +5,10 @@ decision: approve
 owner: OKHP3
 decided_at: "2026-11-04"
 registry_sha256: 7d4198e2abd6c88348164927aa906c11502cfbc3048243f33f46e7baa6e14cd2
+mentor_review:
+  repository: OKHP3/OverKill-Hill-FoundRy
+  revision: 8de1eb212d8db193fd22eb85bf0843f366a0c1a7
+  path: scripts/public-graduation-audit.py
 publication_decision: not-authorized
 hosting_decision: not-authorized
 boundary_review:
