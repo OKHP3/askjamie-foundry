@@ -10,11 +10,19 @@ import time
 import unittest
 import importlib.util
 from pathlib import Path
-from unittest.mock import patch
+from urllib.error import HTTPError, URLError
+from unittest.mock import MagicMock, patch
 
 
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = ROOT / "scripts" / "build-public-artifact.py"
+
+
+def load_checker():
+    spec = importlib.util.spec_from_file_location("public_artifact_check", SCRIPT)
+    checker = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(checker)
+    return checker
 
 
 class PublicArtifactTests(unittest.TestCase):
@@ -217,6 +225,44 @@ class PublicArtifactTests(unittest.TestCase):
             finally:
                 server.terminate()
                 server.wait(timeout=3)
+
+    def test_live_check_retries_transient_http_failures_without_network_access(self):
+        checker = load_checker()
+        page_url = "http://example.test/askjamie-foundry/"
+        failures = [
+            URLError("connection reset"),
+            HTTPError(page_url, 503, "Service Unavailable", None, None),
+            TimeoutError("synthetic timeout"),
+            URLError("temporary DNS failure"),
+            HTTPError(page_url, 503, "Service Unavailable", None, None),
+        ]
+        with (
+            patch.object(checker, "urlopen", side_effect=failures) as mocked_urlopen,
+            patch.object(checker.time, "sleep") as mocked_sleep,
+        ):
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        self.assertIn("returned HTTP 503 instead of HTTP 200", str(raised.exception))
+        self.assertEqual(mocked_urlopen.call_count, 5)
+        self.assertEqual(mocked_sleep.call_count, 4)
+
+    def test_live_check_rejects_redirect_to_wrong_repository_path_without_network_access(self):
+        checker = load_checker()
+        page_url = "http://example.test/askjamie-foundry/"
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = "http://example.test/unexpected-path/"
+        response.read.return_value = b""
+        with patch.object(checker, "urlopen", return_value=response) as mocked_urlopen:
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        message = str(raised.exception)
+        self.assertIn("expected '/askjamie-foundry/'", message)
+        self.assertIn("got '/unexpected-path/'", message)
+        mocked_urlopen.assert_called_once()
 
 
 if __name__ == "__main__":
