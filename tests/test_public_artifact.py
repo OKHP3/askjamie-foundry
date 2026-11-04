@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import subprocess
 import sys
 import socket
@@ -558,18 +559,45 @@ class PublicArtifactTests(unittest.TestCase):
             first_artifact.mkdir()
             second_artifact.mkdir()
             (first_artifact / "index.html").write_bytes(b"<main>public</main>")
-            (first_artifact / "assets.css").write_bytes(b"body{}")
-            (second_artifact / "assets.css").write_bytes(b"body{}")
+            (first_artifact / "styles.css").write_bytes(b"body{}")
+            (first_artifact / "assets").mkdir()
+            (first_artifact / "assets" / "logo.svg").write_bytes(b"<svg/>")
             (second_artifact / "index.html").write_bytes(b"<main>public</main>")
+            (second_artifact / "assets").mkdir()
+            (second_artifact / "assets" / "logo.svg").write_bytes(b"<svg/>")
+            (second_artifact / "styles.css").write_bytes(b"body{}")
             (temporary_root / "private-workbench.sqlite").write_bytes(b"not included")
+            (temporary_root / "workbench").mkdir()
+            (temporary_root / "workbench" / "private.json").write_bytes(b"not included")
 
             first = checker.release_info(first_artifact)
             second = checker.release_info(second_artifact)
 
         self.assertEqual(first, second)
-        self.assertEqual(first["file_count"], 2)
+        self.assertEqual(first["file_count"], 3)
         self.assertEqual(first["expected_pages_path"], checker.EXPECTED_PAGES_PATH)
         self.assertEqual(len(first["artifact_sha256"]), 64)
+        self.assertEqual(
+            [entry["path"] for entry in first["files"]],
+            ["assets/logo.svg", "index.html", "styles.css"],
+        )
+        self.assertEqual(
+            first["files"],
+            [
+                {
+                    "path": "assets/logo.svg",
+                    "sha256": hashlib.sha256(b"<svg/>").hexdigest(),
+                },
+                {
+                    "path": "index.html",
+                    "sha256": hashlib.sha256(b"<main>public</main>").hexdigest(),
+                },
+                {
+                    "path": "styles.css",
+                    "sha256": hashlib.sha256(b"body{}").hexdigest(),
+                },
+            ],
+        )
 
 
 if __name__ == "__main__":

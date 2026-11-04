@@ -442,7 +442,7 @@ def build() -> None:
     print(f"Built {OUTPUT.relative_to(ROOT).as_posix()}")
 
 
-def release_info(output_dir: Path | None = None) -> dict[str, str | int]:
+def release_info(output_dir: Path | None = None) -> dict[str, object]:
     """Return a stable identity for the built public files only."""
 
     artifact_dir = OUTPUT if output_dir is None else output_dir
@@ -451,11 +451,15 @@ def release_info(output_dir: Path | None = None) -> dict[str, str | int]:
             f"built Pages artifact is missing: {artifact_dir}; run --build first"
         )
 
-    files = sorted(path for path in artifact_dir.rglob("*") if path.is_file())
+    files = sorted(
+        (path for path in artifact_dir.rglob("*") if path.is_file()),
+        key=lambda path: path.relative_to(artifact_dir).as_posix(),
+    )
     if not files:
         raise SystemExit(f"built Pages artifact is empty: {artifact_dir}")
 
     digest = hashlib.sha256()
+    file_manifest = []
     for path in files:
         relative_path = path.relative_to(artifact_dir).as_posix()
         file_digest = hashlib.sha256()
@@ -464,6 +468,13 @@ def release_info(output_dir: Path | None = None) -> dict[str, str | int]:
             for chunk in iter(lambda: stream.read(1024 * 1024), b""):
                 file_digest.update(chunk)
                 file_size += len(chunk)
+        file_sha256 = file_digest.hexdigest()
+        file_manifest.append(
+            {
+                "path": relative_path,
+                "sha256": file_sha256,
+            }
+        )
         digest.update(relative_path.encode("utf-8"))
         digest.update(b"\0")
         digest.update(str(file_size).encode("ascii"))
@@ -474,6 +485,7 @@ def release_info(output_dir: Path | None = None) -> dict[str, str | int]:
         "artifact_sha256": digest.hexdigest(),
         "file_count": len(files),
         "expected_pages_path": EXPECTED_PAGES_PATH,
+        "files": file_manifest,
     }
 
 
