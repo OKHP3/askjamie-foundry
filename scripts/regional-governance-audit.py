@@ -93,6 +93,66 @@ def protected_violations(repositories: list[dict[str, Any]]) -> list[str]:
     return violations
 
 
+def sanitize_validator_errors(
+    errors: list[str],
+    registry_path: Path,
+) -> list[str]:
+    """Redact registry identifiers before validator errors enter the report."""
+    if not errors:
+        return []
+
+    try:
+        registry = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError):
+        return [
+            "Canonical registry validation failed; details withheld because "
+            "repository identifiers could not be checked safely."
+            for _ in errors
+        ]
+
+    repositories = (
+        registry.get("repositories", []) if isinstance(registry, dict) else []
+    )
+    identifiers: set[str] = set()
+
+    def collect_strings(value: Any) -> None:
+        if isinstance(value, str) and value:
+            identifiers.add(value)
+        elif isinstance(value, dict):
+            for nested_value in value.values():
+                collect_strings(nested_value)
+        elif isinstance(value, list):
+            for nested_value in value:
+                collect_strings(nested_value)
+
+    if isinstance(repositories, list):
+        for entry in repositories:
+            if not isinstance(entry, dict):
+                continue
+            for field in ("repo", "parent_capability"):
+                collect_strings(entry.get(field))
+            migration = entry.get("migration")
+            if isinstance(migration, dict):
+                collect_strings(migration.get("destination"))
+
+            protected = (
+                entry.get("family") == "client-overlay"
+                or bool(entry.get("client_org"))
+                or entry.get("bfs_firewall") is True
+                or entry.get("visibility_lock") == "permanent-private"
+            )
+            if protected:
+                for field in ("client_org", "display_name"):
+                    collect_strings(entry.get(field))
+
+    sanitized = []
+    for error in errors:
+        for identifier in sorted(identifiers, key=len, reverse=True):
+            error = error.replace(identifier, "[redacted]")
+        sanitized.append(error)
+    return sanitized
+
+
 def approval_status(
     approval_path: Path | None,
     registry_digest: str,
@@ -224,6 +284,7 @@ def build_report(
     errors, stats, repositories = checker.check_registry(
         registry_path, schema_path, False
     )
+    safe_errors = sanitize_validator_errors(errors, registry_path)
     after = registry_path.read_bytes()
     after_digest = hashlib.sha256(after).hexdigest()
     unchanged = before == after
@@ -231,11 +292,13 @@ def build_report(
     violations = protected_violations(repositories)
     approval = approval_status(approval_path, before_digest)
 
-    local_controls_pass = not errors and not violations and unchanged and baseline_matches
+    local_controls_pass = (
+        not safe_errors and not violations and unchanged and baseline_matches
+    )
     evidence = [
         {
             "claim": "AskJamie registry passes the canonical schema and health checks.",
-            "tier": "CONFIRMED" if not errors else "UNKNOWN",
+            "tier": "CONFIRMED" if not safe_errors else "UNKNOWN",
             "evidence": [
                 "scripts/check-registry.py",
                 "schemas/registry.schema.yaml",
@@ -317,7 +380,7 @@ def build_report(
             "unchanged_during_audit": unchanged,
             "baseline_sha256": baseline_sha256,
             "baseline_matches": baseline_matches,
-            "canonical_validator_errors": errors,
+            "canonical_validator_errors": safe_errors,
         },
         "protected_client_records": {
             "count": sum(

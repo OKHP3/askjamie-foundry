@@ -98,6 +98,35 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
             self.assertEqual(report["audit"]["status"], "FAIL")
             self.assertTrue(report["protected_client_records"]["violations"])
 
+    def test_invalid_protected_record_identifiers_are_redacted_from_report(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.copy_fixture(tmp)
+            registry_path = root / "registry/index.yaml"
+            data = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
+            protected = next(
+                entry
+                for entry in data["repositories"]
+                if entry.get("family") == "client-overlay"
+            )
+            protected["repo"] = "PRIVATE-CLIENT-ALPHA-REPOSITORY"
+            protected["display_name"] = ["PRIVATE-CLIENT-ALPHA"]
+            registry_path.write_text(yaml.safe_dump(data), encoding="utf-8")
+
+            report = MODULE.build_report(root)
+            serialized = json.dumps(report)
+
+        self.assertEqual(report["audit"]["status"], "FAIL")
+        self.assertNotIn("PRIVATE-CLIENT-ALPHA-REPOSITORY", serialized)
+        self.assertNotIn("PRIVATE-CLIENT-ALPHA", serialized)
+        errors = report["registry"]["canonical_validator_errors"]
+        self.assertTrue(any("repositories." in error and ".repo:" in error for error in errors))
+        self.assertTrue(
+            any(
+                "repositories." in error and ".display_name:" in error
+                for error in errors
+            )
+        )
+
     def test_approval_must_match_scope_and_registry_digest(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.copy_fixture(tmp)
