@@ -521,6 +521,44 @@ async def main() -> None:
                 await page.get_by_label("Title").wait_for()
                 await page.get_by_label("Title").fill("Unsaved original remains")
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+
+                keyboard_cancel_prompt: dict[str, str] = {}
+
+                async def dismiss_keyboard_switch(dialog) -> None:
+                    keyboard_cancel_prompt["type"] = dialog.type
+                    keyboard_cancel_prompt["message"] = dialog.message
+                    # Dismissing a native confirm is the browser's Escape/cancel outcome.
+                    await dialog.dismiss()
+
+                page.once("dialog", dismiss_keyboard_switch)
+                await duplicate_row.focus()
+                await expect(duplicate_row).to_be_focused()
+                await duplicate_row.press("Enter")
+                assert (
+                    keyboard_cancel_prompt.get("type") == "confirm"
+                ), keyboard_cancel_prompt
+                assert (
+                    duplicate_title[:50]
+                    in keyboard_cancel_prompt.get("message", "")
+                )
+                assert (
+                    await page.locator(".editor-head h2").inner_text()
+                    == "Unsaved draft stays safe"
+                )
+                assert (
+                    await page.get_by_label("Title").input_value()
+                    == "Unsaved original remains"
+                )
+                assert (
+                    await page.locator(".save-state").inner_text()
+                    == "Unsaved changes"
+                )
+                saved_titles = await page.evaluate(
+                    """async () => (await (await fetch('/api/projects')).json()).projects.map((item) => item.title)"""
+                )
+                assert "Unsaved draft stays safe" in saved_titles, saved_titles
+                assert "Unsaved original remains" not in saved_titles, saved_titles
+
                 page.once("dialog", lambda dialog: dialog.accept())
                 await duplicate_row.click()
                 await page.get_by_label("Title").wait_for()
