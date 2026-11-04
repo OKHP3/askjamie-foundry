@@ -13,7 +13,7 @@ import subprocess
 import time
 from html.parser import HTMLParser
 from urllib.error import HTTPError, URLError
-from urllib.parse import urljoin, urlparse
+from urllib.parse import unquote, urljoin, urlparse
 from urllib.request import Request, urlopen
 from pathlib import Path
 
@@ -83,6 +83,38 @@ APPROVED_EXTERNAL_LINKS = (
     "https://github.com/OKHP3/Glee-fullyTools-FoundRy",
     "https://okhp3.github.io/skillz/",
 )
+APPROVED_EXTERNAL_RESOURCES = (GA4_SCRIPT_URL,)
+RESOURCE_LINK_RELATIONS = {
+    "apple-touch-icon",
+    "dns-prefetch",
+    "icon",
+    "manifest",
+    "mask-icon",
+    "modulepreload",
+    "preconnect",
+    "prefetch",
+    "preload",
+    "stylesheet",
+}
+CSS_URL_PATTERN = re.compile(
+    r"""url\(\s*(?:(['"])(.*?)\1|([^'")]*?))\s*\)""",
+    re.IGNORECASE | re.DOTALL,
+)
+CSS_IMPORT_PATTERN = re.compile(
+    r"""@import\s+(?:url\(\s*)?(?:(['"])(.*?)\1|([^'")\s;]+))\s*\)?""",
+    re.IGNORECASE | re.DOTALL,
+)
+CSS_IMAGE_SET_PATTERN = re.compile(
+    r"""(?:-webkit-)?image-set\((.*?)\)""",
+    re.IGNORECASE | re.DOTALL,
+)
+CSS_QUOTED_URL_PATTERN = re.compile(
+    r"""(['"])(https?://[^'"]+|//[^'"]+)\1""",
+    re.IGNORECASE,
+)
+SRCSET_URL_PATTERN = re.compile(
+    r"""(?:[A-Za-z][A-Za-z0-9+.-]*:)?//[^\s,]+|[A-Za-z][A-Za-z0-9+.-]*:[^\s,]+"""
+)
 
 
 def required_seo_markers(base_url: str) -> tuple[str, ...]:
@@ -125,6 +157,185 @@ def external_href_targets(html: str) -> set[str]:
         for href in collector.hrefs
         if urlparse(href).scheme or href.startswith("//")
     }
+
+
+class ResourceCollector(HTMLParser):
+    """Collect external resource references and local stylesheet links."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.resources: list[str] = []
+        self.stylesheets: list[str] = []
+        self.inline_css: list[str] = []
+        self._inside_style = False
+        self._style_chunks: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attributes = {
+            name.lower(): value
+            for name, value in attrs
+            if value is not None
+        }
+        if tag.lower() == "style":
+            self._inside_style = True
+            self._style_chunks = []
+        for name in ("src", "poster", "data"):
+            value = attributes.get(name)
+            if value:
+                self.resources.append(value)
+        if tag.lower() in {"feimage", "image", "use"}:
+            href = attributes.get("href")
+            if href:
+                self.resources.append(href)
+        srcset = attributes.get("srcset")
+        if srcset:
+            self.resources.extend(SRCSET_URL_PATTERN.findall(srcset))
+        style = attributes.get("style")
+        if style:
+            self.inline_css.append(style)
+        if tag.lower() == "link":
+            rel = set(attributes.get("rel", "").lower().split())
+            href = attributes.get("href")
+            if href and rel & RESOURCE_LINK_RELATIONS:
+                self.resources.append(href)
+            if href and "stylesheet" in rel:
+                self.stylesheets.append(href)
+
+    def handle_data(self, data: str) -> None:
+        if self._inside_style:
+            self._style_chunks.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.lower() == "style" and self._inside_style:
+            self.inline_css.append("".join(self._style_chunks))
+            self._style_chunks = []
+            self._inside_style = False
+
+
+def external_resource_url(value: str) -> bool:
+    """Return whether a resource reference could contact a remote host."""
+
+    reference = value.strip()
+    parsed = urlparse(reference)
+    if reference.startswith("//"):
+        return True
+    return bool(parsed.scheme and parsed.scheme.lower() not in {
+        "about",
+        "blob",
+        "data",
+        "javascript",
+    })
+
+
+def css_resource_urls(css: str) -> tuple[list[str], list[str]]:
+    """Return resource URLs and imported stylesheet references from CSS."""
+
+    urls = []
+    for match in CSS_URL_PATTERN.finditer(css):
+        raw_url = match.group(2) if match.group(2) is not None else match.group(3).strip()
+        urls.append(_unescape_css_value(raw_url))
+    imports = []
+    for match in CSS_IMPORT_PATTERN.finditer(css):
+        raw_url = match.group(2) if match.group(2) is not None else match.group(3).strip()
+        imports.append(_unescape_css_value(raw_url))
+    for match in CSS_IMAGE_SET_PATTERN.finditer(css):
+        urls.extend(
+            _unescape_css_value(candidate)
+            for _, candidate in CSS_QUOTED_URL_PATTERN.findall(match.group(1))
+        )
+    return urls, imports
+
+
+def _unescape_css_value(value: str) -> str:
+    """Decode CSS escapes so escaped schemes cannot bypass URL checks."""
+
+    def replace_escape(match: re.Match[str]) -> str:
+        if match.group(1):
+            codepoint = int(match.group(1), 16)
+            try:
+                return chr(codepoint) if codepoint <= 0x10FFFF else "\ufffd"
+            except ValueError:
+                return "\ufffd"
+        escaped = match.group(2)
+        return "" if escaped in {"\r", "\n", "\f"} else escaped
+
+    return re.sub(r"\\([0-9a-fA-F]{1,6})\s?|\\(.)", replace_escape, value)
+
+
+def _local_public_file(source: Path, reference: str, base_dir: Path) -> Path | None:
+    """Resolve a local asset only when it remains inside the public directory."""
+
+    parsed = urlparse(reference)
+    if parsed.scheme or reference.startswith("//"):
+        return None
+    path = unquote(parsed.path)
+    if not path:
+        return None
+    candidate = (base_dir / path.lstrip("/")).resolve()
+    try:
+        candidate.relative_to(source.resolve())
+    except ValueError:
+        return None
+    return candidate
+
+
+def public_external_resource_references(
+    source: Path, html: str
+) -> list[tuple[str, str]]:
+    """Inventory external loads in markup and linked/imported public stylesheets."""
+
+    collector = ResourceCollector()
+    collector.feed(html)
+    references = [
+        ("public/index.html", value.strip())
+        for value in collector.resources
+        if external_resource_url(value)
+    ]
+    pending = [(reference, source) for reference in collector.stylesheets]
+    for css in collector.inline_css:
+        urls, imports = css_resource_urls(css)
+        references.extend(
+            ("public/index.html", value.strip())
+            for value in (*urls, *imports)
+            if external_resource_url(value)
+        )
+        pending.extend((reference, source) for reference in imports)
+
+    visited: set[Path] = set()
+    while pending:
+        reference, base_dir = pending.pop()
+        stylesheet = _local_public_file(source, reference, base_dir)
+        if stylesheet is None:
+            continue
+        if stylesheet in visited or not stylesheet.is_file():
+            continue
+        visited.add(stylesheet)
+        stylesheet_name = f"public/{stylesheet.relative_to(source.resolve()).as_posix()}"
+        css = stylesheet.read_text(encoding="utf-8")
+        urls, imports = css_resource_urls(css)
+        references.extend(
+            (stylesheet_name, value.strip())
+            for value in (*urls, *imports)
+            if external_resource_url(value)
+        )
+        pending.extend((reference, stylesheet.parent) for reference in imports)
+    return references
+
+
+def check_external_resources(source: Path, html: str) -> None:
+    """Reject external public-page resource loads outside the explicit allowlist."""
+
+    unapproved = sorted({
+        (filename, url)
+        for filename, url in public_external_resource_references(source, html)
+        if url not in APPROVED_EXTERNAL_RESOURCES
+    })
+    if unapproved:
+        details = "; ".join(f"{filename}: {url}" for filename, url in unapproved)
+        raise SystemExit(
+            "public artifact contains unapproved external resource(s): "
+            f"{details}"
+        )
 
 
 def check() -> None:
@@ -172,6 +383,7 @@ def check() -> None:
         )
     external_links = external_href_targets(html)
     unapproved_links = sorted(external_links - set(approved_external_links(PAGES_BASE_URL)))
+    check_external_resources(SOURCE, html)
     if unapproved_links:
         raise SystemExit(
             "public artifact contains unapproved external link(s): "

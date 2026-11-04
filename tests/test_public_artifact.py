@@ -31,13 +31,15 @@ PAGES_BASE_URL = PAGES_CONTRACT.PAGES_BASE_URL
 PAGES_REPOSITORY_NAME = PAGES_CONTRACT.PAGES_REPOSITORY_NAME
 
 
-def check_isolated_public_html(html: str) -> None:
+def check_isolated_public_html(html: str, styles_css: str | None = None) -> None:
     checker = load_checker()
     with tempfile.TemporaryDirectory() as temp_dir:
         isolated = Path(temp_dir)
         source = isolated / "public"
         shutil.copytree(ROOT / "public", source)
         (source / "index.html").write_text(html, encoding="utf-8")
+        if styles_css is not None:
+            (source / "styles.css").write_text(styles_css, encoding="utf-8")
         with (
             patch.object(checker, "ROOT", isolated),
             patch.object(checker, "SOURCE", source),
@@ -100,6 +102,41 @@ class PublicArtifactTests(unittest.TestCase):
 
         self.assertIn("unapproved external link(s)", str(raised.exception))
         self.assertIn("https://unapproved.example/path", str(raised.exception))
+
+    def test_public_check_accepts_approved_external_resource_inventory_in_isolation(self):
+        checker = load_checker()
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+
+        self.assertEqual(
+            checker.public_external_resource_references(ROOT / "public", html),
+            [("public/index.html", checker.GA4_SCRIPT_URL)],
+        )
+        # The checker root is a temporary copy containing only public files;
+        # this verifies resource policy without depending on private workbench state.
+        check_isolated_public_html(html)
+
+    def test_public_check_rejects_unapproved_external_markup_resource_in_isolation(self):
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        html += '\n<img src="https://unapproved.example/tracker.png" alt="" />\n'
+
+        with self.assertRaises(SystemExit) as raised:
+            check_isolated_public_html(html)
+
+        self.assertIn("public/index.html", str(raised.exception))
+        self.assertIn("https://unapproved.example/tracker.png", str(raised.exception))
+
+    def test_public_check_rejects_unapproved_external_stylesheet_resource_in_isolation(self):
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        css = (ROOT / "public/styles.css").read_text(encoding="utf-8")
+        css += '\n.hero { background-image: url("https://unapproved.example/image.png"); }\n'
+        css += '\n@import url("https://unapproved.example/imported.css");\n'
+
+        with self.assertRaises(SystemExit) as raised:
+            check_isolated_public_html(html, css)
+
+        self.assertIn("public/styles.css", str(raised.exception))
+        self.assertIn("https://unapproved.example/image.png", str(raised.exception))
+        self.assertIn("https://unapproved.example/imported.css", str(raised.exception))
 
     def test_public_artifact_builds_with_relative_assets_and_no_private_runtime(self):
         result = subprocess.run(
