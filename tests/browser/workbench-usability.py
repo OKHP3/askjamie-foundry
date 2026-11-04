@@ -539,9 +539,24 @@ async def main() -> None:
                 )
                 delayed_project_path = f"/api/projects/{original_id}"
                 delayed_request = {"seen": False}
+                failure_mode = {"enabled": False}
+                stale_failure_started = asyncio.Event()
+                stale_failure_delivered = {"value": False}
 
                 async def delay_first_project(route) -> None:
                     if route.request.url.endswith(delayed_project_path):
+                        if failure_mode["enabled"]:
+                            stale_failure_started.set()
+                            await asyncio.sleep(0.75)
+                            stale_failure_delivered["value"] = True
+                            await route.fulfill(
+                                status=503,
+                                content_type="application/json",
+                                body=json.dumps(
+                                    {"error": "Synthetic stale project load failure"}
+                                ),
+                            )
+                            return
                         delayed_request["seen"] = True
                         await asyncio.sleep(0.75)
                     await route.continue_()
@@ -572,7 +587,38 @@ async def main() -> None:
                     f"revision {race_projects[duplicate_id]['revision']}"
                     in await page.locator(".editor-head p").inner_text()
                 )
+                await page.unroute("**/api/projects/*")
+
+                await page.get_by_label("Title").fill("Unsaved duplicate remains")
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+                failure_mode["enabled"] = True
+                failure_race_prompts: list[str] = []
+
+                async def accept_failure_race_dialog(dialog) -> None:
+                    failure_race_prompts.append(dialog.message)
+                    await dialog.accept()
+
+                page.once("dialog", accept_failure_race_dialog)
+                await original_row.click()
+                await asyncio.wait_for(stale_failure_started.wait(), timeout=5)
+                page.once("dialog", accept_failure_race_dialog)
+                await duplicate_row.click()
+                await page.get_by_text("Reopening the saved revision").wait_for()
+                await expect(page.get_by_label("Title")).to_have_value(duplicate_title)
+                await page.wait_for_load_state("networkidle")
+                assert stale_failure_delivered["value"]
+                assert len(failure_race_prompts) == 2, failure_race_prompts
+                assert await page.get_by_label("Title").input_value() == duplicate_title
+                assert (
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                    in await page.locator(".editor-head p").inner_text()
+                )
+                assert await page.get_by_text("Reopening the saved revision").count() == 0
+                assert await page.locator(".error-box").count() == 0
                 await page.unroute("**/api/projects/*", delay_first_project)
+
+                await page.get_by_label("Title").fill("Unsaved duplicate remains")
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
 
                 matching_saved_title = "Matching saved project title"
                 await page.evaluate(
