@@ -66,7 +66,7 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
         )
         self.assertEqual(
             report["mentor_review"]["revision"],
-            "8de1eb212d8db193fd22eb85bf0843f366a0c1a7",
+            "619e942d69cfe535695e609bbb71a50e3bc14c49",
         )
         self.assertEqual(
             report["mentor_review"]["path"],

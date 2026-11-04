@@ -7,7 +7,7 @@ decided_at: "2026-11-04"
 registry_sha256: 7d4198e2abd6c88348164927aa906c11502cfbc3048243f33f46e7baa6e14cd2
 mentor_review:
   repository: OKHP3/OverKill-Hill-FoundRy
-  revision: 8de1eb212d8db193fd22eb85bf0843f366a0c1a7
+  revision: 619e942d69cfe535695e609bbb71a50e3bc14c49
   path: scripts/public-graduation-audit.py
 publication_decision: not-authorized
 hosting_decision: not-authorized
@@ -21,14 +21,17 @@ boundary_review:
     permanent_private_client_controls: CONFIRMED
   residual_limits:
     - Downloaded ZIP custody and sharing are outside the workbench boundary.
-    - Mentor behavior is confirmed only for the pinned 2026-09-17 revision.
+    - Mentor behavior is confirmed only for the pinned 2026-11-04 revision.
+    - The mentor audit is for release candidates; diagnostics may expose candidate paths or record values, and its privacy-marker scan is not comprehensive.
     - Broader governance/graduation adoption, publication, and hosting are not approved.
 rationale: >
   Approve only the named read-only adaptation as a private local evidence-review
   method. The loopback workbench, private-export boundary, read-only registry
   audit, and permanent-private client controls were reviewed against current
-  source, validators, and focused tests. This does not approve copying or
-  implementing broader mentor governance or graduation surfaces. Downloaded ZIP
-  custody is not controlled by the workbench, and the mentor behavior is
-  confirmed only for the pinned revision reviewed on 2026-09-17. Publication and
-  hosting remain unauthorized.
+  source, validators, and focused tests. The mentor source review is pinned to
+  the repository commit and path above; it found a read-only public release
+  checklist with a lowercase attribution filename and normalized text hashing.
+  Its limited marker scan and diagnostic output are not suitable for processing
+  confidential candidate content. This does not approve copying or implementing
+  broader mentor governance or graduation surfaces. Downloaded ZIP custody is
+  not controlled by the workbench. Publication and hosting remain unauthorized.

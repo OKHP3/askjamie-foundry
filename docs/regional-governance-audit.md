@@ -1,8 +1,8 @@
 # AskJamie regional governance audit
 
 Status: local boundaries revalidated; the exact read-only review adaptation is
-approved with limits; broader mentor governance/graduation adoption remains
-deferred.
+approved with limits for the pinned mentor revision below; broader mentor
+governance/graduation adoption remains deferred.
 
 This audit is the gate for adapting broader OverKill Hill governance or
 graduation surfaces into AskJamie FoundRy. It does not copy a mentor feature,
@@ -48,22 +48,43 @@ record.
 
 ## Named mentor-surface review
 
-The first reviewed surface is the OverKill public-graduation audit. This is a
-review of one pinned source revision, not a claim about every current mentor
-workflow or permission.
+The reviewed surface is the OverKill public-graduation audit. This is a review
+of one pinned source revision, not a claim about every current mentor workflow
+or permission.
 
 | Field | Evidence |
 |---|---|
-| Repository revision | `OKHP3/OverKill-Hill-FoundRy@8de1eb212d8db193fd22eb85bf0843f366a0c1a7` |
-| Primary source URL | [`scripts/public-graduation-audit.py`](https://github.com/OKHP3/OverKill-Hill-FoundRy/blob/8de1eb212d8db193fd22eb85bf0843f366a0c1a7/scripts/public-graduation-audit.py) |
+| Repository revision | `OKHP3/OverKill-Hill-FoundRy@619e942d69cfe535695e609bbb71a50e3bc14c49` |
+| Primary source URL | [`scripts/public-graduation-audit.py`](https://github.com/OKHP3/OverKill-Hill-FoundRy/blob/619e942d69cfe535695e609bbb71a50e3bc14c49/scripts/public-graduation-audit.py) |
 | Path | `scripts/public-graduation-audit.py` |
-| Observation | The read-only dry-run checks release-package completeness, restricted references, record consistency, and manual disabled deployment; it does not grant publication approval or change repository visibility. |
-| Reviewed | 2026-09-17 |
+| Observation | Static review confirms a read-only dry-run that checks release-package completeness, private markers and restricted references, release-record consistency and package hashes, and manual disabled deployment. This revision also recognizes lowercase `attribution.md` and names the normalized text suffix set used for package hashing. It does not grant publication approval or change repository visibility. |
+| Reviewed | 2026-11-04 |
 | Reviewer | Replit Agent |
 
-The observation is `CONFIRMED` for this exact revision and path. It does not
-confirm that a later mentor revision behaves the same way, that the target
-package is safe for AskJamie, or that any publication approval exists.
+The observation is `CONFIRMED` by static inspection for this exact revision and
+path. The reviewed script does not write candidate files, invoke deployment, or
+change repository visibility. Its private-marker scan covers a limited set of
+text file suffixes and strings; its diagnostics may include candidate paths or
+record values. It is not suitable for processing confidential candidate
+content. The review does not confirm that a later mentor revision behaves the
+same way, that the target package is safe for AskJamie, or that any publication
+approval exists.
+
+The previously reviewed revision was
+`8de1eb212d8db193fd22eb85bf0843f366a0c1a7`, reviewed 2026-09-17. The current
+revision differs in the required attribution filename casing and the factoring
+of the normalized text suffix list used for package hashes. The release checks
+remain read-only and deployment remains a separate, disabled action.
+
+### Comparison with the AskJamie boundary
+
+The mentor script reads a supplied release-candidate directory; it does not
+connect to AskJamie’s loopback workbench, registry, or private-export flow. Its
+read-only behavior therefore does not establish or replace the local controls
+for loopback access, export privacy, registry immutability, or permanent-private
+client records. The approved adaptation uses this reviewed source only as
+evidence in a private local review. It does not run the mentor script against
+AskJamie data, copy its graduation surface, or authorize hosting or publication.
 
 ## Exact AskJamie adaptation
 
@@ -109,9 +130,9 @@ evidence:
     next_check: ...
 mentor_review:
   repository: OKHP3/OverKill-Hill-FoundRy
-  revision: 8de1eb212d8db193fd22eb85bf0843f366a0c1a7
+  revision: 619e942d69cfe535695e609bbb71a50e3bc14c49
   path: scripts/public-graduation-audit.py
-  reviewed_at: "2026-09-17"
+  reviewed_at: "2026-11-04"
   reviewer: Replit Agent
 registry:
   path: registry/index.yaml
@@ -119,16 +140,16 @@ registry:
   unchanged_during_audit: true
   canonical_validator_errors: []
 protected_client_records:
-  count: 2
+  count: 5
   violations: []
 owner_approval:
   required: true
-  status: DEFERRED
-  decision: defer
-  decided_at: "2026-09-17"
+  status: APPROVED
+  decision: approve
+  decided_at: "2026-11-04"
   mentor_review:
     repository: OKHP3/OverKill-Hill-FoundRy
-    revision: 8de1eb212d8db193fd22eb85bf0843f366a0c1a7
+    revision: 619e942d69cfe535695e609bbb71a50e3bc14c49
     path: scripts/public-graduation-audit.py
 ```
 
@@ -235,9 +256,12 @@ also does not authorize hosted authoring, model calls, child-repository
 creation, or public graduation.
 
 The original 2026-09-17 decision was `defer`. The 2026-11-04 boundary review
-records a new, limited approval for the read-only evidence-review method; it
-does not approve implementation of broader governance or graduation surfaces.
-Run the audit with the current record to verify the exact binding:
+records a limited approval for the read-only evidence-review method bound to
+mentor revision `619e942d69cfe535695e609bbb71a50e3bc14c49` and source path
+`scripts/public-graduation-audit.py`; the earlier approval pin is superseded.
+The renewed approval does not approve implementation of broader governance or
+graduation surfaces. Run the audit with the current record to verify the exact
+binding:
 
 ```bash
 python3 scripts/regional-governance-audit.py \
@@ -283,8 +307,10 @@ The review **approves only** `read-only-regional-mentor-governance-audit` as a
 private, local, read-only evidence-review method. It does not authorize copying
 or implementing broader mentor governance or graduation surfaces. Mentor
 behavior remains confirmed only for the pinned revision
-`8de1eb212d8db193fd22eb85bf0843f366a0c1a7`, reviewed 2026-09-17; no live remote
-source check was run. Reports must not include client names or identifiers.
+`619e942d69cfe535695e609bbb71a50e3bc14c49`, path
+`scripts/public-graduation-audit.py`, statically reviewed 2026-11-04 from the
+exact fetched commit. The mentor audit was not executed against AskJamie or
+private candidate content. Reports must not include client names or identifiers.
 Publication and hosting remain `not-authorized`.
 
 The audit result remains `PASS` for local controls and `DEFERRED` for broader
@@ -297,6 +323,8 @@ different adaptation.
 - Which exact OverKill governance and graduation surfaces should be compared
   next; this audit covers only `scripts/public-graduation-audit.py`.
 - Whether the reviewed behavior remains present in a later mentor revision.
+- Whether the mentor audit's limited marker scan is sufficient for any specific
+  public release candidate; this review does not assess any candidate's content.
 - Where a downloaded private export is later stored or shared; the workbench
   cannot control ZIP custody after download.
 - Whether any broader mentor governance or graduation surface is useful to

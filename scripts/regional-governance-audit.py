@@ -39,19 +39,22 @@ ADAPTATION = {
 }
 MENTOR_REVIEW = {
     "repository": "OKHP3/OverKill-Hill-FoundRy",
-    "revision": "8de1eb212d8db193fd22eb85bf0843f366a0c1a7",
+    "revision": "619e942d69cfe535695e609bbb71a50e3bc14c49",
     "source_url": (
         "https://github.com/OKHP3/OverKill-Hill-FoundRy/blob/"
-        "8de1eb212d8db193fd22eb85bf0843f366a0c1a7/"
+        "619e942d69cfe535695e609bbb71a50e3bc14c49/"
         "scripts/public-graduation-audit.py"
     ),
     "path": "scripts/public-graduation-audit.py",
-    "reviewed_at": "2026-09-17",
+    "reviewed_at": "2026-11-04",
     "reviewer": "Replit Agent",
     "observation": (
-        "The read-only dry-run checks release-package completeness, restricted "
-        "references, record consistency, and manual disabled deployment; it "
-        "does not grant publication approval or change repository visibility."
+        "The read-only dry-run checks release-package completeness, private "
+        "markers and restricted references, release-record consistency and "
+        "package hashes, and manual disabled deployment. The reviewed revision "
+        "also recognizes lowercase attribution.md and names the normalized text "
+        "suffix set used for package hashing. It does not grant publication "
+        "approval or change repository visibility."
     ),
 }
 
@@ -331,7 +334,7 @@ def build_report(
                 f"reviewer:{MENTOR_REVIEW['reviewer']}",
             ],
             "consequence_if_false": "AskJamie could adopt an inaccurate or obsolete pattern.",
-            "next_check": "Review a later mentor revision before extending this observation.",
+            "next_check": "Review any later mentor revision before extending this observation.",
         },
         {
             "claim": "The approved narrow adaptation preserves the four reviewed local boundaries.",
