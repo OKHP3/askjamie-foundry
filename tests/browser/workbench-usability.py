@@ -242,9 +242,41 @@ async def main() -> None:
                     re.compile(r"Project saved|Saved")
                 )
                 await page.get_by_role("tab", name="Package", exact=True).click()
+                package_warning = (
+                    "This ZIP may contain private project details and source material. "
+                    "After download, the workbench cannot control where you store it or "
+                    "who you share it with."
+                )
+                await expect(page.get_by_text(package_warning, exact=False)).to_be_visible()
+                export_requests = []
+                page.on(
+                    "request",
+                    lambda request: export_requests.append(request.url)
+                    if request.url.endswith("/export")
+                    else None,
+                )
+
+                async def dismiss_export_warning(dialog) -> None:
+                    assert "private project and source content" in dialog.message
+                    assert "cannot control where the file is stored" in dialog.message
+                    assert "who it is shared with" in dialog.message
+                    await dialog.dismiss()
+
+                page.once("dialog", dismiss_export_warning)
+                await page.get_by_role("button", name="Download private ZIP", exact=True).click()
+                assert export_requests == []
+
+                async def accept_export_warning(dialog) -> None:
+                    assert "private project and source content" in dialog.message
+                    assert "cannot control where the file is stored" in dialog.message
+                    assert "who it is shared with" in dialog.message
+                    await dialog.accept()
+
                 async with page.expect_download() as download_info:
+                    page.once("dialog", accept_export_warning)
                     await page.get_by_role("button", name="Download private ZIP", exact=True).click()
                 download = await download_info.value
+                assert len(export_requests) == 1
                 with zipfile.ZipFile(await download.path()) as archive:
                     assert "skills/usability-check/SKILL.md" in archive.namelist()
                     assert json.loads(archive.read("adapters/plan.json"))["installable"] is False
