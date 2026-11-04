@@ -20,6 +20,12 @@ SCHEMA = ROOT / "schemas" / "registry.schema.yaml"
 AUDIT_NAME = "askjamie-regional-governance"
 AUDIT_SCOPE = "broader-mentor-governance-and-graduation"
 ADAPTATION_ID = "read-only-regional-mentor-governance-audit"
+REQUIRED_BOUNDARY_CONTROLS = (
+    "loopback_workbench",
+    "private_exports",
+    "immutable_registry",
+    "permanent_private_client_controls",
+)
 ADAPTATION = {
     "id": ADAPTATION_ID,
     "name": "Read-only regional mentor governance audit",
@@ -131,6 +137,32 @@ def approval_status(
     decision = approval.get("decision")
     if decision not in {"approve", "defer", "reject"}:
         problems.append("decision must be approve, defer, or reject")
+    boundary_review = approval.get("boundary_review")
+    if decision == "approve":
+        if not isinstance(boundary_review, dict):
+            problems.append("approve requires a boundary_review mapping")
+            boundary_review = None
+        else:
+            try:
+                date.fromisoformat(str(boundary_review.get("reviewed_at")))
+            except (TypeError, ValueError):
+                problems.append("boundary_review.reviewed_at must be an ISO date")
+            if boundary_review.get("registry_sha256") != registry_digest:
+                problems.append("boundary_review.registry_sha256 does not match the current registry")
+            controls = boundary_review.get("controls")
+            if not isinstance(controls, dict):
+                problems.append("boundary_review.controls must be a mapping")
+            else:
+                for control in REQUIRED_BOUNDARY_CONTROLS:
+                    if controls.get(control) != "CONFIRMED":
+                        problems.append(
+                            f"boundary_review.controls.{control} must be CONFIRMED"
+                        )
+            limits = boundary_review.get("residual_limits")
+            if not isinstance(limits, list) or not limits or any(
+                not isinstance(limit, str) or not limit.strip() for limit in limits
+            ):
+                problems.append("approve requires nonempty boundary_review.residual_limits")
     decided_at = approval.get("decided_at", approval.get("approved_at"))
     try:
         date.fromisoformat(str(decided_at))
@@ -148,11 +180,17 @@ def approval_status(
         "path": str(approval_path),
         "decision": decision,
         "decided_at": decided_at,
+        "boundary_review": boundary_review,
         "reason": (
             f"Exact scope, adaptation, registry digest, and release boundaries "
             f"recorded with decision: {decision}."
             if not problems
             else "; ".join(problems)
+        ),
+        "next_check": (
+            "Renew this limited approval after any registry digest or boundary-control change."
+            if status == "APPROVED" and not problems
+            else "Obtain or renew a dated decision tied to the exact adaptation, scope, digest, and release boundaries."
         ),
     }
 
@@ -219,11 +257,21 @@ def build_report(
             "next_check": "Review a later mentor revision before extending this observation.",
         },
         {
-            "claim": "The proposed adaptation is safe for AskJamie regional boundaries.",
-            "tier": "PROPOSAL",
-            "evidence": ["docs/regional-governance-audit.md"],
+            "claim": "The approved narrow adaptation preserves the four reviewed local boundaries.",
+            "tier": (
+                "INFERRED"
+                if local_controls_pass and approval["status"] == "APPROVED"
+                else "PROPOSAL"
+            ),
+            "evidence": [
+                "docs/regional-governance-audit.md#regional-boundary-review",
+                "workbench/server.py:create_server",
+                "workbench/service.py:read_registry,export_project",
+                "tests/test_boundary_acceptance.py",
+                "tests/test_export_acceptance.py",
+            ],
             "consequence_if_false": "The adaptation could weaken local privacy or ownership controls.",
-            "next_check": "Review the adaptation against the local workbench, export, and client controls.",
+            "next_check": "Revalidate the four controls after any relevant implementation change and review later mentor revisions separately.",
         },
         {
             "claim": "Owner decision exists for this exact adaptation, scope, and registry state.",

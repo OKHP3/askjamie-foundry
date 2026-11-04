@@ -104,11 +104,25 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
                 "registry_sha256": registry_digest,
                 "publication_decision": "not-authorized",
                 "hosting_decision": "not-authorized",
+                "boundary_review": {
+                    "reviewed_at": "2026-09-14",
+                    "registry_sha256": registry_digest,
+                    "controls": {
+                        control: "CONFIRMED"
+                        for control in MODULE.REQUIRED_BOUNDARY_CONTROLS
+                    },
+                    "residual_limits": ["Downloaded export custody remains external."],
+                },
             }
             approval_path = root / "approval.yaml"
             approval_path.write_text(yaml.safe_dump(approval), encoding="utf-8")
             report = MODULE.build_report(root, approval_path=approval_path)
             self.assertEqual(report["owner_approval"]["status"], "APPROVED")
+            adaptation_claim = next(
+                item for item in report["evidence"]
+                if item["claim"].startswith("The approved narrow adaptation")
+            )
+            self.assertEqual(adaptation_claim["tier"], "INFERRED")
             self.assertNotIn(
                 "Owner has not recorded a valid decision for this exact adaptation, scope, digest, and release boundary.",
                 report["remaining_unknowns"],
@@ -120,10 +134,71 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
             approval_path.write_text(yaml.safe_dump(changed), encoding="utf-8")
             report = MODULE.build_report(root, approval_path=approval_path)
             self.assertEqual(report["owner_approval"]["status"], "INVALID")
+            self.assertEqual(
+                next(
+                    item for item in report["evidence"]
+                    if item["claim"].startswith("The approved narrow adaptation")
+                )["tier"],
+                "PROPOSAL",
+            )
             self.assertIn(
                 "Owner has not recorded a valid decision for this exact adaptation, scope, digest, and release boundary.",
                 report["remaining_unknowns"],
             )
+
+            changed = copy.deepcopy(approval)
+            changed["boundary_review"]["registry_sha256"] = "0" * 64
+            approval_path.write_text(yaml.safe_dump(changed), encoding="utf-8")
+            report = MODULE.build_report(root, approval_path=approval_path)
+            self.assertEqual(report["owner_approval"]["status"], "INVALID")
+            self.assertIn(
+                "boundary_review.registry_sha256 does not match the current registry",
+                report["owner_approval"]["reason"],
+            )
+
+    def test_approval_requires_each_boundary_control_to_be_confirmed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.copy_fixture(tmp)
+            registry_digest = hashlib.sha256(
+                (root / "registry/index.yaml").read_bytes()
+            ).hexdigest()
+            approval_path = root / "approval.yaml"
+            approval_path.write_text(
+                yaml.safe_dump(
+                    {
+                        "audit": MODULE.AUDIT_NAME,
+                        "scope": MODULE.AUDIT_SCOPE,
+                        "adaptation": MODULE.ADAPTATION_ID,
+                        "decision": "approve",
+                        "owner": "OKHP3",
+                        "decided_at": "2026-11-04",
+                        "registry_sha256": registry_digest,
+                        "publication_decision": "not-authorized",
+                        "hosting_decision": "not-authorized",
+                        "boundary_review": {
+                            "reviewed_at": "2026-11-04",
+                            "registry_sha256": registry_digest,
+                            "controls": {
+                                control: "CONFIRMED"
+                                for control in MODULE.REQUIRED_BOUNDARY_CONTROLS
+                            },
+                            "residual_limits": ["Downloaded export custody remains external."],
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            decision = yaml.safe_load(approval_path.read_text(encoding="utf-8"))
+            decision["boundary_review"]["controls"]["private_exports"] = "UNKNOWN"
+            approval_path.write_text(yaml.safe_dump(decision), encoding="utf-8")
+
+            report = MODULE.build_report(root, approval_path=approval_path)
+
+        self.assertEqual(report["owner_approval"]["status"], "INVALID")
+        self.assertIn(
+            "boundary_review.controls.private_exports must be CONFIRMED",
+            report["owner_approval"]["reason"],
+        )
 
     def test_defer_decision_is_recorded_without_authorizing_adoption(self):
         with tempfile.TemporaryDirectory() as tmp:
