@@ -392,9 +392,12 @@ async def main() -> None:
                 await page.get_by_label("Title").wait_for()
                 duplicate_title = await page.get_by_label("Title").input_value()
                 assert duplicate_title == "Unsaved draft stays safe copy", duplicate_title
+                title_prefix = 'Destination with "straight" and “curly” quotes: '
                 duplicate_title = (
-                    'Destination with "straight" and “curly” quotes: a long / unusual '
-                    "destination title with extra context " * 5
+                    title_prefix
+                    + "A" * (94 - len(title_prefix))
+                    + "😀"
+                    + " a long / unusual destination title with extra context " * 5
                 )
                 await page.get_by_label("Title").fill(duplicate_title)
                 await page.get_by_role("button", name="Save changes").click()
@@ -437,6 +440,16 @@ async def main() -> None:
                 assert switch_message.endswith("]?"), switch_prompt
                 assert 'Destination with "straight" and “curly” quotes' in switch_message, switch_prompt
                 assert duplicate_title[:50] in switch_message, switch_prompt
+                expected_short_title = (
+                    f"{title_prefix}{'A' * (94 - len(title_prefix))}😀…"
+                )
+                project_code = await page.evaluate(
+                    """async title => (await (await fetch('/api/projects')).json()).projects.find((item) => item.title === title)?.code""",
+                    arg=duplicate_title,
+                )
+                assert project_code, project_code
+                assert f"{expected_short_title} · {project_code}" in switch_message, switch_prompt
+                assert "\uFFFD" not in switch_message, switch_prompt
                 assert len(switch_message) < 220, switch_prompt
                 assert "\n" not in switch_message, switch_prompt
                 assert await page.get_by_label("Title").input_value() == "Unsaved original remains"
