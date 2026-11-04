@@ -363,7 +363,7 @@
   function canLeaveCurrent(destination = null) {
     if (!state.current?._dirty) return true;
     const message = destination
-      ? `This project has unsaved changes. Leave without saving and open “${projectSwitchLabel(destination)}”?`
+      ? `This project has unsaved changes. Leave without saving and open [${projectSwitchLabel(destination)}]?`
       : "This project has unsaved changes. Leave without saving?";
     return window.confirm(message);
   }

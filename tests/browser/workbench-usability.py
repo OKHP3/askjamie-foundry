@@ -393,8 +393,8 @@ async def main() -> None:
                 duplicate_title = await page.get_by_label("Title").input_value()
                 assert duplicate_title == "Unsaved draft stays safe copy", duplicate_title
                 duplicate_title = (
-                    "Unsaved draft stays safe copy: a long / unusual destination title "
-                    "with extra context " * 5
+                    'Destination with "straight" and “curly” quotes: a long / unusual '
+                    "destination title with extra context " * 5
                 )
                 await page.get_by_label("Title").fill(duplicate_title)
                 await page.get_by_role("button", name="Save changes").click()
@@ -432,8 +432,10 @@ async def main() -> None:
                 assert switch_prompt.get("type") == "confirm", switch_prompt
                 switch_message = switch_prompt.get("message", "")
                 assert switch_message.startswith(
-                    "This project has unsaved changes. Leave without saving and open “"
+                    "This project has unsaved changes. Leave without saving and open ["
                 ), switch_prompt
+                assert switch_message.endswith("]?"), switch_prompt
+                assert 'Destination with "straight" and “curly” quotes' in switch_message, switch_prompt
                 assert duplicate_title[:50] in switch_message, switch_prompt
                 assert len(switch_message) < 220, switch_prompt
                 assert "\n" not in switch_message, switch_prompt
