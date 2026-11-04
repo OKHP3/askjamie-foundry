@@ -93,6 +93,20 @@ class PublicArtifactTests(unittest.TestCase):
         )
         check_isolated_public_html(html)
 
+    def test_public_check_rejects_an_insecure_approved_destination(self):
+        checker = load_checker()
+        insecure_destination = "http://unapproved.example/path"
+
+        with (
+            patch.object(
+                checker,
+                "APPROVED_EXTERNAL_LINKS",
+                (*checker.APPROVED_EXTERNAL_LINKS, insecure_destination),
+            ),
+            self.assertRaisesRegex(SystemExit, "approved external destinations must use HTTPS"),
+        ):
+            checker.check_approved_external_destinations()
+
     def test_public_check_rejects_an_unapproved_external_link(self):
         html = (ROOT / "public/index.html").read_text(encoding="utf-8")
         html += '\n<a href="https://unapproved.example/path">Unapproved</a>\n'

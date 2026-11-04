@@ -134,6 +134,25 @@ def approved_external_links(base_url: str) -> tuple[str, ...]:
     return (base_url, *APPROVED_EXTERNAL_LINKS[1:])
 
 
+def check_approved_external_destinations() -> None:
+    """Require every approved public link and resource to use HTTPS."""
+
+    destinations = (
+        *approved_external_links(PAGES_BASE_URL),
+        *APPROVED_EXTERNAL_RESOURCES,
+    )
+    insecure = sorted(
+        destination
+        for destination in destinations
+        if urlparse(destination).scheme.lower() != "https"
+    )
+    if insecure:
+        raise SystemExit(
+            "public artifact approved external destinations must use HTTPS: "
+            f"{', '.join(insecure)}"
+        )
+
+
 class HrefCollector(HTMLParser):
     """Collect href attributes from the public HTML without reading other files."""
 
@@ -340,6 +359,7 @@ def check_external_resources(source: Path, html: str) -> None:
 
 def check() -> None:
     check_pages_repository_identity()
+    check_approved_external_destinations()
     if not SOURCE.is_dir():
         raise SystemExit("public artifact directory is missing")
     for name in REQUIRED:
