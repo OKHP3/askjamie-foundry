@@ -80,6 +80,23 @@ APPROVED_EXTERNAL_LINKS = (
 )
 
 
+def required_seo_markers(base_url: str) -> tuple[str, ...]:
+    """Return SEO markers for the active Pages URL contract."""
+
+    return (
+        REQUIRED_SEO_MARKERS[0],
+        f'<link rel="canonical" href="{base_url}" />',
+        f'<meta property="og:image" content="{base_url}assets/social-preview.jpg"',
+        *REQUIRED_SEO_MARKERS[3:],
+    )
+
+
+def approved_external_links(base_url: str) -> tuple[str, ...]:
+    """Return approved destinations with the active Pages URL contract."""
+
+    return (base_url, *APPROVED_EXTERNAL_LINKS[1:])
+
+
 class HrefCollector(HTMLParser):
     """Collect href attributes from the public HTML without reading other files."""
 
@@ -115,19 +132,46 @@ def check() -> None:
     html = (SOURCE / "index.html").read_text(encoding="utf-8")
     if "<title>" not in html or 'name="description"' not in html:
         raise SystemExit("public artifact requires a title and description")
+    seo_markers = required_seo_markers(PAGES_BASE_URL)
+    stale_url_metadata = []
+    index_issues = []
+    if seo_markers[1] not in html:
+        index_issues.append("canonical URL")
+    if seo_markers[2] not in html:
+        index_issues.append("social preview URL")
+    if index_issues:
+        stale_url_metadata.append(f"public/index.html ({', '.join(index_issues)})")
+
+    missing_other_seo = [
+        marker for marker in (*seo_markers[:1], *seo_markers[3:]) if marker not in html
+    ]
+    if missing_other_seo:
+        raise SystemExit(
+            "public artifact is missing required SEO metadata: "
+            f"{', '.join(missing_other_seo)}"
+        )
+    for marker in REQUIRED_ANALYTICS_MARKERS:
+        if marker not in html:
+            raise SystemExit(f"public artifact is missing required GA4 tracking: {marker}")
+    robots = (SOURCE / "robots.txt").read_text(encoding="utf-8")
+    sitemap = (SOURCE / "sitemap.xml").read_text(encoding="utf-8")
+    if f"Sitemap: {PAGES_BASE_URL}sitemap.xml" not in robots:
+        stale_url_metadata.append("public/robots.txt (Sitemap URL)")
+    if f"<loc>{PAGES_BASE_URL}</loc>" not in sitemap:
+        stale_url_metadata.append("public/sitemap.xml (canonical Pages URL)")
+    if stale_url_metadata:
+        raise SystemExit(
+            "public URL metadata is stale for the active Pages contract: "
+            f"{'; '.join(stale_url_metadata)}. Update the listed files to use "
+            f"{PAGES_BASE_URL}"
+        )
     external_links = external_href_targets(html)
-    unapproved_links = sorted(external_links - set(APPROVED_EXTERNAL_LINKS))
+    unapproved_links = sorted(external_links - set(approved_external_links(PAGES_BASE_URL)))
     if unapproved_links:
         raise SystemExit(
             "public artifact contains unapproved external link(s): "
             f"{', '.join(unapproved_links)}"
         )
-    for marker in REQUIRED_SEO_MARKERS:
-        if marker not in html:
-            raise SystemExit(f"public artifact is missing required SEO metadata: {marker}")
-    for marker in REQUIRED_ANALYTICS_MARKERS:
-        if marker not in html:
-            raise SystemExit(f"public artifact is missing required GA4 tracking: {marker}")
     for private_path in (ROOT / "workbench" / "static").rglob("*"):
         if private_path.is_file() and private_path.suffix in {".html", ".js", ".css"}:
             private_text = private_path.read_text(encoding="utf-8")
@@ -146,12 +190,6 @@ def check() -> None:
             continue
         if not (SOURCE / reference).is_file():
             raise SystemExit(f"public artifact reference does not exist: {reference}")
-    robots = (SOURCE / "robots.txt").read_text(encoding="utf-8")
-    sitemap = (SOURCE / "sitemap.xml").read_text(encoding="utf-8")
-    if f"Sitemap: {PAGES_BASE_URL}sitemap.xml" not in robots:
-        raise SystemExit("public robots.txt must point to the canonical sitemap")
-    if f"<loc>{PAGES_BASE_URL}</loc>" not in sitemap:
-        raise SystemExit("public sitemap.xml must include the canonical Pages URL")
     subprocess.run(["node", "--check", str(SOURCE / "site.js")], check=False) if (SOURCE / "site.js").exists() else None
     print(
         "Public artifact check passed: read-only, relative assets, required metadata, "

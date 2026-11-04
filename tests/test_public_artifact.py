@@ -371,6 +371,48 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn("OKHP3/renamed-foundry", message)
         self.assertIn("Update PAGES_REPOSITORY_IDENTITY", message)
 
+    def test_build_reports_all_stale_public_url_files_after_repository_rename(self):
+        checker = load_checker()
+        renamed_identity = "OKHP3/renamed-foundry"
+        renamed_base_url = "https://okhp3.github.io/renamed-foundry/"
+        with tempfile.TemporaryDirectory() as temp_dir:
+            isolated = Path(temp_dir)
+            source = isolated / "public"
+            shutil.copytree(ROOT / "public", source)
+            original_public_files = {
+                name: (source / name).read_bytes()
+                for name in ("index.html", "robots.txt", "sitemap.xml")
+            }
+
+            with (
+                patch.object(checker, "ROOT", isolated),
+                patch.object(checker, "SOURCE", source),
+                patch.object(checker, "OUTPUT", isolated / "dist" / "pages"),
+                patch.object(checker, "PAGES_REPOSITORY_IDENTITY", renamed_identity),
+                patch.object(checker, "PAGES_BASE_URL", renamed_base_url),
+                patch.dict(checker.os.environ, {"PAGES_REPOSITORY": renamed_identity}),
+            ):
+                with self.assertRaises(SystemExit) as raised:
+                    checker.build()
+
+            message = str(raised.exception)
+            self.assertIn("public URL metadata is stale", message)
+            for stale_file, metadata in (
+                ("public/index.html", "canonical URL"),
+                ("public/robots.txt", "Sitemap URL"),
+                ("public/sitemap.xml", "canonical Pages URL"),
+            ):
+                self.assertIn(stale_file, message)
+                self.assertIn(metadata, message)
+            self.assertIn(renamed_base_url, message)
+            self.assertEqual(
+                original_public_files,
+                {
+                    name: (source / name).read_bytes()
+                    for name in original_public_files
+                },
+            )
+
     def test_release_info_hash_is_stable_and_scoped_to_artifact_files(self):
         checker = load_checker()
         with tempfile.TemporaryDirectory() as temp_dir:
