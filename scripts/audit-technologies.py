@@ -96,8 +96,16 @@ def stable_release(watch: dict, body: str) -> str:
         version = data["version"]
     elif kind in {"node-lts", "node-current"}:
         today = datetime.now(timezone.utc).date().isoformat()
-        return newest([r["version"] for r in data if r["date"] <= today and
-                       (kind == "node-current" or r.get("lts"))])
+        versions = [
+            r["version"] for r in data
+            if r["date"] <= today
+            and (kind == "node-current" or r.get("lts"))
+            and not re.fullmatch(
+                r"v?\d+\.\d+\.\d+-[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*",
+                r["version"],
+            )
+        ]
+        return newest(versions)
     else:
         raise ValueError(f"Unsupported source kind: {kind}")
     version_key(version)
