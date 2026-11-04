@@ -31,6 +31,24 @@ PAGES_BASE_URL = PAGES_CONTRACT.PAGES_BASE_URL
 PAGES_REPOSITORY_NAME = PAGES_CONTRACT.PAGES_REPOSITORY_NAME
 
 
+def check_isolated_public_html(html: str) -> None:
+    checker = load_checker()
+    with tempfile.TemporaryDirectory() as temp_dir:
+        isolated = Path(temp_dir)
+        source = isolated / "public"
+        shutil.copytree(ROOT / "public", source)
+        (source / "index.html").write_text(html, encoding="utf-8")
+        with (
+            patch.object(checker, "ROOT", isolated),
+            patch.object(checker, "SOURCE", source),
+            patch.dict(
+                checker.os.environ,
+                {"PAGES_REPOSITORY": checker.PAGES_REPOSITORY_IDENTITY},
+            ),
+        ):
+            checker.check()
+
+
 class PublicArtifactTests(unittest.TestCase):
     def test_ga4_tracking_is_limited_to_public_pages(self):
         public_html = (ROOT / "public/index.html").read_text(encoding="utf-8")
@@ -62,6 +80,26 @@ class PublicArtifactTests(unittest.TestCase):
                 with patch.object(checker, "ROOT", isolated), patch.object(checker, "SOURCE", isolated / "public"):
                     with self.assertRaisesRegex(SystemExit, "private workbench must not include"):
                         checker.check()
+
+    def test_public_check_accepts_the_approved_external_link_inventory(self):
+        checker = load_checker()
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+
+        self.assertEqual(
+            checker.external_href_targets(html),
+            set(checker.APPROVED_EXTERNAL_LINKS),
+        )
+        check_isolated_public_html(html)
+
+    def test_public_check_rejects_an_unapproved_external_link(self):
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        html += '\n<a href="https://unapproved.example/path">Unapproved</a>\n'
+
+        with self.assertRaises(SystemExit) as raised:
+            check_isolated_public_html(html)
+
+        self.assertIn("unapproved external link(s)", str(raised.exception))
+        self.assertIn("https://unapproved.example/path", str(raised.exception))
 
     def test_public_artifact_builds_with_relative_assets_and_no_private_runtime(self):
         result = subprocess.run(
@@ -117,7 +155,7 @@ class PublicArtifactTests(unittest.TestCase):
 
     def test_public_artifact_is_served_as_a_pages_style_subpath(self):
         with tempfile.TemporaryDirectory() as temp_dir:
-            pages_root = Path(temp_dir) / PAGES_REPOSITORY_NAME
+            pages_root = Path(temp_dir) / PAGES_REPOSITORY_NAME.lower()
             subprocess.run([sys.executable, str(SCRIPT), "--build"], cwd=ROOT, check=True)
             shutil.copytree(ROOT / "dist/pages", pages_root)
             probe = socket.socket()
@@ -198,7 +236,7 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn("deployed repository subpath is wrong", wrong_path.stderr)
 
         with tempfile.TemporaryDirectory() as temp_dir:
-            pages_root = Path(temp_dir) / PAGES_REPOSITORY_NAME
+            pages_root = Path(temp_dir) / PAGES_REPOSITORY_NAME.lower()
             pages_root.mkdir()
             html = (ROOT / "public/index.html").read_text(encoding="utf-8")
             pages_root.joinpath("index.html").write_text(

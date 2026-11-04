@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 import time
+from html.parser import HTMLParser
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
@@ -65,7 +66,8 @@ LIVE_REQUIRED_MARKERS = REQUIRED_SEO_MARKERS + REQUIRED_ANALYTICS_MARKERS + (
     "no draft or private database is loaded here.",
     "Read-only orientation",
 )
-LIVE_EXTERNAL_LINKS = (
+APPROVED_EXTERNAL_LINKS = (
+    PAGES_BASE_URL,
     "https://askjamie.bot/",
     "https://github.com/OKHP3/AskJamie",
     "https://github.com/OKHP3/AskJamie-FoundRy",
@@ -74,6 +76,31 @@ LIVE_EXTERNAL_LINKS = (
     "https://github.com/OKHP3/Glee-fullyTools-FoundRy",
     "https://okhp3.github.io/skillz/",
 )
+
+
+class HrefCollector(HTMLParser):
+    """Collect href attributes from the public HTML without reading other files."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.hrefs: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        self.hrefs.extend(
+            value for name, value in attrs if name.lower() == "href" and value is not None
+        )
+
+
+def external_href_targets(html: str) -> set[str]:
+    """Return absolute or protocol-relative destinations used by public hrefs."""
+
+    collector = HrefCollector()
+    collector.feed(html)
+    return {
+        href
+        for href in collector.hrefs
+        if urlparse(href).scheme or href.startswith("//")
+    }
 
 
 def check() -> None:
@@ -86,6 +113,13 @@ def check() -> None:
     html = (SOURCE / "index.html").read_text(encoding="utf-8")
     if "<title>" not in html or 'name="description"' not in html:
         raise SystemExit("public artifact requires a title and description")
+    external_links = external_href_targets(html)
+    unapproved_links = sorted(external_links - set(APPROVED_EXTERNAL_LINKS))
+    if unapproved_links:
+        raise SystemExit(
+            "public artifact contains unapproved external link(s): "
+            f"{', '.join(unapproved_links)}"
+        )
     for marker in REQUIRED_SEO_MARKERS:
         if marker not in html:
             raise SystemExit(f"public artifact is missing required SEO metadata: {marker}")
@@ -212,7 +246,7 @@ def check_live(page_url: str) -> None:
             f"public marker(s): {', '.join(missing)}"
         )
     missing_links = [
-        link for link in LIVE_EXTERNAL_LINKS if f'href="{link}"' not in html
+        link for link in APPROVED_EXTERNAL_LINKS if link not in external_href_targets(html)
     ]
     if missing_links:
         raise SystemExit(
