@@ -9,7 +9,7 @@
 
 ```
 assets/
-└── brand/          AskJamie™ brand standards and identity assets
+├── brand/          AskJamie™ brand standards and identity assets
 └── gpt-icons/      Custom GPT icon guidance and family deployment rules
 ```
 
