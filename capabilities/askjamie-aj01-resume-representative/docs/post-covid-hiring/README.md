@@ -1,6 +1,6 @@
 # Post-COVID hiring psychology and sociology — AJ01 bounded closeout
 
-Status: **BLOCKED — NOT READY TO ARCHIVE**. Captured: 2026-11-05. Source record: **row 27, “KNOW: Hybrid post-COVID hiring”** in the private AskJamie Foundry 59-thread extraction register. Coordination: [issue #109](https://github.com/OKHP3/askjamie-foundry/issues/109). Repository branch: `chatgpt/aj01-post-covid-hiring-row27`.
+Status: **BLOCKED — NOT READY TO ARCHIVE**. Captured: 2026-11-05. Source record: **row 27, “KNOW: Hybrid post-COVID hiring”** in the private AskJamie Foundry 59-thread extraction register. Coordination: [issue #109](https://github.com/OKHP3/askjamie-foundry/issues/109); [draft PR #110](https://github.com/OKHP3/askjamie-foundry/pull/110) for maintainer review. Repository branch: `chatgpt/aj01-post-covid-hiring-row27`.
 
 This directory contains work **specific to post-COVID hiring psychology and sociology**. It does not replace the general U.S. hiring documents reference in [issue #89 / PR #104](https://github.com/OKHP3/askjamie-foundry/pull/104), the separate AJ01 personal linguistic-profile renewal toolkit, or the generic research template in PR #81. Those active workstreams retain their owners. The preserved origin files were not edited.
 
