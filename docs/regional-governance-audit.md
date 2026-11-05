@@ -1,6 +1,8 @@
 # AskJamie regional governance audit
 
-Status: design ready, owner decision recorded as defer, adoption deferred.
+Status: local boundaries revalidated; the exact read-only review adaptation is
+approved with limits for the pinned mentor revision below; broader mentor
+governance/graduation adoption remains deferred.
 
 This audit is the gate for adapting broader OverKill Hill governance or
 graduation surfaces into AskJamie FoundRy. It does not copy a mentor feature,
@@ -46,22 +48,43 @@ record.
 
 ## Named mentor-surface review
 
-The first reviewed surface is the OverKill public-graduation audit. This is a
-review of one pinned source revision, not a claim about every current mentor
-workflow or permission.
+The reviewed surface is the OverKill public-graduation audit. This is a review
+of one pinned source revision, not a claim about every current mentor workflow
+or permission.
 
 | Field | Evidence |
 |---|---|
-| Repository revision | `OKHP3/OverKill-Hill-FoundRy@8de1eb212d8db193fd22eb85bf0843f366a0c1a7` |
-| Primary source URL | [`scripts/public-graduation-audit.py`](https://github.com/OKHP3/OverKill-Hill-FoundRy/blob/8de1eb212d8db193fd22eb85bf0843f366a0c1a7/scripts/public-graduation-audit.py) |
+| Repository revision | `OKHP3/OverKill-Hill-FoundRy@619e942d69cfe535695e609bbb71a50e3bc14c49` |
+| Primary source URL | [`scripts/public-graduation-audit.py`](https://github.com/OKHP3/OverKill-Hill-FoundRy/blob/619e942d69cfe535695e609bbb71a50e3bc14c49/scripts/public-graduation-audit.py) |
 | Path | `scripts/public-graduation-audit.py` |
-| Observation | The read-only dry-run checks release-package completeness, restricted references, record consistency, and manual disabled deployment; it does not grant publication approval or change repository visibility. |
-| Reviewed | 2026-09-17 |
+| Observation | Static review confirms a read-only dry-run that checks release-package completeness, private markers and restricted references, release-record consistency and package hashes, and manual disabled deployment. This revision also recognizes lowercase `attribution.md` and names the normalized text suffix set used for package hashing. It does not grant publication approval or change repository visibility. |
+| Reviewed | 2026-11-04 |
 | Reviewer | Replit Agent |
 
-The observation is `CONFIRMED` for this exact revision and path. It does not
-confirm that a later mentor revision behaves the same way, that the target
-package is safe for AskJamie, or that any publication approval exists.
+The observation is `CONFIRMED` by static inspection for this exact revision and
+path. The reviewed script does not write candidate files, invoke deployment, or
+change repository visibility. Its private-marker scan covers a limited set of
+text file suffixes and strings; its diagnostics may include candidate paths or
+record values. It is not suitable for processing confidential candidate
+content. The review does not confirm that a later mentor revision behaves the
+same way, that the target package is safe for AskJamie, or that any publication
+approval exists.
+
+The previously reviewed revision was
+`8de1eb212d8db193fd22eb85bf0843f366a0c1a7`, reviewed 2026-09-17. The current
+revision differs in the required attribution filename casing and the factoring
+of the normalized text suffix list used for package hashes. The release checks
+remain read-only and deployment remains a separate, disabled action.
+
+### Comparison with the AskJamie boundary
+
+The mentor script reads a supplied release-candidate directory; it does not
+connect to AskJamie’s loopback workbench, registry, or private-export flow. Its
+read-only behavior therefore does not establish or replace the local controls
+for loopback access, export privacy, registry immutability, or permanent-private
+client records. The approved adaptation uses this reviewed source only as
+evidence in a private local review. It does not run the mentor script against
+AskJamie data, copy its graduation surface, or authorize hosting or publication.
 
 ## Exact AskJamie adaptation
 
@@ -107,9 +130,9 @@ evidence:
     next_check: ...
 mentor_review:
   repository: OKHP3/OverKill-Hill-FoundRy
-  revision: 8de1eb212d8db193fd22eb85bf0843f366a0c1a7
+  revision: 619e942d69cfe535695e609bbb71a50e3bc14c49
   path: scripts/public-graduation-audit.py
-  reviewed_at: "2026-09-17"
+  reviewed_at: "2026-11-04"
   reviewer: Replit Agent
 registry:
   path: registry/index.yaml
@@ -117,13 +140,17 @@ registry:
   unchanged_during_audit: true
   canonical_validator_errors: []
 protected_client_records:
-  count: 2
+  count: 5
   violations: []
 owner_approval:
   required: true
-  status: DEFERRED
-  decision: defer
-  decided_at: "2026-09-17"
+  status: APPROVED
+  decision: approve
+  decided_at: "2026-11-05"
+  mentor_review:
+    repository: OKHP3/OverKill-Hill-FoundRy
+    revision: 619e942d69cfe535695e609bbb71a50e3bc14c49
+    path: scripts/public-graduation-audit.py
 ```
 
 The report is evidence about the audit run. It is not itself evidence that the
@@ -209,18 +236,32 @@ decision: defer
 owner: OKHP3
 decided_at: "YYYY-MM-DD"
 registry_sha256: "<digest from the reviewed report>"
+mentor_review:
+  repository: OKHP3/OverKill-Hill-FoundRy
+  revision: "<pinned commit>"
+  path: scripts/public-graduation-audit.py
 publication_decision: not-authorized
 hosting_decision: not-authorized
 ```
 
 `decision` must be `approve`, `defer`, or `reject`. The record applies only to
 the named adaptation, scope, registry digest, publication boundary, and hosting
-boundary. It cannot be reused for a different registry state, a publication
-release, or a hosting decision. An approval also does not authorize hosted
-authoring, model calls, child-repository creation, or public graduation.
+boundary, and pinned mentor repository revision and source path. The audit
+rejects the record if its `mentor_review.repository`, `mentor_review.revision`,
+or `mentor_review.path` differs from the current pinned review in
+`scripts/regional-governance-audit.py`; a changed revision or path therefore
+requires a new dated decision. It cannot be reused for a different registry
+state, mentor source, a publication release, or a hosting decision. An approval
+also does not authorize hosted authoring, model calls, child-repository
+creation, or public graduation.
 
-The current record is `defer` because the regional adaptation remains a
-proposal. Run the audit with the record to verify the exact binding:
+The original 2026-09-17 decision was `defer`. The 2026-11-04 boundary review
+informed the 2026-11-05 owner approval of the read-only evidence-review method bound to
+mentor revision `619e942d69cfe535695e609bbb71a50e3bc14c49` and source path
+`scripts/public-graduation-audit.py`; the earlier approval pin is superseded.
+The renewed approval does not approve implementation of broader governance or
+graduation surfaces. Run the audit with the current record to verify the exact
+binding:
 
 ```bash
 python3 scripts/regional-governance-audit.py \
@@ -228,8 +269,9 @@ python3 scripts/regional-governance-audit.py \
   --require-approval
 ```
 
-The `--require-approval` flag means a matching record exists. It does not turn
-the deferred adaptation into an approved publication or hosting decision.
+The `--require-approval` flag means a matching record exists. It does not
+authorize publication or hosting, or change the deferred status of broader
+governance/graduation adoption.
 
 ## Decision gate
 
@@ -240,21 +282,51 @@ the deferred adaptation into an approved publication or hosting decision.
 | All required claims are `CONFIRMED`, protections pass, digest matches, and an approving decision matches the exact scope and boundaries | Eligible for a separate implementation decision |
 | Any public graduation or client visibility change is proposed | Stop and open a separate owner-approved graduation review |
 
-The normal result for this repository is currently `PASS` for local controls and
-`DEFERRED` for broader mentor governance adoption. The owner decision is
-recorded as `defer`, so no broader mentor governance or graduation surface is
-adopted.
+## Regional boundary review and new decision
+
+Reviewed on **2026-11-04** against registry SHA-256
+`7d4198e2abd6c88348164927aa906c11502cfbc3048243f33f46e7baa6e14cd2`. This is a
+new review; the 2026-09-17 defer record and its digest were not used as safety
+evidence.
+
+| Boundary | Direct evidence reviewed | Result and limit |
+|---|---|---|
+| Loopback workbench | `workbench/server.py:create_server` binds to `127.0.0.1`; request handling checks local Host and write requests require matching Origin and request marker. `tests/test_boundary_acceptance.py` passed 4 tests. | **CONFIRMED** for the implementation and focused tests. No hosted listener was created or tested. |
+| Private export | `workbench/server.py:_project_get` serves exports through the local API. `workbench/service.py:export_project` creates a ZIP in memory; generated manifests mark packages private, disable public graduation, and keep registry proposals pending/unapplied. `tests/test_export_acceptance.py` passed 2 tests; the protected update/export test also passed. | **CONFIRMED** for generated package controls. A downloaded ZIP can contain source material, and later storage or sharing is outside the workbench's control. |
+| Immutable registry | `workbench/service.py:read_registry` reads canonical YAML. `scripts/regional-governance-audit.py` hashes the registry before and after checks; `scripts/check-registry.py` validates without writing. Manifest, registry, registry-audit, and regional-audit commands passed against the current digest. The regional audit reported unchanged registry, no validator errors, and zero protected-record violations. | **CONFIRMED** for this review run and current source. This does not prevent a future authorized repository edit. |
+| Permanent-private client controls | The protected-record sweep found 5 protected records and zero violations. `workbench/model.py` enforces persistent locks; exports preserve private visibility, disabled graduation, and permanent-private/BFS fields. Boundary and export tests passed. | **CONFIRMED** for current registry data and tested update/export paths. Client-specific content was not copied into this review record. |
+
+The evidence, outcome, and safety/portability reviews were run independently
+against local files, followed by a negotiator adjudication after the local tests
+and validators completed. The initial reviewers differed on whether the narrow
+method could be approved. The decisive evidence was the fresh passing boundary,
+export, registry, and audit checks. These were analytical internal reviews using
+the same repository source set, not external or independent source verification.
+
+The review **approves only** `read-only-regional-mentor-governance-audit` as a
+private, local, read-only evidence-review method. It does not authorize copying
+or implementing broader mentor governance or graduation surfaces. Mentor
+behavior remains confirmed only for the pinned revision
+`619e942d69cfe535695e609bbb71a50e3bc14c49`, path
+`scripts/public-graduation-audit.py`, statically reviewed 2026-11-04 from the
+exact fetched commit. The mentor audit was not executed against AskJamie or
+private candidate content. Reports must not include client names or identifiers.
+Publication and hosting remain `not-authorized`.
+
+The audit result remains `PASS` for local controls and `DEFERRED` for broader
+mentor governance/graduation adoption. A later registry digest change requires a
+new decision; this approval cannot be reused for publication, hosting, or a
+different adaptation.
 
 ## Remaining unknowns
 
 - Which exact OverKill governance and graduation surfaces should be compared
   next; this audit covers only `scripts/public-graduation-audit.py`.
 - Whether the reviewed behavior remains present in a later mentor revision.
-- Which parts are useful to AskJamie without changing its Python loopback,
-  private-export, and permanent-private boundaries.
-- Whether the owner should revisit the deferred adaptation after the regional
-  boundary review is complete.
-
-The next check is a regional boundary review against the named adaptation. Until
-that review is complete, keep the parity decision at `defer` and do not reuse
-the decision record for publication or hosting.
+- Whether the mentor audit's limited marker scan is sufficient for any specific
+  public release candidate; this review does not assess any candidate's content.
+- Where a downloaded private export is later stored or shared; the workbench
+  cannot control ZIP custody after download.
+- Whether any broader mentor governance or graduation surface is useful to
+  AskJamie without changing its Python loopback, private-export, and
+  permanent-private boundaries.
