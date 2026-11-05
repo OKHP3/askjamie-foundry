@@ -1,92 +1,51 @@
-# docs/
+# Documentation
 
-**Role:** Authoritative governance and design documentation for the AskJamie FoundRy relay.  
-**Owner:** OKHP3/AskJamie-FoundRy  
-**Rule:** Child repos may reference these documents but should not duplicate them.
+Start with the current contract for your task. Dated migration and research
+records preserve evidence; they do not replace current operating rules.
 
----
+## Start here
 
-## Contents
+| Task | Authoritative entry point |
+| --- | --- |
+| Understand the product direction | [Portable skills first](skill-first-foundry.md) |
+| Run, author in or export from the local application | [Workbench guide](workbench.md) |
+| Change repository source or claim work | [AGENTS.md](../AGENTS.md) and [collaboration protocol](agent-collaboration.md) |
+| Continue AJ01/AJ02 migration and transformation | [Integration routes and owners](migrations/thread-extraction-routing-2026-11-05.md) |
+| Check migration obligations and acceptance evidence | [Existing migration closeout](migrations/aj01-aj02-2026-10-19-closeout/README.md) and [ledger](migrations/aj01-aj02-2026-10-19-closeout/ledger.json) |
+| Check capability identity, storage and lineage | [Registry](../registry/README.md) and [catalog](../registry/index.yaml) |
+| Understand public presentation and release boundaries | [Presentation assets](presentation-assets.md) and [hosted-authoring boundary](hosted-authoring-boundary.md) |
 
-| File / Folder | Purpose |
-|---|---|
-| [`agent-collaboration.md`](agent-collaboration.md) | Agent ownership, cost routing, and handoff protocol |
-| [`workbench.md`](workbench.md) | Local application operating guide |
-| [`hosted-authoring-boundary.md`](hosted-authoring-boundary.md) | Design-only boundary and proof plan for any future hosted authoring |
-| [`research/2026-09-07-universe/universe-research.md`](research/2026-09-07-universe/universe-research.md) | Seven-element research and evidence gaps |
-| [`relay-design.md`](relay-design.md) | Architecture and design rationale for this relay layer |
-| [`governance.md`](governance.md) | Full governance reference — roles, rules, and obligations |
-| [`regional-governance-audit.md`](regional-governance-audit.md) | Evidence tiers and owner-approved audit gate for adapting broader mentor governance |
-| [`naming-conventions.md`](naming-conventions.md) | Canonical naming patterns for repos, files, and folders |
-| [`migration-guide.md`](migration-guide.md) | How to bring legacy or pre-standard repos up to spec |
-| [`ecosystem-map.md`](ecosystem-map.md) | Visual and textual map of the OKHP3 / AskJamie universe |
-| [`askjamie-repository-inventory.md`](askjamie-repository-inventory.md) | Scoped crosswalk of AskJamie child repositories, local clones, and remote-name reconciliation |
-| [`github-workflows/`](github-workflows/README.md) | Staged GitHub Actions workflows — pending activation |
+## Capability integration
 
----
+- [AJ01 intake](../capabilities/askjamie-aj01-resume-representative/docs/thread-extraction-intake-2026-11-05.md): candidate representation, evidence, resumes, letters and interviews.
+- [AJ02 intake](../capabilities/askjamie-aj02-professional-portfolio/docs/thread-extraction-intake-2026-11-05.md): supplier/business representation, offers, proof and proposals.
+- [Shared routing and owner map](migrations/thread-extraction-routing-2026-11-05.md): common methods, existing issue/PR homes and handoff rules.
 
-## Document Summaries
+Capability-specific instructions, build work, packaging, marketing and commercial
+models stay with that capability. Shared records link to them instead of copying
+their contents. Imported source is not accepted replacement behavior.
 
-### `relay-design.md`
+## Supporting references
 
-Explains the relay architecture: how this FoundRy sits between the parent
-universe (`OKHP3/OverKill-Hill`) and the child capability repos, what it owns,
-and the design principles (lineage-first, durable assets over ephemeral surfaces,
-registry as source of truth).
+| Reference | Role |
+| --- | --- |
+| [Governance](governance.md) | Authority, visibility, schema responsibilities and graduation |
+| [Naming conventions](naming-conventions.md) | Repository and filename conventions |
+| [Migration guide](migration-guide.md) | Legacy-content procedure; the skill-first contract controls new conversion work |
+| [Relay design](relay-design.md) | Foundry architecture and lineage rationale |
+| [Regional governance audit](regional-governance-audit.md) | Evidence tiers and approved adaptation boundary |
+| [Ecosystem map](ecosystem-map.md) | Parent, peer, capability and deployment-surface relationships |
+| [Repository inventory](askjamie-repository-inventory.md) | Scoped repository and clone crosswalk |
+| [Technology inventory](technology-inventory.md) | Runtime, dependency and update policy |
+| [Universe research](research/2026-09-07-universe/universe-research.md) | Historical research and evidence gaps |
+| [Workflow references](github-workflows/README.md) | Historical/staged examples; active workflows live in [.github/workflows](../.github/workflows/) |
+| [Schemas](../schemas/README.md) | Manifest and registry contracts |
+| [Template guide](../_template/ABOUT.md) | Governed capability scaffold |
 
-**Read this first** if you are new to the AskJamie FoundRy.
+## Keeping the index useful
 
-### `governance.md`
-
-The full governance reference. Covers authority chain, contributor obligations,
-schema ownership, visibility rules, and upgrade paths when the parent FoundRy
-publishes new standards.
-
-### `naming-conventions.md`
-
-Canonical patterns for:
-- Core capability repos (`askjamie-aj##-[slug]`)
-- BrandGuard Sentinel repos (`askjamie-brg##-[slug]`)
-- Client overlay repos (`[client-org]-askjamie-[code]-[slug]`)
-- File and folder names within repos (ASCII only, kebab-case)
-
-### `migration-guide.md`
-
-Step-by-step guide for:
-- Graduating archived content into a new standalone repo
-- Bringing a legacy repo up to the current standard
-- Backfilling a `manifest.yaml` into an existing repo
-
-### `ecosystem-map.md`
-
-A structured map of the entire OKHP3 / AskJamie universe: parent repos, sibling
-FoundRies, public portfolio, deployment surfaces, and known child repos.
-
-### `askjamie-repository-inventory.md`
-
-Read-only snapshot of the scoped AskJamie child repositories and adjacent local
-clones. Records canonical remote names, local origin naming, clone state, and
-the boundary for future cross-repository interrogation or change work.
-
-### `github-workflows/`
-
-Staged CI/CD workflow YAML files pending activation in `.github/workflows/`.
-See [`github-workflows/README.md`](github-workflows/README.md) for activation
-instructions (requires a GitHub token with `workflow` scope).
-
----
-
-## Updating These Documents
-
-1. Edit the relevant `.md` file directly.
-2. If the change affects required fields or schemas, also update `schemas/`.
-3. If the change affects the `_template/`, update the scaffold.
-4. Record the change in the root `CHANGELOG.md`.
-
----
-
-## Related
-
-- [`AGENTS.md`](../AGENTS.md) — authority chain and agent behavior rules
-- [`schemas/`](../schemas/README.md) — YAML schema definitions
-- [`_template/`](../_template/ABOUT.md) — child repo scaffold
+Update the authoritative document in place, then link it here. Keep one maintained
+task summary in the existing issue or PR, following the collaboration protocol.
+Do not create another status ledger or copy historical evidence into a new
+"current" folder. Schema, registry or template changes retain their existing
+validation and changelog obligations.

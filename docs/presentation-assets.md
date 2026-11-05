@@ -75,6 +75,13 @@ Visitor disclosure and tracking-choice behavior remain a separate owner decision
 
 ## Verification and release
 
+The release contract's source of truth is
+`PAGES_REPOSITORY_IDENTITY` in `scripts/build-public-artifact.py`. The verifier
+derives the project Pages path and canonical host from that repository identity.
+The workflow supplies its actual repository as `PAGES_REPOSITORY`; if the
+repository is renamed, the release check stops with instructions to update the
+contract and public canonical URLs.
+
 Run the public build and test suite from an environment with the pinned
 requirements installed:
 
@@ -83,15 +90,14 @@ python scripts/build-public-artifact.py --build
 python -m unittest discover -s tests -v
 ```
 
-Preview the generated artifact under `/askjamie-foundry/`. Check the README at
-desktop and narrow widths, image legibility, icon loading, relative manifest
-paths, and the canonical/social-image URLs. Keep public assets self-contained.
+Preview the generated artifact under the repository-derived project Pages path.
+Check the README at desktop and narrow widths, image legibility, icon loading,
+relative manifest paths, and the canonical/social-image URLs. Keep public assets
+self-contained.
 
-After an authorized manual Pages release:
-
-```bash
-python scripts/build-public-artifact.py --check-live https://okhp3.github.io/askjamie-foundry/
-```
+After an authorized manual Pages release, pass the deployment URL reported by
+the workflow to `--check-live`; do not maintain a separate expected path in the
+release command.
 
 Also inspect the deployed HTML and fetch the linked image, icons, and manifest.
 The live smoke test verifies the page boundary and repository path; it does not
