@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-05: AJ01 repository-strategy thread preservation
+
+- Document the GitHub/local-clone/Notion/ChatGPT/website/YouTube/Ko-fi hybrid
+  capability flywheel as a design pattern, aligned to portable skills first.
+- Preserve the distinct historical AJ01 repository-creation thread's ledger,
+  original drafting outcomes, superseded design decisions and archive hold.
+  Keep active migration, source assets and privacy-sensitive material untouched.
+- Track verification and owner-controlled integration under FoundRy issue #84.
+  No new repository, ChatGPT migration, hosted adapter or site release is claimed.
+
 ## 2026-10-19: Replit consolidation execution
 
 - Synchronize the parent Replit workspace with the merged source import and
