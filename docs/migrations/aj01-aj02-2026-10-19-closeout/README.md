@@ -1,5 +1,34 @@
 # AJ01/AJ02 migration: blocked closeout review
 
+## Current continuation, 2026-11-04
+
+**BLOCKED - NOT READY TO ARCHIVE.** [PR70](https://github.com/OKHP3/askjamie-foundry/pull/70) merged at `64abb112fa762773385ff17c0ef647c9f6c94f75`. The earlier closeout below is historical. Use the November 4 revalidation in [ledger.json](ledger.json) and [evidence.json](evidence.json), plus the [maintained receipt](https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589), for current state. The stable record key remains `issue-58-aj01-aj02-migration`; the actual conversation ID/title/URL remain unknown.
+
+The original purpose still controls: consolidate AJ01 and AJ02 as FoundRy children, preserve source and catalog the deployed GPTs, then make explicit decisions before any cutover or retirement. The existing Windows checkout initially was clean on `130d55b42b1e8212dac8ab912fbe5375f1c17a88`, matching independently queried GitHub main, with one worktree and two owner stashes. No other checkout or stash changed. Both pinned snapshots passed fresh integrity and ZIP restore checks: 873 files / 3,893,660 bytes. Manifest and registry validation passed.
+
+| Ledger | Status | Current evidence and limit |
+| --- | --- | --- |
+| O03 | blocked | PR76 preserves the October 29 AJ01 v3 instruction field, metadata, and a reported live baseline of 13 conversations/130 prompts with scoring gaps. Original uploaded payloads and complete revision coverage are not proven. The privacy correction is already owned in PR77. |
+| O04 | blocked | PR74 records a privately retained displayed instruction field and limited preview observations. Original image bytes, complete revision coverage and deployed behavior equivalence remain unverified. |
+| O07 | blocked | Child Repl unrecovered local/platform-managed state is explicitly retired by the owner decision recorded in PR73, with loss accepted. Later tracked comparison is recorded in PR71. This session could not inspect unique Windows sibling state; the accepted loss does not apply to it. |
+| O08 | blocked | PR78 preserves reported Replit-only history and restores snapshot paths, with five checks on its exact draft head. Its recorded review-branch parity is not three-way canonical main parity. Task54 cancellation is recorded; PR78 is already owned and carries a governance decision provenance hold. Live checkout, active workers, selected mode and runtime were not reverified. |
+| O10 | uncertain | PR72 records AJ02 instruction/repository ownership and bounded candidate authorization. That does not resolve AJ01 reuse rights or attachment/third-party rights, source currency or readiness for a broader publication. |
+| O11 | unfinished | The bounded AJ01/AJ02 candidate work is now concrete in draft PR72. Four manually supplied AJ02 skill-text samples are author-graded development results. The November 4 Free Mode record reports native discovery/invocation unavailable. Do not infer a merged candidate, model equivalence, approved host or cutover. |
+| O12 | blocked | Both child Repls are owner-reported deleted with scoped accepted loss in PR73. No retirement decision verified for original GitHub repos, GPTs, website paths or Notion anchors. Do not repeat child deletion or infer broad consent. |
+| O13 | uncertain | All five associated pasted Markdown files are now readable. The three older copies render identical closeout directions; the two newer ones are consolidated closeout directions, not GPT exports or a source transcript. Exact conversation title, URL/ID and full raw pre-compaction coverage remain unavailable. |
+
+Relevant records: [tracked source comparison](../aj01-aj02-source-reconciliation.md), [child Repl disposition](../aj01-aj02-disposition-2026-10-30.md), [source capture continuation](../aj01-aj02-source-capture-continuation-2026-10-30.md), [candidate PR72](https://github.com/OKHP3/askjamie-foundry/pull/72), [AJ01 capture PR76](https://github.com/OKHP3/askjamie-foundry/pull/76), [privacy PR77](https://github.com/OKHP3/askjamie-foundry/pull/77), and [parent Replit PR78](https://github.com/OKHP3/askjamie-foundry/pull/78). Existing owners retain those units; this closeout does not merge them or mark the receiving work complete.
+
+The linked Replit project was resolved, and its connected deployment check returned no deployment. The connector does not expose current mode, Git checkout, active workers or runtime health. No Replit Agent was dispatched. Task54 cancellation is recorded; task55 was last known pending and was not reverified. On PR78 the same two source tree IDs were independently confirmed and all five checks passed at `88c2bcb43ef2508db70f758c96ed61a618569792`. The branch's reported Replit parity is not main parity. Before integration, the assigned owner must resolve the documented change from defer to approval of a local regional-governance review. No release, hosting approval or native skill acceptance follows from the checks.
+
+All five pasted Markdown inputs were read fully as rendered text. They preserve closeout directions, not a transcript or GPT export. The private provenance receipt and original input files remain in the existing owner evidence home; no private identifiers or material were copied here. Source records and prior checks remain linked below instead of being duplicated.
+
+Resume with the missing GPT asset/revision evidence or explicit exceptions, this exact conversation's URL/title and any missing material transcript. Resolve the Windows sibling unique-state hold through an authorized inspection or a scoped owner disposition. Keep the parent Replit integration and privacy correction with their recorded owners. Do not treat inherited reports, a passing CI run or an accepted child-state loss as proof of unrelated completion. No archive was attempted.
+
+---
+
+## Historical review, 2026-10-27
+
 Reviewed 2026-10-27. **BLOCKED - NOT READY TO ARCHIVE.**
 
 Purpose: preserve and consolidate Resume Representative and Professional Portfolio as FoundRy children, catalog their actual deployed configuration/behavior, validate the migration and consider explicitly authorized decommissioning. Existing dossiers propose portable skills and host acceptance as a dependent stage; accessible primary history does not establish an explicit commitment to that particular product/host implementation. The source-consolidation unit is complete. The full migration and exact-thread closeout are not complete.
