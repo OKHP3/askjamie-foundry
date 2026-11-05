@@ -47,11 +47,9 @@ Source keys refer to the visible conversation sequence; “existing project” m
 
 ## Historical content preserved and corrections
 
-**Original short-form repo prompt:** "Create a GitHub repo named AskJamie-GPT-AJ01 for GPT-AJ01: AskJamie Resume Representative. Initialize README, LICENSE and .gitignore; organize prompts, knowledge/RAG, playbooks, tests and release artifacts. Record links, provenance, privacy rules and versioned exports." This line is a compact **paraphrase** of the earlier 500-character deliverable, not a fresh authorization to create a repo.
+**Original short-form deliverables:** [historical-drafts.md](historical-drafts.md) preserves the original **367-character** repository creation prompt, **280-character** repository description and complete proposed README text. The preserved version is explicitly historical and not the current product configuration or authority to create a duplicate repository.
 
-**Original description intent:** a versioned GPT prompt-and-knowledge blueprint for tailoring career narratives, résumé bullets, cover letters, interview preparation and recruiter-facing communication using evidence supplied by the candidate. The earlier 350-character draft was delivered in the chat and is not represented here as a verified GitHub repository description.
-
-**README message:** résumé representation is grounded in actual achievements, privacy, candidate agency and clear tone. The user's original detailed README draft suggested job-specific GPT clones and uploaded knowledge packs; those are now historical strategies requiring platform and sharing review. Current [AJ01 README](../../README.md) and [conversion dossier](../conversion.md) supersede it operationally.
+**README message:** résumé representation is grounded in actual achievements, privacy, candidate agency and clear tone. The original draft suggested job-specific GPT clones and attached knowledge packs; these are historical options requiring platform and sharing review. The current [AJ01 README](../../README.md) and [conversion dossier](../conversion.md) supersede the draft operationally.
 
 **Correction to an earlier assistant assertion:** the user's linked Notion page was accessible through the authorized Notion connection on 2026-11-05; a prior web-only 404 was not evidence the page was absent. The Notion page's older “GPT not captured” wording is historical: a later merged [PR #76](https://github.com/OKHP3/askjamie-foundry/pull/76) records an October 29 v3 instruction and config capture, with specific missing assets and validation limits.
 
@@ -62,6 +60,7 @@ No video was published by this thread. No Ko-fi payment or product was configure
 | Artifact or reference | Exact location and custody | Status |
 | --- | --- | --- |
 | Cross-surface strategy | `docs/hybrid-capability-flywheel.md`, this repository | Proposed on scoped PR |
+| Preserved original short prompt, description, README | [historical-drafts.md](historical-drafts.md) in this closeout directory | Recorded as superseded source draft |
 | Thread-specific ledger and continuation | This `README.md` under `capabilities/askjamie-aj01-resume-representative/docs/thread-closeout-github-repo-creation-2025-12-15/` | Proposed on scoped PR |
 | Coordination claim, checks and integration receipt | [Issue #84](https://github.com/OKHP3/askjamie-foundry/issues/84) | Created; updates required |
 | Existing actual AJ01 source and migration | [Canonical capability](../../README.md), [source index](../../origin/source-index.json), [migration issue #58](https://github.com/OKHP3/askjamie-foundry/issues/58) | Preserved by other migration work |
