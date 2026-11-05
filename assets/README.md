@@ -10,46 +10,30 @@
 ```
 assets/
 └── brand/          AskJamie™ brand standards and identity assets
+└── gpt-icons/      Custom GPT icon guidance and family deployment rules
 ```
-
----
 
 ## brand/
 
 **→ See [`brand/README.md`](brand/README.md) for full details.**
 
-Contains the canonical AskJamie™ Brand Standards documents — the authoritative
-reference for logo usage, typography, color palette, tone of voice, and identity
-guidelines across all deployment surfaces.
+Contains the canonical AskJamie™ Brand Standards documents and identity assets.
 
-| File | Description |
-|---|---|
-| [`brand/askjamie-brand-standards.pdf`](brand/askjamie-brand-standards.pdf) | Brand Standards (PDF, print-ready) |
-| [`brand/askjamie-brand-standards.docx`](brand/askjamie-brand-standards.docx) | Brand Standards (DOCX, editable source) |
+## gpt-icons/
 
----
+**→ See [`gpt-icons/README.md`](gpt-icons/README.md) for the Custom GPT icon system.**
+
+This is an additive deployment-surface guide for AskJamie-centric Custom GPTs. It does not replace the canonical Brand Standards or the public website presentation assets. The owner-reviewed direction is the established Jamie avatar inside the retro phone, with no wordmark in the icon.
 
 ## Usage Rules
 
-- **Reference, don't copy.** Child repos should reference assets from this
-  location rather than duplicating them.
-- **Version on change.** If a brand standards file is updated, append a version
-  suffix to the filename (e.g., `askjamie-brand-standards-v2.pdf`) and keep the
-  previous version for a grace period.
-- **No client content here.** Assets specific to a BrandGuard Sentinel or
-  client overlay belong in that capability's own `assets/` directory, not here.
-
----
-
-## Adding New Asset Types
-
-If the FoundRy grows to include additional shared assets (icons, illustration
-kits, video intros, font files), create a new named subfolder under `assets/`
-and add a `README.md` for it. Update this file's structure table.
-
----
+- **Reference, don't copy.** Child repos should reference assets from this location rather than duplicating them.
+- **Version on change.** If a brand standards file is updated, append a version suffix to the filename and keep the previous version for a grace period.
+- **No client content here.** Assets specific to a BrandGuard Sentinel or client overlay belong in that capability's own `assets/` directory, not here.
 
 ## Related
 
-- [`assets/brand/README.md`](brand/README.md) — brand subfolder documentation
-- [`docs/naming-conventions.md`](../docs/naming-conventions.md) — file naming rules
+- [`brand/README.md`](brand/README.md): canonical shared identity assets
+- [`gpt-icons/README.md`](gpt-icons/README.md): Custom GPT icon design and deployment guidance
+- [`../docs/presentation-assets.md`](../docs/presentation-assets.md): public website and social presentation assets
+- [`../docs/naming-conventions.md`](../docs/naming-conventions.md): file naming rules
