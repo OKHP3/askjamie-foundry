@@ -358,10 +358,11 @@ class PublicArtifactTests(unittest.TestCase):
         response.geturl.return_value = page_url
         response.read.return_value = (ROOT / "public/index.html").read_bytes()
         asset_responses = []
-        for _ in checker.LIVE_REQUIRED_ASSETS:
+        for _, asset_path in checker.LIVE_REQUIRED_ASSETS:
             asset_response = MagicMock()
             asset_response.__enter__.return_value = asset_response
             asset_response.status = 200
+            asset_response.geturl.return_value = f"{page_url}{asset_path}"
             asset_responses.append(asset_response)
 
         with (
@@ -393,10 +394,11 @@ class PublicArtifactTests(unittest.TestCase):
         page_response.geturl.return_value = page_url
         page_response.read.return_value = (ROOT / "public/index.html").read_bytes()
         asset_responses = []
-        for _ in checker.LIVE_REQUIRED_ASSETS:
+        for _, asset_path in checker.LIVE_REQUIRED_ASSETS:
             response = MagicMock()
             response.__enter__.return_value = response
             response.status = 200
+            response.geturl.return_value = f"{page_url}{asset_path}"
             asset_responses.append(response)
 
         with (
@@ -436,6 +438,7 @@ class PublicArtifactTests(unittest.TestCase):
         stylesheet_response = MagicMock()
         stylesheet_response.__enter__.return_value = stylesheet_response
         stylesheet_response.status = 200
+        stylesheet_response.geturl.return_value = f"{page_url}styles.css"
 
         with patch.object(
             checker,
@@ -458,6 +461,23 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn("icon asset", str(raised.exception))
         self.assertIn(missing_icon_url, str(raised.exception))
         self.assertIn("returned HTTP 404 instead of HTTP 200", str(raised.exception))
+
+    def test_live_asset_rejects_redirect_away_from_expected_url(self):
+        checker = load_checker()
+        asset_url = f"{PAGES_BASE_URL}styles.css"
+        for redirected_url in (
+            f"https://unexpected.example{PAGES_PATH}styles.css",
+            f"{PAGES_BASE_URL}other.css",
+        ):
+            with self.subTest(redirected_url=redirected_url):
+                response = MagicMock()
+                response.__enter__.return_value = response
+                response.status = 200
+                response.geturl.return_value = redirected_url
+                with patch.object(checker, "urlopen", return_value=response):
+                    with self.assertRaises(SystemExit) as raised:
+                        checker.check_live_asset(asset_url, "stylesheet")
+                self.assertIn("redirected away from the expected URL", str(raised.exception))
 
     def test_live_check_rejects_redirect_to_wrong_repository_path_without_network_access(self):
         checker = load_checker()

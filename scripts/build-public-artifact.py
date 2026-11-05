@@ -522,6 +522,7 @@ def check_live_asset(asset_url: str, asset_type: str) -> None:
     try:
         with urlopen(request, timeout=30) as response:
             status = response.status
+            final_url = response.geturl()
     except HTTPError as error:
         status = error.code
     except URLError as error:
@@ -538,6 +539,16 @@ def check_live_asset(asset_url: str, asset_type: str) -> None:
         raise SystemExit(
             "live Pages check failed: deployed "
             f"{asset_type} asset {asset_url} returned HTTP {status} instead of HTTP 200"
+        )
+
+    expected = urlparse(asset_url)
+    actual = urlparse(final_url)
+    if (actual.scheme.lower(), actual.netloc.lower(), actual.path) != (
+        expected.scheme.lower(), expected.netloc.lower(), expected.path
+    ):
+        raise SystemExit(
+            "live Pages check failed: deployed "
+            f"{asset_type} asset {asset_url} redirected away from the expected URL"
         )
 
 
