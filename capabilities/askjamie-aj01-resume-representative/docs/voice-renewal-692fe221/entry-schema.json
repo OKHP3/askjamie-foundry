@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence-aware voice entry",
+  "type": "object",
+  "required": [
+    "entry_id",
+    "term",
+    "linguistic_type",
+    "meaning",
+    "communicative_function",
+    "observed_context",
+    "would",
+    "should",
+    "could",
+    "would_not",
+    "should_not",
+    "could_not",
+    "synthetic_example",
+    "neutral_alternative",
+    "review_status",
+    "aliases",
+    "evidence_class",
+    "evidence",
+    "frequency",
+    "tone",
+    "first_observed_date",
+    "last_observed_date",
+    "privacy",
+    "public_use_approved"
+  ],
+  "properties": {
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]+$"
+    },
+    "term": {
+      "type": "string"
+    },
+    "linguistic_type": {
+      "type": "string"
+    },
+    "meaning": {
+      "type": "string"
+    },
+    "communicative_function": {
+      "type": "string"
+    },
+    "observed_context": {
+      "type": "string"
+    },
+    "would": {
+      "type": "string"
+    },
+    "should": {
+      "type": "string"
+    },
+    "could": {
+      "type": "string"
+    },
+    "would_not": {
+      "type": "string"
+    },
+    "should_not": {
+      "type": "string"
+    },
+    "could_not": {
+      "type": "string"
+    },
+    "synthetic_example": {
+      "type": "string"
+    },
+    "neutral_alternative": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "evidence_class": {
+      "enum": [
+        "OBSERVED",
+        "DECLARED",
+        "ADOPTED",
+        "INFERRED",
+        "PROPOSED"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "locator",
+          "quote"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "match_start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "match_end": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "frequency": {
+      "type": "object",
+      "required": [
+        "occurrences",
+        "independent_source_count",
+        "corpus_id",
+        "policy",
+        "habitual_use_established"
+      ],
+      "properties": {
+        "occurrences": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "independent_source_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "corpus_id": {
+          "type": "string"
+        },
+        "policy": {
+          "type": "string"
+        },
+        "habitual_use_established": {
+          "type": "boolean"
+        },
+        "eligible_source_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "eligible_whitespace_words": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "tokenization": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "tone": {
+      "type": "object",
+      "required": [
+        "labels",
+        "basis"
+      ],
+      "properties": {
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "basis": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "first_observed_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "last_observed_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "privacy": {
+      "enum": [
+        "private",
+        "public",
+        "restricted"
+      ]
+    },
+    "public_use_approved": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "evidence_class": {
+            "const": "OBSERVED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "evidence": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "evidence_class": {
+            "const": "PROPOSED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "frequency": {
+            "properties": {
+              "occurrences": {
+                "type": "null"
+              },
+              "independent_source_count": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
