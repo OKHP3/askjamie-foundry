@@ -4,10 +4,14 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
+import os
 import re
 import shutil
 import subprocess
 import time
+from html.parser import HTMLParser
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
@@ -34,8 +38,14 @@ FORBIDDEN = (
     "sessionStorage",
     "fetch(",
 )
-PAGES_BASE_URL = "https://okhp3.github.io/askjamie-foundry/"
-EXPECTED_PAGES_PATH = "/askjamie-foundry/"
+# Canonical GitHub repository identity for this Pages site. The project Pages
+# path is derived from its repository name, so a rename cannot silently drift.
+PAGES_REPOSITORY_IDENTITY = "OKHP3/AskJamie-FoundRy"
+PAGES_REPOSITORY_OWNER, PAGES_REPOSITORY_NAME = PAGES_REPOSITORY_IDENTITY.split("/", 1)
+EXPECTED_PAGES_PATH = f"/{PAGES_REPOSITORY_NAME.lower()}/"
+PAGES_BASE_URL = (
+    f"https://{PAGES_REPOSITORY_OWNER.lower()}.github.io{EXPECTED_PAGES_PATH}"
+)
 GA4_MEASUREMENT_ID = "G-VJ1BKXS27H"
 GA4_SCRIPT_URL = (
     "https://www.googletagmanager.com/gtag/js"
@@ -58,7 +68,8 @@ LIVE_REQUIRED_MARKERS = REQUIRED_SEO_MARKERS + REQUIRED_ANALYTICS_MARKERS + (
     "no draft or private database is loaded here.",
     "Read-only orientation",
 )
-LIVE_EXTERNAL_LINKS = (
+APPROVED_EXTERNAL_LINKS = (
+    PAGES_BASE_URL,
     "https://askjamie.bot/",
     "https://github.com/OKHP3/AskJamie",
     "https://github.com/OKHP3/AskJamie-FoundRy",
@@ -69,7 +80,33 @@ LIVE_EXTERNAL_LINKS = (
 )
 
 
+class HrefCollector(HTMLParser):
+    """Collect href attributes from the public HTML without reading other files."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.hrefs: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        self.hrefs.extend(
+            value for name, value in attrs if name.lower() == "href" and value is not None
+        )
+
+
+def external_href_targets(html: str) -> set[str]:
+    """Return absolute or protocol-relative destinations used by public hrefs."""
+
+    collector = HrefCollector()
+    collector.feed(html)
+    return {
+        href
+        for href in collector.hrefs
+        if urlparse(href).scheme or href.startswith("//")
+    }
+
+
 def check() -> None:
+    check_pages_repository_identity()
     if not SOURCE.is_dir():
         raise SystemExit("public artifact directory is missing")
     for name in REQUIRED:
@@ -78,6 +115,13 @@ def check() -> None:
     html = (SOURCE / "index.html").read_text(encoding="utf-8")
     if "<title>" not in html or 'name="description"' not in html:
         raise SystemExit("public artifact requires a title and description")
+    external_links = external_href_targets(html)
+    unapproved_links = sorted(external_links - set(APPROVED_EXTERNAL_LINKS))
+    if unapproved_links:
+        raise SystemExit(
+            "public artifact contains unapproved external link(s): "
+            f"{', '.join(unapproved_links)}"
+        )
     for marker in REQUIRED_SEO_MARKERS:
         if marker not in html:
             raise SystemExit(f"public artifact is missing required SEO metadata: {marker}")
@@ -123,6 +167,41 @@ def build() -> None:
     print(f"Built {OUTPUT.relative_to(ROOT).as_posix()}")
 
 
+def release_info(output_dir: Path | None = None) -> dict[str, str | int]:
+    """Return a stable identity for the built public files only."""
+
+    artifact_dir = OUTPUT if output_dir is None else output_dir
+    if not artifact_dir.is_dir():
+        raise SystemExit(
+            f"built Pages artifact is missing: {artifact_dir}; run --build first"
+        )
+
+    files = sorted(path for path in artifact_dir.rglob("*") if path.is_file())
+    if not files:
+        raise SystemExit(f"built Pages artifact is empty: {artifact_dir}")
+
+    digest = hashlib.sha256()
+    for path in files:
+        relative_path = path.relative_to(artifact_dir).as_posix()
+        file_digest = hashlib.sha256()
+        file_size = 0
+        with path.open("rb") as stream:
+            for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+                file_digest.update(chunk)
+                file_size += len(chunk)
+        digest.update(relative_path.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(str(file_size).encode("ascii"))
+        digest.update(b"\0")
+        digest.update(file_digest.digest())
+
+    return {
+        "artifact_sha256": digest.hexdigest(),
+        "file_count": len(files),
+        "expected_pages_path": EXPECTED_PAGES_PATH,
+    }
+
+
 def normalized_path(url: str) -> str:
     """Normalize a Pages path while preserving the root path."""
 
@@ -130,9 +209,23 @@ def normalized_path(url: str) -> str:
     return path if path == "/" else f"{path.rstrip('/')}/"
 
 
+def check_pages_repository_identity() -> None:
+    """Fail early when the workflow is running from a renamed repository."""
+
+    actual = os.environ.get("PAGES_REPOSITORY")
+    if actual and actual.casefold() != PAGES_REPOSITORY_IDENTITY.casefold():
+        raise SystemExit(
+            "Pages repository identity changed: "
+            f"expected {PAGES_REPOSITORY_IDENTITY!r}, got {actual!r}. "
+            "Update PAGES_REPOSITORY_IDENTITY and the public canonical URLs "
+            "before releasing from the renamed repository."
+        )
+
+
 def check_live(page_url: str) -> None:
     """Verify the deployed Pages URL serves the intended public artifact."""
 
+    check_pages_repository_identity()
     requested = urlparse(page_url)
     if requested.scheme not in {"http", "https"} or not requested.netloc:
         raise SystemExit(f"live Pages check failed: invalid page URL: {page_url}")
@@ -190,7 +283,7 @@ def check_live(page_url: str) -> None:
             f"public marker(s): {', '.join(missing)}"
         )
     missing_links = [
-        link for link in LIVE_EXTERNAL_LINKS if f'href="{link}"' not in html
+        link for link in APPROVED_EXTERNAL_LINKS if link not in external_href_targets(html)
     ]
     if missing_links:
         raise SystemExit(
@@ -217,10 +310,17 @@ if __name__ == "__main__":
         metavar="PAGE_URL",
         help="fetch and verify the deployed Pages URL",
     )
+    parser.add_argument(
+        "--release-info",
+        action="store_true",
+        help="print JSON identity for the built public artifact",
+    )
     args = parser.parse_args()
     if args.check_live:
         check_live(args.check_live)
     elif args.build:
         build()
+    elif args.release_info:
+        print(json.dumps(release_info(), sort_keys=True))
     else:
         check()

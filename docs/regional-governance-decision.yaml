@@ -1,13 +1,34 @@
 audit: askjamie-regional-governance
 scope: broader-mentor-governance-and-graduation
 adaptation: read-only-regional-mentor-governance-audit
-decision: defer
+decision: approve
 owner: OKHP3
-decided_at: "2026-09-17"
-registry_sha256: c81f4f0ae963e02b80172c26343fe3a840fe34c28b0d839d73861a682899a955
+decided_at: "2026-11-05"
+registry_sha256: 7d4198e2abd6c88348164927aa906c11502cfbc3048243f33f46e7baa6e14cd2
+mentor_review:
+  repository: OKHP3/OverKill-Hill-FoundRy
+  revision: 8de1eb212d8db193fd22eb85bf0843f366a0c1a7
+  path: scripts/public-graduation-audit.py
 publication_decision: not-authorized
 hosting_decision: not-authorized
+boundary_review:
+  reviewed_at: "2026-11-04"
+  registry_sha256: 7d4198e2abd6c88348164927aa906c11502cfbc3048243f33f46e7baa6e14cd2
+  controls:
+    loopback_workbench: CONFIRMED
+    private_exports: CONFIRMED
+    immutable_registry: CONFIRMED
+    permanent_private_client_controls: CONFIRMED
+  residual_limits:
+    - Downloaded ZIP custody and sharing are outside the workbench boundary.
+    - Mentor behavior is confirmed only for the pinned 2026-09-17 revision.
+    - Broader governance/graduation adoption, publication, and hosting are not approved.
 rationale: >
-  Defer adoption of the named mentor governance adaptation. The pinned mentor
-  evidence is confirmed, but the regional adaptation remains a proposal and no
-  publication or hosting decision is authorized.
+  Approve only the named read-only adaptation as a private local evidence-review
+  method. The loopback workbench, private-export boundary, read-only registry
+  audit, and permanent-private client controls were reviewed against current
+  source, validators, and focused tests. This does not approve copying or
+  implementing broader mentor governance or graduation surfaces. Downloaded ZIP
+  custody is not controlled by the workbench, and the mentor behavior is
+  confirmed only for the pinned revision reviewed on 2026-09-17. Publication and
+  hosting remain unauthorized.

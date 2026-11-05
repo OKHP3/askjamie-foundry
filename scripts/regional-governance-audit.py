@@ -20,6 +20,12 @@ SCHEMA = ROOT / "schemas" / "registry.schema.yaml"
 AUDIT_NAME = "askjamie-regional-governance"
 AUDIT_SCOPE = "broader-mentor-governance-and-graduation"
 ADAPTATION_ID = "read-only-regional-mentor-governance-audit"
+REQUIRED_BOUNDARY_CONTROLS = (
+    "loopback_workbench",
+    "private_exports",
+    "immutable_registry",
+    "permanent_private_client_controls",
+)
 ADAPTATION = {
     "id": ADAPTATION_ID,
     "name": "Read-only regional mentor governance audit",
@@ -128,9 +134,48 @@ def approval_status(
         for key, expected in required.items()
         if approval.get(key) != expected
     ]
+    mentor_binding = approval.get("mentor_review")
+    expected_mentor_binding = {
+        key: MENTOR_REVIEW[key] for key in ("repository", "revision", "path")
+    }
+    if not isinstance(mentor_binding, dict):
+        problems.append("mentor_review binding must be a mapping")
+        mentor_binding = None
+    else:
+        for key, expected in expected_mentor_binding.items():
+            if mentor_binding.get(key) != expected:
+                problems.append(
+                    f"mentor_review.{key} does not match the pinned mentor review"
+                )
     decision = approval.get("decision")
     if decision not in {"approve", "defer", "reject"}:
         problems.append("decision must be approve, defer, or reject")
+    boundary_review = approval.get("boundary_review")
+    if decision == "approve":
+        if not isinstance(boundary_review, dict):
+            problems.append("approve requires a boundary_review mapping")
+            boundary_review = None
+        else:
+            try:
+                date.fromisoformat(str(boundary_review.get("reviewed_at")))
+            except (TypeError, ValueError):
+                problems.append("boundary_review.reviewed_at must be an ISO date")
+            if boundary_review.get("registry_sha256") != registry_digest:
+                problems.append("boundary_review.registry_sha256 does not match the current registry")
+            controls = boundary_review.get("controls")
+            if not isinstance(controls, dict):
+                problems.append("boundary_review.controls must be a mapping")
+            else:
+                for control in REQUIRED_BOUNDARY_CONTROLS:
+                    if controls.get(control) != "CONFIRMED":
+                        problems.append(
+                            f"boundary_review.controls.{control} must be CONFIRMED"
+                        )
+            limits = boundary_review.get("residual_limits")
+            if not isinstance(limits, list) or not limits or any(
+                not isinstance(limit, str) or not limit.strip() for limit in limits
+            ):
+                problems.append("approve requires nonempty boundary_review.residual_limits")
     decided_at = approval.get("decided_at", approval.get("approved_at"))
     try:
         date.fromisoformat(str(decided_at))
@@ -148,11 +193,18 @@ def approval_status(
         "path": str(approval_path),
         "decision": decision,
         "decided_at": decided_at,
+        "mentor_review": mentor_binding,
+        "boundary_review": boundary_review,
         "reason": (
-            f"Exact scope, adaptation, registry digest, and release boundaries "
-            f"recorded with decision: {decision}."
+            f"Exact scope, adaptation, registry digest, pinned mentor review, "
+            f"and release boundaries recorded with decision: {decision}."
             if not problems
             else "; ".join(problems)
+        ),
+        "next_check": (
+            "Renew this decision after any registry digest, boundary-control, or mentor revision/path change."
+            if status == "APPROVED" and not problems
+            else "Obtain or renew a dated decision tied to the exact adaptation, scope, registry digest, mentor revision/path, and release boundaries."
         ),
     }
 
@@ -219,20 +271,30 @@ def build_report(
             "next_check": "Review a later mentor revision before extending this observation.",
         },
         {
-            "claim": "The proposed adaptation is safe for AskJamie regional boundaries.",
-            "tier": "PROPOSAL",
-            "evidence": ["docs/regional-governance-audit.md"],
+            "claim": "The approved narrow adaptation preserves the four reviewed local boundaries.",
+            "tier": (
+                "INFERRED"
+                if local_controls_pass and approval["status"] == "APPROVED"
+                else "PROPOSAL"
+            ),
+            "evidence": [
+                "docs/regional-governance-audit.md#regional-boundary-review",
+                "workbench/server.py:create_server",
+                "workbench/service.py:read_registry,export_project",
+                "tests/test_boundary_acceptance.py",
+                "tests/test_export_acceptance.py",
+            ],
             "consequence_if_false": "The adaptation could weaken local privacy or ownership controls.",
-            "next_check": "Review the adaptation against the local workbench, export, and client controls.",
+            "next_check": "Revalidate the four controls after any relevant implementation change and review later mentor revisions separately.",
         },
         {
-            "claim": "Owner decision exists for this exact adaptation, scope, and registry state.",
+            "claim": "Owner decision exists for this exact adaptation, scope, registry state, and pinned mentor source.",
             "tier": "CONFIRMED"
             if approval["status"] in {"APPROVED", "DEFERRED", "REJECTED"}
             else "UNKNOWN",
             "evidence": [approval["path"]] if approval["path"] else [],
             "consequence_if_false": "A design review could be mistaken for authorization to adopt or publish.",
-            "next_check": "Obtain or renew a dated owner decision tied to this adaptation, scope, registry digest, and release boundaries.",
+            "next_check": "Obtain or renew a dated decision tied to this adaptation, scope, registry digest, mentor revision/path, and release boundaries.",
         },
     ]
     return {
@@ -276,7 +338,7 @@ def build_report(
             "The reviewed mentor behavior may differ in a later revision.",
             "Regional adaptation has not received implementation review.",
         ] + ([
-            "Owner has not recorded a valid decision for this exact adaptation, scope, digest, and release boundary."
+            "Owner has not recorded a valid decision for this exact adaptation, scope, registry digest, pinned mentor source, and release boundaries."
         ] if approval["status"] not in {"APPROVED", "DEFERRED", "REJECTED"} else []),
     }
 
@@ -290,7 +352,7 @@ def main() -> int:
     parser.add_argument(
         "--owner-approval",
         type=Path,
-        help="Read an owner decision record tied to the adaptation, scope, and digest.",
+        help="Read an owner decision record tied to the adaptation, scope, digest, and pinned mentor source.",
     )
     parser.add_argument(
         "--require-approval",

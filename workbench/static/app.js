@@ -356,14 +356,25 @@
     const code = String(project?.code || "")
       .replace(/\s+/g, " ")
       .trim();
+    const titleSegments = [];
+    if (typeof Intl.Segmenter === "function") {
+      for (const { segment } of new Intl.Segmenter(undefined, {
+        granularity: "grapheme",
+      }).segment(title)) {
+        titleSegments.push(segment);
+        if (titleSegments.length > 96) break;
+      }
+    } else {
+      titleSegments.push(...Array.from(title).slice(0, 97));
+    }
     const readableTitle =
-      title.length > 96 ? `${title.slice(0, 95)}…` : title;
+      titleSegments.length > 96 ? `${titleSegments.slice(0, 95).join("")}…` : title;
     return code ? `${readableTitle} · ${code}` : readableTitle;
   }
   function canLeaveCurrent(destination = null) {
     if (!state.current?._dirty) return true;
     const message = destination
-      ? `This project has unsaved changes. Leave without saving and open “${projectSwitchLabel(destination)}”?`
+      ? `This project has unsaved changes. Leave without saving and open [${projectSwitchLabel(destination)}]?`
       : "This project has unsaved changes. Leave without saving?";
     return window.confirm(message);
   }

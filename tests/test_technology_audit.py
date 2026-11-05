@@ -67,6 +67,18 @@ class TechnologyAuditTests(unittest.TestCase):
         self.assertEqual(audit.stable_release({"kind": "node-lts"}, body), "24.10.0")
         self.assertEqual(audit.stable_release({"kind": "node-current"}, body), "26.1.0")
 
+    def test_node_index_ignores_prereleases_but_rejects_unknown_stable_syntax(self):
+        releases = [
+            {"version": "v27.0.0-alpha.0.0.0", "lts": False, "date": "2020-01-01"},
+            {"version": "v26.13.0", "lts": "LTS", "date": "2020-01-01"},
+        ]
+        body = json.dumps(releases)
+        self.assertEqual(audit.stable_release({"kind": "node-current"}, body), "26.13.0")
+        self.assertEqual(audit.stable_release({"kind": "node-lts"}, body), "26.13.0")
+        releases.append({"version": "v99.bad", "lts": False, "date": "2020-01-01"})
+        with self.assertRaises(ValueError):
+            audit.stable_release({"kind": "node-current"}, json.dumps(releases))
+
     def test_github_tagged_release_ignores_sibling_packages_and_unreleased_tags(self):
         watch = {"kind": "github-tagged", "tag_prefix": "mermaid@",
                  "url": "https://api.github.com/repos/mermaid-js/mermaid/releases?per_page=100",
