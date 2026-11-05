@@ -101,17 +101,16 @@ Text extraction and local search checks do not prove host retrieval. Uploading o
 ## Bibliography
 
 The following entries match the full reference. All access dates are November 5, 2026. Institutional abbreviations are expanded there; titles and locators are retained here so the companion remains usable separately.
+
 BLS (U.S. Bureau of Labor Statistics). 2011. “State Unemployment Rates in 2010.” *The Economics Daily*, March 1. https://www.bls.gov/opub/ted/2011/ted_20110301.htm.
 
 BLS (U.S. Bureau of Labor Statistics). 2016. “U-3 and U-6 Unemployment by State, 2015.” *The Economics Daily*, February 25. https://www.bls.gov/opub/ted/2016/u-3-and-u-6-unemployment-by-state-2015.htm.
 
 BLS (U.S. Bureau of Labor Statistics). 2019a. “Five States at Historically Low Unemployment Rates in September 2019.” *The Economics Daily*, October 23. https://www.bls.gov/opub/ted/2019/five-states-at-historically-low-unemployment-rates-in-september-2019.htm.
 
-BLS (U.S. Bureau of Labor Statistics). 2019b. “Private Industry Compensation Costs Up 2.7 Percent from September 2018 to September 2019.” *The Economics Daily*, November 7. https://www.bls.gov/opub/ted/2019/private-industry-compensation-costs-up-2-point-7-percent-from-september-2018-to-september-2019.htm.
 
 BLS (U.S. Bureau of Labor Statistics). 2020. “The Employment Situation: April 2020.” News release, May 8. https://www.bls.gov/news.release/archives/empsit_05082020.htm. Initial-release vintage.
 
-BLS (U.S. Bureau of Labor Statistics). 2024. “Contingent and Alternative Employment Arrangements: July 2023.” News release, November 8. https://www.bls.gov/news.release/archives/conemp_11082024.htm.
 
 BLS (U.S. Bureau of Labor Statistics). 2026. “Unemployment Rate Little Changed at 4.2 Percent in September 2026.” *The Economics Daily*, October 9. https://www.bls.gov/opub/ted/2026/unemployment-rate-little-changed-at-4-2-percent-in-september-2026.htm.
 
