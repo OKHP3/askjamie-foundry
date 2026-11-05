@@ -166,6 +166,8 @@ AI tools may assist in extracting application information, drafting communicatio
 
 ## PC-015 — Employer design: a psychologically credible selection journey
 
+**Employer recruiting process and fair candidate experience.** A structured, fair recruiting process makes the employer's requirements legible to applicants and makes candidate experience measurable. A fair experience is not merely a courteous interview: it includes an accessible application, comparable opportunity to show job-relevant evidence, standardized scoring, timely communication and a documented decision. Employers should examine the recruiting process for gaps between formal policy and what candidates actually encounter.
+
 A well-designed hiring journey has explicit stages: job analysis, accessible announcement, intake, initial screening, structured assessment, interview, reference or background checks where applicable, selection decision, communication and onboarding. The exact steps vary by jurisdiction and role. The central requirement is coherence: applicants should know what evidence is requested and employers should know why it matters.
 
 A selection panel should agree in advance on the assessment dimensions. For distributed work, dimensions might include written communication, documentation habits, asynchronous coordination, information security and autonomy when truly job-related. They should not be interpreted as personality proxies. Each interviewer should document evidence against the rubric rather than general impressions such as "seems like a culture fit."
