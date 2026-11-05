@@ -3,7 +3,7 @@ scope: broader-mentor-governance-and-graduation
 adaptation: read-only-regional-mentor-governance-audit
 decision: approve
 owner: OKHP3
-decided_at: "2026-11-04"
+decided_at: "2026-11-05"
 registry_sha256: 7d4198e2abd6c88348164927aa906c11502cfbc3048243f33f46e7baa6e14cd2
 mentor_review:
   repository: OKHP3/OverKill-Hill-FoundRy
