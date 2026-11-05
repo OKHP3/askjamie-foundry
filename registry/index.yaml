@@ -45,8 +45,9 @@ repositories:
     visibility: public
     public_graduation_allowed: true
     description: >
-      Public-facing professional portfolio capability. Surfaces curated work
-      history and capability demonstrations for external audiences.
+      Business portfolio capability for solo founders and small organizations.
+      Presents supported services, methods and proof to prospective clients
+      and partners without inventing scale or results.
     notes: "Current tracked GitHub snapshot imported unchanged with per-file SHA-256 and Git identities on 2026-10-19. Configured GPT capture, local/Replit reconciliation, component rights, skill conversion and host acceptance remain open. Original sources retained."
 
   - repo: OKHP3/askjamie-aj03-enterprise-sleuth
