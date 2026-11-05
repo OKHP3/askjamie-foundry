@@ -427,6 +427,95 @@
       ],
       "base_commit": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
       "overlay_contract": "Join each dated row to obligations by ID. Source, acceptance and owner are inherited unless explicitly overridden. The October 27 entries remain historical."
+    },
+    "2026-11-05": {
+      "base_commit": "e1074940a47bb3b5a306248ba501e5e9637f0edd",
+      "inherits": "2026-11-04",
+      "thread_id": null,
+      "disposition": "BLOCKED - NOT READY TO ARCHIVE",
+      "overlay_contract": "Apply these changed rows by ID over November 4, which inherits October 27 source, acceptance and owners. Other rows remain unchanged.",
+      "obligations": [
+        {
+          "id": "O01",
+          "status": "verified complete",
+          "evidence": [
+            "AJ01",
+            "AJ02",
+            "local source checks"
+          ],
+          "note": "Verified the existing specific routes on public FoundRy main and preserved the two original source trees."
+        },
+        {
+          "id": "O08",
+          "status": "blocked",
+          "owner": "Existing parent Replit handoff owner; no takeover in this thread",
+          "evidence": [
+            "pr78",
+            "pr82",
+            "local source checks"
+          ],
+          "note": "Git integration and the recorded narrow governance decision are complete. Current live checkout, canonical parity, task state and runtime remain unverified."
+        },
+        {
+          "id": "O11",
+          "status": "unfinished",
+          "evidence": [
+            "pr72",
+            "pr72CI"
+          ],
+          "note": "Updated exact draft head passed four checks. Native host loading and behavior acceptance were not established."
+        },
+        {
+          "id": "O13",
+          "status": "uncertain",
+          "evidence": [
+            "coverage"
+          ],
+          "note": "New prompt copy was read; it did not supply exact chat provenance or missing raw history."
+        },
+        {
+          "id": "O14",
+          "status": "verified complete",
+          "evidence": [
+            "pr79",
+            "AJ01",
+            "AJ02",
+            "issue58"
+          ],
+          "note": "Merged existing closeout package retained; latest delta remains in the same shared home."
+        },
+        {
+          "id": "O15",
+          "status": "unfinished",
+          "evidence": [
+            "pr79",
+            "pr79CI",
+            "issue58"
+          ],
+          "note": "PR79 integration is verified complete. This new documentation delta needs separate exact-head verification and protected-main integration; consult the maintained receipt for completed checks and current review state. No merge authority assumed."
+        },
+        {
+          "id": "O16",
+          "status": "verified complete",
+          "evidence": [
+            "validation",
+            "issue58"
+          ],
+          "note": "Fresh artifact checks and independent challenge apply to the continuation only; current Replit runtime and GPT asset gates remain open."
+        },
+        {
+          "id": "O17",
+          "status": "blocked",
+          "evidence": [
+            "coverage",
+            "pr72",
+            "pr77",
+            "pr82",
+            "issue58"
+          ],
+          "note": "Exact thread provenance, asset/exception coverage and remaining state/host gates are not established. No archive attempted."
+        }
+      ]
     }
   }
 }
