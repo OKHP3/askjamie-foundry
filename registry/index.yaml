@@ -46,7 +46,7 @@ repositories:
     public_graduation_allowed: true
     description: >
       Business portfolio capability for solo founders and small organizations.
-      Presents supported services, methods and proof to prospective clients
+      Presents services, methods, and supporting evidence to prospective clients
       and partners without inventing scale or results.
     notes: "Current tracked GitHub snapshot imported unchanged with per-file SHA-256 and Git identities on 2026-10-19. Configured GPT capture, local/Replit reconciliation, component rights, skill conversion and host acceptance remain open. Original sources retained."
 

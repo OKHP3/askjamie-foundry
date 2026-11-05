@@ -3,7 +3,7 @@
 ## 2026-11-05: AJ02 business portfolio scope
 
 - Clarify that Professional Portfolio supports small-business presentation
-  with evidence, honest capacity and no invented scale or results.
+  with evidence, honest capacity, and no invented scale or results.
 
 ## 2026-10-19: Replit consolidation execution
 

@@ -2,11 +2,11 @@
 
 Public child capability of AskJamie FoundRy.
 
-Help solo founders and small organizations present their business through an
-evidence-based portfolio: explain services, methods, capabilities and supported
-proof to prospective clients and partners. It is a force multiplier for a
-small business, not an individual resume. Present real capacity clearly without
-inventing staff, clients, results, credentials or other evidence.
+Help solo founders and small organizations present their services, methods,
+capabilities, and supporting evidence to prospective clients and partners.
+It is a force multiplier for a small business, not an individual resume.
+Present real capacity clearly without inventing staff, clients, results,
+credentials or other evidence.
 
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 481 files and 1,880,192 bytes,
