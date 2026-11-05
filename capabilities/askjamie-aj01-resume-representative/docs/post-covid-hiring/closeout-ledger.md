@@ -1,6 +1,6 @@
 # Row 27: completion ledger and two-pass closeout receipt
 
-Status: **BLOCKED — NOT READY TO ARCHIVE**, reviewed 2026-11-05. Source title: **KNOW: Hybrid post-COVID hiring**. Stable public work key: `aj01-post-covid-hiring-row27`; exact private conversation identity is recorded in the existing authorized Library extraction reader, not repeated in a public repo. Parent project: AskJamie FoundRy; route: AJ01 Résumé Representative; no AJ02 scope. Coordinator: [FoundRy #109](https://github.com/OKHP3/askjamie-foundry/issues/109).
+Status: **BLOCKED — NOT READY TO ARCHIVE**, reviewed 2026-11-05. Source title: **KNOW: Hybrid post-COVID hiring**. Stable public work key: `aj01-post-covid-hiring-row27`; exact private conversation identity is recorded in the existing authorized Library extraction reader, not repeated in a public repo. Parent project: AskJamie FoundRy; route: AJ01 Résumé Representative; no AJ02 scope. Coordinator: [FoundRy #109](https://github.com/OKHP3/askjamie-foundry/issues/109); source review [draft PR #110](https://github.com/OKHP3/askjamie-foundry/pull/110).
 
 ## Purpose, precedence and scope
 
