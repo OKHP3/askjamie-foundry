@@ -1,0 +1,103 @@
+{
+  "reviewed_at_utc": "2026-11-05T18:11:50.988836+00:00",
+  "scope": "AJ01 market/channel documentation packet only; full thread archive gates remain blocked.",
+  "pass_a": {
+    "method": "Executed arithmetic, source-anchor/table checks, syntax and privacy patterns against generated files. Not a live seller-account or product-runtime test.",
+    "checks": [
+      {
+        "check": "Executable fee model vs saved output",
+        "result": "PASS",
+        "evidence": "66 independent rational/Decimal crosschecks; 10 fixed fixtures"
+      },
+      {
+        "check": "Source reference anchors",
+        "result": "PASS",
+        "evidence": "All 26 source IDs exist; every cited Sxx anchor resolves in sources.md."
+      },
+      {
+        "check": "Displayed economics table",
+        "result": "PASS",
+        "evidence": "All four seven-column rows exactly match executed output."
+      },
+      {
+        "check": "Python syntax and execution",
+        "result": "PASS",
+        "evidence": "AST parse and successful standalone execution; standard library only."
+      },
+      {
+        "check": "Encoding/style and scoped privacy scan",
+        "result": "PASS",
+        "evidence": "UTF-8 readable; no em dashes, private conversation locators, common token/key signatures or owner-machine paths in public files. Manual review remains necessary."
+      }
+    ]
+  },
+  "pass_b": {
+    "method": "Separate adversarial author review of the visible requests, actual research/closeout files and source claims. No independent agent or human reviewer participated.",
+    "checks": [
+      {
+        "check": "Original product identity",
+        "result": "PASS",
+        "evidence": "DIY teaching package retained; no drift into selling a GPT, resume-writing service or auto-apply system."
+      },
+      {
+        "check": "Claims challenged against current eligibility",
+        "result": "PASS",
+        "evidence": "Etsy prompt-bundle exclusion and personal-account GPT creation restriction override legacy advice. Plugin sharing equivalence not assumed."
+      },
+      {
+        "check": "Uniqueness and price substantiation",
+        "result": "PASS",
+        "evidence": "Close blueprint/hosted comparators preserved; no market census, sales-volume or willingness-to-pay claim. $50/$79 are unapproved hypotheses."
+      },
+      {
+        "check": "Financial interpretation and rounding",
+        "result": "PASS",
+        "evidence": "Seller proceeds, buyer surcharges, per-withdrawal fees and profit separated. Per-component cents rounding fixes the one-cent aggregate-rounding risk at $75/$179 Etsy examples."
+      },
+      {
+        "check": "Counterevidence and commercial friction",
+        "result": "PASS",
+        "evidence": "Fiverr payout-source discrepancy remains open; copying economics counterexample included; traffic acquisition not assumed."
+      },
+      {
+        "check": "Scope and confidentiality",
+        "result": "PASS",
+        "evidence": "No private career records, handoff IDs, raw transcript or paid product kit included. No account creation, payment, deployment, Replit dispatch, merge or unrelated cleanup represented as done."
+      },
+      {
+        "check": "Completion adversary",
+        "result": "BLOCKED",
+        "evidence": "Exact source identity/material export coverage, prior Work receiver status and approved main integration are not established. Archive is not eligible."
+      }
+    ]
+  },
+  "not_run": [
+    "Repository-wide local build/test suite: no project checkout in this runtime; exact PR CI to be recorded in issue95.",
+    "Live account, checkout, payout, buyer onboarding, recruiter access or security testing: not performed, no purchase/account changes authorized.",
+    "Replit runtime/mode/worker verification: outside bounded documentation work; existing owners retain it.",
+    "Original attachment/hash verification: no conversation uploads available.",
+    "Complete crawl/HTTP validation of every reference: key official sources were directly read; several vendor/help offers were available only through indexed text."
+  ],
+  "corrective_loop": [
+    {
+      "observation": "Earlier recommendation treated an Etsy prompt kit as listable.",
+      "cause": "Eligibility was not checked before channel optimization.",
+      "correction": "Read official creativity policy; withdraw proposed listing/funnel and make setup guide conditional.",
+      "targeted_check": "Research sections executive/5/6 consistently hold the prompt package; S01 supports the policy."
+    },
+    {
+      "observation": "Earlier offer assumed Plus grants new GPT creation/clones.",
+      "cause": "Legacy host assumptions drifted.",
+      "correction": "Use current official creation/retirement documents; require host and recipient acceptance separately.",
+      "targeted_check": "S02-S04 and research sections executive/3/8 distinguish subscription price from deployment eligibility."
+    },
+    {
+      "observation": "Final-only rounding can overstate illustrative Etsy proceeds by $0.01.",
+      "cause": "Independent fee components round separately in this model.",
+      "correction": "Round each component half up; compare Decimal with rational/integer calculation.",
+      "targeted_check": "66 crosschecks and 10 explicit fixtures pass; report table matches saved output."
+    }
+  ],
+  "remote_state_at_packaging": "NOT RUN. Exact commit readback, PR checks and later observations must be recorded in issue95; this file does not assert an unperformed remote write.",
+  "archive": "NOT ATTEMPTED: mandatory substantive holds remain."
+}
