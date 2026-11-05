@@ -356,14 +356,25 @@
     const code = String(project?.code || "")
       .replace(/\s+/g, " ")
       .trim();
+    const titleSegments = [];
+    if (typeof Intl.Segmenter === "function") {
+      for (const { segment } of new Intl.Segmenter(undefined, {
+        granularity: "grapheme",
+      }).segment(title)) {
+        titleSegments.push(segment);
+        if (titleSegments.length > 96) break;
+      }
+    } else {
+      titleSegments.push(...Array.from(title).slice(0, 97));
+    }
     const readableTitle =
-      title.length > 96 ? `${title.slice(0, 95)}…` : title;
+      titleSegments.length > 96 ? `${titleSegments.slice(0, 95).join("")}…` : title;
     return code ? `${readableTitle} · ${code}` : readableTitle;
   }
   function canLeaveCurrent(destination = null) {
     if (!state.current?._dirty) return true;
     const message = destination
-      ? `This project has unsaved changes. Leave without saving and open “${projectSwitchLabel(destination)}”?`
+      ? `This project has unsaved changes. Leave without saving and open [${projectSwitchLabel(destination)}]?`
       : "This project has unsaved changes. Leave without saving?";
     return window.confirm(message);
   }
@@ -1418,7 +1429,8 @@
     const panel = el("div");
     panel.append(
       el("p", {
-        text: "The package is private by default. Validate before export. A registry proposal may be included in an export, but the canonical registry is never updated by saving.",
+        class: "privacy-warning",
+        text: "This ZIP may contain private project details and source material. After download, the workbench cannot control where you store it or who you share it with. The package stays private by default; exporting does not publish it or update the canonical registry.",
       }),
     );
     const actions = el("div", { class: "card-actions" });
@@ -1629,6 +1641,10 @@
   }
   async function exportProject() {
     if (!requireSavedProject("exporting")) return;
+    const confirmed = window.confirm(
+      "This ZIP may contain private project and source content.\n\nAfter download, the workbench cannot control where the file is stored or who it is shared with. Continue downloading?",
+    );
+    if (!confirmed) return;
     try {
       const response = await api(
         `/api/projects/${encodeURIComponent(state.current.id)}/export`,

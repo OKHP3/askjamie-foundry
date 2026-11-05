@@ -20,6 +20,12 @@ SCHEMA = ROOT / "schemas" / "registry.schema.yaml"
 AUDIT_NAME = "askjamie-regional-governance"
 AUDIT_SCOPE = "broader-mentor-governance-and-graduation"
 ADAPTATION_ID = "read-only-regional-mentor-governance-audit"
+REQUIRED_BOUNDARY_CONTROLS = (
+    "loopback_workbench",
+    "private_exports",
+    "immutable_registry",
+    "permanent_private_client_controls",
+)
 ADAPTATION = {
     "id": ADAPTATION_ID,
     "name": "Read-only regional mentor governance audit",
@@ -33,19 +39,22 @@ ADAPTATION = {
 }
 MENTOR_REVIEW = {
     "repository": "OKHP3/OverKill-Hill-FoundRy",
-    "revision": "8de1eb212d8db193fd22eb85bf0843f366a0c1a7",
+    "revision": "619e942d69cfe535695e609bbb71a50e3bc14c49",
     "source_url": (
         "https://github.com/OKHP3/OverKill-Hill-FoundRy/blob/"
-        "8de1eb212d8db193fd22eb85bf0843f366a0c1a7/"
+        "619e942d69cfe535695e609bbb71a50e3bc14c49/"
         "scripts/public-graduation-audit.py"
     ),
     "path": "scripts/public-graduation-audit.py",
-    "reviewed_at": "2026-09-17",
+    "reviewed_at": "2026-11-04",
     "reviewer": "Replit Agent",
     "observation": (
-        "The read-only dry-run checks release-package completeness, restricted "
-        "references, record consistency, and manual disabled deployment; it "
-        "does not grant publication approval or change repository visibility."
+        "The read-only dry-run checks release-package completeness, private "
+        "markers and restricted references, release-record consistency and "
+        "package hashes, and manual disabled deployment. The reviewed revision "
+        "also recognizes lowercase attribution.md and names the normalized text "
+        "suffix set used for package hashing. It does not grant publication "
+        "approval or change repository visibility."
     ),
 }
 
@@ -85,6 +94,66 @@ def protected_violations(repositories: list[dict[str, Any]]) -> list[str]:
         if entry.get("visibility_lock") != "permanent-private":
             violations.append(f"{label}: protected entry lacks permanent-private lock")
     return violations
+
+
+def sanitize_validator_errors(
+    errors: list[str],
+    registry_path: Path,
+) -> list[str]:
+    """Redact registry identifiers before validator errors enter the report."""
+    if not errors:
+        return []
+
+    try:
+        registry = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError):
+        return [
+            "Canonical registry validation failed; details withheld because "
+            "repository identifiers could not be checked safely."
+            for _ in errors
+        ]
+
+    repositories = (
+        registry.get("repositories", []) if isinstance(registry, dict) else []
+    )
+    identifiers: set[str] = set()
+
+    def collect_strings(value: Any) -> None:
+        if isinstance(value, str) and value:
+            identifiers.add(value)
+        elif isinstance(value, dict):
+            for nested_value in value.values():
+                collect_strings(nested_value)
+        elif isinstance(value, list):
+            for nested_value in value:
+                collect_strings(nested_value)
+
+    if isinstance(repositories, list):
+        for entry in repositories:
+            if not isinstance(entry, dict):
+                continue
+            for field in ("repo", "parent_capability"):
+                collect_strings(entry.get(field))
+            migration = entry.get("migration")
+            if isinstance(migration, dict):
+                collect_strings(migration.get("destination"))
+
+            protected = (
+                entry.get("family") == "client-overlay"
+                or bool(entry.get("client_org"))
+                or entry.get("bfs_firewall") is True
+                or entry.get("visibility_lock") == "permanent-private"
+            )
+            if protected:
+                for field in ("client_org", "display_name"):
+                    collect_strings(entry.get(field))
+
+    sanitized = []
+    for error in errors:
+        for identifier in sorted(identifiers, key=len, reverse=True):
+            error = error.replace(identifier, "[redacted]")
+        sanitized.append(error)
+    return sanitized
 
 
 def approval_status(
@@ -128,9 +197,48 @@ def approval_status(
         for key, expected in required.items()
         if approval.get(key) != expected
     ]
+    mentor_binding = approval.get("mentor_review")
+    expected_mentor_binding = {
+        key: MENTOR_REVIEW[key] for key in ("repository", "revision", "path")
+    }
+    if not isinstance(mentor_binding, dict):
+        problems.append("mentor_review binding must be a mapping")
+        mentor_binding = None
+    else:
+        for key, expected in expected_mentor_binding.items():
+            if mentor_binding.get(key) != expected:
+                problems.append(
+                    f"mentor_review.{key} does not match the pinned mentor review"
+                )
     decision = approval.get("decision")
     if decision not in {"approve", "defer", "reject"}:
         problems.append("decision must be approve, defer, or reject")
+    boundary_review = approval.get("boundary_review")
+    if decision == "approve":
+        if not isinstance(boundary_review, dict):
+            problems.append("approve requires a boundary_review mapping")
+            boundary_review = None
+        else:
+            try:
+                date.fromisoformat(str(boundary_review.get("reviewed_at")))
+            except (TypeError, ValueError):
+                problems.append("boundary_review.reviewed_at must be an ISO date")
+            if boundary_review.get("registry_sha256") != registry_digest:
+                problems.append("boundary_review.registry_sha256 does not match the current registry")
+            controls = boundary_review.get("controls")
+            if not isinstance(controls, dict):
+                problems.append("boundary_review.controls must be a mapping")
+            else:
+                for control in REQUIRED_BOUNDARY_CONTROLS:
+                    if controls.get(control) != "CONFIRMED":
+                        problems.append(
+                            f"boundary_review.controls.{control} must be CONFIRMED"
+                        )
+            limits = boundary_review.get("residual_limits")
+            if not isinstance(limits, list) or not limits or any(
+                not isinstance(limit, str) or not limit.strip() for limit in limits
+            ):
+                problems.append("approve requires nonempty boundary_review.residual_limits")
     decided_at = approval.get("decided_at", approval.get("approved_at"))
     try:
         date.fromisoformat(str(decided_at))
@@ -148,11 +256,18 @@ def approval_status(
         "path": str(approval_path),
         "decision": decision,
         "decided_at": decided_at,
+        "mentor_review": mentor_binding,
+        "boundary_review": boundary_review,
         "reason": (
-            f"Exact scope, adaptation, registry digest, and release boundaries "
-            f"recorded with decision: {decision}."
+            f"Exact scope, adaptation, registry digest, pinned mentor review, "
+            f"and release boundaries recorded with decision: {decision}."
             if not problems
             else "; ".join(problems)
+        ),
+        "next_check": (
+            "Renew this decision after any registry digest, boundary-control, or mentor revision/path change."
+            if status == "APPROVED" and not problems
+            else "Obtain or renew a dated decision tied to the exact adaptation, scope, registry digest, mentor revision/path, and release boundaries."
         ),
     }
 
@@ -172,6 +287,7 @@ def build_report(
     errors, stats, repositories = checker.check_registry(
         registry_path, schema_path, False
     )
+    safe_errors = sanitize_validator_errors(errors, registry_path)
     after = registry_path.read_bytes()
     after_digest = hashlib.sha256(after).hexdigest()
     unchanged = before == after
@@ -179,11 +295,13 @@ def build_report(
     violations = protected_violations(repositories)
     approval = approval_status(approval_path, before_digest)
 
-    local_controls_pass = not errors and not violations and unchanged and baseline_matches
+    local_controls_pass = (
+        not safe_errors and not violations and unchanged and baseline_matches
+    )
     evidence = [
         {
             "claim": "AskJamie registry passes the canonical schema and health checks.",
-            "tier": "CONFIRMED" if not errors else "UNKNOWN",
+            "tier": "CONFIRMED" if not safe_errors else "UNKNOWN",
             "evidence": [
                 "scripts/check-registry.py",
                 "schemas/registry.schema.yaml",
@@ -216,23 +334,33 @@ def build_report(
                 f"reviewer:{MENTOR_REVIEW['reviewer']}",
             ],
             "consequence_if_false": "AskJamie could adopt an inaccurate or obsolete pattern.",
-            "next_check": "Review a later mentor revision before extending this observation.",
+            "next_check": "Review any later mentor revision before extending this observation.",
         },
         {
-            "claim": "The proposed adaptation is safe for AskJamie regional boundaries.",
-            "tier": "PROPOSAL",
-            "evidence": ["docs/regional-governance-audit.md"],
+            "claim": "The approved narrow adaptation preserves the four reviewed local boundaries.",
+            "tier": (
+                "INFERRED"
+                if local_controls_pass and approval["status"] == "APPROVED"
+                else "PROPOSAL"
+            ),
+            "evidence": [
+                "docs/regional-governance-audit.md#regional-boundary-review",
+                "workbench/server.py:create_server",
+                "workbench/service.py:read_registry,export_project",
+                "tests/test_boundary_acceptance.py",
+                "tests/test_export_acceptance.py",
+            ],
             "consequence_if_false": "The adaptation could weaken local privacy or ownership controls.",
-            "next_check": "Review the adaptation against the local workbench, export, and client controls.",
+            "next_check": "Revalidate the four controls after any relevant implementation change and review later mentor revisions separately.",
         },
         {
-            "claim": "Owner decision exists for this exact adaptation, scope, and registry state.",
+            "claim": "Owner decision exists for this exact adaptation, scope, registry state, and pinned mentor source.",
             "tier": "CONFIRMED"
             if approval["status"] in {"APPROVED", "DEFERRED", "REJECTED"}
             else "UNKNOWN",
             "evidence": [approval["path"]] if approval["path"] else [],
             "consequence_if_false": "A design review could be mistaken for authorization to adopt or publish.",
-            "next_check": "Obtain or renew a dated owner decision tied to this adaptation, scope, registry digest, and release boundaries.",
+            "next_check": "Obtain or renew a dated decision tied to this adaptation, scope, registry digest, mentor revision/path, and release boundaries.",
         },
     ]
     return {
@@ -255,7 +383,7 @@ def build_report(
             "unchanged_during_audit": unchanged,
             "baseline_sha256": baseline_sha256,
             "baseline_matches": baseline_matches,
-            "canonical_validator_errors": errors,
+            "canonical_validator_errors": safe_errors,
         },
         "protected_client_records": {
             "count": sum(
@@ -276,7 +404,7 @@ def build_report(
             "The reviewed mentor behavior may differ in a later revision.",
             "Regional adaptation has not received implementation review.",
         ] + ([
-            "Owner has not recorded a valid decision for this exact adaptation, scope, digest, and release boundary."
+            "Owner has not recorded a valid decision for this exact adaptation, scope, registry digest, pinned mentor source, and release boundaries."
         ] if approval["status"] not in {"APPROVED", "DEFERRED", "REJECTED"} else []),
     }
 
@@ -290,7 +418,7 @@ def main() -> int:
     parser.add_argument(
         "--owner-approval",
         type=Path,
-        help="Read an owner decision record tied to the adaptation, scope, and digest.",
+        help="Read an owner decision record tied to the adaptation, scope, digest, and pinned mentor source.",
     )
     parser.add_argument(
         "--require-approval",

@@ -3,3 +3,6 @@
 /capabilities/askjamie-aj02-professional-portfolio/origin/repository/** -text -ident -filter
 /capabilities/askjamie-aj01-resume-representative/origin/replit/.replit -text -ident -filter
 /capabilities/askjamie-aj02-professional-portfolio/origin/replit/.replit -text -ident -filter
+
+# Keep the approved registry byte digest stable across platforms.
+/registry/index.yaml text eol=lf
