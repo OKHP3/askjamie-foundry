@@ -1,0 +1,145 @@
+{
+  "pass_name": "A: local mechanical artifact validation",
+  "run_date": "2026-11-05",
+  "page_count": 39,
+  "markdown_words_whitespace_delimited": 15804,
+  "source_count": 36,
+  "section_count": 36,
+  "checks": {
+    "pdf_opens_two_libraries": true,
+    "pdf_at_least_20_pages": true,
+    "markdown_at_least_10000_words": true,
+    "all_36_section_ids_unique": true,
+    "all_section_ids_in_pdf": true,
+    "no_raster_images": true,
+    "no_encryption": true,
+    "no_unicode_replacement_characters": true,
+    "all_inline_citations_resolve": true,
+    "all_sources_cited": true,
+    "all_sources_in_bibliography": true,
+    "no_legacy_tool_citation_tokens": true,
+    "pdf_title_metadata": true,
+    "pdf_author_metadata": true,
+    "pdf_subject_metadata": true,
+    "copyright_marks_present": true,
+    "website_and_email_present": true,
+    "creation_date_present": true,
+    "outlines_present": true,
+    "no_blank_pages": true,
+    "all_prose_paragraphs_preserved_in_pdf": true,
+    "no_text_outside_page_bounds": true,
+    "lexical_retrieval_top3_all_queries": true
+  },
+  "unknown_citations": [],
+  "missing_pdf_paragraphs": [],
+  "out_of_bounds_spans": [],
+  "retrieval_smoke_test": [
+    {
+      "query": "ATS parsing failure automatic rejection",
+      "expected_section": "HIR-011",
+      "top_3": [
+        "HIR-032",
+        "HIR-011",
+        "HIR-033"
+      ],
+      "pass": true
+    },
+    {
+      "query": "federal USAJOBS two-page resume",
+      "expected_section": "HIR-009",
+      "top_3": [
+        "HIR-009",
+        "HIR-032",
+        "HIR-006"
+      ],
+      "pass": true
+    },
+    {
+      "query": "FCRA background pre-adverse action",
+      "expected_section": "HIR-021",
+      "top_3": [
+        "HIR-021",
+        "HIR-035",
+        "HIR-033"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Form 8850 WOTC December 31",
+      "expected_section": "HIR-024",
+      "top_3": [
+        "HIR-024",
+        "HIR-032",
+        "HIR-031"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Colorado January 1 2027",
+      "expected_section": "HIR-026",
+      "top_3": [
+        "HIR-026",
+        "HIR-033",
+        "HIR-029"
+      ],
+      "pass": true
+    },
+    {
+      "query": "curriculum vitae CV academic",
+      "expected_section": "HIR-009",
+      "top_3": [
+        "HIR-003",
+        "HIR-035",
+        "HIR-009"
+      ],
+      "pass": true
+    },
+    {
+      "query": "pre-offer disability medical examinations",
+      "expected_section": "HIR-020",
+      "top_3": [
+        "HIR-020",
+        "HIR-003",
+        "HIR-033"
+      ],
+      "pass": true
+    },
+    {
+      "query": "I-9 Section 1 work authorization",
+      "expected_section": "HIR-023",
+      "top_3": [
+        "HIR-023",
+        "HIR-022",
+        "HIR-033"
+      ],
+      "pass": true
+    },
+    {
+      "query": "pay transparency salary history",
+      "expected_section": "HIR-025",
+      "top_3": [
+        "HIR-025",
+        "HIR-022",
+        "HIR-030"
+      ],
+      "pass": true
+    },
+    {
+      "query": "RAG chunking metadata source",
+      "expected_section": "HIR-033",
+      "top_3": [
+        "HIR-033",
+        "HIR-002",
+        "HIR-034"
+      ],
+      "pass": true
+    }
+  ],
+  "limits": [
+    "No hosted GPT or agent evaluation.",
+    "No PDF/UA accessibility conformance certification.",
+    "No exhaustive live HTTP link audit; source access depth is recorded separately.",
+    "No independent human legal review.",
+    "Remote persistence and integration are separate checks."
+  ]
+}
