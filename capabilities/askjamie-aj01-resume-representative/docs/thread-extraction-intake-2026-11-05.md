@@ -12,19 +12,19 @@ The reusable method is the product. Demonstrator biographies stay private; buyer
 
 Retain six useful behavior slices: narrative context, adaptive interview practice, skill/value correlation, authentic voice, explanation of documented decisions, and controlled updates. These are design inputs, not six proven agents. Decision explanations use supplied rationale and concise summaries.
 
-## Reusable inputs and existing owners
+## Reusable inputs
 
-| Input | Distinctive requirement | Existing workstream |
-| --- | --- | --- |
-| Evidence and candidate canon | Resolve exact records and all named origins; preserve literal source locators privately, dates, conflicts and qualification uncertainty. Historical assertions are not current verification. | [PR86](https://github.com/OKHP3/askjamie-foundry/pull/86), [PR72](https://github.com/OKHP3/askjamie-foundry/pull/72) |
-| Representative instructions | Disclose AI; distinguish representation from writing in the candidate's voice; keep missing facts unknown. Reuse existing exact-length candidates. | [PR97](https://github.com/OKHP3/askjamie-foundry/pull/97), PR72 |
-| Resume and letter methods | Map requirements to evidence, partial matches and gaps; select a supported fit thesis. Preserve contribution and outcome boundaries. Reuse corrected packages. | PR72, [PR99](https://github.com/OKHP3/askjamie-foundry/pull/99), [PR105](https://github.com/OKHP3/askjamie-foundry/pull/105) |
-| Interview practice | Use truthful STAR/CAR-style stories; adapt question depth; give feedback on observed answers and retest a specific correction. | [PR102](https://github.com/OKHP3/askjamie-foundry/pull/102) |
-| Voice and glossary | Separate source-authored wording, interpretation, guidance and synthetic examples. Preserve context rather than padding entry counts. | [PR101](https://github.com/OKHP3/askjamie-foundry/pull/101) |
-| Research and renewal | Keep representation, resumes, letters, interviews, hiring history, post-pandemic practice and market-value research distinct. | [PR81](https://github.com/OKHP3/askjamie-foundry/pull/81), [PR103](https://github.com/OKHP3/askjamie-foundry/pull/103), [PR104](https://github.com/OKHP3/askjamie-foundry/pull/104) |
-| Phased design | Reuse the existing function, subfunction, knowledge-blueprint and builder-design phases; resume one named phase. | [PR83](https://github.com/OKHP3/askjamie-foundry/pull/83) |
+| Input | Distinctive requirement |
+| --- | --- |
+| Evidence and candidate canon | Resolve exact records and all named origins; preserve literal source locators privately, dates, conflicts and qualification uncertainty. Historical assertions are not current verification. |
+| Representative instructions | Disclose AI; distinguish representation from writing in the candidate's voice; keep missing facts unknown. Reuse existing exact-length candidates. |
+| Resume and letter methods | Map requirements to evidence, partial matches and gaps; select a supported fit thesis. Preserve contribution and outcome boundaries. Reuse corrected packages. |
+| Interview practice | Use truthful STAR/CAR-style stories; adapt question depth; give feedback on observed answers and retest a specific correction. |
+| Voice and glossary | Separate source-authored wording, interpretation, guidance and synthetic examples. Preserve context rather than padding entry counts. |
+| Research and renewal | Keep representation, resumes, letters, interviews, hiring history, post-pandemic practice and market-value research distinct. |
+| Phased design | Reuse the existing function, subfunction, knowledge-blueprint and builder-design phases; resume one named phase. |
 
-These are content-custody references, not new PR-validation assignments or current merge-status claims.
+PR72 retains the candidate-skill integration. Route instruction, reference, voice and interview deltas through the [shared owner map](../../../docs/migrations/thread-extraction-routing-2026-11-05.md#existing-owner-map), rather than maintaining a second PR-status list here.
 
 ## Procedure and boundaries
 
@@ -36,7 +36,6 @@ Renewal retains prior editions, stable sections, dated sources, conflicts, citat
 
 ## Gaps and next handoff
 
-Some historical article tails, dossier variants and design text remain incomplete. Recovered compendium originals and corrected packages are retained privately. An older recovered document does not prove equality with an expanded response. Exact source recovery and custody stay private.
+Private capture records retain any historical article, dossier or design coverage exceptions. Recovered originals and corrected packages remain private. An older document does not prove equality with an expanded response; keep exact source custody and any specific remaining dependency with its owner.
 
 The receiving owner should identify a specific delta against existing work, map it into the current skill procedure/references/output contract, and return the adopted behavior, unresolved dependency and next owner. Use preserved material immediately; do not recreate completed corpora. Product evaluation, host acceptance, publication and retirement remain separate stages.
-

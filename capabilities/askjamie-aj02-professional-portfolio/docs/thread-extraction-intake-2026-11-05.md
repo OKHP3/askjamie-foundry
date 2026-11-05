@@ -25,7 +25,7 @@ Multiply communication through approved explanations and evidence. Describe actu
 
 - [PR80](https://github.com/OKHP3/askjamie-foundry/pull/80): reconcile narrower project-curation wording with the explicit business purpose.
 - [PR72](https://github.com/OKHP3/askjamie-foundry/pull/72): map the corrected alpha and response procedure into the existing skill candidate.
-- [PR85](https://github.com/OKHP3/askjamie-foundry/pull/85), [PR98](https://github.com/OKHP3/askjamie-foundry/pull/98) and [PR91](https://github.com/OKHP3/askjamie-foundry/pull/91): reuse shared packaging, commercial research and migration custody.
+- Use the [shared owner map](../../../docs/migrations/thread-extraction-routing-2026-11-05.md#existing-owner-map) for common methods and migration custody. AJ02-specific build, packaging, marketing and commercial work remains here.
 
 Identify one missing behavior against current work and return its procedure/output mapping, unresolved dependency and receiving owner. These references do not assert current merge status.
 
@@ -33,9 +33,8 @@ Identify one missing behavior against current work and return its procedure/outp
 
 A later assistant claimed the demonstration was the wrong personal product without showing hosted inspection. The corrected business alpha had already been written; that claim does not justify rebuilding it.
 
-Original page attachments, some research dependencies and distinctive images still need private reconciliation. Current/historical site files are candidates, not proof of original attachment identity. Keep incomplete HTML labelled incomplete. Prototype references do not prove corporate authority, factual claims, deployment or reuse rights.
+Keep declared original-page, reference and image exceptions with private source custody. Current/historical site files are candidates, not proof of original attachment identity. Preserve any incomplete artifact label; prototype references do not prove corporate authority, factual claims, deployment or reuse rights.
 
 Portable skills alone do not provide hosting, shared links, retrieval, analytics or permanent memory. Record host-specific behavior and losses separately. Exploratory kit/workshop prices, account prerequisites, completion times and demand remain commercial hypotheses.
 
 Preserve accepted brand assets and source exceptions. Continue from captured methods without duplicating the alpha, opening another repository or waiting for storefront launch. Product and host acceptance remain in the existing conversion workflow.
-
