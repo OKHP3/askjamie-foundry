@@ -28,6 +28,20 @@ jobs:
       artifact_file_count: ${{ steps.release_record.outputs.artifact_file_count }}
       expected_pages_path: ${{ steps.release_record.outputs.expected_pages_path }}
     steps:
+      - name: Record manual release initiator
+        env:
+          RELEASE_ACTOR: ${{ github.actor }}
+        run: |
+          python - <<'PY'
+          import os
+
+          actor = os.environ["RELEASE_ACTOR"]
+          actor = actor.replace("\\", "\\\\").replace("`", "\\`").replace("\n", " ")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+              stream.write("## Pages release request\n\n")
+              stream.write(f"- Started by: `{actor}`\n")
+          PY
+
       - name: Checkout repository
         uses: actions/checkout@v7
 
@@ -52,6 +66,7 @@ jobs:
           export SOURCE_COMMIT
           python scripts/build-public-artifact.py --release-info > "$RUNNER_TEMP/pages-release-info.json"
           python - "$RUNNER_TEMP/pages-release-info.json" <<'PY'
+          from html import escape
           import json
           import os
           import sys
@@ -74,6 +89,13 @@ jobs:
               stream.write(f"- Artifact SHA-256: `{outputs['artifact_sha256']}`\n")
               stream.write(f"- Artifact files: {outputs['artifact_file_count']}\n")
               stream.write(f"- Expected Pages path: `{outputs['expected_pages_path']}`\n")
+              stream.write("\n### Public artifact file checksums\n\n")
+              stream.write("<table><thead><tr><th>Relative path</th><th>SHA-256</th></tr></thead><tbody>\n")
+              for entry in info["files"]:
+                  path = escape(entry["path"], quote=True)
+                  checksum = escape(entry["sha256"], quote=True)
+                  stream.write(f"<tr><td><code>{path}</code></td><td><code>{checksum}</code></td></tr>\n")
+              stream.write("</tbody></table>\n")
           PY
 
       - name: Configure Pages

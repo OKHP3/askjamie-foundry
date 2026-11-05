@@ -242,9 +242,41 @@ async def main() -> None:
                     re.compile(r"Project saved|Saved")
                 )
                 await page.get_by_role("tab", name="Package", exact=True).click()
+                package_warning = (
+                    "This ZIP may contain private project details and source material. "
+                    "After download, the workbench cannot control where you store it or "
+                    "who you share it with."
+                )
+                await expect(page.get_by_text(package_warning, exact=False)).to_be_visible()
+                export_requests = []
+                page.on(
+                    "request",
+                    lambda request: export_requests.append(request.url)
+                    if request.url.endswith("/export")
+                    else None,
+                )
+
+                async def dismiss_export_warning(dialog) -> None:
+                    assert "private project and source content" in dialog.message
+                    assert "cannot control where the file is stored" in dialog.message
+                    assert "who it is shared with" in dialog.message
+                    await dialog.dismiss()
+
+                page.once("dialog", dismiss_export_warning)
+                await page.get_by_role("button", name="Download private ZIP", exact=True).click()
+                assert export_requests == []
+
+                async def accept_export_warning(dialog) -> None:
+                    assert "private project and source content" in dialog.message
+                    assert "cannot control where the file is stored" in dialog.message
+                    assert "who it is shared with" in dialog.message
+                    await dialog.accept()
+
                 async with page.expect_download() as download_info:
+                    page.once("dialog", accept_export_warning)
                     await page.get_by_role("button", name="Download private ZIP", exact=True).click()
                 download = await download_info.value
+                assert len(export_requests) == 1
                 with zipfile.ZipFile(await download.path()) as archive:
                     assert "skills/usability-check/SKILL.md" in archive.namelist()
                     assert json.loads(archive.read("adapters/plan.json"))["installable"] is False
@@ -521,6 +553,44 @@ async def main() -> None:
                 await page.get_by_label("Title").wait_for()
                 await page.get_by_label("Title").fill("Unsaved original remains")
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+
+                keyboard_cancel_prompt: dict[str, str] = {}
+
+                async def dismiss_keyboard_switch(dialog) -> None:
+                    keyboard_cancel_prompt["type"] = dialog.type
+                    keyboard_cancel_prompt["message"] = dialog.message
+                    # Dismissing a native confirm is the browser's Escape/cancel outcome.
+                    await dialog.dismiss()
+
+                page.once("dialog", dismiss_keyboard_switch)
+                await duplicate_row.focus()
+                await expect(duplicate_row).to_be_focused()
+                await duplicate_row.press("Enter")
+                assert (
+                    keyboard_cancel_prompt.get("type") == "confirm"
+                ), keyboard_cancel_prompt
+                assert (
+                    duplicate_title[:50]
+                    in keyboard_cancel_prompt.get("message", "")
+                )
+                assert (
+                    await page.locator(".editor-head h2").inner_text()
+                    == "Unsaved draft stays safe"
+                )
+                assert (
+                    await page.get_by_label("Title").input_value()
+                    == "Unsaved original remains"
+                )
+                assert (
+                    await page.locator(".save-state").inner_text()
+                    == "Unsaved changes"
+                )
+                saved_titles = await page.evaluate(
+                    """async () => (await (await fetch('/api/projects')).json()).projects.map((item) => item.title)"""
+                )
+                assert "Unsaved draft stays safe" in saved_titles, saved_titles
+                assert "Unsaved original remains" not in saved_titles, saved_titles
+
                 page.once("dialog", lambda dialog: dialog.accept())
                 await duplicate_row.click()
                 await page.get_by_label("Title").wait_for()
@@ -550,9 +620,43 @@ async def main() -> None:
                     for project_id, item in race_projects.items()
                     if item["title"] == duplicate_title
                 )
+                delayed_history_path = f"/api/projects/{original_id}/history"
+                delayed_history_url = f"**{delayed_history_path}"
+                history_request_started = asyncio.Event()
+                history_request_finished = asyncio.Event()
+
+                async def delay_first_history(route) -> None:
+                    history_request_started.set()
+                    await asyncio.sleep(0.75)
+                    await route.continue_()
+                    history_request_finished.set()
+
+                await page.route(delayed_history_url, delay_first_history)
+                page.once("dialog", lambda dialog: dialog.accept())
+                await original_row.click()
+                await asyncio.wait_for(history_request_started.wait(), timeout=5)
+                page.once("dialog", lambda dialog: dialog.accept())
+                await duplicate_row.click()
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                await asyncio.wait_for(history_request_finished.wait(), timeout=5)
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                assert (
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                    in await page.locator(".editor-head p").inner_text()
+                )
+                await page.unroute(delayed_history_url, delay_first_history)
+                await page.get_by_label("Title").fill("Unsaved duplicate remains")
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+
                 delayed_project_path = f"/api/projects/{original_id}"
                 delayed_project_url = f"**{delayed_project_path}"
                 delayed_request = {"seen": False}
+                project_request_started = asyncio.Event()
+                project_request_finished = asyncio.Event()
                 failure_mode = {"enabled": False}
                 stale_failure_started = asyncio.Event()
                 stale_failure_finished = asyncio.Event()
@@ -573,8 +677,10 @@ async def main() -> None:
                         stale_failure_finished.set()
                     else:
                         delayed_request["seen"] = True
+                        project_request_started.set()
                         await asyncio.sleep(0.75)
                         await route.continue_()
+                        project_request_finished.set()
 
                 await page.route(delayed_project_url, delay_first_project)
                 race_prompts: list[str] = []
@@ -589,6 +695,7 @@ async def main() -> None:
                 await original_row.focus()
                 await expect(original_row).to_be_focused()
                 await original_row.press("Enter")
+                await asyncio.wait_for(project_request_started.wait(), timeout=5)
                 page.once("dialog", accept_race_dialog)
                 await duplicate_row.focus()
                 await expect(duplicate_row).to_be_focused()
@@ -600,6 +707,7 @@ async def main() -> None:
                 assert delayed_request["seen"]
                 # Wait for the older response too, so a late overwrite fails here.
                 await page.wait_for_load_state("networkidle")
+                await asyncio.wait_for(project_request_finished.wait(), timeout=5)
                 assert len(race_prompts) == 2, race_prompts
                 assert race_prompt_types == ["confirm", "confirm"], race_prompt_types
                 assert "Unsaved draft stays safe" in race_prompts[0], race_prompts
@@ -609,6 +717,46 @@ async def main() -> None:
                     f"revision {race_projects[duplicate_id]['revision']}"
                     in await page.locator(".editor-head p").inner_text()
                 )
+                await page.get_by_label("Title").fill("Unsaved duplicate remains")
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+
+                delayed_request["seen"] = False
+                project_request_started.clear()
+                project_request_finished.clear()
+                space_race_prompts: list[str] = []
+
+                async def accept_space_race_dialog(dialog) -> None:
+                    space_race_prompts.append(dialog.message)
+                    await dialog.accept()
+
+                page.once("dialog", accept_space_race_dialog)
+                await original_row.focus()
+                await expect(original_row).to_be_focused()
+                await original_row.press("Space")
+                await asyncio.wait_for(project_request_started.wait(), timeout=5)
+                page.once("dialog", accept_space_race_dialog)
+                await duplicate_row.focus()
+                await expect(duplicate_row).to_be_focused()
+                await duplicate_row.press("Space")
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                await page.wait_for_load_state("networkidle")
+                await asyncio.wait_for(project_request_finished.wait(), timeout=5)
+                assert delayed_request["seen"]
+                assert len(space_race_prompts) == 2, space_race_prompts
+                assert "Unsaved draft stays safe" in space_race_prompts[0], (
+                    space_race_prompts
+                )
+                assert duplicate_title[:50] in space_race_prompts[1], (
+                    space_race_prompts
+                )
+                assert await page.get_by_label("Title").input_value() == duplicate_title
+                assert (
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                    in await page.locator(".editor-head p").inner_text()
+                )
+
                 await page.get_by_label("Title").fill("Unsaved duplicate remains")
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
                 failure_mode["enabled"] = True

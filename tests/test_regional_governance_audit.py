@@ -5,6 +5,9 @@ from __future__ import annotations
 import copy
 import hashlib
 import importlib.util
+import json
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -63,7 +66,7 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
         )
         self.assertEqual(
             report["mentor_review"]["revision"],
-            "8de1eb212d8db193fd22eb85bf0843f366a0c1a7",
+            "619e942d69cfe535695e609bbb71a50e3bc14c49",
         )
         self.assertEqual(
             report["mentor_review"]["path"],
@@ -94,6 +97,35 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
             report = MODULE.build_report(root)
             self.assertEqual(report["audit"]["status"], "FAIL")
             self.assertTrue(report["protected_client_records"]["violations"])
+
+    def test_invalid_protected_record_identifiers_are_redacted_from_report(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.copy_fixture(tmp)
+            registry_path = root / "registry/index.yaml"
+            data = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
+            protected = next(
+                entry
+                for entry in data["repositories"]
+                if entry.get("family") == "client-overlay"
+            )
+            protected["repo"] = "PRIVATE-CLIENT-ALPHA-REPOSITORY"
+            protected["display_name"] = ["PRIVATE-CLIENT-ALPHA"]
+            registry_path.write_text(yaml.safe_dump(data), encoding="utf-8")
+
+            report = MODULE.build_report(root)
+            serialized = json.dumps(report)
+
+        self.assertEqual(report["audit"]["status"], "FAIL")
+        self.assertNotIn("PRIVATE-CLIENT-ALPHA-REPOSITORY", serialized)
+        self.assertNotIn("PRIVATE-CLIENT-ALPHA", serialized)
+        errors = report["registry"]["canonical_validator_errors"]
+        self.assertTrue(any("repositories." in error and ".repo:" in error for error in errors))
+        self.assertTrue(
+            any(
+                "repositories." in error and ".display_name:" in error
+                for error in errors
+            )
+        )
 
     def test_approval_must_match_scope_and_registry_digest(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -216,6 +248,84 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
             finally:
                 MODULE.MENTOR_REVIEW.clear()
                 MODULE.MENTOR_REVIEW.update(original_mentor_review)
+
+    def test_cli_requires_current_pinned_mentor_revision_and_path(self):
+        registry_digest = hashlib.sha256(
+            (ROOT / "registry/index.yaml").read_bytes()
+        ).hexdigest()
+        approval = {
+            "audit": MODULE.AUDIT_NAME,
+            "scope": MODULE.AUDIT_SCOPE,
+            "adaptation": MODULE.ADAPTATION_ID,
+            "decision": "approve",
+            "owner": "OKHP3",
+            "decided_at": "2026-11-04",
+            "registry_sha256": registry_digest,
+            "mentor_review": self.mentor_binding(),
+            "publication_decision": "not-authorized",
+            "hosting_decision": "not-authorized",
+            "boundary_review": {
+                "reviewed_at": "2026-11-04",
+                "registry_sha256": registry_digest,
+                "controls": {
+                    control: "CONFIRMED"
+                    for control in MODULE.REQUIRED_BOUNDARY_CONTROLS
+                },
+                "residual_limits": ["Downloaded export custody remains external."],
+            },
+        }
+        script = ROOT / "scripts" / "regional-governance-audit.py"
+
+        with tempfile.TemporaryDirectory() as tmp:
+            approval_path = Path(tmp) / "approval.yaml"
+            for field, stale_value in (
+                ("revision", "a" * 40),
+                ("path", "scripts/another-audit.py"),
+            ):
+                with self.subTest(field=field):
+                    stale_approval = copy.deepcopy(approval)
+                    stale_approval["mentor_review"][field] = stale_value
+                    approval_path.write_text(
+                        yaml.safe_dump(stale_approval), encoding="utf-8"
+                    )
+                    result = subprocess.run(
+                        [
+                            sys.executable,
+                            str(script),
+                            "--require-approval",
+                            "--owner-approval",
+                            str(approval_path),
+                        ],
+                        check=False,
+                        capture_output=True,
+                        text=True,
+                    )
+                    report = json.loads(result.stdout)
+
+                    self.assertEqual(result.returncode, 1)
+                    self.assertEqual(report["owner_approval"]["status"], "INVALID")
+                    self.assertIn(
+                        f"mentor_review.{field} does not match the pinned mentor review",
+                        report["owner_approval"]["reason"],
+                    )
+
+            approval_path.write_text(yaml.safe_dump(approval), encoding="utf-8")
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(script),
+                    "--require-approval",
+                    "--owner-approval",
+                    str(approval_path),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            report = json.loads(result.stdout)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(report["owner_approval"]["status"], "APPROVED")
 
     def test_approval_requires_each_boundary_control_to_be_confirmed(self):
         with tempfile.TemporaryDirectory() as tmp:
