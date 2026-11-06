@@ -560,6 +560,79 @@
         ]
       },
       "thread_url": null
+    },
+    "2026-11-05": {
+      "base_commit": "e1074940a47bb3b5a306248ba501e5e9637f0edd",
+      "record_key": "issue-58-aj01-aj02-migration",
+      "thread_id": null,
+      "thread_title": null,
+      "thread_url": null,
+      "archive": {
+        "eligible": false,
+        "attempted": false
+      },
+      "routing": {
+        "AJ01": {
+          "path": "capabilities/askjamie-aj01-resume-representative",
+          "content": "Résumé Representative source, configuration and evaluation evidence. Existing public material linked, not copied."
+        },
+        "AJ02": {
+          "path": "capabilities/askjamie-aj02-professional-portfolio",
+          "content": "Professional Portfolio source and conversion dossier. Candidate content stays with its existing review."
+        },
+        "shared": {
+          "path": "docs/migrations/aj01-aj02-2026-10-19-closeout",
+          "content": "Cross-capability migration and closeout evidence."
+        },
+        "private": "Existing owner evidence home; no private content or locators added to the public repository."
+      },
+      "sources": {
+        "issue58": "https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589",
+        "pr79": "https://github.com/OKHP3/askjamie-foundry/pull/79",
+        "pr79CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42072208407",
+        "pr78": "https://github.com/OKHP3/askjamie-foundry/pull/78",
+        "pr82": "https://github.com/OKHP3/askjamie-foundry/pull/82",
+        "pr72": "https://github.com/OKHP3/askjamie-foundry/pull/72",
+        "pr72CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42064824172",
+        "pr77": "https://github.com/OKHP3/askjamie-foundry/pull/77",
+        "AJ01": "https://github.com/OKHP3/askjamie-foundry/tree/main/capabilities/askjamie-aj01-resume-representative",
+        "AJ02": "https://github.com/OKHP3/askjamie-foundry/tree/main/capabilities/askjamie-aj02-professional-portfolio"
+      },
+      "coverage": {
+        "reviewed": "Accessible thread turns and earlier receipts, existing project records and current GitHub/Windows evidence, previous five rendered Markdown inputs, and one November 5 project prompt copy (113 rendered lines, no more pages). The new copy contains the closeout and routing instructions, not missing source assets or a transcript.",
+        "excluded": "Project-wide pasted prompt copies and adjacent AJ01 closeout reports are not established as exact-thread inputs. The separately titled AJ01 report did not return readable text; it was not used as migration evidence.",
+        "missing": "Exact thread URL/title/ID and material omitted raw history; outstanding GPT originals/revisions. No supported exact-chat history/archive or authenticated editor control exposed."
+      },
+      "confirmed": {
+        "windows_main": "e1074940a47bb3b5a306248ba501e5e9637f0edd",
+        "github_main": "e1074940a47bb3b5a306248ba501e5e9637f0edd",
+        "worktrees": 1,
+        "owner_stashes": 2,
+        "initial_clean": true,
+        "repository_visibility": "public",
+        "pr79_final_head": "88d8cecf72a908e699b958b7141f04ebb6001f2c",
+        "pr79_checks_passed": 4,
+        "pr79_advisory_skipped": "Mermaid Diagram Sync Assistant",
+        "pr79_content_equivalence": "All three closeout files unchanged from 2e5b19b to final head and merge. Exact merge-commit check query returned no jobs; required PR checks are attributed to the final PR head.",
+        "pr78_merge": "67de09bf0568cf8d610a10ee34ff56a0a33dcc54",
+        "pr82_merge": "687f3cf948e5027514e7a3f810f94745c158e85f",
+        "recovered_tip": "33c1a22127ed99abb81e97eb3b7561e4f55bc815",
+        "pr72_head": "0920d5e12b29e8dd02850c91391ce35451b331bc",
+        "pr72_checks_passed": 4,
+        "pr72_state": "draft; no native Replit skill acceptance",
+        "pr77_state": "open; no source privacy edit or history rewrite attempted"
+      },
+      "limits": {
+        "replit": "Connected identity confirmed for AskJamie-FoundRy, deployment status returned found=false. Recorded PR78/82 acceptance applies to their named revisions only. Current live checkout, main parity, runtime, selected mode, task55 and active workers are not verified. No Replit dispatch.",
+        "windows_siblings": "Previous managed access denial remains the recorded boundary; no bypass or repeat. Child Repl accepted loss is not a Windows-state disposition.",
+        "external_release": "Pages remains manually dispatched. No deployment in scope or triggered by the documentation PR.",
+        "governance": "PR78 and PR82 record Jamie's narrow approval for the private, local, read-only audit method. No publication, hosting, broader governance or unrelated merge authority follows."
+      },
+      "validation": {
+        "LOCAL_SOURCE_CHECKS": "Fresh Windows verification passed for both unchanged source tree IDs, 873 actual indexed payloads and both ZIP restores, manifest, registry, recovered Replit ancestry and PR79 content equivalence. Existing canonical route files and paths were inspected. Final document checks and exact-head CI are recorded in the maintained issue receipt.",
+        "pass_b": "Independent reviewer verified routing, PR states, recorded Replit preservation versus live-runtime limits, and challenged the dated continuation. Final review outcome and CI are recorded in the maintained issue receipt."
+      },
+      "skillz_pin": "1038229118c00a86ff67010c6d68ae84975a5cf2"
     }
   }
 }
