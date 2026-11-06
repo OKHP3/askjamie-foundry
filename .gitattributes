@@ -9,3 +9,6 @@
 
 # Preserve every byte inspected by the project-source intake gate.
 /docs/project-sources/** -text -ident -filter
+
+# Preserve the archived AJ01 instruction candidate's exact UTF-8 byte count.
+/capabilities/askjamie-aj01-resume-representative/docs/thread-closeout-instruction-prompt-2025-11-16/instructions.txt -text -ident -filter
