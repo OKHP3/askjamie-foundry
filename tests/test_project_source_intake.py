@@ -22,9 +22,20 @@ def digest(payload):
     return hashlib.sha256(payload).hexdigest()
 
 
+def verify_public_bytes(payload):
+    checksum = digest(payload)
+    if checksum in EXCLUDED_SHA256:
+        raise ValueError("Excluded source bytes are present in public intake")
+    return checksum
+
+
 def verify_batch(batch):
     """Fail closed on missing, modified, unlisted or uncleared attachments."""
-    manifest_bytes = (batch / "manifest.json").read_bytes()
+    manifest_path = batch / "manifest.json"
+    if manifest_path.is_symlink():
+        raise ValueError("Source intake cannot contain symlinks")
+    manifest_bytes = manifest_path.read_bytes()
+    verify_public_bytes(manifest_bytes)
     manifest = json.loads(manifest_bytes)
     grandfathered = (
         batch.name == BASELINE_BATCH
@@ -62,12 +73,12 @@ def verify_batch(batch):
             continue
         relative = path.relative_to(batch)
         name = relative.as_posix()
-        if name in {"README.md", "manifest.json"}:
+        if name == "manifest.json":
             continue
         payload = path.read_bytes()
-        checksum = digest(payload)
-        if checksum in EXCLUDED_SHA256:
-            raise ValueError("Excluded source bytes are present in public intake")
+        checksum = verify_public_bytes(payload)
+        if name == "README.md":
+            continue
         if len(relative.parts) == 2 and relative.parts[0] == "thread-extracts" and path.suffix == ".md":
             continue
         actual[name] = (len(payload), checksum)
@@ -81,6 +92,8 @@ class ProjectSourceIntakeTests(unittest.TestCase):
         self.assertTrue((INTAKE_ROOT / BASELINE_BATCH).is_dir())
         for batch in sorted(INTAKE_ROOT.iterdir()):
             if batch.name == "README.md":
+                self.assertTrue(batch.is_file() and not batch.is_symlink())
+                verify_public_bytes(batch.read_bytes())
                 continue
             self.assertTrue(batch.is_dir() and not batch.is_symlink())
             with self.subTest(batch=batch.name):
@@ -106,6 +119,12 @@ class ProjectSourceIntakeTests(unittest.TestCase):
             with patch(__name__ + ".EXCLUDED_SHA256", {sha}):
                 with self.assertRaisesRegex(ValueError, "Excluded source bytes"):
                     verify_batch(batch)
+            readme = batch / "README.md"
+            readme.write_bytes(b"excluded metadata fixture\n")
+            with patch(__name__ + ".EXCLUDED_SHA256", {digest(readme.read_bytes())}):
+                with self.assertRaisesRegex(ValueError, "Excluded source bytes"):
+                    verify_batch(batch)
+            readme.unlink()
             source.write_bytes(b"modified fixture\n")
             with self.assertRaisesRegex(ValueError, "do not match"):
                 verify_batch(batch)
