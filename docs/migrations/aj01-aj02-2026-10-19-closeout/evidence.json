@@ -587,6 +587,9 @@
         "private": "Existing owner evidence home; no private content or locators added to the public repository."
       },
       "evidence_index": {
+        "COVERAGE": "evidence.json#/revalidations/2026-11-05/coverage",
+        "VALIDATION": "evidence.json#/revalidations/2026-11-05/validation",
+        "LOCAL_SOURCE_CHECKS": "evidence.json#/revalidations/2026-11-05/validation/LOCAL_SOURCE_CHECKS",
         "ISSUE58": "https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589",
         "PR79": "https://github.com/OKHP3/askjamie-foundry/pull/79",
         "PR79_CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42072208407",
