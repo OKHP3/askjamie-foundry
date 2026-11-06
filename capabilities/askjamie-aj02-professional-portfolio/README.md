@@ -2,7 +2,11 @@
 
 Public child capability of AskJamie FoundRy.
 
-Curate supplied projects and artifacts into an evidence-based portfolio story.
+Help solo founders and small organizations present their services, methods,
+capabilities, and supporting evidence to prospective clients and partners.
+It is a force multiplier for a small business, not an individual resume.
+Present real capacity clearly without inventing staff, clients, results,
+credentials or other evidence.
 
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 481 files and 1,880,192 bytes,
