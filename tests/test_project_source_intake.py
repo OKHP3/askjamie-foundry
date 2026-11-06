@@ -37,13 +37,20 @@ def verify_batch(batch):
     manifest_bytes = manifest_path.read_bytes()
     verify_public_bytes(manifest_bytes)
     manifest = json.loads(manifest_bytes)
+    if not isinstance(manifest, dict):
+        raise ValueError("Intake manifest must be a JSON object")
     grandfathered = (
         batch.name == BASELINE_BATCH
         and digest(manifest_bytes.replace(b"\r\n", b"\n")) == BASELINE_MANIFEST_SHA256
     )
     inventory = {}
     for key, directory in COLLECTIONS.items():
-        for item in manifest[key]["files"]:
+        section = manifest.get(key)
+        if not isinstance(section, dict) or not isinstance(section.get("files"), list):
+            raise ValueError(f"Intake manifest requires a files list for {key}")
+        for item in section["files"]:
+            if not isinstance(item, dict) or not isinstance(item.get("stored_path"), str):
+                raise ValueError(f"Intake manifest contains an invalid {key} attachment")
             name = item["stored_path"]
             relative = PurePosixPath(name)
             if (
@@ -52,16 +59,24 @@ def verify_batch(batch):
                 or "\\" in name
             ):
                 raise ValueError("Invalid attachment path")
-            identity = (item["bytes"], item["sha256"])
+            size, checksum = item.get("bytes"), item.get("sha256")
+            if (
+                type(size) is not int or size < 0
+                or not isinstance(checksum, str) or len(checksum) != 64
+                or any(character not in "0123456789abcdef" for character in checksum)
+            ):
+                raise ValueError("Attachment requires a valid byte count and SHA-256")
+            identity = (size, checksum)
             if inventory.setdefault(name, identity) != identity:
                 raise ValueError("Conflicting attachment identities")
             if not grandfathered:
                 review = item.get("public_review", {})
                 if (
-                    review.get("decision") != "approved"
+                    not isinstance(review, dict)
+                    or review.get("decision") != "approved"
                     or not isinstance(review.get("reviewer"), str)
                     or not review["reviewer"].strip()
-                    or review.get("reviewed_sha256") != item["sha256"]
+                    or review.get("reviewed_sha256") != checksum
                 ):
                     raise ValueError("Attachment lacks a review bound to its SHA-256")
 
@@ -110,6 +125,9 @@ class ProjectSourceIntakeTests(unittest.TestCase):
             row = {"stored_path": "files/fixture.md", "bytes": source.stat().st_size, "sha256": sha}
             manifest = {"project_files": {"files": [row]}, "thread_image_inputs": {"files": []}}
             manifest_path = batch / "manifest.json"
+            manifest_path.write_text("{}", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "requires a files list"):
+                verify_batch(batch)
             manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "lacks a review"):
                 verify_batch(batch)
