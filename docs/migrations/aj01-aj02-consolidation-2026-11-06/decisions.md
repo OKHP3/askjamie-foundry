@@ -48,9 +48,20 @@ provenance; none is silently activated, relicensed or published.
    [PR102](https://github.com/OKHP3/askjamie-foundry/pull/102), rather than create
    another interview corpus.
 
+The [prepared coverage cases](coverage-cases.json) make these two decisions
+reviewable: buyer qualification, truth-preserving objection handling and
+role-specific interview-answer ownership. All examples are synthetic. Each has
+four expectations tied to the source requirement, candidate boundary and supplied
+fictional facts. Cases remain `NOT RUN`; a desk review is not model behavior.
+The receiving owner can accept or explicitly retire a case with rationale while
+all original source content remains preserved.
+
 The candidate comparison used PR72 head
 `4c007076f16c1132e42fc7d38e45f3282f497e4d`, with AJ01 blob
 `841d11598da6298064dbb1e0362e020881cdefbb` and AJ02 blob
 `81f11c69ddd06907a6818a2859ebf073204677b4`. These are review-branch inputs,
-not merged-main products. The receiving tasks retain ownership. These decisions
+not merged-main products. The interview reference is pinned to PR102 head
+`7aa88382fea0d270e1fae7b736379b554295a7bb`, blob
+`62bc060d2f894eaa3ae9ca3df379c8e05b247904`, with stable AJI section pointers.
+The receiving tasks retain ownership. These decisions
 are source-to-product traceability work, not blockers on preserving source bytes.

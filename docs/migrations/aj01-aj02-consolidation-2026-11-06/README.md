@@ -48,7 +48,11 @@ The existing private Foundry Library folder confirmed the 5,885,082-byte package
 was saved. Local archive SHA-256 is
 `c67e67711ee59699242ca31b94cc1e75a90b8112fb4d3f6e2401c7b03a27d1ae`.
 The supported download failed in this cloud environment before producing a
-readback file. Remote byte equality is therefore `BLOCKED`, not verified.
+readback file. A fresh supported transfer exposed the cause:
+`URLError: OSError: Tunnel connection failed: 403 Forbidden` at the cloud proxy.
+The file resolved successfully and reported no unavailable items. No retry or
+alternate transfer was attempted after that policy denial. Remote byte equality
+is therefore `BLOCKED`, not verified.
 Keep both the verified local recovery and the original source repositories
 until that custody check is resolved or explicitly accepted by the custodian.
 
@@ -80,9 +84,12 @@ its 17 knowledge documents, AJ02's supplier/business representation, and its
 three build seeds as distinct inputs. Matching titles and different export
 formats are not enough to discard a source edition.
 
-Existing candidate and reference branches retain their owners. This packet
-identifies two small receiving-owner decisions rather than creating replacement
-corpora or editing their branches. Public custody is different from accepted
+Existing candidate and reference branches retain their owners. The
+[coverage-case contract](coverage-cases.json) translates the two receiving-owner
+decisions into three synthetic cases with four observable expectations each.
+Those cases are prepared for review and have not been executed against a model.
+No replacement corpus or change to another owner's branch is introduced.
+Public custody is different from accepted
 product behavior, current research, cleared rights and native host execution.
 
 ## Reproduce and finish the repository move
@@ -105,6 +112,18 @@ identities before deciding source archival. Any changed ref requires a delta
 comparison. Retain recovery and original repositories through that decision.
 GitHub repository archival is a separate, exact-target action. Deletion is not
 proposed. No repository, GPT, website or local workspace is retired here.
+
+The accepted PR72 integration owner is established by the
+[AJ01 workstream's explicit acceptance](https://github.com/OKHP3/askjamie-foundry/pull/72#issuecomment-6671604667)
+and [current checkpoint](https://github.com/OKHP3/askjamie-foundry/pull/72#issuecomment-6671696555).
+The older pending-handoff language in that PR's description is historical.
+AJ02 retains its review responsibilities. Main remains protected and requires
+the supported-Python check. Green checks do not authorize this draft's merge.
+
+The smallest custody step is a supported download in an environment permitted
+to reach the Library transfer destination. This cloud needs an approved network
+configuration change before another transfer attempt. No wider access, new
+upload, source rewrite or source retirement is needed to perform that check.
 
 ## Scope limits and known defects
 

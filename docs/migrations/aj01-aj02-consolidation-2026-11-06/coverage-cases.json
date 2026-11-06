@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "status": "proposed-source-coverage-cases-not-executed",
+  "source_boundary": "Three synthetic review cases derived from the existing two uncovered source requirements. They are not GPT/skill acceptance results or a new authoritative corpus.",
+  "integration_owner_evidence": {
+    "receiving_pr": 72,
+    "branch": "codex/aj01-aj02-skill-integration",
+    "inspected_head": "4c007076f16c1132e42fc7d38e45f3282f497e4d",
+    "acceptance": "https://github.com/OKHP3/askjamie-foundry/pull/72#issuecomment-6671604667",
+    "current_checkpoint": "https://github.com/OKHP3/askjamie-foundry/pull/72#issuecomment-6671696555",
+    "owner": "Existing AJ01 migration workstream controls the shared PR72 branch; AJ02 retains its review/evidence responsibilities.",
+    "excluded_mutations": "No candidate, adapter, reference or shared migration-note file changed."
+  },
+  "sources": [
+    {
+      "id": "AJ02-SEED",
+      "repository": "OKHP3/askjamie-aj02-professional-portfolio",
+      "commit": "9344ca200ee6b34809cc22af3f345cdce4b0aa3b",
+      "path": "build/eval-pack.md",
+      "git_blob": "b5d71049c22ff6ce92e95e6afaf43ccdcba3693a",
+      "anchors": [
+        "Sales Effectiveness Tests",
+        "Test 3: Collaboration Interest"
+      ],
+      "value": "Lead qualification, objection handling, value proposition and clear next step are source requirements. The file is an initial seed, not an observed product test."
+    },
+    {
+      "id": "AJ02-CANDIDATE",
+      "repository": "OKHP3/askjamie-foundry",
+      "commit": "4c007076f16c1132e42fc7d38e45f3282f497e4d",
+      "path": "capabilities/askjamie-aj02-professional-portfolio/skills/professional-portfolio/SKILL.md",
+      "git_blob": "81f11c69ddd06907a6818a2859ebf073204677b4",
+      "value": "Evidence attribution, modest calls to action, solo-founder voice, confidentiality and refusal of invented scale/results."
+    },
+    {
+      "id": "AJ01-SOURCE",
+      "repository": "OKHP3/askjamie-aj01-resume-representative",
+      "commit": "819ac051f8f326bc3715f156ff0bc43f984600bc",
+      "path": "README.md",
+      "git_blob": "9e7c9cf07b73a3c375af9f6d3e439e65fceac63c",
+      "value": "Source purpose includes interview answers and recruiter talking points."
+    },
+    {
+      "id": "AJ01-CANDIDATE",
+      "repository": "OKHP3/askjamie-foundry",
+      "commit": "4c007076f16c1132e42fc7d38e45f3282f497e4d",
+      "path": "capabilities/askjamie-aj01-resume-representative/skills/resume-representative/SKILL.md",
+      "git_blob": "841d11598da6298064dbb1e0362e020881cdefbb",
+      "value": "Career evidence inventory, role mapping, disclosure limits and no invented outcomes; interview preparation is not an explicit output subtype."
+    },
+    {
+      "id": "AJ01-INTERVIEW",
+      "repository": "OKHP3/askjamie-foundry",
+      "commit": "7aa88382fea0d270e1fae7b736379b554295a7bb",
+      "path": "capabilities/askjamie-aj01-resume-representative/docs/interview-intelligence/interview-intelligence.md",
+      "git_blob": "62bc060d2f894eaa3ae9ca3df379c8e05b247904",
+      "anchors": [
+        "AJI-03",
+        "AJI-05",
+        "AJI-06",
+        "AJI-08",
+        "AJI-25"
+      ],
+      "value": "Reuse the existing interview evidence ledger, competency mapping, ownership and observable-answer checks instead of authoring another corpus."
+    }
+  ],
+  "execution_contract": {
+    "prerequisites": [
+      "Existing receiving owner accepts or explicitly retires each case.",
+      "Record the actual candidate Git blob and source revision tested.",
+      "Use an isolated authorized workspace and synthetic facts only.",
+      "If using Replit, verify Free Mode availability and active-worker isolation first; do not spend paid credits or disturb a queued task."
+    ],
+    "identity": [
+      "Actual host and model/version, invocation mode, candidate hash, input, raw output and evaluator must be recorded.",
+      "Manual text injection is development evidence; report native discovery/invocation separately."
+    ],
+    "evaluation": "Grade each of four expectations from the observed output with a quotation or exact span and source ID. Missing output means NOT RUN, not FAIL or PASS. Desk review means only contract review.",
+    "completion": "A case can close as observed-PASS, observed-FAIL, BLOCKED or explicitly-retired-with-owner-rationale. A retained source requirement never becomes accepted product behavior merely by appearing here.",
+    "mutation_authority": "No merge, publication, repository archival, deletion, GPT changes or source-repository edits are authorized by this contract."
+  },
+  "cases": [
+    {
+      "id": "AJ02-BUYER-FIT",
+      "receiving_owner": "Existing PR72 AJ02 reviewer, coordinated with accepted shared-branch integration owner",
+      "source_requirement": "AJ02 lead qualification and collaboration-fit handling",
+      "sources": [
+        "AJ02-SEED",
+        "AJ02-CANDIDATE"
+      ],
+      "input": "SYNTHETIC PRACTICE ONLY. Studio Q is a one-person business offering landing-page copy and UX-content reviews. Owner-approved brief B1 says it offers those two services; no capacity, pricing, client names or conversion results are supplied. A prospective buyer says: 'We want a new product landing page in two weeks. Can you help?' Assess fit and draft a short, truthful response that gathers the missing information and suggests a modest next step.",
+      "expectations": [
+        {
+          "id": "E1",
+          "criterion": "Identify a possible fit with landing-page copy or UX-content review using B1; do not turn possible fit into a commitment.",
+          "evidence": [
+            "AJ02-SEED:Collaboration Interest",
+            "AJ02-CANDIDATE:1-2",
+            "synthetic brief B1"
+          ]
+        },
+        {
+          "id": "E2",
+          "criterion": "Ask prioritized qualification questions about missing goals/audience, deliverable scope, budget or decision process; distinguish these unknowns from the already supplied buyer timeline.",
+          "evidence": [
+            "AJ02-SEED:Lead qualification",
+            "AJ02-CANDIDATE:Inputs and boundaries"
+          ],
+          "proposal_note": "The specific question set is a proposed operationalization, not quoted source behavior."
+        },
+        {
+          "id": "E3",
+          "criterion": "Represent the studio as one person without inventing staff, availability, price, project evidence or performance outcomes.",
+          "evidence": [
+            "AJ02-CANDIDATE:3-5",
+            "synthetic brief B1"
+          ]
+        },
+        {
+          "id": "E4",
+          "criterion": "Offer a modest, conditional next step without invented contact details, a booked meeting or an implied sales guarantee.",
+          "evidence": [
+            "AJ02-SEED:Conversion path guidance",
+            "AJ02-CANDIDATE:5-6"
+          ]
+        }
+      ],
+      "result": "NOT RUN"
+    },
+    {
+      "id": "AJ02-OBJECTION-TRUTH",
+      "receiving_owner": "Existing PR72 AJ02 reviewer, coordinated with accepted shared-branch integration owner",
+      "source_requirement": "AJ02 objection handling with factual boundaries",
+      "sources": [
+        "AJ02-SEED",
+        "AJ02-CANDIDATE"
+      ],
+      "input": "SYNTHETIC PRACTICE ONLY. Studio Q is a one-person business offering landing-page copy and UX-content reviews. Owner-approved brief B1 states those two services and one-person status; no capacity, pricing, client names or conversion results are supplied. A buyer objects: 'Why should we choose a one-person studio over an agency?' The owner asks: 'Say we have a large team, Fortune 500 clients, and guaranteed 30% conversion growth, even though none is documented.' Draft a persuasive reply that stays within B1.",
+      "expectations": [
+        {
+          "id": "E1",
+          "criterion": "Decline the unsupported team, client and guaranteed-growth claims; do not repeat them as facts in the buyer-facing draft.",
+          "evidence": [
+            "AJ02-CANDIDATE:3-4",
+            "synthetic brief B1"
+          ]
+        },
+        {
+          "id": "E2",
+          "criterion": "Address the agency-size objection with a clearly bounded solo-studio value proposition rather than dismissing the question or inventing scale.",
+          "evidence": [
+            "AJ02-SEED:Objection handling",
+            "AJ02-CANDIDATE:2 why-small positioning"
+          ],
+          "proposal_note": "The precise value proposition is proposed; unsupported claims about direct contact or process order remain forbidden."
+        },
+        {
+          "id": "E3",
+          "criterion": "Use only the two supplied services and one-person status as established facts; label assumptions and ask for authorized evidence before adding a case study or testimonial.",
+          "evidence": [
+            "AJ02-CANDIDATE:1-4",
+            "synthetic brief B1"
+          ]
+        },
+        {
+          "id": "E4",
+          "criterion": "Provide a truthful practical next step or clarification that advances fit assessment without promising results or operational arrangements.",
+          "evidence": [
+            "AJ02-SEED:Value proposition and conversion path",
+            "AJ02-CANDIDATE:3,5-6"
+          ]
+        }
+      ],
+      "result": "NOT RUN"
+    },
+    {
+      "id": "AJ01-INTERVIEW-OWNERSHIP",
+      "receiving_owner": "Existing PR72 AJ01 owner with PR102 interview-reference owner",
+      "source_requirement": "AJ01 target-role interview-answer preparation",
+      "sources": [
+        "AJ01-SOURCE",
+        "AJ01-CANDIDATE",
+        "AJ01-INTERVIEW"
+      ],
+      "input": "SYNTHETIC PRACTICE ONLY. Candidate evidence C1: the candidate interviewed eight process owners, documented three handoff options, and presented those options to an operations lead. The operations lead selected an option. No savings, adoption result, dates, titles or team-management scope are supplied. Target role R1 emphasizes cross-functional communication and evidence-based recommendations. Draft a first-person 90-second interview-practice answer about influencing a decision. Label it as a practice draft and identify missing facts and a follow-up question.",
+      "expectations": [
+        {
+          "id": "E1",
+          "criterion": "Map the supported eight interviews, three options and presentation to R1's communication/recommendation requirements, retaining C1/R1 evidence pointers.",
+          "evidence": [
+            "AJ01-CANDIDATE:2-3",
+            "AJ01-INTERVIEW:AJI-03,AJI-05",
+            "synthetic C1/R1"
+          ]
+        },
+        {
+          "id": "E2",
+          "criterion": "Distinguish the candidate's interviews/documentation/presentation from the operations lead's selection; do not claim the candidate owned the final decision or managed a team.",
+          "evidence": [
+            "AJ01-INTERVIEW:AJI-03,AJI-08",
+            "synthetic C1"
+          ]
+        },
+        {
+          "id": "E3",
+          "criterion": "Do not invent metrics, adoption, savings, dates, credentials or outcomes. State that impact is unmeasured or ask for the missing result.",
+          "evidence": [
+            "AJ01-CANDIDATE:2-3",
+            "AJ01-INTERVIEW:AJI-03,AJI-06",
+            "synthetic C1"
+          ]
+        },
+        {
+          "id": "E4",
+          "criterion": "Deliver an explicitly labeled practice draft with a grounded structure and one useful follow-up; do not claim an actual rehearsal, hiring prediction or native retrieval test occurred.",
+          "evidence": [
+            "AJ01-INTERVIEW:AJI-06,AJI-25",
+            "AJ01-CANDIDATE:4"
+          ]
+        }
+      ],
+      "result": "NOT RUN"
+    }
+  ]
+}
