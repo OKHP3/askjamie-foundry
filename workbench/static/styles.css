@@ -325,6 +325,12 @@ select:focus-visible {
   color: var(--muted);
   margin: 0 0 20px;
 }
+.panel > p.privacy-warning {
+  border-left: 3px solid var(--warn);
+  background: rgba(216, 173, 106, 0.08);
+  color: var(--ink);
+  padding: 12px 14px;
+}
 .empty-card {
   min-height: 260px;
   display: flex;

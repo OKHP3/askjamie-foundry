@@ -360,5 +360,279 @@
     "version_control": "Existing PR70 on intended remote; corrected substantive checkpoint71e5e2f exact bytes and all4 CI jobs verified. Final receipt-only revision will be checked in the same PR.",
     "archive": "Not attempted; mandatory holds and dependent Replit tasks remain, exact identity/control unavailable.",
     "continuation": "Supply exact conversation URL/title and missing transcript/readable three Markdown inputs; recover both owner-visible GPT source/knowledge packages or restore supported editor access. Then coordinate task54/state preservation and resume only approved scope."
+  },
+  "revalidations": {
+    "2026-11-04": {
+      "disposition": "BLOCKED - NOT READY TO ARCHIVE",
+      "base_commit": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+      "record_key": "issue-58-aj01-aj02-migration",
+      "thread_id": null,
+      "thread_title": null,
+      "evidence_index": {
+        "HISTORICAL": "The October 27 sections of these same files, merged unchanged in PR70.",
+        "ISSUE58": "https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589",
+        "REPLIT_CLAIM": "https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6632546997",
+        "PR70": "https://github.com/OKHP3/askjamie-foundry/pull/70",
+        "PR71": "https://github.com/OKHP3/askjamie-foundry/pull/71",
+        "PR72": "https://github.com/OKHP3/askjamie-foundry/pull/72",
+        "PR73": "https://github.com/OKHP3/askjamie-foundry/pull/73",
+        "PR74": "https://github.com/OKHP3/askjamie-foundry/pull/74",
+        "PR76": "https://github.com/OKHP3/askjamie-foundry/pull/76",
+        "PR77": "https://github.com/OKHP3/askjamie-foundry/pull/77",
+        "PR78": "https://github.com/OKHP3/askjamie-foundry/pull/78",
+        "SNAPSHOTS": "November 4 fresh Windows snapshot integrity and ZIP restore, checks below.",
+        "AJ01_DELTA": "https://github.com/OKHP3/askjamie-aj01-resume-representative/compare/b8e2ea732a6b039198acfb8f00118b26ad65cba3...819ac051f8f326bc3715f156ff0bc43f984600bc",
+        "WINDOWS": "Read-only Windows Git and access checks below.",
+        "REPLIT": "Connected project metadata and scope limitations below.",
+        "COVERAGE": "November 4 coverage section below.",
+        "PASS_A": "November 4 mechanical and integration evidence below.",
+        "PASS_B": "Independent review of current records, scope, competing work, and final continuation; see maintained issue receipt."
+      },
+      "coverage": {
+        "reviewed": [
+          "Available thread turns and historical summary; earlier raw pre-compaction tool history is not complete.",
+          "Original October 27 package and private provenance receipt; all seven available issue58 comments at initial review, current linked PRs and subsequent reconciliation/disposition/capture documents.",
+          "All five pasted Markdown attachments via full rendered text (118, 118, 118, 136 and 129 lines; no pagination remaining). Three old copies have identical rendered content, not asserted identical raw bytes. New copies contain procedural instructions; latest direct user message controls.",
+          "Earlier Explorer attachment OCR/application text and discovery packet evidence reused; original assets retained in the existing private home. No fresh pixel or raw binary read claimed."
+        ],
+        "missing": [
+          "Exact conversation ID/title/URL and complete raw pre-compaction history. Supported exact-thread context search returned no authoritative identity or full transcript.",
+          "No supported authenticated owner-editor or exact-chat archive control exposed to this execution. Playwright CLI was not installed; no alternate session bypass was attempted.",
+          "October 29 raw private GPT capture files, original knowledge attachments, and child-history bundle bytes were not independently opened in this review. PR74 and PR71/73 are scoped source reports, not independent inspection of those private artifacts.",
+          "Targeted search in the project evidence home and Library did not locate the October 29 private originals. Do not infer they were lost."
+        ],
+        "attachment_read_status": "complete for the five rendered Markdown inputs, not a lossless transcript"
+      },
+      "current_state": {
+        "windows": {
+          "branch": "main",
+          "head": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "remote": "OKHP3/askjamie-foundry",
+          "remote_main_matches": true,
+          "initial_clean": true,
+          "worktrees": 1,
+          "owner_stashes_preserved": 2,
+          "sibling_checkout_check": "permission denied for both; no bypass"
+        },
+        "github": {
+          "main": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "pr70_merge": "64abb112fa762773385ff17c0ef647c9f6c94f75",
+          "pr70_head": "e6b0628c5645a5de7b793b15b6bc3ea2c539a548",
+          "pr72_draft": "065d859ba6a44e1ef68ebb6ced1d7c38f5699023",
+          "pr77_open": "a9009ebb150a8344545a6972f54222eba98eb3e2",
+          "pr78_draft": "88c2bcb43ef2508db70f758c96ed61a618569792"
+        },
+        "replit": {
+          "project": "AskJamie-FoundRy",
+          "project_url": "https://replit.com/t/askjamie/repls/AskJamie-FoundRy",
+          "identity": "confirmed by connected metadata",
+          "publish_status": "No deployment returned by the connected status check; this does not test workspace runtime.",
+          "prior_main_receipt": "7acadb364eca20b05a3dda6e934673b5ba54b60b",
+          "prior_main_divergence": "13 ahead/0 behind at receipt; not asserted current",
+          "review_branch_report": "PR78 reports review branch at 88c2bcb with 0/0 divergence; local and remote Git records corroborate commit preservation, not live Replit checkout.",
+          "live_checkout": "unknown",
+          "workers": "unknown; task54 cancellation reported by issue receipt; do not infer no active worker",
+          "mode": "current selected Free Mode unknown; prior PR72 Free Mode checks are historical",
+          "dispatch": "not run; no agent dispatch or billing action before verifying mode",
+          "task55": "Last known pending GPT capture in October 27 receipt; current task status unverified. Later capture evidence is not a verified task close."
+        },
+        "archive": {
+          "eligible": false,
+          "attempted": false
+        }
+      },
+      "claim_boundaries": [
+        {
+          "claim": "PR73 records accepted loss only for deleted child Repl local/platform state.",
+          "tier": "confirmed as recorded decision; deletion reported",
+          "evidence": "PR73",
+          "consequence_if_false": "Would overstate permissible loss or decommissioning.",
+          "next_check": "Do not apply that decision to other surfaces."
+        },
+        {
+          "claim": "Both deployed GPT catalogs have partial source evidence.",
+          "tier": "confirmed existence of reports and public AJ01 capture; private bytes and current owner editor unknown",
+          "evidence": "PR74, PR76",
+          "consequence_if_false": "A candidate could be misrepresented as a full export.",
+          "next_check": "Get missing originals and revision/field coverage, or scoped accepted exceptions."
+        },
+        {
+          "claim": "PR78 is reviewable; three-way main and runtime parity are not verified.",
+          "tier": "confirmed GitHub check/branch; live Replit unknown",
+          "evidence": "PR78 and REPLIT_CLAIM",
+          "consequence_if_false": "Could sync over unique or actively owned work.",
+          "next_check": "Assigned owner resolves decision provenance, then verifies live checkout/mode/workers and protected integration."
+        }
+      ],
+      "checks": [
+        {
+          "name": "Windows snapshot integrity and archive restore",
+          "revision": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "status": "PASS",
+          "details": "Existing verify-source-snapshots.py --restore-check under installed Python 3.14.0rc1; AJ01 392 files / 2013468 bytes / c81f19ea464c4a09e911c2c993db080b661dddd6; AJ02 481 files / 1880192 bytes / 23d58eda7f15273918db1adc9bc8e3ac70edbaf8."
+        },
+        {
+          "name": "Manifest and registry",
+          "revision": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "status": "PASS",
+          "details": "Existing validate-manifest.py and check-registry.py passed locally."
+        },
+        {
+          "name": "PR78 snapshot paths and exact-head CI",
+          "revision": "88c2bcb43ef2508db70f758c96ed61a618569792",
+          "status": "PASS",
+          "details": "Independent Git tree comparison: both original snapshot trees identical to main; all five GitHub jobs passed. Replit runtime reports in PR78 apply only to the versions they name.",
+          "runs": [
+            41846160114,
+            41846160259
+          ]
+        },
+        {
+          "name": "AJ01 v3 instructions custody",
+          "revision": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "status": "PASS",
+          "details": "Public instruction-file SHA-256 matches the full local-byte hash and the abbreviated PR76 capture receipt. This checks captured bytes, not current editor or full knowledge."
+        },
+        {
+          "name": "Windows sibling unique state",
+          "status": "BLOCKED",
+          "details": "Read-only Git inspection returned permission denied. No access bypass."
+        },
+        {
+          "name": "Current Replit Free Mode, checkout, active workers and runtime",
+          "status": "NOT RUN",
+          "details": "Read-only connector metadata has none of those fields; no connected UI control. No paid or unverifiable dispatch."
+        },
+        {
+          "name": "Current public site runtime, fresh GPT/host eval, archive",
+          "status": "NOT RUN",
+          "details": "Public fetch yielded no usable observation; retained earlier routing acceptance. No authenticated GPT access, no eligible host rerun, no archive attempt."
+        },
+        {
+          "name": "Prior PR70 integration and Replit source ancestry",
+          "status": "PASS",
+          "revision": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "details": "Git diff confirms exact equivalence for all five PR70 files between reviewed e6b0628 and merge 64abb11; local graph confirms 7acadb3 is ancestor of PR78 head 88c2bcb and 13 ahead/0 behind the named base."
+        },
+        {
+          "name": "Captured child .replit originals",
+          "status": "PASS",
+          "revision": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "details": "Both Windows payloads are 120 bytes; their SHA-256 values match the historical issue58 receipt. No runtime activation is inferred."
+        },
+        {
+          "name": "Independent review and corrective loop",
+          "status": "PASS",
+          "revision": "130d55b42b1e8212dac8ab912fbe5375f1c17a88",
+          "details": "Separate reviewer verified later merged/draft records and PR78 trees, then challenged this artifact delta. Applied owner corrections for canceled task54, bounded candidate scope, named task55 uncertainty, and retained Windows state hold. Final revision/required checks are recorded in the existing issue58 receipt."
+        }
+      ],
+      "corrective_loop": [
+        {
+          "observation": "Prior closeout marked the three Markdown inputs unreadable.",
+          "change": "Re-read current Library items after new closeout inputs appeared.",
+          "result": "All five rendered texts read. No repeat request for these files."
+        },
+        {
+          "observation": "Old zero-capture and five-behind Replit claims no longer describe the workstream.",
+          "change": "Inspect merged source-capture records, actual AJ01 bytes and independent PR78 branch/check records.",
+          "result": "Record partial GPT capture and exact draft reconciliation evidence; leave unobserved current runtime open."
+        },
+        {
+          "observation": "Historical child source preservation was pending.",
+          "change": "Review owner disposition and separate reconciliation reports.",
+          "result": "Apply child-Repl accepted loss only; keep Windows/other surface holds."
+        }
+      ],
+      "scope_and_ownership": "This review owns only the existing three closeout documentation files. PR72 candidate, PR77 privacy correction and PR78 Replit reconciliation retain their existing owners. The latest supplied AGENTS identity establishes project routing, not uploaded/synchronized sources or merge authority.",
+      "methods": {
+        "skillz_commit": "1038229118c00a86ff67010c6d68ae84975a5cf2",
+        "applied": [
+          "session-handoff",
+          "evidence-standard",
+          "artifact-validation",
+          "GPT conversion-plan asset boundary"
+        ],
+        "not_applied": [
+          "full extraction: no full transcript supplied",
+          "recurring task skeleton: existing workflow and ledger reused",
+          "graduation/publication: no approved release"
+        ]
+      },
+      "thread_url": null
+    },
+    "2026-11-05": {
+      "base_commit": "e1074940a47bb3b5a306248ba501e5e9637f0edd",
+      "record_key": "issue-58-aj01-aj02-migration",
+      "thread_id": null,
+      "thread_title": null,
+      "thread_url": null,
+      "archive": {
+        "eligible": false,
+        "attempted": false
+      },
+      "routing": {
+        "AJ01": {
+          "path": "capabilities/askjamie-aj01-resume-representative",
+          "content": "Résumé Representative source, configuration and evaluation evidence. Existing public material linked, not copied."
+        },
+        "AJ02": {
+          "path": "capabilities/askjamie-aj02-professional-portfolio",
+          "content": "Professional Portfolio source and conversion dossier. Candidate content stays with its existing review."
+        },
+        "shared": {
+          "path": "docs/migrations/aj01-aj02-2026-10-19-closeout",
+          "content": "Cross-capability migration and closeout evidence."
+        },
+        "private": "Existing owner evidence home; no private content or locators added to the public repository."
+      },
+      "sources": {
+        "issue58": "https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589",
+        "pr79": "https://github.com/OKHP3/askjamie-foundry/pull/79",
+        "pr79CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42072208407",
+        "pr78": "https://github.com/OKHP3/askjamie-foundry/pull/78",
+        "pr82": "https://github.com/OKHP3/askjamie-foundry/pull/82",
+        "pr72": "https://github.com/OKHP3/askjamie-foundry/pull/72",
+        "pr72CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42064824172",
+        "pr77": "https://github.com/OKHP3/askjamie-foundry/pull/77",
+        "AJ01": "https://github.com/OKHP3/askjamie-foundry/tree/main/capabilities/askjamie-aj01-resume-representative",
+        "AJ02": "https://github.com/OKHP3/askjamie-foundry/tree/main/capabilities/askjamie-aj02-professional-portfolio"
+      },
+      "coverage": {
+        "reviewed": "Accessible thread turns and earlier receipts, existing project records and current GitHub/Windows evidence, previous five rendered Markdown inputs, and one November 5 project prompt copy (113 rendered lines, no more pages). The new copy contains the closeout and routing instructions, not missing source assets or a transcript.",
+        "excluded": "Project-wide pasted prompt copies and adjacent AJ01 closeout reports are not established as exact-thread inputs. The separately titled AJ01 report did not return readable text; it was not used as migration evidence.",
+        "missing": "Exact thread URL/title/ID and material omitted raw history; outstanding GPT originals/revisions. No supported exact-chat history/archive or authenticated editor control exposed."
+      },
+      "confirmed": {
+        "windows_main": "e1074940a47bb3b5a306248ba501e5e9637f0edd",
+        "github_main": "e1074940a47bb3b5a306248ba501e5e9637f0edd",
+        "worktrees": 1,
+        "owner_stashes": 2,
+        "initial_clean": true,
+        "repository_visibility": "public",
+        "pr79_final_head": "88d8cecf72a908e699b958b7141f04ebb6001f2c",
+        "pr79_checks_passed": 4,
+        "pr79_advisory_skipped": "Mermaid Diagram Sync Assistant",
+        "pr79_content_equivalence": "All three closeout files unchanged from 2e5b19b to final head and merge. Exact merge-commit check query returned no jobs; required PR checks are attributed to the final PR head.",
+        "pr78_merge": "67de09bf0568cf8d610a10ee34ff56a0a33dcc54",
+        "pr82_merge": "687f3cf948e5027514e7a3f810f94745c158e85f",
+        "recovered_tip": "33c1a22127ed99abb81e97eb3b7561e4f55bc815",
+        "pr72_head": "0920d5e12b29e8dd02850c91391ce35451b331bc",
+        "pr72_checks_passed": 4,
+        "pr72_state": "draft; no native Replit skill acceptance",
+        "pr77_state": "open; no source privacy edit or history rewrite attempted"
+      },
+      "limits": {
+        "replit": "Connected identity confirmed for AskJamie-FoundRy, deployment status returned found=false. Recorded PR78/82 acceptance applies to their named revisions only. Current live checkout, main parity, runtime, selected mode, task55 and active workers are not verified. No Replit dispatch.",
+        "windows_siblings": "Previous managed access denial remains the recorded boundary; no bypass or repeat. Child Repl accepted loss is not a Windows-state disposition.",
+        "external_release": "Pages remains manually dispatched. No deployment in scope or triggered by the documentation PR.",
+        "governance": "PR78 and PR82 record Jamie's narrow approval for the private, local, read-only audit method. No publication, hosting, broader governance or unrelated merge authority follows."
+      },
+      "validation": {
+        "LOCAL_SOURCE_CHECKS": "Fresh Windows verification passed for both unchanged source tree IDs, 873 actual indexed payloads and both ZIP restores, manifest, registry, recovered Replit ancestry and PR79 content equivalence. Existing canonical route files and paths were inspected. Final document checks and exact-head CI are recorded in the maintained issue receipt.",
+        "pass_b": "Independent reviewer verified routing, PR states, recorded Replit preservation versus live-runtime limits, and challenged the dated continuation. Final review outcome and CI are recorded in the maintained issue receipt."
+      },
+      "skillz_pin": "1038229118c00a86ff67010c6d68ae84975a5cf2"
+    }
   }
 }

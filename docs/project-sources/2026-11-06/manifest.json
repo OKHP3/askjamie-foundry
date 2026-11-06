@@ -1,0 +1,459 @@
+{
+  "capture_batch_utc": "2026-11-06",
+  "purpose": "Preserve owner-requested ChatGPT project attachments and reviewed image-source inputs for AskJamie conversion.",
+  "project_files": {
+    "observed_occurrences": 39,
+    "foundry_occurrences": 0,
+    "aj00_occurrences": 16,
+    "aj02_occurrences": 23,
+    "distinct_payloads": 23,
+    "duplicate_occurrences": 16,
+    "files": [
+      {
+        "original_filename": "Guide to Mastering Custom GPT Creation (November 2025).docx",
+        "stored_path": "files/mastering-custom-gpt-creation-nov2025.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 541247,
+        "sha256": "0a6b9cf302fa9f1293e2d9a23def49dd5e7f5bb4dd154f469c0be154877221aa",
+        "git_blob_sha": "c74e87442ed749c102b9e657147310ed4ca1a8fe",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Brand-Guarding the AI Frontier_ OverKill Hill P³™, AskJamie™, and the Interface Economy.docx",
+        "stored_path": "files/brandguard-ai-frontier-interface-economy.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 97211,
+        "sha256": "17898d1408994624946999069bf8219f7a6f30c49af74bbc861832844172271b",
+        "git_blob_sha": "4ab2809d4fba87b890f9e966206828dd962c7408",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Optimal Formation of GPT Knowledge File.docx",
+        "stored_path": "files/gpt-knowledge-formation.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 66469,
+        "sha256": "1f2ca7bc73dbca6c87988067b490b3b66f091445e9521fd5fd3a95fc6b539a67",
+        "git_blob_sha": "f96cc4dbdf36d2caa1303b00debff503a7cf2d4d",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "The LLM Interface Economy_ How GPTs Will Replace Browsers and Reshape Commerce.docx",
+        "stored_path": "files/llm-interface-economy.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 48504,
+        "sha256": "4d8c09aabbfe4e154f974f6350b4dbe6d9e349d71c7b84c49e142e49825ea610",
+        "git_blob_sha": "09d25b7c2550cf92144f80c742bac169aaa7f226",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Custom GPTs in Digital Commerce_ A Disruptive Force in Sales, Engagement, and Brand Authority.docx",
+        "stored_path": "files/custom-gpts-digital-commerce.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 33541,
+        "sha256": "c6649b742187ed416089363bae63453df75eb055adcc5f1e186cb775ff25bc30",
+        "git_blob_sha": "efcbc995b43b9dc0631ffdb9f37d7647d29a04c5",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Building the Ideal Custom GPT in Late 2025.docx",
+        "stored_path": "files/ideal-custom-gpt-late2025.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 50251,
+        "sha256": "e22014a93c59a19ba06bf7fad6e9c225a5318390253cda44111bfcdd20a7f5d7",
+        "git_blob_sha": "b1ea23c730d4eaf5363b1f6e9c569797dcfa50c4",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "State-of-the-Art Practices for Building Ideal Custom GPTs (OpenAI & Gemini Gems).docx",
+        "stored_path": "files/custom-gpt-gemini-practices.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 70503,
+        "sha256": "d31d729bf9752646b1a1638763f1eda5b661958ca32019c3df1a1950973364ce",
+        "git_blob_sha": "4c04c778affcad3a196a92b1334f63e50363482a",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "ChatGPT’s Custom GPT Marketplace_ State of Play in Late 2025.docx",
+        "stored_path": "files/gpt-marketplace-late2025.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 40633,
+        "sha256": "46212da6f5be2a37c5682fba3957c71d61bf88f04b28ab1b984def3c1092ff1a",
+        "git_blob_sha": "9937098f9ea342262a5faf680b3e7bb206ce8b01",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Mastering GPT art 2025.docx",
+        "stored_path": "files/mastering-gpt-art-2025.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 26219,
+        "sha256": "94e759e6e22891bed8e04a8881aab043eec9a69429846f7c95319b44c76db852",
+        "git_blob_sha": "568fb1aa5a76b1ea77a5f24a0ac03f324a45adf5",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "The GPT Journey_ How Generative AI Evolved and Why It Matters.docx",
+        "stored_path": "files/gpt-journey.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 238671,
+        "sha256": "62709d9846487fc82c6258c84a6d070a6e2c50b4bdc02892ee08602eba30ea9d",
+        "git_blob_sha": "87393b49c5bd3beb370726191a39d39d4f5b07e0",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "GPT Marketplace analysis.docx",
+        "stored_path": "files/gpt-marketplace-analysis.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 24312,
+        "sha256": "67437c3d4f049b99e1b5c258a9bfa3a11f9f2ae57aaebc23e41e8aff30e8276c",
+        "git_blob_sha": "489e7aa9ad892068096cf183e8d0eb2f675cf162",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Execution and GPTs plan.docx",
+        "stored_path": "files/gpt-execution-plan.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 18011,
+        "sha256": "5298567b343eb3463637ad75a52fdf6c8437cc8b2134a5454ab068e5226f05f6",
+        "git_blob_sha": "d00d08cd721aa61a5670713c6833d1fde21d16e5",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Designing a Modular Multi‑Phase “Master Prompt” Cookbook.docx",
+        "stored_path": "files/modular-master-prompt-cookbook.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 37079,
+        "sha256": "8f5892eed76b165e1b1a543318c3e83b169868a736f24a24aca9e49305e39313",
+        "git_blob_sha": "b7d868ede3d8c8bc5e4cf772bf0930ad833cbf93",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "The Overkill Hill Method_ GPT Manufacturing Cookbook (vNov25).docx",
+        "stored_path": "files/overkill-gpt-manufacturing-cookbook-nov2025.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 66013,
+        "sha256": "b976a8103a0d4e9d72aec11bdf14ccbacc341680a2f58cc1e6f816d908af2851",
+        "git_blob_sha": "09068a7b8d045daa74e0a154c326093195244f17",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Beyond Equilibrium - A Unified View of Prompt Stability, Semantic Interference and Multi‑Agent LLM Coordination (Nov 2025).docx",
+        "stored_path": "files/beyond-equilibrium-nov2025.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 24247,
+        "sha256": "d03783d14a06799dec330e48e2871f88094c65cf2d67559d1fc1aedbbe9def86",
+        "git_blob_sha": "e202bbea1458cc562908d107b8b1e497c1f2f8ac",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Brandguard Prompt Library Plan.docx",
+        "stored_path": "files/brandguard-prompt-library-plan.docx",
+        "source_project_roles": [
+          "AJ00 shared AskJamie",
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 14480,
+        "sha256": "c0c46bb6903d82eb1dc7e2146d0b9e9fb279effb3d470818dc2a8dcdd973cca0",
+        "git_blob_sha": "8674d2ca6a629415048b632703746c9697d0ed98",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Structure and Ordering for Custom GPT Instruction Blocks.md",
+        "stored_path": "files/instruction-block-ordering.md",
+        "source_project_roles": [
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 9875,
+        "sha256": "a803854d4965a56bf163b67a9a3171a194ab265b05fad94db431d2d3788d6426",
+        "git_blob_sha": "94949b5a112902f096e06440645fe0165abe2125",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Detecting_Semantic_Interference_RAG_RIS.md",
+        "stored_path": "files/semantic-interference-rag-ris.md",
+        "source_project_roles": [
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 48711,
+        "sha256": "98fd9a550c002f0df639cf6aff96d1fc9696212666fd858e96dc9e9682659d13",
+        "git_blob_sha": "9817627ebd1a63d38013595c69a4f61f009f0d19",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Optimal Instruction Block Structure for a Custom GPT.pdf",
+        "stored_path": "files/instruction-block-structure.pdf",
+        "source_project_roles": [
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 73945,
+        "sha256": "e25e1954f241071d69b0809ba56064e2d6c658336e1264689bcdfcec4d3edea1",
+        "git_blob_sha": "ce1e796868b86ac09c3afc6d588dcc39baa970a3",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Detecting Semantic Interference in Prompt Engineering_ Methodologies and Ideal Practices.pdf",
+        "stored_path": "files/semantic-interference-methods.pdf",
+        "source_project_roles": [
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 98796,
+        "sha256": "bd3f28d8afc4fffd17501358fbdb6659c924f2eb6a0adc31e50eb1b34e96b28b",
+        "git_blob_sha": "4810dfafd5c584b47aa640853eab28adaa2e33f7",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Custom GPT Instruction Block Template (GPT‑5 Era Best Practices).pdf",
+        "stored_path": "files/gpt5-instruction-block-template.pdf",
+        "source_project_roles": [
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 142917,
+        "sha256": "ab8176b028e7681addccb1432a4074864935cd0cb8f3e6b1528325b87267bd4b",
+        "git_blob_sha": "ff78e0562e35a84cc938177c94a224a4ac548373",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Coordinating Multiple GPTs_ Current Capabilities and Limitations.pdf",
+        "stored_path": "files/multi-gpt-coordination.pdf",
+        "source_project_roles": [
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 47696,
+        "sha256": "c2f7c07e354d41a20641d65fa938919c6178b04bfc38517d2cafa72709d78a6d",
+        "git_blob_sha": "673bae0bdc6cc826ec17d2900a0d093c5df3e184",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      },
+      {
+        "original_filename": "Maximizing the Prompt Equilibrium Framework.pdf",
+        "stored_path": "files/prompt-equilibrium-framework.pdf",
+        "source_project_roles": [
+          "AJ02 Professional Portfolio"
+        ],
+        "bytes": 94838,
+        "sha256": "6cdf87c0633620844facb52dd7510860b9357be0322cd7537f15728057582d9a",
+        "git_blob_sha": "2b67bb334131fa5d465b8378e0e541f2bc0a06dd",
+        "classification": "historical-research-input",
+        "preservation": "exact-original-bytes"
+      }
+    ]
+  },
+  "thread_image_inputs": {
+    "observed_occurrences": 13,
+    "distinct_payloads": 11,
+    "duplicate_occurrences": 2,
+    "files": [
+      {
+        "observed_position": 1,
+        "source_role": "website-wide-banner",
+        "stored_path": "images/website-wide-banner.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2658886,
+        "sha256": "e995aed7fdba2ac463f1fab77168d2c423991f77b5b5f291c863ea7fe4f0384f",
+        "git_blob_sha": "4cdeedc04c00a785c131e0c8e5bd0e301f962134",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 2,
+        "source_role": "website-original-lead",
+        "stored_path": "images/website-original-lead.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 498982,
+        "sha256": "2d9024402cf73afd17055545ed0eac966bc68ce36b6dd98b571d014b4dfd9747",
+        "git_blob_sha": "2d1324cf4e8f248472dd866b7847d31aae894a12",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 3,
+        "source_role": "website-widest-banner",
+        "stored_path": "images/website-widest-banner.png",
+        "width": 2047,
+        "height": 877,
+        "bytes": 3204582,
+        "sha256": "86b0354027762d5ab38ca4a7502b4f604c517693225a6f8f0981691e1d048d0e",
+        "git_blob_sha": "47dc138e4af08d07b2da3b1da2dca960dbee60dc",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 4,
+        "source_role": "icon-candidate-01",
+        "stored_path": "images/icon-candidate-01.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 643856,
+        "sha256": "0d437bbbc6926937604be0ab9fefe3c24a78b7a8441f8a9a3abf9e281b5bc96f",
+        "git_blob_sha": "65de4f4ff2a93ac20cf776598f76629ce2b1b7ff",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 5,
+        "source_role": "icon-candidate-02",
+        "stored_path": "images/icon-candidate-02.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 725337,
+        "sha256": "2dccb574d8a5023a8c057102123c399bce76c0ab0f113739f0b9e7b7da3ee3e2",
+        "git_blob_sha": "8a9f4217abcf1064d06e31200e34fe48c9c09911",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 6,
+        "source_role": "icon-candidate-03",
+        "stored_path": "images/icon-candidate-03.png",
+        "width": 1272,
+        "height": 1272,
+        "bytes": 875504,
+        "sha256": "5ca3298cee527ddab192867f98287f4eb2f7c767380632ba8777b026944a80e7",
+        "git_blob_sha": "7e17ac5ef21a7f7286fd38fc43311cc76fe2aa86",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 7,
+        "source_role": "icon-candidate-04",
+        "stored_path": "images/icon-candidate-04.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 859636,
+        "sha256": "42741cde5e4ce36858a04a4d36a79b20bd479e6650af0e011d1e089a265e9640",
+        "git_blob_sha": "a31f1be2db3c6a6a8005aff72da6170e0fe309d4",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 8,
+        "source_role": "icon-candidate-05",
+        "stored_path": "images/icon-candidate-05.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 1350230,
+        "sha256": "69d99b875d4135c15c675f32372c07d897f2a0071bdde77f7b08582c386cd6f2",
+        "git_blob_sha": "3a4fdda6303c930b58c5f777885d6a27f660cd63",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 9,
+        "source_role": "icon-candidate-06",
+        "stored_path": "images/icon-candidate-06.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 1024227,
+        "sha256": "d8707573752a8ceed80a9300ea1c050fbc08f9abfe43ac4946e11f5d8fab9be4",
+        "git_blob_sha": "555a313beed96e40539a2a80d8e881e8411c255f",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 10,
+        "source_role": "icon-candidate-07",
+        "stored_path": "images/icon-candidate-07.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 1348518,
+        "sha256": "b7284ae9da96fb52f1d8c2753e50f490849d0faae9906e998bbd492635d1b1ea",
+        "git_blob_sha": "fcf6a0af499c9457fd17fab41319789e53677e05",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 11,
+        "source_role": "phone-source-component",
+        "stored_path": "images/icon-candidate-04.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 859636,
+        "sha256": "42741cde5e4ce36858a04a4d36a79b20bd479e6650af0e011d1e089a265e9640",
+        "git_blob_sha": "a31f1be2db3c6a6a8005aff72da6170e0fe309d4",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 12,
+        "source_role": "avatar-source-component",
+        "stored_path": "images/icon-candidate-07.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 1348518,
+        "sha256": "b7284ae9da96fb52f1d8c2753e50f490849d0faae9906e998bbd492635d1b1ea",
+        "git_blob_sha": "fcf6a0af499c9457fd17fab41319789e53677e05",
+        "classification": "historical-brand-artwork-input"
+      },
+      {
+        "observed_position": 13,
+        "source_role": "owner-final-composition",
+        "stored_path": "images/owner-final-composition.png",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 767760,
+        "sha256": "57c7713f90c50438e3454c4260909df09559788d7c314dbbaec8b6275df928f6",
+        "git_blob_sha": "ea659ab2c60eaf9885d065c4946460a776cb65b5",
+        "classification": "historical-brand-artwork-input"
+      }
+    ]
+  },
+  "use": "Historical inputs. Verify dated claims and source citations when deriving current operating guidance. Original embedded content and notices are unchanged.",
+  "provenance_boundary": "Exact account URLs, private source conversations, candidate evidence and capture receipts remain in the private intake register. Source roles and byte identities are public here.",
+  "notices": "Original file content and embedded notices are retained unchanged."
+}
