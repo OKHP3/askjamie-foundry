@@ -1,0 +1,50 @@
+{
+  "record_key": "aj01-market-channels-011b37a0cce7",
+  "kind": "public-safe summary/research, not raw archive",
+  "file_count_excluding_manifest": 6,
+  "manifest_self_excluded": true,
+  "entries": [
+    {
+      "file": "README.md",
+      "repository_path": "capabilities/askjamie-aj01-resume-representative/docs/market-channels-011b37a0cce7/README.md",
+      "bytes": 10584,
+      "sha256": "e5b3f65f47b2383b2768953aac09458f4950c7e172bbb5362ffaca78bfa76827",
+      "git_blob_sha1": "65b489428d491eea093f3c04c733615effc3c256"
+    },
+    {
+      "file": "check_fees.py",
+      "repository_path": "capabilities/askjamie-aj01-resume-representative/docs/market-channels-011b37a0cce7/check_fees.py",
+      "bytes": 3165,
+      "sha256": "a479de8ec6e21058a4ea5e1f323783b27fb2febc6e073a5ff1627f671f0debab",
+      "git_blob_sha1": "759bf2bcbbe00fc2c8eae2658499d9fbefe6636b"
+    },
+    {
+      "file": "fee-results.json",
+      "repository_path": "capabilities/askjamie-aj01-resume-representative/docs/market-channels-011b37a0cce7/fee-results.json",
+      "bytes": 3316,
+      "sha256": "7bf601d45de2904a3cf37295d06fe3a09b7883cd7463440eeec9867533407ae8",
+      "git_blob_sha1": "9bdfed0def3a9a703cbca1f08d55f85afc7dec71"
+    },
+    {
+      "file": "research.md",
+      "repository_path": "capabilities/askjamie-aj01-resume-representative/docs/market-channels-011b37a0cce7/research.md",
+      "bytes": 17944,
+      "sha256": "4db9d0177a4ed00d72ad4289d8e80482133435a388850de97409459983cf1ecb",
+      "git_blob_sha1": "cf959e9d7daf7d0017f16f38427401eee6a75877"
+    },
+    {
+      "file": "sources.md",
+      "repository_path": "capabilities/askjamie-aj01-resume-representative/docs/market-channels-011b37a0cce7/sources.md",
+      "bytes": 10616,
+      "sha256": "5a9df452b958312370362dcafde0d48371c56d516b7077e67087675f085e370f",
+      "git_blob_sha1": "ee120da9d2cdf313da20d42aaa815a3b77b761d9"
+    },
+    {
+      "file": "validation.json",
+      "repository_path": "capabilities/askjamie-aj01-resume-representative/docs/market-channels-011b37a0cce7/validation.json",
+      "bytes": 5602,
+      "sha256": "d3436857fff3c5d119d93fd795740c9a3f2dc4f5aceec4622b416e6fe980cb30",
+      "git_blob_sha1": "8e7a119f8575f63f5fb09d5b494e49d2f6854895"
+    }
+  ]
+}
