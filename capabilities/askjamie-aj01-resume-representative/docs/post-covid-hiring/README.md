@@ -15,7 +15,7 @@ Run the included renderer with Python, ReportLab and a local Arial font director
 python render-pdf.py --font-dir /path/to/fonts --output rebuilt.pdf
 ```
 
-PDF SHA-256 for the preserved rendition `cac3301ae1b5f49c1329a4d39a550bc6cf7ec78f1139016b3bbadaaf33db6547`. Rebuilds can have a different timestamp and PDF byte digest.
+PDF SHA-256 for the preserved rendition `36cddb551e785a4a069ae2d7c8d9d6118b6d97e8b8a03a33c0d43b57f70423d5`. Rebuilds can have a different timestamp and PDF byte digest.
 
 The private source continuation preserved the complete original research artifact and renewal method and verified the exact thread archive. The optional clipped chat variant was retained within its available coverage. Independent scholarly review, automated PDF accessibility conformance and live host retrieval are separate acceptance tasks.
 

@@ -64,7 +64,7 @@ def page_furniture(canvas, document):
     canvas.setStrokeColor(colors.HexColor("#3F6D79"))
     canvas.line(MARGIN, HEIGHT - 45, WIDTH - MARGIN, HEIGHT - 45)
     canvas.setFont("Body", 8)
-    canvas.drawString(MARGIN, 40, "c 2025 AskJamieT and OverKill Hill P3T. All rights reserved.")
+    canvas.drawString(MARGIN, 40, "\u00a9 2025 AskJamie\u2122 and OverKill Hill P\u00b3\u2122. All rights reserved.")
     for x, label, target in (
         (MARGIN, "https://askjamie.bot", "https://askjamie.bot"),
         (MARGIN + 98, "contact@askjamie.bot", "mailto:contact@askjamie.bot"),
