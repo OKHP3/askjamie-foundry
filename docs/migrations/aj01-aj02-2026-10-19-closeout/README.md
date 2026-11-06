@@ -1,5 +1,21 @@
 # AJ01/AJ02 migration: blocked closeout review
 
+## Current continuation, 2026-11-05
+
+**BLOCKED - NOT READY TO ARCHIVE.** [PR79](https://github.com/OKHP3/askjamie-foundry/pull/79) is merged. Its three closeout files match the reviewed payload, and all four [final-head compatibility jobs](https://github.com/OKHP3/askjamie-foundry/actions/runs/42072208407) passed. GitHub and clean Windows main matched at `e1074940a47bb3b5a306248ba501e5e9637f0edd` when checked. The earlier dated sections below are preserved history; the November 5 delta in [ledger.json](ledger.json) inherits the November 4 overlay. See the [maintained receipt](https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589) for this update's review and exact-head checks.
+
+| Content | Verified home | Disposition |
+| --- | --- | --- |
+| AJ01 Résumé Representative | [AJ01 capability](../../../capabilities/askjamie-aj01-resume-representative/README.md) | Existing source, configuration and evaluation evidence stay here. [PR77](https://github.com/OKHP3/askjamie-foundry/pull/77) retains ownership of the open privacy correction. |
+| AJ02 Professional Portfolio | [AJ02 capability](../../../capabilities/askjamie-aj02-professional-portfolio/README.md) | Existing source and conversion dossier stay here. [PR72](https://github.com/OKHP3/askjamie-foundry/pull/72) remains a draft with passing checks and no native host acceptance. |
+| Shared AJ01/AJ02 migration | This existing closeout directory | Shared decisions and evidence stay here, cross-referenced to both capabilities. Private originals and provenance remain in the existing owner evidence home. |
+
+[PR78](https://github.com/OKHP3/askjamie-foundry/pull/78) and [PR82](https://github.com/OKHP3/askjamie-foundry/pull/82) integrated the preserved parent Replit histories. The recovered tip is an ancestor of current main; both pinned source trees and all 873 files passed fresh integrity and ZIP restore checks. Manifest and registry checks passed. The recorded governance approval is limited to a private, local, read-only audit. Connected Replit metadata identifies the project, but does not verify its live checkout, active task/worker state, Free Mode or runtime. No agent was dispatched. A merged source branch or Pages artifact check is not live parity, host acceptance or deployment.
+
+The new project prompt copy contains the routing and closeout instructions, not missing source assets or a transcript. This record remains a summary. Exact conversation provenance, remaining GPT originals/revision evidence or explicit exceptions, and authorized Windows-state and live Replit readback remain unresolved. No scope transfer, broader cutover, cleanup, deployment or conversation archive is claimed.
+
+---
+
 ## Current continuation, 2026-11-04
 
 **BLOCKED - NOT READY TO ARCHIVE.** [PR70](https://github.com/OKHP3/askjamie-foundry/pull/70) merged at `64abb112fa762773385ff17c0ef647c9f6c94f75`. The earlier closeout below is historical. Use the November 4 revalidation in [ledger.json](ledger.json) and [evidence.json](evidence.json), plus the [maintained receipt](https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589), for current state. The stable record key remains `issue-58-aj01-aj02-migration`; the actual conversation ID/title/URL remain unknown.
