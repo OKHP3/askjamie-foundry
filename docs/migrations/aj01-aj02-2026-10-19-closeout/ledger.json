@@ -469,7 +469,7 @@
           "id": "O13",
           "status": "uncertain",
           "evidence": [
-            "coverage"
+            "COVERAGE"
           ],
           "note": "New prompt copy was read; it did not supply exact chat provenance or missing raw history."
         },
@@ -498,7 +498,7 @@
           "id": "O16",
           "status": "verified complete",
           "evidence": [
-            "validation",
+            "VALIDATION",
             "ISSUE58"
           ],
           "note": "Fresh artifact checks and independent challenge apply to the continuation only; current Replit runtime and GPT asset gates remain open."
@@ -507,7 +507,7 @@
           "id": "O17",
           "status": "blocked",
           "evidence": [
-            "coverage",
+            "COVERAGE",
             "PR72",
             "PR77",
             "PR82",
