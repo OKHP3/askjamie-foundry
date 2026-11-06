@@ -27,6 +27,8 @@ computer, with private drafts and local storage.
 | See what the FoundRy is about | [Public orientation](https://okhp3.github.io/askjamie-foundry/) |
 | Open the authoring application | [Local workbench](http://127.0.0.1:8765), after [starting the server](#run-the-workbench) |
 | Understand the tools and workflow | [Workbench guide](docs/workbench.md) |
+| Continue AJ01/AJ02 transformation work | [Integration routes and existing owners](docs/migrations/thread-extraction-routing-2026-11-05.md) |
+| Find the authoritative document for a task | [Documentation index](docs/README.md) |
 | Explore the broader AskJamie world | [AskJamie portfolio](https://askjamie.bot/) |
 | Find the banner, social card, or icons | [Presentation assets](#presentation-assets) |
 
