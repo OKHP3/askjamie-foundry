@@ -1,0 +1,152 @@
+"""Protect byte-exact project-source intake in required repository CI."""
+
+import hashlib
+import json
+from pathlib import Path, PurePosixPath
+import tempfile
+import unittest
+from unittest.mock import patch
+
+
+INTAKE_ROOT = Path(__file__).resolve().parents[1] / "docs" / "project-sources"
+BASELINE_BATCH = "2026-11-06"
+BASELINE_MANIFEST_SHA256 = "8f2fdd0d017d76d7b66a7f440d66893ee86228633641d6ac6b03b6880984325d"
+EXCLUDED_SHA256 = {
+    "17898d1408994624946999069bf8219f7a6f30c49af74bbc861832844172271b",
+    "c6649b742187ed416089363bae63453df75eb055adcc5f1e186cb775ff25bc30",
+}
+COLLECTIONS = {"project_files": "files", "thread_image_inputs": "images"}
+
+
+def digest(payload):
+    return hashlib.sha256(payload).hexdigest()
+
+
+def verify_public_bytes(payload):
+    checksum = digest(payload)
+    if checksum in EXCLUDED_SHA256:
+        raise ValueError("Excluded source bytes are present in public intake")
+    return checksum
+
+
+def verify_batch(batch):
+    """Fail closed on missing, modified, unlisted or uncleared attachments."""
+    manifest_path = batch / "manifest.json"
+    if manifest_path.is_symlink():
+        raise ValueError("Source intake cannot contain symlinks")
+    manifest_bytes = manifest_path.read_bytes()
+    verify_public_bytes(manifest_bytes)
+    manifest = json.loads(manifest_bytes)
+    if not isinstance(manifest, dict):
+        raise ValueError("Intake manifest must be a JSON object")
+    grandfathered = (
+        batch.name == BASELINE_BATCH
+        and digest(manifest_bytes.replace(b"\r\n", b"\n")) == BASELINE_MANIFEST_SHA256
+    )
+    inventory = {}
+    for key, directory in COLLECTIONS.items():
+        section = manifest.get(key)
+        if not isinstance(section, dict) or not isinstance(section.get("files"), list):
+            raise ValueError(f"Intake manifest requires a files list for {key}")
+        for item in section["files"]:
+            if not isinstance(item, dict) or not isinstance(item.get("stored_path"), str):
+                raise ValueError(f"Intake manifest contains an invalid {key} attachment")
+            name = item["stored_path"]
+            relative = PurePosixPath(name)
+            if (
+                relative.parts != (directory, relative.name)
+                or relative.as_posix() != name
+                or "\\" in name
+            ):
+                raise ValueError("Invalid attachment path")
+            size, checksum = item.get("bytes"), item.get("sha256")
+            if (
+                type(size) is not int or size < 0
+                or not isinstance(checksum, str) or len(checksum) != 64
+                or any(character not in "0123456789abcdef" for character in checksum)
+            ):
+                raise ValueError("Attachment requires a valid byte count and SHA-256")
+            identity = (size, checksum)
+            if inventory.setdefault(name, identity) != identity:
+                raise ValueError("Conflicting attachment identities")
+            if not grandfathered:
+                review = item.get("public_review", {})
+                if (
+                    not isinstance(review, dict)
+                    or review.get("decision") != "approved"
+                    or not isinstance(review.get("reviewer"), str)
+                    or not review["reviewer"].strip()
+                    or review.get("reviewed_sha256") != checksum
+                ):
+                    raise ValueError("Attachment lacks a review bound to its SHA-256")
+
+    actual = {}
+    for path in batch.rglob("*"):
+        if path.is_symlink():
+            raise ValueError("Source intake cannot contain symlinks")
+        if not path.is_file():
+            continue
+        relative = path.relative_to(batch)
+        name = relative.as_posix()
+        if name == "manifest.json":
+            continue
+        payload = path.read_bytes()
+        checksum = verify_public_bytes(payload)
+        if name == "README.md":
+            continue
+        if len(relative.parts) == 2 and relative.parts[0] == "thread-extracts" and path.suffix == ".md":
+            continue
+        actual[name] = (len(payload), checksum)
+
+    if inventory != actual:
+        raise ValueError("Public attachment files do not match the manifest")
+
+
+class ProjectSourceIntakeTests(unittest.TestCase):
+    def test_current_repository_intake(self):
+        self.assertTrue((INTAKE_ROOT / BASELINE_BATCH).is_dir())
+        for batch in sorted(INTAKE_ROOT.iterdir()):
+            if batch.name == "README.md":
+                self.assertTrue(batch.is_file() and not batch.is_symlink())
+                verify_public_bytes(batch.read_bytes())
+                continue
+            self.assertTrue(batch.is_dir() and not batch.is_symlink())
+            with self.subTest(batch=batch.name):
+                verify_batch(batch)
+
+    def test_new_batch_requires_byte_bound_review_and_exact_inventory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            batch = Path(directory)
+            sources = batch / "files"
+            sources.mkdir()
+            source = sources / "fixture.md"
+            source.write_bytes(b"public-safe fixture\n")
+            sha = digest(source.read_bytes())
+            row = {"stored_path": "files/fixture.md", "bytes": source.stat().st_size, "sha256": sha}
+            manifest = {"project_files": {"files": [row]}, "thread_image_inputs": {"files": []}}
+            manifest_path = batch / "manifest.json"
+            manifest_path.write_text("{}", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "requires a files list"):
+                verify_batch(batch)
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "lacks a review"):
+                verify_batch(batch)
+            row["public_review"] = {"decision": "approved", "reviewer": "fixture", "reviewed_sha256": sha}
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            verify_batch(batch)
+            with patch(__name__ + ".EXCLUDED_SHA256", {sha}):
+                with self.assertRaisesRegex(ValueError, "Excluded source bytes"):
+                    verify_batch(batch)
+            readme = batch / "README.md"
+            readme.write_bytes(b"excluded metadata fixture\n")
+            with patch(__name__ + ".EXCLUDED_SHA256", {digest(readme.read_bytes())}):
+                with self.assertRaisesRegex(ValueError, "Excluded source bytes"):
+                    verify_batch(batch)
+            readme.unlink()
+            source.write_bytes(b"modified fixture\n")
+            with self.assertRaisesRegex(ValueError, "do not match"):
+                verify_batch(batch)
+            source.write_bytes(b"public-safe fixture\n")
+            (sources / "unlisted.md").write_bytes(b"unlisted")
+            with self.assertRaisesRegex(ValueError, "do not match"):
+                verify_batch(batch)

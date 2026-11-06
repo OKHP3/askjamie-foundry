@@ -6,3 +6,6 @@
 
 # Keep the approved registry byte digest stable across platforms.
 /registry/index.yaml text eol=lf
+
+# Preserve every byte inspected by the project-source intake gate.
+/docs/project-sources/** -text -ident -filter
