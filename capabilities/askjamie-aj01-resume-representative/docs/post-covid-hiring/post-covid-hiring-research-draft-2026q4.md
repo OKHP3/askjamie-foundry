@@ -1,7 +1,7 @@
 ---
 artifact_id: AJ01-POSTCOVID-RESEARCH-001
 version: 0.4.0-review
-status: "evidence-bounded source draft; NOT 20-page-release validated"
+status: "evidence-bounded research edition; scholarly and host acceptance pending"
 title: "Post-COVID Hiring: Workplace Psychology, Sociology, and Selection"
 subtitle: "Historical shifts, contemporary evidence, candidate and employer decisions, and a retrieval glossary"
 subject: "Hiring psychology; workplace sociology; remote and hybrid work; mental health at work; inclusion; contingent employment"
@@ -20,7 +20,7 @@ contact: "contact@askjamie.bot"
 
 # Post-COVID Hiring: Workplace Psychology, Sociology, and Selection
 
-**Research edition.** This is a substantial but deliberately **unreleased** foundation for the requested twenty-page-or-longer corpus. It has not passed rendered-page, PDF fidelity, comprehensive source-history reconciliation, independent scholarly review, or hosted GPT retrieval tests. Those gaps must remain visible until genuinely tested. Its 2026 creation date is distinct from the owner-specified © 2025 brand notice.
+**Research edition.** This research edition includes an editable manuscript and a searchable, reviewed PDF rendition. Independent scholarly review and hosted retrieval remain separate. The source archive retains the original research artifact and renewal method. Exact equivalence to the clipped historical chat variant was not established. The 2026 creation date is distinct from the owner-specified © 2025 brand notice.
 
 ## PC-001 — Executive interpretation: pandemic acceleration versus universal transformation
 
