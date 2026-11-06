@@ -12,7 +12,14 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from .model import InputError, normalize_answers, normalize_draft, run_decision, validate_answer_nodes
-from .service import evaluate_project, export_project, read_registry, read_skills, validate_project
+from .service import (
+    evaluate_project,
+    export_project,
+    package_contents,
+    read_registry,
+    read_skills,
+    validate_project,
+)
 from .store import MissingProject, StaleRevision, Store
 
 
@@ -30,6 +37,10 @@ STATIC_FILES = {
     "/styles.css": "styles.css",
     "/favicon.svg": "favicon.svg",
 }
+
+
+def project_payload(project: dict[str, Any]) -> dict[str, Any]:
+    return {**project, "package_contents": package_contents(project)}
 
 
 class WorkbenchServer(ThreadingHTTPServer):
@@ -170,7 +181,7 @@ class WorkbenchHandler(BaseHTTPRequestHandler):
     def _project_get(self, project_id: str, action: str | None) -> None:
         project = self.server.store.get(project_id)
         if action is None:
-            self._json(HTTPStatus.OK, project)
+            self._json(HTTPStatus.OK, project_payload(project))
         elif action == "history":
             self._json(HTTPStatus.OK, {"history": self.server.store.history(project_id)})
         elif action == "validate":
@@ -228,7 +239,7 @@ class WorkbenchHandler(BaseHTTPRequestHandler):
             body = self._read_json(limit)
             if method == "POST" and path == "/api/projects":
                 draft, _ = normalize_draft(body)
-                self._json(HTTPStatus.CREATED, self.server.store.create(draft))
+                self._json(HTTPStatus.CREATED, project_payload(self.server.store.create(draft)))
                 return
             if method == "POST" and path == "/api/import":
                 if not isinstance(body, dict) or set(body) != {"backup", "confirm"}:
@@ -244,14 +255,14 @@ class WorkbenchHandler(BaseHTTPRequestHandler):
             project_id, action = match.groups()
             if method == "PUT" and action is None:
                 draft, revision = normalize_draft(body, allow_revision=True)
-                self._json(HTTPStatus.OK, self.server.store.update(project_id, revision, draft))
+                self._json(HTTPStatus.OK, project_payload(self.server.store.update(project_id, revision, draft)))
             elif method == "DELETE" and action is None:
                 self._require_confirmation(body, "delete")
                 self.server.store.delete(project_id)
                 self._json(HTTPStatus.OK, {"deleted": project_id})
             elif method == "POST" and action == "duplicate":
                 self._require_confirmation(body, "duplicate")
-                self._json(HTTPStatus.CREATED, self.server.store.duplicate(project_id))
+                self._json(HTTPStatus.CREATED, project_payload(self.server.store.duplicate(project_id)))
             elif method == "POST" and action == "preview":
                 project = self.server.store.get(project_id)
                 if project["kind"] != "decision-tool":

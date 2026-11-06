@@ -34,11 +34,67 @@ def load_yaml(path: Path) -> dict:
         return yaml.safe_load(f)
 
 
+def is_protected_entry(entry: dict[str, Any]) -> bool:
+    return (
+        entry.get("family") == "client-overlay"
+        or bool(entry.get("client_org"))
+        or entry.get("bfs_firewall") is True
+        or entry.get("visibility_lock") == "permanent-private"
+    )
+
+
+def redact_private_identifiers(
+    errors: list[str], data: Any
+) -> list[str]:
+    """Remove protected repository and client identifiers from validation errors."""
+    if not errors:
+        return []
+    if not isinstance(data, dict) or not isinstance(data.get("repositories"), list):
+        return [
+            "Registry validation failed; details withheld because protected "
+            "identifiers could not be checked safely."
+            for _ in errors
+        ]
+
+    identifiers: set[str] = set()
+    for entry in data["repositories"]:
+        if not isinstance(entry, dict):
+            continue
+
+        def collect_strings(value: Any) -> None:
+            if isinstance(value, str) and value:
+                identifiers.add(value)
+            elif isinstance(value, dict):
+                for nested_value in value.values():
+                    collect_strings(nested_value)
+            elif isinstance(value, list):
+                for nested_value in value:
+                    collect_strings(nested_value)
+
+        collect_strings(entry.get("repo"))
+        if not is_protected_entry(entry):
+            continue
+        for field in ("parent_capability", "client_org", "display_name"):
+            collect_strings(entry.get(field))
+        migration = entry.get("migration")
+        if isinstance(migration, dict):
+            collect_strings(migration.get("destination"))
+
+    sanitized = []
+    for error in errors:
+        for identifier in sorted(identifiers, key=len, reverse=True):
+            error = error.replace(identifier, "[redacted]")
+        sanitized.append(error)
+    return sanitized
+
+
 def check_registry(
-    registry_path: Path, schema_path: Path, verbose: bool
+    registry_path: Path, schema_path: Path, verbose: bool,
+    redact_private: bool = False,
 ) -> tuple[list[str], dict[str, dict[str, int]], list[dict[str, Any]]]:
     errors = []
     stats = defaultdict(lambda: defaultdict(int))
+    data = None
     try:
         import jsonschema
         import yaml
@@ -49,10 +105,22 @@ def check_registry(
             path = ".".join(str(part) for part in error.path) or "root"
             errors.append(f"{path}: {error.message}")
     except ImportError as exc:
-        return [f"Cannot validate registry: {exc}"], stats, []
+        errors = [f"Cannot validate registry: {exc}"]
     except (OSError, ValueError, yaml.YAMLError) as exc:
-        return [f"Cannot validate registry: {exc}"], stats, []
+        errors = (
+            ["Registry validation failed; details withheld because protected "
+             "identifiers could not be checked safely."]
+            if redact_private
+            else [f"Cannot validate registry: {exc}"]
+        )
     if errors:
+        if redact_private and not isinstance(data, dict):
+            return [
+                "Registry validation failed; details withheld because protected "
+                "identifiers could not be checked safely."
+            ], stats, []
+        if redact_private:
+            errors = redact_private_identifiers(errors, data)
         return errors, stats, []
 
     # Top-level fields
@@ -150,10 +218,12 @@ def check_registry(
         if family:
             stats[family][status or "unknown"] += 1
 
+    if redact_private:
+        errors = redact_private_identifiers(errors, {"repositories": repositories})
     return errors, stats, repositories
 
 
-def print_summary(repositories, stats):
+def print_summary(repositories, stats, redact_private=False):
     total = len(repositories)
     print(f"\n{'-'*50}")
     print("  AskJamie FoundRy - Registry Summary")
@@ -169,7 +239,8 @@ def print_summary(repositories, stats):
 
     # Public candidates
     public_candidates = [
-        r["repo"] for r in repositories
+        "[redacted]" if redact_private else r["repo"]
+        for r in repositories
         if r.get("public_graduation_allowed") is True and r.get("status") == "draft"
     ]
     if public_candidates:
@@ -179,7 +250,7 @@ def print_summary(repositories, stats):
 
     # Permanently private
     locked = [
-        r["repo"] for r in repositories
+        "[redacted]" if redact_private else r["repo"] for r in repositories
         if r.get("visibility_lock") == "permanent-private"
     ]
     if locked:
@@ -193,6 +264,11 @@ def main():
     parser = argparse.ArgumentParser(description="AskJamie FoundRy registry health check")
     parser.add_argument("--verbose", "-v", action="store_true", help="Show more detail")
     parser.add_argument("--summary", "-s", action="store_true", help="Show summary only (no errors)")
+    parser.add_argument(
+        "--redact-private",
+        action="store_true",
+        help="Redact repository and client identifiers for shareable output",
+    )
     args = parser.parse_args()
 
     script_dir = Path(__file__).parent
@@ -206,10 +282,13 @@ def main():
 
     print(f"Registry : {registry_path}")
 
-    result = check_registry(registry_path, schema_path, args.verbose)
+    result = check_registry(
+        registry_path, schema_path, args.verbose,
+        redact_private=args.redact_private,
+    )
     errors, stats, repositories = result
 
-    print_summary(repositories, stats)
+    print_summary(repositories, stats, redact_private=args.redact_private)
 
     if not args.summary:
         if errors:

@@ -10,6 +10,7 @@ import json
 from datetime import date
 from pathlib import Path
 from typing import Any
+from urllib.parse import unquote, urlsplit
 
 import yaml
 
@@ -71,6 +72,42 @@ def load_registry_checker():
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def mentor_source_url_matches_review(review: dict[str, Any]) -> bool:
+    """Confirm the GitHub citation names the configured repository, commit, and path."""
+    source_url = review.get("source_url")
+    repository = review.get("repository")
+    revision = review.get("revision")
+    source_path = review.get("path")
+    if not all(
+        isinstance(value, str) and value
+        for value in (source_url, repository, revision, source_path)
+    ):
+        return False
+
+    try:
+        parsed = urlsplit(source_url)
+    except ValueError:
+        return False
+    if (
+        parsed.scheme != "https"
+        or parsed.netloc != "github.com"
+        or parsed.query
+        or parsed.fragment
+        or parsed.username is not None
+        or parsed.password is not None
+    ):
+        return False
+
+    expected_parts = [
+        "",
+        *repository.split("/"),
+        "blob",
+        revision,
+        *source_path.split("/"),
+    ]
+    return unquote(parsed.path).split("/") == expected_parts
 
 
 def protected_violations(repositories: list[dict[str, Any]]) -> list[str]:
@@ -169,18 +206,28 @@ def approval_status(
         }
     try:
         approval = yaml.safe_load(approval_path.read_text(encoding="utf-8"))
-    except (OSError, yaml.YAMLError) as exc:
+    except yaml.YAMLError:
         return {
             "required": True,
             "status": "INVALID",
-            "path": str(approval_path),
-            "reason": f"Cannot read owner decision record: {exc}",
+            "path": None,
+            "reason": (
+                "Owner decision record contains malformed YAML; "
+                "parser details withheld."
+            ),
+        }
+    except (OSError, UnicodeError):
+        return {
+            "required": True,
+            "status": "INVALID",
+            "path": None,
+            "reason": "Cannot read owner decision record: details withheld.",
         }
     if not isinstance(approval, dict):
         return {
             "required": True,
             "status": "INVALID",
-            "path": str(approval_path),
+            "path": None,
             "reason": "Owner decision record must be a YAML mapping.",
         }
     required = {
@@ -197,6 +244,11 @@ def approval_status(
         for key, expected in required.items()
         if approval.get(key) != expected
     ]
+    if not mentor_source_url_matches_review(MENTOR_REVIEW):
+        problems.append(
+            "mentor_review.source_url does not identify the pinned repository, "
+            "revision, and source path"
+        )
     mentor_binding = approval.get("mentor_review")
     expected_mentor_binding = {
         key: MENTOR_REVIEW[key] for key in ("repository", "revision", "path")
@@ -265,7 +317,7 @@ def approval_status(
             else "; ".join(problems)
         ),
         "next_check": (
-            "Renew this decision after any registry digest, boundary-control, or mentor revision/path change."
+            "Renew this decision after any registry digest, boundary-control, or mentor citation change."
             if status == "APPROVED" and not problems
             else "Obtain or renew a dated decision tied to the exact adaptation, scope, registry digest, mentor revision/path, and release boundaries."
         ),
@@ -293,6 +345,7 @@ def build_report(
     unchanged = before == after
     baseline_matches = baseline_sha256 is None or before_digest == baseline_sha256
     violations = protected_violations(repositories)
+    mentor_citation_valid = mentor_source_url_matches_review(MENTOR_REVIEW)
     approval = approval_status(approval_path, before_digest)
 
     local_controls_pass = (
@@ -325,7 +378,7 @@ def build_report(
         },
         {
             "claim": "The named OverKill mentor surface has the stated governance or graduation behavior.",
-            "tier": "CONFIRMED",
+            "tier": "CONFIRMED" if mentor_citation_valid else "UNKNOWN",
             "evidence": [
                 MENTOR_REVIEW["source_url"],
                 f"revision:{MENTOR_REVIEW['revision']}",
@@ -371,7 +424,11 @@ def build_report(
             "mentor": "OKHP3/OverKill-Hill-FoundRy",
             "scope": AUDIT_SCOPE,
             "mode": "design",
-            "status": "PASS" if local_controls_pass else "FAIL",
+            "status": (
+                "PASS"
+                if local_controls_pass and mentor_citation_valid
+                else "FAIL"
+            ),
             "adoption": "DEFERRED",
         },
         "adaptation": ADAPTATION,

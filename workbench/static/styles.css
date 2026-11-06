@@ -331,6 +331,38 @@ select:focus-visible {
   color: var(--ink);
   padding: 12px 14px;
 }
+.package-contents {
+  margin-top: 18px;
+  padding: 16px;
+}
+.package-contents > p {
+  margin: 0 0 14px;
+}
+.package-content-list {
+  list-style: none;
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+}
+.package-content-list li {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 11px 13px;
+}
+.package-content-list strong {
+  display: block;
+  margin-bottom: 4px;
+}
+.package-content-list p {
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.package-content-list small {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
 .empty-card {
   min-height: 260px;
   display: flex;

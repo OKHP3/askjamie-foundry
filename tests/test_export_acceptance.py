@@ -12,7 +12,7 @@ import jsonschema
 import yaml
 
 from workbench.model import normalize_draft
-from workbench.service import export_project, validate_project
+from workbench.service import export_project, package_contents, validate_project
 from workbench.store import Store
 
 
@@ -157,6 +157,59 @@ class ExportAcceptanceTests(unittest.TestCase):
             self.assertNotIn("</script><img src=x onerror=alert(1)>", page)
             self.assertIn("\\u003c/script\\u003e", page)
             self.assertIn("\\u2028", page)
+
+    def test_package_contents_summary_matches_every_supported_package_kind(self):
+        cases = [
+            ("assistant", {}),
+            ("workflow", {"workflow_steps": ["Review the source."]}),
+            ("decision-tool", {"decision": decision_graph()}),
+            ("agent-skill", {"trigger": "Use for reusable skill work."}),
+            ("plugin", {
+                "trigger": "Use for plugin planning.",
+                "adapter_platform": "Example host",
+                "tool_requirements": "No tools required.",
+            }),
+            ("connector", {
+                "trigger": "Use for connector planning.",
+                "adapter_platform": "Example host",
+                "tool_requirements": "No tools required.",
+            }),
+        ]
+        required_categories = {
+            "Source material",
+            "Project configuration",
+            "Evaluation records",
+            "Registry proposal",
+        }
+
+        for kind, changes in cases:
+            with self.subTest(kind=kind):
+                project, _, payload = self._export(kind, **changes)
+                categories = package_contents(project)
+                visible = [
+                    category for category in categories
+                    if not category["kinds"] or kind in category["kinds"]
+                ]
+                self.assertTrue(required_categories <= {item["title"] for item in visible})
+
+                with zipfile.ZipFile(io.BytesIO(payload)) as archive:
+                    names = set(archive.namelist())
+                    listed_files = {
+                        path.replace("{slug}", project["slug"])
+                        for category in visible
+                        for path in category["files"]
+                    }
+                    self.assertTrue(listed_files <= names, listed_files - names)
+                    titles = {item["title"] for item in visible}
+                    if kind in {"agent-skill", "plugin", "connector"}:
+                        self.assertIn("Portable skill and adapter plan", titles)
+                        self.assertNotIn("Decision tool", titles)
+                    elif kind == "decision-tool":
+                        self.assertIn("Decision tool", titles)
+                        self.assertNotIn("Portable skill and adapter plan", titles)
+                    else:
+                        self.assertNotIn("Portable skill and adapter plan", titles)
+                        self.assertNotIn("Decision tool", titles)
 
 
 if __name__ == "__main__":
