@@ -277,6 +277,66 @@ function render(){{const node=byId[current];if(Object.prototype.hasOwnProperty.c
 function restart(){{current=graph.start;render();}}document.querySelectorAll('[data-answer]').forEach(button=>button.addEventListener('click',()=>{{const node=byId[current];current=button.dataset.answer==='true'?node.yes:node.no;render();}}));document.getElementById('restart').addEventListener('click',restart);restart();</script></body></html>"""
 
 
+def package_contents(project: dict[str, Any]) -> list[dict[str, Any]]:
+    """Describe the generated ZIP contents for the Package panel."""
+    return [
+        {
+            "title": "Source material",
+            "detail": "The supplied source text and its reference.",
+            "files": ["origin/source.md"],
+            "kinds": [],
+        },
+        {
+            "title": "Project configuration",
+            "detail": "The project record, private manifest, instructions, prompts, specification, and selected skill metadata.",
+            "files": [
+                "README.md",
+                "AGENTS.md",
+                "CHANGELOG.md",
+                "LICENSE.md",
+                "manifest.yaml",
+                "exports/project.json",
+                "skill/instructions.md",
+                "prompts/system.md",
+                "docs/specification.md",
+                "research/skills.json",
+            ],
+            "kinds": [],
+        },
+        {
+            "title": "Evaluation records",
+            "detail": "Authored evaluation cases and saved evaluation runs.",
+            "files": ["tests/evals.json", "exports/evaluation-records.json"],
+            "kinds": [],
+        },
+        {
+            "title": "Registry proposal",
+            "detail": "A pending proposal document; exporting does not apply it.",
+            "files": ["exports/registry-proposal.yaml"],
+            "kinds": [],
+        },
+        {
+            "title": "Portable skill and adapter plan",
+            "detail": "Portable skill source, conversion notes, and an unverified adapter plan.",
+            "files": [
+                "skills/{slug}/SKILL.md",
+                "skills/{slug}/references/procedure.md",
+                "skills/{slug}/LICENSE.md",
+                "docs/conversion.md",
+                "adapters/plan.json",
+                "adapters/README.md",
+            ],
+            "kinds": sorted(PRODUCT_KINDS),
+        },
+        {
+            "title": "Decision tool",
+            "detail": "The decision graph and its offline browser runner.",
+            "files": ["decision.json", "index.html"],
+            "kinds": ["decision-tool"],
+        },
+    ]
+
+
 def _generated_files(project: dict[str, Any], store: Store) -> dict[str, bytes]:
     repo = repo_name(project)
     manifest = _manifest(project)

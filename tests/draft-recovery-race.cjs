@@ -10,6 +10,7 @@ const make = () => {
   const state = {projects: [{id:'a'}, {id:'b'}], current:null, projectLoadToken:0,
     localDrafts:{a:{draft:{title:'private A draft'},baseRevision:1}}};
   const context = {state, canLeaveCurrent:()=>true, render:()=>{}, announce:()=>{},
+    projectSwitchLabel:(project)=>project?.title || 'Untitled capability',
     api:(url)=>new Promise((resolve,reject)=>pending.set(url,{resolve,reject}))};
   vm.createContext(context); vm.runInContext(load + restore,context);
   const finish = async (id) => {
