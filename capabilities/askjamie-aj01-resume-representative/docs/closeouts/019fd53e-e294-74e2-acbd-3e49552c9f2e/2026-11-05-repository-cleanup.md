@@ -1,6 +1,6 @@
 # AJ01 repository cleanup: thread closeout
 
-Status: local receipt prepared; remote publication and integration require separate authorization. This is a compact summary, not a lossless transcript.
+Status: the owner approved publishing and integrating this receipt; remote verification and archival follow the review. This is a compact summary, not a lossless transcript.
 
 ## Provenance and coverage
 
@@ -19,8 +19,8 @@ Status: local receipt prepared; remote publication and integration require separ
 | Limit root files: later request and approval | Original final pass removed ignored `.DS_Store`; child current tree retains governance anchors plus later-added `.replit` and `replit.md`. Later repository evolution means the historical seven-file count is not a current invariant. | This thread | Verified complete for approved scope |
 | Protect candidate material: approved triage | `profile.pdf` was removed from the child current tree in `d17a357`; Git history remains. This is not history erasure or proof the earlier public copy is inaccessible. | Owner for any separate privacy review | Verified for current tree; historical exposure review is a separate owner decision |
 | Preserve broad skills and reserved folders: final approved scope | Historical final pass retained them; current child and pinned FoundRy source retain skill material. | Project owner | Explicitly retained, not a cleanup failure |
-| Preserve closeout and verify twice: 2026-11-05 request | This receipt is scoped to the capability. Pass A and B are documented below; remote integration remains pending. | This thread / owner for publication | Unfinished until remote persistence and approval |
-| Archive this exact thread: 2026-11-05 request | Archive only after all required gates, including remote persistence, are met. | This thread | Blocked pending authorized integration and verification |
+| Preserve closeout and verify twice: 2026-11-05 request | This receipt is scoped to the capability. Pass A and B are documented below; remote integration remains pending. | This thread | Unfinished until remote persistence is verified |
+| Archive this exact thread: 2026-11-05 request | Archive only after all required gates, including remote persistence, are met. | This thread | Pending integration and verification |
 
 ## Artifact manifest and decisions
 
@@ -35,4 +35,4 @@ Pass A: child and FoundRy checkout identities, clean status, remotes and child r
 
 Pass B: separate self-review challenged the historical seven-root-file assertion, checked later source migration, and distinguished public-history exposure from working-tree removal. It is not independent review. No missing attachment affecting the cleanup was identified, but truncated tool outputs limit complete-history claims. Product readiness and Replit reconciliation remain owned by their existing project work, not this thread.
 
-Next: review and authorize publishing this public-safe receipt to the FoundRy capability; then verify its exact remote commit, required checks and integration before archiving the thread. Do not push, merge, deploy, rewrite history, or remove another worker's work without authority.
+Next: publish the approved public-safe receipt to the FoundRy capability, then verify its exact remote commit, required checks and integration before archiving the thread. Deployment, history rewriting and removal of other workers' work are not authorized by this approval.
