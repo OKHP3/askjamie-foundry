@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-06",
+  "environment": "selected managed Linux cloud environment",
+  "python": "3.12.14",
+  "foundry_base_commit": "303c4312039b8ed98c4559175517951782775fad",
+  "foundry_base_tree": "140b0b460e56c9f38811fe82b81bffcb12a57337",
+  "checks": [
+    {
+      "check": "complete-current-foundry-baseline",
+      "status": "PASS",
+      "evidence": "1600 files compared to current remote Git blobs and modes; reconstructed local baseline tree equals remote tree."
+    },
+    {
+      "check": "pinned-source-snapshot-byte-and-zip-restore",
+      "status": "PASS",
+      "evidence": "Existing verify-source-snapshots.py --restore-check: AJ01 392 files/2013468 bytes, AJ02 481 files/1880192 bytes."
+    },
+    {
+      "check": "full-consolidation-and-native-bundle-restores",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "sources": {
+          "aj01": {
+            "current_files": 393,
+            "current_tree": "581d3ab9acf9e8ee9450cd9d91c713b84a1b78bf",
+            "historical_blob_versions": 466,
+            "reachable_commits": 40,
+            "public_occurrences_verified": 702,
+            "private_occurrences": 157,
+            "historical_trees_verified": 36,
+            "native_bundle_restore": "PASS"
+          },
+          "aj02": {
+            "current_files": 482,
+            "current_tree": "096566462f3a55850b30a45878fa9d2cf8ca8451",
+            "historical_blob_versions": 522,
+            "reachable_commits": 34,
+            "public_occurrences_verified": 863,
+            "private_occurrences": 141,
+            "historical_trees_verified": 29,
+            "native_bundle_restore": "PASS"
+          }
+        },
+        "limitation": null
+      }
+    },
+    {
+      "check": "meaningful-negative-and-partial-fixtures",
+      "status": "PASS",
+      "evidence": [
+        {
+          "fixture": "wrong-main-label",
+          "status": "PASS",
+          "rejected": "Source main/tree identity mismatch"
+        },
+        {
+          "fixture": "wrong-main-ref",
+          "status": "PASS",
+          "rejected": "Source main/ref identity mismatch"
+        },
+        {
+          "fixture": "missing-current-row",
+          "status": "PASS",
+          "rejected": "Current-file count mismatch"
+        },
+        {
+          "fixture": "wrong-current-size",
+          "status": "PASS",
+          "rejected": "Current-byte count mismatch"
+        },
+        {
+          "fixture": "unsafe-windows-path",
+          "status": "PASS",
+          "rejected": "Unsafe relative path"
+        },
+        {
+          "fixture": "missing-parent",
+          "status": "PASS",
+          "rejected": "Missing reachable parent"
+        },
+        {
+          "fixture": "corrupt-archive",
+          "status": "PASS",
+          "rejected": "Recovery archive SHA-256 mismatch"
+        },
+        {
+          "fixture": "public-only-is-partial",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "check": "root-manifest-and-registry",
+      "status": "PASS",
+      "evidence": "Existing validators pass; nine registry entries retained."
+    },
+    {
+      "check": "repository-python-suite",
+      "status": "PASS",
+      "evidence": "python3 -m unittest discover -s tests -v: 122 tests passed."
+    },
+    {
+      "check": "public-artifact-build",
+      "status": "PASS",
+      "evidence": "Existing build-public-artifact.py --build passes; no public deployment."
+    },
+    {
+      "check": "new-verifier-python-parser",
+      "status": "PASS",
+      "evidence": "python3 -m py_compile scripts/verify-source-consolidation.py"
+    },
+    {
+      "check": "private-library-create",
+      "status": "PASS",
+      "evidence": "Existing private project folder confirmed create success and expected 5885082 bytes; identity metadata persisted on original local archive."
+    },
+    {
+      "check": "private-library-raw-byte-readback",
+      "status": "BLOCKED",
+      "evidence": "Supported materialization transfer download failed in this environment before a file was installed. No remote byte equality claimed."
+    },
+    {
+      "check": "shared-tool-semantic-comparison",
+      "status": "PASS",
+      "evidence": "Independent reviewer compared actual source/root procedures and drift, promotion mirror check passes; source copies retained as history."
+    },
+    {
+      "check": "preexisting-skill-foundry-contributor-tests",
+      "status": "WARN",
+      "evidence": "Unchanged package 1/8 under /workspace and 8/8 under /tmp. Existing absolute-path filter defect, not introduced or repaired here."
+    },
+    {
+      "check": "remote-public-draft-readback-and-ci",
+      "status": "PENDING",
+      "evidence": "Exact remote identities and CI are maintained in the draft PR and issue58 handoff after publication."
+    },
+    {
+      "check": "live-gpt-model-host-acceptance",
+      "status": "NOT RUN",
+      "evidence": "Outside this tracked-source audit. Existing product owners retain acceptance work."
+    },
+    {
+      "check": "repository-archival-or-deletion",
+      "status": "NOT RUN",
+      "evidence": "No source repository state or refs modified; exact-target closure decision remains separate."
+    },
+    {
+      "check": "independent-pass-b",
+      "status": "PASS",
+      "evidence": "Separate reviewer verified all875 current payloads,13 advertised refs,74 commits,65 root trees,591 ZIP blob payloads and both native restores. Duplicate/routing/privacy choices reviewed; main/ref and Windows-path verifier hardenings accepted. Zero-byte placeholders retain distinct structural purposes."
+    }
+  ]
+}
