@@ -68,9 +68,13 @@ A manual privacy review and basic secret-pattern scan covered the added lines.
 The fresh GitHub Codex review was a separate automated review of the editorial
 commit. The closeout record received a separate self-review.
 
-Replit's linked FoundRy app was identified through its connector. Its live
-checkout, active workers and runtime were outside the editorial verification
-and remain unverified here. This task dispatched no Replit work.
+Read-only Replit inspection confirmed the linked FoundRy app and its GitHub
+remote. The Shell showed clean `main` at
+`c1b2a34a55d4f476facf0ace638b84028af992d4`, matching Replit's tracking ref.
+The GitHub main observed for this addendum was newer. The UI showed Free
+Mode, active source-capture task #55 and queued PR #72 adapter testing.
+Those tasks are separate from this editorial review. No Replit sync, agent
+dispatch or runtime acceptance test was run.
 
 On rerun, reopen this intake record and compare PR #80's current head to
 `53fd02501e634528d50646bcf83969e8b58295fb`. Revalidate the affected checks only if the head or evidence
