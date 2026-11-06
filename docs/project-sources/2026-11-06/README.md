@@ -1,6 +1,6 @@
 # Preserved AskJamie project sources
 
-This library holds the original files requested for repository storage from the shared AskJamie and Professional Portfolio project libraries. The Foundry source tab was empty at capture. The 16 shared-project documents matched 16 of the 23 portfolio-project files byte-for-byte, so 39 listed occurrences are preserved as 23 distinct originals.
+This library holds the original files requested for repository storage from the shared AskJamie and Professional Portfolio project libraries. The Foundry source tab was empty at capture. The 16 shared-project documents matched 16 of the 23 portfolio-project files byte-for-byte, for 39 observed occurrences and 23 distinct originals. The public tree retains 21 originals representing 35 of those occurrences. Two originals are excluded from the current public inventory pending review and remain in owner custody.
 
 The image-source register additionally preserves 13 observed artwork occurrences as 11 distinct PNGs, including the earlier website comparison, seven GPT-icon candidates, two source components and the owner-supplied final composition. Two component occurrences match earlier candidates exactly.
 
@@ -19,10 +19,8 @@ Treat these as historical research and design inputs. Recheck dated platform cla
 | Original filename | Preserved file | Source roles |
 | --- | --- | --- |
 | Guide to Mastering Custom GPT Creation (November 2025).docx | [mastering-custom-gpt-creation-nov2025.docx](files/mastering-custom-gpt-creation-nov2025.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |
-| Brand-Guarding the AI Frontier_ OverKill Hill P³™, AskJamie™, and the Interface Economy.docx | [brandguard-ai-frontier-interface-economy.docx](files/brandguard-ai-frontier-interface-economy.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |
 | Optimal Formation of GPT Knowledge File.docx | [gpt-knowledge-formation.docx](files/gpt-knowledge-formation.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |
 | The LLM Interface Economy_ How GPTs Will Replace Browsers and Reshape Commerce.docx | [llm-interface-economy.docx](files/llm-interface-economy.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |
-| Custom GPTs in Digital Commerce_ A Disruptive Force in Sales, Engagement, and Brand Authority.docx | [custom-gpts-digital-commerce.docx](files/custom-gpts-digital-commerce.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |
 | Building the Ideal Custom GPT in Late 2025.docx | [ideal-custom-gpt-late2025.docx](files/ideal-custom-gpt-late2025.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |
 | State-of-the-Art Practices for Building Ideal Custom GPTs (OpenAI & Gemini Gems).docx | [custom-gpt-gemini-practices.docx](files/custom-gpt-gemini-practices.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |
 | ChatGPT’s Custom GPT Marketplace_ State of Play in Late 2025.docx | [gpt-marketplace-late2025.docx](files/gpt-marketplace-late2025.docx) | AJ00 shared AskJamie; AJ02 Professional Portfolio |

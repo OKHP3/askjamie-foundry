@@ -23,19 +23,6 @@
         "preservation": "exact-original-bytes"
       },
       {
-        "original_filename": "Brand-Guarding the AI Frontier_ OverKill Hill P³™, AskJamie™, and the Interface Economy.docx",
-        "stored_path": "files/brandguard-ai-frontier-interface-economy.docx",
-        "source_project_roles": [
-          "AJ00 shared AskJamie",
-          "AJ02 Professional Portfolio"
-        ],
-        "bytes": 97211,
-        "sha256": "17898d1408994624946999069bf8219f7a6f30c49af74bbc861832844172271b",
-        "git_blob_sha": "4ab2809d4fba87b890f9e966206828dd962c7408",
-        "classification": "historical-research-input",
-        "preservation": "exact-original-bytes"
-      },
-      {
         "original_filename": "Optimal Formation of GPT Knowledge File.docx",
         "stored_path": "files/gpt-knowledge-formation.docx",
         "source_project_roles": [
@@ -58,19 +45,6 @@
         "bytes": 48504,
         "sha256": "4d8c09aabbfe4e154f974f6350b4dbe6d9e349d71c7b84c49e142e49825ea610",
         "git_blob_sha": "09d25b7c2550cf92144f80c742bac169aaa7f226",
-        "classification": "historical-research-input",
-        "preservation": "exact-original-bytes"
-      },
-      {
-        "original_filename": "Custom GPTs in Digital Commerce_ A Disruptive Force in Sales, Engagement, and Brand Authority.docx",
-        "stored_path": "files/custom-gpts-digital-commerce.docx",
-        "source_project_roles": [
-          "AJ00 shared AskJamie",
-          "AJ02 Professional Portfolio"
-        ],
-        "bytes": 33541,
-        "sha256": "c6649b742187ed416089363bae63453df75eb055adcc5f1e186cb775ff25bc30",
-        "git_blob_sha": "efcbc995b43b9dc0631ffdb9f37d7647d29a04c5",
         "classification": "historical-research-input",
         "preservation": "exact-original-bytes"
       },
@@ -301,7 +275,12 @@
         "classification": "historical-research-input",
         "preservation": "exact-original-bytes"
       }
-    ]
+    ],
+    "public_distinct_payloads": 21,
+    "excluded_distinct_payloads": 2,
+    "public_occurrences": 35,
+    "excluded_occurrences": 4,
+    "exclusion_note": "Two source originals are excluded from the current public inventory pending a release-boundary review. Their originals remain with the source owner."
   },
   "thread_image_inputs": {
     "observed_occurrences": 13,
