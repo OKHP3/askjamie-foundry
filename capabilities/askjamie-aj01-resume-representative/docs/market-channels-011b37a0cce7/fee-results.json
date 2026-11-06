@@ -1,0 +1,118 @@
+{
+  "result": "PASS",
+  "formula_crosschecks": 66,
+  "fixed_fixtures": 10,
+  "assumptions": "USD, domestic card, no sales tax/FX/ads/refunds/payout charges/monthly subscription; fee components rounded half up. Etsy is hypothetical for eligible products only.",
+  "rows": [
+    {
+      "price_usd": "10.00",
+      "ko_fi": "8.91",
+      "gumroad_direct": "7.91",
+      "gumroad_discover": "7.00",
+      "fiverr_seller": "8.00",
+      "etsy_eligible_only": "8.60",
+      "payhip_free": "8.91",
+      "fiverr_buyer_before_tax": "14.05"
+    },
+    {
+      "price_usd": "49.00",
+      "ko_fi": "44.83",
+      "gumroad_direct": "41.88",
+      "gumroad_discover": "34.30",
+      "fiverr_seller": "39.20",
+      "etsy_eligible_only": "43.89",
+      "payhip_free": "44.83",
+      "fiverr_buyer_before_tax": "55.20"
+    },
+    {
+      "price_usd": "50.00",
+      "ko_fi": "45.75",
+      "gumroad_direct": "42.75",
+      "gumroad_discover": "35.00",
+      "fiverr_seller": "40.00",
+      "etsy_eligible_only": "44.80",
+      "payhip_free": "45.75",
+      "fiverr_buyer_before_tax": "56.25"
+    },
+    {
+      "price_usd": "75.00",
+      "ko_fi": "68.77",
+      "gumroad_direct": "64.52",
+      "gumroad_discover": "52.50",
+      "fiverr_seller": "60.00",
+      "etsy_eligible_only": "67.42",
+      "payhip_free": "68.77",
+      "fiverr_buyer_before_tax": "82.63"
+    },
+    {
+      "price_usd": "79.00",
+      "ko_fi": "72.46",
+      "gumroad_direct": "68.01",
+      "gumroad_discover": "55.30",
+      "fiverr_seller": "63.20",
+      "etsy_eligible_only": "71.04",
+      "payhip_free": "72.46",
+      "fiverr_buyer_before_tax": "86.85"
+    },
+    {
+      "price_usd": "99.00",
+      "ko_fi": "90.88",
+      "gumroad_direct": "85.43",
+      "gumroad_discover": "69.30",
+      "fiverr_seller": "79.20",
+      "etsy_eligible_only": "89.14",
+      "payhip_free": "90.88",
+      "fiverr_buyer_before_tax": "107.95"
+    },
+    {
+      "price_usd": "149.00",
+      "ko_fi": "136.93",
+      "gumroad_direct": "128.98",
+      "gumroad_discover": "104.30",
+      "fiverr_seller": "119.20",
+      "etsy_eligible_only": "134.39",
+      "payhip_free": "136.93",
+      "fiverr_buyer_before_tax": "160.70"
+    },
+    {
+      "price_usd": "179.00",
+      "ko_fi": "164.56",
+      "gumroad_direct": "155.11",
+      "gumroad_discover": "125.30",
+      "fiverr_seller": "143.20",
+      "etsy_eligible_only": "161.54",
+      "payhip_free": "164.56",
+      "fiverr_buyer_before_tax": "192.35"
+    },
+    {
+      "price_usd": "199.00",
+      "ko_fi": "182.98",
+      "gumroad_direct": "172.53",
+      "gumroad_discover": "139.30",
+      "fiverr_seller": "159.20",
+      "etsy_eligible_only": "179.64",
+      "payhip_free": "182.98",
+      "fiverr_buyer_before_tax": "213.45"
+    },
+    {
+      "price_usd": "200.00",
+      "ko_fi": "183.90",
+      "gumroad_direct": "173.40",
+      "gumroad_discover": "140.00",
+      "fiverr_seller": "160.00",
+      "etsy_eligible_only": "180.55",
+      "payhip_free": "183.90",
+      "fiverr_buyer_before_tax": "211.00"
+    },
+    {
+      "price_usd": "300.00",
+      "ko_fi": "276.00",
+      "gumroad_direct": "260.50",
+      "gumroad_discover": "210.00",
+      "fiverr_seller": "240.00",
+      "etsy_eligible_only": "271.05",
+      "payhip_free": "276.00",
+      "fiverr_buyer_before_tax": "316.50"
+    }
+  ]
+}
