@@ -450,8 +450,8 @@
           "status": "blocked",
           "owner": "Existing parent Replit handoff owner; no takeover in this thread",
           "evidence": [
-            "pr78",
-            "pr82",
+            "PR78",
+            "PR82",
             "LOCAL_SOURCE_CHECKS"
           ],
           "note": "Git integration and the recorded narrow governance decision are complete. Current live checkout, canonical parity, task state and runtime remain unverified."
@@ -460,8 +460,8 @@
           "id": "O11",
           "status": "unfinished",
           "evidence": [
-            "pr72",
-            "pr72CI"
+            "PR72",
+            "PR72_CI"
           ],
           "note": "Updated exact draft head passed four checks. Native host loading and behavior acceptance were not established."
         },
@@ -477,10 +477,10 @@
           "id": "O14",
           "status": "verified complete",
           "evidence": [
-            "pr79",
+            "PR79",
             "AJ01",
             "AJ02",
-            "issue58"
+            "ISSUE58"
           ],
           "note": "Merged existing closeout package retained; latest delta remains in the same shared home."
         },
@@ -488,9 +488,9 @@
           "id": "O15",
           "status": "unfinished",
           "evidence": [
-            "pr79",
-            "pr79CI",
-            "issue58"
+            "PR79",
+            "PR79_CI",
+            "ISSUE58"
           ],
           "note": "PR79 integration is verified complete. This new documentation delta needs separate exact-head verification and protected-main integration; consult the maintained receipt for completed checks and current review state. No merge authority assumed."
         },
@@ -499,7 +499,7 @@
           "status": "verified complete",
           "evidence": [
             "validation",
-            "issue58"
+            "ISSUE58"
           ],
           "note": "Fresh artifact checks and independent challenge apply to the continuation only; current Replit runtime and GPT asset gates remain open."
         },
@@ -508,10 +508,10 @@
           "status": "blocked",
           "evidence": [
             "coverage",
-            "pr72",
-            "pr77",
-            "pr82",
-            "issue58"
+            "PR72",
+            "PR77",
+            "PR82",
+            "ISSUE58"
           ],
           "note": "Exact thread provenance, asset/exception coverage and remaining state/host gates are not established. No archive attempted."
         }

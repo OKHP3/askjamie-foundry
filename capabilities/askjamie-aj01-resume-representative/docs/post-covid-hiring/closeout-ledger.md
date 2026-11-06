@@ -1,6 +1,6 @@
 # Row 27: completion ledger and two-pass closeout receipt
 
-Status: **BLOCKED — NOT READY TO ARCHIVE**, reviewed 2026-11-05. Source title: **KNOW: Hybrid post-COVID hiring**. Stable public work key: `aj01-post-covid-hiring-row27`; exact private conversation identity is recorded in the existing authorized Library extraction reader, not repeated in a public repo. Parent project: AskJamie FoundRy; route: AJ01 Résumé Representative; no AJ02 scope. Coordinator: [FoundRy #109](https://github.com/OKHP3/askjamie-foundry/issues/109); source review [draft PR #110](https://github.com/OKHP3/askjamie-foundry/pull/110).
+Status: **BLOCKED - NOT READY TO ARCHIVE**, reviewed 2026-11-05. Source title: **KNOW: Hybrid post-COVID hiring**. Stable public work key: `aj01-post-covid-hiring-row27`; exact private conversation identity is recorded in the existing authorized Library extraction reader, not repeated in a public repo. Parent project: AskJamie FoundRy; route: AJ01 Résumé Representative; no AJ02 scope. Coordinator: [FoundRy #109](https://github.com/OKHP3/askjamie-foundry/issues/109); source review [draft PR #110](https://github.com/OKHP3/askjamie-foundry/pull/110).
 
 ## Purpose, precedence and scope
 
@@ -36,7 +36,7 @@ The user did not approve an off-topic guide to building custom GPTs in place of 
 | Integrate/release | Reviewed authorized protected-main PR, exact merged revision | Maintainer/Jamie, pending | **Blocked** |
 | Archive exact thread | Only after other gates pass and supported action succeeds | No archive control in session | **Blocked** |
 
-## Pass A — implementation and content mechanics
+## Pass A - implementation and content mechanics
 
 At the remote branch after the targeted correction, the source file was read back through GitHub as blob `16bf3d4048a17d7caba32594d541cec6eb2ab1f3`: **46,161 Unicode code units / 6,043 whitespace-delimited words**. Its 23 section headings are numbered PC-001 through PC-023 without duplicates; 20 glossary headings PC-G001 through PC-G020 likewise unique. All 14 bibliography entries were counted. A bounded citation-pattern presence check, 13 named source-family checks against the bibliography, exact brand string, actual creation date, site/contact and clear unvalidated-page-status markers passed. The metaprompt was independently read back from GitHub: 19,847 characters, 2,453 whitespace-delimited words; contains both brand and site/contact metadata.
 
@@ -44,7 +44,7 @@ The first local lexical term-scoring smoke check returned the expected section a
 
 **Not run / not passed:** PDF build, page-count/rendering, independent PDF readers, font/layout/header/footer inspection, actual link-click audit, attached GPT retrieval or original ZIP-member hashes. Python and container invocations repeatedly failed with `ClientResponseError` before file operations could execute. No absent test is treated as success.
 
-## Pass B — separate adversarial author review
+## Pass B - separate adversarial author review
 
 Reread the user’s original and latest requirements and inspected the actual corpus structure, bibliography, README and renewal protocol separately from the mechanical checks. Specific findings and dispositions:
 
@@ -67,7 +67,7 @@ This was an adversarial desk review by the same ChatGPT session, **not** an inde
 3. Expand and substantively peer-audit the research corpus until it actually supports a 20+-page rendered publication; update factual sources as of the new run date. Verify author-date references and source-register fields.
 4. Render a searchable PDF with actual printed headers/footers, metadata, bookmarks, active site/contact links and visible page numbers, then run mechanical Pass A and separate Pass B with direct visual review.
 5. Verify private source custody and canonical artifact readback. Obtain maintainer approval for integration as required, verify exact final main content and CI. Do not merge or deploy by implication.
-6. Only after all substantive and persistence gates are satisfied, use a supported native archive action on **this exact source thread** and confirm the result. If no archive action exists, preserve a final receipt and report COMPLETE — ARCHIVE PENDING, not false archival.
+6. Only after all substantive and persistence gates are satisfied, use a supported native archive action on **this exact source thread** and confirm the result. If no archive action exists, preserve a final receipt and report COMPLETE - ARCHIVE PENDING, not false archival.
 
 No source assets, original preserved snapshots, branches, worktrees or other workers' files have been deleted or rewritten.
 

@@ -1,6 +1,6 @@
 # Project-source intake and capability routing
 
-The owner-requested intake adds the [original-source library](../project-sources/2026-11-06/README.md): 39 project-file occurrences deduplicated to 23 unchanged originals, plus 13 observed image-source occurrences deduplicated to 11 PNGs. Byte identities and roles are recorded in the library manifest.
+The owner-requested intake adds the [original-source library](../project-sources/2026-11-06/README.md): 39 project-file occurrences deduplicated to 23 originals at intake. The current public inventory retains 21 unchanged originals and excludes two originals pending review. The image inventory covers 13 observed occurrences and 11 distinct PNGs. Byte identities and roles are recorded in the library manifest.
 
 Eight reviewed method/decision extracts are routed to [AJ01](../../capabilities/askjamie-aj01-resume-representative/docs/project-source-intake-2026-11-06/README.md), [AJ02](../../capabilities/askjamie-aj02-professional-portfolio/docs/project-source-intake-2026-11-06/README.md), or shared asset guidance within the source library. Four previously clipped historical answers have complete rendered-text captures in the private source archive. The image thread also exposed earlier website-design context and actual source PNGs during browser recovery.
 

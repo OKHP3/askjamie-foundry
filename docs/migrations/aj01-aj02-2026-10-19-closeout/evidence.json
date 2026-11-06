@@ -586,15 +586,15 @@
         },
         "private": "Existing owner evidence home; no private content or locators added to the public repository."
       },
-      "sources": {
-        "issue58": "https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589",
-        "pr79": "https://github.com/OKHP3/askjamie-foundry/pull/79",
-        "pr79CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42072208407",
-        "pr78": "https://github.com/OKHP3/askjamie-foundry/pull/78",
-        "pr82": "https://github.com/OKHP3/askjamie-foundry/pull/82",
-        "pr72": "https://github.com/OKHP3/askjamie-foundry/pull/72",
-        "pr72CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42064824172",
-        "pr77": "https://github.com/OKHP3/askjamie-foundry/pull/77",
+      "evidence_index": {
+        "ISSUE58": "https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6434497589",
+        "PR79": "https://github.com/OKHP3/askjamie-foundry/pull/79",
+        "PR79_CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42072208407",
+        "PR78": "https://github.com/OKHP3/askjamie-foundry/pull/78",
+        "PR82": "https://github.com/OKHP3/askjamie-foundry/pull/82",
+        "PR72": "https://github.com/OKHP3/askjamie-foundry/pull/72",
+        "PR72_CI": "https://github.com/OKHP3/askjamie-foundry/actions/runs/42064824172",
+        "PR77": "https://github.com/OKHP3/askjamie-foundry/pull/77",
         "AJ01": "https://github.com/OKHP3/askjamie-foundry/tree/main/capabilities/askjamie-aj01-resume-representative",
         "AJ02": "https://github.com/OKHP3/askjamie-foundry/tree/main/capabilities/askjamie-aj02-professional-portfolio"
       },
