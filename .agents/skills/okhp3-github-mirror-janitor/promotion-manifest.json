@@ -1,0 +1,34 @@
+{
+  "package": "okhp3-github-mirror-janitor",
+  "compatibility": "additive with repository-janitor + notification-maintainer",
+  "source": {
+    "path": "Codex/.agents/skills/okhp3-github-mirror-janitor",
+    "mode": "local-project-authoritative",
+    "hashes": {
+      "scripts/audit-notifications.ps1": "a875fabf5aa5496d465fc4a9c1ea1a7ab2ab710a639f4a0ff048cf16680c01c9",
+      "agents/openai.yaml": "da046cb7e4ad78c104bb4b65f9969f21e86a9b26e6effa2d7c6030b67f7c16ad",
+      "evals/evals.json": "a06d33dcff4d47994b94f66f30d50d2a87cb565cbe128f746d6ccccabfdc1e93",
+      "references/decision-rubric.md": "b1496d870ac5e1fd945bd2c74c7d494fa7efaed50c920e28ac504988cbd60acf",
+      "scripts/audit-mirrors.ps1": "38f8f37a52eabfcfb40e544aba16a8cd8e5a30b28e330efb477057c583d01f35",
+      "SKILL.md": "9ed7782a9d663da5d8aba448ebeee32ac01d4d9a6f28c0011583900ac9ccf701",
+      "evals/learning-record.md": "24ff16a0188bc43ead1705b081468d511b8e2b43f61a30b8425b55bee9389d27"
+    }
+  },
+  "destination": {
+    "path": "04_GitHub_Mirrors/skillz/universal/okhp3-github-mirror-janitor",
+    "mode": "canonical",
+    "hashes": {
+      "scripts/audit-notifications.ps1": "a875fabf5aa5496d465fc4a9c1ea1a7ab2ab710a639f4a0ff048cf16680c01c9",
+      "agents/openai.yaml": "da046cb7e4ad78c104bb4b65f9969f21e86a9b26e6effa2d7c6030b67f7c16ad",
+      "evals/evals.json": "65f563a52063f303dc811bb292975a6bcffd856b3d9f334ae154a338d81863d3",
+      "references/decision-rubric.md": "b1496d870ac5e1fd945bd2c74c7d494fa7efaed50c920e28ac504988cbd60acf",
+      "scripts/audit-mirrors.ps1": "ace973a366af4fbd921b54ccedc2dd479945335393e3c2445ea9182a6e841228",
+      "SKILL.md": "f375a7ede9c0cf218e1263c9e4b12916bce9318b7f30a64e4b51f5b456ae026e",
+      "evals/learning-record.md": "9f2ac8b72ba2586db31ce4abf2dc990c4611dfd2bc8d6dbb1f828ee89fcb8ec8",
+      "tests/test_audit_mirrors.py": "42ff903f267d25d6caf9d75a7b8f1f5d0a2416f81bb6e1b5f16361c1f38ed33a"
+    },
+    "version": "0.1.2",
+    "hashNormalization": "UTF-8 with LF line endings"
+  },
+  "created": "2026-09-08T20:53:00.0186472-05:00"
+}

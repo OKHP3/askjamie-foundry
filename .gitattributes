@@ -15,3 +15,6 @@
 
 # Preserve the reviewed research edition's exact PDF bytes.
 /capabilities/resume-representative/docs/post-covid-hiring/post-covid-hiring-2026q4-research-edition.pdf -text -ident -filter
+
+# Keep current contributor verification receipts consistent across checkouts.
+/.agents/skills/okhp3-skill-foundry/** -text -ident -filter
