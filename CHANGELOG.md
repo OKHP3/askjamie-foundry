@@ -6,6 +6,8 @@
   retain its MIT notice.
 - Keep raw evaluation outputs in historical source locations, distinguish
   historical receipts from the current package, and refresh the 118-skill catalog.
+- Keep dated contributor-source ledger hashes verifiable against exact bytes
+  in each source's immutable snapshot as active shared tools evolve.
 - Make the Skill Foundry fixture filter package-relative and preserve its
   exact-byte verification contract across platforms.
 

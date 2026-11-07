@@ -69,6 +69,33 @@ def verify_bytes(data, row):
         raise ValueError('Content identity mismatch: ' + row['git_blob'])
 
 
+def verify_public_payload(row, source_code):
+    """Keep evolving contributor tools separate from preserved source bytes."""
+    parts = canonical_destination(row['destination'])
+    primary = ROOT.joinpath(*parts)
+    candidates = [primary]
+    if parts[:2] == ('.agents', 'skills'):
+        source_slugs = {
+            'aj01': 'resume-representative',
+            'aj02': 'professional-portfolio',
+        }
+        slug = source_slugs.get(source_code)
+        if slug:
+            candidates.append(
+                ROOT.joinpath('capabilities', slug, 'origin', 'repository', *parts))
+    for path in candidates:
+        if path.is_symlink():
+            raise ValueError('Linked public payload')
+        if not path.is_file():
+            continue
+        try:
+            verify_bytes(path.read_bytes(), row)
+        except ValueError:
+            continue
+        return path != primary
+    raise ValueError('Missing or mismatched public payload: ' + row['git_blob'])
+
+
 def run_git(arguments, cwd):
     return subprocess.check_output(['git', *arguments], cwd=cwd, stderr=subprocess.STDOUT).decode()
 
@@ -103,7 +130,7 @@ def verify(ledger_path=DEFAULT_LEDGER, archive_path=None):
             tree = tree_hash([{'path': r['source_path'], 'mode': r['mode'], 'sha': r['git_blob']} for r in rows])
             if tree != source['source_tree']:
                 raise ValueError('Current source tree identity mismatch')
-            public_count = private_count = 0
+            public_count = private_count = origin_count = 0
             historical = {r['git_blob']: r for r in source['historical_blobs']}
             if len(historical) != source['counts']['historical_unique_blobs']:
                 raise ValueError('Historical blob count mismatch')
@@ -120,10 +147,8 @@ def verify(ledger_path=DEFAULT_LEDGER, archive_path=None):
                 else:
                     if row['disposition'] != 'migrated-and-verified':
                         raise ValueError('Public custody disposition mismatch')
-                    path = ROOT.joinpath(*canonical_destination(destination))
-                    if path.is_symlink() or not path.is_file():
-                        raise ValueError('Missing/linked public payload')
-                    verify_bytes(path.read_bytes(), row)
+                    if verify_public_payload(row, source['code']):
+                        origin_count += 1
                     public_count += 1
             commits = {c['commit']: c for c in source['commits']}
             if len(commits) != source['counts']['reachable_commits']:
@@ -140,7 +165,9 @@ def verify(ledger_path=DEFAULT_LEDGER, archive_path=None):
                 raise ValueError('Source main/ref identity mismatch')
             detail = {'current_files': len(rows), 'current_tree': tree,
                       'historical_blob_versions': len(historical), 'reachable_commits': len(commits),
-                      'public_occurrences_verified': public_count, 'private_occurrences': private_count}
+                      'public_occurrences_verified': public_count,
+                      'public_origin_occurrences_verified': origin_count,
+                      'private_occurrences': private_count}
             if archive:
                 captured = next(s for s in private['sources'] if s['code'] == source['code'])
                 if captured['refs'] != source['refs'] or captured['commits'] != source['commits']:
