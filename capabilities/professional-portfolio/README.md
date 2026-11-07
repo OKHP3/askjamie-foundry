@@ -20,7 +20,7 @@ configured GPT capture, Replit reconciliation and host acceptance remain open.
 - [Conversion dossier](docs/conversion.md)
 - [Migration, reconciliation and rollback](../../docs/migrations/aj01-aj02-2026-10-19.md)
 - [Later child-source reconciliation](../../docs/migrations/aj01-aj02-source-reconciliation.md)
-- [Original repository at the imported commit](https://github.com/OKHP3/askjamie-aj02-professional-portfolio/tree/d45a598ab57acae7a41f887a9208e86a264d7cda)
+- Original GitHub source commit: `d45a598ab57acae7a41f887a9208e86a264d7cda`. The former repository is currently unavailable; its [pinned snapshot](origin/repository/) remains in FoundRy.
 - [Existing website](https://askjamie.bot/lens-system/professional-portfolio/)
 - [Legacy GPT](https://chatgpt.com/g/g-691fa5845230819199d4ffb89b13e9ab-professional-portfolio-by-askjamietm)
 - [Coordination issue](https://github.com/OKHP3/askjamie-foundry/issues/58)
