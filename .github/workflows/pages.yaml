@@ -98,6 +98,17 @@ jobs:
               stream.write("</tbody></table>\n")
           PY
 
+      - name: Write public file checksum manifest
+        run: python scripts/build-public-artifact.py --release-file-manifest > "$RUNNER_TEMP/pages-checksum-manifest.json"
+
+      - name: Upload Pages checksum manifest
+        uses: actions/upload-artifact@v7
+        with:
+          name: askjamie-pages-checksum-manifest
+          path: ${{ runner.temp }}/pages-checksum-manifest.json
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Configure Pages
         uses: actions/configure-pages@v6
 
@@ -122,6 +133,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Download Pages checksum manifest
+        uses: actions/download-artifact@v7
+        with:
+          name: askjamie-pages-checksum-manifest
+          path: ${{ runner.temp }}/pages-release
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
@@ -132,7 +149,9 @@ jobs:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           set -euo pipefail
-          python scripts/build-public-artifact.py --check-live "${PAGE_URL}"
+          python scripts/build-public-artifact.py \
+            --check-live "${PAGE_URL}" \
+            --verify-release-manifest "$RUNNER_TEMP/pages-release/pages-checksum-manifest.json"
 
       - name: Record deployment and smoke-test result
         if: always()

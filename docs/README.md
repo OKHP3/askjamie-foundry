@@ -17,8 +17,8 @@ records preserve evidence; they do not replace current operating rules.
 
 ## Capability integration
 
-- [AJ01 intake](../capabilities/askjamie-aj01-resume-representative/docs/thread-extraction-intake-2026-11-05.md): candidate representation, evidence, resumes, letters and interviews.
-- [AJ02 intake](../capabilities/askjamie-aj02-professional-portfolio/docs/thread-extraction-intake-2026-11-05.md): supplier/business representation, offers, proof and proposals.
+- [AJ01 intake](../capabilities/resume-representative/docs/thread-extraction-intake-2026-11-05.md): candidate representation, evidence, resumes, letters and interviews.
+- [AJ02 intake](../capabilities/professional-portfolio/docs/thread-extraction-intake-2026-11-05.md): supplier/business representation, offers, proof and proposals.
 - [Shared routing and owner map](migrations/thread-extraction-routing-2026-11-05.md): common methods, existing issue/PR homes and handoff rules.
 
 Capability-specific instructions, build work, packaging, marketing and commercial

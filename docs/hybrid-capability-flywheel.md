@@ -2,8 +2,8 @@
 
 **Status:** documented operating pattern, not an implemented synchronization service.  
 **Reviewed:** 2026-11-05. **Owner:** OKHP3 / AskJamie FoundRy.  
-**Related capability:** [AJ01 Resume Representative](../capabilities/askjamie-aj01-resume-representative/README.md).  
-**Thread provenance:** [AJ01 repository and cross-surface strategy closeout](../capabilities/askjamie-aj01-resume-representative/docs/thread-closeout-github-repo-creation-2025-12-15/README.md).  
+**Related capability:** [AJ01 Resume Representative](../capabilities/resume-representative/README.md).  
+**Thread provenance:** [AJ01 repository and cross-surface strategy closeout](../capabilities/resume-representative/docs/thread-closeout-github-repo-creation-2025-12-15/README.md).  
 **Coordination:** [issue #84](https://github.com/OKHP3/askjamie-foundry/issues/84).
 
 ## Executive decision
@@ -51,7 +51,7 @@ Use the existing capability manifest for identity and lineage. Do not replace it
 For AJ01, the already reviewed public anchors are:
 
 - [Product lens](https://askjamie.bot/lens-system/resume-representative/) with a replatforming notice.
-- [Canonical source](../capabilities/askjamie-aj01-resume-representative/README.md) and [migration issue #58](https://github.com/OKHP3/askjamie-foundry/issues/58).
+- [Canonical source](../capabilities/resume-representative/README.md) and [migration issue #58](https://github.com/OKHP3/askjamie-foundry/issues/58).
 - [Historical standalone repository](https://github.com/OKHP3/askjamie-aj01-resume-representative) and [legacy GPT](https://chatgpt.com/g/g-691fb05c86c881919eec171e62fe1e00-resume-representative-by-askjamietm).
 - [AskJamie transition notice](https://askjamie.bot/whats-next/) and the [OverKill Hill P3 Ko-fi page](https://ko-fi.com/overkillhillp3). Ko-fi is a portfolio support surface, not an AJ01-specific offer.
 - The connected owner's AJ01 Notion anchor (internal reference) is a project reference; **public permissions were not established**. A verified AJ01 YouTube video URL was not supplied or found in the reviewed sources.
@@ -79,6 +79,6 @@ The large repository and local clone solve **source custody and versioning**, no
 
 ## Bounded AJ01 continuation
 
-The pinned AJ01 source import is complete, but configured-GPT assets, exact revision coverage, knowledge attachment originals, reuse rights and native host acceptance have separate outstanding evidence and ownership. The later [October 29 v3 capture](../capabilities/askjamie-aj01-resume-representative/origin/gpt-config/2026-10-29-v3/README.md) includes instructions and configuration metadata; it does **not** prove original knowledge/image payload custody or a validated replacement. Its evaluation evidence is historical, not a current release result. Continue the migration under [issue #58](https://github.com/OKHP3/askjamie-foundry/issues/58), not in this thread's documentation task.
+The pinned AJ01 source import is complete, but configured-GPT assets, exact revision coverage, knowledge attachment originals, reuse rights and native host acceptance have separate outstanding evidence and ownership. The later [October 29 v3 capture](../capabilities/resume-representative/origin/gpt-config/2026-10-29-v3/README.md) includes instructions and configuration metadata; it does **not** prove original knowledge/image payload custody or a validated replacement. Its evaluation evidence is historical, not a current release result. Continue the migration under [issue #58](https://github.com/OKHP3/askjamie-foundry/issues/58), not in this thread's documentation task.
 
 **Change policy:** adapt this pattern through reviewable documents and targeted tests; do not auto-create repositories, publish videos, change payment settings, or install integrations merely because this design names them.

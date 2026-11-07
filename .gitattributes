@@ -1,11 +1,17 @@
 # Preserve historical snapshots byte for byte across Windows and POSIX checkouts.
-/capabilities/askjamie-aj01-resume-representative/origin/repository/** -text -ident -filter
-/capabilities/askjamie-aj02-professional-portfolio/origin/repository/** -text -ident -filter
-/capabilities/askjamie-aj01-resume-representative/origin/replit/.replit -text -ident -filter
-/capabilities/askjamie-aj02-professional-portfolio/origin/replit/.replit -text -ident -filter
+/capabilities/resume-representative/origin/repository/** -text -ident -filter
+/capabilities/professional-portfolio/origin/repository/** -text -ident -filter
+/capabilities/resume-representative/origin/replit/.replit -text -ident -filter
+/capabilities/professional-portfolio/origin/replit/.replit -text -ident -filter
 
 # Keep the approved registry byte digest stable across platforms.
 /registry/index.yaml text eol=lf
 
 # Preserve every byte inspected by the project-source intake gate.
 /docs/project-sources/** -text -ident -filter
+
+# Preserve the archived AJ01 instruction candidate's exact UTF-8 byte count.
+/capabilities/resume-representative/docs/thread-closeout-instruction-prompt-2025-11-16/instructions.txt -text -ident -filter
+
+# Preserve the reviewed research edition's exact PDF bytes.
+/capabilities/resume-representative/docs/post-covid-hiring/post-covid-hiring-2026q4-research-edition.pdf -text -ident -filter

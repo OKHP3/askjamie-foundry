@@ -43,7 +43,7 @@ PUBLICATION_AUTHORITY: "None unless separately established"
 FOCUS_UPDATES: []
 ```
 
-For AskJamie, the intended capability is `capabilities/askjamie-aj01-resume-representative` in `OKHP3/askjamie-foundry`. Inspect current conventions, visibility, files, branch, ownership, and workflow before choosing paths. Do not create a new repository, overwrite another worker, or assume the active machine has the canonical checkout. For another organization, use its supplied destination rather than the AskJamie path.
+For AskJamie, the intended capability is `capabilities/resume-representative` in `OKHP3/askjamie-foundry`. Inspect current conventions, visibility, files, branch, ownership, and workflow before choosing paths. Do not create a new repository, overwrite another worker, or assume the active machine has the canonical checkout. For another organization, use its supplied destination rather than the AskJamie path.
 
 ### 3. Scope contract
 

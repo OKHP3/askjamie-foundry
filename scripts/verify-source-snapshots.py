@@ -8,7 +8,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SLUGS = ("askjamie-aj01-resume-representative", "askjamie-aj02-professional-portfolio")
+SLUGS = ("resume-representative", "professional-portfolio")
 
 
 def git_hash(kind, data):

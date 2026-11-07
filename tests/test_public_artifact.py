@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import subprocess
 import sys
 import socket
@@ -26,13 +27,89 @@ def load_checker():
     return checker
 
 
+LIVE_ASSET_FIXTURES = {
+    "styles.css": ("text/css; charset=utf-8", ROOT / "public" / "styles.css"),
+    "favicon.ico": ("image/x-icon", ROOT / "public" / "favicon.ico"),
+    "icons/favicon-32.png": ("image/png", ROOT / "public" / "icons" / "favicon-32.png"),
+    "icons/favicon-16.png": ("image/png", ROOT / "public" / "icons" / "favicon-16.png"),
+    "favicon.svg": ("image/svg+xml", ROOT / "public" / "favicon.svg"),
+    "icons/apple-touch-icon.png": (
+        "image/png",
+        ROOT / "public" / "icons" / "apple-touch-icon.png",
+    ),
+    "icons/safari-pinned-tab.svg": (
+        "image/svg+xml",
+        ROOT / "public" / "icons" / "safari-pinned-tab.svg",
+    ),
+    "icons/icon-192.png": ("image/png", ROOT / "public" / "icons" / "icon-192.png"),
+    "icons/icon-512.png": ("image/png", ROOT / "public" / "icons" / "icon-512.png"),
+    "icons/icon-maskable-512.png": (
+        "image/png",
+        ROOT / "public" / "icons" / "icon-maskable-512.png",
+    ),
+    "assets/social-preview.jpg": (
+        "image/jpeg",
+        ROOT / "public" / "assets" / "social-preview.jpg",
+    ),
+}
+LIVE_MANIFEST_PATH = "site.webmanifest"
+LIVE_PAGE_ICON_PATHS = (
+    "favicon.ico",
+    "icons/favicon-32.png",
+    "icons/favicon-16.png",
+    "favicon.svg",
+    "icons/apple-touch-icon.png",
+    "icons/safari-pinned-tab.svg",
+)
+LIVE_MANIFEST_ICON_PATHS = (
+    "icons/icon-192.png",
+    "icons/icon-512.png",
+    "icons/icon-maskable-512.png",
+)
+
+
+def live_asset_response(page_url: str, asset_path: str):
+    if asset_path == LIVE_MANIFEST_PATH:
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = f"{page_url}{asset_path}"
+        response.headers = {"Content-Type": "application/manifest+json"}
+        response.read.return_value = (
+            ROOT.joinpath("public", LIVE_MANIFEST_PATH).read_bytes()
+        )
+        return response
+    content_type, asset_file = LIVE_ASSET_FIXTURES[asset_path]
+    response = MagicMock()
+    response.__enter__.return_value = response
+    response.status = 200
+    response.geturl.return_value = f"{page_url}{asset_path}"
+    response.headers = {"Content-Type": content_type}
+    response.read.return_value = asset_file.read_bytes()[:4096]
+    return response
+
+
+def live_success_asset_responses(page_url: str, checker):
+    asset_paths = [
+        *(path for _, path in checker.LIVE_REQUIRED_ASSETS),
+        LIVE_MANIFEST_PATH,
+        *LIVE_PAGE_ICON_PATHS,
+        *LIVE_MANIFEST_ICON_PATHS,
+    ]
+    return [live_asset_response(page_url, path) for path in asset_paths]
+
+
 PAGES_CONTRACT = load_checker()
 PAGES_PATH = PAGES_CONTRACT.EXPECTED_PAGES_PATH
 PAGES_BASE_URL = PAGES_CONTRACT.PAGES_BASE_URL
 PAGES_REPOSITORY_NAME = PAGES_CONTRACT.PAGES_REPOSITORY_NAME
 
 
-def check_isolated_public_html(html: str, styles_css: str | None = None) -> None:
+def check_isolated_public_html(
+    html: str,
+    styles_css: str | None = None,
+    additional_public_files: dict[str, str] | None = None,
+) -> None:
     checker = load_checker()
     with tempfile.TemporaryDirectory() as temp_dir:
         isolated = Path(temp_dir)
@@ -41,6 +118,28 @@ def check_isolated_public_html(html: str, styles_css: str | None = None) -> None
         (source / "index.html").write_text(html, encoding="utf-8")
         if styles_css is not None:
             (source / "styles.css").write_text(styles_css, encoding="utf-8")
+        for relative_path, content in (additional_public_files or {}).items():
+            public_file = source / relative_path
+            public_file.parent.mkdir(parents=True, exist_ok=True)
+            public_file.write_text(content, encoding="utf-8")
+        with (
+            patch.object(checker, "ROOT", isolated),
+            patch.object(checker, "SOURCE", source),
+            patch.dict(
+                checker.os.environ,
+                {"PAGES_REPOSITORY": checker.PAGES_REPOSITORY_IDENTITY},
+            ),
+        ):
+            checker.check()
+
+
+def check_isolated_public_sitemap(sitemap: str) -> None:
+    checker = load_checker()
+    with tempfile.TemporaryDirectory() as temp_dir:
+        isolated = Path(temp_dir)
+        source = isolated / "public"
+        shutil.copytree(ROOT / "public", source)
+        (source / "sitemap.xml").write_text(sitemap, encoding="utf-8")
         with (
             patch.object(checker, "ROOT", isolated),
             patch.object(checker, "SOURCE", source),
@@ -94,6 +193,36 @@ class PublicArtifactTests(unittest.TestCase):
         )
         check_isolated_public_html(html)
 
+    def test_public_check_rejects_malformed_sitemap_xml(self):
+        with self.assertRaisesRegex(SystemExit, "public/sitemap.xml is not valid XML"):
+            check_isolated_public_sitemap(
+                '<?xml version="1.0"?><urlset><url><loc>unfinished'
+            )
+
+    def test_public_check_rejects_unexpected_sitemap_location(self):
+        sitemap = (ROOT / "public/sitemap.xml").read_text(encoding="utf-8")
+        sitemap = sitemap.replace(
+            "</urlset>",
+            "  <url><loc>https://example.com/</loc></url>\n</urlset>",
+        )
+
+        with self.assertRaisesRegex(
+            SystemExit, "must contain exactly one location matching"
+        ):
+            check_isolated_public_sitemap(sitemap)
+
+    def test_public_check_rejects_duplicate_sitemap_location(self):
+        sitemap = (ROOT / "public/sitemap.xml").read_text(encoding="utf-8")
+        sitemap = sitemap.replace(
+            "</urlset>",
+            f"  <url><loc>{PAGES_BASE_URL}</loc></url>\n</urlset>",
+        )
+
+        with self.assertRaisesRegex(
+            SystemExit, "must contain exactly one location matching"
+        ):
+            check_isolated_public_sitemap(sitemap)
+
     def test_public_check_rejects_an_insecure_approved_destination(self):
         checker = load_checker()
         insecure_destination = "http://unapproved.example/path"
@@ -108,6 +237,42 @@ class PublicArtifactTests(unittest.TestCase):
         ):
             checker.check_approved_external_destinations()
 
+    def test_public_check_rejects_an_approved_destination_without_a_hostname(self):
+        checker = load_checker()
+        destination_without_hostname = "https:///path"
+
+        with (
+            patch.object(
+                checker,
+                "APPROVED_EXTERNAL_LINKS",
+                (*checker.APPROVED_EXTERNAL_LINKS, destination_without_hostname),
+            ),
+            self.assertRaisesRegex(
+                SystemExit, "approved external destinations must have a hostname"
+            ),
+        ):
+            checker.check_approved_external_destinations()
+
+    def test_public_check_rejects_credentials_in_an_approved_resource(self):
+        checker = load_checker()
+        destination_with_credentials = "https://user:password@example.com/resource"
+
+        with (
+            patch.object(
+                checker,
+                "APPROVED_EXTERNAL_RESOURCES",
+                (*checker.APPROVED_EXTERNAL_RESOURCES, destination_with_credentials),
+            ),
+            self.assertRaisesRegex(
+                SystemExit,
+                "approved external destinations must have a hostname and must not "
+                "include a username or password",
+            ) as raised,
+        ):
+            checker.check_approved_external_destinations()
+
+        self.assertNotIn(destination_with_credentials, str(raised.exception))
+
     def test_public_check_rejects_an_unapproved_external_link(self):
         html = (ROOT / "public/index.html").read_text(encoding="utf-8")
         html += '\n<a href="https://unapproved.example/path">Unapproved</a>\n'
@@ -121,14 +286,37 @@ class PublicArtifactTests(unittest.TestCase):
     def test_public_check_accepts_approved_external_resource_inventory_in_isolation(self):
         checker = load_checker()
         html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        discovered = {
+            url
+            for _, url in checker.public_external_resource_references(
+                ROOT / "public", html
+            )
+        }
 
         self.assertEqual(
-            checker.public_external_resource_references(ROOT / "public", html),
-            [("public/index.html", checker.GA4_SCRIPT_URL)],
+            discovered,
+            set(checker.APPROVED_EXTERNAL_RESOURCES),
         )
         # The checker root is a temporary copy containing only public files;
         # this verifies resource policy without depending on private workbench state.
         check_isolated_public_html(html)
+
+    def test_public_check_rejects_an_unused_approved_external_resource(self):
+        checker = load_checker()
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        unused_destination = "https://unused.example/approved.css"
+
+        with patch.object(
+            checker,
+            "APPROVED_EXTERNAL_RESOURCES",
+            (*checker.APPROVED_EXTERNAL_RESOURCES, unused_destination),
+        ):
+            with self.assertRaisesRegex(
+                SystemExit, "unused approved external resource"
+            ) as raised:
+                checker.check_external_resources(ROOT / "public", html)
+
+        self.assertIn(unused_destination, str(raised.exception))
 
     def test_public_check_rejects_unapproved_external_markup_resource_in_isolation(self):
         html = (ROOT / "public/index.html").read_text(encoding="utf-8")
@@ -139,6 +327,53 @@ class PublicArtifactTests(unittest.TestCase):
 
         self.assertIn("public/index.html", str(raised.exception))
         self.assertIn("https://unapproved.example/tracker.png", str(raised.exception))
+
+    def test_public_check_accepts_an_approved_external_srcset_candidate_in_isolation(self):
+        checker = load_checker()
+        candidate = "https://images.example/approved.webp"
+        html = f'<img srcset="{candidate} 1x" alt="" />'
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            source = Path(temp_dir) / "public"
+            source.mkdir()
+            with patch.object(
+                checker,
+                "APPROVED_EXTERNAL_RESOURCES",
+                (candidate,),
+            ):
+                self.assertIn(
+                    ("public/index.html", candidate),
+                    checker.public_external_resource_references(source, html),
+                )
+                checker.check_external_resources(source, html)
+
+    def test_public_check_rejects_an_unapproved_external_srcset_candidate_in_isolation(self):
+        checker = load_checker()
+        candidate = "https://unapproved.example/responsive.webp"
+        html = f'<img srcset="{candidate} 1x" alt="" />'
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            source = Path(temp_dir) / "public"
+            source.mkdir()
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_external_resources(source, html)
+
+        self.assertIn("public/index.html", str(raised.exception))
+        self.assertIn(candidate, str(raised.exception))
+
+    def test_public_check_rejects_an_unapproved_external_svg_image_in_isolation(self):
+        checker = load_checker()
+        reference = "https://unapproved.example/remote.svg"
+        html = f'<svg><image href="{reference}" /></svg>'
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            source = Path(temp_dir) / "public"
+            source.mkdir()
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_external_resources(source, html)
+
+        self.assertIn("public/index.html", str(raised.exception))
+        self.assertIn(reference, str(raised.exception))
 
     def test_public_check_rejects_unapproved_external_stylesheet_resource_in_isolation(self):
         html = (ROOT / "public/index.html").read_text(encoding="utf-8")
@@ -152,6 +387,65 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn("public/styles.css", str(raised.exception))
         self.assertIn("https://unapproved.example/image.png", str(raised.exception))
         self.assertIn("https://unapproved.example/imported.css", str(raised.exception))
+
+    def test_public_check_rejects_remote_resources_in_nested_local_stylesheet_imports(self):
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        css = (ROOT / "public/styles.css").read_text(encoding="utf-8")
+        css += '\n@import url("./css/first.css");\n'
+        nested_url = "https://unapproved.example/nested.png"
+
+        with self.assertRaises(SystemExit) as raised:
+            check_isolated_public_html(
+                html,
+                css,
+                {
+                    "css/first.css": '@import "deep/second.css";',
+                    "css/deep/second.css": f'.hero {{ background-image: url("{nested_url}"); }}',
+                },
+            )
+
+        self.assertIn("public/css/deep/second.css", str(raised.exception))
+        self.assertIn(nested_url, str(raised.exception))
+
+    def test_public_check_rejects_remote_resources_in_inline_css_imports(self):
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        html += '\n<style>@import url("./css/inline.css");</style>\n'
+        imported_url = "https://unapproved.example/inline.png"
+
+        with self.assertRaises(SystemExit) as raised:
+            check_isolated_public_html(
+                html,
+                additional_public_files={
+                    "css/inline.css": f'.hero {{ background-image: url("{imported_url}"); }}',
+                },
+            )
+
+        self.assertIn("public/css/inline.css", str(raised.exception))
+        self.assertIn(imported_url, str(raised.exception))
+
+    def test_public_check_rejects_css_escaped_external_schemes(self):
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        base_css = (ROOT / "public/styles.css").read_text(encoding="utf-8")
+        for css_rule, escaped_url in (
+            (
+                '.hero { background-image: url("https\\3a//unapproved.example/escaped.png"); }',
+                "https://unapproved.example/escaped.png",
+            ),
+            (
+                '@import "https\\3a//unapproved.example/escaped.css";',
+                "https://unapproved.example/escaped.css",
+            ),
+            (
+                '.hero { background-image: image-set("https\\3a//unapproved.example/escaped-set.png" 1x); }',
+                "https://unapproved.example/escaped-set.png",
+            ),
+        ):
+            with self.subTest(escaped_url=escaped_url):
+                with self.assertRaises(SystemExit) as raised:
+                    check_isolated_public_html(html, f"{base_css}\n{css_rule}\n")
+
+                self.assertIn("public/styles.css", str(raised.exception))
+                self.assertIn(escaped_url, str(raised.exception))
 
     def test_public_artifact_builds_with_relative_assets_and_no_private_runtime(self):
         result = subprocess.run(
@@ -205,6 +499,36 @@ class PublicArtifactTests(unittest.TestCase):
             f"https://{PAGES_CONTRACT.PAGES_REPOSITORY_IDENTITY.split('/', 1)[0].lower()}.github.io{PAGES_PATH}",
         )
 
+    def test_public_javascript_syntax_error_fails_check_and_build(self):
+        checker = load_checker()
+        with tempfile.TemporaryDirectory() as temp_dir:
+            isolated = Path(temp_dir)
+            source = isolated / "public"
+            shutil.copytree(ROOT / "public", source)
+            invalid_javascript = source / "nested" / "broken.js"
+            invalid_javascript.parent.mkdir()
+            invalid_javascript.write_text("const = ;\n", encoding="utf-8")
+            output = isolated / "dist" / "pages"
+
+            with (
+                patch.object(checker, "ROOT", isolated),
+                patch.object(checker, "SOURCE", source),
+                patch.object(checker, "OUTPUT", output),
+                patch.dict(
+                    checker.os.environ,
+                    {"PAGES_REPOSITORY": checker.PAGES_REPOSITORY_IDENTITY},
+                ),
+            ):
+                for operation in (checker.check, checker.build):
+                    with self.subTest(operation=operation.__name__):
+                        with self.assertRaisesRegex(
+                            SystemExit,
+                            r"public JavaScript syntax check failed: public/nested/broken\.js",
+                        ):
+                            operation()
+
+            self.assertFalse(output.exists())
+
     def test_public_artifact_is_served_as_a_pages_style_subpath(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             pages_root = Path(temp_dir) / PAGES_REPOSITORY_NAME.lower()
@@ -246,8 +570,12 @@ class PublicArtifactTests(unittest.TestCase):
                     ),
                     patch("builtins.print") as mocked_print,
                 ):
-                    checker.check_live(f"http://127.0.0.1:{port}{PAGES_PATH}")
+                    checker.check_live(
+                        f"http://127.0.0.1:{port}{PAGES_PATH}",
+                        checker.release_file_manifest(ROOT / "dist" / "pages"),
+                    )
                 self.assertIn("Live Pages check passed", mocked_print.call_args.args[0])
+                self.assertIn("release file checksums match", mocked_print.call_args.args[0])
                 css = urllib.request.urlopen(
                     f"http://127.0.0.1:{port}{PAGES_PATH}styles.css", timeout=2
                 )
@@ -349,6 +677,51 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertEqual(mocked_urlopen.call_count, 5)
         self.assertEqual(mocked_sleep.call_count, 4)
 
+    def test_live_check_rejects_forbidden_runtime_marker_after_public_markers(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = page_url
+        response.read.return_value = (
+            (ROOT / "public/index.html").read_text(encoding="utf-8") + "\nfetch("
+        ).encode("utf-8")
+
+        with patch.object(checker, "urlopen", return_value=response) as mocked_urlopen:
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        self.assertIn(
+            "deployed content contains forbidden private/runtime marker: fetch(",
+            str(raised.exception),
+        )
+        mocked_urlopen.assert_called_once()
+
+    def test_live_check_rejects_a_missing_approved_external_link_without_network_access(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        missing_link = checker.APPROVED_EXTERNAL_LINKS[-1]
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        html_without_link = html.replace(f'href="{missing_link}"', "", 1)
+        self.assertNotEqual(html_without_link, html)
+
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = page_url
+        response.read.return_value = html_without_link.encode("utf-8")
+
+        with patch.object(checker, "urlopen", return_value=response) as mocked_urlopen:
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        message = str(raised.exception)
+        self.assertIn("missing expected external link(s)", message)
+        self.assertIn(missing_link, message)
+        mocked_urlopen.assert_called_once()
+        self.assertEqual(mocked_urlopen.call_args.args[0].full_url, page_url)
+
     def test_live_check_recovers_after_transient_failure_without_network_access(self):
         checker = load_checker()
         page_url = PAGES_BASE_URL
@@ -357,13 +730,7 @@ class PublicArtifactTests(unittest.TestCase):
         response.status = 200
         response.geturl.return_value = page_url
         response.read.return_value = (ROOT / "public/index.html").read_bytes()
-        asset_responses = []
-        for _, asset_path in checker.LIVE_REQUIRED_ASSETS:
-            asset_response = MagicMock()
-            asset_response.__enter__.return_value = asset_response
-            asset_response.status = 200
-            asset_response.geturl.return_value = f"{page_url}{asset_path}"
-            asset_responses.append(asset_response)
+        asset_responses = live_success_asset_responses(page_url, checker)
 
         with (
             patch.object(
@@ -380,12 +747,19 @@ class PublicArtifactTests(unittest.TestCase):
         ):
             checker.check_live(page_url)
 
-        self.assertEqual(mocked_urlopen.call_count, 2 + len(checker.LIVE_REQUIRED_ASSETS))
+        self.assertEqual(
+            mocked_urlopen.call_count,
+            2
+            + len(checker.LIVE_REQUIRED_ASSETS)
+            + 1
+            + len(LIVE_PAGE_ICON_PATHS)
+            + len(LIVE_MANIFEST_ICON_PATHS),
+        )
         mocked_sleep.assert_called_once_with(2)
         mocked_print.assert_called_once()
         self.assertIn("Live Pages check passed", mocked_print.call_args.args[0])
 
-    def test_live_check_probes_stylesheet_icon_and_social_image_without_network_access(self):
+    def test_live_check_probes_all_page_and_manifest_icons_without_network_access(self):
         checker = load_checker()
         page_url = PAGES_BASE_URL
         page_response = MagicMock()
@@ -393,13 +767,7 @@ class PublicArtifactTests(unittest.TestCase):
         page_response.status = 200
         page_response.geturl.return_value = page_url
         page_response.read.return_value = (ROOT / "public/index.html").read_bytes()
-        asset_responses = []
-        for _, asset_path in checker.LIVE_REQUIRED_ASSETS:
-            response = MagicMock()
-            response.__enter__.return_value = response
-            response.status = 200
-            response.geturl.return_value = f"{page_url}{asset_path}"
-            asset_responses.append(response)
+        asset_responses = live_success_asset_responses(page_url, checker)
 
         with (
             patch.object(
@@ -414,17 +782,61 @@ class PublicArtifactTests(unittest.TestCase):
         requested_urls = [
             call.args[0].full_url for call in mocked_urlopen.call_args_list
         ]
+        expected_asset_paths = [
+            *(path for _, path in checker.LIVE_REQUIRED_ASSETS),
+            LIVE_MANIFEST_PATH,
+            *LIVE_PAGE_ICON_PATHS,
+            *LIVE_MANIFEST_ICON_PATHS,
+        ]
         self.assertEqual(
             requested_urls,
+            [page_url, *(f"{page_url}{path}" for path in expected_asset_paths)],
+        )
+        self.assertIn(
+            "stylesheet, all page and manifest icons, and social image verified",
+            mocked_print.call_args.args[0],
+        )
+
+    def test_live_check_rejects_page_icon_outside_repository_path_without_fetching_it(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        html = (ROOT / "public/index.html").read_text(encoding="utf-8")
+        html = html.replace(
+            'href="./icons/favicon-32.png"',
+            'href="/outside-repository-icon.png"',
+            1,
+        )
+        page_response = MagicMock()
+        page_response.__enter__.return_value = page_response
+        page_response.status = 200
+        page_response.geturl.return_value = page_url
+        page_response.read.return_value = html.encode("utf-8")
+        static_responses = [
+            live_asset_response(page_url, path)
+            for _, path in checker.LIVE_REQUIRED_ASSETS
+        ]
+
+        with patch.object(
+            checker,
+            "urlopen",
+            side_effect=[
+                page_response,
+                *static_responses,
+                live_asset_response(page_url, LIVE_MANIFEST_PATH),
+            ],
+        ) as mocked_urlopen:
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        self.assertIn("outside the expected repository path", str(raised.exception))
+        self.assertEqual(
+            [call.args[0].full_url for call in mocked_urlopen.call_args_list],
             [
                 page_url,
-                *(
-                    f"{page_url}{asset_path}"
-                    for _, asset_path in checker.LIVE_REQUIRED_ASSETS
-                ),
+                *(f"{page_url}{path}" for _, path in checker.LIVE_REQUIRED_ASSETS),
+                f"{page_url}{LIVE_MANIFEST_PATH}",
             ],
         )
-        self.assertIn("stylesheet, icon, and social image verified", mocked_print.call_args.args[0])
 
     def test_live_check_reports_missing_asset_url_and_http_status_without_network_access(self):
         checker = load_checker()
@@ -434,18 +846,23 @@ class PublicArtifactTests(unittest.TestCase):
         page_response.status = 200
         page_response.geturl.return_value = page_url
         page_response.read.return_value = (ROOT / "public/index.html").read_bytes()
-        missing_icon_url = f"{page_url}favicon.ico"
-        stylesheet_response = MagicMock()
-        stylesheet_response.__enter__.return_value = stylesheet_response
-        stylesheet_response.status = 200
-        stylesheet_response.geturl.return_value = f"{page_url}styles.css"
+        missing_icon_url = f"{page_url}icons/favicon-32.png"
+        successful_assets = [
+            live_asset_response(page_url, path)
+            for path in (
+                "styles.css",
+                "assets/social-preview.jpg",
+                LIVE_MANIFEST_PATH,
+                "favicon.ico",
+            )
+        ]
 
         with patch.object(
             checker,
             "urlopen",
             side_effect=[
                 page_response,
-                stylesheet_response,
+                *successful_assets,
                 HTTPError(
                     missing_icon_url,
                     404,
@@ -479,6 +896,47 @@ class PublicArtifactTests(unittest.TestCase):
                         checker.check_live_asset(asset_url, "stylesheet")
                 self.assertIn("redirected away from the expected URL", str(raised.exception))
 
+    def test_live_asset_accepts_expected_stylesheet_icon_and_social_image_content(self):
+        checker = load_checker()
+        for asset_type, asset_path in checker.LIVE_REQUIRED_ASSETS:
+            with self.subTest(asset_type=asset_type):
+                response = live_asset_response(PAGES_BASE_URL, asset_path)
+                with patch.object(checker, "urlopen", return_value=response):
+                    checker.check_live_asset(
+                        f"{PAGES_BASE_URL}{asset_path}", asset_type
+                    )
+
+    def test_live_asset_rejects_html_and_wrong_content_with_http_200(self):
+        checker = load_checker()
+        invalid_responses = (
+            ("stylesheet", "styles.css", "text/html", b"<!doctype html><title>Not found</title>"),
+            ("icon", "favicon.ico", "text/html", b"<html><body>Not found</body></html>"),
+            (
+                "social image",
+                "assets/social-preview.jpg",
+                "text/html",
+                b"<html><body>Not found</body></html>",
+            ),
+            ("icon", "favicon.ico", "image/x-icon", b"not an icon"),
+            ("social image", "assets/social-preview.jpg", "image/jpeg", b"not a JPEG"),
+            ("stylesheet", "styles.css", "application/octet-stream", b"body { color: red }"),
+        )
+        for asset_type, asset_path, content_type, body in invalid_responses:
+            asset_url = f"{PAGES_BASE_URL}{asset_path}"
+            response = MagicMock()
+            response.__enter__.return_value = response
+            response.status = 200
+            response.geturl.return_value = asset_url
+            response.headers = {"Content-Type": content_type}
+            response.read.return_value = body
+            with self.subTest(asset_type=asset_type, content_type=content_type, body=body):
+                with patch.object(checker, "urlopen", return_value=response):
+                    with self.assertRaises(SystemExit) as raised:
+                        checker.check_live_asset(asset_url, asset_type)
+                message = str(raised.exception)
+                self.assertIn(f"{asset_type} asset {asset_url}", message)
+                self.assertIn("has unexpected content", message)
+
     def test_live_check_rejects_redirect_to_wrong_repository_path_without_network_access(self):
         checker = load_checker()
         page_url = PAGES_BASE_URL
@@ -495,6 +953,24 @@ class PublicArtifactTests(unittest.TestCase):
         message = str(raised.exception)
         self.assertIn(f"expected {PAGES_PATH!r}", message)
         self.assertIn("got '/unexpected-path/'", message)
+        mocked_urlopen.assert_called_once()
+
+    def test_live_check_reports_malformed_redirect_url_without_network_access(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        malformed_url = "https://[malformed/"
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = malformed_url
+        response.read.return_value = b""
+        with patch.object(checker, "urlopen", return_value=response) as mocked_urlopen:
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        message = str(raised.exception)
+        self.assertIn("invalid final URL", message)
+        self.assertIn(malformed_url, message)
         mocked_urlopen.assert_called_once()
 
     def test_live_check_rejects_redirect_to_unexpected_host_with_valid_content_without_network_access(self):
@@ -515,6 +991,57 @@ class PublicArtifactTests(unittest.TestCase):
         self.assertIn(f"expected {expected_host!r}", message)
         self.assertIn("got 'unexpected.example'", message)
         mocked_urlopen.assert_called_once()
+
+    def test_live_check_rejects_redirect_to_unexpected_port_without_network_access(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        expected_host = checker.urlparse(checker.PAGES_BASE_URL).hostname
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = f"https://{expected_host}:8443{PAGES_PATH}"
+        response.read.return_value = (ROOT / "public/index.html").read_bytes()
+
+        with patch.object(checker, "urlopen", return_value=response) as mocked_urlopen:
+            with self.assertRaises(SystemExit) as raised:
+                checker.check_live(page_url)
+
+        self.assertIn("redirected to an unexpected port", str(raised.exception))
+        self.assertIn("expected 443, got 8443", str(raised.exception))
+        mocked_urlopen.assert_called_once()
+
+    def test_live_check_accepts_redirect_to_canonical_https_port_without_network_access(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        expected_host = checker.urlparse(checker.PAGES_BASE_URL).hostname
+        final_url = f"https://{expected_host}:443{PAGES_PATH}"
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.status = 200
+        response.geturl.return_value = final_url
+        response.read.return_value = (ROOT / "public/index.html").read_bytes()
+        asset_responses = []
+        asset_responses = live_success_asset_responses(final_url, checker)
+
+        with (
+            patch.object(
+                checker,
+                "urlopen",
+                side_effect=[response, *asset_responses],
+            ) as mocked_urlopen,
+            patch("builtins.print") as mocked_print,
+        ):
+            checker.check_live(page_url)
+
+        self.assertEqual(
+            mocked_urlopen.call_count,
+            1
+            + len(checker.LIVE_REQUIRED_ASSETS)
+            + 1
+            + len(LIVE_PAGE_ICON_PATHS)
+            + len(LIVE_MANIFEST_ICON_PATHS),
+        )
+        self.assertIn("Live Pages check passed", mocked_print.call_args.args[0])
 
     def test_repository_rename_fails_with_actionable_message(self):
         checker = load_checker()
@@ -592,6 +1119,7 @@ class PublicArtifactTests(unittest.TestCase):
 
             first = checker.release_info(first_artifact)
             second = checker.release_info(second_artifact)
+            public_manifest = checker.release_file_manifest(first_artifact)
 
         self.assertEqual(first, second)
         self.assertEqual(first["file_count"], 3)
@@ -618,6 +1146,150 @@ class PublicArtifactTests(unittest.TestCase):
                 },
             ],
         )
+        self.assertEqual(public_manifest, first["files"])
+        self.assertTrue(
+            all(set(entry) == {"path", "sha256"} for entry in public_manifest)
+        )
+
+    def test_deployed_release_file_comparison_accepts_matching_files(self):
+        checker = load_checker()
+        expected = [
+            {"path": "index.html", "sha256": "a" * 64},
+            {"path": "styles.css", "sha256": "b" * 64},
+        ]
+
+        self.assertEqual(
+            checker.compare_deployed_files(
+                expected,
+                {"index.html": "a" * 64, "styles.css": "b" * 64},
+                {"index.html", "styles.css"},
+            ),
+            ([], [], []),
+        )
+
+    def test_deployed_release_file_comparison_reports_missing_files(self):
+        checker = load_checker()
+        expected = [
+            {"path": "index.html", "sha256": "a" * 64},
+            {"path": "styles.css", "sha256": "b" * 64},
+        ]
+
+        missing, extra, mismatched = checker.compare_deployed_files(
+            expected,
+            {"index.html": "a" * 64},
+            {"index.html"},
+        )
+
+        self.assertEqual(missing, ["styles.css"])
+        self.assertEqual(extra, [])
+        self.assertEqual(mismatched, [])
+
+    def test_deployed_release_file_comparison_reports_extra_referenced_files(self):
+        checker = load_checker()
+        expected = [{"path": "index.html", "sha256": "a" * 64}]
+
+        missing, extra, mismatched = checker.compare_deployed_files(
+            expected,
+            {"index.html": "a" * 64},
+            {"index.html", "unexpected.js"},
+        )
+
+        self.assertEqual(missing, [])
+        self.assertEqual(extra, ["unexpected.js"])
+        self.assertEqual(mismatched, [])
+
+    def test_deployed_path_discovery_resolves_nested_stylesheet_references(self):
+        checker = load_checker()
+        page_url = PAGES_BASE_URL
+        html = (
+            '<a href="./about.html">About</a>'
+            '<script src="./unexpected.js"></script>'
+            '<img src="https://outside.example/image.png" alt="">'
+        )
+        css_files = {
+            "assets/css/site.css": (
+                b'@import "./nested.css"; .hero { background: url("../images/hero.svg"); }'
+            )
+        }
+
+        self.assertEqual(
+            checker.discovered_deployed_paths(html, page_url, css_files),
+            {
+                "about.html",
+                "unexpected.js",
+                "assets/css/nested.css",
+                "assets/images/hero.svg",
+            },
+        )
+
+    def test_deployed_release_file_comparison_reports_checksum_mismatches(self):
+        checker = load_checker()
+        expected = [
+            {"path": "index.html", "sha256": "a" * 64},
+            {"path": "styles.css", "sha256": "b" * 64},
+        ]
+
+        missing, extra, mismatched = checker.compare_deployed_files(
+            expected,
+            {"index.html": "c" * 64, "styles.css": "b" * 64},
+            {"index.html", "styles.css"},
+        )
+
+        self.assertEqual(missing, [])
+        self.assertEqual(extra, [])
+        self.assertEqual(mismatched, ["index.html"])
+
+    def test_deployed_release_file_failure_messages_name_each_difference(self):
+        checker = load_checker()
+        expected = [
+            {"path": "index.html", "sha256": "a" * 64},
+            {"path": "styles.css", "sha256": "b" * 64},
+        ]
+        cases = (
+            (
+                {"index.html": "a" * 64},
+                {"index.html"},
+                "missing file(s): public/styles.css",
+            ),
+            (
+                {"index.html": "a" * 64, "styles.css": "b" * 64},
+                {"index.html", "styles.css", "unexpected.js"},
+                "extra referenced file(s): public/unexpected.js",
+            ),
+            (
+                {"index.html": "c" * 64, "styles.css": "b" * 64},
+                {"index.html", "styles.css"},
+                "SHA-256 mismatch(es): public/index.html",
+            ),
+        )
+
+        for deployed, discovered, message in cases:
+            with self.subTest(message=message):
+                with self.assertRaises(SystemExit) as raised:
+                    checker.require_deployed_files_match_release(
+                        expected,
+                        deployed,
+                        discovered,
+                    )
+                self.assertIn(message, str(raised.exception))
+
+    def test_release_file_manifest_rejects_unsafe_and_duplicate_entries(self):
+        checker = load_checker()
+        invalid_manifests = (
+            [{"path": "../secret", "sha256": "a" * 64}],
+            [{"path": "index.html", "sha256": "not-a-checksum"}],
+            [
+                {"path": "index.html", "sha256": "a" * 64},
+                {"path": "index.html", "sha256": "b" * 64},
+            ],
+        )
+
+        for entries in invalid_manifests:
+            with self.subTest(entries=entries), tempfile.TemporaryDirectory() as temp_dir:
+                manifest = Path(temp_dir) / "manifest.json"
+                manifest.write_text(json.dumps(entries), encoding="utf-8")
+                with self.assertRaisesRegex(SystemExit, "release checksum manifest"):
+                    checker.read_release_file_manifest(manifest)
 
 
 if __name__ == "__main__":

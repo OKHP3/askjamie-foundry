@@ -1,6 +1,6 @@
 schema_version: "1.0"
 foundry: OKHP3/AskJamie-FoundRy
-updated: "2026-10-19"
+updated: "2026-11-06"
 
 # ---------------------------------------------------------------------------
 # Registry of all child repositories governed by AskJamie FoundRy
@@ -16,7 +16,7 @@ repositories:
 
   - repo: OKHP3/askjamie-aj01-resume-representative
     migration:
-      destination: capabilities/askjamie-aj01-resume-representative
+      destination: capabilities/resume-representative
       status: imported
       storage: public-subtree
       source_commit: "6744330681e0ddc55d6542aaa783cb9944df3092"
@@ -34,7 +34,7 @@ repositories:
 
   - repo: OKHP3/askjamie-aj02-professional-portfolio
     migration:
-      destination: capabilities/askjamie-aj02-professional-portfolio
+      destination: capabilities/professional-portfolio
       status: imported
       storage: public-subtree
       source_commit: "d45a598ab57acae7a41f887a9208e86a264d7cda"

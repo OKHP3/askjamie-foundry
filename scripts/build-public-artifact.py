@@ -5,17 +5,19 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+from html.parser import HTMLParser
 import json
 import os
+from pathlib import Path
+import posixpath
 import re
 import shutil
 import subprocess
 import time
-from html.parser import HTMLParser
+import xml.etree.ElementTree as ET
 from urllib.error import HTTPError, URLError
-from urllib.parse import unquote, urljoin, urlparse
+from urllib.parse import quote, unquote, urljoin, urlparse
 from urllib.request import Request, urlopen
-from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -70,9 +72,14 @@ LIVE_REQUIRED_MARKERS = REQUIRED_SEO_MARKERS + REQUIRED_ANALYTICS_MARKERS + (
 )
 LIVE_REQUIRED_ASSETS = (
     ("stylesheet", "styles.css"),
-    ("icon", "favicon.ico"),
     ("social image", "assets/social-preview.jpg"),
 )
+LIVE_ASSET_EXPECTATIONS = {
+    "stylesheet": ("text/css", None),
+    "icon": (None, None),
+    "manifest": (None, None),
+    "social image": (None, b"\xff\xd8\xff"),
+}
 APPROVED_EXTERNAL_LINKS = (
     PAGES_BASE_URL,
     "https://askjamie.bot/",
@@ -108,9 +115,9 @@ CSS_IMAGE_SET_PATTERN = re.compile(
     r"""(?:-webkit-)?image-set\((.*?)\)""",
     re.IGNORECASE | re.DOTALL,
 )
-CSS_QUOTED_URL_PATTERN = re.compile(
-    r"""(['"])(https?://[^'"]+|//[^'"]+)\1""",
-    re.IGNORECASE,
+CSS_IMAGE_SET_CANDIDATE_PATTERN = re.compile(
+    r"""(['"])(.*?)\1""",
+    re.DOTALL,
 )
 SRCSET_URL_PATTERN = re.compile(
     r"""(?:[A-Za-z][A-Za-z0-9+.-]*:)?//[^\s,]+|[A-Za-z][A-Za-z0-9+.-]*:[^\s,]+"""
@@ -135,12 +142,30 @@ def approved_external_links(base_url: str) -> tuple[str, ...]:
 
 
 def check_approved_external_destinations() -> None:
-    """Require every approved public link and resource to use HTTPS."""
+    """Require approved public links and resources to have safe HTTPS URLs."""
 
     destinations = (
         *approved_external_links(PAGES_BASE_URL),
         *APPROVED_EXTERNAL_RESOURCES,
     )
+    has_invalid_authority = False
+    for destination in destinations:
+        parsed = urlparse(destination)
+        try:
+            has_valid_authority = (
+                bool(parsed.hostname)
+                and parsed.username is None
+                and parsed.password is None
+            )
+        except ValueError:
+            has_valid_authority = False
+        if not has_valid_authority:
+            has_invalid_authority = True
+    if has_invalid_authority:
+        raise SystemExit(
+            "public artifact approved external destinations must have a hostname "
+            "and must not include a username or password"
+        )
     insecure = sorted(
         destination
         for destination in destinations
@@ -231,6 +256,62 @@ class ResourceCollector(HTMLParser):
             self._inside_style = False
 
 
+class IconReferenceCollector(HTMLParser):
+    """Collect icon and web manifest links from deployed page HTML."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.icons: list[str] = []
+        self.manifests: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() != "link":
+            return
+        attributes = {
+            name.lower(): value
+            for name, value in attrs
+            if value is not None
+        }
+        href = attributes.get("href")
+        if not href:
+            return
+        rel = set(attributes.get("rel", "").lower().split())
+        if rel & {"icon", "apple-touch-icon", "mask-icon"}:
+            self.icons.append(href)
+        if "manifest" in rel:
+            self.manifests.append(href)
+
+
+class DeployedPathCollector(HTMLParser):
+    """Collect file-like local references from deployed markup."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.references: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attributes = {
+            name.lower(): value
+            for name, value in attrs
+            if value is not None
+        }
+        for name in ("href", "src", "poster", "data"):
+            value = attributes.get(name)
+            if value:
+                self.references.append(value)
+        srcset = attributes.get("srcset")
+        if srcset:
+            self.references.extend(SRCSET_URL_PATTERN.findall(srcset))
+
+
+def deployed_icon_references(html: str) -> tuple[list[str], list[str]]:
+    """Return page icon links and manifest links in document order."""
+
+    collector = IconReferenceCollector()
+    collector.feed(html)
+    return collector.icons, collector.manifests
+
+
 def external_resource_url(value: str) -> bool:
     """Return whether a resource reference could contact a remote host."""
 
@@ -260,7 +341,7 @@ def css_resource_urls(css: str) -> tuple[list[str], list[str]]:
     for match in CSS_IMAGE_SET_PATTERN.finditer(css):
         urls.extend(
             _unescape_css_value(candidate)
-            for _, candidate in CSS_QUOTED_URL_PATTERN.findall(match.group(1))
+            for _, candidate in CSS_IMAGE_SET_CANDIDATE_PATTERN.findall(match.group(1))
         )
     return urls, imports
 
@@ -344,17 +425,54 @@ def public_external_resource_references(
 def check_external_resources(source: Path, html: str) -> None:
     """Reject external public-page resource loads outside the explicit allowlist."""
 
-    unapproved = sorted({
+    references = public_external_resource_references(source, html)
+    discovered = {url for _, url in references}
+    approved = set(APPROVED_EXTERNAL_RESOURCES)
+    unapproved = sorted(
         (filename, url)
-        for filename, url in public_external_resource_references(source, html)
-        if url not in APPROVED_EXTERNAL_RESOURCES
-    })
+        for filename, url in references
+        if url not in approved
+    )
     if unapproved:
         details = "; ".join(f"{filename}: {url}" for filename, url in unapproved)
         raise SystemExit(
             "public artifact contains unapproved external resource(s): "
             f"{details}"
         )
+    unused_approvals = sorted(approved - discovered)
+    if unused_approvals:
+        raise SystemExit(
+            "public artifact has unused approved external resource(s): "
+            f"{', '.join(unused_approvals)}"
+        )
+
+
+def check_public_javascript(source: Path) -> None:
+    """Fail when any public JavaScript file has invalid syntax."""
+
+    javascript_files = sorted(
+        (
+            path
+            for path in source.rglob("*")
+            if path.is_file() and path.suffix.lower() == ".js"
+        ),
+        key=lambda path: path.relative_to(source).as_posix(),
+    )
+    for path in javascript_files:
+        relative_path = path.relative_to(source).as_posix()
+        result = subprocess.run(
+            ["node", "--check", relative_path],
+            cwd=source,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+            details = (result.stderr or result.stdout).strip()
+            raise SystemExit(
+                f"public JavaScript syntax check failed: public/{relative_path}"
+                + (f"\n{details}" if details else "")
+            )
 
 
 def check() -> None:
@@ -390,11 +508,28 @@ def check() -> None:
         if marker not in html:
             raise SystemExit(f"public artifact is missing required GA4 tracking: {marker}")
     robots = (SOURCE / "robots.txt").read_text(encoding="utf-8")
-    sitemap = (SOURCE / "sitemap.xml").read_text(encoding="utf-8")
     if f"Sitemap: {PAGES_BASE_URL}sitemap.xml" not in robots:
         stale_url_metadata.append("public/robots.txt (Sitemap URL)")
-    if f"<loc>{PAGES_BASE_URL}</loc>" not in sitemap:
-        stale_url_metadata.append("public/sitemap.xml (canonical Pages URL)")
+    try:
+        sitemap_root = ET.parse(SOURCE / "sitemap.xml").getroot()
+    except (ET.ParseError, OSError, UnicodeError) as exc:
+        raise SystemExit(f"public/sitemap.xml is not valid XML: {exc}") from exc
+
+    sitemap_namespace = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    if sitemap_root.tag != f"{sitemap_namespace}urlset":
+        raise SystemExit(
+            "public/sitemap.xml must have a sitemap urlset root element"
+        )
+    sitemap_locations = [
+        (element.text or "").strip()
+        for element in sitemap_root.iter()
+        if element.tag.rsplit("}", 1)[-1] == "loc"
+    ]
+    if sitemap_locations != [PAGES_BASE_URL]:
+        stale_url_metadata.append(
+            "public/sitemap.xml (canonical Pages URL; must contain exactly "
+            "one location matching the active Pages URL)"
+        )
     if stale_url_metadata:
         raise SystemExit(
             "public URL metadata is stale for the active Pages contract: "
@@ -427,7 +562,7 @@ def check() -> None:
             continue
         if not (SOURCE / reference).is_file():
             raise SystemExit(f"public artifact reference does not exist: {reference}")
-    subprocess.run(["node", "--check", str(SOURCE / "site.js")], check=False) if (SOURCE / "site.js").exists() else None
+    check_public_javascript(SOURCE)
     print(
         "Public artifact check passed: read-only, relative assets, required metadata, "
         "and public-only GA4 tracking."
@@ -489,6 +624,216 @@ def release_info(output_dir: Path | None = None) -> dict[str, object]:
     }
 
 
+def release_file_manifest(output_dir: Path | None = None) -> list[dict[str, str]]:
+    """Return only public artifact paths and their SHA-256 checksums."""
+
+    return release_info(output_dir)["files"]
+
+
+def read_release_file_manifest(manifest_path: Path) -> list[dict[str, str]]:
+    """Load and validate the checksum manifest saved by the release build."""
+
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise SystemExit(
+            f"live Pages check failed: could not read release checksum manifest "
+            f"{manifest_path}: {error}"
+        ) from error
+    if not isinstance(manifest, list):
+        raise SystemExit(
+            "live Pages check failed: release checksum manifest must be a JSON list"
+        )
+
+    seen: set[str] = set()
+    validated = []
+    for entry in manifest:
+        if (
+            not isinstance(entry, dict)
+            or set(entry) != {"path", "sha256"}
+            or not isinstance(entry["path"], str)
+            or not isinstance(entry["sha256"], str)
+        ):
+            raise SystemExit(
+                "live Pages check failed: release checksum manifest contains "
+                "an invalid file entry"
+            )
+        path = entry["path"]
+        if (
+            not path
+            or path.startswith("/")
+            or "\\" in path
+            or any(part in {"", ".", ".."} for part in path.split("/"))
+            or not re.fullmatch(r"[0-9a-f]{64}", entry["sha256"])
+        ):
+            raise SystemExit(
+                "live Pages check failed: release checksum manifest contains "
+                "an unsafe path or invalid SHA-256 checksum"
+            )
+        if path in seen:
+            raise SystemExit(
+                "live Pages check failed: release checksum manifest contains "
+                f"duplicate path {path!r}"
+            )
+        seen.add(path)
+        validated.append({"path": path, "sha256": entry["sha256"]})
+    if not validated:
+        raise SystemExit(
+            "live Pages check failed: release checksum manifest contains no files"
+        )
+    return validated
+
+
+def deployed_local_path(reference: str, page_url: str) -> str | None:
+    """Return a safe path relative to the deployed Pages repository."""
+
+    reference = reference.strip()
+    try:
+        parsed_reference = urlparse(reference)
+        if parsed_reference.scheme or reference.startswith("//"):
+            return None
+        resolved = urlparse(urljoin(page_url, reference))
+        page = urlparse(page_url)
+        resolved_port = resolved.port or {"https": 443, "http": 80}.get(
+            resolved.scheme.lower()
+        )
+        page_port = page.port or {"https": 443, "http": 80}.get(page.scheme.lower())
+    except ValueError:
+        return None
+    path = unquote(resolved.path)
+    if (
+        resolved.scheme.lower() != page.scheme.lower()
+        or (resolved.hostname or "").casefold() != (page.hostname or "").casefold()
+        or resolved_port != page_port
+        or not path.startswith(EXPECTED_PAGES_PATH)
+        or ".." in path.split("/")
+    ):
+        return None
+    relative = posixpath.normpath(path[len(EXPECTED_PAGES_PATH):])
+    if relative in {"", "."}:
+        return "index.html"
+    return relative
+
+
+def discovered_deployed_paths(
+    html: str, page_url: str, css_files: dict[str, bytes]
+) -> set[str]:
+    """Find same-site file references in deployed markup and known CSS files."""
+
+    collector = DeployedPathCollector()
+    collector.feed(html)
+    references = [(reference, page_url) for reference in collector.references]
+    for css_path, body in css_files.items():
+        urls, imports = css_resource_urls(body.decode("utf-8", errors="replace"))
+        css_url = urljoin(page_url, quote(css_path, safe="/-._~"))
+        references.extend((reference, css_url) for reference in (*urls, *imports))
+    return {
+        path
+        for reference, base_url in references
+        if (path := deployed_local_path(reference, base_url)) is not None
+    }
+
+
+def compare_deployed_files(
+    expected_manifest: list[dict[str, str]],
+    deployed_checksums: dict[str, str],
+    discovered_paths: set[str],
+) -> tuple[list[str], list[str], list[str]]:
+    """Return missing, extra referenced, and checksum-mismatched paths."""
+
+    expected = {entry["path"]: entry["sha256"] for entry in expected_manifest}
+    missing = sorted(set(expected) - set(deployed_checksums))
+    extra = sorted(discovered_paths - set(expected))
+    mismatched = sorted(
+        path
+        for path, checksum in expected.items()
+        if path in deployed_checksums and deployed_checksums[path] != checksum
+    )
+    return missing, extra, mismatched
+
+
+def require_deployed_files_match_release(
+    expected_manifest: list[dict[str, str]],
+    deployed_checksums: dict[str, str],
+    discovered_paths: set[str],
+) -> None:
+    """Fail with a categorized report when deployed files differ from release."""
+
+    missing_files, extra_files, mismatched_files = compare_deployed_files(
+        expected_manifest,
+        deployed_checksums,
+        discovered_paths,
+    )
+    if not (missing_files or extra_files or mismatched_files):
+        return
+
+    details = []
+    if missing_files:
+        details.append(
+            "missing file(s): "
+            + ", ".join(f"public/{path}" for path in missing_files)
+        )
+    if extra_files:
+        details.append(
+            "extra referenced file(s): "
+            + ", ".join(f"public/{path}" for path in extra_files)
+        )
+    if mismatched_files:
+        details.append(
+            "SHA-256 mismatch(es): "
+            + ", ".join(f"public/{path}" for path in mismatched_files)
+        )
+    raise SystemExit(
+        "live Pages check failed: deployed files differ from the release "
+        "checksum manifest (" + "; ".join(details) + ")"
+    )
+
+
+def fetch_live_file(asset_url: str) -> tuple[str, bytes] | None:
+    """Fetch a complete deployed file and return its SHA-256 and bytes, or None for 404."""
+
+    request = Request(
+        asset_url,
+        headers={
+            "Cache-Control": "no-cache",
+            "User-Agent": "AskJamie-FoundRy-pages-smoke-test",
+        },
+    )
+    try:
+        with urlopen(request, timeout=30) as response:
+            status = response.status
+            final_url = response.geturl()
+            body = response.read()
+    except HTTPError as error:
+        if error.code == 404:
+            return None
+        raise SystemExit(
+            "live Pages check failed: deployed file "
+            f"{asset_url} returned HTTP {error.code} instead of HTTP 200"
+        ) from error
+    except (URLError, TimeoutError) as error:
+        reason = getattr(error, "reason", str(error))
+        raise SystemExit(
+            f"live Pages check failed: could not fetch deployed file {asset_url}: {reason}"
+        ) from error
+
+    if status != 200:
+        raise SystemExit(
+            f"live Pages check failed: deployed file {asset_url} returned HTTP "
+            f"{status} instead of HTTP 200"
+        )
+    expected = urlparse(asset_url)
+    actual = urlparse(final_url)
+    if (actual.scheme.lower(), actual.netloc.lower(), actual.path) != (
+        expected.scheme.lower(), expected.netloc.lower(), expected.path
+    ):
+        raise SystemExit(
+            "live Pages check failed: deployed file "
+            f"{asset_url} redirected away from the expected URL"
+        )
+    return hashlib.sha256(body).hexdigest(), body
+
+
 def normalized_path(url: str) -> str:
     """Normalize a Pages path while preserving the root path."""
 
@@ -509,8 +854,8 @@ def check_pages_repository_identity() -> None:
         )
 
 
-def check_live_asset(asset_url: str, asset_type: str) -> None:
-    """Fail when a representative deployed asset does not return HTTP 200."""
+def check_live_asset(asset_url: str, asset_type: str) -> bytes:
+    """Fail when a deployed asset is missing or has the wrong content."""
 
     request = Request(
         asset_url,
@@ -523,6 +868,8 @@ def check_live_asset(asset_url: str, asset_type: str) -> None:
         with urlopen(request, timeout=30) as response:
             status = response.status
             final_url = response.geturl()
+            content_type = response.headers.get("Content-Type", "")
+            body = response.read(65536 if asset_type == "manifest" else 4096)
     except HTTPError as error:
         status = error.code
     except URLError as error:
@@ -551,8 +898,119 @@ def check_live_asset(asset_url: str, asset_type: str) -> None:
             f"{asset_type} asset {asset_url} redirected away from the expected URL"
         )
 
+    media_type = content_type.split(";", 1)[0].strip().lower()
+    sample = body.lstrip(b"\xef\xbb\xbf \t\r\n").lower()
+    is_html = (
+        media_type in {"text/html", "application/xhtml+xml"}
+        or sample.startswith((b"<!doctype html", b"<html", b"<head", b"<body"))
+    )
+    if is_html:
+        raise SystemExit(
+            "live Pages check failed: deployed "
+            f"{asset_type} asset {asset_url} has unexpected content "
+            f"(received HTML with content type {media_type or 'unknown'})"
+        )
 
-def check_live(page_url: str) -> None:
+    expected_content_type, expected_signature = LIVE_ASSET_EXPECTATIONS[asset_type]
+    if expected_content_type and media_type != expected_content_type:
+        raise SystemExit(
+            "live Pages check failed: deployed "
+            f"{asset_type} asset {asset_url} has unexpected content "
+            f"(expected content type {expected_content_type!r}, "
+            f"got {media_type or 'missing'})"
+        )
+    if expected_signature and not body.startswith(expected_signature):
+        expected_description = (
+            "ICO signature" if asset_type == "icon" else "JPEG signature"
+        )
+        raise SystemExit(
+            "live Pages check failed: deployed "
+            f"{asset_type} asset {asset_url} has unexpected content "
+            f"(expected {expected_description})"
+        )
+    if asset_type == "icon":
+        sample = body.lstrip(b"\xef\xbb\xbf \t\r\n").lower()
+        is_icon = (
+            body.startswith((b"\x00\x00\x01\x00", b"\x89PNG\r\n\x1a\n"))
+            or b"<svg" in sample[:1024]
+        )
+        if not is_icon:
+            raise SystemExit(
+                "live Pages check failed: deployed "
+                f"icon asset {asset_url} has unexpected content "
+                "(expected ICO, PNG, or SVG data)"
+            )
+    return body
+
+
+def require_deployed_asset_url(asset_url: str, page_url: str, asset_type: str) -> None:
+    """Reject resource references that leave this deployed Pages repository."""
+
+    try:
+        asset = urlparse(asset_url)
+        page = urlparse(page_url)
+        asset_port = asset.port or {"https": 443, "http": 80}.get(asset.scheme.lower())
+        page_port = page.port or {"https": 443, "http": 80}.get(page.scheme.lower())
+    except ValueError as error:
+        raise SystemExit(
+            f"live Pages check failed: invalid deployed {asset_type} URL "
+            f"{asset_url!r}: {error}"
+        ) from error
+    if (
+        asset.scheme.lower() != page.scheme.lower()
+        or (asset.hostname or "").casefold() != (page.hostname or "").casefold()
+        or asset_port != page_port
+        or asset.username is not None
+        or asset.password is not None
+        or not unquote(asset.path).startswith(EXPECTED_PAGES_PATH)
+        or ".." in unquote(asset.path).split("/")
+    ):
+        raise SystemExit(
+            "live Pages check failed: deployed "
+            f"{asset_type} URL {asset_url} is outside the expected repository path "
+            f"{EXPECTED_PAGES_PATH!r}"
+        )
+
+
+def manifest_icon_urls(manifest_body: bytes, manifest_url: str) -> list[str]:
+    """Resolve icon sources declared in a deployed web manifest."""
+
+    try:
+        manifest = json.loads(manifest_body)
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise SystemExit(
+            "live Pages check failed: deployed web manifest "
+            f"{manifest_url} is not valid JSON"
+        ) from error
+    if not isinstance(manifest, dict) or not isinstance(manifest.get("icons"), list):
+        raise SystemExit(
+            "live Pages check failed: deployed web manifest "
+            f"{manifest_url} has no valid icons list"
+        )
+    icon_urls = []
+    for icon in manifest["icons"]:
+        if (
+            not isinstance(icon, dict)
+            or not isinstance(icon.get("src"), str)
+            or not icon["src"]
+        ):
+            raise SystemExit(
+                "live Pages check failed: deployed web manifest "
+                f"{manifest_url} contains an invalid icon entry"
+            )
+        icon_urls.append(urljoin(manifest_url, icon["src"]))
+    if not icon_urls:
+        raise SystemExit(
+            "live Pages check failed: deployed web manifest "
+            f"{manifest_url} does not reference any icons"
+        )
+    return icon_urls
+
+
+def check_live(
+    page_url: str,
+    expected_manifest: list[dict[str, str]] | None = None,
+) -> None:
     """Verify the deployed Pages URL serves the intended public artifact."""
 
     check_pages_repository_identity()
@@ -578,7 +1036,8 @@ def check_live(page_url: str) -> None:
             with urlopen(request, timeout=30) as response:
                 status = response.status
                 final_url = response.geturl()
-                html = response.read().decode("utf-8", errors="replace")
+                page_body = response.read()
+                html = page_body.decode("utf-8", errors="replace")
             failure = None
             break
         except HTTPError as error:
@@ -599,18 +1058,68 @@ def check_live(page_url: str) -> None:
         raise SystemExit(
             f"live Pages check failed: {page_url} returned HTTP {status} instead of HTTP 200"
         )
-    expected_host = urlparse(PAGES_BASE_URL).hostname
-    actual_host = urlparse(final_url).hostname
+    expected_origin = urlparse(PAGES_BASE_URL)
+    expected_host = expected_origin.hostname
+    expected_port = expected_origin.port
+    if expected_port is None:
+        expected_port = {"https": 443, "http": 80}.get(
+            expected_origin.scheme.lower()
+        )
+    try:
+        actual = urlparse(final_url)
+        actual_host = actual.hostname
+        actual_port = actual.port
+        if actual_port is None:
+            actual_port = {"https": 443, "http": 80}.get(actual.scheme.lower())
+        actual_path = actual.path or "/"
+    except (TypeError, ValueError) as error:
+        raise SystemExit(
+            "live Pages check failed: invalid final URL after redirect: "
+            f"{final_url!r} ({error})"
+        ) from error
     if actual_host is None or actual_host.casefold() != expected_host.casefold():
         raise SystemExit(
             "live Pages check failed: deployed URL redirected to an unexpected host; "
             f"expected {expected_host!r}, got {actual_host!r}"
         )
-    if normalized_path(final_url) != EXPECTED_PAGES_PATH:
+    if actual_port != expected_port:
+        raise SystemExit(
+            "live Pages check failed: deployed URL redirected to an unexpected port; "
+            f"expected {expected_port!r}, got {actual_port!r}"
+        )
+    actual_path = actual_path if actual_path == "/" else f"{actual_path.rstrip('/')}/"
+    if actual_path != EXPECTED_PAGES_PATH:
         raise SystemExit(
             "live Pages check failed: deployed URL redirected to the wrong "
             f"repository subpath; expected {EXPECTED_PAGES_PATH!r}, "
-            f"got {normalized_path(final_url)!r}"
+            f"got {actual_path!r}"
+        )
+
+    if expected_manifest is not None:
+        deployed_checksums: dict[str, str] = {}
+        css_files: dict[str, bytes] = {}
+        expected_paths = {entry["path"] for entry in expected_manifest}
+        if "index.html" in expected_paths:
+            deployed_checksums["index.html"] = hashlib.sha256(page_body).hexdigest()
+        deployed_base_url = final_url.rstrip("/") + "/"
+        for entry in expected_manifest:
+            path = entry["path"]
+            if path == "index.html":
+                continue
+            encoded_path = quote(path, safe="/-._~")
+            asset_url = urljoin(deployed_base_url, encoded_path)
+            require_deployed_asset_url(asset_url, final_url, "release file")
+            fetched = fetch_live_file(asset_url)
+            if fetched is not None:
+                checksum, body = fetched
+                deployed_checksums[path] = checksum
+                if path.lower().endswith(".css"):
+                    css_files[path] = body
+
+        require_deployed_files_match_release(
+            expected_manifest,
+            deployed_checksums,
+            discovered_deployed_paths(html, deployed_base_url, css_files),
         )
 
     missing = [marker for marker in LIVE_REQUIRED_MARKERS if marker not in html]
@@ -633,13 +1142,42 @@ def check_live(page_url: str) -> None:
                 "live Pages check failed: deployed content contains forbidden "
                 f"private/runtime marker: {marker}"
             )
+    page_icon_references, manifest_references = deployed_icon_references(html)
+    if not page_icon_references:
+        raise SystemExit(
+            "live Pages check failed: deployed page does not reference any icons"
+        )
+    if not manifest_references:
+        raise SystemExit(
+            "live Pages check failed: deployed page does not reference a web manifest"
+        )
+
     asset_base_url = final_url.rstrip("/") + "/"
     for asset_type, asset_path in LIVE_REQUIRED_ASSETS:
         check_live_asset(urljoin(asset_base_url, asset_path), asset_type)
+
+    icon_urls = [urljoin(asset_base_url, reference) for reference in page_icon_references]
+    for manifest_reference in manifest_references:
+        manifest_url = urljoin(asset_base_url, manifest_reference)
+        require_deployed_asset_url(manifest_url, final_url, "web manifest")
+        manifest_body = check_live_asset(manifest_url, "manifest")
+        icon_urls.extend(manifest_icon_urls(manifest_body, manifest_url))
+
+    unique_icon_urls = list(dict.fromkeys(icon_urls))
+    for icon_url in unique_icon_urls:
+        require_deployed_asset_url(icon_url, final_url, "icon")
+    for icon_url in unique_icon_urls:
+        check_live_asset(icon_url, "icon")
+
     print(
         "Live Pages check passed: HTTP 200, expected repository subpath, "
-        "public orientation markers, external links, stylesheet, icon, "
-        "and social image verified."
+        "public orientation markers, external links, stylesheet, all page "
+        "and manifest icons, and social image verified"
+        + (
+            ", and release file checksums match."
+            if expected_manifest is not None
+            else "."
+        )
     )
 
 
@@ -652,15 +1190,32 @@ if __name__ == "__main__":
         help="fetch and verify the deployed Pages URL",
     )
     parser.add_argument(
+        "--verify-release-manifest",
+        metavar="JSON_FILE",
+        help="compare deployed public files with a saved release checksum manifest",
+    )
+    parser.add_argument(
         "--release-info",
         action="store_true",
         help="print JSON identity for the built public artifact",
     )
+    parser.add_argument(
+        "--release-file-manifest",
+        action="store_true",
+        help="print JSON paths and SHA-256 checksums for built public files",
+    )
     args = parser.parse_args()
     if args.check_live:
-        check_live(args.check_live)
+        manifest = (
+            read_release_file_manifest(Path(args.verify_release_manifest))
+            if args.verify_release_manifest
+            else None
+        )
+        check_live(args.check_live, manifest)
     elif args.build:
         build()
+    elif args.release_file_manifest:
+        print(json.dumps(release_file_manifest(), sort_keys=True))
     elif args.release_info:
         print(json.dumps(release_info(), sort_keys=True))
     else:

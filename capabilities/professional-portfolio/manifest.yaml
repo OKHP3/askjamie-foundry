@@ -1,16 +1,16 @@
 schema_version: "1.0"
 
 identity:
-  repo: OKHP3/askjamie-aj01-resume-representative
-  display_name: "AskJamie: Resume Representative"
-  slug: "askjamie-aj01-resume-representative"
+  repo: OKHP3/askjamie-aj02-professional-portfolio
+  display_name: "AskJamie: Professional Portfolio"
+  slug: "professional-portfolio"
   type: core-capability
   status: draft
 
 brand:
   brand_domain: askjamie
   trademark: "AskJamie"
-  capability_code: aj01
+  capability_code: aj02
 
 lineage:
   parent_foundry: OKHP3/AskJamie-FoundRy
@@ -30,5 +30,5 @@ maintainers:
   - handle: OKHP3
     role: owner
 
-created: "2025-12-13"
+created: "2025-12-21"
 updated: "2026-10-19"

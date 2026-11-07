@@ -14,8 +14,8 @@ SPEC.loader.exec_module(SNAPSHOTS)
 class PreservedSourceTests(unittest.TestCase):
     def test_replit_configuration_originals_match_observed_hashes(self):
         observed = {
-            "askjamie-aj01-resume-representative": "ea57e3eb020f62d5020d07e0777853d9648b2f0bfb5edd36684145cd746c1ba5",
-            "askjamie-aj02-professional-portfolio": "77c87709f48093ebb5508dc38bc80e1f2aaf165a931f76611dd1c0f3d2f1ba89",
+            "resume-representative": "ea57e3eb020f62d5020d07e0777853d9648b2f0bfb5edd36684145cd746c1ba5",
+            "professional-portfolio": "77c87709f48093ebb5508dc38bc80e1f2aaf165a931f76611dd1c0f3d2f1ba89",
         }
         for slug, expected in observed.items():
             with self.subTest(slug=slug):

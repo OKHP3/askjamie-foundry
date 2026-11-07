@@ -6,6 +6,7 @@ import copy
 import hashlib
 import importlib.util
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -73,6 +74,91 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
             "scripts/public-graduation-audit.py",
         )
         self.assertEqual(report["mentor_review"]["reviewer"], "Replit Agent")
+        self.assertTrue(
+            MODULE.mentor_source_url_matches_review(report["mentor_review"])
+        )
+
+    def test_documented_report_is_a_nonliteral_template_for_dynamic_values(self):
+        documentation = (
+            ROOT / "docs" / "regional-governance-audit.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("non-literal template", documentation)
+        section = documentation.split("## Required audit record", 1)[1].split(
+            "## Audit procedure", 1
+        )[0]
+        match = re.search(r"```yaml\n(.*?)\n```", section, re.DOTALL)
+        self.assertIsNotNone(match, "the audit record template must be YAML")
+        template = yaml.safe_load(match.group(1))
+        report = MODULE.build_report(
+            ROOT,
+            approval_path=ROOT / "docs" / "regional-governance-decision.yaml",
+        )
+
+        def compare_concrete_values(example, generated, path="report"):
+            if isinstance(example, dict):
+                self.assertIsInstance(generated, dict, path)
+                for key, value in example.items():
+                    self.assertIn(key, generated, f"{path}.{key}")
+                    compare_concrete_values(
+                        value, generated[key], f"{path}.{key}"
+                    )
+            elif isinstance(example, list):
+                self.assertIsInstance(generated, list, path)
+                self.assertLessEqual(len(example), len(generated), path)
+                for index, (value, actual) in enumerate(zip(example, generated)):
+                    compare_concrete_values(value, actual, f"{path}[{index}]")
+            elif (
+                isinstance(example, str)
+                and example.startswith("<")
+                and example.endswith(">")
+            ):
+                return
+            else:
+                self.assertEqual(example, generated, path)
+
+        compare_concrete_values(template, report)
+
+        placeholders = (
+            template["audit"]["status"],
+            template["audit"]["adoption"],
+            template["adaptation"]["publication_decision"],
+            template["adaptation"]["hosting_decision"],
+            template["mentor_review"]["repository"],
+            template["mentor_review"]["revision"],
+            template["mentor_review"]["path"],
+            template["mentor_review"]["reviewed_at"],
+            template["registry"]["path"],
+            template["registry"]["sha256"],
+            template["registry"]["unchanged_during_audit"],
+            template["registry"]["canonical_validator_errors"],
+            template["protected_client_records"]["count"],
+            template["protected_client_records"]["violations"],
+            template["owner_approval"]["status"],
+            template["owner_approval"]["decision"],
+            template["owner_approval"]["decided_at"],
+            template["owner_approval"]["mentor_review"]["revision"],
+            template["owner_approval"]["boundary_review"]["reviewed_at"],
+            template["owner_approval"]["boundary_review"]["registry_sha256"],
+            template["owner_approval"]["boundary_review"]["residual_limits"],
+        )
+        self.assertTrue(
+            all(
+                value.startswith("<") and value.endswith(">")
+                for value in placeholders
+            )
+        )
+        self.assertEqual(
+            set(template["owner_approval"]["boundary_review"]["controls"]),
+            set(MODULE.REQUIRED_BOUNDARY_CONTROLS),
+        )
+        self.assertTrue(
+            all(
+                value.startswith("<")
+                for value in template["owner_approval"]["boundary_review"][
+                    "controls"
+                ].values()
+            )
+        )
 
     def test_baseline_digest_is_required_to_match(self):
         digest = hashlib.sha256(
@@ -200,7 +286,7 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
                 report["owner_approval"]["reason"],
             )
 
-    def test_approval_is_invalidated_when_pinned_mentor_revision_or_path_changes(self):
+    def test_approval_is_invalidated_when_pinned_mentor_citation_changes(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = self.copy_fixture(tmp)
             registry_digest = hashlib.sha256(
@@ -245,6 +331,47 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
                             report["owner_approval"]["reason"],
                         )
                         MODULE.MENTOR_REVIEW[field] = original_mentor_review[field]
+                original_url = original_mentor_review["source_url"]
+                for component, changed_url in (
+                    (
+                        "repository",
+                        original_url.replace(
+                            MODULE.MENTOR_REVIEW["repository"],
+                            "OKHP3/Another-Repository",
+                        ),
+                    ),
+                    (
+                        "revision",
+                        original_url.replace(
+                            MODULE.MENTOR_REVIEW["revision"], "a" * 40
+                        ),
+                    ),
+                    (
+                        "path",
+                        original_url.replace(
+                            MODULE.MENTOR_REVIEW["path"],
+                            "scripts/another-audit.py",
+                        ),
+                    ),
+                ):
+                    with self.subTest(citation_component=component):
+                        MODULE.MENTOR_REVIEW["source_url"] = changed_url
+                        report = MODULE.build_report(root, approval_path=approval_path)
+                        self.assertEqual(report["audit"]["status"], "FAIL")
+                        self.assertEqual(report["owner_approval"]["status"], "INVALID")
+                        self.assertIn(
+                            "mentor_review.source_url does not identify the pinned repository, revision, and source path",
+                            report["owner_approval"]["reason"],
+                        )
+                        mentor_claim = next(
+                            item
+                            for item in report["evidence"]
+                            if item["claim"].startswith(
+                                "The named OverKill mentor surface"
+                            )
+                        )
+                        self.assertEqual(mentor_claim["tier"], "UNKNOWN")
+                        MODULE.MENTOR_REVIEW["source_url"] = original_url
             finally:
                 MODULE.MENTOR_REVIEW.clear()
                 MODULE.MENTOR_REVIEW.update(original_mentor_review)
@@ -326,6 +453,107 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
 
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(report["owner_approval"]["status"], "APPROVED")
+
+    def test_cli_fails_with_clear_report_when_required_approval_is_unavailable(self):
+        script = ROOT / "scripts" / "regional-governance-audit.py"
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            missing_path = root / "missing-approval.yaml"
+            unreadable_path = root / "unreadable-approval.yaml"
+            unreadable_path.write_bytes(b"\xff")
+            directory_path = root / "approval-directory"
+            directory_path.mkdir()
+
+            cases = (
+                ([], "PENDING", "No owner decision record was supplied."),
+                (
+                    ["--owner-approval", str(missing_path)],
+                    "INVALID",
+                    "Cannot read owner decision record:",
+                ),
+                (
+                    ["--owner-approval", str(directory_path)],
+                    "INVALID",
+                    "Cannot read owner decision record:",
+                ),
+                (
+                    ["--owner-approval", str(unreadable_path)],
+                    "INVALID",
+                    "Cannot read owner decision record:",
+                ),
+            )
+            for options, expected_status, expected_reason in cases:
+                with self.subTest(options=options):
+                    result = subprocess.run(
+                        [
+                            sys.executable,
+                            str(script),
+                            "--require-approval",
+                            *options,
+                        ],
+                        check=False,
+                        capture_output=True,
+                        text=True,
+                    )
+
+                    self.assertEqual(result.returncode, 1, result.stderr)
+                    report = json.loads(result.stdout)
+                    approval = report["owner_approval"]
+                    self.assertEqual(approval["status"], expected_status)
+                    self.assertIn(expected_reason, approval["reason"])
+
+    def test_cli_accepts_deferred_and_rejected_decisions_as_required_records(self):
+        registry_digest = hashlib.sha256(
+            (ROOT / "registry/index.yaml").read_bytes()
+        ).hexdigest()
+        script = ROOT / "scripts" / "regional-governance-audit.py"
+
+        with tempfile.TemporaryDirectory() as tmp:
+            decision_path = Path(tmp) / "decision.yaml"
+            for decision, expected_status in (
+                ("defer", "DEFERRED"),
+                ("reject", "REJECTED"),
+            ):
+                with self.subTest(decision=decision):
+                    decision_path.write_text(
+                        yaml.safe_dump(
+                            {
+                                "audit": MODULE.AUDIT_NAME,
+                                "scope": MODULE.AUDIT_SCOPE,
+                                "adaptation": MODULE.ADAPTATION_ID,
+                                "decision": decision,
+                                "owner": "OKHP3",
+                                "decided_at": "2026-11-04",
+                                "registry_sha256": registry_digest,
+                                "mentor_review": self.mentor_binding(),
+                                "publication_decision": "not-authorized",
+                                "hosting_decision": "not-authorized",
+                            }
+                        ),
+                        encoding="utf-8",
+                    )
+                    result = subprocess.run(
+                        [
+                            sys.executable,
+                            str(script),
+                            "--require-approval",
+                            "--owner-approval",
+                            str(decision_path),
+                        ],
+                        check=False,
+                        capture_output=True,
+                        text=True,
+                    )
+
+                    self.assertEqual(result.returncode, 0, result.stderr)
+                    report = json.loads(result.stdout)
+                    self.assertEqual(
+                        report["owner_approval"]["status"], expected_status
+                    )
+                    self.assertEqual(
+                        report["owner_approval"]["decision"], decision
+                    )
 
     def test_approval_requires_each_boundary_control_to_be_confirmed(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -454,6 +682,40 @@ class RegionalGovernanceAuditTests(unittest.TestCase):
                     self.assertEqual(report["owner_approval"]["status"], "INVALID")
                     self.assertEqual(report["audit"]["adoption"], "DEFERRED")
                     self.assertTrue(report["registry"]["unchanged_during_audit"])
+
+    def test_malformed_approval_report_withholds_raw_yaml_parser_details(self):
+        private_name = "UNIQUE_PRIVATE_APPROVAL_CLIENT_NAME"
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self.copy_fixture(tmp)
+            approval_path = root / "approval.yaml"
+            approval_path.write_text(
+                f'client: "{private_name}\n',
+                encoding="utf-8",
+            )
+
+            report = MODULE.build_report(root, approval_path=approval_path)
+            serialized = json.dumps(report)
+
+        self.assertEqual(report["owner_approval"]["status"], "INVALID")
+        self.assertIn(
+            "Owner decision record contains malformed YAML",
+            report["owner_approval"]["reason"],
+        )
+        self.assertNotIn(private_name, serialized)
+
+
+class ApprovalFailurePrivacyTests(unittest.TestCase):
+    def test_failure_reports_do_not_expose_source_path_or_details(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "private-client-identifier" / "approval.yaml"
+            path.parent.mkdir()
+            for payload in (None, "private-client-identifier: [\n", "[]\n"):
+                with self.subTest(payload=payload):
+                    if payload is not None:
+                        path.write_text(payload, encoding="utf-8")
+                    result = MODULE.approval_status(path, "0" * 64)
+                    self.assertEqual(result["status"], "INVALID")
+                    self.assertNotIn("private-client-identifier", json.dumps(result))
 
 
 if __name__ == "__main__":

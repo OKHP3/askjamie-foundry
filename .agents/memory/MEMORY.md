@@ -1,6 +1,8 @@
 - [AskJamie FoundRy Structure](askjamie-foundry.md) — full governance relay layout, naming conventions, and upgrade path for this repo.
 - [Browser acceptance executable](browser-acceptance-executable.md) — Playwright browser tests need an explicit executable path in this workspace.
+- [Canceled browser refreshes](browser-beforeunload-cancellation.md) — dismissing a beforeunload prompt can leave Playwright waiting for navigation until its timeout.
 - [Playwright route races](playwright-route-races.md) — use one exact-URL interceptor for delayed response races; overlapping broad handlers can double-handle requests.
 - [GitHub Branch Protection API](github-branch-protection.md) — user-owned repositories reject reviewer dismissal restrictions in protection payloads.
 - [Package installation side effects](package-installation-side-effects.md) — keep browser tooling isolated and review project metadata after package-manager installs.
 - [Port 5000 auto-detection](replit-port-detection.md): temporary shell servers may add `.replit` port mappings; use the config validator to remove incidental entries.
+- [Workbench live-region test locators](playwright-live-region-duplicates.md) — screen-reader-only status text can duplicate visible confirmations; scope Playwright assertions to the intended region.

@@ -11,6 +11,7 @@
     registry: null,
     error: "",
     notice: "",
+    liveAnnouncement: "",
     previewAnswers: {},
     preview: null,
     evaluation: null,
@@ -58,6 +59,7 @@
     return wrap;
   };
   const announce = (message) => {
+    state.liveAnnouncement = "";
     live.textContent = message;
   };
   const syncLiveRegion = () => {
@@ -66,7 +68,8 @@
       state.notice ||
       state.recovery?.message ||
       (state.loading ? "Loading workbench." : "") ||
-      (state.loadingProjectId ? "Loading project." : "");
+      (state.loadingProjectId ? "Loading project." : "") ||
+      state.liveAnnouncement;
     live.textContent = message;
     live.setAttribute("role", state.error ? "alert" : "status");
     live.removeAttribute("aria-live");
@@ -308,7 +311,7 @@
     document.getElementById("project-count").textContent =
       state.projects.length;
   }
-  async function loadProject(id, force = false) {
+  async function loadProject(id, force = false, focusEditor = false) {
     const destination = state.projects.find((project) => project.id === id);
     if (!force && !canLeaveCurrent(destination)) return null;
     const loadToken = ++state.projectLoadToken;
@@ -323,6 +326,7 @@
       ]);
       if (loadToken !== state.projectLoadToken) return null;
       state.current = project;
+      if (focusEditor) state.tab = "brief";
       state.history =
         history.status === "fulfilled" && Array.isArray(history.value.history)
           ? history.value.history
@@ -334,10 +338,14 @@
           : null;
       state.error = "";
       state.notice = "";
+      state.liveAnnouncement = `Project opened: ${projectSwitchLabel(project)}.`;
       state.preview = null;
       state.previewAnswers = {};
       state.loadingProjectId = null;
       render();
+      if (focusEditor) {
+        document.getElementById("field-title")?.focus();
+      }
       return project;
     } catch (error) {
       if (loadToken !== state.projectLoadToken) return null;
@@ -672,7 +680,7 @@
       const row = button(
         "",
         `project-row${state.current && state.current.id === project.id ? " selected" : ""}`,
-        () => loadProject(project.id),
+        (event) => loadProject(project.id, false, event.detail === 0),
       );
       row.append(
         el("strong", { text: project.title || "Untitled capability" }),
@@ -1433,6 +1441,38 @@
         text: "This ZIP may contain private project details and source material. After download, the workbench cannot control where you store it or who you share it with. The package stays private by default; exporting does not publish it or update the canonical registry.",
       }),
     );
+    const contents = el("section", {
+      class: "package-contents panel",
+      "aria-labelledby": "package-contents-title",
+    });
+    contents.append(
+      el("h3", { id: "package-contents-title", text: "ZIP contents" }),
+      el("p", {
+        class: "field-hint",
+        text: "Review the files this project kind includes before downloading.",
+      }),
+    );
+    const categoryList = el("ul", { class: "package-content-list" });
+    (Array.isArray(p.package_contents) ? p.package_contents : [])
+      .filter(
+        (category) =>
+          !category.kinds?.length || category.kinds.includes(p.kind),
+      )
+      .forEach((category) => {
+        const item = el("li");
+        item.append(
+          el("strong", { text: category.title }),
+          el("p", { text: category.detail }),
+          el("small", {
+            text: category.files
+              .map((path) => path.replaceAll("{slug}", p.slug || ""))
+              .join(" · "),
+          }),
+        );
+        categoryList.append(item);
+      });
+    contents.append(categoryList);
+    panel.append(contents);
     const actions = el("div", { class: "card-actions" });
     actions.append(
       button("Validate project", "quiet-button", validateProject),
@@ -1665,8 +1705,20 @@
     }
   }
   async function downloadBackup() {
+    const confirmed = window.confirm(
+      "This backup may contain private saved project details and source material.\n\nAfter download, the workbench cannot control where the file is stored or who it is shared with. Continue downloading?",
+    );
+    if (!confirmed) return;
     try {
-      const response = await api("/api/backup");
+      const response = await fetch("/api/backup", { cache: "no-store" });
+      if (!response.ok) {
+        let message = `Request failed (${response.status})`;
+        if ((response.headers.get("content-type") || "").includes("json")) {
+          const body = await response.json();
+          message = body.error || message;
+        }
+        throw new Error(message);
+      }
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       const anchor = document.createElement("a");

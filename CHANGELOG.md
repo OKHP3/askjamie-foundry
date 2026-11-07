@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-06: Capability path rebrand
+
+- Move the AJ01 and AJ02 capability trees to `resume-representative` and
+  `professional-portfolio` while retaining their source identities.
+- Add navigation-only Enterprise Sleuth and BrandGuard directories.
+- Update live navigation, registry destinations, and source verification
+  for the shorter capability paths.
+
 ## 2026-11-05: AJ02 business portfolio scope
 
 - Clarify that Professional Portfolio supports small-business presentation

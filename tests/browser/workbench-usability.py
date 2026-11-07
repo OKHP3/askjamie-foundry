@@ -13,6 +13,7 @@ import zipfile
 from contextlib import closing
 from pathlib import Path
 
+from playwright.async_api import TimeoutError as PlaywrightTimeoutError
 from playwright.async_api import async_playwright, expect
 
 try:
@@ -181,7 +182,9 @@ async def main() -> None:
                 if CONTROLLED_FAILURE:
                     raise AssertionError("Controlled workbench browser assertion failure")
 
-                async def navigate_with_confirmation(view: str, accept: bool) -> str:
+                async def navigate_with_confirmation(
+                    view: str, accept: bool, keyboard: bool = False
+                ) -> str:
                     prompt: dict[str, str] = {}
 
                     async def handle_dialog(dialog) -> None:
@@ -193,7 +196,15 @@ async def main() -> None:
                             await dialog.dismiss()
 
                     page.once("dialog", handle_dialog)
-                    await page.locator(f"button.nav-item[data-view='{view}']").click()
+                    nav_button = page.locator(f"button.nav-item[data-view='{view}']")
+                    if keyboard:
+                        await nav_button.focus()
+                        assert await nav_button.evaluate(
+                            "(button) => document.activeElement === button"
+                        )
+                        await nav_button.press("Enter")
+                    else:
+                        await nav_button.click()
                     assert prompt.get("type") == "confirm", prompt
                     assert (
                         prompt.get("message")
@@ -241,6 +252,25 @@ async def main() -> None:
                 await expect(page.locator("#live-region")).to_contain_text(
                     re.compile(r"Project saved|Saved")
                 )
+                await page.get_by_role("button", name="Projects").click()
+                saved_project_row = page.locator(".project-row").filter(
+                    has=page.get_by_text("Usability check", exact=True)
+                )
+                await saved_project_row.focus()
+                await expect(saved_project_row).to_be_focused()
+                await saved_project_row.press("Enter")
+                title_field = page.get_by_label("Title", exact=True)
+                await expect(title_field).to_be_focused()
+                focus_state = await title_field.evaluate(
+                    """(element) => ({
+                        visible: element.matches(":focus-visible"),
+                        outlineStyle: getComputedStyle(element).outlineStyle,
+                        outlineWidth: getComputedStyle(element).outlineWidth,
+                    })"""
+                )
+                assert focus_state["visible"], focus_state
+                assert focus_state["outlineStyle"] != "none", focus_state
+                assert focus_state["outlineWidth"] != "0px", focus_state
                 await page.get_by_role("tab", name="Package", exact=True).click()
                 package_warning = (
                     "This ZIP may contain private project details and source material. "
@@ -248,6 +278,51 @@ async def main() -> None:
                     "who you share it with."
                 )
                 await expect(page.get_by_text(package_warning, exact=False)).to_be_visible()
+                package_contents = page.locator(".package-content-list")
+                await expect(package_contents).to_be_visible()
+                for category in (
+                    "Source material",
+                    "Project configuration",
+                    "Evaluation records",
+                    "Registry proposal",
+                    "Portable skill and adapter plan",
+                ):
+                    await expect(package_contents.get_by_text(category, exact=True)).to_be_visible()
+                await expect(
+                    package_contents.get_by_text("Decision tool", exact=True)
+                ).to_have_count(0)
+                await expect(page.get_by_text("exporting does not publish it", exact=False)).to_be_visible()
+                await page.get_by_role("tab", name="Brief", exact=True).click()
+                await page.get_by_label("Kind", exact=True).select_option("decision-tool")
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                await expect(
+                    package_contents.get_by_text("Decision tool", exact=True)
+                ).to_be_visible()
+                await expect(
+                    package_contents.get_by_text(
+                        "Portable skill and adapter plan", exact=True
+                    )
+                ).to_have_count(0)
+                await page.get_by_role("tab", name="Brief", exact=True).click()
+                await page.get_by_label("Kind", exact=True).select_option("agent-skill")
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                await expect(
+                    package_contents.get_by_text(
+                        "Portable skill and adapter plan", exact=True
+                    )
+                ).to_be_visible()
+                await expect(
+                    package_contents.get_by_text("Decision tool", exact=True)
+                ).to_have_count(0)
+                await page.get_by_role("button", name="Save changes", exact=True).click()
+                await expect(page.locator(".success-box")).to_contain_text(
+                    "Saved. The desk has a new revision."
+                )
+                await expect(
+                    package_contents.get_by_text(
+                        "Portable skill and adapter plan", exact=True
+                    )
+                ).to_be_visible()
                 export_requests = []
                 page.on(
                     "request",
@@ -281,6 +356,39 @@ async def main() -> None:
                     assert "skills/usability-check/SKILL.md" in archive.namelist()
                     assert json.loads(archive.read("adapters/plan.json"))["installable"] is False
 
+                await page.locator("button.nav-item[data-view='projects']").click()
+                backup_requests = []
+                page.on(
+                    "request",
+                    lambda request: backup_requests.append(request.url)
+                    if request.url.endswith("/api/backup")
+                    else None,
+                )
+
+                async def dismiss_backup_warning(dialog) -> None:
+                    assert "private saved project details and source material" in dialog.message
+                    assert "cannot control where the file is stored" in dialog.message
+                    assert "who it is shared with" in dialog.message
+                    await dialog.dismiss()
+
+                page.once("dialog", dismiss_backup_warning)
+                await page.get_by_role("button", name="Download backup", exact=True).click()
+                assert backup_requests == []
+
+                async def accept_backup_warning(dialog) -> None:
+                    assert "private saved project details and source material" in dialog.message
+                    assert "cannot control where the file is stored" in dialog.message
+                    assert "who it is shared with" in dialog.message
+                    await dialog.accept()
+
+                async with page.expect_download() as backup_download_info:
+                    page.once("dialog", accept_backup_warning)
+                    await page.get_by_role("button", name="Download backup", exact=True).click()
+                backup_download = await backup_download_info.value
+                assert len(backup_requests) == 1
+                backup = json.loads(Path(await backup_download.path()).read_text())
+                assert backup["projects"][0]["draft"]["source_text"] == "Synthetic browser fixture."
+
                 project = await page.evaluate(
                     """async () => {
                         const response = await fetch('/api/projects');
@@ -311,7 +419,7 @@ async def main() -> None:
                 await page.get_by_label("Title").fill("Unsaved draft stays safe")
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
 
-                await navigate_with_confirmation("workbench", accept=False)
+                await navigate_with_confirmation("workbench", accept=False, keyboard=True)
                 assert await page.locator("#view-title").inner_text() == "Saved capability projects"
                 assert await page.get_by_label("Title").input_value() == "Unsaved draft stays safe"
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
@@ -339,6 +447,28 @@ async def main() -> None:
                     {key: newer_saved[key] for key in DRAFT_FIELDS}
                     | {"revision": newer_saved["revision"]},
                 )
+
+                cancel_refresh_prompt: dict[str, str] = {}
+
+                async def cancel_refresh(dialog) -> None:
+                    cancel_refresh_prompt["type"] = dialog.type
+                    await dialog.dismiss()
+
+                page.once("dialog", cancel_refresh)
+                try:
+                    await page.reload(wait_until="commit", timeout=2000)
+                except PlaywrightTimeoutError:
+                    # A dismissed beforeunload prompt cancels navigation, so reload
+                    # waits until its timeout even though the current page is intact.
+                    pass
+                assert (
+                    cancel_refresh_prompt.get("type") == "beforeunload"
+                ), cancel_refresh_prompt
+                assert (
+                    await page.get_by_label("Title").input_value()
+                    == "Unsaved draft stays safe"
+                )
+                assert await page.locator(".save-state").inner_text() == "Unsaved changes"
 
                 refresh_prompt: dict[str, str] = {}
 
@@ -381,7 +511,9 @@ async def main() -> None:
                 )
                 assert saved_title == "Newer saved work", saved_title
                 await page.get_by_role("button", name="Save changes").click()
-                await page.get_by_text("Saved. The desk has a new revision.").wait_for()
+                await expect(page.locator(".success-box")).to_contain_text(
+                    "Saved. The desk has a new revision."
+                )
                 await page.locator(".save-state").filter(has_text="Saved locally").wait_for()
                 await page.get_by_label("Title").fill("Discarded local draft")
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
@@ -414,7 +546,9 @@ async def main() -> None:
                 assert await page.get_by_label("Title").input_value() == "Unsaved draft stays safe"
 
                 await page.get_by_role("button", name="Save changes").click()
-                await page.get_by_text("Saved. The desk has a new revision.").wait_for()
+                await expect(page.locator(".success-box")).to_contain_text(
+                    "Saved. The desk has a new revision."
+                )
                 await page.locator(".save-state").filter(has_text="Saved locally").wait_for()
                 page.once("dialog", lambda dialog: dialog.accept())
                 await page.get_by_role("button", name="Duplicate").click()
@@ -433,7 +567,9 @@ async def main() -> None:
                 )
                 await page.get_by_label("Title").fill(duplicate_title)
                 await page.get_by_role("button", name="Save changes").click()
-                await page.get_by_text("Saved. The desk has a new revision.").wait_for()
+                await expect(page.locator(".success-box")).to_contain_text(
+                    "Saved. The desk has a new revision."
+                )
                 await page.locator(".save-state").filter(has_text="Saved locally").wait_for()
 
                 original_row = page.locator(".project-row").filter(
@@ -493,14 +629,23 @@ async def main() -> None:
                 assert duplicate_title in saved_titles, saved_titles
 
                 page.once("dialog", lambda dialog: dialog.accept())
-                await duplicate_row.click()
+                await duplicate_row.focus()
+                await expect(duplicate_row).to_be_focused()
+                await duplicate_row.press("Enter")
                 await page.get_by_label("Title").wait_for()
                 assert await page.get_by_label("Title").input_value() == duplicate_title
                 assert await page.locator(".save-state").inner_text() == "Saved locally"
+                announcement = page.locator("#live-region")
+                await expect(announcement).to_have_attribute("role", "status")
+                await expect(announcement).to_contain_text("Project opened:")
+                await expect(announcement).to_contain_text(expected_short_title)
+                await expect(announcement).to_contain_text(project_code)
 
                 await page.get_by_label("Title").fill("")
                 await page.get_by_role("button", name="Save changes").click()
-                await page.get_by_text("Saved. The desk has a new revision.").wait_for()
+                await expect(page.locator(".success-box")).to_contain_text(
+                    "Saved. The desk has a new revision."
+                )
                 await page.locator(".save-state").filter(has_text="Saved locally").wait_for()
                 fallback_row = page.locator(".project-row").filter(
                     has=page.locator(
@@ -547,7 +692,9 @@ async def main() -> None:
 
                 await page.get_by_label("Title").fill(duplicate_title)
                 await page.get_by_role("button", name="Save changes").click()
-                await page.get_by_text("Saved. The desk has a new revision.").wait_for()
+                await expect(page.locator(".success-box")).to_contain_text(
+                    "Saved. The desk has a new revision."
+                )
                 await page.locator(".save-state").filter(has_text="Saved locally").wait_for()
                 await original_row.click()
                 await page.get_by_label("Title").wait_for()
@@ -649,8 +796,291 @@ async def main() -> None:
                     in await page.locator(".editor-head p").inner_text()
                 )
                 await page.unroute(delayed_history_url, delay_first_history)
+
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                delayed_evaluations_path = (
+                    f"/api/projects/{original_id}/evaluations"
+                )
+                delayed_evaluations_url = f"**{delayed_evaluations_path}"
+                evaluations_request_started = asyncio.Event()
+                evaluations_request_finished = asyncio.Event()
+                selected_evaluation_marker = "Selected project evaluation marker"
+                earlier_evaluation_marker = "Earlier project evaluation marker"
+
+                async def delay_first_evaluations(route) -> None:
+                    evaluations_request_started.set()
+                    await asyncio.sleep(0.75)
+                    await route.fulfill(
+                        status=200,
+                        content_type="application/json",
+                        body=json.dumps(
+                            {
+                                "evaluations": [
+                                    {
+                                        "revision": race_projects[original_id][
+                                            "revision"
+                                        ],
+                                        "evaluated_at": "earlier project run",
+                                        "cases": [
+                                            {
+                                                "name": earlier_evaluation_marker,
+                                                "status": "passed",
+                                                "detail": "Earlier project result",
+                                            }
+                                        ],
+                                    }
+                                ]
+                            }
+                        ),
+                    )
+                    evaluations_request_finished.set()
+
+                async def respond_with_selected_evaluation(route) -> None:
+                    await route.fulfill(
+                        status=200,
+                        content_type="application/json",
+                        body=json.dumps(
+                            {
+                                "evaluations": [
+                                    {
+                                        "revision": race_projects[duplicate_id][
+                                            "revision"
+                                        ],
+                                        "evaluated_at": "selected project run",
+                                        "cases": [
+                                            {
+                                                "name": selected_evaluation_marker,
+                                                "status": "passed",
+                                                "detail": "Selected project result",
+                                            }
+                                        ],
+                                    }
+                                ]
+                            }
+                        ),
+                    )
+
+                selected_evaluations_path = (
+                    f"/api/projects/{duplicate_id}/evaluations"
+                )
+                selected_evaluations_url = f"**{selected_evaluations_path}"
+                await page.route(
+                    delayed_evaluations_url, delay_first_evaluations
+                )
+                await page.route(
+                    selected_evaluations_url, respond_with_selected_evaluation
+                )
+                await original_row.click()
+                await asyncio.wait_for(evaluations_request_started.wait(), timeout=5)
+                await duplicate_row.click()
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                await expect(page.get_by_text(selected_evaluation_marker)).to_be_visible()
+                await expect(page.locator(".editor-head p")).to_contain_text(
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                )
+                await asyncio.wait_for(evaluations_request_finished.wait(), timeout=5)
+                await page.wait_for_load_state("networkidle")
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                await expect(page.locator(".editor-head p")).to_contain_text(
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                )
+                await expect(page.get_by_text(selected_evaluation_marker)).to_be_visible()
+                assert await page.get_by_text(earlier_evaluation_marker).count() == 0
+                await page.unroute(
+                    delayed_evaluations_url, delay_first_evaluations
+                )
+                await page.unroute(
+                    selected_evaluations_url, respond_with_selected_evaluation
+                )
+                ancillary_history_marker = "Earlier project history marker"
+                ancillary_evaluation_marker = "Earlier project evaluation marker"
+                target_evaluation_marker = "Target project evaluation marker"
+                target_history_marker = "Target project history marker"
+                original_history_url = f"**/api/projects/{original_id}/history"
+                original_evaluations_url = (
+                    f"**/api/projects/{original_id}/evaluations"
+                )
+                duplicate_history_url = f"**/api/projects/{duplicate_id}/history"
+                duplicate_evaluations_url = (
+                    f"**/api/projects/{duplicate_id}/evaluations"
+                )
+
+                async def respond_with_ancillary_fixture(route) -> None:
+                    is_history = route.request.url.endswith("/history")
+                    await route.fulfill(
+                        status=200,
+                        content_type="application/json",
+                        body=json.dumps(
+                            {
+                                "history": [
+                                    {
+                                        "revision": 1,
+                                        "updated_at": ancillary_history_marker,
+                                    }
+                                ]
+                            }
+                            if is_history
+                            else {
+                                "evaluations": [
+                                    {
+                                        "revision": race_projects[original_id][
+                                            "revision"
+                                        ],
+                                        "evaluated_at": "earlier project run",
+                                        "cases": [
+                                            {
+                                                "name": ancillary_evaluation_marker,
+                                                "status": "passed",
+                                                "detail": "Earlier project result",
+                                            }
+                                        ],
+                                    }
+                                ]
+                            }
+                        ),
+                    )
+
+                async def fail_ancillary_request(route) -> None:
+                    await route.fulfill(
+                        status=503,
+                        content_type="application/json",
+                        body=json.dumps({"error": "Synthetic ancillary request failure"}),
+                    )
+
+                async def respond_with_target_evaluation(route) -> None:
+                    await route.fulfill(
+                        status=200,
+                        content_type="application/json",
+                        body=json.dumps(
+                            {
+                                "evaluations": [
+                                    {
+                                        "revision": race_projects[duplicate_id][
+                                            "revision"
+                                        ],
+                                        "evaluated_at": "target project run",
+                                        "cases": [
+                                            {
+                                                "name": target_evaluation_marker,
+                                                "status": "passed",
+                                                "detail": "Target project result",
+                                            }
+                                        ],
+                                    }
+                                ]
+                            }
+                        ),
+                    )
+
+                async def respond_with_target_history(route) -> None:
+                    await route.fulfill(
+                        status=200,
+                        content_type="application/json",
+                        body=json.dumps(
+                            {
+                                "history": [
+                                    {
+                                        "revision": 1,
+                                        "updated_at": target_history_marker,
+                                    }
+                                ]
+                            }
+                        ),
+                    )
+
+                await page.route(
+                    original_history_url, respond_with_ancillary_fixture
+                )
+                await page.route(
+                    original_evaluations_url, respond_with_ancillary_fixture
+                )
+                await page.get_by_role("tab", name="Brief", exact=True).click()
+                await original_row.click()
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    "Unsaved draft stays safe"
+                )
+                await expect(page.locator(".editor-head p")).to_contain_text(
+                    f"revision {race_projects[original_id]['revision']}"
+                )
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                await expect(
+                    page.get_by_text(ancillary_history_marker)
+                ).to_be_visible()
+                await expect(
+                    page.get_by_text(ancillary_evaluation_marker)
+                ).to_be_visible()
+
+                await page.route(duplicate_history_url, fail_ancillary_request)
+                await page.route(
+                    duplicate_evaluations_url, respond_with_target_evaluation
+                )
+                await duplicate_row.click()
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                await expect(page.locator(".editor-head p")).to_contain_text(
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                )
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                await expect(
+                    page.get_by_text("No saved history is available yet.")
+                ).to_be_visible()
+                await expect(page.get_by_text(target_evaluation_marker)).to_be_visible()
+                assert await page.get_by_text(ancillary_history_marker).count() == 0
+                assert await page.get_by_text(ancillary_evaluation_marker).count() == 0
+
+                await page.unroute(
+                    duplicate_history_url, fail_ancillary_request
+                )
+                await page.unroute(
+                    duplicate_evaluations_url, respond_with_target_evaluation
+                )
+                await page.get_by_role("tab", name="Brief", exact=True).click()
+                await original_row.click()
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    "Unsaved draft stays safe"
+                )
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                await expect(
+                    page.get_by_text(ancillary_evaluation_marker)
+                ).to_be_visible()
+
+                await page.route(duplicate_history_url, respond_with_target_history)
+                await page.route(duplicate_evaluations_url, fail_ancillary_request)
+                await duplicate_row.click()
+                await expect(page.locator(".editor-head h2")).to_have_text(
+                    duplicate_title
+                )
+                await expect(page.locator(".editor-head p")).to_contain_text(
+                    f"revision {race_projects[duplicate_id]['revision']}"
+                )
+                await page.get_by_role("tab", name="Package", exact=True).click()
+                await expect(
+                    page.get_by_text(target_history_marker)
+                ).to_be_visible()
+                assert await page.get_by_text("Latest evaluation").count() == 0
+                assert await page.get_by_text(ancillary_evaluation_marker).count() == 0
+                assert await page.get_by_text(target_evaluation_marker).count() == 0
+                await page.get_by_role("tab", name="Brief", exact=True).click()
+                await expect(page.get_by_label("Title")).to_have_value(duplicate_title)
                 await page.get_by_label("Title").fill("Unsaved duplicate remains")
                 assert await page.locator(".save-state").inner_text() == "Unsaved changes"
+                await page.unroute(
+                    original_history_url, respond_with_ancillary_fixture
+                )
+                await page.unroute(
+                    original_evaluations_url, respond_with_ancillary_fixture
+                )
+                await page.unroute(
+                    duplicate_history_url, respond_with_target_history
+                )
+                await page.unroute(
+                    duplicate_evaluations_url, fail_ancillary_request
+                )
 
                 delayed_project_path = f"/api/projects/{original_id}"
                 delayed_project_url = f"**{delayed_project_path}"

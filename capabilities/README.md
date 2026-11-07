@@ -1,21 +1,18 @@
 # Capability subtrees
 
-AJ01 and AJ02 are public children with complete pinned GitHub source snapshots:
+| Capability | Source and navigation |
+| --- | --- |
+| [Resume Representative](resume-representative/README.md) | AJ01, 392 pinned source files |
+| [Professional Portfolio](professional-portfolio/README.md) | AJ02, 481 pinned source files |
+| [Enterprise Sleuth](enterprise-sleuth/README.md) | Organization routing index |
+| [BrandGuard](brandguard/README.md) | Brand routing index |
 
-- [Resume Representative](askjamie-aj01-resume-representative/README.md): 392 files.
-- [Professional Portfolio](askjamie-aj02-professional-portfolio/README.md): 481 files.
+AJ01 and AJ02 preserve original files in their respective `origin/repository/`
+directories with per-file SHA-256 and Git identity indexes. The
+[migration record](../docs/migrations/aj01-aj02-2026-10-19.md) records the
+source consolidation. Portable products use `skills/` and host-specific
+packages use `adapters/` under their capability.
 
-Each preserves original bytes and filenames in origin/repository, with a
-per-file SHA-256 and Git identity index. Registry status imported records source
-consolidation. Portable skills, configured GPT source, local/Replit differences,
-component reuse rights and host acceptance remain separate work. Follow the
-[migration record](../docs/migrations/aj01-aj02-2026-10-19.md).
-
-Use `capabilities/<existing-capability-slug>/` with portable products in
-`skills/` and target adapters in
-`adapters/`. Historical contributor tooling inside the source snapshots is not activated or promoted. Consult
-[the migration contract](../docs/skill-first-foundry.md) and
-[registry records](../registry/index.yaml).
-
-Private capability material stays outside this public checkout. All
-permanent-private entries remain protected.
+Use the [registry](../registry/index.yaml) for lineage and storage. Organization
+and brand routing pages contain public navigation only. Protected capability
+material stays in private custody.

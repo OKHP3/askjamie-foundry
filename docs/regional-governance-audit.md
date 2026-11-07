@@ -70,6 +70,11 @@ content. The review does not confirm that a later mentor revision behaves the
 same way, that the target package is safe for AskJamie, or that any publication
 approval exists.
 
+The audit also checks that the recorded HTTPS GitHub blob URL identifies the
+configured repository, revision, and source path. A mismatch makes the audit
+fail, marks the mentor-behavior evidence `UNKNOWN`, and invalidates a supplied
+owner decision even when its repository/revision/path binding otherwise matches.
+
 The previously reviewed revision was
 `8de1eb212d8db193fd22eb85bf0843f366a0c1a7`, reviewed 2026-09-17. The current
 revision differs in the required attribution filename casing and the factoring
@@ -106,7 +111,10 @@ is bound to the registry digest in that file.
 ## Required audit record
 
 The machine report produced by
-`python3 scripts/regional-governance-audit.py` contains:
+`python3 scripts/regional-governance-audit.py` contains the following fields.
+This is a **non-literal template**, not a report from a particular run. Values
+that depend on the registry, pinned mentor review, owner decision, or release
+boundaries are placeholders; use the command output for current values.
 
 ```yaml
 audit:
@@ -116,41 +124,50 @@ audit:
   mentor: OKHP3/OverKill-Hill-FoundRy
   scope: broader-mentor-governance-and-graduation
   mode: design
-  status: PASS
-  adoption: DEFERRED
+  status: "<generated audit status>"
+  adoption: "<generated adoption status>"
 adaptation:
   id: read-only-regional-mentor-governance-audit
-  publication_decision: not-authorized
-  hosting_decision: not-authorized
+  publication_decision: "<configured release boundary>"
+  hosting_decision: "<configured release boundary>"
 evidence:
-  - claim: ...
-    tier: CONFIRMED
-    evidence: [...]
-    consequence_if_false: ...
-    next_check: ...
+  - claim: "<claim from generated report>"
+    tier: "<evidence tier from generated report>"
+    evidence: "<evidence from generated report>"
+    consequence_if_false: "<generated consequence>"
+    next_check: "<generated next check>"
 mentor_review:
-  repository: OKHP3/OverKill-Hill-FoundRy
-  revision: 619e942d69cfe535695e609bbb71a50e3bc14c49
-  path: scripts/public-graduation-audit.py
-  reviewed_at: "2026-11-04"
-  reviewer: Replit Agent
+  repository: "<pinned mentor repository>"
+  revision: "<pinned mentor revision>"
+  path: "<pinned mentor source path>"
+  reviewed_at: "<mentor review date>"
+  reviewer: "<mentor reviewer>"
 registry:
-  path: registry/index.yaml
-  sha256: ...
-  unchanged_during_audit: true
-  canonical_validator_errors: []
+  path: "<registry path from generated report>"
+  sha256: "<current registry digest>"
+  unchanged_during_audit: "<generated unchanged status>"
+  canonical_validator_errors: "<generated validator errors>"
 protected_client_records:
-  count: 5
-  violations: []
+  count: "<computed protected-record count>"
+  violations: "<generated protected-record violations>"
 owner_approval:
   required: true
-  status: APPROVED
-  decision: approve
-  decided_at: "2026-11-05"
+  status: "<generated owner-approval status>"
+  decision: "<owner decision from generated report>"
+  decided_at: "<owner decision date>"
   mentor_review:
-    repository: OKHP3/OverKill-Hill-FoundRy
-    revision: 619e942d69cfe535695e609bbb71a50e3bc14c49
-    path: scripts/public-graduation-audit.py
+    repository: "<owner decision mentor repository>"
+    revision: "<owner decision mentor revision>"
+    path: "<owner decision mentor source path>"
+  boundary_review:
+    reviewed_at: "<release-boundary review date>"
+    registry_sha256: "<release-boundary registry digest>"
+    controls:
+      loopback_workbench: "<generated control status>"
+      private_exports: "<generated control status>"
+      immutable_registry: "<generated control status>"
+      permanent_private_client_controls: "<generated control status>"
+    residual_limits: "<release-boundary residual limits>"
 ```
 
 The report is evidence about the audit run. It is not itself evidence that the
@@ -250,10 +267,12 @@ boundary, and pinned mentor repository revision and source path. The audit
 rejects the record if its `mentor_review.repository`, `mentor_review.revision`,
 or `mentor_review.path` differs from the current pinned review in
 `scripts/regional-governance-audit.py`; a changed revision or path therefore
-requires a new dated decision. It cannot be reused for a different registry
-state, mentor source, a publication release, or a hosting decision. An approval
-also does not authorize hosted authoring, model calls, child-repository
-creation, or public graduation.
+requires a new dated decision. The configured mentor source URL must point to
+that same repository, revision, and path; an inconsistent citation invalidates
+the audit and any supplied decision. It cannot be reused for a different
+registry state, mentor source, a publication release, or a hosting decision.
+An approval also does not authorize hosted authoring, model calls,
+child-repository creation, or public graduation.
 
 The original 2026-09-17 decision was `defer`. The 2026-11-04 boundary review
 informed the 2026-11-05 owner approval of the read-only evidence-review method bound to
