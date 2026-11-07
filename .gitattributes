@@ -12,3 +12,6 @@
 
 # Preserve the archived AJ01 instruction candidate's exact UTF-8 byte count.
 /capabilities/resume-representative/docs/thread-closeout-instruction-prompt-2025-11-16/instructions.txt -text -ident -filter
+
+# Preserve the reviewed research edition's exact PDF bytes.
+/capabilities/resume-representative/docs/post-covid-hiring/post-covid-hiring-2026q4-research-edition.pdf -text -ident -filter

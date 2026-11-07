@@ -1,7 +1,7 @@
 ---
 artifact_id: AJ01-POSTCOVID-RESEARCH-001
 version: 0.4.0-review
-status: "evidence-bounded source draft; NOT 20-page-release validated"
+status: "evidence-bounded research edition; scholarly and host acceptance pending"
 title: "Post-COVID Hiring: Workplace Psychology, Sociology, and Selection"
 subtitle: "Historical shifts, contemporary evidence, candidate and employer decisions, and a retrieval glossary"
 subject: "Hiring psychology; workplace sociology; remote and hybrid work; mental health at work; inclusion; contingent employment"
@@ -20,7 +20,7 @@ contact: "contact@askjamie.bot"
 
 # Post-COVID Hiring: Workplace Psychology, Sociology, and Selection
 
-**Research edition.** This is a substantial but deliberately **unreleased** foundation for the requested twenty-page-or-longer corpus. It has not passed rendered-page, PDF fidelity, comprehensive source-history reconciliation, independent scholarly review, or hosted GPT retrieval tests. Those gaps must remain visible until genuinely tested. Its 2026 creation date is distinct from the owner-specified © 2025 brand notice.
+**Research edition.** This research edition includes an editable manuscript and a searchable, reviewed PDF rendition. Independent scholarly review and hosted retrieval remain separate. The source archive retains the original research artifact and renewal method. Exact equivalence to the clipped historical chat variant was not established. The 2026 creation date is distinct from the owner-specified © 2025 brand notice.
 
 ## PC-001 — Executive interpretation: pandemic acceleration versus universal transformation
 
@@ -86,7 +86,7 @@ SIOP's review reported mixed findings about remote work and career consequences.
 
 A virtual interview can be synchronous (live video), asynchronous (recorded answers), panel-based (multiple interviewers), technical (work sample or whiteboard), or primarily text-based. The delivery channel has practical consequences, but selection validity depends on the questions, rubric, standardization, job relation, interviewer training and scoring rules. A physically polished interview setting is not evidence of superior skill.
 
-A 2024 cross-sectional survey in family-medicine residency interviewing found that 68.5 percent of the **54 candidate respondents** reported an easy connection despite the virtual format, while 55.5 percent wanted both in-person and virtual options. Interviewers had their own mixed preferences. These are observations in a particular professional education setting and are not proof that most corporate recruiters prefer video or that virtual interviews are universally standard (Tolentino et al. 2024).
+A 2024 cross-sectional survey in family-medicine residency interviewing found that 68.5 percent of the **54 candidates who completed the survey** reported an easy connection despite the virtual format, while 55.5 percent wanted both in-person and virtual options. Interviewers had their own mixed preferences. These are observations in a particular professional education setting and are not proof that most corporate recruiters prefer video or that virtual interviews are universally standard (Tolentino et al. 2024).
 
 Video communication introduces variables such as internet reliability, camera framing, background noise, the difficulty of turn-taking, gaze alignment and accessibility. An asynchronous interview adds concerns about one-sided communication, repeatability, instructions and whether applicants can ask questions. Technical inequities should not be silently transformed into competence judgments.
 
@@ -108,7 +108,7 @@ The 2021 Great Resignation illustrates why workers' motivations should not be re
 
 The language of workplace mental health should distinguish mental health conditions, emotional distress, burnout, job insecurity, social isolation and ordinary fatigue. These are not interchangeable categories. Burnout is an occupational phenomenon associated with chronic workplace stress, not a diagnosis a recruiter should assign to candidates or employees based on demeanor.
 
-The World Health Organization identifies psychosocial risks including high workload, lack of autonomy, harassment, unclear roles, insufficient colleague support, job insecurity and conflicting work–home demands. WHO estimates depression and anxiety cost approximately twelve billion workdays and US$1 trillion in lost productivity annually worldwide. The estimate does not establish that remote work caused those outcomes (World Health Organization n.d.).
+The World Health Organization identifies psychosocial risks including high workload, lack of autonomy, harassment, unclear roles, insufficient colleague support, job insecurity and conflicting work–home demands. WHO estimates depression and anxiety cost approximately twelve billion workdays and US$1 trillion in lost productivity annually worldwide. The estimate does not establish that remote work caused those outcomes (World Health Organization 2026).
 
 Mind Share Partners' 2025 U.S. workplace survey, conducted with Qualtrics among 1,153 employed full-time adults, reported that about half experienced moderate-to-severe burnout, depression or anxiety, while fear of job consequences for discussing mental health persisted. These are self-reported survey findings, not clinical prevalence estimates of the entire labor force. Their value lies in showing that well-being, trust and workplace stigma remain relevant questions for managers (Mind Share Partners 2025).
 
@@ -298,7 +298,7 @@ Mind Share Partners. 2025. *Mental Health at Work Report: Key Workplace Trends*.
 
 Parker, Kim, and Juliana Menasce Horowitz. 2022. “Majority of Workers Who Quit a Job in 2021 Cite Low Pay, No Opportunities for Advancement, Feeling Disrespected.” *Pew Research Center*, March 9. https://www.pewresearch.org/short-reads/2022/03/09/majority-of-workers-who-quit-a-job-in-2021-cite-low-pay-no-opportunities-for-advancement-feeling-disrespected/.
 
-Robert Half. 2025. “Remote Work Statistics and Trends for 2025.” https://www.roberthalf.com/us/en/insights/research/remote-work-statistics-and-trends.
+Robert Half. 2025. “The State of Hybrid and Remote Work: Q3 2025.” https://press.roberthalf.com/The-State-of-Hybrid-and-Remote-Work-Q3-2025.
 
 Society for Industrial and Organizational Psychology. 2024. *Remote Work: Post-COVID-19 State of the Knowledge and Best Practice Recommendations*. White paper by Kristen M. Shockley, Tammy D. Allen, and Ryan S. Grant. https://www.siop.org/wp-content/uploads/2024/12/Remote-Work-Post-COVID-19-State-of-the-Knowledge-and-Best-Practice-Recommendations.pdf.
 
@@ -312,11 +312,11 @@ U.S. Bureau of Labor Statistics. n.d. “Telework or Work at Home for Pay.” Ac
 
 Wells, John, et al. 2023. “A Systematic Review of the Impact of Remote Working Referenced to the Concept of Work–Life Flow on Physical and Psychological Health.” *Workplace Health & Safety* 71, no. 11: 507–21. https://doi.org/10.1177/21650799231176397.
 
-World Health Organization. n.d. “Mental Health at Work.” Accessed November 5, 2026. https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work.
+World Health Organization. 2026. “Mental Health at Work.” September 15. https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work.
 
 ## PC-023 — Legal and metadata footer
 
-Title: Post-COVID Hiring: Workplace Psychology, Sociology, and Selection. Subject: post-COVID hiring, virtual interviews, remote work, labor psychology, workforce sociology, inclusion and mental health at work. Author: AskJamie™ (AI-assisted research synthesis). Created: November 5, 2026. Status: review-only foundational edition; exact rendered length and host retrieval remain unverified.
+Title: Post-COVID Hiring: Workplace Psychology, Sociology, and Selection. Subject: post-COVID hiring, virtual interviews, remote work, labor psychology, workforce sociology, inclusion and mental health at work. Author: AskJamie™ (AI-assisted research synthesis). Created: November 5, 2026. Status: reviewed research rendition. Independent scholarly review and host retrieval remain pending.
 
 © 2025 AskJamie™ and OverKill Hill P³™. All rights reserved. Third-party source rights remain with their respective holders. The requested 2025 brand notice does not backdate creation and the ™ notation does not establish registration. General educational information only, not individualized legal, medical or financial advice.
 

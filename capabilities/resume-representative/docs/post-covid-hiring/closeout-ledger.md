@@ -72,3 +72,13 @@ This was an adversarial desk review by the same ChatGPT session, **not** an inde
 No source assets, original preserved snapshots, branches, worktrees or other workers' files have been deleted or rewritten.
 
 © 2025 AskJamie™ and OverKill Hill P³™. All rights reserved. Title: Row 27 Post-COVID Hiring closeout ledger. Subject: knowledge and renewal preservation, validation, source gaps and archival hold. Author: AskJamie™ (AI-assisted). Created: 2026-11-05. https://askjamie.bot | contact@askjamie.bot.
+
+## 2026-11-06 rendered edition and source disposition
+
+The current research manuscript is rendered as [the 27-page searchable PDF](post-covid-hiring-2026q4-research-edition.pdf). SHA-256 `36cddb551e785a4a069ae2d7c8d9d6118b6d97e8b8a03a33c0d43b57f70423d5`; 185,794 bytes. The private coordinator recovered the complete original artifact and renewal method, classified the remaining clipped chat variant as optional to rapid source capture, and verified the exact thread archive. No raw private source appears in this repository.
+
+Pass A read all 27 pages with pypdf and independently rendered each with Poppler. It verified selectable text on every page, 23 stable section identifiers and bookmarks, 20 glossary entries, 14 bibliography targets, link parity against the source, running site and rights details, active site and contact links, title, author and language. Visual inspection confirmed the contents, body pages, glossary and bibliography layout. The earlier 12/12 lexical result applies to the retained research sections.
+
+Pass B reviewed whether the rendition changed claims or implied release. The renderer keeps the original author-date references and section order and distinguishes the source edition's 2026 date from the 2025 rights notice. The report retains the difference between historical preservation, scholarly review and live retrieval. This was a separate author review. Independent scholarly review and hosted retrieval remain pending.
+
+The source check replaced the rolling Robert Half page with the original Q3 2025 edition, distinguished the residency survey's 54 completers from all responses, and aligned the WHO citation to the fact sheet's dated revision. The corrected PDF was rebuilt and verified against the updated manuscript.
