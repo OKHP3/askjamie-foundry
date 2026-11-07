@@ -12,7 +12,8 @@ The isolated Replit project showed an enabled project skill and a native load af
 
 ## Remaining work
 
-- Verify automatic selection without naming the skill and confirm exact bytes loaded in the intended host.
+- An unnamed synthetic request in a fresh Replit Free Mode planning conversation caused the Agent to read `.agents/skills/professional-portfolio/SKILL.md` automatically; its answer preserved confidentiality and did not invent results. This demonstrates an observed file read in the isolated test project, not a native `Loaded skill` event or parent FoundRy activation. The test project was previously fingerprinted to the tested procedure; the file was not rehashed in that conversation.
+- Verify native automatic activation and exact bytes loaded in the intended parent host.
 - Reconcile the parent Replit workspace and establish a host integration that respects the distinction between capability products and contributor tooling.
 - Complete source coverage, knowledge identity and component-specific reuse review without importing private knowledge into this public repository.
 - Assess broader GPT behavior and untested hosts independently. A synthetic test or valid skill file does not establish production readiness, publication or full equivalence.
