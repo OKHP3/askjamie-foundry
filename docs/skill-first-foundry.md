@@ -30,7 +30,7 @@ The author edits the reusable procedure; export packages that authored content.
 ## Portable core and target adapters
 
 ```text
-capabilities/<existing-capability-slug>/
+capabilities/<capability-slug>/
   manifest.yaml              identity, lineage, visibility, packaging
   origin/                    preserved source with provenance
   skills/<skill-name>/

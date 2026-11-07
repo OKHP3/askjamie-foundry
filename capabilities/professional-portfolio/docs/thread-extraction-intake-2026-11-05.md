@@ -6,7 +6,7 @@ Status: public-safe transformation handoff. Existing scope and candidate-skill o
 
 AJ02 represents the business of a solo operator, creator, salesperson or small company. It answers why a prospective client should do business with that supplier, using offers, capabilities, relevant work, evidence, process and fit. Portfolio curation supports that business-facing purpose.
 
-Personal job applications belong to [AJ01](../../askjamie-aj01-resume-representative/docs/thread-extraction-intake-2026-11-05.md). Contract proposals and supplier selection use AJ02. A person's two roles need different audiences, evidence selection and output contracts.
+Personal job applications belong to [AJ01](../../resume-representative/docs/thread-extraction-intake-2026-11-05.md). Contract proposals and supplier selection use AJ02. A person's two roles need different audiences, evidence selection and output contracts.
 
 Multiply communication through approved explanations and evidence. Describe actual tools, systems, processes and specialist networks; never invent staff, clients, locations, credentials, capacity or results. The demonstration is an example; the transferable product is the adaptable method and knowledge scaffolding. Enterprise applications and research studies are separate lineage, not automatically included features.
 
