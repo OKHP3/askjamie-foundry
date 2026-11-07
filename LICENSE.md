@@ -43,3 +43,9 @@ LIABILITY ARISING FROM THE USE OF THIS REPOSITORY OR ITS CONTENTS.
 
 For licensing inquiries, contact the repository maintainer via
 [OKHP3 on GitHub](https://github.com/OKHP3).
+
+## Separately licensed contributor tools
+
+Imported contributor packages retain the upstream MIT terms recorded in
+[the Skillz source notice](.agents/skills/NOTICE.skillz.md). The proprietary
+terms above govern other repository material where no separate license applies.

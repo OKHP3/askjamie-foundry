@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-06: Contributor skill reconciliation
+
+- Reconcile the reviewed contributor packages with pinned Skillz source and
+  retain its MIT notice.
+- Keep raw evaluation outputs in historical source locations, distinguish
+  historical receipts from the current package, and refresh the 118-skill catalog.
+- Make the Skill Foundry fixture filter package-relative and preserve its
+  exact-byte verification contract across platforms.
+
 ## 2026-11-06: Capability path rebrand
 
 - Move the AJ01 and AJ02 capability trees to `resume-representative` and

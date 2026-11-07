@@ -116,7 +116,7 @@ index run, detect a documented project-local builder and run it explicitly. In
 this repository, refresh the Forge index with:
 
 ```bash
-node forge/scripts/build-catalog.js
+node artifacts/forge/scripts/build-catalog.js
 ```
 
 Do not claim the web catalog is current until this command succeeds and its
