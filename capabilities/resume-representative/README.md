@@ -16,7 +16,7 @@ configured GPT capture, Replit reconciliation and host acceptance remain open.
 - [Conversion dossier](docs/conversion.md)
 - [Migration, reconciliation and rollback](../../docs/migrations/aj01-aj02-2026-10-19.md)
 - [Later child-source reconciliation](../../docs/migrations/aj01-aj02-source-reconciliation.md)
-- [Original repository at the imported commit](https://github.com/OKHP3/askjamie-aj01-resume-representative/tree/6744330681e0ddc55d6542aaa783cb9944df3092)
+- Original GitHub source commit `6744330681e0ddc55d6542aaa783cb9944df3092`. Its [pinned snapshot](origin/repository/) remains in FoundRy.
 - [Existing website](https://askjamie.bot/lens-system/resume-representative/)
 - [Legacy GPT](https://chatgpt.com/g/g-691fb05c86c881919eec171e62fe1e00-resume-representative-by-askjamietm)
 - [Coordination issue](https://github.com/OKHP3/askjamie-foundry/issues/58)
