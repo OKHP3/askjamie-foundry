@@ -5,8 +5,8 @@ portable skill remains the sole authoritative procedure for each capability.
 
 | Activation source | Canonical portable procedure |
 | --- | --- |
-| `capabilities/resume-representative/adapters/replit/SKILL.md` | `capabilities/resume-representative/skills/resume-representative/SKILL.md` |
-| `capabilities/professional-portfolio/adapters/replit/SKILL.md` | `capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md` |
+| `capabilities/resume-representative/adapters/replit/resume-representative/SKILL.md` | `capabilities/resume-representative/skills/resume-representative/SKILL.md` |
+| `capabilities/professional-portfolio/adapters/replit/professional-portfolio/SKILL.md` | `capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md` |
 
 They live under the capability's `adapters/` source boundary. The repository's
 `.agents/skills/` directory remains contributor tooling; this change does not

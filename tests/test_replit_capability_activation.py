@@ -21,10 +21,11 @@ class ReplitActivationContractTests(unittest.TestCase):
     def test_each_activation_resolves_to_its_canonical_procedure(self):
         for name in CAPABILITIES:
             with self.subTest(capability=name):
-                entry = ROOT / "capabilities" / name / "adapters" / "replit" / "SKILL.md"
+                entry = ROOT / "capabilities" / name / "adapters" / "replit" / name / "SKILL.md"
                 config, body = metadata(entry)
                 target = f"capabilities/{name}/skills/{name}/SKILL.md"
                 self.assertEqual(config["name"], name)
+                self.assertEqual(config["name"], entry.parent.name)
                 self.assertTrue(config["description"].strip())
                 self.assertEqual(config["metadata"]["canonical_path"], target)
                 self.assertIn(f"`{target}`", body)
@@ -36,7 +37,7 @@ class ReplitActivationContractTests(unittest.TestCase):
     def test_candidates_disclose_unverified_host_status(self):
         for name in CAPABILITIES:
             with self.subTest(capability=name):
-                entry = ROOT / "capabilities" / name / "adapters" / "replit" / "SKILL.md"
+                entry = ROOT / "capabilities" / name / "adapters" / "replit" / name / "SKILL.md"
                 config, _ = metadata(entry)
                 self.assertEqual(
                     config["metadata"]["status"], "unverified-host-activation-candidate"
