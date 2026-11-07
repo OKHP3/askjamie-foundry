@@ -10,7 +10,7 @@ class AJ01InstructionCandidateTests(unittest.TestCase):
     def test_preserved_instruction_candidate(self):
         root = Path(__file__).resolve().parents[1]
         checker = (
-            root / "capabilities" / "askjamie-aj01-resume-representative"
+            root / "capabilities" / "resume-representative"
             / "docs" / "thread-closeout-instruction-prompt-2025-11-16" / "validate.py"
         )
         result = subprocess.run(

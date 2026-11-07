@@ -9,7 +9,8 @@ The product contract is `docs/skill-first-foundry.md`.
 
 - Use `skills/<name>/SKILL.md` for capability products and `adapters/` for host
   packages. `.agents/skills/` remains contributor tooling.
-- Prefer capability subtrees at `capabilities/<existing-capability-slug>/`.
+- Prefer short capability subtrees at `capabilities/<capability-slug>/`.
+  Organization-specific public routing pages contain navigation only.
   Registry `repo` identities remain lineage, with explicit migration records.
 - Every registry entry requires migration destination, status, storage, and
   source commit fields. Package kind, portability, and adapter status must agree

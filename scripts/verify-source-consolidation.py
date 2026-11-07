@@ -28,6 +28,17 @@ def checked_path(value):
     return path
 
 
+def canonical_destination(destination):
+    parts = checked_path(destination).parts
+    if parts[0] == 'capabilities' and len(parts) >= 2:
+        legacy_slugs = {
+            'askjamie-aj01-resume-representative': 'resume-representative',
+            'askjamie-aj02-professional-portfolio': 'professional-portfolio',
+        }
+        return (parts[0], legacy_slugs.get(parts[1], parts[1]), *parts[2:])
+    return parts
+
+
 def tree_hash(rows):
     node = {}
     for row in rows:
@@ -109,8 +120,7 @@ def verify(ledger_path=DEFAULT_LEDGER, archive_path=None):
                 else:
                     if row['disposition'] != 'migrated-and-verified':
                         raise ValueError('Public custody disposition mismatch')
-                    checked_path(destination)
-                    path = ROOT / destination
+                    path = ROOT.joinpath(*canonical_destination(destination))
                     if path.is_symlink() or not path.is_file():
                         raise ValueError('Missing/linked public payload')
                     verify_bytes(path.read_bytes(), row)

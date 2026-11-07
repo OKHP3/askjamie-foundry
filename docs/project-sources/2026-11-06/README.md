@@ -66,13 +66,13 @@ Eight reviewed extracts are routed into the existing capability homes or the sha
 
 | Extract | Route |
 | --- | --- |
-| [Candidate integrity under a recruiter challenge](../../../capabilities/askjamie-aj01-resume-representative/docs/project-source-intake-2026-11-06/candidate-integrity-challenge.md) | AJ01 |
-| [Recruiter-summary provenance defect](../../../capabilities/askjamie-aj01-resume-representative/docs/project-source-intake-2026-11-06/recruiter-summary-provenance.md) | AJ01 |
-| [AJ02 review-language consistency](../../../capabilities/askjamie-aj02-professional-portfolio/docs/project-source-intake-2026-11-06/resolve-aj02-review-comments.md) | AJ02 |
+| [Candidate integrity under a recruiter challenge](../../../capabilities/resume-representative/docs/project-source-intake-2026-11-06/candidate-integrity-challenge.md) | AJ01 |
+| [Recruiter-summary provenance defect](../../../capabilities/resume-representative/docs/project-source-intake-2026-11-06/recruiter-summary-provenance.md) | AJ01 |
+| [AJ02 review-language consistency](../../../capabilities/professional-portfolio/docs/project-source-intake-2026-11-06/resolve-aj02-review-comments.md) | AJ02 |
 | [Preserve shared brand navigation when extending the asset index](thread-extracts/restore-brand-links-guidance.md) | shared |
-| [Voice Reference Renewal and Evidence Safeguards](../../../capabilities/askjamie-aj01-resume-representative/docs/project-source-intake-2026-11-06/evidence-grounded-voice-references-renewable-glossary-safeguards.md) | AJ01 |
-| [Candidate Dossier Regeneration and Source Policy](../../../capabilities/askjamie-aj01-resume-representative/docs/project-source-intake-2026-11-06/evidence-governed-candidate-dossier-regeneration-private-source-policy.md) | AJ01 |
-| [Professional Value Research Renewal](../../../capabilities/askjamie-aj01-resume-representative/docs/project-source-intake-2026-11-06/professional-value-research-renewal-topic-fidelity-controls.md) | AJ01 |
+| [Voice Reference Renewal and Evidence Safeguards](../../../capabilities/resume-representative/docs/project-source-intake-2026-11-06/evidence-grounded-voice-references-renewable-glossary-safeguards.md) | AJ01 |
+| [Candidate Dossier Regeneration and Source Policy](../../../capabilities/resume-representative/docs/project-source-intake-2026-11-06/evidence-governed-candidate-dossier-regeneration-private-source-policy.md) | AJ01 |
+| [Professional Value Research Renewal](../../../capabilities/resume-representative/docs/project-source-intake-2026-11-06/professional-value-research-renewal-topic-fidelity-controls.md) | AJ01 |
 | [Shared AskJamie Icon Direction and Lineage](thread-extracts/shared-askjamie-icon-direction-source-lineage-boundaries.md) | shared |
 
 The previously clipped glossary answer, both historical dossier answers and on-topic professional-value paper were recovered as complete rendered answer text in the private source archive. These captures preserve source material while leaving authorship, factual acceptance and product validation with their receiving workstreams. The image inventory covers the observed accessible source views; full hidden-branch/native-export completeness is not claimed.

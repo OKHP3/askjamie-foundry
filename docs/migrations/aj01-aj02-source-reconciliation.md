@@ -25,12 +25,12 @@ pinned snapshots.
 
 | Child and path | Disposition |
 | --- | --- |
-| AJ01 [`.replit`](https://github.com/OKHP3/askjamie-aj01-resume-representative/blob/b8e2ea732a6b039198acfb8f00118b26ad65cba3/.replit) | Adds the Python 3.13 module. The same original bytes are preserved separately in [AJ01 origin/replit](../../capabilities/askjamie-aj01-resume-representative/origin/replit/). They are not applied to the parent runtime. |
+| AJ01 [`.replit`](https://github.com/OKHP3/askjamie-aj01-resume-representative/blob/b8e2ea732a6b039198acfb8f00118b26ad65cba3/.replit) | Adds the Python 3.13 module. The same original bytes are preserved separately in [AJ01 origin/replit](../../capabilities/resume-representative/origin/replit/). They are not applied to the parent runtime. |
 | AJ01 [`README.md`](https://github.com/OKHP3/askjamie-aj01-resume-representative/blob/b8e2ea732a6b039198acfb8f00118b26ad65cba3/README.md) | Adds the FoundRy migration and development-routing notice. |
 | AJ01 [`gpt_manifest.yaml`](https://github.com/OKHP3/askjamie-aj01-resume-representative/blob/b8e2ea732a6b039198acfb8f00118b26ad65cba3/gpt_manifest.yaml) | Adds links to the FoundRy capability and issue 58. |
 | AJ01 [`replit.md`](https://github.com/OKHP3/askjamie-aj01-resume-representative/blob/b8e2ea732a6b039198acfb8f00118b26ad65cba3/replit.md) | Updates source-of-truth wording and links to the same migration. |
 | AJ01 [audit closeout](https://github.com/OKHP3/askjamie-aj01-resume-representative/blob/b8e2ea732a6b039198acfb8f00118b26ad65cba3/docs/closeouts/019f95e3-c3e6-7df3-8dff-203c0acbbeb2/2026-10-26-audit-project-docs.md) | Later historical audit record retained at its source. |
-| AJ02 [`.replit`](https://github.com/OKHP3/askjamie-aj02-professional-portfolio/blob/9344ca200ee6b34809cc22af3f345cdce4b0aa3b/.replit) | Adds the Python 3.13 module. The same original bytes are preserved separately in [AJ02 origin/replit](../../capabilities/askjamie-aj02-professional-portfolio/origin/replit/). They are not applied to the parent runtime. |
+| AJ02 [`.replit`](https://github.com/OKHP3/askjamie-aj02-professional-portfolio/blob/9344ca200ee6b34809cc22af3f345cdce4b0aa3b/.replit) | Adds the Python 3.13 module. The same original bytes are preserved separately in [AJ02 origin/replit](../../capabilities/professional-portfolio/origin/replit/). They are not applied to the parent runtime. |
 | AJ02 [`README.md`](https://github.com/OKHP3/askjamie-aj02-professional-portfolio/blob/9344ca200ee6b34809cc22af3f345cdce4b0aa3b/README.md) | Adds the FoundRy migration and development-routing notice. |
 | AJ02 [audit closeout](https://github.com/OKHP3/askjamie-aj02-professional-portfolio/blob/9344ca200ee6b34809cc22af3f345cdce4b0aa3b/docs/thread-closeouts/019f95e3-dc5c-7681-ad7b-34e8f64bc3c2-audit.md) | Later historical audit record retained at its source. |
 

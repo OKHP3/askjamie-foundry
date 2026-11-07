@@ -18,8 +18,8 @@ The personal profile, source excerpts, original failed glossary, and full thread
 Python 3.11 or later is the intended syntax baseline. This run tested the scripts locally on Python 3.13.5; repository CI determines any additional verified runtime coverage.
 
 ```sh
-python -m unittest discover -s capabilities/askjamie-aj01-resume-representative/docs/voice-renewal-692fe221 -p 'test_validate_entries.py' -v
-python capabilities/askjamie-aj01-resume-representative/docs/voice-renewal-692fe221/validate_entries.py /authorized/private/entries.jsonl /authorized/private/sources.json
+python -m unittest discover -s capabilities/resume-representative/docs/voice-renewal-692fe221 -p 'test_validate_entries.py' -v
+python capabilities/resume-representative/docs/voice-renewal-692fe221/validate_entries.py /authorized/private/entries.jsonl /authorized/private/sources.json
 ```
 
 The first command uses only synthetic fixtures. The second example's paths are placeholders, not established storage locations. `sources.json` is an array of source objects with string `source_id` and `text` fields. The validator reads but never writes those files. Optional `--public` requires each record to declare `privacy: public` and `public_use_approved: true`; those declarations still need an actual permission review.

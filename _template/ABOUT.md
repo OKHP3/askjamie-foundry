@@ -1,7 +1,7 @@
 # Capability scaffold
 
 Copy this layout for a private capability package. Publicly graduated capabilities
-can later reside at `capabilities/<existing-capability-slug>/` in this FoundRy.
+can later reside at `capabilities/<capability-slug>/` in this FoundRy.
 Private and permanently private source must stay outside the public checkout.
 
 Preserve the five governance files and existing `docs/`, `origin/`, `skill/`,

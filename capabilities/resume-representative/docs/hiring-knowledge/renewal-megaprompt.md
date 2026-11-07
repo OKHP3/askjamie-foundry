@@ -30,7 +30,7 @@ Resolve these parameters from the user's current request. Do not ask questions a
 - AUTHOR: AskJamie™ | AI-assisted research synthesis prepared for Jamie. For another authorized user or brand, replace attribution transparently rather than implying endorsement.
 - BRAND_NOTICE: © 2025 AskJamie™ and OverKill Hill P³™. All rights reserved.
 - WEBSITE: https://askjamie.bot. CONTACT: contact@askjamie.bot.
-- DESTINATION: use the supplied, verified project home. For this project, general AJ01 hiring resources route under capabilities/askjamie-aj01-resume-representative in OKHP3/askjamie-foundry. Inspect current conventions before choosing a subpath. A route is not permission to publish private data or merge a branch.
+- DESTINATION: use the supplied, verified project home. For this project, general AJ01 hiring resources route under capabilities/resume-representative in OKHP3/askjamie-foundry. Inspect current conventions before choosing a subpath. A route is not permission to publish private data or merge a branch.
 
 ### 3. Intake and continuity
 

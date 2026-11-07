@@ -69,5 +69,5 @@ from the child Replit Git histories.
 - [Closeout and continuation](aj01-aj02-2026-10-19-closeout/README.md)
 - [Historical validation and coverage receipt](aj01-aj02-2026-10-19-closeout/evidence.json)
 - [Historical obligation ledger](aj01-aj02-2026-10-19-closeout/ledger.json)
-- [AJ01 conversion dossier](../../capabilities/askjamie-aj01-resume-representative/docs/conversion.md)
-- [AJ02 conversion dossier](../../capabilities/askjamie-aj02-professional-portfolio/docs/conversion.md)
+- [AJ01 conversion dossier](../../capabilities/resume-representative/docs/conversion.md)
+- [AJ02 conversion dossier](../../capabilities/professional-portfolio/docs/conversion.md)

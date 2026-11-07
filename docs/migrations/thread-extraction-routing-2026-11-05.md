@@ -29,8 +29,8 @@ AJ01/AJ02-specific instructions, build work, packaging, marketing and commercial
 
 | Content | Destination |
 | --- | --- |
-| AJ01 applicant representation, career evidence, role-specific resumes/letters, interviews or career reference | [AJ01 capability](../../capabilities/askjamie-aj01-resume-representative/docs/thread-extraction-intake-2026-11-05.md) |
-| AJ02 supplier/business representation, offers, services, case studies, buyer questions or engagement proposals | [AJ02 capability](../../capabilities/askjamie-aj02-professional-portfolio/docs/thread-extraction-intake-2026-11-05.md) |
+| AJ01 applicant representation, career evidence, role-specific resumes/letters, interviews or career reference | [AJ01 capability](../../capabilities/resume-representative/docs/thread-extraction-intake-2026-11-05.md) |
+| AJ02 supplier/business representation, offers, services, case studies, buyer questions or engagement proposals | [AJ02 capability](../../capabilities/professional-portfolio/docs/thread-extraction-intake-2026-11-05.md) |
 | Other/shared AskJamie methods, packaging, migration, commercial models or ecosystem lineage | Existing Foundry documentation and shared owner |
 | Mixed material | Split meaningful behavior/requirements; retain one common method and link from each capability. |
 | Private/protected evidence | Same capability classification in private custody outside public Git. Publish only a reviewed reusable derivative. |

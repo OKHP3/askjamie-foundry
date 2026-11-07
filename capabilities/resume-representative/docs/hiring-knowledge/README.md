@@ -4,7 +4,7 @@ Record key: aj01-hiring-knowledge-issue-89. Date: 2026-11-05.
 Coordination: https://github.com/OKHP3/askjamie-foundry/issues/89
 Review: https://github.com/OKHP3/askjamie-foundry/pull/104
 Branch: chatgpt/aj01-hiring-knowledge-closeout
-Canonical location: capabilities/askjamie-aj01-resume-representative/docs/hiring-knowledge/
+Canonical location: capabilities/resume-representative/docs/hiring-knowledge/
 
 ## Result and release boundary
 
