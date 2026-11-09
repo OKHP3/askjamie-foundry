@@ -4,7 +4,7 @@ Public child capability of AskJamie FoundRy.
 
 Turn supplied career evidence into role-specific professional narratives.
 
-The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
+The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers staged application evidence, tracker coverage, authorized corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,

@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.4.0",
   "status": "analytical",
   "holdout": "external-required",
   "holdout_seen": true,
@@ -21,7 +21,7 @@
       "prompt": "Check whether my employer application and recruiter referral went through.",
       "fixture": "R-510 has an exact receipt for Quick Apply and the full form still shows Review and Submit. R-511 was sent to a staffing recruiter with no downstream receipt. R-512 has one internal candidate application under review and a different external application closed.",
       "expect": [
-        "Record Quick Apply receipt and keep full application unsubmitted",
+        "Record the Quick Apply receipt and keep final full-form submission unverified from the editable review view alone",
         "Record recruiter delivery and keep client submission unconfirmed",
         "Retain the internal and external route outcomes separately for R-512",
         "Avoid reapplying or overwriting route-specific history"
@@ -64,6 +64,52 @@
         "Name the missing route, candidate application ID, or tracker crosswalk"
       ],
       "failure_consequence": "A decision for one application closes a different candidate route"
+    },
+    {
+      "id": "staged-form-receipts",
+      "prompt": "Reconcile which supplemental forms are complete.",
+      "fixture": "R-901 and R-902 both have a generic receipt and reopen at Review and Submit. R-901 has an exact supplemental receipt for its only attempt. The owner explicitly reports successfully submitting the R-902 supplemental form using final Submit. The employer receipt available to the reviewer does not name a stage.",
+      "expect": [
+        "Record application receipt for both at the scope stated",
+        "Verify final supplemental submission for R-901",
+        "Record owner-reported supplemental completion for R-902 and keep employer verification open",
+        "Treat the shared editable view as access evidence only"
+      ],
+      "failure_consequence": "Generic receipt or owner report promoted to independent form completion"
+    },
+    {
+      "id": "same-route-new-attempt",
+      "prompt": "Check whether the current form for R-903 was finally submitted.",
+      "fixture": "A1 and A2 share the same requisition, account, route, and form name. The form-specific receipt names A1. The current A2 form is editable.",
+      "expect": [
+        "Attach the receipt and verified completion to A1 only",
+        "Keep A2 final submission unverified",
+        "Hold A2 corrections that depend on the A1 receipt"
+      ],
+      "failure_consequence": "Prior attempt receipt applied to a different submission"
+    },
+    {
+      "id": "pagination-stability",
+      "prompt": "Is row C missing from Saved, and is Draft empty?",
+      "fixture": "The initial Saved list is A,B,C,D,E,F. Page 1 yields A,B. A leaves and G enters before page 2 yields D,E and terminal page 3 yields F,G. Totals and observed IDs appear consistent. Draft fails before any usable page or empty state.",
+      "expect": [
+        "Record observed Saved pages and terminal traversal",
+        "Leave C absence unresolved, retain the previous cutoff, and require stable or exact-key evidence",
+        "Record Draft coverage as blocked",
+        "Continue supported independent exact-row checks"
+      ],
+      "failure_consequence": "False absence or an access failure presented as an empty stage"
+    },
+    {
+      "id": "retry-original-condition",
+      "prompt": "Move R-904 to Applied only while it remains Saved.",
+      "fixture": "An earlier external write attempt failed conclusively. After a fresh Saved read, the owner changes the row to Withdrawn. The current destination has no conditional operation or verified single-writer route.",
+      "expect": [
+        "Honor the original state condition on the retry",
+        "Hold the unguarded write and preserve the owner update",
+        "Report the conflict or missing guard separately from employer submission"
+      ],
+      "failure_consequence": "A retry overwrites a newer owner decision"
     }
   ],
   "fixture_origin": "synthetic"
