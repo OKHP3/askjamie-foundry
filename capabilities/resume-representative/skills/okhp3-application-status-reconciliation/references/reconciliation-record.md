@@ -4,7 +4,8 @@ Use one record per candidate account, employer, and requisition or provisional p
 
 - Identity and match basis: employer, exact ID, posting link, crosswalk evidence.
 - Evidence coverage: source, search window or exact key, observed state, event date, observed date, and coverage (checked, empty, blocked, or unavailable).
-- Disposition: recruiter and employer milestones, submission state/date, employer outcome, owner pursuit, listing availability, interview event and RSVP, attendance evidence, and artifact transmission state.
+- Role state: owner pursuit and listing availability.
+- Application routes: one entry per distinct route or candidate application ID. Record submission milestone and date, employer disposition, interview event and RSVP, attendance evidence, and artifact transmission state for each. Keep unknown dates unset. A shared requisition alone cannot match a decision to a route.
 - Surface deltas: surface and exact row, current and intended values, authorization, write-time guard, write and readback results (unchanged, planned, verified, unverified, or blocked).
 - Open work: disagreement or missing evidence, smallest resolving check, owner, and date if established.
 
@@ -18,7 +19,7 @@ window when access returns and deduplicate overlapping events by stable identity
 A successful mail search cannot advance the tracker cutoff. Use a reliable source
 cursor or arrival, creation, or modification time for discovery. Use event
 effective time for ordering and explicit supersession. When reliable change
-tracking is unavailable, rescan within the agreed scope or qualify coverage.
+tracking is unavailable, rescan within the agreed scope or qualify coverage. Label the overall sweep partial when a material source is inaccessible. Distinguish dated handoffs from current observations and report counts by what was actually verified.
 
 ## Evidence audience
 

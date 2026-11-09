@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09: Application reconciliation source boundaries
+
+- Keep different openings and true same-application status conflicts distinct.
+- Attribute candidate-reported observations and retain source timezones; add synthetic regressions and an analytical review with no live benchmark claim.
+
 ## 2026-11-09: Résumé evidence reconciliation candidate
 
 - Add a read-only Resume Representative companion for reviewing a targeted
