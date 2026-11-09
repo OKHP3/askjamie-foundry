@@ -1,0 +1,38 @@
+{
+  "skill_name": "referral-follow-up",
+  "skill_version": "0.1.0",
+  "decision": "approve-with-limits",
+  "evidence_status": "analytical",
+  "review_date": "2026-11-09",
+  "decision_question": "Is this candidate suitable for public source distribution as a bounded referral follow-up companion?",
+  "artifact_sha256": {
+    "SKILL.md": "2994bc93ed87a055eb5cb416245e8883b0c44eb0faec0dac6bf223b1a4b4c9e4",
+    "evals/evals.json": "55a13bb5e1f1bb705c02ff20facfe5448b093a6fab34fe7934320d3a7b3dd095"
+  },
+  "criteria": [
+    "Keep contact, requisition, request, sent message, and completed referral distinct.",
+    "Respect scoped user authority and protect private data and untrusted input.",
+    "Stop on uncertain send or unsafe concurrent writes.",
+    "Provide useful portable instructions and synthetic cases without claiming unrun performance."
+  ],
+  "claim_ledger": [
+    {"id":"C1","claim":"Outreach is distinct from application-status reconciliation.","type":"design choice","evidence":["Existing application status reconciliation excludes sending messages.","SKILL.md Scope and Procedure"],"status":"supported","consequence":"Overlapping contracts could produce contradictory writes.","next_test":"Recheck overlap when adjacent packages change."},
+    {"id":"C2","claim":"The contract separates approval, delivery, and referral outcomes.","type":"design choice","evidence":["SKILL.md Procedure 2, 4, 5","evals/evals.json draft-then-approval, changed-attachment, event-separation"],"status":"supported","consequence":"A user could receive a false completion report or unauthorized disclosure.","next_test":"Execute the cases in an isolated host with a blinded grader."},
+    {"id":"C3","claim":"Concurrent updates and uncertain sends are bounded.","type":"design choice","evidence":["SKILL.md Procedure 5 and 6","evals/evals.json timeout-and-race"],"status":"supported","consequence":"A duplicate message or lost user edits could result.","next_test":"Run an instrumented host simulation with timeout and concurrent edits."},
+    {"id":"C4","claim":"Observed task benefit or measured uplift is established.","type":"hypothesis","evidence":[],"status":"blocked","consequence":"A release claim could overstate reliability.","next_test":"Freeze a runner and perform matched blinded trials on an unseen external holdout."}
+  ],
+  "reviewers": [
+    {"role":"evidence","execution":"independent agent context","status":"analytical","finding":"approve-with-limits; evidence anchors and synthetic cases present"},
+    {"role":"outcome","execution":"independent agent context","status":"analytical","finding":"approve-with-limits after clarifying draft-to-send approval and the combined message-and-attachment boundary"},
+    {"role":"safety-portability","execution":"independent agent context","status":"analytical","finding":"approve-with-limits; no unresolved critical defect identified"},
+    {"role":"disruptor","execution":"separate role pass","status":"analytical","finding":"Tested older identical message after a timeout, changed approved content with a concurrent edit, and a promise mistaken for a formal referral. No surviving contradiction was found in the instructions; no live executor ran."},
+    {"role":"negotiator","execution":"integration owner","status":"analytical","finding":"The scoped source candidate may be distributed with evaluation and host-readiness limits. Previous review findings were fixed and affected files re-reviewed."}
+  ],
+  "independence_limits": "Separate reviewer contexts shared the same model family and inherited source history. The disruptor role was a separate pass, not an independent model family. Private source details were not included in this package.",
+  "holdout": "external-required",
+  "holdout_seen": true,
+  "live_matched_benchmark": "not-run",
+  "native_host_activation": "not-run",
+  "owner": "integration owner",
+  "expiry_trigger": "A material skill, host, authorization, or evaluation change requires a fresh review."
+}

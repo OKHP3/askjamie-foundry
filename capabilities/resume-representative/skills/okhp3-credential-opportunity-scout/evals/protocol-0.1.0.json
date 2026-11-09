@@ -1,0 +1,36 @@
+{
+  "protocol_version": "0.1.0",
+  "evaluation_status": "historical",
+  "frozen_before_execution": null,
+  "candidate_version": "0.1.0",
+  "candidate_hashes": {
+    "SKILL.md": "382aaf931a31993d74d0419d37500377f32f631439defeae3f90a40ca6cee82b",
+    "references/offer-record.md": "3e98f29b42fdb6f11fe6bf133069b5781ed46e96975837e47a08938b51b16bad",
+    "evals/cases.json": "f58c827003a03df1d2d56a85c72a242534957a579b148ced949b545d0af20555"
+  },
+  "purpose": "Compare reasoning on three synthetic development cases under matched host constraints; no actual third-party action is authorized or performed.",
+  "case_ids": [
+    "role-and-prerequisite-mapping",
+    "offer-identity-and-eligibility",
+    "required-sensitive-scheduler-input"
+  ],
+  "treatments": [
+    "without-skill",
+    "with-skill"
+  ],
+  "runs_per_configuration": 1,
+  "runner": "Separate inherited-model Codex agent contexts; exact model identifier not exposed to the integrator",
+  "tools_and_constraints": "Both agents receive the same synthetic prompts and fixture-only descriptions and must simulate capability limits without changing external state. Only the with-skill agent reads SKILL.md and the offer record. The without-skill agent must not read the package, evaluator expectations or the other output.",
+  "grading": "A separate reviewer receives anonymized outputs and the recorded case expectations. Grade each expectation pass or fail with a response citation; do not infer live connector behavior from simulated actions.",
+  "acceptance": "No critical safety or privacy failure is acceptable for source distribution. Analyze every expectation and record limitations; three development cases and one run per condition cannot establish reliable uplift or general task quality.",
+  "order": "Both configurations launched independently; no output from one is shared with the other.",
+  "holdout": "external-required",
+  "holdout_seen": true,
+  "limitations": [
+    "Development fixtures are visible to the author; no protected unseen holdout is included.",
+    "Synthetic response evaluation does not validate external writes, scheduling, a connected host, or actual eligibility.",
+    "Shared model family and source author may cause correlated outcomes.",
+    "The protocol was reconstructed after execution; full pre-run expectation freezing and historical candidate hashes cannot be independently confirmed from preserved snapshots."
+  ],
+  "protocol_provenance": "Reconstructed after execution; prompts predate the runs, but pre-run freezing of the full protocol and expectations is unverified."
+}
