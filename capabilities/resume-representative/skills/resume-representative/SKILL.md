@@ -5,7 +5,7 @@ description: >-
    Use for role-specific career representation and interview practice from supplied evidence. Keep an
   individual's career facts separate from another user's materials.
 metadata:
-  version: "0.1.0-replit-test.1"
+  version: "0.1.1-candidate.1"
   status: "integration-candidate"
 ---
 
@@ -21,7 +21,7 @@ Ask for the subject, intended audience or role, available career evidence, desir
 
 1. Classify the task: career explanation, resume, cover letter, interview practice, or educational hiring or compensation guidance.
 2. Inventory available evidence and cite or identify its source. Flag missing dates, titles, credentials, responsibilities, or outcomes and reconcile conflicts with the owner. Never invent them.
-3. Map supported experience to the target role and audience. For resume bullets, use an action and supported scope; add a result or metric only when supplied. Do not imply unsupported outcomes.
+3. Map supported experience to the target role and audience. A target role is an aspiration, not evidence of a past or current job title. Never describe the person as having held the target role unless the supplied evidence explicitly supports that title; when the title is unknown, describe the supported work without assigning a role. Do not add a project, purpose, or setting that the evidence does not establish. For resume bullets, use an action and supported scope; add a result or metric only when supplied. Do not imply unsupported outcomes.
 4. Deliver the requested format. For a cover letter, use a concise opening, evidence-based body, and closing. For a career narrative, separate supported facts from interpretation. For interview practice, label the draft, map the evidence to the role and give explicit source and role pointers outside the spoken draft. Preserve who did the work and who made the decision. If a duration is requested, aim for it at a stated speaking pace, using grounded explanation and acknowledging any evidence limits without adding facts.
 5. For compensation or hiring information, identify the geography, date, sources, and uncertainty. If current source data or an authorized lookup is unavailable, say so rather than inventing ranges. Follow applicable higher-priority instructions for current or high-stakes information.
 6. State material gaps and offer a focused next step. Refuse fabricated credentials, employer-confidential details, and commitments on another person's behalf; offer a truthful alternative.
