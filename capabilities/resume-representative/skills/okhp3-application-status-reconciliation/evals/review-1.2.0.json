@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "release",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.2.0",
+    "sha256": "f957cbd735d44d9e889dcfdf7df100aa6fd4a9d6226b4d0ab43c168181304831",
+    "core_sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "f957cbd735d44d9e889dcfdf7df100aa6fd4a9d6226b4d0ab43c168181304831",
+      "evals/cases.json": "10203153d5ce20a1506e3cd0cf0d609ddcb2cc01fe113480d8563655fbb1ce5c",
+      "evals/portfolio-cases.json": "a6081224c411384a8a45994015b514deea3e0c2fee035ce87e6749e6c4a2c37b",
+      "evals/review-1.1.0.json": "b37a043ee71f2bfffb2d5b708d05536514d8fcd1cb8fd2011850de31e530028e",
+      "evals/review.md": "aaca01d517129aae023b39cd2076c5f242e95483d5d47812139a7138cac496b4",
+      "references/reconciliation-record.md": "c611ebc1f6f48810c92b734ecc85dd516fcc4e84012daa1472d3d74741f2fdc1"
+    }
+  },
+  "decision_question": "Can this package be distributed as source in AskJamie Resume Representative?",
+  "acceptance_criteria": [
+    "Portable structure and license",
+    "Synthetic evidence covers high-consequence controls",
+    "No private workflow data in the package",
+    "Destination's protected-main validation passes for the exact PR head"
+  ],
+  "source_basis": [
+    "Anonymized saved-opening and application-portfolio workflow retrospectives",
+    "AskJamie main 12c699ab90492ec5d8a3bcc41781d8c384500aec",
+    "Supplied synthetic development cases"
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Separate evidence, outcome, safety, disruptor and negotiator contexts shared the candidate and model family. No claim of independent live execution."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "finding": "Keep event, observation and review dates separate and preserve the prior package's evidence."
+    },
+    {
+      "role": "outcome",
+      "finding": "Make route-specific dispositions explicit when one requisition has multiple applications."
+    },
+    {
+      "role": "safety-portability",
+      "finding": "Preserve history and separate authority for archival, destructive actions, and externally sourced content."
+    }
+  ],
+  "concordance": "material agreement on workflow boundaries and need for targeted release corrections",
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical",
+    "falsification_hypotheses": [
+      "A late intervening edit can be lost under blind replacement despite clean readback.",
+      "A rejection can match a requisition without uniquely matching a candidate application route."
+    ],
+    "test_results": [
+      {
+        "status": "analytical",
+        "resolution": "Require an application-route crosswalk and guarded or exclusive writes. Cover same-requisition ambiguity and unsettled retries in synthetic cases."
+      }
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Both packages passed the portable structure, relative link, license, fixture-definition and private-locator checks.",
+      "Stable URL fallback and pending in-flight retry branches close the residual source-contract objections."
+    ],
+    "unresolved_items": [
+      "Protected-main required CI must pass for the proposed PR head before integration."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Source-only release. Development fixtures were reviewed and parsed. Live connector, automatic activation, matched benchmark, and unseen holdout were not run.",
+    "Skillz enforces a separate 36-character package policy. The established 39-character AskJamie reconciliation name is within the portable 64-character format and is preserved."
+  ],
+  "follow_up": [
+    {
+      "owner": "integration owner",
+      "condition": "Before any runtime or performance claim, execute same-version live tests in an authorized host and run a protected external holdout."
+    }
+  ]
+}
