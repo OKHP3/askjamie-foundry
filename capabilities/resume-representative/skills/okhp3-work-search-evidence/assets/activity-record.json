@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "activity_id": null,
+  "subject_account_key": null,
+  "source_event_keys": [],
+  "opportunity": {
+    "employer": null,
+    "requisition": null,
+    "listing_key": null,
+    "route": null,
+    "attempt_id": null,
+    "identity_status": "unresolved"
+  },
+  "action": {
+    "type": null,
+    "state": "unresolved",
+    "description": null
+  },
+  "event_time": {
+    "value": null,
+    "precision": "unknown",
+    "timezone": null
+  },
+  "receipt_time": null,
+  "observed_at": null,
+  "result": null,
+  "fact_status": "unresolved",
+  "evidence": [],
+  "duplicate_review": {
+    "status": "pending",
+    "related_activity_ids": []
+  },
+  "reporting_period": {
+    "start": null,
+    "end": null,
+    "timezone": null
+  },
+  "counting": {
+    "status": "pending-review",
+    "jurisdiction": null,
+    "program": null,
+    "rule_source": null,
+    "rule_retrieved_at": null,
+    "applicable_period": null,
+    "claimant_instruction": null,
+    "rationale": null,
+    "reviewer": null,
+    "decision_date": null
+  },
+  "storage": {
+    "destination": null,
+    "audience": null,
+    "row_id": null,
+    "authorized": false,
+    "guard": null,
+    "result": "proposed",
+    "readback": null
+  },
+  "coverage": {
+    "sources_checked": [],
+    "gaps": []
+  },
+  "decision_history": [],
+  "next_action": null
+}

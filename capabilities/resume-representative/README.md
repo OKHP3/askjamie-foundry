@@ -4,6 +4,14 @@ Public child capability of AskJamie FoundRy.
 
 Turn supplied career evidence into role-specific professional narratives.
 
+The [interview evidence map](skills/okhp3-interview-evidence-map/SKILL.md)
+connects a specific role to defensible stories, public-work evidence and honest
+gaps. The [interview questions skill](skills/okhp3-interview-questions/SKILL.md)
+preserves candid concerns while removing unsupported premises. Both are
+draftable source with analytical review. See the
+[extraction and review](../../docs/interview-skills-2026-11-09.md) and
+[exact Skillz mirror manifest](../../docs/interview-skills-sync-2026-11-09.json).
+
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
 The [job application completion skill](skills/okhp3-job-application-completion/SKILL.md)
@@ -14,6 +22,18 @@ canonical package is here; Skillz carries a byte-matched distribution mirror.
 See the [candidate assessment and release limits](docs/application-completion-2026-11-09.md).
 
 The [interview follow-up draft skill](skills/okhp3-interview-follow-up-draft/SKILL.md) defines a portable procedure for candidate thank-yous and next-step emails. It is a source-only integration candidate with host behavior untested.
+
+The [career workflow skill map](docs/career-workflow-skills.md) explains the
+reusable methods, existing package owners and evidence limits.
+
+- [Saved-opportunity triage](skills/okhp3-saved-opportunity-triage/SKILL.md)
+- [Work Search Evidence](skills/okhp3-work-search-evidence/SKILL.md): actual dated
+  activity records, with program counting reviewed separately.
+- [Career Artifact Audit](skills/okhp3-career-artifact-audit/SKILL.md): read-only
+  file and reference verification across local and cloud storage.
+
+The two new packages are source releases with analytical review and synthetic
+cases. Installation, live benchmarks and unseen holdouts remain unverified.
 
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,
