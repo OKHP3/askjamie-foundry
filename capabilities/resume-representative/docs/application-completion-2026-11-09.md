@@ -42,3 +42,10 @@ checks and independent review do not establish live ATS/browser integration,
 automatic activation, broader quality uplift, unseen holdout success or production
 readiness. No live employer application is changed by this release. Host sign-in,
 upload, rendering and safe write capabilities remain runtime requirements.
+
+The paired 0.2.0 synthetic exercise passed all 47 expectations in both the
+with-skills and without-skills configurations across 15 cases. No uplift was
+demonstrated. Relevant responses and blinded grades are retained inside the
+package; live portal completion and successful material-producing workflows
+remain outside this evidence. Manifest/registry validation and all 174 local
+repository tests passed. Required GitHub checks remain a publication gate.
