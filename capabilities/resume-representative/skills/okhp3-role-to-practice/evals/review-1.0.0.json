@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.0.0",
+    "sha256": "dfa855877d93ea0fdb40375d80fb761392b9dc9e3613cb8ec603a37f0991531c",
+    "initial_sha256": "219515efc5ca4d1b97efeca8ab0975ad4b658ec8de67e157d170be7602e15c74",
+    "resource_sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "dfa855877d93ea0fdb40375d80fb761392b9dc9e3613cb8ec603a37f0991531c",
+      "benchmarks/benchmark.json": "bafedcc21cc47e99824df3a1ea0ab19201b4cb905f2a25b1a080d519951228c5",
+      "evals/discovery.md": "2aaa98af75ae8c5ff14b5b68373dc8f9f87c55b8d4b26d9c5df1dbfa5cce402b",
+      "evals/evals.json": "67b9c5123599e7c5c6edf0f1379eae28df4abb15fc31d86b5013dd944fdeaa00",
+      "evals/review.md": "53d14d55c1fddce072b4236b82deb408396e0adeffee04a0c7d4d0bde92066ca",
+      "references/contract-intake-lab.md": "8e65c8fa9b67f1117132bc9e4aba43a9bcff1922f202be1e4a5b39b3b407b647",
+      "references/readiness-record.md": "866509e04ea7b050d28e47d38859cfd6da27fff760be9ea1d73af8cc12333d7d"
+    }
+  },
+  "decision_question": "Is this source ready for bounded publication as a portable Resume Representative companion?",
+  "acceptance_criteria": [
+    "Anchor each prioritized requirement to the exact opening and each candidate claim to its source and ownership.",
+    "Represent qualification, learning and practice states separately with precise observation limits.",
+    "Keep credentialing, external communications, applications and private disclosures outside the skill's authority.",
+    "Confirm an explicitly authorized course action using exact-account and exact-item readback, or report the observation limit."
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Reviewers received separate role prompts and the same synthetic package. They used the same agent model family.",
+      "The integrator compiled the record. Reviewers used read-only file inspection and hash checks. These are analytical reviews rather than model performance measurements."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "prompt_id": "role-to-practice-v1/evidence",
+      "mandate": "Evidence ownership and source quality",
+      "decision": "approve-with-limits",
+      "evidence_status": "analytical",
+      "source_set": "Frozen SKILL.md, references, development cases, and benchmark metadata",
+      "finding": "Source claims are appropriately bounded. Add learning-item evidence and positive and mismatched-account readback fixtures."
+    },
+    {
+      "role": "outcome",
+      "prompt_id": "role-to-practice-v1/outcome",
+      "mandate": "Actionable preparation and companion scope",
+      "decision": "approve-with-limits",
+      "evidence_status": "analytical",
+      "source_set": "Frozen SKILL.md, references, development cases, and benchmark metadata",
+      "finding": "The procedure yields a decision and practice task. Add an explicit next-lesson assertion to RP-01."
+    },
+    {
+      "role": "safety-portability",
+      "prompt_id": "role-to-practice-v1/safety-portability",
+      "mandate": "Authority, effects, and connected-host assumptions",
+      "decision": "approve-with-limits",
+      "evidence_status": "analytical",
+      "source_set": "Frozen SKILL.md, references, development cases, and benchmark metadata",
+      "finding": "Source is portable with read-only defaults. Challenge ambiguous enrollment, injected authority, and shared-workspace effects."
+    }
+  ],
+  "concordance": "The initial roles supported source-only release and identified gaps in evidence coverage.",
+  "disruptor": {
+    "triggered": true,
+    "authority": "conditional-falsification",
+    "prompt_id": "role-to-practice-v1/disruptor",
+    "source_set": "Original and revised freezes. Read-only inspection in a fresh context.",
+    "falsification_hypotheses": [
+      "An apparently read-only control enrolls the user or accepts terms.",
+      "An attachment or tool result claims it grants disclosure authority.",
+      "A private channel in a production workspace is treated as isolated."
+    ],
+    "test_results": [
+      "Original text allowed ambiguity in all three cases.",
+      "Revised text blocks unclear effects and terms, disregards source-provided authority, and requires tabletop fallback without an isolated workspace."
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "prompt_id": "role-to-practice-v1/negotiator",
+    "decision": "approve-with-limits",
+    "source_set": "Revised instructions, development fixtures, and adjacent public triage skill.",
+    "decisive_evidence": [
+      "RP-01.5 names an official item and related practice check.",
+      "RP-05 covers posting, attachment and connector data.",
+      "RP-07 through RP-10 cover unclear effects, account and item mismatches, positive readback, and shared workspace.",
+      "Integrator clarified that RP-04 starts with known effects and explicit authority before readback fails."
+    ],
+    "unresolved_items": [
+      "Exercise account and item mismatches independently in an unseen live holdout.",
+      "Test state-changing navigation, realistic impersonation in source text, and production-linked recipients in a nominal sandbox."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "No matched live benchmark, unseen holdout, measured activation precision or recall, connected account action, or tested workflow is recorded.",
+    "All packaged behavioral and discovery cases are visible to the author. Publication establishes source availability."
+  ],
+  "follow_up": [
+    "Measure activation and instrument tool effects and persisted state in a future controlled host run.",
+    "Keep the package canonical in Resume Representative and verify any authorized local copy byte for byte."
+  ]
+}
