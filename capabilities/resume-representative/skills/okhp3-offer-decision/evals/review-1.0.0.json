@@ -1,0 +1,119 @@
+{
+  "schema": "equilibrium-review-record/v1",
+  "skill_name": "okhp3-offer-decision",
+  "skill_version": "1.0.0",
+  "review_date": "2026-11-09",
+  "decision_question": "Is this candidate ready for bounded public source publication as career decision-support instructions?",
+  "acceptance_criteria": [
+    "Portable instructions and explicit output contract",
+    "Correct conditional arithmetic and evidence boundaries",
+    "No private career evidence or unauthorized external actions",
+    "Synthetic evaluation design and evidence limitations accurately labeled"
+  ],
+  "artifact": {
+    "path": "SKILL.md",
+    "sha256": "ade9f250026e5ebdb0e67c46092c21b910ea3268d68b1999ea7e38f090684f31",
+    "eval_path": "evals/evals.json",
+    "eval_sha256": "fdf5438ebc7ae9548fed7f67a0c24d3e4742990b9c59994bb9708ac0cc14eb05",
+    "reviewed_working_eval_sha256": "06fdf5beeebf3e05ff6e7714a1fcdcf37ea41261318fd515c3fe755a37b7da98",
+    "eval_normalization": "Reviewed Windows CRLF evaluation design normalized to LF for canonical Git bytes; JSON content unchanged."
+  },
+  "evidence_status": "analytical",
+  "audience": "candidate and maintainers",
+  "scope": "source publication only",
+  "independence": {
+    "roles": "Separate collaboration agents with distinct role prompts; same inherited model family, shared repository and source set. Not independent model families or blinded evaluation.",
+    "access": "Read-only role reviews; no candidate private files required."
+  },
+  "ledger": [
+    {
+      "claim_id": "CLM-01",
+      "claim": "The workflow provides stage-appropriate, decision-useful output",
+      "type": "design",
+      "evidence_ids": [
+        "SKILL.md workflow",
+        "evals/evals.json"
+      ],
+      "status": "supported for source design; runtime untested",
+      "consequence": "Candidate receives irrelevant or inadequate guidance",
+      "next_test": "Execute frozen synthetic cases with isolated runner"
+    },
+    {
+      "claim_id": "CLM-02",
+      "claim": "Financial examples avoid material double counting under stated assumptions",
+      "type": "fact and design",
+      "evidence_ids": [
+        "offer-decision arithmetic and cases",
+        "independent static arithmetic review"
+      ],
+      "status": "supported analytically",
+      "consequence": "Misleading compensation comparison",
+      "next_test": "Run matched agent cases and independent grading"
+    },
+    {
+      "claim_id": "CLM-03",
+      "claim": "Private material and untrusted source instructions do not authorize external actions",
+      "type": "design",
+      "evidence_ids": [
+        "SKILL.md inputs and boundaries",
+        "adversarial development cases"
+      ],
+      "status": "supported as instruction; host enforcement untested",
+      "consequence": "Unauthorized disclosure or acceptance",
+      "next_test": "Run adversarial cases in supported host"
+    },
+    {
+      "claim_id": "CLM-04",
+      "claim": "Live benchmark and external unseen holdout establish effectiveness",
+      "type": "hypothesis",
+      "evidence_ids": [],
+      "status": "not-run",
+      "consequence": "Unsupported performance claim",
+      "next_test": "Execute isolated with/without-skill trials and separate unseen holdout"
+    }
+  ],
+  "roles": [
+    {
+      "role": "evidence",
+      "status": "analytical",
+      "decision": "approve-with-limits",
+      "finding": "Arithmetic and evidence boundaries checked; execution and holdout not run."
+    },
+    {
+      "role": "outcome",
+      "status": "analytical",
+      "decision": "approve-with-limits",
+      "finding": "Stages, candidate gates, score formula and decision boundaries are coherent; fairness and weight edge cases remain limited."
+    },
+    {
+      "role": "safety-portability",
+      "status": "analytical",
+      "decision": "approve-with-limits",
+      "finding": "No source-release blocker; privacy and authorization are instructions rather than demonstrated host controls."
+    },
+    {
+      "role": "disruptor",
+      "status": "analytical",
+      "trigger": "concordant first reviews",
+      "finding": "Initial candidates allowed reimbursement or signing bonus to be counted twice and could overemphasize AI for unrelated roles. Revisions explicitly addressed these objections.",
+      "test": "Reimbursement (3000-1000)/3+1200=1866.67; net 75000+2000-3000=74000 first year and 72000 thereafter; non-AI role remains relevant. Analytical walkthrough only."
+    },
+    {
+      "role": "negotiator",
+      "status": "analytical",
+      "identity": "integration owner",
+      "finding": "Separate role reviews were repeated against revised hashes. The revised instructions resolve the discovered ambiguity for bounded source release; no runtime or effectiveness claim follows."
+    }
+  ],
+  "concordance": "Initial reviews materially agreed; disruptor identified material defects; instructions and development designs were revised and initial reviews repeated. Revised reviews agreed with limits and disruptor rechecked the revisions.",
+  "decision": "approve-with-limits",
+  "limits": [
+    "No live with/without-skill benchmark, native host activation, protected unseen holdout, or real hiring outcome validated.",
+    "Synthetic expectations are test designs, not passed agent executions.",
+    "Legal, tax and benefits advice requires current jurisdiction-specific authority and qualified review.",
+    "Same-model reviewers and shared source set provide correlated evidence."
+  ],
+  "owner": "source maintainer",
+  "expiry_trigger": "Change to package, safety boundary, applicable authority, model/host or material regression",
+  "follow_up": "Run isolated matched development tests and an external unseen holdout before making efficacy or uplift claims."
+}
