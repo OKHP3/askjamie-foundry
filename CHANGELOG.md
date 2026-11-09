@@ -1,13 +1,13 @@
 # Changelog
 
-## 2026-11-09: Application completion skill candidate
+## 2026-11-09: LinkedIn DM context reconciliation
 
-- Add the portable job-application-completion candidate, composing existing résumé,
-  saved-opening triage and status-reconciliation workflows without changing them.
-- Include synthetic identity, authority, uncertain-submit, disclosure and concurrent
-  worker cases, plus version-bound equilibrium review and distribution records.
-- Preserve all historical snapshots and private career material. Fixture evaluation
-  is not live ATS integration, automatic discovery or production acceptance.
+- Add an exact mirror of the Skillz `okhp3-linkedin-dm-reconcile` 1.0.1
+  read-only source candidate to Resume Representative.
+- Compose message/request context with existing application-status and career
+  evidence workflows; keep sending, tracker writes and submission separate.
+- Preserve synthetic evaluations, analytical review limits and complete core
+  hash verification. No live connector or unattended-monitoring claim is made.
 
 ## 2026-11-09: Interview preparation skill companions
 
