@@ -1,6 +1,6 @@
-# Version 1.1.0 analytical review
+# Version 1.2.0 analytical review
 
-Decision: approve-with-limits for a reviewable source candidate. Evidence status: analytical; the author performed evidence, outcome, and safety/portability lenses in one context. Independent reviewers, live with/without-skill execution, trigger measurements, and an unseen holdout were not available. Public synthetic cases are development fixtures; holdout is external-required and seen. Version 1.0.0 review below is historical for this revision.
+Decision: approve-with-limits for a reviewable source candidate. Evidence status: analytical; the author performed evidence, outcome, and safety/portability lenses in one context. Independent reviewers, live with/without-skill execution, trigger measurements, and an unseen holdout were not available. Public synthetic cases are development fixtures; holdout is external-required and seen. Version 1.0.0 review below and the separate 1.1.0 review record are historical for this revision.
 
 | Claim | Evidence or test | Status | Consequence if wrong | Next test |
 | --- | --- | --- | --- | --- |
