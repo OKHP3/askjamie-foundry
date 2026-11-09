@@ -24,6 +24,19 @@
   },
   "live_benchmark": "not-run",
   "protected_holdout": "not-run",
-  "independent_review": "pending",
-  "release_decision": "pending required CI and review"
+  "independent_review": {
+    "reviewer": "separate read-only integration reviewer",
+    "reviewed_commit": "99e5849",
+    "decision": "approve-with-limits",
+    "findings": "No blocking defect. Original17 cases unchanged; attempt and portfolio suites unchanged; both1.4.0 historical reviews exact. Links and artifact hashes verified.",
+    "limits": "Analytical source inspection only; no live skill benchmark or protected holdout. Suite version fields record lineage, not executed current-version evaluations."
+  },
+  "release_decision": "pending required CI and review",
+  "local_validation": {
+    "runtime": "Python3.15",
+    "manifest": "passed",
+    "registry": "passed",
+    "public_artifact": "passed",
+    "repository_tests": "180 passed"
+  }
 }
