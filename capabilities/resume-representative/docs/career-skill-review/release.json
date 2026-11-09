@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0",
+  "release_date": "2026-11-09",
+  "evaluation_status": "analytical",
+  "decision": "approve-with-limits",
+  "release_scope": "Two portable source packages; not a host installation or production-readiness claim.",
+  "owner": "OKHP3",
+  "review_expiry": "Re-review when package bytes, material tool contracts or governing rules change; this record does not certify current claimant rules.",
+  "packages": [
+    {
+      "name": "okhp3-work-search-evidence",
+      "version": "1.0.0"
+    },
+    {
+      "name": "okhp3-career-artifact-audit",
+      "version": "1.0.0"
+    }
+  ],
+  "artifact_hashes": {
+    "capabilities/resume-representative/skills/okhp3-work-search-evidence/SKILL.md": "d4b689fdd4582ee1ab1ad6017dc772490bdbaa28f7b7ac53cd0acd72671401f7",
+    "capabilities/resume-representative/skills/okhp3-work-search-evidence/references/record-contract.md": "658101376c8a3a40272f0fd51522e02c8927059e2a8e02bcf9c654bc1af73563",
+    "capabilities/resume-representative/skills/okhp3-work-search-evidence/assets/activity-record.json": "df6aec4a45dd201d4dde84f43a29b0ea4525c00045e6c265f2eac622fe2f2425",
+    "capabilities/resume-representative/skills/okhp3-career-artifact-audit/SKILL.md": "e31f7f3c8e22f1cc60b5c8bb526b0f1bf5b396f78972c781eed20c07031aaa4e",
+    "capabilities/resume-representative/skills/okhp3-career-artifact-audit/references/manifest-contract.md": "dc3f6c2758d7786e6b2d3231d1f03bf5f7f751755b593c045ac6830083871c6d",
+    "capabilities/resume-representative/skills/okhp3-career-artifact-audit/assets/audit-manifest.json": "87fe71973ca4c260f33b46ed65abad728e2c57e6d6c95c689d2fba9312f69bf0",
+    "capabilities/resume-representative/skills/okhp3-work-search-evidence/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+    "capabilities/resume-representative/skills/okhp3-career-artifact-audit/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+    "capabilities/resume-representative/skills/okhp3-work-search-evidence/evals/evals.json": "b3e4796320099cc615ab5c0056f8b57049c2f83a908b4eea1a33e45e4e39fd6d",
+    "capabilities/resume-representative/skills/okhp3-career-artifact-audit/evals/evals.json": "23ffeead8907bb3375f235eddf2d0248a28c982cd83b4e17ba082eef7b7645e2",
+    "capabilities/resume-representative/docs/career-workflow-skills.md": "babd0888616cb8c45399d3d8d45bcc257afc98ceaede1d3dbb91eb21d2218294",
+    "capabilities/resume-representative/skills/okhp3-career-artifact-audit/assets/audit-example.json": "20d6f9c057ae2019f8911eed1c3eacc64744fc217d6097cecc96eafbe2df2f11",
+    "capabilities/resume-representative/skills/okhp3-work-search-evidence/evals/discovery.json": "a4e210cb59533484dea4a76044aa123fdceb9dd65b3604a61c6940cc30010df6",
+    "capabilities/resume-representative/skills/okhp3-career-artifact-audit/evals/discovery.json": "b5df44be51ae0bdfbe60b30169fb9d13cba8f1767f96be8451e5d11d8af2152d"
+  },
+  "sources": {
+    "equilibrium": {
+      "version": "1.0.1",
+      "git_blob": "e34fa95709e1ad792bb563e73784785e1b4d7231"
+    },
+    "foundry": {
+      "version": "3.1.1",
+      "git_blob": "b99e094f7abb06ec74c0e2faabdf423d3fe5dd81"
+    },
+    "repository_base": "3ee8596f5f810347ae936b3dc9297f40c2b8b9c1",
+    "conversation": "Private owner-supplied history abstracted into synthetic cases; no private source artifacts published.",
+    "catalog_refresh": "513ed4a0190345be416562ba6d48c7165fcadc4c",
+    "integration_base": "359229bda177ff6db0a298efdab2bb0a3a11876c"
+  },
+  "criteria": [
+    "No fabricated facts, program rules, evidence, dates or completion claims.",
+    "No submission, outreach, cleanup, recovery, sync changes or access bypass.",
+    "Exact identity, source clocks, audience and coverage preserved.",
+    "Self-contained packages with valid frontmatter, references, fixtures and licenses.",
+    "No critical analytical finding left unresolved; final supported-Python CI must pass."
+  ],
+  "review_protocol": "equilibrium-v1",
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Reviewers use the same model family and frozen artifact set; this is analytical review, not an independent behavioral benchmark."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "approve-with-limits",
+      "review_status": "analytical",
+      "frozen_skill_hashes": {
+        "work_search": "102063033cacb88d080da40e0fe779359bd54448c09f52679b76771dae81e088",
+        "artifact_audit": "e7c9f81282601c65350e6dc2a75342d3f670659b8ac4e4e745c3565894c640e5"
+      },
+      "findings": [
+        {
+          "id": "E-01",
+          "status": "supported",
+          "claim": "Work-search action facts remain separate from counting and compliance.",
+          "evidence": [
+            "work-search Workflow 2-5",
+            "record-contract Program review"
+          ],
+          "next_test": "Future isolated behavioral cases."
+        },
+        {
+          "id": "E-02",
+          "status": "supported",
+          "claim": "Unavailable items, stale search and empty folders are not proof of preservation or deletion.",
+          "evidence": [
+            "artifact-audit Workflow 2-7",
+            "manifest-contract"
+          ],
+          "next_test": "Synthetic provider behavior trial."
+        },
+        {
+          "id": "E-03",
+          "status": "supported",
+          "claim": "Reviewed drafts contain general procedures and synthetic cases rather than private case facts.",
+          "next_test": "Final committed diff privacy review."
+        },
+        {
+          "id": "E-04",
+          "status": "supported-with-limits",
+          "claim": "Evidence supports an analytical source release only.",
+          "next_test": "Final structural CI and byte verification."
+        }
+      ],
+      "limitations": [
+        "Inherited authoring history and shared model/source context.",
+        "Reviewer did not independently recompute supplied hashes.",
+        "No live behavioral test."
+      ]
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "review_status": "analytical",
+      "frozen_skill_hashes": {
+        "work_search": "102063033cacb88d080da40e0fe779359bd54448c09f52679b76771dae81e088",
+        "artifact_audit": "e7c9f81282601c65350e6dc2a75342d3f670659b8ac4e4e745c3565894c640e5"
+      },
+      "findings": [
+        {
+          "id": "OUT-01",
+          "status": "supported",
+          "claim": "Two distinct recurring gaps complement the existing packages."
+        },
+        {
+          "id": "OUT-02",
+          "status": "improvement-needed",
+          "claim": "The empty audit arrays leave item and mapping field conventions implicit.",
+          "consequence": "Different agents can emit incompatible manifest keys.",
+          "next_test": "Add a populated synthetic example and validate normal and stale-index representations."
+        },
+        {
+          "id": "OUT-03",
+          "status": "supported-limitation",
+          "claim": "Design cases do not establish executed agent utility or boundary performance.",
+          "next_test": "Isolated host cases and unseen holdout before outcome claims."
+        }
+      ],
+      "limitations": [
+        "Shared model/source/authoring context.",
+        "No other reviewer results consulted.",
+        "No independent hash or repository readback."
+      ]
+    },
+    {
+      "role": "safety-portability",
+      "decision": "defer-for-evidence",
+      "review_status": "analytical",
+      "frozen_skill_hashes": {
+        "work_search": "102063033cacb88d080da40e0fe779359bd54448c09f52679b76771dae81e088",
+        "artifact_audit": "e7c9f81282601c65350e6dc2a75342d3f670659b8ac4e4e745c3565894c640e5"
+      },
+      "findings": [
+        {
+          "id": "SP-01",
+          "status": "missing-control",
+          "claim": "Report-save exception lacked explicit audience and no-overwrite creation guard.",
+          "consequence": "A named folder or readback cannot prevent disclosure or concurrent overwrite.",
+          "next_test": "Add guard and collision fields plus a synthetic unknown-audience/existing-file case."
+        },
+        {
+          "id": "SP-02",
+          "status": "supported",
+          "claim": "Activity facts remain separate from eligibility and external actions."
+        },
+        {
+          "id": "SP-03",
+          "status": "supported",
+          "claim": "Artifact availability and sync conclusions are bounded."
+        }
+      ],
+      "limitations": [
+        "Inherited authoring context and same model family.",
+        "No independent supplied-hash recomputation.",
+        "No live career operations or model evaluation."
+      ]
+    }
+  ],
+  "concordance": "material-disagreement",
+  "disruptor": {
+    "triggered": false,
+    "reason": "Initial safety review deferred on a material report-save gap; use negotiation rather than ceremonial disruption."
+  },
+  "negotiator": {
+    "triggered": true,
+    "role": "negotiator-release-reviewer",
+    "revision": "r2",
+    "review_status": "analytical",
+    "decision": "approve-with-limits",
+    "resolved_findings": [
+      {
+        "id": "SP-01",
+        "status": "resolved-in-design",
+        "basis": "Exact audience/filename, conditional or exclusive no-overwrite creation, unsaved fallback, retry readback, and regression fixture added."
+      },
+      {
+        "id": "OUT-02",
+        "status": "resolved-for-instructional-source-release",
+        "basis": "Populated synthetic item and mapping example plus structural assertions added."
+      }
+    ],
+    "limits": [
+      "Correlated analytical review, not agent behavior execution.",
+      "Supplied hashes not independently recomputed by reviewer.",
+      "CI, final diff privacy review and published byte readback required."
+    ],
+    "rationale": "Safety evidence identified a material missing control; approval count did not override it.",
+    "follow_up": {
+      "revision": "r3",
+      "decision": "approve-with-limits",
+      "review_status": "analytical",
+      "basis": "Provided R3 delta and previously reviewed R2 design. Full R3 files, repository state and hashes were not independently verified by the follow-up reviewer.",
+      "findings": [
+        {
+          "id": "R3-01",
+          "status": "supported-in-design",
+          "claim": "Existing-artifact audit remains distinct from destination filing and workspace intake."
+        },
+        {
+          "id": "R3-02",
+          "status": "supported-in-design",
+          "claim": "Stable destination identity and access-scope guard strengthen report-save safety; unknown or null controls leave the report unsaved."
+        },
+        {
+          "id": "R3-03",
+          "status": "supported-with-limits",
+          "claim": "Author-visible discovery designs do not establish activation performance."
+        }
+      ],
+      "unresolved_material_design_findings": [],
+      "conditions": [
+        "Final frozen hashes and privacy review.",
+        "Required final-head repository CI.",
+        "Published byte readback.",
+        "No live benchmark, unseen holdout or installed-host claim."
+      ]
+    }
+  },
+  "limitations": [
+    "Live matched with/without-skill benchmark not run.",
+    "No unseen release holdout; all development cases are author-visible.",
+    "Automatic activation and local installation unverified.",
+    "Local shell execution blocked; required repository CI must validate final PR.",
+    "TWC page access blocked; no substantive rule incorporated."
+  ],
+  "structural_validation": {
+    "status": "required-at-integration",
+    "analytical_preflight": {
+      "status": "passed",
+      "errors": [],
+      "files": 18,
+      "packages": 2,
+      "evaluation_cases": 13,
+      "critical_expectations": 53,
+      "discovery_queries": 40,
+      "kind": "analytical in-memory structure check; not agent execution"
+    },
+    "privacy_preflight": "passed",
+    "required_check": "Validate with supported Python runtime",
+    "execution_evidence": "Consult the GitHub check run for the final pull-request head. This pre-integration review does not claim that CI has already run."
+  },
+  "follow_up": [
+    "Run matched host trials and an unseen holdout before making performance or production-readiness claims."
+  ],
+  "revision_history": [
+    {
+      "revision": "r1",
+      "status": "historical-analytical",
+      "artifact_hashes": {
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/SKILL.md": "102063033cacb88d080da40e0fe779359bd54448c09f52679b76771dae81e088",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/references/record-contract.md": "658101376c8a3a40272f0fd51522e02c8927059e2a8e02bcf9c654bc1af73563",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/assets/activity-record.json": "df6aec4a45dd201d4dde84f43a29b0ea4525c00045e6c265f2eac622fe2f2425",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/SKILL.md": "e7c9f81282601c65350e6dc2a75342d3f670659b8ac4e4e745c3565894c640e5",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/references/manifest-contract.md": "3e9cb645d59f10c7962437924ef8291c660ac4733e456f8665f6d236ce66635c",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/assets/audit-manifest.json": "8df64e560b9d290a73ef510c04111d956884da53564fc189b8198f8725e06ab8",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/evals/evals.json": "b3e4796320099cc615ab5c0056f8b57049c2f83a908b4eea1a33e45e4e39fd6d",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/evals/evals.json": "ff3a854dd980455ad68865dfd13c89281c5da830c59631d0573e8df41c86dab0",
+        "capabilities/resume-representative/docs/career-workflow-skills.md": "acb1f0acf2ee55533ee9bf9df39c5f0fc78b00add246cfb0213fbbc3320514f3"
+      },
+      "decision": "defer-for-evidence",
+      "reason": "SP-01 requires report-save controls; OUT-02 requests a concrete manifest example."
+    },
+    {
+      "revision": "r2",
+      "changes": [
+        "Require exact report filename, verified audience and conditional/exclusive no-overwrite creation.",
+        "Do not retry uncertain report saves without readback.",
+        "Add collision/audience/guard fields and report-save regression.",
+        "Add populated synthetic manifest and structural example checks."
+      ],
+      "affected_findings": [
+        "SP-01",
+        "OUT-02"
+      ],
+      "evaluation_status": "analytical",
+      "decision": "approve-with-limits",
+      "artifact_hashes": {
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/SKILL.md": "102063033cacb88d080da40e0fe779359bd54448c09f52679b76771dae81e088",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/references/record-contract.md": "658101376c8a3a40272f0fd51522e02c8927059e2a8e02bcf9c654bc1af73563",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/assets/activity-record.json": "df6aec4a45dd201d4dde84f43a29b0ea4525c00045e6c265f2eac622fe2f2425",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/SKILL.md": "c454952e9c1d7d99686a1def3b2e70d0fe3795407b47579b963a5493b2de2f4b",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/references/manifest-contract.md": "c8266a582e13d599178475659cd535d9ae342c07186eb1a0104482799108f8a8",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/assets/audit-manifest.json": "38b4f59436364b2a9f1091c979271b55a1048bcc85b712bd1eb8a76b8b323a77",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/evals/evals.json": "b3e4796320099cc615ab5c0056f8b57049c2f83a908b4eea1a33e45e4e39fd6d",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/evals/evals.json": "5e1cfce871c2e42dc1bf292703508f894adcc6a20e37e9c6ab18e9dfa1b23e73",
+        "capabilities/resume-representative/docs/career-workflow-skills.md": "acb1f0acf2ee55533ee9bf9df39c5f0fc78b00add246cfb0213fbbc3320514f3",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/assets/audit-example.json": "be1f6cab9ed1db6c0499ba739981c73086180e60db0c2afa9627a01e6e26f2b2"
+      }
+    },
+    {
+      "revision": "r3",
+      "changes": [
+        "Clarify that existing file-routing owns destination selection and new-file filing; workspace intake owns setup maps.",
+        "Bind any report save to verified destination identity and effective access; add mapping fields and regression expectation.",
+        "Add 20 author-visible description-routing queries per package, without measured activation claims.",
+        "Refresh shared navigation and changelog without replacing concurrent contributions."
+      ],
+      "decision": "approve-with-limits",
+      "evaluation_status": "analytical",
+      "artifact_hashes": {
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/SKILL.md": "d4b689fdd4582ee1ab1ad6017dc772490bdbaa28f7b7ac53cd0acd72671401f7",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/references/record-contract.md": "658101376c8a3a40272f0fd51522e02c8927059e2a8e02bcf9c654bc1af73563",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/assets/activity-record.json": "df6aec4a45dd201d4dde84f43a29b0ea4525c00045e6c265f2eac622fe2f2425",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/SKILL.md": "e31f7f3c8e22f1cc60b5c8bb526b0f1bf5b396f78972c781eed20c07031aaa4e",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/references/manifest-contract.md": "dc3f6c2758d7786e6b2d3231d1f03bf5f7f751755b593c045ac6830083871c6d",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/assets/audit-manifest.json": "87fe71973ca4c260f33b46ed65abad728e2c57e6d6c95c689d2fba9312f69bf0",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/evals/evals.json": "b3e4796320099cc615ab5c0056f8b57049c2f83a908b4eea1a33e45e4e39fd6d",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/evals/evals.json": "23ffeead8907bb3375f235eddf2d0248a28c982cd83b4e17ba082eef7b7645e2",
+        "capabilities/resume-representative/docs/career-workflow-skills.md": "babd0888616cb8c45399d3d8d45bcc257afc98ceaede1d3dbb91eb21d2218294",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/assets/audit-example.json": "20d6f9c057ae2019f8911eed1c3eacc64744fc217d6097cecc96eafbe2df2f11",
+        "capabilities/resume-representative/skills/okhp3-work-search-evidence/evals/discovery.json": "a4e210cb59533484dea4a76044aa123fdceb9dd65b3604a61c6940cc30010df6",
+        "capabilities/resume-representative/skills/okhp3-career-artifact-audit/evals/discovery.json": "b5df44be51ae0bdfbe60b30169fb9d13cba8f1767f96be8451e5d11d8af2152d"
+      }
+    }
+  ],
+  "release_conditions": [
+    "Required repository CI must pass on the final pull-request head.",
+    "Final committed inventory, hashes and privacy boundaries must be verified.",
+    "Read back published package bytes before reporting publication complete."
+  ]
+}
