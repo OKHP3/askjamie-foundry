@@ -14,6 +14,7 @@ with original filenames, bytes and provenance. Registry migration status is
 `imported`. This records source consolidation only. Portable skill conversion,
 configured GPT capture, Replit reconciliation and host acceptance remain open.
 
+- [Concept-first outreach skill candidate](skills/concept-first-outreach/SKILL.md): plan a concept-led approach to a decision maker, with a deliverable set, send order, reply playbook, and cadence. Integration candidate, analytically reviewed 2026-11-09; not host-tested.
 - [Preserved Replit environment delta](origin/replit/README.md)
 - [Preservation scope and licensing](origin/README.md)
 - [Per-file source and SHA-256 index](origin/source-index.json)
@@ -34,3 +35,8 @@ not a product entry point. New product work belongs in
 The [job screening handoff skill](skills/okhp3-job-screening-handoff/SKILL.md)
 turns screening notices into a candidate-owned checklist and preserves the last
 verified checkpoint. Its public evaluation evidence is analytical.
+
+The [role-to-practice skill](skills/okhp3-role-to-practice/SKILL.md) maps a
+specific opening and supplied career evidence to qualification gaps, learning,
+and a synthetic practice exercise. Its [release review](skills/okhp3-role-to-practice/evals/review.md)
+records the evaluation limits.
