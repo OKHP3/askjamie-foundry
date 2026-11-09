@@ -21,11 +21,11 @@ and user authorization are checked at runtime.
 
 ## Professional portrait companions
 
-- Use [Professional Headshot 0.1.0](https://github.com/OKHP3/skillz/tree/175d30c30858ee719b964ff585a2a2966671e96c/askjamie/okhp3-professional-headshot)
+- Use [Professional Headshot 0.1.0](https://github.com/OKHP3/skillz/tree/9e729371db1901842fae839a12e7dd1146711abd/askjamie/okhp3-professional-headshot)
   to create or refine a realistic, recognizable career portrait from supplied
   or explicitly authorized photos. The package defines reference roles, current
   likeness, expression-only revisions, visual review, and verified delivery.
-- Use [Guided Photo Session 0.1.0](https://github.com/OKHP3/skillz/tree/175d30c30858ee719b964ff585a2a2966671e96c/universal/okhp3-guided-photo-session)
+- Use [Guided Photo Session 0.1.0](https://github.com/OKHP3/skillz/tree/9e729371db1901842fae839a12e7dd1146711abd/universal/okhp3-guided-photo-session)
   when new stills are needed. It requires verified capture controls, current
   readiness, user-visible stop and relax cues, bounded posing, and separate
   saved, verified, and delivered counts. Camo guidance is an optional adapter.
