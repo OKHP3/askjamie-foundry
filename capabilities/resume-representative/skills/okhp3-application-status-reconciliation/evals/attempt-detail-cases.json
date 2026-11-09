@@ -1,0 +1,59 @@
+{
+  "version": "1.4.0",
+  "status": "analytical",
+  "holdout": "external-required",
+  "holdout_seen": true,
+  "fixture_origin": "synthetic",
+  "cases": [
+    {
+      "id": "split-routes",
+      "prompt": "Reconcile the rejection and the active application for the same requisition.",
+      "fixture": "Fictional employer Tern Basin has requisition Q-611. The external candidate attempt is inactivated. A newer exact internal candidate receipt and portal row show a distinct attempt is active. The tracker has an editable shared badge showing an old rejection. It cannot store a distinct stage for each attempt, but permits private attempt notes.",
+      "expect": [
+        "Keep external inactivation on the external attempt",
+        "Retain the internal application as submitted and active",
+        "Leave the shared badge unresolved and report the discrepancy without changing the employer account"
+      ]
+    },
+    {
+      "id": "agency-handoff",
+      "prompt": "Reconcile this role using my recruiter correspondence.",
+      "fixture": "Mica Harbor received a résumé from the candidate on May 2. On May 6 the recruiter says they sent it to the end client, but gives no delivery date or employer requisition. A same-title direct listing exists with no crosswalk.",
+      "expect": [
+        "Separate résumé sent to recruiter from recruiter-reported client delivery",
+        "Record May 6 as confirmation date and keep the client-delivery date unknown",
+        "Keep the direct listing and agency route separate without inferring an interview"
+      ]
+    },
+    {
+      "id": "stale-fields",
+      "prompt": "Update the exact application status and remove obsolete actions.",
+      "fixture": "Q-803 was previously listed as closed to new applications. The canonical row says Closed, carries a current closure-date field and a reminder to prepare for yesterday's informational call. A later exact submission receipt supports the same attempt. The accepted invitation does not identify a requisition or confirm attendance. All named status fields may be edited. The destination supports conditional edits.",
+      "expect": [
+        "Set the verified attempt to Submitted and clear the stale current closure field",
+        "Preserve the historical posting-closure observation",
+        "Replace the expired preparation action with a verification action while leaving attendance and requisition association unknown"
+      ]
+    },
+    {
+      "id": "packet-lineage",
+      "prompt": "Reconcile my application status and the résumé recorded as submitted.",
+      "fixture": "Exact attempt Q-904-A has a confirmed submission. The submitted attachment downloaded from the candidate-account record for Q-904-A matches the old file digest. A newer tailored file has a different digest and a similar name. The user authorized a status-record correction only.",
+      "expect": [
+        "Cite the exact downloaded version as submitted evidence in the report",
+        "Keep the newer draft separate",
+        "Apply no résumé replacement or submission"
+      ]
+    },
+    {
+      "id": "duplicate-append",
+      "prompt": "Add a note about this exact receipt to my tracker.",
+      "fixture": "The candidate authorized an exact-attempt receipt note. Another writer can append the same source event. The tracker supports plain append and readback but has no destination deduplication and no verified single-writer window. No matching note is visible in the pre-read.",
+      "expect": [
+        "Keep the exact receipt and attempt in the evidence report",
+        "Hold the append despite the empty pre-read",
+        "Name the missing deduplication or single-writer guard"
+      ]
+    }
+  ]
+}

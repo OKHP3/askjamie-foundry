@@ -1,0 +1,89 @@
+{
+  "status": "design-only",
+  "queries": [
+    [
+      "positive",
+      "Which folder should this tailored résumé go in?"
+    ],
+    [
+      "positive",
+      "Can we reuse the folder we made for this requisition?"
+    ],
+    [
+      "positive",
+      "Register my career filing rules and skip new opening folders."
+    ],
+    [
+      "positive",
+      "Where should I file this LinkedIn profile export?"
+    ],
+    [
+      "positive",
+      "Check the local and cloud folders before saving this application package."
+    ],
+    [
+      "positive",
+      "My OneDrive path moved. Verify the right career destination before writing."
+    ],
+    [
+      "positive",
+      "Is this cloud link the same folder as my local role-specific résumé directory?"
+    ],
+    [
+      "positive",
+      "File this job-search receipt without replacing the submitted packet."
+    ],
+    [
+      "positive",
+      "Why are there two accent spellings of my résumé folder?"
+    ],
+    [
+      "positive",
+      "Save this approved master in the right résumé home."
+    ],
+    [
+      "positive",
+      "Find the private folder for this reference letter."
+    ],
+    [
+      "positive",
+      "Create a folder for this opening only if it is missing."
+    ],
+    [
+      "negative",
+      "Rewrite my résumé for this role."
+    ],
+    [
+      "negative",
+      "Rank my saved openings."
+    ],
+    [
+      "negative",
+      "Draft part two of my LinkedIn post."
+    ],
+    [
+      "negative",
+      "Post this to LinkedIn now."
+    ],
+    [
+      "negative",
+      "Did the employer confirm my submission?"
+    ],
+    [
+      "negative",
+      "Which activities qualify for unemployment reporting?"
+    ],
+    [
+      "negative",
+      "Consolidate and delete all my old application folders."
+    ],
+    [
+      "negative",
+      "Fix OneDrive syncing on all my machines."
+    ],
+    [
+      "mixed",
+      "Verify whether this receipt establishes submission and file its exact copy under the correct opening."
+    ]
+  ]
+}

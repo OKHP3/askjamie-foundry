@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional-source-review",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.0.0",
+    "sha256": "3bdc2bbf789cba2eff582d12c227c4e1b8d7aa14c1167ad55fde2cc8dccb03b5",
+    "core_sha256": {
+      "SKILL.md": "3bdc2bbf789cba2eff582d12c227c4e1b8d7aa14c1167ad55fde2cc8dccb03b5",
+      "references/filing-contract.md": "d25691e0d18f950e863b03c1c1d6cff12803a19ac40947e5538f6a3859de5cc8",
+      "evals/evals.json": "19f3aa6fe24054672c9f1f77a10ca1aaaae639f05a896bc6d047dbc7ba8189de",
+      "evals/discovery.json": "986a8a087d91dc504747abd2fd0278f5e82ec7ec34f64b46d0b0f1f11fb02dc3",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+    }
+  },
+  "decision_question": "Can this version be distributed as supervised public source in AskJamie Resume Representative?",
+  "acceptance_criteria": [
+    "Portable package and license, with a clear route and filing record",
+    "Source preserves person, purpose, authority, access, opening identity, and version boundaries",
+    "Synthetic cases cover consequential failure modes and a valid first save",
+    "Bounded claims and required protected-main checks before integration"
+  ],
+  "source_basis": [
+    "Owner-authorized career filing workflow abstracted without private workspace data",
+    "Current AskJamie Resume Representative companion skills and Skillz LinkedIn drafting and publication-operations boundaries",
+    "The frozen public package, author-visible cases, and conditional Equilibrium review"
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Codex evidence, outcome, safety-portability, disruptor, and negotiator roles used separate prompts and shared public package inputs. Shared model family can correlate judgments.",
+      "Independent source inspection and a mock interleaving exercise do not demonstrate host execution."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "finding": "An earlier posting key can describe the same requisition, and basename exclusivity cannot prevent a second folder for a logical opening."
+    },
+    {
+      "role": "outcome",
+      "finding": "The same provider account can hold two people with the same requisition. Reuse without a verified person scope can route to the wrong person."
+    },
+    {
+      "role": "safety-portability",
+      "finding": "Unresolved coverage can make a visible match nonunique. Shared link lookup must preserve grants and account identity."
+    }
+  ],
+  "concordance": "Initial materially different release positions triggered negotiation and skipped disruption. Three separate rereviews agreed after corrections. A conditional disruptor then reproduced a retargeting race and the final adjudication checked the narrow repair.",
+  "development_history": [
+    {
+      "skill_sha256": "5d10d7a446d3063fad8e92974f7a984bf8ddbb8caf5b918321f66168a15cd1d4",
+      "decision": "defer-for-evidence",
+      "cause": "Person and purpose, alias crosswalk, coverage, and authority controls were incomplete."
+    },
+    {
+      "skill_sha256": "c5922104761f4ffae216fb318390c6219f0cd25e8158c805ef186fea8c148c29",
+      "decision": "revise",
+      "cause": "Conditional falsification reproduced an alias retarget after the final lookup."
+    }
+  ],
+  "claim_ledger": [
+    {
+      "claim_id": "CLM-01",
+      "claim_type": "design choice",
+      "claim": "A verified person and purpose constrain every opening match.",
+      "evidence_ids": [
+        "SKILL.md scope and steps 2–4",
+        "shared-account-wrong-subject",
+        "authorized-first-save"
+      ],
+      "status": "supported",
+      "consequence": "A matching requisition can otherwise route the artifact to a different person.",
+      "next_test": "Run shared-account synthetic fixtures through an authorized host."
+    },
+    {
+      "claim_id": "CLM-02",
+      "claim_type": "design choice",
+      "claim": "Alias crosswalk, complete relevant identity evidence, and shared logical-key protection govern duplicate prevention.",
+      "evidence_ids": [
+        "SKILL.md steps 4–5",
+        "posting-key-upgrade",
+        "unresolved-alias-and-coverage",
+        "different-folder-names-same-opening"
+      ],
+      "status": "supported",
+      "consequence": "A legitimate folder can be duplicated or a noncanonical folder reused.",
+      "next_test": "Exercise competing supported writers and both provisional and exact keys."
+    },
+    {
+      "claim_id": "CLM-03",
+      "claim_type": "design choice",
+      "claim": "Writing binds the verified destination and checks access before saving content. Readback proves parent identity and payload independently of cloud metadata.",
+      "evidence_ids": [
+        "SKILL.md steps 3 and 5–6",
+        "alias-retarget-after-lookup",
+        "new-folder-broader-access",
+        "write-readback-content-mismatch",
+        "artifact-verified-sync-unverified"
+      ],
+      "status": "supported",
+      "consequence": "A payload could be saved to a wrong or over-shared folder and reported as verified.",
+      "next_test": "Run identity-bound writes and changed-permission cases in an authorized sandbox."
+    },
+    {
+      "claim_id": "CLM-04",
+      "claim_type": "fact",
+      "claim": "The package carries 17 author-visible development cases and 21 discovery designs.",
+      "evidence_ids": [
+        "evals/evals.json",
+        "evals/discovery.json"
+      ],
+      "status": "supported",
+      "consequence": "Treating these cases as live or protected would overstate readiness.",
+      "next_test": "Supply an unseen external holdout and run matched evaluation."
+    }
+  ],
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical",
+    "falsification_hypotheses": [
+      "A verified shortcut can retarget before exclusive creation.",
+      "A newly created child can have broader access than its checked parent."
+    ],
+    "test_results": [
+      {
+        "status": "synthetic-mock",
+        "resolution": "In-memory interleaving reproduced the wrong-folder write with a mutable path. The modeled stable-identity create left the unintended folder empty. Final source requires identity binding, scope and access protection, and expected-parent readback."
+      },
+      {
+        "status": "analytical",
+        "resolution": "Source verifies actual child access before payload. A development case records a created folder and a blocked artifact separately."
+      }
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Final version closes represented-person and purpose mismatch, uncertain crosswalk, partial inventory, unsafe link resolution, and competing logical names.",
+      "Final instructions block mutable-locator-only writes and require expected-parent and payload readback.",
+      "The synthetic review supports source distribution with plan fallback."
+    ],
+    "unresolved_items": [
+      "Protected-main validation and integration are tracked by the release PR.",
+      "Host guard enforcement, automatic discovery, and comparative quality are unverified."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Supervised source only. No live filing or connector operations were run.",
+    "Matched benchmark, host activation and unseen release holdout are not-run. The in-memory test exercises a model of a race and cannot certify a host.",
+    "Material changes to the frozen source or to access and write assumptions require renewed review."
+  ],
+  "follow_up": [
+    {
+      "owner": "Capability maintainer",
+      "condition": "Before claiming host compatibility or measured uplift, freeze the same-version protocol and execute an authorized sandbox and unseen holdout."
+    }
+  ]
+}

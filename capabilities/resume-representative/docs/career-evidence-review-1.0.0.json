@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "release",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "capabilities/resume-representative/docs/career-evidence-workflow.md",
+    "sha256": "455ae562e23279e504ff614f5f64663c4da82caeb0f7366d1d625d49d7a3702b",
+    "version": "1.0.0",
+    "repository_base": "047a77481ffab0781b84a337e11a84dfc1be6333",
+    "pre_change_manifest_sha256": "b17fb9af0d1e0e5cf41253b634d39fa0a6e43bd91e4505a8e612a33527830756",
+    "final_manifest_sha256": "9f2705055c295f1f24ebbb52f7aef987c7cd3950232b14ce4a586d4de8bdb562",
+    "core_sha256": {
+      "capabilities/resume-representative/docs/career-evidence-workflow.md": "455ae562e23279e504ff614f5f64663c4da82caeb0f7366d1d625d49d7a3702b",
+      "capabilities/resume-representative/skills/okhp3-career-evidence-canon/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "capabilities/resume-representative/skills/okhp3-career-evidence-canon/SKILL.md": "7a136dacc1f6c4ed7e8018708e027f5fbc8a4399322d0956b5d0c985854481f5",
+      "capabilities/resume-representative/skills/okhp3-career-evidence-canon/evals/evals.json": "eff5e5a9ca94568985a312a2acd330d2f8f2f3e4e69c2d7696cdf73fe605e567",
+      "capabilities/resume-representative/skills/okhp3-career-evidence-canon/references/claim-record.md": "b8a1fbe3753cdc2cfc5237a9851734e9f645f19825a2499c631dc5537fc46cd5",
+      "capabilities/resume-representative/skills/okhp3-career-portfolio-curation/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "capabilities/resume-representative/skills/okhp3-career-portfolio-curation/SKILL.md": "f4489b30ae642848e0379acd252a2662e842c747beb2be4326416a203104c5f4",
+      "capabilities/resume-representative/skills/okhp3-career-portfolio-curation/evals/evals.json": "c335f67aed881fe4ca64bb5f936a61df71985dc19702c07022d927970464094a",
+      "capabilities/resume-representative/skills/okhp3-career-portfolio-curation/references/disclosure-record.md": "791fa23dd417ac974a6c82d2310930b9e45e5d342b3ce960b86e72a362f9b08a",
+      "capabilities/resume-representative/skills/okhp3-career-source-intake/LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "capabilities/resume-representative/skills/okhp3-career-source-intake/SKILL.md": "fc677a7ea6cde481930c37b45281f1e269748af4da7c5d952505e100744afe6d",
+      "capabilities/resume-representative/skills/okhp3-career-source-intake/evals/evals.json": "e3830c1d11d6b57812ee2053a84e9323cf8b87d281ec52ccd030252f4b34d67d",
+      "capabilities/resume-representative/skills/okhp3-career-source-intake/references/intake-record.md": "c0bcd4d21980448f43c520aeb82dc3f3e9c880de4e80f1590c15cfe0356005ac"
+    }
+  },
+  "decision_question": "Can these three instruction-only companions be distributed as portable source under AskJamie Resume Representative?",
+  "acceptance_criteria": [
+    "Distinct, portable skill entry points with licenses and bounded, linked record templates.",
+    "Traceable private handoffs, scoped source handling, and exact-revision disclosure review.",
+    "Synthetic development cases for incomplete evidence, out-of-scope actions, and untrusted instructions.",
+    "Source-only claims, with no candidate records or private locators in public source.",
+    "Protected-main checks pass for the exact integration head."
+  ],
+  "sources": [
+    {
+      "kind": "authoring and release authority",
+      "retrieved": "2026-11-09",
+      "url": "https://github.com/OKHP3/skillz/blob/1038229118c00a86ff67010c6d68ae84975a5cf2/universal/okhp3-skill-foundry/SKILL.md"
+    },
+    {
+      "kind": "review procedure",
+      "retrieved": "2026-11-09",
+      "url": "https://github.com/OKHP3/skillz/blob/1038229118c00a86ff67010c6d68ae84975a5cf2/universal/okhp3-equilibrium-review/SKILL.md"
+    },
+    {
+      "kind": "portable format authority",
+      "retrieved": "2026-11-09",
+      "url": "https://agentskills.io/specification"
+    },
+    {
+      "kind": "provider intake guidance",
+      "retrieved": "2026-11-09",
+      "url": "https://www.linkedin.com/help/linkedin/answer/a1339364/downloading-your-account-data"
+    },
+    {
+      "kind": "adjacent public workflow",
+      "retrieved": "2026-11-09",
+      "url": "https://github.com/OKHP3/askjamie-foundry/pull/176"
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "The three initial role reviewers and a fresh negotiator used separate Codex contexts with a shared model family and overlapping public sources.",
+      "The evidence, outcome, and safety-portability prompts were role-specific and read-only. The negotiator received the material findings and read the revised public-safe source. No private files or live host execution were required for the review."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "defer-for-evidence",
+      "finding": "Remove exact historical prototype counts from public scope and distinguish a contemporaneous knowledge cutoff from later reconstruction."
+    },
+    {
+      "role": "outcome",
+      "decision": "defer-for-evidence",
+      "finding": "Provide actual claim statements and authorized locators to targeted drafting. Preserve supported project outcomes when a comparative baseline is missing. Tighten adjacent triggers and fixture locators."
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "Source was portable and clear of private records. Bound archive processing and concurrent directory writes, require authorized excerpts, and vary each disclosure scope dimension independently."
+    }
+  ],
+  "concordance": "material-disagreement",
+  "disruptor": {
+    "triggered": false,
+    "authority": "none",
+    "reason": "Initial reviewers disagreed about whether remaining defects blocked the frozen source release."
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "All 13 frozen core-file SHA-256 hashes matched. The versioned public review receipt resolves the workflow reference.",
+      "The private r\u00e9sum\u00e9 handoff now includes claim statements and exact authorized source locators. The canon distinguishes the contemporaneous cutoff from a retrospective reconstruction, with a dedicated development case.",
+      "The intake contract requires bounded archive handling, rooted no-follow operations or no write, and safe excerpts only within the approved session. Separate fixtures target those controls.",
+      "The portfolio contract preserves supported counts and reported observations, excludes uncleared or unreadable assets, and rechecks asset, resolved link target, audience, and destination independently of body bytes.",
+      "The public diff contains no private historical run metrics, source locators, or candidate records. Source integrity and case design support supervised source distribution."
+    ],
+    "unresolved_items": [
+      "Protected-main checks must pass on the exact PR head.",
+      "Live behavior, discovery, and an unseen holdout require separate runs."
+    ]
+  },
+  "learning": {
+    "hypothesis": "Independent intake, temporal evidence, and case-study steps let users reuse one private evidence trail across drafting tasks.",
+    "retained_controls": [
+      "Separate source access from content and permitted use.",
+      "Differentiate historical knowledge from reconstructed fact.",
+      "Keep private source locations out of a separately assembled audience-scoped artifact."
+    ],
+    "rejected_alternatives": [
+      "A parallel role-specific r\u00e9sum\u00e9 package would duplicate the existing targeted r\u00e9sum\u00e9 companion.",
+      "A combined skill would make source intake compete with writing and disclosure triggers.",
+      "Copying a starter kit or prototype artifacts would widen the public source boundary."
+    ],
+    "regression_risk": "Adjacent tasks can be routed to the wrong skill, stale evidence can enter the current view, or stale approval can survive a link or asset change.",
+    "evaluation_result": "Source and synthetic case definitions reviewed analytically. No model-executed score or uplift is asserted."
+  },
+  "release_decision": "approve-with-limits",
+  "owner": "Codex, integration owner for issue 172",
+  "expiry": "Applies to the recorded source bytes only. Reopen when a core file changes or before claiming host adoption, live behavior, or uplift.",
+  "limitations": [
+    "Foundry structural validator passed the three packages. Two advisory heuristics found no obvious validation loop in the canon and portfolio skills. Their procedures include explicit human-review checks.",
+    "Development cases are public and author-visible. There is no fresh matched benchmark, automatic trigger run, installed-host validation, or unseen holdout."
+  ],
+  "follow_up": [
+    {
+      "owner": "host evaluator",
+      "condition": "Before claiming runtime outcomes, freeze same-version execution and grading, then run discovery, critical safety cases, and a protected external holdout."
+    }
+  ]
+}
