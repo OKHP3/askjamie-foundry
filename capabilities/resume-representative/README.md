@@ -6,6 +6,11 @@ Turn supplied career evidence into role-specific professional narratives.
 
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
+The [role-to-practice skill](skills/okhp3-role-to-practice/SKILL.md) maps a
+specific opening and supplied career evidence to qualification gaps, learning,
+and a synthetic practice exercise. Its [release review](skills/okhp3-role-to-practice/evals/review.md)
+records the evaluation limits.
+
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,
 with original filenames, bytes and provenance. Registry migration status is
