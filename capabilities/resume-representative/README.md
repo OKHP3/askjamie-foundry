@@ -37,3 +37,5 @@ The [résumé evidence reconciliation skill](skills/resume-evidence-reconciliati
 audits a specific résumé against its masters and prior versions. It produces a
 source-linked review without rewriting the résumé or changing application state.
 The source is an integration candidate with analytical review evidence.
+For a specific minimum-years or coupled experience requirement, use the
+[qualifying-experience audit](skills/okhp3-qualifying-experience-audit/SKILL.md).

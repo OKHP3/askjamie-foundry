@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "artifact": {
+    "path": "../SKILL.md",
+    "version": "1.0.0",
+    "sha256": "86b77cb02005bbe89f9938f156dd95851861f93737121d2bd5f0c24c21445417",
+    "file_sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "0e2e3d536d2e29799b8cf4782d5b2bfc964f131b5cbeaea40a91dfcb5842c556",
+      "evals/evals.json": "dea7f3b5eb0baf7805fd90129f33998a6a642c1e8a2ff0b31d34c6b6ea764001",
+      "references/audit-record.md": "7b6d7f045d6350ca10c0a26399b880eb98d05617f56ed2f11db61b7a1ed4562d"
+    },
+    "digest_scope": "Four package inputs, excluding this review record.",
+    "algorithm": "SHA-256 of compact UTF-8 JSON with sorted file hash keys."
+  },
+  "decision_question": "Is the qualifying-experience audit ready to publish as read-only portable source with synthetic development cases?",
+  "acceptance_criteria": [
+    "Trace each qualification and credited interval to evidence.",
+    "Preserve date precision, overlap, attribution, and uncertain counting policy.",
+    "Keep coupled qualifiers on the same work and assess separate qualifications independently.",
+    "Return a useful partial ledger with safe tool and disclosure boundaries.",
+    "Verify package structure and version-specific evidence without live performance claims."
+  ],
+  "source_basis": [
+    {
+      "id": "SRC-01",
+      "source": "Owner-authorized career workflow distilled into fictional cases.",
+      "observed_on": "2026-11-09",
+      "authority": "Design rationale. No private inputs or locators retained."
+    },
+    {
+      "id": "SRC-02",
+      "source": "Equilibrium Review 1.0.1 and Skill Foundry 3.1.1.",
+      "ref": "https://github.com/OKHP3/skillz",
+      "observed_on": "2026-11-09",
+      "authority": "Review method, package conventions, and release evidence limits."
+    },
+    {
+      "id": "SRC-03",
+      "source": "AskJamie FoundRy source and coordination record.",
+      "ref": "https://github.com/OKHP3/askjamie-foundry/issues/163",
+      "observed_on": "2026-11-09",
+      "authority": "Ownership, destination, and separation from adjacent skills."
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Evidence, outcome, safety/portability, disruptor and adjudication roles used separate Codex agent contexts with a shared model family and synthetic sources.",
+      "Reviewers had read-only instructions and did not exercise a skill host or application portal."
+    ]
+  },
+  "initial_candidate_sha256": {
+    "SKILL.md": "16a742a848616ef2880de3cb0a7089662d9a8d19ae5a208923ca9a6d5b67abe9",
+    "references/audit-record.md": "b625b843a6270c795ee4db76526759366f8ad686dd07293fdd9ffc94cd73ee37",
+    "evals/evals.json": "7127e6f76b53569f4579616da572c15b26897a8aa479cc3b9baf756845d771ca"
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "defer-for-evidence",
+      "finding": "The first draft could tether an independent undated requirement to a different duration. Its FTE fixture omitted an explicit proration rule.",
+      "resolution": "Separate independent clauses from coupled qualifiers. State the FTE rule in the fixture and require an explicit credit formula."
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "finding": "A pre-drafting ledger and focused question are useful. Sequential fixtures did not test inappropriate credit across concurrent jobs.",
+      "resolution": "Make the domain and activity case concurrent and test coupled and independent wording separately."
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "Private excerpt transfers and unavailable bundled references needed explicit boundaries.",
+      "resolution": "Require separate authority for external disclosure, use opaque IDs, and return a partial ledger with calculations deferred when references are unavailable."
+    }
+  ],
+  "concordance": "material-agreement",
+  "concordance_basis": "Initial reviewers converged on source-only publication conditional on resolving material findings. The frozen draft itself was held for revision.",
+  "disruptor": {
+    "triggered": true,
+    "authority": "counterexample testing",
+    "falsification_hypotheses": [
+      "A single disputed 24-month contract could be counted twice when its dates differ across sources.",
+      "Twelve one-day assignments could be credited as twelve months, or an exact anniversary could be treated as unresolved."
+    ],
+    "test_results": [
+      "The mutually exclusive dates case yields two alternative 24-month spans. The revised method preserves both accounts and uses the maximum across scenarios.",
+      "The exact anniversary and fragment case separates one continuous anniversary from twelve covered days and zero complete calendar months. Independent arithmetic verifies the expected values."
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "The revised procedure and reference separate independent clauses, overlapping jobs, and alternative evidence scenarios.",
+      "The development cases test source attribution, qualifying scope, uncertain dates, explicit FTE, exposure and read-only fallback.",
+      "Package links, final hashes, and the stated analytical evidence boundary are release checks.",
+      "The adjudicator verified the arithmetic independently. The source-only approval depended on bundling and verifying this release record.",
+      "Final packaging scopes overlap merging to the default calendar method so it cannot override employer-defined FTE rules and adds a ledger readback."
+    ],
+    "unresolved_items": [
+      "Employer-specific counting policies may require candidate verification."
+    ],
+    "reviewed_skill_sha256_before_packaging": "1ce89f5d7305d2a36b321bac2f97eace2cf00d6d923978e69385da2c2d29a5d5"
+  },
+  "development_check": {
+    "case_count": 9,
+    "method": "Static comparison of procedure to expected decisions, plus independent Python calendar arithmetic for five fixtures.",
+    "held_out_cases": 0
+  },
+  "discovery_check": {
+    "method": "Manual comparison of realistic queries against description scope. No host routing measurement.",
+    "matches": [
+      "Does my experience add up to seven years of design?",
+      "Can I count both jobs for the same months?",
+      "I only have month and year. Can I say five years?",
+      "Does support work count as implementation?",
+      "Could separate claims and integration jobs meet claims integration years?",
+      "Count my part-time engineering experience against an FTE rule.",
+      "The two sources disagree on dates for the same project.",
+      "How much architecture time can I defend before rewriting?",
+      "Do I meet both the years and technology qualifier?",
+      "Can I count a one-day prototype as a year of production experience?"
+    ],
+    "near_misses": [
+      "Tailor my résumé for this posting.",
+      "Merge two versions of my master résumé.",
+      "Rank the opportunities in my job tracker.",
+      "Submit my job application.",
+      "Check the status of my application.",
+      "Draft a note to the hiring manager.",
+      "Practice behavioral interview answers.",
+      "Which certification should I earn next?",
+      "Calculate salary and travel costs.",
+      "Make my application files and tracker entries match."
+    ]
+  },
+  "benchmark": {
+    "status": "not-run",
+    "holdout_policy": "external-required",
+    "holdout_seen": true
+  },
+  "release_decision": "approve-with-limits",
+  "release_owner": "AskJamie FoundRy",
+  "limitations": [
+    "This release covers portable source and analytical review only. No matched live benchmark, unseen release holdout, client routing measurement, or native activation test has been completed.",
+    "The audit makes a bounded evidence assessment. The employer owns its qualification and counting decisions.",
+    "Reopen the review after changes to interval rules, qualifying evidence boundaries, or tool and disclosure permissions."
+  ],
+  "follow_up": [
+    "Run protected holdout and matched host tests before making behavioral or uplift claims."
+  ]
+}
