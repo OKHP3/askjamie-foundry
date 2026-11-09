@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "synthetic-audit-001",
+  "as_of": "2030-05-10T18:00:00Z",
+  "environment": "supplied synthetic snapshot; no live access",
+  "approved_roots": [
+    {
+      "root_key": "career-root",
+      "role": "role-specific resumes",
+      "provider_account": "example-drive/account-a",
+      "cloud_item_id": "R-1",
+      "cloud_reference": "https://example.invalid/career",
+      "local_path": null,
+      "scope_authority": "synthetic user fixture",
+      "cloud_metadata": "verified",
+      "local_metadata": "unchecked"
+    }
+  ],
+  "baseline": {
+    "source": "synthetic manifest",
+    "observed_at": "2030-05-01T18:00:00Z",
+    "identity_basis": "provider/account/item ID",
+    "limitations": [
+      "Only two expected references supplied."
+    ]
+  },
+  "coverage": {
+    "requested_root_count": 1,
+    "checked_root_count": 1,
+    "expected_reference_count": 2,
+    "checked_reference_count": 2,
+    "unique_observed_files": 1,
+    "unique_observed_folders": 1,
+    "enumeration_limits": [
+      "Only supplied observations reviewed; not a complete tree enumeration."
+    ],
+    "gaps": [
+      "Local content and recycle bin unchecked."
+    ]
+  },
+  "items": [
+    {
+      "item_key": "example-drive/account-a/F-10",
+      "artifact_kind": "resume",
+      "role_key": "example-employer/EX-104/external",
+      "expected": {
+        "item_id": "F-10",
+        "path": "old/role-a/resume.docx"
+      },
+      "observations": {
+        "cloud_metadata": {
+          "status": "verified",
+          "observed_at": "2030-05-10T17:55:00Z",
+          "operation": "get item F-10",
+          "item_id": "F-10",
+          "path": "role-specific/role-a/resume.docx",
+          "size_bytes": 12000,
+          "hash": null
+        },
+        "cloud_content": {
+          "status": "unchecked"
+        },
+        "local_metadata": {
+          "status": "unchecked"
+        },
+        "local_content": {
+          "status": "unchecked"
+        }
+      },
+      "finding": "Exact identity mapped; byte equality, submitted version and local sync remain unverified."
+    },
+    {
+      "item_key": "example-drive/account-a/F-20",
+      "artifact_kind": "submission-receipt",
+      "role_key": "example-employer/EX-205/external",
+      "expected": {
+        "item_id": "F-20",
+        "path": "role-b/receipt.json"
+      },
+      "observations": {
+        "cloud_metadata": {
+          "status": "unavailable",
+          "observed_at": "2030-05-10T17:56:00Z",
+          "operation": "get item F-20",
+          "error": "404 itemNotFound"
+        },
+        "search_index": {
+          "status": "verified",
+          "observed_at": "2030-05-10T17:57:00Z",
+          "indexed_item_id": "F-20",
+          "interpretation": "Search hit only; current exact read failed."
+        },
+        "same_name_parent": {
+          "status": "verified",
+          "item_id": "D-NEW",
+          "expected_old_id": "D-OLD",
+          "child_count": 0,
+          "interpretation": "Different empty folder does not establish preservation."
+        },
+        "cloud_content": {
+          "status": "unchecked"
+        },
+        "local_metadata": {
+          "status": "unchecked"
+        },
+        "local_content": {
+          "status": "unchecked"
+        }
+      },
+      "finding": "Original item unavailable; deletion cause, time, actor and recycle-bin presence unknown."
+    }
+  ],
+  "mappings": [
+    {
+      "mapping_id": "map-1",
+      "item_key": "example-drive/account-a/F-10",
+      "old_reference": "old/role-a/resume.docx",
+      "current_reference": "role-specific/role-a/resume.docx",
+      "mapping_status": "exact-id",
+      "basis": "Same supplied provider/account/item ID at both observations.",
+      "uncertainty": [
+        "Content equality not checked.",
+        "Submitted version not independently established."
+      ]
+    },
+    {
+      "mapping_id": "map-2",
+      "item_key": "example-drive/account-a/F-20",
+      "old_reference": "role-b/receipt.json",
+      "current_reference": null,
+      "mapping_status": "unavailable",
+      "basis": "Exact read failed; indexed hit and empty new parent do not resolve availability.",
+      "uncertainty": [
+        "No accessible replacement established."
+      ]
+    }
+  ],
+  "sync_status": "unverified",
+  "concurrent_writers": [],
+  "preservation_findings": [
+    {
+      "item_key": "example-drive/account-a/F-20",
+      "status": "unresolved",
+      "claim": "Preservation unverified for this expected item."
+    }
+  ],
+  "repair_proposals": [],
+  "report_storage": {
+    "destination": "approved private report root",
+    "filename": "audit-20300510-001.json",
+    "audience": "private owner only",
+    "audience_verified": true,
+    "authorized": true,
+    "create_guard": null,
+    "collision_status": "existing-file",
+    "result": "not-saved",
+    "readback": null,
+    "destination_identity": null,
+    "scope_guard": null
+  },
+  "next_checks": [
+    "Read-only recycle-bin metadata through authorized available tools, if permitted.",
+    "Independently inspect local layers before any sync claim."
+  ]
+}

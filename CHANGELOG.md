@@ -9,6 +9,26 @@
 - Preserve synthetic evaluations, analytical review limits and complete core
   hash verification. No live connector or unattended-monitoring claim is made.
 
+## 2026-11-09: Interview preparation skill companions
+
+- Add Interview Evidence Map and Interview Questions as draftable Resume
+  Representative companions, with 15 synthetic development cases, versioned
+  equilibrium review, MIT notices and exact Skillz mirror hashes.
+- Keep public-work selection within the evidence-map package and formal
+  qualification audits, resumes, learning plans and public posts in their own
+  workflows. Preserve source conflicts and distinguish testimony from proof.
+- Publish analytical source only. Live behavior, automatic discovery, measured
+  uplift, protected holdout and host acceptance remain untested.
+
+## 2026-11-09: Career evidence and preservation skills
+
+- Add portable Work Search Evidence and Career Artifact Audit source packages,
+  private runtime templates and synthetic development cases.
+- Map recurring career workflows to existing package and PR owners, preserving
+  application reconciliation, ranking, submission and interview boundaries.
+- Record version-specific analytical review and structural checks separately
+  from live benchmarks, unseen holdouts and host installation.
+
 ## 2026-11-09: Application reconciliation source boundaries
 
 - Keep different openings and true same-application status conflicts distinct.
