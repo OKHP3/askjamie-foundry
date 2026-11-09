@@ -8,6 +8,16 @@
 | Target | The decision maker | The shared-history opener, the concept in a paragraph, and the brief only |
 | Mutual | A dormant contact who shares the history | A genuine reconnect, a neutral update, and the outreach mentioned as context; no attachments |
 
+## Message rules without a messaging skill
+
+- Open with something specific and true about the shared history; never
+  imply familiarity that does not exist.
+- One purpose per message and one low-cost ask.
+- Attachments follow the contact-role table above and nothing else.
+- Include contact details only when the candidate asks.
+- Before returning, scrub for loaded or clinical language, disparagement,
+  confidential detail, and unsupported claims.
+
 ## Order
 
 1. Ally, then wait for their read or a reasonable interval.

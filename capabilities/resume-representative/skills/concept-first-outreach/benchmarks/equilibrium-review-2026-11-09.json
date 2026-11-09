@@ -11,12 +11,12 @@
     "released_version": "1.0.0",
     "released_sha256": {
       "LICENSE.md": "3d6b922d54ac37344fd885fe08d04dedb8a48c4249945cc1b8fd06e41bd44494",
-      "SKILL.md": "921b2d15133e12876851017ec2e095c09fe5fafb03e71f9bb7f2405f2274aa16",
+      "SKILL.md": "f51245e3d6ff569432d32078ebc23fbdd367cd9dfef4e40466e6fa18e02a73aa",
       "evals/evals.json": "7049284d9958d24d4e91ea71f7ad3d8060ffa76c940ce59bfb7c0492b31ebf4a",
       "references/concept-brief.md": "eb0b6254b404c8909983b98d35ecb232c2ca822a90275a13ac116ccf8be32720",
       "references/deliverables.md": "0fea50b053cceb5f485e7c73c7241ab086a6685748753cb0404e56b5d00633f3",
       "references/posture.md": "329886845d106de1da1c25abc0d326dcac009d450ab55156b70a5e8259de3cef",
-      "references/sequence-and-cadence.md": "91e7d383534749df7353b81c7812f4b04ab87429928053024981e8d0146f2773"
+      "references/sequence-and-cadence.md": "fa913ae396f6a1f4ecd3dc1dc51d9797b5059d95f01d1a26a636121a69f1e0e6"
     }
   },
   "decision_question": "Is concept-first-outreach ready as an integration candidate under the Resume Representative capability?",
