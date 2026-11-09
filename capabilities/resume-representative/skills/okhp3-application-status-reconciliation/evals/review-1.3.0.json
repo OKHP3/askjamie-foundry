@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "release",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.3.0",
+    "base_commit": "3ee8596f5f810347ae936b3dc9297f40c2b8b9c1",
+    "core_sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "64304e644e5cbfe1d6d9bfc1ad96b95d759ce31ac545a64b42617b760f9cff43",
+      "references/reconciliation-record.md": "3b86f909348b81553e567dd0f4ec6eb02ea7d4b8abb931caa20716a1e920660c",
+      "evals/cases.json": "10203153d5ce20a1506e3cd0cf0d609ddcb2cc01fe113480d8563655fbb1ce5c",
+      "evals/portfolio-cases.json": "a6aea7aeafac34511bc462891969814877744858ba7ad9d367b90c9589aa5fb2"
+    }
+  },
+  "decision_question": "Can the integrated revision be distributed as public source while preserving upstream reconciliation behavior?",
+  "acceptance_criteria": [
+    "Verify role, attempt, and form scope before changing completion claims",
+    "Preserve prior evidence, recruiter and route milestones, and source-specific cutoffs",
+    "Require stable coverage or exact-key evidence for absence",
+    "Retain authorization and write-time conditions on retries",
+    "Keep fixtures synthetic, validate the package, and require protected-main checks"
+  ],
+  "source_basis": [
+    {
+      "id": "S-01",
+      "retrieved": "2026-11-09",
+      "authority": "Sanitized private workflow observations",
+      "scope": "Identical review screens with different completion evidence. Generic receipts and interrupted pagination motivate synthetic cases."
+    },
+    {
+      "id": "S-02",
+      "retrieved": "2026-11-09",
+      "authority": "Repository baseline",
+      "url": "https://github.com/OKHP3/askjamie-foundry/pull/154",
+      "scope": "Upstream 1.2.0 retained. Prior local 1.1.0 proposal is historical and never published."
+    },
+    {
+      "id": "S-03",
+      "retrieved": "2026-11-09",
+      "authority": "Authoring and review protocols",
+      "references": [
+        "https://github.com/OKHP3/skillz/blob/main/universal/okhp3-equilibrium-review/SKILL.md",
+        "https://github.com/OKHP3/skillz/blob/main/universal/okhp3-skill-foundry/SKILL.md"
+      ],
+      "scope": "Equilibrium Review 1.0.1 and Skill Foundry 3.1.1."
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "Later application status reconciliation",
+      "repeatable_value": "Join role, route, attempt and form evidence to authorized cross-surface updates",
+      "decision": "Extend the canonical Resume Representative package"
+    },
+    {
+      "candidate": "Immediate submission evidence",
+      "repeatable_value": "Verify the exact final form and preserve receipt evidence after one attempt",
+      "decision": "Keep the distinct submission-evidence workflow boundary"
+    },
+    {
+      "candidate": "Shared attachment capacity",
+      "repeatable_value": "Map shared-file dependencies and assess reversible replacement",
+      "decision": "defer-for-evidence",
+      "missing": "Cross-host ownership, recoverability and dependent attachment verification"
+    },
+    {
+      "candidate": "Signature and final submission handoff",
+      "repeatable_value": "Separate agreement consent from final submission and receipt",
+      "decision": "Keep as an execution workflow boundary",
+      "missing": "Host-specific consent and submission authority"
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Separate evidence, outcome, safety, disruptor, and negotiator contexts shared a model family and candidate. Sources were sanitized."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "finding": "Integrated source scopes completion to the form and attempt, preserves owner attribution, and fixes the old unsubmitted inference."
+    },
+    {
+      "role": "outcome",
+      "finding": "Recruiter milestones, route separation, source cursor recovery and portfolio denominators survive. Make retained cutoffs and fixture authority explicit."
+    },
+    {
+      "role": "safety-portability",
+      "finding": "Upstream privacy and guarded writes survive. Preserve the original authorization and guard on retry and hold archive if discard is required."
+    }
+  ],
+  "concordance": "Material agreement on integrated source direction with narrow fixture and cutoff clarifications.",
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical",
+    "test_results": [
+      {
+        "case": "same-route-new-attempt",
+        "counterexample": "A1 receipt and editable A2 with identical requisition, route and form.",
+        "resolution": "Attempt association verifies A1 only and holds A2."
+      },
+      {
+        "case": "pagination-stability",
+        "counterexample": "A live offset list omits a present row while totals and terminal pages appear complete.",
+        "resolution": "Exact positive observations survive. Absence and a later source cutoff require stable coverage. An exact-key check of one row cannot advance the whole interval."
+      },
+      {
+        "case": "retry-original-condition",
+        "counterexample": "A definitively failed attempt is followed by a concurrent owner state change.",
+        "resolution": "The original condition is guarded at write time or the retry is held."
+      }
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "method": "Independent inspection and analytical replay. Final fixture correction fulfills the negotiator's release condition.",
+    "decisive_evidence": [
+      "Receipt and form rules retain source scope and do not infer completion from a control or click.",
+      "Final R-902 fixture explicitly attributes successful submission, leaving employer verification open.",
+      "Earlier failed write is external to the guarded workflow. The retained cutoff rule covers unstable enumeration."
+    ],
+    "unresolved_items": [
+      "Protected-main checks must pass for the exact PR head."
+    ]
+  },
+  "development": {
+    "case_count": 21,
+    "expectation_count": 70,
+    "upstream_case_ids_retained": 17,
+    "new_cases": 4,
+    "corrected_expectations": 1,
+    "status": "analytical",
+    "validation": "Frontmatter, links, license, fixture contracts, diff and public-source scan. Manifest, registry, Pages artifact and 174 repository tests passed in Python 3.12.14. Repository tests are not live skill evaluation."
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Public source only. No automatic activation, host installation, live connector behavior, matched benchmark, or unseen holdout tested.",
+    "No duplication into the social-posting family. The established career-operations package is canonical."
+  ],
+  "holdout": "external-required",
+  "holdout_seen": true,
+  "follow_up": [
+    {
+      "owner": "Integration owner",
+      "condition": "Validate host-specific coverage, write guards and readback, then run a same-version matched benchmark with an unseen holdout before any outcome claim."
+    }
+  ]
+}
