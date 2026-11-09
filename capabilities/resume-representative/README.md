@@ -4,6 +4,11 @@ Public child capability of AskJamie FoundRy.
 
 Turn supplied career evidence into role-specific professional narratives.
 
+The [résumé evidence reconciliation skill](skills/resume-evidence-reconciliation/SKILL.md)
+audits a specific résumé against its masters and prior versions. It produces a
+source-linked review without rewriting the résumé or changing application state.
+The source is an integration candidate with analytical review evidence.
+
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
 The complete pinned GitHub snapshot is imported under

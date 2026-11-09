@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "artifact": {
+    "path": "SKILL.md",
+    "sha256": "72015e5428b344c395737ad2637f479640e0ef6359001e7a3d9c4fbe8019aa2a",
+    "version": "1.0.0",
+    "resources": {
+      "evals/evals.json": "fff9af22d3acaa1f5bc92d513b915d38e4e212aa55b07adf109a25536d5143f0",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+    }
+  },
+  "decision_question": "Is the read-only résumé audit a distinct, evidence-grounded source integration candidate for Resume Representative?",
+  "acceptance_criteria": [
+    "Distinct audit scope and explicit routing",
+    "Traceable source coverage, evidence lineage and claim dispositions",
+    "Authorization boundary and private output fail closed",
+    "Portable sources and synthetic evaluation design with no inherited live claims"
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "source": "Existing Résumé Representative procedure at base 12c699ab90492ec5d8a3bcc41781d8c384500aec",
+      "authority": "Neighboring scope",
+      "retrieved_on": "2026-11-09"
+    },
+    {
+      "id": "SRC-02",
+      "source": "../../../docs/candidate-canon-regeneration-protocol.md",
+      "authority": "Prior art for authority and source conflicts",
+      "retrieved_on": "2026-11-09"
+    },
+    {
+      "id": "SRC-03",
+      "source": "../../../docs/dynamic-resume-corpus/knowledge-corpus.md",
+      "authority": "Prior art for claim lineage and responsibility",
+      "retrieved_on": "2026-11-09"
+    },
+    {
+      "id": "SRC-04",
+      "source": "https://github.com/OKHP3/skillz/tree/main/universal/okhp3-equilibrium-review",
+      "authority": "Review protocol",
+      "retrieved_on": "2026-11-09"
+    },
+    {
+      "id": "SRC-05",
+      "source": "evals.json",
+      "authority": "Public-safe synthetic development designs",
+      "retrieved_on": "2026-11-09"
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Separate reviewer sessions with a shared model family, inherited task context, and a common candidate artifact.",
+      "The original reviewers assessed the first frozen revision. The disruptor rechecked the three localized revisions on the final bytes."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "approve-with-limits",
+      "artifact_sha256": "0ef87cca638a02c854dca1a8b6118b665d7e9a0baa796a981c2ef5005af45fcc",
+      "finding": "Distinct coverage and claim decisions. The normal-case fixture needed an explicit prospective premise.",
+      "evidence_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-05"
+      ]
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "finding": "An audit result complements drafting. Unsupported claims need an explicit shareable-output boundary.",
+      "evidence_ids": [
+        "SRC-01",
+        "SRC-05"
+      ]
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "The portable read-only core is usable. Test shared output and maintain a separate host acceptance gate.",
+      "evidence_ids": [
+        "SRC-04",
+        "SRC-05"
+      ]
+    }
+  ],
+  "concordance": "material-agreement",
+  "claims": [
+    {
+      "claim_id": "CLM-01",
+      "claim": "Corpus reconciliation adds coverage and lineage decisions beyond ordinary tailoring.",
+      "claim_type": "interpretation",
+      "evidence_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03"
+      ],
+      "status": "supported",
+      "consequence": "Parallel drafting instructions would compete with the existing owner.",
+      "next_test": "Use mixed audit-and-rewrite and ordinary drafting cases in trigger evaluation."
+    },
+    {
+      "claim_id": "CLM-02",
+      "claim": "The final instructions define a safe outcome when reply privacy is unverified.",
+      "claim_type": "design choice",
+      "evidence_ids": [
+        "SRC-04",
+        "SRC-05"
+      ],
+      "status": "supported",
+      "consequence": "An inline reply could expose private evidence.",
+      "next_test": "Inspect output and action logs on a protected shared-audience case."
+    },
+    {
+      "claim_id": "CLM-03",
+      "claim": "Host activation and matched improvement are established.",
+      "claim_type": "hypothesis",
+      "evidence_ids": [
+        "SRC-05"
+      ],
+      "status": "blocked",
+      "consequence": "The source candidate could be presented as accepted runtime behavior.",
+      "next_test": "Run an isolated matched benchmark and a genuinely unseen holdout."
+    }
+  ],
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical",
+    "falsification_hypotheses": [
+      "An inventory can be presented as full review.",
+      "A repeated unconfirmed claim can survive into shareable wording.",
+      "A shared reply can expose a private ledger without a write."
+    ],
+    "test_results": [
+      "The final all-history clause requires screening or explicit unscreened groups.",
+      "The final output contract excludes unresolved claims from shareable wording.",
+      "The final privacy clause covers returning and saving. A synthetic shared-output case checks no private claims or locators and no mutations."
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Existing workflows own tailoring and candidate canon; this package owns an audit ledger and leaves source files intact.",
+      "The first-review premise was added to normal-targeted. The conditional disruptor confirmed the final localized coverage, unresolved-claim, and privacy changes analytically.",
+      "Keep concept-first outreach in its existing PR and defer an ATS draft handoff until its distinct host and action-log evidence is ready."
+    ],
+    "unresolved_items": [
+      "No live development-case execution, isolated baseline, trigger metrics, unseen holdout, or host acceptance."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Source integration candidate only. Structural and analytical checks do not establish runtime safety or outcome improvement."
+  ],
+  "follow_up": [
+    {
+      "owner": "Resume Representative maintainer",
+      "action": "Run protected coverage, trigger, and shared-audience cases in an isolated host with action logs.",
+      "expiry_trigger": "Reopen review if the package scope, host, authorization model, or evaluation version changes."
+    }
+  ]
+}
