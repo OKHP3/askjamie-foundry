@@ -11,6 +11,15 @@
 - Publish analytical source only. Live behavior, automatic discovery, measured
   uplift, protected holdout and host acceptance remain untested.
 
+## 2026-11-09: Career evidence and preservation skills
+
+- Add portable Work Search Evidence and Career Artifact Audit source packages,
+  private runtime templates and synthetic development cases.
+- Map recurring career workflows to existing package and PR owners, preserving
+  application reconciliation, ranking, submission and interview boundaries.
+- Record version-specific analytical review and structural checks separately
+  from live benchmarks, unseen holdouts and host installation.
+
 ## 2026-11-09: Application reconciliation source boundaries
 
 - Keep different openings and true same-application status conflicts distinct.
