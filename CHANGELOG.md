@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-09: LinkedIn DM context reconciliation
+
+- Add an exact mirror of the Skillz `okhp3-linkedin-dm-reconcile` 1.0.1
+  read-only source candidate to Resume Representative.
+- Compose message/request context with existing application-status and career
+  evidence workflows; keep sending, tracker writes and submission separate.
+- Preserve synthetic evaluations, analytical review limits and complete core
+  hash verification. No live connector or unattended-monitoring claim is made.
+
 ## 2026-11-09: Application reconciliation source boundaries
 
 - Keep different openings and true same-application status conflicts distinct.

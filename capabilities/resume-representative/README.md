@@ -4,6 +4,11 @@ Public child capability of AskJamie FoundRy.
 
 Turn supplied career evidence into role-specific professional narratives.
 
+The [LinkedIn DM reconciliation skill](skills/okhp3-linkedin-dm-reconcile/SKILL.md)
+reconciles email alerts with incoming and outgoing messages before deciding
+which request remains open. It is an exact portable mirror of the Skillz core,
+with analytical review only. See [routing and synchronization](docs/linkedin-dm-reconcile.md).
+
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
 The [interview follow-up draft skill](skills/okhp3-interview-follow-up-draft/SKILL.md) defines a portable procedure for candidate thank-yous and next-step emails. It is a source-only integration candidate with host behavior untested.
