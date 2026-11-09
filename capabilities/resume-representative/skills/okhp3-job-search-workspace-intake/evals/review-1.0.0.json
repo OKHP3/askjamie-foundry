@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "release",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.0.0",
+    "sha256": "2664f8c66ff4a6ed34fa074732d51ff99871b3941eb31e46f8cdf3f5f75fcfa1",
+    "hash_basis": "Canonical Git blob bytes",
+    "core_sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "2664f8c66ff4a6ed34fa074732d51ff99871b3941eb31e46f8cdf3f5f75fcfa1",
+      "evals/cases.json": "252f2b8834b10ea6437a1408d71a92ae87114d6c6b89f859ab349caadb7cdbf5",
+      "references/operating-map.md": "613614d93c731c8b0d70b6ea5a65f98fd5f41d688960aa78bc8fa919493dd1b3"
+    }
+  },
+  "decision_question": "Can this skill be published as a portable read-only AJ01 source package for setup and recovery of an established job search?",
+  "acceptance_criteria": [
+    "Distinct trigger and useful operating map, discrepancy register, and handoff",
+    "Correct ownership, source coverage, chronology, and artifact identity under partial access",
+    "Public-safe, host-neutral package with no authority granted by source content",
+    "Structural checks and required GitHub compatibility check on the exact PR head"
+  ],
+  "source_basis": [
+    "Generalized owner-guided workflow retrospective. Private source records are outside the package.",
+    "Published AJ01 saved-opportunity triage, application reconciliation, and résumé representative skills.",
+    "Skillz Equilibrium Review 1.0.1 and Skill Foundry 3.1.1.",
+    "Six visible synthetic development cases and 20 manual routing prompts."
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "limits": "Evidence, outcome and safety reviewed independently in separate agent contexts with shared model family and retrospective context. Falsification and adjudication used fresh role contexts with the same model family. All roles inspected supplied source and fixtures read-only. This design does not establish independent live outcome measurement."
+  },
+  "initial_artifact_sha256": "5671010822f9e6b0df9c8d92aca89be4a856c985d6a19db9c86440c7de30c7c0",
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "defer-for-evidence",
+      "finding": "An upload manifest could precede submission. The ownership fixture expected a worker locator it did not supply."
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "finding": "Setup and recovery have a distinct deliverable. One routing prompt lacked career context and the queue could state a priority rule."
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "Public-safe source, internal references, optional tools and a read-only authorization boundary."
+    }
+  ],
+  "claim_evidence_ledger": [
+    {
+      "id": "E-01",
+      "claim": "Exact submitted bytes require a final submission and version bound to the same attempt and event.",
+      "evidence": [
+        "SKILL.md workflow step 3",
+        "references/operating-map.md file evidence",
+        "FILE-03 final-manifest and upload-only fixtures"
+      ],
+      "consequence": "A pre-submit upload could be mistaken for the employer's retained document.",
+      "resolution": "Refined core and record; evidence reviewer rechecked the positive and negative cases."
+    },
+    {
+      "id": "E-02",
+      "claim": "Use only reachable coordinator and worker evidence without inventing locators.",
+      "evidence": [
+        "SKILL.md workflow step 2",
+        "OWN-01"
+      ],
+      "consequence": "An inaccessible coordinator could be replaced or a fabricated link could be published.",
+      "resolution": "The worker is attributed to the tracker and only the supplied hiring-record locator is used."
+    },
+    {
+      "id": "O-01",
+      "claim": "Setup and recovery route distinctly from saved-job ranking, individual status correction, submitted-cohort audits and résumé drafting.",
+      "evidence": [
+        "SKILL.md description and workflow steps 4 and 5",
+        "ROUTE-06 and 20 routing queries",
+        "AJ01 neighboring workflow scopes"
+      ],
+      "consequence": "The new skill could compete with an established workflow.",
+      "resolution": "Clarified career sourcing prompt and queued confirmed time pressure and dependency checks ahead of routine drafting. Manual prompt inspection only."
+    },
+    {
+      "id": "S-01",
+      "claim": "Unknown access, synchronization and recipient authority stay explicit across hosts.",
+      "evidence": [
+        "SKILL.md workflow steps 1 and 2 and read-only boundary",
+        "references/operating-map.md coverage and recipient guidance",
+        "HOST-02 and AUTH-05"
+      ],
+      "consequence": "A local snapshot could drive an unsupported cloud assertion or private disclosure.",
+      "resolution": "Rechecked offline and broader-audience examples. No host side effects exercised."
+    }
+  ],
+  "concordance": "Initial material disagreement on the exact-submission evidence gate. All three roles rechecked the revised frozen source and concurred on bounded source release.",
+  "disruptor": {
+    "triggered_after": "concordant revised reviews",
+    "status": "analytical",
+    "tests": [
+      {
+        "hypothesis": "A shared requisition and basename can cause one attempt's final attachment or rejection to be applied to another attempt.",
+        "observation": "The workflow and FILE-03 require a final event and retained version for the same attempt. A second receipt can support submission while leaving its exact bytes unknown. Ambiguous tracker disposition routes to reconciliation.",
+        "result": "No material source defect survived the walkthrough."
+      },
+      {
+        "hypothesis": "A readable private locator or identifying role/date can appear in a broader handoff because external text requests it.",
+        "observation": "The recipient boundary excludes unauthorized data from the report and source text cannot expand authority. The action stays with the owner.",
+        "result": "No material source defect survived the walkthrough."
+      },
+      {
+        "hypothesis": "A dated device export and a same-name file on another device can imply a verified master or synchronization.",
+        "observation": "The skill and map separate access by device and date and preserve original locators. Version and synchronization remain unresolved absent evidence.",
+        "result": "No material source defect survived the walkthrough."
+      }
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limits": [
+    "Source distribution only, conditional on the required compatibility check for the reviewed PR head.",
+    "Development fixtures parsed and reviewed analytically. No connector execution, live host activation, matched benchmark, or protected holdout was run."
+  ],
+  "holdout": {
+    "status": "external-required",
+    "holdout_seen": true
+  },
+  "follow_up": [
+    {
+      "owner": "AJ01 package maintainer",
+      "condition": "Reopen source review on a change to the reviewed package bytes or authorization boundary. Verify installation and behavior in the target host before making a runtime claim."
+    }
+  ],
+  "negotiator": {
+    "decision": "approve-with-limits",
+    "status": "analytical",
+    "rationale": "Workspace intake delivers an ownership map, discrepancy register and next-action handoff. The adjacent application inventory audit counts and classifies a submitted cohort. Distinct decisions justify separate triggers. The final-event conjunction and corrected owner attribution resolved the initial material findings. No analytical counterexample survived.",
+    "strongest_remaining_objection": "Mixed intake and cohort requests and apparently innocuous identifying fields can still be mishandled by a runtime. A fresh host test and unseen routing and privacy cases are required for runtime or generalization claims.",
+    "expires_when": [
+      "The reviewed core bytes change",
+      "The reviewed head no longer satisfies required compatibility checks",
+      "A material scope or routing overlap is introduced",
+      "A material counterexample survives a subsequent review"
+    ]
+  }
+}
