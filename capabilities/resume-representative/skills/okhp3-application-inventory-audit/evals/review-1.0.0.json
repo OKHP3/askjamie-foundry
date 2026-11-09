@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "artifact": {
+    "path": "../SKILL.md",
+    "version": "1.0.0",
+    "sha256": "11b5f815760084ed1d47bd4aa7fd9532466c6016d8b1cd02d408e9df85bb83b7",
+    "resources_sha256": {
+      "references/inventory-record.md": "2b95069719b2b545e0a8384f88cb82c05f95d5b606a5dfdeccc56bae3861d626",
+      "evals/evals.json": "fa907e73eb96c2c6086782319c33924674e6d736ff3ad9d605fdeb314eb4fd6c",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+    }
+  },
+  "decision_question": "Is the standalone candidate-side inventory skill ready for bounded public source distribution?",
+  "acceptance_criteria": [
+    "Count only uniquely verified submissions in the stated cohort.",
+    "Separate verified pending, other active actions, declines, terminal outcomes, and uncertainty.",
+    "Gate full-cohort conclusions on source coverage.",
+    "Retain read-only and authorized audience boundaries.",
+    "Keep the inventory contract distinct from saved-job triage and application reconciliation."
+  ],
+  "source_ledger": [
+    {
+      "id": "SRC-01",
+      "type": "private workflow, generalized",
+      "observed_on": "2026-11-09",
+      "applicability": "Multiple applications were reconciled over time. A final employer-wide status question exposed the need for a separate proof of completeness. Only the pattern was retained."
+    },
+    {
+      "id": "SRC-02",
+      "type": "repository source",
+      "retrieved_on": "2026-11-09",
+      "repo": "OKHP3/askjamie-foundry",
+      "commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
+      "applicability": "Adjacent reconciliation and saved-opportunity triage packages establish the overlap and routing boundary."
+    },
+    {
+      "id": "SRC-03",
+      "type": "owner-specified review and authoring protocols",
+      "retrieved_on": "2026-11-09",
+      "repo": "OKHP3/skillz",
+      "commit": "1038229118c00a86ff67010c6d68ae84975a5cf2",
+      "applicability": "Equilibrium Review 1.0.1 and Skill Foundry 3.1.1 govern review and evidence labeling."
+    },
+    {
+      "id": "SRC-04",
+      "type": "synthetic development fixtures",
+      "path": "evals.json",
+      "applicability": "Contract walkthroughs assume explicit selection. The separate discovery designs specify expected routes."
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Reviewers used separate Codex contexts in one model family with the same frozen package and development fixtures.",
+      "The author could read every packaged case. Live runs and an unseen external holdout were not performed."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "claim_id": "INV-E03",
+      "initial_decision": "defer-for-evidence",
+      "finding": "An exclusive action bucket could conceal an independent employer reply.",
+      "change": "Added independent reply state, both next-action owners, and concurrent-owners fixture.",
+      "recheck": "approve-with-limits",
+      "evidence_ids": [
+        "SRC-04"
+      ]
+    },
+    {
+      "role": "outcome",
+      "claim_id": "OUT-02",
+      "initial_decision": "defer-for-evidence",
+      "finding": "All closed and single-record routing lacked explicit definitions.",
+      "change": "Defined all closed and qualified counterexamples under partial coverage. Distinguished single-record checks and public listing availability.",
+      "recheck": "approve-with-limits",
+      "evidence_ids": [
+        "SRC-02",
+        "SRC-04"
+      ]
+    },
+    {
+      "role": "safety-portability",
+      "claim_id": "SP-01",
+      "initial_decision": "defer-for-evidence",
+      "finding": "A read-looking control could mutate mailbox state or leak private provenance.",
+      "change": "Required known read-only paths, explicit non-authority of fetched text, redaction and supplied-evidence fallback.",
+      "recheck": "approve-with-limits",
+      "evidence_ids": [
+        "SRC-04"
+      ]
+    }
+  ],
+  "concordance": "material-agreement after revision",
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical",
+    "falsification_hypotheses": [
+      "A requisition-only decline can be assigned to the only verified route despite a plausible separate route.",
+      "A forwarded copy could inflate a count or hide a verified counterexample in a partial cohort."
+    ],
+    "test_results": [
+      "First objection survived review of the intermediate candidate. The final rules require unique attribution across plausible routes, including unconfirmed ones. The unproven-competing-route walkthrough keeps Q-17 unresolved before and after the crosswalk, then assigns the decline only to the distinct full application.",
+      "With two independently verified instances, forwarded copies collapse by evidence of their origin. A verified active instance disproves a universal decline even when an account is blocked."
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Exact final source and synthetic contracts address concurrent owners, route attribution, provenance and coverage.",
+      "The sibling reconciliation skill can sweep a portfolio. This package adds a distinct read-only aggregate output contract."
+    ],
+    "unresolved_items": [
+      "Saved triage may route mixed saved-and-submitted requests to reconciliation. Explicitly select inventory for the cohort audit until host routing is tested."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Source distribution only. No live model comparison, activation metrics, connector acceptance, installation or unseen holdout evidence.",
+    "Development cases and discovery designs are review inputs, not measured performance."
+  ],
+  "follow_up": [
+    {
+      "owner": "Maintainer",
+      "condition": "Before advertising automatic activation, test the mixed saved-and-submitted route and compare with-skill and baseline runs against an unseen holdout."
+    }
+  ],
+  "review_expiry": "Reopen on changes to identity or counting rules, routing, host capabilities, or the package contents."
+}
