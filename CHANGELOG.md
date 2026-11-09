@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-09: Interview preparation skill companions
+
+- Add Interview Evidence Map and Interview Questions as draftable Resume
+  Representative companions, with 15 synthetic development cases, versioned
+  equilibrium review, MIT notices and exact Skillz mirror hashes.
+- Keep public-work selection within the evidence-map package and formal
+  qualification audits, resumes, learning plans and public posts in their own
+  workflows. Preserve source conflicts and distinguish testimony from proof.
+- Publish analytical source only. Live behavior, automatic discovery, measured
+  uplift, protected holdout and host acceptance remain untested.
+
 ## 2026-11-09: Career evidence and preservation skills
 
 - Add portable Work Search Evidence and Career Artifact Audit source packages,

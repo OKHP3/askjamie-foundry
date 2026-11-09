@@ -4,6 +4,14 @@ Public child capability of AskJamie FoundRy.
 
 Turn supplied career evidence into role-specific professional narratives.
 
+The [interview evidence map](skills/okhp3-interview-evidence-map/SKILL.md)
+connects a specific role to defensible stories, public-work evidence and honest
+gaps. The [interview questions skill](skills/okhp3-interview-questions/SKILL.md)
+preserves candid concerns while removing unsupported premises. Both are
+draftable source with analytical review. See the
+[extraction and review](../../docs/interview-skills-2026-11-09.md) and
+[exact Skillz mirror manifest](../../docs/interview-skills-sync-2026-11-09.json).
+
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
 The [interview follow-up draft skill](skills/okhp3-interview-follow-up-draft/SKILL.md) defines a portable procedure for candidate thank-yous and next-step emails. It is a source-only integration candidate with host behavior untested.
