@@ -5,6 +5,14 @@
 - Keep different openings and true same-application status conflicts distinct.
 - Attribute candidate-reported observations and retain source timezones; add synthetic regressions and an analytical review with no live benchmark claim.
 
+## 2026-11-09: Résumé evidence reconciliation candidate
+
+- Add a read-only Resume Representative companion for reviewing a targeted
+  résumé against career masters and prior versions. Record corpus coverage,
+  claim lineage, and bounded recommendations with synthetic development cases.
+- Preserve the tested Résumé Representative entry point. Source review is
+  analytical. Host activation and live evaluation remain open.
+
 ## 2026-11-06: Contributor skill reconciliation
 
 - Reconcile the reviewed contributor packages with pinned Skillz source and
