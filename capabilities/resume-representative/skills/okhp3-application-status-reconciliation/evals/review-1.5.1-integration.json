@@ -1,0 +1,24 @@
+{
+  "status": "analytical-candidate",
+  "version": "1.5.1",
+  "date": "2026-11-09",
+  "outcome": "Integrate exact-destination verification with agency routes and exact attempts.",
+  "sources": {
+    "destination_pr190": "e575f2b84fa949e8c5677bcde3ed30e0068fa3d3",
+    "integrated_pr158": "99e58491d5a3a56b2b05ba46693a40c7427ac62c"
+  },
+  "historical_review_limit": "All previous reviews retained unchanged; they do not evaluate this integrated version.",
+  "hashes": {
+    "SKILL.md": "59f04937739878824b972c99e7dfc584d74e809f086c0934d0dd5b41f91ab450",
+    "references/reconciliation-record.md": "08f5e604935b009057b0fea3c5dfc9c9f17b2e8b2b47448040f26729178c72f2",
+    "evals/cases.json": "9afd4c5353f7c20ddeac5c86dcadf8756a33574ac56b12ccd36e772a24571b63",
+    "evals/portfolio-cases.json": "a6081224c411384a8a45994015b514deea3e0c2fee035ce87e6749e6c4a2c37b",
+    "evals/attempt-detail-cases.json": "f6229f0f6913a14fc008386b2ffff916b534bba1395f2d78b94126fbc720f971",
+    "evals/destination-verification-cases.json": "de22adc9ab5c3ac93b593d11bc6152fa0b119bcf3348bf764cc33e7c5c418564",
+    "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+  },
+  "live_benchmark": "not-run",
+  "protected_holdout": "not-run",
+  "independent_review": "pending",
+  "release_decision": "pending required CI and review"
+}

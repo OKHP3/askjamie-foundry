@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "decision_question": "May this sanitized version 0.6.0 be distributed as draftable source without claims of live host readiness or reliable performance?",
+  "acceptance_criteria": [
+    "Distinct use case and scope relative to existing skills",
+    "Honest role, credential, offer and privacy boundaries",
+    "Material failure scenarios addressed in source",
+    "Foundry format validation and evidence provenance",
+    "No invented live host or unseen holdout results"
+  ],
+  "artifact": {
+    "skill_version": "0.6.0",
+    "sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "c9130bdef3549bab983cdd2d01074140c2f1ca93f1a9b6dec031032c5c0878a0",
+      "evals/architecture.md": "fa044c610468feb03152e0c8802f0b3873e7604fdeb155887f7481ebd6a4513d",
+      "evals/candidate-assessment.md": "acf1f3aadb85a7d531a7ab43ec76e278bb1d05bfeee75507df5b320ea7849043",
+      "evals/cases.json": "e6cc48fb0782e179026e3f8fd99dbe2c64303a49f2f1966985dedf32c0bee2d7",
+      "evals/pilot-0.1.0.json": "d7a60cae610f5e9ea5979f8220467b546c11a88b2766ab25d17938c0521e8190",
+      "evals/pilot-0.3.0.json": "a23e9403e247b31056af67ef7062a774886260c859a33837ca5d8c55b4b6a7cd",
+      "evals/pilot-0.6.0.json": "a0c5f8ff1368cca1149866f86566f11fffdca4d6f5a324f904a6633d8a992554",
+      "evals/protocol-0.1.0.json": "93e3538ed7f83273dd24597a90dea8286d0b10da64bb31fbb7f6c444872667a1",
+      "evals/protocol-0.3.0.json": "9c6e0dab5e130eb5c8ec3edc7438653d1af6b15ea8cca50c880903a8718ceef8",
+      "evals/protocol-0.6.0.json": "cfb278918375b0eb00966cd433d85c7beceb199b072c59c5bbd457a9aaef6518",
+      "references/offer-record.md": "5f682897c833833b2228f7816a351fb1e265154d330f10b0d23b25fd53bdd589"
+    }
+  },
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "limits": [
+      "Reviewers and runners share a model family, provider, synthetic source author and parts of the source set.",
+      "The final safety reviewer had previously inspected earlier versions; others reviewed the current package.",
+      "No independent human, real host integration or protected unseen holdout was tested."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "reviewer": "v06_evidence_review",
+      "decision": "approve-with-limits",
+      "finding": "Historical 0.1 protocol reconstruction is disclosed; sampled records, hashes, mapping and prior evaluations match their available artifacts. No private details were found in reviewed files."
+    },
+    {
+      "role": "outcome",
+      "reviewer": "v06_outcome_review",
+      "decision": "approve-with-limits",
+      "finding": "Role-to-practice overlaps on learning maps, but exact offer qualification, collection readback and safe monitoring make this a distinct companion. Assessment used origin/main d37fe62720e7b2bf3ab8ab0fe62e049750d95cd5."
+    },
+    {
+      "role": "safety-portability",
+      "reviewer": "credential_final_review",
+      "decision": "approve-with-limits",
+      "finding": "Reviewed source addresses disclosed search privacy, interrupted outbox, event identity, conflicting observations and host-capability boundaries; no live reliability established."
+    }
+  ],
+  "concordance": "material-agreement-for-source-only",
+  "disruptor": {
+    "triggered": true,
+    "finding": "Earlier versions could expose private eligibility in searches or scheduled alerts, lose changes on crashes, or duplicate alerts when checks overlap. Further review found conflicting observations and event identity hazards.",
+    "resolution": "Revised source requires authorized privacy boundaries, durable conditional baseline/event recording, serialized recovery or atomic transactions, and safe alert claims. Visible synthetic cases cover the identified failure modes. These are attempted falsifications, not proof."
+  },
+  "claim_evidence_ledger": [
+    {
+      "id": "C-01",
+      "claim": "The source gives distinct offer qualification and safe-save/watch instructions.",
+      "status": "supported-as-source",
+      "evidence": [
+        "SKILL.md",
+        "evals/candidate-assessment.md",
+        "outcome review"
+      ]
+    },
+    {
+      "id": "C-02",
+      "claim": "The package has a small synthetic matched response comparison.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "evals/pilot-0.6.0.json",
+        "evals/protocol-0.6.0.json"
+      ],
+      "limits": "One run per configuration on four visible development cases; baseline 7/13, treatment 12/13; one criterion failed in both; possible retained treatment context. No general uplift claim."
+    },
+    {
+      "id": "C-03",
+      "claim": "A host reliably schedules, tracks, and delivers alerts in production.",
+      "status": "missing-evidence",
+      "smallest_next_test": "Perform authorized host-specific implementation and recovery tests, including duplicate delivery, ambiguous send and conflicting observations."
+    },
+    {
+      "id": "C-04",
+      "claim": "The skill reliably improves outcomes across users and unseen tasks.",
+      "status": "missing-evidence",
+      "smallest_next_test": "Run a pre-registered, adequately sampled independent evaluation with protected unseen cases."
+    }
+  ],
+  "decision": "approve-with-limits",
+  "owner": "AskJamie FoundRy maintainer",
+  "expiry": "On any material skill, source, runtime, or claim change, or 2027-02-09, whichever is earlier.",
+  "required_follow_up": [
+    "Retain test and review limitations in distribution.",
+    "Before claims of host operation, run authorized host-specific tests.",
+    "Before general outcome or uplift claims, evaluate with protected unseen cases.",
+    "Recheck the destination main branch and publish only the intended package."
+  ],
+  "negotiator": {
+    "reviewer": "v06_negotiator",
+    "decision": "approve-with-limits",
+    "rationale": "No source-only blocker remains, conditional on integrating against current main without deleting newer work and preserving evidence limits. The source is not evidence of a functioning monitor or live host.",
+    "unresolved_observation": "Treatment did not explicitly state that different B/C events from the same baseline can conflict or become stale.",
+    "limits": [
+      "The event-key retry and overlap cases are specified but not individually executed in the 0.6.0 pilot.",
+      "Four author-visible cases, one sample per configuration, shared model family and possible prior runner context do not establish uplift.",
+      "Source review is not a host, security, delivery, eligibility, or production-readiness test."
+    ]
+  }
+}
