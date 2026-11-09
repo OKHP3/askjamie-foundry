@@ -145,6 +145,7 @@
   "owner": "OKHP3",
   "expiry": "Re-review after the first live host test or any real campaign failure.",
   "follow_up": [
+    "Post-review fixes from PR #138 automated review: SKILL.md step 3 aligned to the 30/60/90-day boundary in concept-brief.md; standalone message rules added for hosts without okhp3-linkedin-message; 'on request' added to second-touch artifacts.",
     "Synthetic host test per the Resume Representative acceptance pattern",
     "Add an external holdout",
     "Decide whether resume-representative should route to this skill"
