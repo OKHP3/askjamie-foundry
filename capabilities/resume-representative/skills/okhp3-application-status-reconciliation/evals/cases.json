@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "status": "analytical",
   "holdout": "external-required",
   "holdout_seen": true,
@@ -126,7 +126,7 @@
     {
       "id": "different-openings",
       "prompt": "One application was declined but the portal still lists another role as active. Reconcile the tracker.",
-      "fixture": "Employer A: platform rejection identifies posting L-11; portal active entry identifies different R-22. No crosswalk links them. Owner authorizes corrections. The authorized destination supports a write-time condition and exact readback.",
+      "fixture": "Employer A: platform rejection uniquely identifies the candidate application for posting L-11; portal active entry identifies different R-22. No crosswalk links them. Owner authorizes corrections. The authorized destination supports a write-time condition and exact readback.",
       "expect": [
         "Close only the verified L-11 application",
         "Keep R-22 active as reported by its own source",
@@ -136,7 +136,7 @@
     {
       "id": "same-application-conflict",
       "prompt": "The employer says I was declined but the portal still shows under consideration. Update my records.",
-      "fixture": "Exact R-31 is named in a new employer decision; the same portal record shows under consideration with no reliable status timestamp. Authorized tracker and canonical updates. The authorized destination supports a write-time condition and exact readback.",
+      "fixture": "A new employer decision uniquely identifies the same R-31 application and route shown in the portal; that record shows under consideration with no reliable status timestamp. Authorized tracker and canonical updates. The authorized destination supports a write-time condition and exact readback.",
       "expect": [
         "Record the decision and portal state with source and observation times",
         "Do not fabricate a reason or claim the portal is current or stale",
