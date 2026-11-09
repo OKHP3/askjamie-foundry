@@ -4,6 +4,11 @@ Public child capability of AskJamie FoundRy.
 
 Turn supplied career evidence into role-specific professional narratives.
 
+The [LinkedIn DM reconciliation skill](skills/okhp3-linkedin-dm-reconcile/SKILL.md)
+reconciles email alerts with incoming and outgoing messages before deciding
+which request remains open. It is an exact portable mirror of the Skillz core,
+with analytical review only. See [routing and synchronization](docs/linkedin-dm-reconcile.md).
+
 The [interview evidence map](skills/okhp3-interview-evidence-map/SKILL.md)
 connects a specific role to defensible stories, public-work evidence and honest
 gaps. The [interview questions skill](skills/okhp3-interview-questions/SKILL.md)
