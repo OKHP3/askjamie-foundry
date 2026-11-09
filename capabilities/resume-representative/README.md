@@ -33,6 +33,12 @@ reusable methods, existing package owners and evidence limits.
 The two new packages are source releases with analytical review and synthetic
 cases. Installation, live benchmarks and unseen holdouts remain unverified.
 
+Use Record Location Reconciliation for authorized moves that preserve versions
+and for verifying affected paths and tracker links. Skillz is the canonical
+source for this companion skill.
+[Skillz Forge listing](https://okhp3.github.io/skillz/#/skills/knowledge-operations/okhp3-record-location-reconciliation) ·
+[Canonical SKILL.md](https://github.com/OKHP3/skillz/blob/main/knowledge-operations/okhp3-record-location-reconciliation/SKILL.md)
+
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,
 with original filenames, bytes and provenance. Registry migration status is
