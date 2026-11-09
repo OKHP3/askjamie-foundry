@@ -1,0 +1,49 @@
+{
+  "version": "1.2.1",
+  "status": "analytical",
+  "holdout": "external-required",
+  "holdout_seen": true,
+  "cases": [
+    {
+      "id": "marked-preview-instance",
+      "prompt": "Use the marked decision to reconcile my applications.",
+      "fixture": "A marked preview appears next to R-601. The original employer message explicitly declines R-602 instance A-1, submitted May 1 America/Chicago, with the original receipt arriving May 2 at 01:05 UTC. The only existing R-602 rows are linked to A-2, submitted May 3. A forwarded copy of the A-1 receipt arrives after the decision.",
+      "expect": [
+        "Use the original decision for R-602 A-1 and preserve the May 1 submission date",
+        "Keep the R-601 and R-602 A-2 rows unchanged",
+        "Hold an A-1 write until an exact authorized target is identified"
+      ]
+    },
+    {
+      "id": "queued-sync-metadata-only",
+      "prompt": "Confirm this decision is reflected in my records and synced to the remote folder.",
+      "fixture": "A guarded canonical edit reads back correctly. The approved local decision note was updated and its exact local content reads back correctly. Remote sync was queued. The exact remote item shows a matching name, size and modification time. Its content and digest are unavailable. An identically named file elsewhere contains the intended text. A separate tracker returns a permission error during preflight, before any write.",
+      "expect": [
+        "Verify the canonical edit and local save separately",
+        "Report remote sync as unverified for the exact item and overall reconciliation as partial",
+        "Do not retry an unsettled operation based on metadata or the other copy",
+        "Report the tracker blocked separately from the queued remote sync"
+      ]
+    },
+    {
+      "id": "verified-exact-remote-digest",
+      "prompt": "Confirm the updated decision note synced.",
+      "fixture": "The approved local note and an authoritative digest from the exact intended remote item match. The two digests use the same algorithm and the remote digest is tied to the current item version.",
+      "expect": [
+        "Verify the intended remote item from the matching digest",
+        "Report the exact item and verification basis",
+        "Leave any unrelated or unchecked tracker stages as separate observations"
+      ]
+    },
+    {
+      "id": "unresolved-current-conflict",
+      "prompt": "Use these employer records to update this application.",
+      "fixture": "The employer receipt verifies R-604 A-1 submitted June 2. Two authoritative sources both give current dispositions for A-1 on June 5. One says closed and one says under review. Neither provides a finer event timestamp or explicit supersession.",
+      "expect": [
+        "Preserve the June 2 submission",
+        "Record both specific dispositions and the unresolved event order",
+        "Hold the disposition change and identify the exact-source recheck"
+      ]
+    }
+  ]
+}
