@@ -71,3 +71,18 @@ The [role-to-practice skill](skills/okhp3-role-to-practice/SKILL.md) maps a
 specific opening and supplied career evidence to qualification gaps, learning,
 and a synthetic practice exercise. Its [release review](skills/okhp3-role-to-practice/evals/review.md)
 records the evaluation limits.
+
+## Career reference and coaching companions
+
+- [Lifetime Career Reference](skills/okhp3-lifetime-career-reference/SKILL.md)
+  compiles a private biography, registers and bibliography from the existing
+  career canon. Source intake and claim resolution retain their upstream owners.
+- [Role Master Resumes](skills/okhp3-role-master-resumes/SKILL.md) creates stable,
+  source-linked role-family baselines and requested format editions.
+- [Coaching Engagement](skills/okhp3-coaching-engagement/SKILL.md) maintains a
+  private intake/meeting record, service-term questions and evidence-backed
+  follow-ups while preserving the existing application owner.
+
+These 0.2.0 packages are draftable source candidates with synthetic development
+cases and analytical review. See [extraction and review](docs/career-library-skills-2026-11-09.md).
+Matched model benchmarks, unseen holdouts and native-host acceptance are not established.

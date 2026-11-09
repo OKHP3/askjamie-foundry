@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-09: Lifetime career reference, role masters and coaching
+
+- Add three 0.2.0 draftable source skills for a canon-derived lifetime career
+  reference, role-family resume editions and private coaching engagement records.
+- Reuse existing source intake and evidence canon instead of duplicating ledger
+  ownership. Preserve evidence status, disclosure boundaries and guarded saves.
+- Include synthetic development/discovery cases, independent analytical role
+  review and exact Skillz mirror records. Live benchmarks, unseen holdouts and
+  native-host acceptance remain unverified.
+
 ## 2026-11-09: LinkedIn DM context reconciliation
 
 - Add an exact mirror of the Skillz `okhp3-linkedin-dm-reconcile` 1.0.1
