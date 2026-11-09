@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09: Interview cue-card candidate
+
+- Add a private-input, evidence-grounded interview cue-card skill and synthetic development cases.
+- Record analytical review and defer release claims pending independent review and live evaluation.
+
 ## 2026-11-06: Contributor skill reconciliation
 
 - Reconcile the reviewed contributor packages with pinned Skillz source and
