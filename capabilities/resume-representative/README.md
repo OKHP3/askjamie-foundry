@@ -13,12 +13,15 @@ from status-only review, saved-opening triage and résumé narrative drafting. T
 canonical package is here; Skillz carries a byte-matched distribution mirror.
 See the [candidate assessment and release limits](docs/application-completion-2026-11-09.md).
 
+The [interview follow-up draft skill](skills/okhp3-interview-follow-up-draft/SKILL.md) defines a portable procedure for candidate thank-yous and next-step emails. It is a source-only integration candidate with host behavior untested.
+
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,
 with original filenames, bytes and provenance. Registry migration status is
 `imported`. This records source consolidation only. Portable skill conversion,
 configured GPT capture, Replit reconciliation and host acceptance remain open.
 
+- [Concept-first outreach skill candidate](skills/concept-first-outreach/SKILL.md): plan a concept-led approach to a decision maker, with a deliverable set, send order, reply playbook, and cadence. Integration candidate, analytically reviewed 2026-11-09; not host-tested.
 - [Preserved Replit environment delta](origin/replit/README.md)
 - [Preservation scope and licensing](origin/README.md)
 - [Per-file source and SHA-256 index](origin/source-index.json)
@@ -35,3 +38,12 @@ on 2026-10-19. Private application state and every permanent-private capability
 remain protected. Shared contributor tooling is preserved as historical source,
 not a product entry point. New product work belongs in
 `skills/resume-representative/SKILL.md` after source and reuse rights are established.
+
+The [job screening handoff skill](skills/okhp3-job-screening-handoff/SKILL.md)
+turns screening notices into a candidate-owned checklist and preserves the last
+verified checkpoint. Its public evaluation evidence is analytical.
+
+The [role-to-practice skill](skills/okhp3-role-to-practice/SKILL.md) maps a
+specific opening and supplied career evidence to qualification gaps, learning,
+and a synthetic practice exercise. Its [release review](skills/okhp3-role-to-practice/evals/review.md)
+records the evaluation limits.

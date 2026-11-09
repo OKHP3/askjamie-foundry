@@ -9,6 +9,11 @@
 - Preserve all historical snapshots and private career material. Fixture evaluation
   is not live ATS integration, automatic discovery or production acceptance.
 
+## 2026-11-09: Application reconciliation source boundaries
+
+- Keep different openings and true same-application status conflicts distinct.
+- Attribute candidate-reported observations and retain source timezones; add synthetic regressions and an analytical review with no live benchmark claim.
+
 ## 2026-11-06: Contributor skill reconciliation
 
 - Reconcile the reviewed contributor packages with pinned Skillz source and
