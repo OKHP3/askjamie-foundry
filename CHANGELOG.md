@@ -1,5 +1,44 @@
 # Changelog
 
+## 2026-11-09: Lifetime career reference, role masters and coaching
+
+- Add three 0.2.0 draftable source skills for a canon-derived lifetime career
+  reference, role-family resume editions and private coaching engagement records.
+- Reuse existing source intake and evidence canon instead of duplicating ledger
+  ownership. Preserve evidence status, disclosure boundaries and guarded saves.
+- Include synthetic development/discovery cases, independent analytical role
+  review and exact Skillz mirror records. Live benchmarks, unseen holdouts and
+  native-host acceptance remain unverified.
+
+## 2026-11-09: LinkedIn DM context reconciliation
+
+- Add an exact mirror of the Skillz `okhp3-linkedin-dm-reconcile` 1.0.1
+  read-only source candidate to Resume Representative.
+- Compose message/request context with existing application-status and career
+  evidence workflows; keep sending, tracker writes and submission separate.
+- Preserve synthetic evaluations, analytical review limits and complete core
+  hash verification. No live connector or unattended-monitoring claim is made.
+
+## 2026-11-09: Interview preparation skill companions
+
+- Add Interview Evidence Map and Interview Questions as draftable Resume
+  Representative companions, with 15 synthetic development cases, versioned
+  equilibrium review, MIT notices and exact Skillz mirror hashes.
+- Keep public-work selection within the evidence-map package and formal
+  qualification audits, resumes, learning plans and public posts in their own
+  workflows. Preserve source conflicts and distinguish testimony from proof.
+- Publish analytical source only. Live behavior, automatic discovery, measured
+  uplift, protected holdout and host acceptance remain untested.
+
+## 2026-11-09: Career evidence and preservation skills
+
+- Add portable Work Search Evidence and Career Artifact Audit source packages,
+  private runtime templates and synthetic development cases.
+- Map recurring career workflows to existing package and PR owners, preserving
+  application reconciliation, ranking, submission and interview boundaries.
+- Record version-specific analytical review and structural checks separately
+  from live benchmarks, unseen holdouts and host installation.
+
 ## 2026-11-09: Application reconciliation source boundaries
 
 - Keep different openings and true same-application status conflicts distinct.
