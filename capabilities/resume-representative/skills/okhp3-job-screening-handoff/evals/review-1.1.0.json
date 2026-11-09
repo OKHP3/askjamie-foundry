@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.1.0",
+    "sha256": "83b396881a530a789f4e8f24b4f2373fe8845cf0847d9bc7d3dd9e23bd2cd3a6",
+    "core_file_hashes": {
+      "SKILL.md": "83b396881a530a789f4e8f24b4f2373fe8845cf0847d9bc7d3dd9e23bd2cd3a6",
+      "evals/checkpoint-cases-1.1.0.json": "ca5362a0d723db0d4f322470d8283d8a6bf370cb5e7e4b1686b5a1a812b491d6"
+    },
+    "canonical_baseline": "71e0aeb87c2b1eb31270490a1f326493e7fd4a4a"
+  },
+  "decision_question": "Does the canonical screening handoff distinguish the checkpoint evidence needed for a safe candidate handoff?",
+  "acceptance_criteria": [
+    "Preserve the v1.0.0 read-only, exact-session and private-link boundaries.",
+    "Differentiate prepared, attempted-unverified and provider-confirmed saved progress.",
+    "Keep combined consent controls candidate-owned and application artifact correction separate.",
+    "Publish source and synthetic fixtures with version-specific evidence."
+  ],
+  "sources": [
+    {
+      "id": "OBS-01",
+      "basis": "Sanitized workflow observations: role-specific saved checkpoints, a clarified current employment fact, a screening agreement whose label and destination differed, and a separate pending attachment correction."
+    },
+    {
+      "id": "BASE-01",
+      "basis": "Canonical read-only screening package from PR #166. v1.0.0 cases and review retained as historical design evidence."
+    },
+    {
+      "id": "FIX-01",
+      "basis": "Four synthetic development cases in checkpoint-cases-1.1.0.json."
+    }
+  ],
+  "candidate_decisions": [
+    {
+      "candidate": "Screening handoff",
+      "decision": "Strengthen the canonical package",
+      "basis": "A screening has its own identity, chronology, candidate-owned gates and completion evidence."
+    },
+    {
+      "candidate": "Application status reconciliation",
+      "decision": "Reuse published companion",
+      "basis": "Employer status, tracker writes and evidence coverage have a maintained workflow."
+    },
+    {
+      "candidate": "Correcting submitted résumé association",
+      "decision": "Route to separate application workflow",
+      "basis": "Submission and replacement require artifact-specific evidence and approval. Include the boundary as a regression case."
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Read-only reviewer roles shared model family and static source set.",
+      "No candidate systems, behavioral fixture runs or protected holdout."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "prompt_id": "screen_evidence_review",
+      "decision": "approve-with-limits",
+      "evidence_ids": [
+        "OBS-01",
+        "BASE-01",
+        "FIX-01"
+      ],
+      "finding": "Historical evidence retains its v1.0.0 hash. Current fixtures trace the checkpoint and attachment distinctions."
+    },
+    {
+      "role": "outcome",
+      "prompt_id": "screen_outcome_review",
+      "decision": "approve-with-limits",
+      "evidence_ids": [
+        "FIX-01"
+      ],
+      "finding": "Each checkpoint has a distinct candidate action. The mixed-control fixture needed explicit preparation evidence."
+    },
+    {
+      "role": "safety-portability",
+      "prompt_id": "screen_safety_review",
+      "decision": "approve-with-limits",
+      "evidence_ids": [
+        "BASE-01",
+        "FIX-01"
+      ],
+      "finding": "Read-only access, no personalized-link activation, exact-session verification and candidate-owned consent remain intact."
+    }
+  ],
+  "concordance": "material-agreement",
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical",
+    "prompt_id": "screen_disruptor",
+    "falsification_hypotheses": [
+      "A save on screen B resolves a timeout on screen A.",
+      "A trusted origin makes combined save and recording administrative-only.",
+      "A screening receipt proves a prepared résumé correction was submitted."
+    ],
+    "test_results": [
+      "The exact-session readback rule preserves A as attempted-unverified. The final fixture explicitly gives both sessions the same requisition.",
+      "The candidate-owned mixed-control rule holds on the verified session. The fixture explicitly records a local prepared answer and no observed save.",
+      "The correction remains separate, with the original attachment association intact."
+    ],
+    "execution": "Static falsification attempts against source and synthetic case design."
+  },
+  "negotiator": {
+    "triggered": true,
+    "prompt_id": "screen_negotiator",
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Final core and fixture hashes matched.",
+      "Both fixture clarifications are explicit and support observable expectations.",
+      "No surviving source defect within read-only scope."
+    ],
+    "unresolved_items": [
+      "Runtime behavior, discovery metrics, installed host acceptance and unseen holdout remain unverified."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Source release only. Four new development cases are designed and inspected. Zero behavioral runs.",
+    "The v1.0.0 package review remains historical and cannot validate v1.1.0."
+  ],
+  "follow_up": [
+    {
+      "owner": "Capability maintainer",
+      "condition": "Before claiming live or installed-host behavior",
+      "action": "Run the exact version in authorized status-only environments with a protected external holdout."
+    }
+  ]
+}
