@@ -1,0 +1,142 @@
+{
+  "schema_version": "2.0",
+  "artifact": {
+    "name": "okhp3-application-submission-evidence",
+    "version": "1.0.0",
+    "sha256": {
+      "SKILL.md": "e1e19223f0de24e45bbb8394b056ca029bfd8e67bed308247dd9df010d2f1d0c",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "references/submission-record.md": "7e0fa7122c7eb9e9fe67186d0889d860c2fbd8a8687a23a857727cc5e420a6fb",
+      "evals/cases.json": "4ecc10b36c48e60134a3345f49767874d3c57aa16c34185f00c6e26897fecb96"
+    },
+    "excluded_from_evaluated_inputs": [
+      "evals/review.md",
+      "evals/review.json"
+    ]
+  },
+  "review_date": "2026-11-09",
+  "question": "Does the portable package meet the criteria for source distribution and personal installation?",
+  "evaluation_status": "analytical",
+  "compared_base": {
+    "commit": "12c699ab90492ec5d8a3bcc41781d8c384500aec",
+    "status_reconciliation_version": "1.1.0"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "type": "redacted historical first-party observations",
+      "applicability": "Source for attachment drift, distinct confirmed attempts, and receipt and byte limits. No private material or performance evidence included."
+    },
+    {
+      "id": "S2",
+      "type": "versioned public source",
+      "locator": "https://github.com/OKHP3/askjamie-foundry/tree/12c699ab90492ec5d8a3bcc41781d8c384500aec/capabilities/resume-representative/skills",
+      "applicability": "Adjacent drafting and later reconciliation boundaries."
+    },
+    {
+      "id": "S3",
+      "type": "versioned review procedures",
+      "versions": {
+        "equilibrium_review": "1.0.1",
+        "skill_foundry": "3.1.1"
+      },
+      "applicability": "Independent role review and bounded release."
+    },
+    {
+      "id": "S4",
+      "type": "synthetic development fixtures",
+      "locator": "evals/cases.json",
+      "applicability": "Visible to authors and reviewers. Analytical design checks."
+    }
+  ],
+  "acceptance_criteria": [
+    "Exact applicant, requisition and attempt binding",
+    "Separate verified selection, stored bytes, submission and time claims",
+    "No unauthorized action, disclosure, duplicate retry, or loss of existing evidence",
+    "Portable supplied-evidence mode with adjacent workflow routing",
+    "Release claims limited to recorded evidence"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "status": "supported",
+      "basis": "S1, SE-02, SE-05, SE-08 and SE-09",
+      "consequence": "Wrong applicant, role, file or attempt can be certified."
+    },
+    {
+      "id": "C2",
+      "status": "supported",
+      "basis": "S1, SE-01, SE-03 and SE-07",
+      "consequence": "A receipt can be mistaken for a byte match or exact submission time."
+    },
+    {
+      "id": "C3",
+      "status": "supported",
+      "basis": "SE-04, SE-06 and SE-08 through SE-13",
+      "consequence": "Unauthorized disclosure, duplicate action or lost evidence."
+    },
+    {
+      "id": "C4",
+      "status": "supported_with_limits",
+      "basis": "S2 and 21 routing prompts",
+      "consequence": "A bare receipt prompt can match either skill. Automatic activation is untested."
+    },
+    {
+      "id": "C5",
+      "status": "supported",
+      "basis": "S3, S4 and verified SHA-256 manifest",
+      "consequence": "A design review can be mistaken for performance evidence."
+    }
+  ],
+  "roles": [
+    {
+      "role": "evidence",
+      "result": "Conditional pass after applicant, attempt, selection, timestamp and routing revisions."
+    },
+    {
+      "role": "outcome",
+      "result": "Conditional pass. Supplied evidence supports the requested handoff. Bare receipt intent needs clarification."
+    },
+    {
+      "role": "safety_portability",
+      "result": "Conditional pass after minimum-disclosure, guarded-write and delayed-completion rules."
+    },
+    {
+      "role": "disruptor",
+      "result": "Receipt-plus-snapshot partial completion defect reproduced analytically and closed by SE-13 recheck."
+    },
+    {
+      "role": "negotiator",
+      "result": "Approve with limits based on separate evidence claims and item-scoped readback and replay."
+    }
+  ],
+  "independence": {
+    "contexts": "separate role prompts and contexts",
+    "limitations": [
+      "Shared model family and frozen source set",
+      "Development fixtures visible",
+      "No live portal, connector or matched execution"
+    ]
+  },
+  "decision": "approve-with-limits",
+  "release_scope": [
+    "Source distribution",
+    "Personal installation"
+  ],
+  "holdout": {
+    "policy": "external-required",
+    "seen": true,
+    "supplied": false
+  },
+  "live_benchmark": "not-run",
+  "follow_up": {
+    "owner": "Capability maintainer",
+    "next_test": "Use a matched with-skill and without-skill run with an unseen holdout. Test ambiguous receipt activation with both skills installed.",
+    "review_expiry": "Reopen when authority, receipt identity, write behavior or target-host activation changes."
+  },
+  "personal_host_adapter": {
+    "path": "agents/openai.yaml",
+    "sha256": "567cd79ba6cd057b8b9ec5b20482e8a04380542963866875647892c58cecc9a6",
+    "scope": "Personal installation only. Portable GitHub source contains the same core and review files."
+  }
+}
