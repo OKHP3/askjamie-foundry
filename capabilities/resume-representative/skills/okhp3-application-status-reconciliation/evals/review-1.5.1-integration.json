@@ -19,6 +19,19 @@
   },
   "live_benchmark": "not-run",
   "protected_holdout": "not-run",
-  "independent_review": "pending",
-  "release_decision": "pending required CI and review"
+  "independent_review": {
+    "reviewer": "separate read-only integration reviewer",
+    "reviewed_commit": "f8be1c9",
+    "decision": "approve-with-limits",
+    "findings": "No blocking defect. Combined39 synthetic cases parse with unique IDs per suite; original case expectations, historical reviews and destination fixtures retained. Exact-readback and blocked-vs-unverified rules preserve trusted relay semantics. Links and current hashes verified.",
+    "limits": "Analytical source review, not live runtime or skill evaluation. Suite versions record lineage. No protected holdout or performance claim."
+  },
+  "release_decision": "pending required CI and review",
+  "local_validation": {
+    "runtime": "Python3.15",
+    "manifest": "passed",
+    "registry": "passed",
+    "public_artifact": "passed",
+    "repository_tests": "180 passed"
+  }
 }
