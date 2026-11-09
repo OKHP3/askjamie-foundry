@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-09: Application completion skill candidate
+
+- Add the portable job-application-completion candidate, composing existing résumé,
+  saved-opening triage and status-reconciliation workflows without changing them.
+- Include synthetic identity, authority, uncertain-submit, disclosure and concurrent
+  worker cases, plus version-bound equilibrium review and distribution records.
+- Preserve all historical snapshots and private career material. Fixture evaluation
+  is not live ATS integration, automatic discovery or production acceptance.
+
 ## 2026-11-06: Contributor skill reconciliation
 
 - Reconcile the reviewed contributor packages with pinned Skillz source and

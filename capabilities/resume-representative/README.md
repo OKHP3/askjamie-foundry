@@ -6,6 +6,13 @@ Turn supplied career evidence into role-specific professional narratives.
 
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
+The [job application completion skill](skills/okhp3-job-application-completion/SKILL.md)
+prepares truthful role-specific materials, resumes saved drafts, handles authorized
+submission and reconciles confirmed receipts. It is a limited candidate, separate
+from status-only review, saved-opening triage and résumé narrative drafting. The
+canonical package is here; Skillz carries a byte-matched distribution mirror.
+See the [candidate assessment and release limits](docs/application-completion-2026-11-09.md).
+
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,
 with original filenames, bytes and provenance. Registry migration status is
