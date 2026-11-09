@@ -4,7 +4,8 @@ Use one record per candidate account, employer, and requisition or provisional p
 
 - Identity and match basis: employer, exact ID, applicant and application-instance match, posting link, crosswalk evidence.
 - Evidence coverage: source, search window or exact key, observed state, event date, observed date, and coverage (checked, empty, blocked, or unavailable).
-- Disposition: recruiter and employer milestones, submission state/date, employer outcome, owner pursuit, listing availability, interview event and RSVP, attendance evidence, and artifact transmission state.
+- Role state: owner pursuit and listing availability.
+- Application routes: one entry per distinct route or candidate application ID. Record submission milestone and date, employer disposition, interview event and RSVP, attendance evidence, and artifact transmission state for each. Keep unknown dates unset. A shared requisition alone cannot match a decision to a route.
 - Surface deltas: surface and exact row, current and intended values, authorization, write-time guard, write and readback results (unchanged, planned, verified, unverified, or blocked).
 - Open work: disagreement or missing evidence, smallest resolving check, owner, and date if established.
 
@@ -18,7 +19,7 @@ window when access returns and deduplicate overlapping events by stable identity
 A successful mail search cannot advance the tracker cutoff. Use a reliable source
 cursor or arrival, creation, or modification time for discovery. Use event
 effective time for ordering and explicit supersession. When reliable change
-tracking is unavailable, rescan within the agreed scope or qualify coverage.
+tracking is unavailable, rescan within the agreed scope or qualify coverage. Label the overall sweep partial when a material source is inaccessible. Distinguish dated handoffs from current observations and report counts by what was actually verified.
 
 ## Staffing-agency handoff and message relays
 
@@ -29,7 +30,7 @@ tracking is unavailable, rescan within the agreed scope or qualify coverage.
 | Client received it | Explicit recruiter report or client-side evidence tied to that route | `client_receipt`: recruiter-reported or independently confirmed. Keep conflicting observations with source and date. |
 | Applicant entered client interviews | Applicant-specific client interview evidence tied to the route | `client_interview`: invitation, confirmed schedule, or attendance as supported. Record recruiter screens separately. |
 
-Use `unverified` for claims without sufficient evidence and record the search coverage separately. If sources conflict about the same milestone, record the competing observations and hold its delta. An incomplete or empty search cannot resolve a conflict by itself. An external listing with the same client and title can remain a separate, unresolved tracker row.
+Use `unverified` for claims without sufficient evidence and record the search coverage separately. If sources conflict about the same milestone for the same scope and time, and neither supersedes the other, record the competing observations and hold its delta. An incomplete or empty search cannot resolve a conflict by itself. An external listing with the same client and title can remain a separate, unresolved tracker row.
 
 Authenticate each source before using it as evidence. Verify that trusted platform delivery or equivalent independent evidence connects the full relay to the original sender and exact application. A quoted sender, original ID, or complete-looking body can be forged. Use unverified material for discovery only.
 
