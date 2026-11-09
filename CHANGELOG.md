@@ -2,10 +2,15 @@
 
 ## 2026-11-09: Staffing-agency application reconciliation
 
-- Extend the Resume Representative reconciliation skill v1.3.0 with separate agency intake,
+- Extend the Resume Representative reconciliation skill v1.4.0 with separate agency intake,
   end-client handoff and receipt, and applicant interview evidence.
 - Deduplicate mirrored correspondence and add synthetic regression cases for
   ambiguous tracker rows, conflicting claims, and stale write preconditions.
+
+## 2026-11-09: Application reconciliation source boundaries
+
+- Keep different openings and true same-application status conflicts distinct.
+- Attribute candidate-reported observations and retain source timezones; add synthetic regressions and an analytical review with no live benchmark claim.
 
 ## 2026-11-06: Contributor skill reconciliation
 

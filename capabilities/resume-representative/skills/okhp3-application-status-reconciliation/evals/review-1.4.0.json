@@ -5,19 +5,19 @@
   "evaluation_status": "analytical",
   "artifact": {
     "path": "../SKILL.md",
-    "version": "1.3.0",
-    "base_commit": "3ee8596f5f810347ae936b3dc9297f40c2b8b9c1",
+    "version": "1.4.0",
+    "base_commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
     "file_sha256": {
       "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
-      "SKILL.md": "a24874bf4afb548fd6bcf238f067deee1d9b9ff914701392a576319fb3d8ea69",
-      "evals/cases.json": "9c93aa22bd2a03d68af02f910650e73770063b923d4dfc7c103ab950b5c11f9d",
+      "SKILL.md": "c9d25ea802c03955b4a2c67a5ff22c699a3281db8a532067352c1a39e01bfbb5",
+      "evals/cases.json": "e30ddf5ef378562a567789748b445a3a8156e19a8f39c5b8ab0d9fa2ceca4fb5",
       "evals/portfolio-cases.json": "a6081224c411384a8a45994015b514deea3e0c2fee035ce87e6749e6c4a2c37b",
-      "evals/review.md": "aaca01d517129aae023b39cd2076c5f242e95483d5d47812139a7138cac496b4",
+      "evals/review.md": "8a7052dc904b64e34797ac816100f64d2d90b2e557714fe53735201383abcebc",
       "evals/review-1.1.0.json": "b37a043ee71f2bfffb2d5b708d05536514d8fcd1cb8fd2011850de31e530028e",
       "evals/review-1.2.0.json": "54b8e521b5056dba513ce9ce5d6e802d6bcc3f19241d9fb60ed5195861a58b2a",
       "references/reconciliation-record.md": "48f8785165d09f46f3e0413492b58940e30ce895f9bdc3fe32bc1cfb27b51d57"
     },
-    "sha256": "98f13da7a3ebc5f2f7d6c17a02ed350e7c13236cfca0839b026c1150bb574439",
+    "sha256": "77b97ff93ec4b7807710b87bb2cb5fdf767ebf79b5ee9c99116609a7f6236949",
     "digest_scope": "Canonical skill, reference, license, case design and prior review records. This review is excluded.",
     "algorithm": "SHA-256 of compact UTF-8 sorted JSON file hash map."
   },
@@ -73,6 +73,14 @@
       "commit": "3ee8596f5f810347ae936b3dc9297f40c2b8b9c1",
       "checked": "2026-11-09",
       "use": "Preserve portfolio sweep coverage, exact route disposition, idempotent event writes, pending retries and all five portfolio cases."
+    },
+    {
+      "id": "SRC-06",
+      "type": "merged canonical integration base",
+      "url": "https://github.com/OKHP3/askjamie-foundry/pull/148",
+      "commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
+      "checked": "2026-11-09",
+      "use": "Preserve exact-route source conflict handling, candidate-attributed evidence, timestamp and offset rules, and all five added case contracts."
     }
   ],
   "claim_ledger": [
@@ -180,7 +188,7 @@
     "status": "analytical",
     "checks": [
       "Ruby YAML parsed name, description, version and metadata.",
-      "Validated portable structure, relative links, 25 synthetic cases across two files, all 17 upstream contracts preserved, public-safe text and exact release digests.",
+      "Validated portable structure, relative links, 30 synthetic case contracts across two files, all 22 upstream contracts preserved, public-safe text and exact release digests.",
       "The Skillz catalog validator reported the same 39-character name against its 36-character catalog cap for baseline and candidate. The portable format allows 64 characters. Retained the existing AskJamie path."
     ],
     "discovery": {
@@ -249,7 +257,8 @@
       "The final package integrates on PR #147 and preserves its source-coverage and partial access rules.",
       "Independent rechecks identified and resolved the remaining single-source privacy gap. The primary procedure now excludes token-bearing locators regardless of reference loading.",
       "The positive agency case states Saved to Submitted with exact client receipt and both readbacks. Two inherited fixtures explicitly receive trusted-full-relay defaults.",
-      "The integration owner reapplied reviewed staffing-agency changes to PR #154 after it merged. Source inspection and exact fixture and evidence comparisons preserve the independently landed behavior and records."
+      "The integration owner reapplied reviewed staffing-agency changes to PR #154 after it merged. Source inspection and exact fixture and evidence comparisons preserve the independently landed behavior and records.",
+      "PR #148 landed during CI. Reapplied the reviewed staffing-agency changes and verified its extra identity, conflict, attribution, timing, and outreach boundaries, fixtures and review evidence."
     ],
     "unresolved_items": [
       "Live execution and host acceptance remain unevaluated."
