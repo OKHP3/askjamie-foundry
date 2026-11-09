@@ -3,266 +3,118 @@
   "review_protocol": "equilibrium-v1",
   "review_mode": "conditional",
   "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
   "artifact": {
     "path": "../SKILL.md",
     "version": "1.4.0",
-    "base_commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
+    "sha256": "0bc20e481000eb55f8fb2ff9cd8e86c51c4b449d67cd6d07a00bf9dddefc1f66",
     "file_sha256": {
-      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
-      "SKILL.md": "c9d25ea802c03955b4a2c67a5ff22c699a3281db8a532067352c1a39e01bfbb5",
-      "evals/cases.json": "e30ddf5ef378562a567789748b445a3a8156e19a8f39c5b8ab0d9fa2ceca4fb5",
+      "SKILL.md": "0bc20e481000eb55f8fb2ff9cd8e86c51c4b449d67cd6d07a00bf9dddefc1f66",
+      "references/reconciliation-record.md": "28545f917dfc6f2d9228d7607e81b8d9eddb4bb5c3fcda37d09be0f5581de2ef",
+      "evals/attempt-detail-cases.json": "f6229f0f6913a14fc008386b2ffff916b534bba1395f2d78b94126fbc720f971",
+      "evals/cases.json": "755ab5e14c896f46bef6e878855c10cbf052f2732adc971d8a79b3934913425a",
       "evals/portfolio-cases.json": "a6081224c411384a8a45994015b514deea3e0c2fee035ce87e6749e6c4a2c37b",
-      "evals/review.md": "8a7052dc904b64e34797ac816100f64d2d90b2e557714fe53735201383abcebc",
-      "evals/review-1.1.0.json": "b37a043ee71f2bfffb2d5b708d05536514d8fcd1cb8fd2011850de31e530028e",
-      "evals/review-1.2.0.json": "54b8e521b5056dba513ce9ce5d6e802d6bcc3f19241d9fb60ed5195861a58b2a",
-      "references/reconciliation-record.md": "48f8785165d09f46f3e0413492b58940e30ce895f9bdc3fe32bc1cfb27b51d57"
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
     },
-    "sha256": "77b97ff93ec4b7807710b87bb2cb5fdf767ebf79b5ee9c99116609a7f6236949",
-    "digest_scope": "Canonical skill, reference, license, case design and prior review records. This review is excluded.",
-    "algorithm": "SHA-256 of compact UTF-8 sorted JSON file hash map."
+    "baseline_commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
+    "digest_scope": "Instructions, reference, three case suites and license. Historical review records are retained separately."
   },
-  "decision_question": "Does the extension support source distribution for direct and staffing-agency application status reconciliation?",
+  "decision_question": "Can the existing AskJamie skill publish precise application-attempt, current-field and submitted-artifact reconciliation as portable source?",
   "acceptance_criteria": [
-    "Preserve direct application and owner-closeout behavior.",
-    "Distinguish and substantiate each milestone and application route.",
-    "Require trusted source attribution and destination-specific authorization before status corrections.",
-    "Check public-safe fixtures, portable package structure, and exact readback rules."
+    "Unique attempt match before each attempt-specific claim or write.",
+    "Preserve history, uncertain dates, exact submitted evidence and per-source coverage.",
+    "Require guarded overwrites and idempotent or serialized repeatable writes.",
+    "Use synthetic public cases and bound evidence claims to source inspection."
+  ],
+  "source_basis": [
+    "Public AskJamie FoundRy PRs #140, #147, #154, and #148.",
+    "Private workflow patterns were abstracted into synthetic fixtures. No private source data was included.",
+    "Equilibrium Review 1.0.1 and Skill Foundry 3.1.1 governed the review."
   ],
   "independence": {
     "reviewer_contexts_separated": true,
     "shared_model_or_source_limits": [
-      "Separate read-only agent contexts inherited the same model family and worked from the same public-safe source package. The author integrated the findings.",
-      "The reviewers did not execute an application workflow or access candidate systems.",
-      "Independent roles assessed the staffing-agency changes before final conflict integration. The integration owner performed the final additive merge review and structural checks."
+      "Evidence, outcome, and safety used separate read-only contexts with a shared model family and overlapping source set.",
+      "The outcome reviewer performed the conditional falsification retest. The integration author adjudicated and retargeted the change over the concurrent releases.",
+      "No live execution or blinded grading."
     ]
   },
-  "sources": [
-    {
-      "id": "SRC-01",
-      "type": "merged source",
-      "url": "https://github.com/OKHP3/askjamie-foundry/pull/140",
-      "commit": "c467e131c6e7f800afe5ba6258a0b809ad85ebe2",
-      "checked": "2026-11-09",
-      "use": "Existing canonical package and six direct application case contracts."
-    },
-    {
-      "id": "SRC-02",
-      "type": "private workflow abstract",
-      "checked": "2026-11-09",
-      "use": "Agency-to-client handoff with unknown send time, mirrored correspondence, and an unmatched direct tracker row. No original records are distributed."
-    },
-    {
-      "id": "SRC-03",
-      "type": "owner authoring and review protocol",
-      "url": "https://github.com/OKHP3/skillz/tree/main/universal",
-      "checked": "2026-11-09",
-      "use": "Skill Foundry and Equilibrium Review requirements for the source release."
-    },
-    {
-      "id": "SRC-04",
-      "type": "merged canonical integration base",
-      "url": "https://github.com/OKHP3/askjamie-foundry/pull/147",
-      "commit": "12c699ab90492ec5d8a3bcc41781d8c384500aec",
-      "checked": "2026-11-09",
-      "use": "Preserve upstream source coverage recovery, timed event handling, guarded writes, audience controls, and all twelve existing case contracts."
-    },
-    {
-      "id": "SRC-05",
-      "type": "merged canonical integration base",
-      "url": "https://github.com/OKHP3/askjamie-foundry/pull/154",
-      "commit": "3ee8596f5f810347ae936b3dc9297f40c2b8b9c1",
-      "checked": "2026-11-09",
-      "use": "Preserve portfolio sweep coverage, exact route disposition, idempotent event writes, pending retries and all five portfolio cases."
-    },
-    {
-      "id": "SRC-06",
-      "type": "merged canonical integration base",
-      "url": "https://github.com/OKHP3/askjamie-foundry/pull/148",
-      "commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
-      "checked": "2026-11-09",
-      "use": "Preserve exact-route source conflict handling, candidate-attributed evidence, timestamp and offset rules, and all five added case contracts."
-    }
-  ],
-  "claim_ledger": [
-    {
-      "id": "CL-01",
-      "claim": "Agency receipt, client handoff, client receipt and applicant interview require distinct evidence.",
-      "evidence_ids": [
-        "SRC-02",
-        "evals/cases.json#confirmed-handoff-others-interviewing",
-        "evals/cases.json#exact-agency-route-receipt-and-update"
-      ],
-      "consequence": "False application advancement or wrong destination."
-    },
-    {
-      "id": "CL-02",
-      "claim": "A relay can corroborate an event only after source authentication and route matching. A trusted event ID is a deduplication key.",
-      "evidence_ids": [
-        "SRC-02",
-        "evals/cases.json#trusted-relay-vs-spoof-and-dates"
-      ],
-      "consequence": "Spoofed or duplicated evidence can corrupt status."
-    },
-    {
-      "id": "CL-03",
-      "claim": "A local stage change is verified after reading back the exact authorized row.",
-      "evidence_ids": [
-        "SRC-04",
-        "evals/cases.json#timeout"
-      ],
-      "consequence": "False synchronization or duplicate effects after retry."
-    },
-    {
-      "id": "CL-04",
-      "claim": "A newer tracker stage survives a stale conditional write, and a surface without a write guard remains unmodified.",
-      "evidence_ids": [
-        "SRC-04",
-        "evals/cases.json#stale-revision-on-matched-tracker"
-      ],
-      "consequence": "Overwritten interview stage and a false synchronization claim."
-    }
-  ],
-  "initial_candidate_sha256": "ab61417df895ef5ea634db46507529e3bd99aa76212a9182247178f816efeeae",
   "initial_reviews": [
     {
       "role": "evidence",
-      "decision": "reject",
-      "evidence_ids": [
-        "SRC-01",
-        "EV-03",
-        "EV-04"
-      ],
-      "finding": "The relay fallback conflated observation and delivery dates. The receipt conflict fixture supplied only a sending assertion."
+      "decision": "approve-with-limits",
+      "finding": "Make date semantics, candidate-reported milestones, and attempt-linked attachment provenance explicit. Preserve upstream case IDs and correct ambiguous expectations."
     },
     {
       "role": "outcome",
       "decision": "approve-with-limits",
-      "evidence_ids": [
-        "OUT-01",
-        "OUT-02",
-        "OUT-03"
-      ],
-      "finding": "Usable procedure with gaps in positive tracker and independent receipt cases."
+      "finding": "Keep saved-opportunity triage separate. Reconciliation owns exact-attempt decisions, evidence and verified deltas. Preserve the merged portfolio coverage and conflict rules."
     },
     {
-      "role": "safety-and-portability",
-      "decision": "reject",
-      "evidence_ids": [
-        "SP-01",
-        "SP-02",
-        "SP-03"
-      ],
-      "finding": "Unverified relay identity could be mistaken for authentic provenance. Applicant matching, archive authorization and safe locators needed sharper rules."
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "Bind every claim and correction to one attempt. Hold conflicting shared stages, require guards, and separate application actions from status maintenance."
     }
   ],
-  "concordance": "material-disagreement",
-  "negotiator": {
-    "triggered": true,
-    "decision": "reject",
-    "decisive_evidence": [
-      "Trusted-source attribution was missing before event deduplication.",
-      "Authored, transport and observation dates require distinct fields.",
-      "Handoff and receipt are separate claims. Only same-claim conflicts hold that claim's delta."
-    ],
-    "unresolved_items": []
-  },
-  "revised_reviews": [
-    {
-      "role": "evidence",
-      "decision": "approve-with-limits",
-      "finding": "The milestone and date rules now match the evidence. All six baseline case contracts remain intact."
-    },
-    {
-      "role": "outcome",
-      "decision": "approve-with-limits",
-      "finding": "Exact authorized agency tracker mapping and independently confirmed receipt now have a positive case. A true receipt conflict leaves handoff independently updateable."
-    },
-    {
-      "role": "safety-and-portability",
-      "decision": "approve-with-limits",
-      "finding": "Trusted provenance precedes deduplication. Applicant identity, destination permission and safe locator rules are explicit."
-    }
-  ],
-  "revised_concordance": "material-agreement",
-  "validations": {
-    "status": "analytical",
-    "checks": [
-      "Ruby YAML parsed name, description, version and metadata.",
-      "Validated portable structure, relative links, 30 synthetic case contracts across two files, all 22 upstream contracts preserved, public-safe text and exact release digests.",
-      "The Skillz catalog validator reported the same 39-character name against its 36-character catalog cap for baseline and candidate. The portable format allows 64 characters. Retained the existing AskJamie path."
-    ],
-    "discovery": {
-      "status": "analytical",
-      "mode": "author review of intent labels against the description and scope",
-      "queries": {
-        "positive": [
-          "Reconcile my application stage across the portal and tracker.",
-          "Did the staffing agency forward my résumé to the client?",
-          "My recruiter said they're interviewing. Can you check what stage my application is in?",
-          "Two copies of this recruiter update are in email and messaging. Sync my status.",
-          "Verify whether the Submitted row is backed by a receipt.",
-          "Which of these same-title roles actually got rejected?",
-          "My application traker is stale. Check against recruiter email.",
-          "Review application-notes.md and tell me which dates are verified.",
-          "The recruiter requested references. Does that mean the client has my application?",
-          "I closed pursuit. Please archive the matching tracker row."
-        ],
-        "negative": [
-          "Tailor my résumé to this role.",
-          "Send my résumé to the recruiter.",
-          "Apply to the job through the portal.",
-          "Draft a quick follow-up asking about my candidacy.",
-          "Check whether this recruiter is legitimate.",
-          "Log a reference's contact details.",
-          "Generate a LinkedIn post about my search.",
-          "Find remote construction jobs.",
-          "Is my package ready to apply?",
-          "Do an interview practice session with me."
-        ]
-      },
-      "host_triggering": "not-run"
-    },
-    "live_benchmark": "not-run",
-    "protected_holdout": "external-required",
-    "holdout_seen": true
-  },
-  "limitations": [
-    "Reviewed source distribution only. No live agent execution, task quality, uplift, unseen holdout, or host installation is evidenced."
-  ],
-  "follow_up": [
-    {
-      "owner": "Maintainer",
-      "condition": "Before a live performance or host acceptance claim",
-      "action": "Freeze the exact package and host configuration. Run at least three matched sessions per configuration and a separately authored unseen holdout with blinded grading. Any authorization, identity, privacy or false verification failure blocks the claim."
-    }
-  ],
+  "concordance": "Material fixture, write-guard, and attempt-scope findings were corrected in the final source.",
   "disruptor": {
     "triggered": true,
-    "authority": "counterexample testing after revised reviews converged",
+    "authority": "analytical source-contract falsification",
     "falsification_hypotheses": [
-      "A matched stage update races with a newer authorized interview update.",
-      "A trusted delivery envelope is mistaken for recruiter authorship of user-controlled text.",
-      "An application instance is confused with a later attempt on the same requisition and route."
-    ],
-    "test_results": [
-      "The unconditional-write draft failed the race thought experiment. The final procedure explicitly requires an atomic write condition or verified exclusive access, rereads on a failed condition, and stages a no-guard delta without mutating.",
-      "The final source requires the full claim-bearing relay to be tied to the original author and exact application. A forged ID or quoted body remains a discovery lead.",
-      "The final source binds each claim to the applicant and exact application instance and holds ambiguous writes."
+      {
+        "id": "shared-stage",
+        "hypothesis": "An editable shared badge can collapse two distinct attempts.",
+        "test": "External inactivation and active internal receipt share one editable posting badge.",
+        "result": "Hold the shared stage when its schema cannot represent the distinction."
+      },
+      {
+        "id": "blind-overwrite",
+        "hypothesis": "Successful readback can mask an intervening edit.",
+        "test": "Pre-read Draft, second writer sets Interview, first proposes Submitted without a guard.",
+        "result": "Stage the proposed change. Retain the existing same-field-race case."
+      },
+      {
+        "id": "duplicate-append",
+        "hypothesis": "Two writers may append the same event after each sees an empty pre-read.",
+        "test": "Provide plain append only, concurrent writers and no destination deduplication.",
+        "result": "Hold the append. The added duplicate-append case tests the missing guard."
+      }
     ]
   },
-  "final_adjudication": {
+  "negotiator": {
+    "triggered": true,
     "decision": "approve-with-limits",
     "decisive_evidence": [
-      "The material race is addressed in the guarded-write procedure and a new stale-revision fixture.",
-      "The final package integrates on PR #147 and preserves its source-coverage and partial access rules.",
-      "Independent rechecks identified and resolved the remaining single-source privacy gap. The primary procedure now excludes token-bearing locators regardless of reference loading.",
-      "The positive agency case states Saved to Submitted with exact client receipt and both readbacks. Two inherited fixtures explicitly receive trusted-full-relay defaults.",
-      "The integration owner reapplied reviewed staffing-agency changes to PR #154 after it merged. Source inspection and exact fixture and evidence comparisons preserve the independently landed behavior and records.",
-      "PR #148 landed during CI. Reapplied the reviewed staffing-agency changes and verified its extra identity, conflict, attribution, timing, and outreach boundaries, fixtures and review evidence."
+      "The final unique-attempt and same-claim rules apply across dispositions, receipts, and artifact references.",
+      "The field reference separates current closure and reminders from historical evidence.",
+      "The new attempt detail suite covers stale fields, packet identity, shared stage, agency handoff and duplicate append."
     ],
     "unresolved_items": [
-      "Live execution and host acceptance remain unevaluated."
+      "No live host or connector mutation behavior was evaluated."
     ]
   },
-  "release_decision": "approve-with-limits"
+  "release_decision": "approve-with-limits",
+  "applicability": "Source distribution in the existing AskJamie capability.",
+  "expiry": "Re-review if hashed files, write policy, or claimed host support change.",
+  "validations": [
+    {
+      "check": "Portable format, relative references, license, frozen SHA-256 and privacy scan",
+      "result": "passed"
+    },
+    {
+      "check": "Case contracts",
+      "count": 27,
+      "new_cases": 5,
+      "result": "analytical design and fixture inspection"
+    },
+    {
+      "check": "Skillz repository package length",
+      "result": "Existing 39-character identifier exceeds its 36-character policy."
+    }
+  ],
+  "limitations": [
+    "Live benchmark, measured uplift, trigger evaluation, platform installation, and unseen holdout were not run.",
+    "Write safety depends on the destination actually enforcing its declared guard. Cross-surface atomicity is unverified.",
+    "Prior release reviews remain historical for this version."
+  ]
 }

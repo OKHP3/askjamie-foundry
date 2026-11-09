@@ -1,0 +1,29 @@
+{
+  "status": "analytical-candidate",
+  "version": "1.5.0",
+  "date": "2026-11-09",
+  "outcome": "Integrate agency-route reconciliation without losing merged exact-attempt safeguards.",
+  "scope": "Portable source only; no application, outreach, portal operation or deployment.",
+  "sources": {
+    "agency_pr158": "eea32cc44233e2555e51bcd70998a39d9adcea38",
+    "base": "efcefd0c2d6cee69edea96a5688a156720dbcfff",
+    "merged_pr167": "359229bda177ff6db0a298efdab2bb0a3a11876c"
+  },
+  "historical_reviews": [
+    "review-1.4.0.json",
+    "review-1.4.0-staffing-agency.json"
+  ],
+  "historical_review_limit": "Both retained byte-for-byte; neither evaluates this integrated version.",
+  "hashes": {
+    "SKILL.md": "5448c17fccf47b19868bb864598053599b0ec5b4b4b0de7855b4972bbfb202c8",
+    "references/reconciliation-record.md": "08f5e604935b009057b0fea3c5dfc9c9f17b2e8b2b47448040f26729178c72f2",
+    "evals/cases.json": "9afd4c5353f7c20ddeac5c86dcadf8756a33574ac56b12ccd36e772a24571b63",
+    "evals/portfolio-cases.json": "a6081224c411384a8a45994015b514deea3e0c2fee035ce87e6749e6c4a2c37b",
+    "evals/attempt-detail-cases.json": "f6229f0f6913a14fc008386b2ffff916b534bba1395f2d78b94126fbc720f971",
+    "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+  },
+  "live_benchmark": "not-run",
+  "protected_holdout": "not-run",
+  "independent_review": "pending",
+  "release_decision": "pending required CI and review"
+}

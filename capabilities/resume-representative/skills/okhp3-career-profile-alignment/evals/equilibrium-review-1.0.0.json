@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "reviewed_on": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "sha256": "5daffaec19ff8a9d4443e8225343128be5b8e06fa2d4a579f5871a1055f9144b",
+    "version": "1.0.0",
+    "resources_sha256": {
+      "SKILL.md": "5daffaec19ff8a9d4443e8225343128be5b8e06fa2d4a579f5871a1055f9144b",
+      "evals/architecture.md": "4cade8bcf5b8a54e6723e55b6dec38ebd48664389b19e68d5cda012b39ffa274",
+      "evals/evals.json": "0113308d429b78ddec2292b9daadb111de9aa34ca144aec1364f1d112582d044",
+      "references/alignment-contract.md": "735684dd808956ad314256748797f3671f08e462e68998c41820108c2ed82a34"
+    }
+  },
+  "decision_question": "Is this version fit to integrate as public source for a read-only alignment procedure with fictional cases?",
+  "acceptance_criteria": [
+    "Verified subject, surface, observation type and date",
+    "Claim-level authority and separate disclosure scope",
+    "One supported full-field proposal with verified routing",
+    "Approval bound to exact wording, scope, revision and conditions",
+    "Private return, no transmission or edit, and explicit downstream verification"
+  ],
+  "source_set": [
+    "https://github.com/OKHP3/skillz/tree/main/universal/okhp3-equilibrium-review",
+    "https://github.com/OKHP3/skillz/tree/main/universal/okhp3-skill-foundry",
+    "https://github.com/OKHP3/askjamie-foundry/issues/172",
+    "https://github.com/OKHP3/askjamie-foundry/pull/171",
+    "https://github.com/OKHP3/skillz/pull/221",
+    "evals/architecture.md",
+    "evals/evals.json",
+    "references/alignment-contract.md"
+  ],
+  "claim_ledger": [
+    {
+      "id": "C01",
+      "claim": "A dated capture cannot establish current profile drift.",
+      "evidence": "SKILL.md procedure 1 and 3; development case 2.",
+      "consequence": "Treating stale text as current can trigger an incorrect correction."
+    },
+    {
+      "id": "C02",
+      "claim": "Field wording must be supported and clear for the destination.",
+      "evidence": "SKILL.md procedure 2 through 5; development cases 1, 3, 4 and 7.",
+      "consequence": "Unsupported activity or restricted evidence could enter public copy."
+    },
+    {
+      "id": "C03",
+      "claim": "Approval depends on exact text and any recorded conditions.",
+      "evidence": "SKILL.md procedure 6; development cases 7 and 9.",
+      "consequence": "Changed text or baseline could inherit an approval that does not apply."
+    },
+    {
+      "id": "C04",
+      "claim": "The skill returns a private review artifact.",
+      "evidence": "SKILL.md Inputs and gates and procedure 5 and 6; development cases 4, 6 and 8.",
+      "consequence": "An unauthorized recipient or destination could receive data."
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Three non-editing Codex reviewers used separate role conversations, the same source set and shared model family and filesystem. The disruptor reused the evidence reviewer. A fresh-context adjudicator reviewed final hashes and summarized findings. This is correlated analytical evidence.",
+      "No real career records were required for package review. Reviewers had local read tools. No runtime executor or blind grader ran the development cases."
+    ]
+  },
+  "initial_artifact_sha256": "8431678ab54dc149a81d3f5cef0238f374ef787aefff639528eed8174aca8288",
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "prompt_id": "evidence-role",
+      "decision": "defer-for-evidence",
+      "finding": "A held title was used to infer activity. The positive handoff lacked routing inputs and the matrix needed authority basis.",
+      "repair": "Supply direct activity evidence and route; record source locator, applicable date and authority basis, and hold unresolved contradictions."
+    },
+    {
+      "role": "outcome",
+      "prompt_id": "outcome-role",
+      "decision": "defer-for-evidence",
+      "finding": "Fixture inputs could not support some expected corrections. Several claims in one field could lead to competing replacements.",
+      "repair": "Make fixture identity, source and baseline explicit, and require a single coherent full-field proposal."
+    },
+    {
+      "role": "safety-portability",
+      "prompt_id": "safety-portability-role",
+      "decision": "defer-for-evidence",
+      "finding": "The wording could be interpreted as transmitting a packet, and a revision identifier could be reused with changed text.",
+      "repair": "Return to requester in the private context. Verify destination and recipient, bind approval to exact full text and scope, and separate source support from disclosure clearance."
+    }
+  ],
+  "concordance": "material-agreement",
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical falsification only",
+    "falsification_hypotheses": [
+      "An approval conditioned on a prior baseline might be reused after a new read changes the baseline, even when text and revision match."
+    ],
+    "test_results": [
+      "The pre-repair approval rule left this condition ambiguous. Final step 6 and the alignment contract explicitly require the condition to be verified and set approval pending when it fails. Added development case 9. This closes the ambiguity in the instructions; case execution remains pending."
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Verified final SKILL.md and evals hashes.",
+      "Final procedure 6 and the contract cover condition satisfaction, exact scope and fresh baseline. Cases 4, 7, 8 and 9 cover disclosure, grouped replacement, missing route and conditional approval."
+    ],
+    "unresolved_items": [
+      "No agent execution, trigger metrics, matched baseline or external holdout."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "release_scope": "Source integration to AskJamie FoundRy only",
+  "decision_owner": "Integration owner for FoundRy issue 177",
+  "expires_on": "2027-02-07",
+  "reopen_on": "Change to any frozen artifact or release scope.",
+  "limitations": [
+    "Nine visible synthetic development cases, status not-run.",
+    "Structural checks and analytical review do not establish host activation, task quality, uplift or publication authority for a profile."
+  ],
+  "follow_up": [
+    "Use an unseen external holdout and isolated matched runs before any host or performance claim."
+  ],
+  "canonical_line_endings": {
+    "evals/evals.json": {
+      "reviewed_sha256": "fb99d8e6d8ea84dec71fa98b07354bb56c3a760ffa6014d7d718bc44afb27586",
+      "canonical_lf_sha256": "0113308d429b78ddec2292b9daadb111de9aa34ca144aec1364f1d112582d044"
+    }
+  }
+}

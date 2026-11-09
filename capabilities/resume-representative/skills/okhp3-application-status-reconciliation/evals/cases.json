@@ -7,9 +7,9 @@
     {
       "id": "receipt",
       "prompt": "Reconcile my application across the tracker and application log.",
-      "fixture": "Exact R-301 employer receipt and saved tracker row. Owner authorizes both updates. Both writes read back correctly. The in-scope target supports a write-time condition and exact readback unless a blocked surface is specified.",
+      "fixture": "An exact R-301 employer receipt explicitly says the application was submitted May 2. Email receipt arrived May 3. R-301 has existing tracker and application-log rows. Owner authorizes both updates. Both rows support conditional writes. Both writes read back correctly.",
       "expect": [
-        "Record R-301 submitted with receipt date",
+        "Record R-301 submitted May 2 and the receipt date May 3 separately",
         "Update the exact existing rows only",
         "Report both changes as verified"
       ]
@@ -17,10 +17,10 @@
     {
       "id": "same-title",
       "prompt": "Update my tracker from the latest email.",
-      "fixture": "R-101 rejection and R-202 submission receipt, same employer and title. Only R-202 has a tracker row. The in-scope target supports a write-time condition and exact readback unless a blocked surface is specified.",
+      "fixture": "R-101 rejection and R-202 submission receipt, same employer and title. Only R-202 has a tracker row.",
       "expect": [
         "Keep R-202 submitted",
-        "Apply the decision only to R-101",
+        "Record the rejection against R-101 in the evidence report only",
         "Report the missing R-101 tracker crosswalk"
       ]
     },
@@ -69,7 +69,7 @@
       "prompt": "Sync my application records after the recruiter update.",
       "fixture": "Fictional recruiter case T-49. Candidate reports sending a résumé to the recruiter and attending a screen. A dated recruiter notification copy says client feedback is delayed, with no new date. Similar public posting P-5 is unconfirmed. Direct messages and tracker are blocked. Exact canonical record allows conditional writes. The in-scope target supports a write-time condition and exact readback unless a blocked surface is specified.",
       "expect": [
-        "Record recruiter screen and pending feedback through the recruiter with no fixed due date",
+        "Record the candidate-reported recruiter screen and pending feedback through the recruiter with no fixed due date",
         "Keep candidate-reported recruiter transmission and employer submission separate",
         "Do not assign posting P-5 or claim tracker verification",
         "Verify only the supported canonical change"
@@ -90,7 +90,7 @@
       "fixture": "Tracker cutoff October 10. Mail checked October 15 while tracker was blocked. Tracker restored October 16. Exact receipt for R-52 issued October 9 was added to tracker October 12.",
       "expect": [
         "Use tracker-specific October 10 coverage and backfill with arrival or change time",
-        "Recover October 12 addition and retain October 9 effective date",
+        "Recover the October 12 addition and retain October 9 as the receipt-event date; leave submission date unknown",
         "Make no mutation on this read request"
       ]
     },
