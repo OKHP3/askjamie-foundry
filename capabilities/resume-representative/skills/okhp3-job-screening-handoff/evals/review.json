@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "five-way",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.0.0",
+    "sha256": "13eaa7424df69d79b6bb35f329815a955e00dc425b1b66bdf9a0efebdccb8db6",
+    "evals_sha256": "81d599195dc250a52a49c98d2c86ac41b450bdd0a2e68589d1ed62e90fe4d5dc",
+    "first_review_sha256": "5eda9d34304337e04398e03b9d0106f9504dbcad91746908f61819b0b9a20523"
+  },
+  "decision_question": "Can a portable read-only skill turn screening evidence into a candidate-owned handoff without advancing, repeating, or disclosing a screening?",
+  "acceptance_criteria": [
+    "Correct role and session matching, including reminders and replacements.",
+    "Dated state, safe locator and bounded next action for each session.",
+    "No session action, personalized link access, or transmission of sensitive data.",
+    "Public-safe inputs and output with an auditable evidence boundary."
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "basis": "Private application workflow with several distinct invitations, a saved eligibility checkpoint, and a candidate-owned agreement step. Only the abstract method was used."
+    },
+    {
+      "id": "SRC-02",
+      "basis": "Nine synthetic development cases in evals.json."
+    },
+    {
+      "id": "SRC-03",
+      "basis": "Application-status reconciliation is published in #147. Submission evidence is separately claimed in #145."
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Codex role contexts shared the model family and frozen artifact and case inputs. Review was analytical."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "approve-with-limits",
+      "material_findings": [
+        "Align replacement routing with exact evidence.",
+        "Preserve checkpoint, reminder, and review timestamps.",
+        "Anchor confirmed deadlines to a dated fixture."
+      ]
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "material_findings": [
+        "Exclude superseded sessions from candidate priority.",
+        "Add a positive exact-session completion case.",
+        "Verify reported completion without prompting a repeat attempt."
+      ]
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "material_findings": [
+        "Restrict reads to verified status-only surfaces. Personalized links can consume access or change state.",
+        "Use safe aliases for sensitive session identifiers."
+      ]
+    }
+  ],
+  "concordance": "Material agreement on the distinct scope and replacement-routing defect. Role-specific findings added time, completion, and access guards.",
+  "disruptor": {
+    "triggered": true,
+    "authority": "conditional",
+    "falsification_hypotheses": [
+      "A replacement can erase a previous verified completion or inherit it.",
+      "A status-looking control can resolve to a personalized one-time link.",
+      "Issue order and arrival order can disagree across competing replacements."
+    ],
+    "test_results": [
+      {
+        "case": "receipt-then-replacement",
+        "outcome": "Analytical pass. Separate progress and routing preserve prior completion and scope the receipt to its session."
+      },
+      {
+        "case": "single-use-status-control",
+        "outcome": "Analytical pass. The procedure bars fetching or previewing the token and uses a safe locator."
+      },
+      {
+        "case": "competing-replacements",
+        "outcome": "Analytical pass. Preserve assertions and timestamps and hold routing when no unique active invitation is verified."
+      }
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Corrected procedure separates routing from progress and scopes receipts to exact sessions.",
+      "Nine fixtures align with the corrected procedure.",
+      "Structural package, case inventory, local references, and targeted private-data checks passed."
+    ],
+    "unresolved_items": [
+      "Live behavior, host acceptance, and unseen holdout performance are unverified."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Public source distribution only.",
+    "No live with/without-skill execution, automatic trigger measurement, platform installation, or unseen holdout."
+  ],
+  "follow_up": [
+    {
+      "owner": "Capability maintainer",
+      "action": "Before claiming runtime acceptance or uplift, run comparable isolated sessions with a protected external holdout and review exact outputs.",
+      "expiry": "Reassess when the procedure, host, or evidence changes."
+    }
+  ]
+}
