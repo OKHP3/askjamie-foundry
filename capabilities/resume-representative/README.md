@@ -6,6 +6,8 @@ Turn supplied career evidence into role-specific professional narratives.
 
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
+The [candidate screening handoff skill](skills/okhp3-candidate-screening-handoff/SKILL.md) matches screening invitations and reminders to roles, verifies preliminary progress, and routes consent and assessment to the candidate.
+
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,
 with original filenames, bytes and provenance. Registry migration status is

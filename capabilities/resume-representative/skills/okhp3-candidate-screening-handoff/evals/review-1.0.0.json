@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "SKILL.md",
+    "sha256": "9fae9bd26ceb3b4ca2aaa446f2e35406b05d6719d3069053d39cee8070b69795",
+    "version": "1.0.0",
+    "core_file_hashes": {
+      "SKILL.md": "9fae9bd26ceb3b4ca2aaa446f2e35406b05d6719d3069053d39cee8070b69795",
+      "references/handoff-record.md": "952e0b17d2eea41842652f6f7d19567fae61be20b0d1e2a8be1ea44dd5f5fb93",
+      "evals/evals.json": "19fd4ee3936164afdbde1fd0642acf7a32b9e474e7c6178be24d00f01256ff86",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+    },
+    "base_commit": "3ee8596f5f810347ae936b3dc9297f40c2b8b9c1"
+  },
+  "decision_question": "May this portable screening handoff source and its development fixtures be published in Resume Representative?",
+  "acceptance_criteria": [
+    "Discriminate screening logistics from application submission, tracker reconciliation and substantive assessment.",
+    "Tie writes and completion to the exact screening instance.",
+    "Preserve owner consent and private data boundaries under blocked and uncertain access.",
+    "Validate package, links, license and review provenance. Label live, host and holdout coverage accurately."
+  ],
+  "sources": [
+    {
+      "id": "OBS-01",
+      "kind": "Sanitized workflow observations",
+      "date": "2026-11-09",
+      "description": "Multiple role-specific invitations, reminder follow-up, verified preliminary progress, current versus prior employment facts, consent gate, offered voice or text, blocked account access and a separate attachment correction."
+    },
+    {
+      "id": "SRC-01",
+      "kind": "Pinned adjacent packages",
+      "ref": "3ee8596f5f810347ae936b3dc9297f40c2b8b9c1",
+      "description": "Resume Representative covers preparation. Saved opportunity triage covers sourcing and ranking. Application status reconciliation covers record correction and verified employer milestones."
+    },
+    {
+      "id": "SRC-02",
+      "kind": "Frozen skill contract",
+      "path": "SKILL.md"
+    },
+    {
+      "id": "SRC-03",
+      "kind": "Frozen handoff template",
+      "path": "references/handoff-record.md"
+    },
+    {
+      "id": "SRC-04",
+      "kind": "Frozen synthetic fixture design",
+      "path": "evals/evals.json"
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "reviewer_configuration": "Separate reviewer contexts, inherited model; restricted read-only access to supplied source, reference and fixture files.",
+    "shared_model_or_source_limits": [
+      "Shared model family and collaboration tool environment.",
+      "Reviewer observations are static and correlated by the same source set.",
+      "No live portal access or unseen holdout."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "prompt_id": "screen_evidence_review",
+      "claim": "approve-with-limits",
+      "evidence_ids": [
+        "OBS-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "finding": "Milestones are grounded. Initial fixtures did not independently verify per-screen saves or require dated instance-level completion."
+    },
+    {
+      "role": "outcome",
+      "prompt_id": "screen_outcome_review",
+      "claim": "approve-with-limits",
+      "evidence_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "finding": "The companion scope is distinct. Exact role alone was insufficient completion evidence when more than one screening exists. Provisional and next-action records needed an explicit field."
+    },
+    {
+      "role": "safety-portability",
+      "prompt_id": "screen_safety_review",
+      "claim": "approve-with-limits",
+      "evidence_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "finding": "Bind writes to the exact instance and check navigation effects, origin and mixed administrative/assessment controls. Hold uncertain writes for readback."
+    }
+  ],
+  "concordance": "material-agreement",
+  "development": {
+    "initial_core_sha256": "7975cf7931245881d8e1338e05d85533c16cc015e505f54bd920acac62da7f2f",
+    "original_base": "12c699ab90492ec5d8a3bcc41781d8c384500aec",
+    "changes": [
+      "Require exact screening identity before writes and completion; retain provisional records and unmatched receipts.",
+      "Check private link provenance, destination and side effects; leave mixed administrative and recording controls with the candidate.",
+      "Add per-instance saves, same-role mismatch, ambiguous receipt, unknown facts and separate trusted-origin mixed-control cases."
+    ]
+  },
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical",
+    "prompt_id": "screen_disruptor",
+    "falsification_hypotheses": [
+      "A same-role reissue permits a write to the wrong screening or misassigns a role-only receipt.",
+      "A combined save-and-record control passes as an administrative answer.",
+      "An uncertain write can be replayed before a readback."
+    ],
+    "test_results": [
+      "Exact-instance clauses and same-role fixtures block the first counterexample.",
+      "Candidate-owned mixed-control clause addresses the second. An initially combined redirect fixture was split to isolate the trusted-origin control.",
+      "Attempted-unverified state and same-instance readback prevent the third."
+    ],
+    "execution": "Static counterexample review of the written contract and development fixture design."
+  },
+  "negotiator": {
+    "triggered": true,
+    "prompt_id": "screen_negotiator",
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "Exact hashes matched final skill, reference and evaluation design.",
+      "Same-role mismatch and unassigned role-only completion are covered.",
+      "Trusted-origin mixed-control and uncertain-write cases isolate the required decisions."
+    ],
+    "unresolved_items": [
+      "Live task execution, with/without comparison, unseen holdout, and installed host acceptance remain unverified."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Source publication and offline workflow design only.",
+    "Eleven development cases are designed and inspected; there are zero live runs and no usable packaged holdout.",
+    "Source publication does not authorize access, writes, consent, or participation in a candidate portal."
+  ],
+  "follow_up": [
+    {
+      "owner": "Capability maintainer",
+      "condition": "Before claiming live write reliability or host acceptance",
+      "action": "Run comparable external holdout and authorized host checks against the exact released version."
+    }
+  ]
+}
