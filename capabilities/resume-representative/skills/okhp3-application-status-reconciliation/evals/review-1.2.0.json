@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "../SKILL.md",
+    "version": "1.2.0",
+    "sha256": "69db8aeaf300c373a379838855c73e999817c77f63726370c241bb4db4ffd578",
+    "file_sha256": {
+      "SKILL.md": "69db8aeaf300c373a379838855c73e999817c77f63726370c241bb4db4ffd578",
+      "references/reconciliation-record.md": "12dfd4f81b3be81b40aca00d65c33e769fb034e93df62e4c656ab950352c9597",
+      "evals/cases.json": "b04ce676ba76595c63cc742d30b2395d807626a7f33a8c0ca3d2b78761eedcbc",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+    },
+    "digest_scope": "Instructions, reference, development cases, and license. Prior review records are retained as historical evidence.",
+    "baseline_commit": "12c699ab90492ec5d8a3bcc41781d8c384500aec"
+  },
+  "decision_question": "Can the canonical AskJamie skill publish attempt-level reconciliation and guarded record correction as portable source?",
+  "acceptance_criteria": [
+    "Tie evidence and changes to the exact candidate, requisition, route, attempt and claim.",
+    "Preserve event dates, submitted artifacts, prior outcomes, and versioned review evidence.",
+    "Stage changes when scope, write authority, an overwrite guard, or an append guard is missing.",
+    "Use synthetic cases and make no live performance or host acceptance claim."
+  ],
+  "source_basis": [
+    "AskJamie FoundRy PR #140 established the skill. PR #147 supplied the 1.1.0 baseline.",
+    "Owner-authorized workflow informed design. No private evidence is included.",
+    "Skillz Equilibrium Review 1.0.1, Skill Foundry 3.1.1, and the Agent Skills format govern source review."
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "The evidence, outcome, and safety reviewers used separate read-only agent contexts with the same model family and overlapping source material.",
+      "The outcome reviewer performed the conditional disruptor retest. The author adjudicated the results.",
+      "No live execution or blinded grading was performed."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "approve-with-limits",
+      "finding": "Confirmed route, attempt, submission depth, dates, and submitted artifact distinctions. Corrected fixtures to state exact receipt versus event dates, exact attachment provenance, and candidate-reported attendance."
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "finding": "One skill owns reconciliation, from evidence to guarded correction and readback. Source recovery and agency follow-up from 1.1.0 remain usable."
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "Report-only default, separate authority for side effects, audience boundaries, local references and bundled MIT license are preserved. The append-guard regression was corrected and retested."
+    }
+  ],
+  "concordance": "Material evidence and safety findings were resolved against the final frozen source.",
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical source-contract falsification",
+    "falsification_hypotheses": [
+      {
+        "id": "shared-stage",
+        "hypothesis": "One editable tracker badge can collapse two distinct attempt outcomes.",
+        "test": "Provide a rejected external attempt and an active internal attempt on an editable shared badge.",
+        "result": "The final procedure holds the shared stage and permits only an authorized attempt-specific note. The split-routes case covers this result."
+      },
+      {
+        "id": "blind-overwrite",
+        "hypothesis": "A matching pre-read and successful readback can hide a concurrent overwrite.",
+        "test": "Read Draft, let a second writer set Interview, then try to write Submitted without a guard.",
+        "result": "The final procedure stages the change. It preserves the 1.1.0 same-field-race case and requires a conditional write or verified exclusive access."
+      },
+      {
+        "id": "duplicate-append",
+        "hypothesis": "Two writers can both see no note and append the same source event.",
+        "test": "Allow plain append and exact readback, with concurrent writers and no destination deduplication.",
+        "result": "The initial integration candidate allowed the race. The final procedure blocks the append without authorized deduplication or verified exclusive access. The duplicate-append case and final retest cover it."
+      }
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "The attempt-level reference and explicit shared-stage rule preserve distinct outcomes.",
+      "The same-field-race and duplicate-append cases separately cover overwrite and append guards.",
+      "Receipt dates, event dates, and artifact provenance are tied to the source that proves them."
+    ],
+    "unresolved_items": [
+      "No live connector write guard or host installation was exercised."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "applicability": "Source distribution in the existing AskJamie capability.",
+  "expiry": "Re-review if a hashed file, write policy, or claimed host support changes.",
+  "validations": [
+    {
+      "check": "Portable format, package-relative references, historical case IDs and license",
+      "result": "passed"
+    },
+    {
+      "check": "Development case contracts",
+      "count": 19,
+      "added": 7,
+      "result": "analytical inspection"
+    },
+    {
+      "check": "Synthetic data and package privacy",
+      "result": "passed source scan and review"
+    },
+    {
+      "check": "Skillz repository name length",
+      "result": "existing 39-character name exceeds the 36-character repository limit in both baseline and candidate"
+    }
+  ],
+  "limitations": [
+    "No live agent benchmark, baseline uplift, automatic trigger measurement, platform installation, or unseen holdout was run.",
+    "Conditional writes, exclusive windows and append deduplication require real host support. Multi-surface transactionality is unverified.",
+    "The version 1.0.0 and 1.1.0 review records are historical for this version."
+  ],
+  "follow_up": [
+    {
+      "owner": "Maintainer",
+      "condition": "Before claiming behavioral or host readiness",
+      "action": "Freeze an external unseen holdout and run matched model and connector tests against the exact package."
+    }
+  ]
+}
