@@ -18,3 +18,5 @@ The activity package is maintained in Skillz. It is a draftable companion for
 supervised use. This reference provides the pinned source for separate
 installation on a compatible client. Source access, destination permissions,
 and user authorization are checked at runtime.
+
+- Use [AI Career Resilience](okhp3-career-ai-resilience/SKILL.md) to compare AI task exposure, experience advantage, disrupted learning pathways, and conditional 5/10/25-year career scenarios. It does not make hiring decisions or predict precise risk percentiles.
