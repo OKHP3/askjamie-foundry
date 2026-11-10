@@ -8,13 +8,19 @@ description: >-
   or individual resume writing.
 metadata:
   status: isolated-routing-experiment
-  version: 0.1.0
+  version: 0.1.1
 ---
 
 # Buyer reply routing experiment
 
-Before drafting, verify that capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md is readable and has SHA-256 97868118e8d07b33cd9815d271d9722de152d0a93df0106ac2633d19123ecded. Read and apply it only if the hash matches. If missing, unreadable, or mismatched, stop without drafting and ask the owner to restore or verify the procedure; do not claim it was applied. This experiment uses
-only supplied evidence and grants no access to private knowledge.
+Before drafting, run the repository's verifier at
+`capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/verify_canonical.py`
+with a working Python 3 interpreter. Only if it exits successfully, read and
+apply `capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md`.
+If the verifier cannot run, fails, or its result is unclear, stop without
+drafting and ask the owner to restore or verify the procedure; do not claim it
+was applied. This experiment uses only supplied evidence and grants no access to
+private knowledge.
 
 For buyer replies, identify the documented service and known business size;
 ask concise questions about goals, scope and budget or decision process. Treat

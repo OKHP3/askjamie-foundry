@@ -25,14 +25,23 @@ not another editable canonical source.
 The buyer-reply router is an isolated Replit routing experiment, not a
 general-purpose or installed product. It was drafted from the capability's
 public procedure; the repository's [license](../LICENSE.md) applies. It does
-not include the original GPT's knowledge files. It pins the **raw bytes** of the
-canonical AJ02 procedure. Before any host test, verify the actual target file
-has the pinned SHA-256. The observed Replit fixture matched the LF Git blob;
-Replit is not guaranteed to check out LF bytes. A normal Windows CRLF
-checkout has a different hash and must stop rather than draft. Any procedure
-change requires a reviewed pin update and fresh tests against the exact new
-bytes. Missing, unreadable, mismatched, or unverifiable files must stop the
-workflow. These are instructions to an agent, not an enforced security control.
+not include the original GPT's knowledge files. Its repository-hosted
+`verify_canonical.py` checks the **raw bytes** of the canonical AJ02 procedure
+against two fixed SHA-256 pins: the reviewed LF Git blob and its exact,
+complete CRLF representation. No runtime newline normalization occurs. Mixed
+endings, lone CR, other content changes, missing or unreadable files, and hash
+errors fail the check. Both pins must be derived and reviewed together whenever
+the procedure changes, followed by fresh tests against the exact new bytes.
+
+The host must have the repository's verifier and a working Python 3 interpreter.
+From the repository root, run the verifier at
+`capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/verify_canonical.py`.
+Use `python3` on Replit or a suitable Python 3 launcher on Windows. The router
+instructs the agent to stop without drafting if the verifier cannot run, fails,
+or returns an unclear result. A verifier result and instructions to an agent
+are not a host-enforced security boundary: a file could change between checking
+and reading, and a malicious host or modified verifier is outside this check.
+Verify actual host behavior before treating the candidate as usable.
 
 Use synthetic inputs and the approved Free Mode. Record exact source and entry
 hashes, host/project identity, actual skill-load event and subsequent canonical
