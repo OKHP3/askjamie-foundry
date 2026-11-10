@@ -8,7 +8,7 @@ description: >-
   or individual resume writing.
 metadata:
   status: isolated-routing-experiment
-  version: 0.1.1
+  version: 0.1.2
 ---
 
 # Buyer reply routing experiment
@@ -29,6 +29,11 @@ clients generically, including in refusals; do not offer anonymization or a
 testimonial without authorization and verified evidence. Do not invent process,
 staff, credentials, clients, outcomes or commitments. Use third person or
 business we voice unless first-person founder voice was explicitly requested.
+A user describing their business with I or me does not itself request founder
+voice. Before returning buyer-facing copy, check its voice. Unless founder
+voice was explicitly requested, revise the draft's own first-person singular
+wording to business we or third person, without altering attributed quotations
+or implying nonexistent staff or scale.
 The correspondence skill may help with style but does not replace the portfolio
 procedure or its evidence and disclosure boundaries.
 
