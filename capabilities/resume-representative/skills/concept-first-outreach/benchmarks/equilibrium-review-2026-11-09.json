@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "three-role-plus-conditional",
+  "evaluation_status": "analytical",
+  "reviewed_on": "2026-11-09",
+  "artifact": {
+    "path": "capabilities/resume-representative/skills/concept-first-outreach",
+    "version": "1.0.0-rc1",
+    "sha256_SKILL_md_rc1": "385205d53cf1bbbf3d0fbbab773585352d49609d4851d25e5c64c2cd23645fdb",
+    "released_version": "1.0.0",
+    "released_sha256": {
+      "LICENSE.md": "3d6b922d54ac37344fd885fe08d04dedb8a48c4249945cc1b8fd06e41bd44494",
+      "SKILL.md": "f51245e3d6ff569432d32078ebc23fbdd367cd9dfef4e40466e6fa18e02a73aa",
+      "evals/evals.json": "7049284d9958d24d4e91ea71f7ad3d8060ffa76c940ce59bfb7c0492b31ebf4a",
+      "references/concept-brief.md": "eb0b6254b404c8909983b98d35ecb232c2ca822a90275a13ac116ccf8be32720",
+      "references/deliverables.md": "0fea50b053cceb5f485e7c73c7241ab086a6685748753cb0404e56b5d00633f3",
+      "references/posture.md": "329886845d106de1da1c25abc0d326dcac009d450ab55156b70a5e8259de3cef",
+      "references/sequence-and-cadence.md": "fa913ae396f6a1f4ecd3dc1dc51d9797b5059d95f01d1a26a636121a69f1e0e6"
+    }
+  },
+  "decision_question": "Is concept-first-outreach ready as an integration candidate under the Resume Representative capability?",
+  "acceptance_criteria": [
+    "Distinct from the existing resume-representative candidate",
+    "Honesty: never claims an application that does not exist, never conceals intent when asked",
+    "No identifiable private facts about any real person in package or fixtures",
+    "Draft-only with approval gates",
+    "Heuristics labeled as defaults, not measured results"
+  ],
+  "independence": {
+    "reviewer_contexts_separated": false,
+    "shared_model_or_source_limits": [
+      "Single-agent analytical review: evidence, outcome, safety-portability, disruptor and negotiator roles ran in one model context with a shared source set (the originating work session), so concordance is correlated evidence, not independent agreement."
+    ]
+  },
+  "claim_ledger": [
+    {
+      "id": "B-E1",
+      "claim": "Concept brief structure (scene, history bands, forces, scenarios, gates, what would change my mind)",
+      "status": "supported",
+      "evidence": "Mirrors the brief produced and approved in the originating session."
+    },
+    {
+      "id": "B-E2",
+      "claim": "Outsiders should not commit to first-30/60/90-day plans",
+      "status": "supported",
+      "evidence": "Explicit owner principle in the originating session."
+    },
+    {
+      "id": "B-E3",
+      "claim": "Nudge at about 7 days; formal-application decision at 2 to 3 weeks",
+      "status": "defect-fixed",
+      "evidence": "rc1 stated these as procedure without evidence; now labeled planning defaults drawn from practice, adjustable by context."
+    },
+    {
+      "id": "B-E4",
+      "claim": "'Some roles are won before they are applied for'",
+      "status": "defect-fixed",
+      "evidence": "Unsupported generalization; softened to a conditional statement."
+    },
+    {
+      "id": "B-O1",
+      "claim": "Validator scope section",
+      "status": "defect-fixed",
+      "evidence": "Bundled Foundry validator warned of a missing Scope section; added."
+    },
+    {
+      "id": "B-S1",
+      "claim": "Public fixtures and references contain no inferable private facts",
+      "status": "defect-fixed",
+      "evidence": "rc1 contained example wording in SKILL.md inputs, deliverables.md, and one eval that could let a reader infer private circumstances. In a public repository that is an inference risk. All were replaced with generic wording and a synthetic confidential-client case."
+    },
+    {
+      "id": "B-S2",
+      "claim": "Untrusted fetched content handling",
+      "status": "defect-fixed",
+      "evidence": "rc1 had no dedicated injected-page case; added injected-company-page."
+    }
+  ],
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "result": "approve-with-limits",
+      "material_findings": [
+        "B-E3",
+        "B-E4"
+      ]
+    },
+    {
+      "role": "outcome",
+      "result": "approve-with-limits",
+      "material_findings": [
+        "B-O1"
+      ]
+    },
+    {
+      "role": "safety-portability",
+      "result": "reject",
+      "material_findings": [
+        "B-S1",
+        "B-S2"
+      ]
+    }
+  ],
+  "concordance": "material-disagreement",
+  "disruptor": {
+    "triggered": false,
+    "authority": "none",
+    "falsification_hypotheses": [],
+    "test_results": []
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "B-S1 fixed and re-scanned (no matching terms remain)",
+      "B-S2 case added",
+      "B-E3 relabeled"
+    ],
+    "unresolved_items": [
+      "Host acceptance per docs/skill-candidate-acceptance.md is not established",
+      "Dependency on okhp3-linkedin-message lives in another repository; fallback is stated"
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "rejected_candidates": [
+    {
+      "id": "C",
+      "name": "outsider future-state brief",
+      "decision": "reject-as-standalone",
+      "rationale": "Knowledge advantage too thin alone and adjacent to okhp3-future-state-change-strategy; merged as references/concept-brief.md."
+    },
+    {
+      "id": "D",
+      "name": "oversized-file delivery via local synced folder",
+      "decision": "reject-as-standalone",
+      "rationale": "Host plumbing, not a portable method; retained as a host note."
+    }
+  ],
+  "limitations": [
+    "Single-agent analytical review: evidence, outcome, safety-portability, disruptor and negotiator roles ran in one model context with a shared source set (the originating work session), so concordance is correlated evidence, not independent agreement.",
+    "No live with/without-skill benchmark and no unseen holdout were run. Development cases are designed, not executed.",
+    "Integration candidate only; not an accepted production capability."
+  ],
+  "owner": "OKHP3",
+  "expiry": "Re-review after the first live host test or any real campaign failure.",
+  "follow_up": [
+    "Post-review fixes from PR #138 automated review: SKILL.md step 3 aligned to the 30/60/90-day boundary in concept-brief.md; standalone message rules added for hosts without okhp3-linkedin-message; 'on request' added to second-touch artifacts.",
+    "Synthetic host test per the Resume Representative acceptance pattern",
+    "Add an external holdout",
+    "Decide whether resume-representative should route to this skill"
+  ]
+}
