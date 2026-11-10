@@ -1,6 +1,8 @@
 """Check that the candidate Replit entries point to the canonical skills."""
 
+import hashlib
 from pathlib import Path
+import re
 import unittest
 
 import yaml
@@ -42,6 +44,25 @@ class ReplitActivationContractTests(unittest.TestCase):
                 self.assertEqual(
                     config["metadata"]["status"], "unverified-host-activation-candidate"
                 )
+
+    def test_buyer_router_pins_the_current_canonical_procedure(self):
+        entry = (
+            ROOT / "capabilities/professional-portfolio/adapters/replit"
+            / "aj02-buyer-reply/SKILL.md"
+        )
+        config, body = metadata(entry)
+        self.assertEqual(config["name"], "aj02-buyer-reply")
+        self.assertEqual(config["metadata"]["status"], "isolated-routing-experiment")
+        target = "capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md"
+        self.assertIn(target, body)
+
+        # Check the canonical LF content even when this test runs in a CRLF
+        # checkout. The router itself checks raw bytes and will reject CRLF.
+        canonical = (ROOT / target).read_bytes().replace(b"\r\n", b"\n")
+        self.assertNotIn(b"\r", canonical)
+        pins = re.findall(r"SHA-256\s+([0-9a-f]{64})", body)
+        self.assertEqual(pins, [hashlib.sha256(canonical).hexdigest()])
+        self.assertIn("stop without drafting", body)
 
 
 if __name__ == "__main__":
