@@ -2,7 +2,10 @@
 
 > **Status update (2026-11-12):** The record below describes an earlier
 > candidate with SHA-256 `d95387714c620e9175b33fef2272ae816887180acc00f2bec35d37fa7ddc0b64`.
-> The current linked candidate at this draft revision has SHA-256
+> Its [historical tested source](https://github.com/OKHP3/askjamie-foundry/blob/2117d102a4a5c628c198359acfabdfef2487a56c/capabilities/resume-representative/skills/resume-representative/SKILL.md)
+> is pinned to that version. The link in the historical text below follows the
+> current file; use the pinned link to inspect the earlier tested bytes.
+> The [current draft candidate](../skills/resume-representative/SKILL.md) has SHA-256
 > `dc6d309d9e857e777bebb69aabcd63a493262b472dafab219d3d969112262ea6`.
 > Two synthetic Free Mode cases evaluated its public text inline; these do not
 > establish byte-exact installed loading, automatic discovery or parent
