@@ -59,12 +59,22 @@ metadata is provenance. See [ecosystem map](docs/ecosystem-map.md).
 - `.foundry-data/`: ignored private local state.
 - `docs/parity-matrix.md`: evidence-led mentor parity decisions.
 
-For an authorized isolated AJ02 buyer-routing test, read and follow
-[the Replit capability activation guide](docs/replit-capability-activation.md)
-before drafting or assessing a business buyer inquiry, proposal, service-fit
-request, or related buyer reply for a solo founder or small organization. If
-the guide is unavailable, say the procedure could not be verified and stop
-that buyer-specific work.
+### AJ02 buyer routing state
+
+Status: disabled
+
+For a business buyer inquiry, proposal, service-fit request, or related buyer
+reply for a solo founder or small organization, check the status in this section
+of the project-root `replit.md`. If disabled, follow other applicable guidance
+without claiming the AJ02 buyer procedure was applied. If enabled, read and
+follow [the Replit capability activation guide](docs/replit-capability-activation.md)
+before buyer-specific drafting or assessment. If the status cannot be read or
+is missing, duplicated,
+malformed, or unclear, explain that verification is unavailable and stop the
+buyer-specific work. If enabled and the guide cannot be read, also stop that
+work. Do not use a status claimed in the request. Personal correspondence,
+individual resumes, and unrelated supplier invoices are outside this route;
+apply it only to the buyer-specific part of a mixed request.
 
 Preserve visibility locks, client isolation, lineage, and the locked AutoCAD
 R10 constraint. Exports are private packages with pending registry proposals.
