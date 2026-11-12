@@ -1,5 +1,14 @@
 # Résumé Representative skill candidate acceptance
 
+> **Status update (2026-11-12):** The record below describes an earlier
+> candidate with SHA-256 `d95387714c620e9175b33fef2272ae816887180acc00f2bec35d37fa7ddc0b64`.
+> The current linked candidate at this draft revision has SHA-256
+> `dc6d309d9e857e777bebb69aabcd63a493262b472dafab219d3d969112262ea6`.
+> Two synthetic Free Mode cases evaluated its public text inline; these do not
+> establish byte-exact installed loading, automatic discovery or parent
+> integration. Task 56 was explicitly canceled and retired as a blocker; its
+> cancellation is not a passing test. The historical record below is retained.
+
 The [portable candidate](../skills/resume-representative/SKILL.md) is the exact corrected procedure tested in a separate Replit project. It is an integration candidate governed by the [FoundRy license](../../../LICENSE.md); it is not an accepted production capability or an installed parent-workspace assistant.
 
 ## Provenance and tested identity
