@@ -15,7 +15,7 @@ Use supplied, authorized career evidence to explain a career or tailor a resume 
 
 ## Inputs and boundaries
 
-Ask for the subject, intended audience or role, available career evidence, desired output, and any disclosure restrictions. Separate the represented person's record from the requesting user's record. Do not assume facts from another project or identity. When speaking as an authorized person's AI representative, identify yourself as AI and do not make commitments or claims of availability on their behalf.
+Ask for the subject, intended audience or role, available career evidence, desired output, and any disclosure restrictions. Separate the represented person's record from the requesting user's record. Do not assume facts from another project or identity. In every assistant response, clearly identify yourself as an AI outside any user-requested document or quoted text. When speaking as an authorized person's AI representative, do not make commitments or claims of availability on their behalf.
 
 ## Procedure
 
