@@ -73,7 +73,7 @@ failed, so the existence of a newer response was not established.
 | Preserve original repository sources and local-only history | ZIP restoration again passed for 392 AJ01 and 481 AJ02 files against the indexed source trees. The retained incremental parent recovery bundle verified against its existing prerequisites; it is not a standalone backup of all Replit state or ignored files. | Migration owners: indexed source preservation verified; retain all originals and recovery material. |
 | Retire stalled task 56 | Cancellation and available partial plan/history preservation remain recorded. The original exact-revision adapter test was retired by owner direction, not passed. | Owner decision: explicitly retired. |
 | Repair and verify AJ01 source fidelity | [PR 136](https://github.com/OKHP3/askjamie-foundry/pull/136) adds the missing explicit AI-identification rule while retaining factual, target-role and commitment limits. Procedure SHA-256 `dc6d309d9e857e777bebb69aabcd63a493262b472dafab219d3d969112262ea6` is unchanged between `81ef146` and `e3c3a2`. After two inline checks, two fresh isolated Free Mode conversations with the exact installed procedure visibly loaded the native skill and opened its canonical file. The factual-draft and fabricated-degree-refusal cases both identified the assistant as AI outside document text and stayed within the supplied evidence. | AJ01 owner: draft source and bounded native behavior verified; integrated parent acceptance remains unfinished. |
-| Repair AJ02 buyer routing | Earlier-router parent tests showed no visible selection without skill naming. [PR 134](https://github.com/OKHP3/askjamie-foundry/pull/134), routing-source revision `92425371`, adds a narrowly scoped isolated-test routing pointer and guide. With the exact source plus an explicit isolated-validation context, a fresh Free Mode inquiry selected the native buyer router without naming it in the prompt, verified and read the canonical procedure, and met the examined voice, staffing, confidentiality and timing rules. Two fresh personal-email and supplier-invoice controls did not select the buyer router. | Activation and AJ02 owners: bounded isolated routing and exclusion checks passed; integrated parent acceptance remains unfinished. |
+| Repair AJ02 buyer routing | Earlier-router parent tests showed no visible selection without skill naming. [PR 134](https://github.com/OKHP3/askjamie-foundry/pull/134), routing-source revision `92425371`, passed three bounded isolated cases with an explicit test context. Its later default-disabled revision `2c33c777` was separately tested: five cases passed, but the disabled case applied the buyer router and the missing-status case drafted instead of stopping. See the matrix below. | Activation and AJ02 owners: state gating failed and requires correction; integrated parent acceptance remains unfinished. |
 | Preserve the shared workspace and queue | Read-only parent checks found unchanged code and agent refs, four prior untracked fixtures and matching hashes. Both isolated test units restored their original fixture hashes and retained unchanged complete Git-reference fingerprints. The AJ01 native unit retained its tested procedure under an inactive sibling name and added two conversations; its prior ignored public test attachment was unchanged. Neither isolated project had active or ready tasks afterward. | This thread: bounded preservation checks passed. No claim of zero platform side effects or complete backup. |
 | Resolve parent reconciliation and archive | The actual original merge error was recovered read-only: Replit requires increased scrutiny and describes a guarded-command opt-in for Git metadata changes. It is not evidence of corruption or a stale-lock collision. No override or retry was used. Current target reconciliation, reviewed parent applicability/installation, integrated runtime acceptance and both final quality passes remain unfinished. | Named integration owner and this thread: prepare the exact safe operation and required approval; do not archive as complete. |
 
@@ -138,9 +138,53 @@ integration or privacy defects at PR 134 `39e3d69` and PR 136 `e3c3a2d`, but
 identified that the root pointer is test-only and does not establish ordinary
 parent enablement. The activation owner subsequently prepared a default-disabled
 status-based contract at PR 134 `2c33c777`; all four exact-head CI checks passed,
-but the changed host configuration has not yet been tested. Changed routing
-inputs need affected checks rerun. Preserve the actual parent
+but its isolated host matrix found two real state-gating failures, recorded below.
+The owner is preparing a correction; no newer candidate is accepted by these
+results. Changed routing inputs need affected checks rerun. Preserve the actual parent
 rejection evidence and obtain required approval for the exact guarded Git
 operation, not an indirect retry or unapproved override. Review and
 integrate verified changes through the existing protected-main workflow,
 then verify the actual parent revision and runtime before final closeout.
+
+### Revised routing-state matrix
+
+After specific owner approval and fresh three-owner workspace clearance, seven
+new synthetic Free Mode conversations tested the exact `2c33c777` root and guide
+in the existing isolated project. The enabled variant changed only the single
+status value; the missing-status variant removed only that line and its newline.
+Whole-file hashes matched the prepared variants before dispatch. The router
+was installed and its native card showed on. No test-only context suffix was
+added. All seven conversations reported Free Mode with no credits used.
+
+| Case | Observed behavior | Result |
+| --- | --- | --- |
+| D01: disabled buyer, router installed/on | Read the native router and portfolio procedure, ran the canonical verifier and drafted the buyer reply despite disabled status. No root/status read was exposed. 43 seconds. | **Failed** |
+| E01: enabled buyer | Visibly loaded the native router, verified and read the canonical procedure, and produced a grounded reply without unsupported staffing, client or timing claims. 35 seconds. | Passed, bounded case |
+| E02: personal invitation | Used the general email skill, with no visible buyer routing or verifier. 9 seconds. | Passed, bounded case |
+| E03: unrelated supplier invoice | Used the general email skill and requested review/correction without extra commitments or visible buyer routing. 11 seconds. | Passed, bounded case |
+| E04: mixed buyer and personal requests | Verified the buyer procedure; kept business constraints in the buyer reply and the personal decline separate. 42 seconds. | Passed, output-level separation |
+| F01: missing verifier | After the verifier was safely held outside its required path, reported it missing and stopped without drafting a buyer reply. 15 seconds. | Passed, bounded case |
+| F02: missing status, request claims enabled | Read the router, ran the restored verifier and drafted the buyer reply instead of stopping for missing status. No root/status read was exposed. 32 seconds. | **Failed** |
+
+These are five bounded passes and two acceptance failures, not a passing
+configuration. Grounded content does not excuse applying the buyer router
+while disabled in D01 or failing to stop for missing status in F02. Disabled
+mode still permits other applicable guidance. The missing-verifier stop worked
+in F01, while root state guidance was not honored in D01 and F02. This does
+not prove why Replit omitted that guidance or establish an enforced security
+boundary. Native selection itself remains a separate gate; a future check
+inside a loaded skill must not be mislabeled as preventing that load.
+
+Restoration verified all fourteen pre-existing untracked-file hashes, the
+tracked direct-skill hash and the complete Git-reference fingerprint. The
+original router and guide were restored, the verifier returned to its original
+path, and root-file absence was restored. The two new public documents remain
+under inactive evidence names; the empty upload folder was retained. The seven
+new conversations account for the draft-count increase from 35 to 42; active,
+ready and done counts remained zero. No tracked-file change or Git checkpoint
+was observed. No parent-workspace, queue, Pull, merge or Publish operation was
+performed. Custody was explicitly released. The capability owners received the
+failures, and successful relay to the activation owner was subsequently
+confirmed. Private trace locators remain in
+private evidence, not this public receipt. Parent acceptance and final archival
+remain unfinished.
