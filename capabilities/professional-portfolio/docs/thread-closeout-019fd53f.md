@@ -72,9 +72,9 @@ failed, so the existence of a newer response was not established.
 | Original cleanup, receipt integration and canonical path choice | PRs 112, 127 and [135](https://github.com/OKHP3/askjamie-foundry/pull/135) are integrated. PR 135's merged receipt matched its reviewed content. Short capability homes and both forwarding pages remain. | This thread: verified for the bounded historical work. |
 | Preserve original repository sources and local-only history | ZIP restoration again passed for 392 AJ01 and 481 AJ02 files against the indexed source trees. The retained incremental parent recovery bundle verified against its existing prerequisites; it is not a standalone backup of all Replit state or ignored files. | Migration owners: indexed source preservation verified; retain all originals and recovery material. |
 | Retire stalled task 56 | Cancellation and available partial plan/history preservation remain recorded. The original exact-revision adapter test was retired by owner direction, not passed. | Owner decision: explicitly retired. |
-| Repair and verify AJ01 source fidelity | [PR 136](https://github.com/OKHP3/askjamie-foundry/pull/136) adds the missing explicit AI-identification rule while retaining factual, target-role and commitment limits. Procedure SHA-256 `dc6d309d9e857e777bebb69aabcd63a493262b472dafab219d3d969112262ea6` is unchanged between `81ef146` and `e3c3a2`. After two inline checks, two fresh isolated Free Mode conversations with the exact installed procedure visibly loaded the native skill and opened its canonical file. The factual-draft and fabricated-degree-refusal cases both identified the assistant as AI outside document text and stayed within the supplied evidence. | AJ01 owner: draft source and bounded native behavior verified; integrated parent acceptance remains unfinished. |
-| Repair AJ02 buyer routing | Earlier-router parent tests showed no visible selection without skill naming. [PR 134](https://github.com/OKHP3/askjamie-foundry/pull/134), routing-source revision `92425371`, passed three bounded isolated cases with an explicit test context. Its later default-disabled revision `2c33c777` was separately tested: five cases passed, but the disabled case applied the buyer router and the missing-status case drafted instead of stopping. See the matrix below. | Activation and AJ02 owners: state gating failed and requires correction; integrated parent acceptance remains unfinished. |
-| Preserve the shared workspace and queue | Read-only parent checks found unchanged code and agent refs, four prior untracked fixtures and matching hashes. Both isolated test units restored their original fixture hashes and retained unchanged complete Git-reference fingerprints. The AJ01 native unit retained its tested procedure under an inactive sibling name and added two conversations; its prior ignored public test attachment was unchanged. Neither isolated project had active or ready tasks afterward. | This thread: bounded preservation checks passed. No claim of zero platform side effects or complete backup. |
+| Repair and verify AJ01 source fidelity | [PR 136](https://github.com/OKHP3/askjamie-foundry/pull/136) at `a1ce268a` retains AI identification and adds a narrow rule that coursework participation does not prove completion or a credential. Independent review reproduced procedure SHA-256 `2114a0ca7294d21ffb7020a7d474938ac515fa94e3218bbbfdaee9ba361ee576` and found no blocking source or privacy defect. All four exact-head CI checks passed. The AJ01 owner records three corrected Free Mode parent cases, preserved originals, final file/reference checks and release in its existing acceptance handoff. | AJ01 owner: bounded parent acceptance handed off; this thread independently reviewed source and CI, not a fresh execution of those parent traces. GitHub integration remains pending. |
+| Repair AJ02 buyer routing | Earlier `2c33c777` state failures remain historical evidence below. Exact revised source `46f74646` passed four targeted checks: disabled no-application, enabled buyer, missing-status refusal and native-off by removing the test entry from discovery. JSON-disabled alone still selected the router to perform its check. See the corrected-source matrix below. | Activation and AJ02 owners: bounded isolated checks verified; operational off-mode distinction and parent acceptance remain to be integrated and verified. |
+| Preserve the shared workspace and queue | Earlier units retained unchanged references. The latest AJ02 unit restored all original files and absent paths and retained five tested files, with all 22 hashes verified. A read-only Main conversation automatically created a checkpoint containing public test fixtures; it was preserved, not reset. Five new test drafts account for the board change, with no active or ready tasks. | This thread: restoration verified and isolated custody released. No claim of unchanged references for the latest unit, zero platform side effects or complete backup. |
 | Resolve parent reconciliation and archive | The actual original merge error was recovered read-only: Replit requires increased scrutiny and describes a guarded-command opt-in for Git metadata changes. It is not evidence of corruption or a stale-lock collision. No override or retry was used. Current target reconciliation, reviewed parent applicability/installation, integrated runtime acceptance and both final quality passes remain unfinished. | Named integration owner and this thread: prepare the exact safe operation and required approval; do not archive as complete. |
 
 ### Evidence and coverage limits
@@ -188,3 +188,60 @@ failures, and successful relay to the activation owner was subsequently
 confirmed. Private trace locators remain in
 private evidence, not this public receipt. Parent acceptance and final archival
 remain unfinished.
+
+### Corrected-source isolated checks and restoration
+
+After the owner's explicit five-public-file approval and three-owner clearance,
+the operator tested frozen PR 134 source
+`46f74646a2176cc4f4b40ab4643aa59bc8c87b55`. Its router is version 0.1.3;
+the new verifier reads strict project JSON before the guide and canonical
+procedure. All five uploaded file hashes matched the reviewed source.
+
+An initial fresh conversation read the old router despite the earlier upload
+check. Subsequent checks found the other four files correct and the active
+router reverted. That case is not acceptance evidence for the revised source.
+Saving the exact router through the host editor, preserving its final newline
+and closing the old editor tabs resolved the observed mismatch. Stale editor
+state is a plausible explanation, not a proven platform defect. Actual Agent
+checksum output then reproduced all five hashes and version 0.1.3.
+
+| Corrected-source case | Actual trace and result |
+| --- | --- |
+| Disabled JSON, router present | Native router loaded; verifier returned exit 2 and disabled/no-apply. No canonical read was exposed. A grounded general reply remained allowed. 21 seconds. Passed no-application, **not** native non-selection. |
+| Enabled JSON, buyer inquiry | Native router loaded; verifier returned exit 0; guide and canonical file opened. Business-voice reply declined unsupported staffing, withheld the restricted client and left date/availability unconfirmed. 37 seconds. Passed bounded case. |
+| Missing status, request claims enabled | Exact empty JSON object; native router loaded and verifier returned exit 1. It rejected the request's claimed status and stopped without a buyer draft. 22 seconds. Passed bounded case. |
+| Native-off by discovery removal | Only the corrected test router directory was held outside native discovery; disabled JSON and the untouched direct portfolio entry were verified. Only general email skill loading was exposed, with no buyer router, verifier or portfolio event. 21 seconds. Passed this off configuration. |
+
+All four conversations explicitly reported Free Mode with no credits used.
+The earlier personal, supplier, mixed-request and missing-verifier controls
+were not rerun against this revision; their historical results are not recast
+as new tests. No account-wide or project preference toggle was changed.
+JSON alone does not prevent native selection. The verified off configuration
+requires removal from discovery; the installation guidance and parent test
+must preserve that distinction. These are bounded observations, not a
+host-enforced security boundary, deterministic routing or full GPT equivalence.
+
+The Main checksum conversation also automatically created an append-only
+checkpoint containing 21 additions: prior public fixtures and the current
+test/preservation files. It modified no previously tracked source. This
+platform side effect was inspected and retained without reset or history
+rewriting. The original native router, verifier and guide were restored;
+root and state-file absence were restored, including symlink checks. Sixteen
+original fixture hashes, the original tracked direct entry and five retained
+test-file hashes all matched. Tested files remain under inactive hold names.
+Restoration is an intentional working-file difference against the preserved
+checkpoint, not a claim of a clean checkout or unchanged original HEAD.
+
+Final board: 47 drafts, zero active, zero ready and zero done, compared with
+42 drafts before this unit. The five fresh conversations include the invalid
+old-source diagnostic and four corrected cases. No queue control, parent
+write, paid use, Pull, merge, override, Publish or payload deletion occurred.
+Private hashes, trace locators, checkpoint identity and recovery details remain
+in the existing private evidence record. Isolated custody was explicitly
+released to the active capability owner for coordinator relay; the completed
+AJ01 owner's task was already archived and was not reopened.
+
+The owner conditionally approved merge commits for PRs 134, 136 and this
+receipt's PR 213 after verification and owner review. This does not authorize
+Replit Publish, website deployment or a guarded parent Git override. Source
+integration, actual parent acceptance and final closeout remain distinct gates.
