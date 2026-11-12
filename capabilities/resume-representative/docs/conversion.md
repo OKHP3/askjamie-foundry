@@ -6,6 +6,7 @@
 > The original dossier below remains historical. The two GPT knowledge image
 > bytes, source authority and reuse rights remain unresolved; parent-host
 > activation and full GPT equivalence are not established.
+
 ## Conversion verdict
 
 Disposition: `needs_source_artifacts`.
