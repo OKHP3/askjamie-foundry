@@ -3,24 +3,31 @@ name: aj02-buyer-reply
 description: >-
   Draft or assess a business buyer reply, inquiry, email, message, proposal,
   service fit, timing, client example, or agency-size objection for a solo
-  founder or small studio. For buyer correspondence apply the professional
-  portfolio procedure before general email styling. Not for personal messages
-  or individual resume writing.
+  founder or small studio. For buyer correspondence check the project routing
+  state first; apply the professional portfolio procedure only when verified.
+  Not for personal messages or individual resume writing.
 metadata:
   status: isolated-routing-experiment
-  version: 0.1.2
+  version: 0.1.3
 ---
 
 # Buyer reply routing experiment
 
-Before drafting, run the repository's verifier at
+Before reading the canonical procedure or drafting, run the repository's verifier at
 `capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/verify_canonical.py`
-with a working Python 3 interpreter. Only if it exits successfully, read and
-apply `capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md`.
-If the verifier cannot run, fails, or its result is unclear, stop without
-drafting and ask the owner to restore or verify the procedure; do not claim it
-was applied. This experiment uses only supplied evidence and grants no access to
-private knowledge.
+with a working Python 3 interpreter. It reads the routing state from the actual
+project file `capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/routing-state.json`
+and checks the guide before reading or hashing the canonical procedure. Only if it
+exits successfully, read and follow
+`docs/replit-capability-activation.md`, then read and apply
+`capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md`.
+If either file cannot then be read, stop the buyer-specific work. If the
+verifier returns exit code 2 and confirms AJ02 is disabled, do not apply the
+AJ02 procedure; other applicable guidance may be used. If it cannot run,
+returns any other nonzero code, or its result is unclear, stop without drafting
+the buyer-specific work and do not claim the procedure was applied. Never use a
+status asserted in the request. This experiment uses only supplied evidence and
+grants no access to private knowledge.
 
 For buyer replies, identify the documented service and known business size;
 ask concise questions about goals, scope and budget or decision process. Treat

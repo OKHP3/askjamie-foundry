@@ -1,6 +1,7 @@
-"""Check the exact approved LF or CRLF AJ02 procedure bytes."""
+"""Check AJ02 routing state, guide availability, and exact procedure bytes."""
 
 import hashlib
+import json
 from pathlib import Path
 
 
@@ -11,10 +12,54 @@ APPROVED_SHA256 = frozenset({
     "fd04ccfc2f40e05fac156eaa70c961d3a83f861b8a64dcea0bcb8a9d96ca5665",
 })
 TARGET_PATH = "capabilities/professional-portfolio/skills/professional-portfolio/SKILL.md"
+GUIDE_PATH = "docs/replit-capability-activation.md"
+STATE_PATH = "capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/routing-state.json"
+MAX_STATE_BYTES = 1024
 
 
-def canonical_target():
-    return Path(__file__).resolve().parents[5] / TARGET_PATH
+def project_root():
+    return Path(__file__).resolve().parents[5]
+
+
+def reject_duplicate_keys(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("Duplicate JSON key")
+        result[key] = value
+    return result
+
+
+def reject_constant(_value):
+    raise ValueError("Nonstandard JSON constant")
+
+
+def routing_state(path):
+    """Read one exact, bounded status object; errors are unknown."""
+    try:
+        with path.open("rb") as state_file:
+            raw = state_file.read(MAX_STATE_BYTES + 1)
+        if len(raw) > MAX_STATE_BYTES:
+            return "unknown"
+        data = json.loads(
+            raw.decode("utf-8"),
+            object_pairs_hook=reject_duplicate_keys,
+            parse_constant=reject_constant,
+        )
+        if (type(data) is not dict or set(data) != {"status"}
+                or type(data["status"]) is not str
+                or data["status"] not in {"enabled", "disabled"}):
+            return "unknown"
+        return data["status"]
+    except Exception:
+        return "unknown"
+
+
+def guide_readable(path):
+    try:
+        return bool(path.read_text(encoding="utf-8").strip())
+    except Exception:
+        return False
 
 
 def verify_file(path):
@@ -29,7 +74,15 @@ def verify_file(path):
 
 def main():
     try:
-        verified = verify_file(canonical_target())
+        root = project_root()
+        state = routing_state(root / STATE_PATH)
+        if state == "disabled":
+            print("AJ02 buyer routing is disabled; do not apply it. Other applicable guidance may be used.")
+            return 2
+        if state != "enabled" or not guide_readable(root / GUIDE_PATH):
+            print("AJ02 routing state or guide could not be verified; stop without drafting.")
+            return 1
+        verified = verify_file(root / TARGET_PATH)
     except Exception:
         verified = False
     if verified:

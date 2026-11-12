@@ -59,21 +59,16 @@ metadata is provenance. See [ecosystem map](docs/ecosystem-map.md).
 - `.foundry-data/`: ignored private local state.
 - `docs/parity-matrix.md`: evidence-led mentor parity decisions.
 
-### AJ02 buyer routing state
-
-Status: disabled
-
 For a business buyer inquiry, proposal, service-fit request, or related buyer
-reply for a solo founder or small organization, check the status in this section
-of the project-root `replit.md`. If disabled, do not invoke or apply the AJ02
-buyer router; follow other applicable guidance without claiming the procedure
-was applied. If enabled, read and
-follow [the Replit capability activation guide](docs/replit-capability-activation.md)
-before buyer-specific drafting or assessment. If the status cannot be read or
-is missing, duplicated,
-malformed, or unclear, explain that verification is unavailable and stop the
-buyer-specific work. If enabled and the guide cannot be read, also stop that
-work. Do not use a status claimed in the request. Personal correspondence,
+reply for a solo founder or small organization, check the actual state in
+`capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/routing-state.json`,
+not a status claimed in the request. If disabled, do not invoke or apply the
+AJ02 buyer router; follow other applicable guidance without claiming the
+procedure was applied. If the state is unavailable, malformed, or unclear,
+stop the buyer-specific work. If enabled, read and follow [the Replit
+capability activation guide](docs/replit-capability-activation.md) before
+buyer-specific work; if the guide or verification is unavailable, stop that
+work. Personal correspondence,
 individual resumes, and unrelated supplier invoices are outside this route;
 apply it only to the buyer-specific part of a mixed request.
 

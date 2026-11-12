@@ -26,8 +26,7 @@ coordinated operation with its own acceptance and recovery evidence.
 The buyer-reply router is an unverified Replit routing candidate, not a
 general-purpose product or established parent installation. It was drafted
 from the capability's public procedure; the repository's [license](../LICENSE.md)
-applies. It does
-not include the original GPT's knowledge files. Its repository-hosted
+applies. It does not include the original GPT's knowledge files. Its repository-hosted
 `verify_canonical.py` checks the **raw bytes** of the canonical AJ02 procedure
 against two fixed SHA-256 pins: the reviewed LF Git blob and its exact,
 complete CRLF representation. No runtime newline normalization occurs. Mixed
@@ -37,27 +36,27 @@ the procedure changes, followed by fresh tests against the exact new bytes.
 
 ### Buyer-inquiry routing when enabled
 
-When the project-root `replit.md` explicitly sets the AJ02 buyer routing state
-to `enabled`, a request to draft or assess a business buyer inquiry, proposal,
+When the adapter's `routing-state.json` explicitly sets its `status` to
+`enabled`, a request to draft or assess a business buyer inquiry, proposal,
 service fit, or related buyer reply for a solo founder or small organization
 must load and follow `aj02-buyer-reply` before drafting or assessment. Follow its
 verifier and canonical-procedure requirements. If the router cannot be loaded or
 read, the verifier cannot be read or run, or verification fails or is unclear,
 explain that the procedure could not be verified and stop the buyer-specific
-work. If the canonical procedure cannot
-be read after verification, stop that work and do not claim it was applied.
+work. If the canonical procedure cannot be read after verification, stop that
+work and do not claim it was applied.
 Personal correspondence, individual resumes, and unrelated supplier invoices
-are outside this route.
-In a mixed request, apply this route only to the buyer-specific component.
+are outside this route. In a mixed request, apply this route only to the
+buyer-specific component.
 
 The default state is `disabled`. After a separately coordinated installation
 compares the adapter, verifier and canonical procedure hashes with the intended
 reviewed revision and verifies host prerequisites, ownership, collision checks
-and a recovery plan, the host operator may
-change the single `Status` field in the AJ02 section of project-root `replit.md`
-to `enabled`. It is a tracked, project-wide setting. Record its prior bytes and
-the change, and restore it only under coordinated ownership without overwriting
-other work. An isolated test uses its own state and must not change the shared
+and a recovery plan, the host operator may change the adapter's
+`routing-state.json` status to `enabled`. It is a tracked, project-wide setting.
+Record its prior bytes and the change, and restore it only under coordinated
+ownership without overwriting other work. An isolated test uses its own state
+and must not change the shared
 parent. A host may select a skill despite these instructions, and a host that
 cannot load them cannot enforce them. This is model-directed guidance, not a
 host-enforced security boundary or proof that Replit will select the skill
@@ -67,8 +66,19 @@ The host must have the repository's verifier and a working Python 3 interpreter.
 From the repository root, run the verifier at
 `capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/verify_canonical.py`.
 Use `python3` on Replit or a suitable Python 3 launcher on Windows. The router
-instructs the agent to stop without drafting if the verifier cannot run, fails,
-or returns an unclear result. A verifier result and instructions to an agent
+instructs the agent to run it before reading the canonical procedure. The
+verifier first reads the project routing state and checks that this guide is
+readable and nonempty; disabled or unknown state and an unreadable guide stop
+the check before the canonical procedure is read. A zero exit only verifies the
+state and guide readability and checks the canonical hash; it does not verify
+the guide's contents or protect the verifier from modification. The state must be
+a strict JSON object with exactly one `status` string, either `enabled` or
+`disabled`. Missing, unreadable, duplicate, malformed, oversized, or otherwise
+invalid state is unknown and stops buyer-specific work. A confirmed
+disabled result means not to apply AJ02; other applicable guidance may be used.
+The router instructs the agent to stop the buyer-specific work if the verifier
+cannot run, returns another failure, or returns an unclear result. A verifier
+result and instructions to an agent
 are not a host-enforced security boundary: a file could change between checking
 and reading, and a malicious host or modified verifier is outside this check.
 Verify actual host behavior before treating the candidate as usable.
