@@ -53,6 +53,34 @@ class ReplitActivationContractTests(unittest.TestCase):
                     config["metadata"]["status"], "unverified-host-activation-candidate"
                 )
 
+    def test_direct_portfolio_excludes_buyer_work_before_the_canonical_read(self):
+        entry = (
+            ROOT / "capabilities/professional-portfolio/adapters/replit"
+            / "professional-portfolio/SKILL.md"
+        )
+        config, body = metadata(entry)
+        description = " ".join(config["description"].split())
+        portfolio_scope, exclusion, buyer_exclusion = description.partition("Excludes ")
+        self.assertTrue(exclusion)
+        self.assertIn("case studies", portfolio_scope)
+        self.assertIn("capability narratives", portfolio_scope)
+        buyer_deliverables = (
+            "buyer inquiries", "buyer proposals", "proposal replies",
+            "service-fit assessments", "buyer objections",
+        )
+        for buyer_work in buyer_deliverables:
+            with self.subTest(buyer_work=buyer_work):
+                self.assertIn(buyer_work, buyer_exclusion)
+
+        target = config["metadata"]["canonical_path"]
+        scope, procedure_heading, portfolio_procedure = body.partition("## Portfolio procedure")
+        self.assertTrue(procedure_heading)
+        self.assertIn("`aj02-buyer-reply`", scope)
+        self.assertIn("without reading or applying the canonical procedure", " ".join(scope.split()))
+        self.assertNotIn(target, scope)
+        self.assertIn("read the complete canonical procedure", portfolio_procedure)
+        self.assertIn(f"`{target}`", portfolio_procedure)
+
     def test_buyer_router_uses_the_canonical_verifier(self):
         entry = (
             ROOT / "capabilities/professional-portfolio/adapters/replit"
