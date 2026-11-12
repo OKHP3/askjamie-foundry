@@ -33,6 +33,21 @@ endings, lone CR, other content changes, missing or unreadable files, and hash
 errors fail the check. Both pins must be derived and reviewed together whenever
 the procedure changes, followed by fresh tests against the exact new bytes.
 
+### Buyer-inquiry routing in an isolated test
+
+In an authorized isolated AJ02 buyer-routing test, a request to draft or
+assess a business buyer inquiry, proposal, service fit, or related buyer reply
+for a solo founder or small organization should load and follow
+`aj02-buyer-reply` before drafting or assessment. Follow its verifier and
+canonical-procedure requirements. If the router or verifier cannot be read or
+run, or verification fails or is unclear, explain that the procedure could not
+be verified and stop the buyer-specific work. Personal correspondence,
+individual resumes, and unrelated supplier invoices are outside this route.
+In a mixed request, apply this route only to the buyer-specific component.
+
+This is model-directed guidance for a controlled experiment, not a host-enforced
+security boundary or proof that Replit will select the skill automatically.
+
 The host must have the repository's verifier and a working Python 3 interpreter.
 From the repository root, run the verifier at
 `capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/verify_canonical.py`.

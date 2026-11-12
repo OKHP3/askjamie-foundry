@@ -59,6 +59,12 @@ metadata is provenance. See [ecosystem map](docs/ecosystem-map.md).
 - `.foundry-data/`: ignored private local state.
 - `docs/parity-matrix.md`: evidence-led mentor parity decisions.
 
+For an authorized isolated AJ02 buyer-routing test, read and follow
+[the Replit capability activation guide](docs/replit-capability-activation.md)
+before drafting or assessing a business buyer inquiry or service-fit request
+for a solo founder or small organization. If the guide is unavailable, say
+the procedure could not be verified and stop that buyer-specific work.
+
 Preserve visibility locks, client isolation, lineage, and the locked AutoCAD
 R10 constraint. Exports are private packages with pending registry proposals.
 No automatic repository creation, publication or graduation occurs.
