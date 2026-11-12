@@ -65,8 +65,9 @@ Status: disabled
 
 For a business buyer inquiry, proposal, service-fit request, or related buyer
 reply for a solo founder or small organization, check the status in this section
-of the project-root `replit.md`. If disabled, follow other applicable guidance
-without claiming the AJ02 buyer procedure was applied. If enabled, read and
+of the project-root `replit.md`. If disabled, do not invoke or apply the AJ02
+buyer router; follow other applicable guidance without claiming the procedure
+was applied. If enabled, read and
 follow [the Replit capability activation guide](docs/replit-capability-activation.md)
 before buyer-specific drafting or assessment. If the status cannot be read or
 is missing, duplicated,

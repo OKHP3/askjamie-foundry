@@ -58,9 +58,10 @@ change the single `Status` field in the AJ02 section of project-root `replit.md`
 to `enabled`. It is a tracked, project-wide setting. Record its prior bytes and
 the change, and restore it only under coordinated ownership without overwriting
 other work. An isolated test uses its own state and must not change the shared
-parent. A host that cannot load these instructions cannot enforce them. This
-is model-directed guidance, not a host-enforced security boundary or proof that
-Replit will select the skill automatically.
+parent. A host may select a skill despite these instructions, and a host that
+cannot load them cannot enforce them. This is model-directed guidance, not a
+host-enforced security boundary or proof that Replit will select the skill
+automatically.
 
 The host must have the repository's verifier and a working Python 3 interpreter.
 From the repository root, run the verifier at
