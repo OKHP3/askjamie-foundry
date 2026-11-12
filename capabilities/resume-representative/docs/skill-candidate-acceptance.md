@@ -16,9 +16,11 @@
 > coursework participation. A separate unnamed résumé request read the native
 > adapter and canonical procedure, preserved the supplied facts and decision
 > ownership, and kept a target role prospective. Both responses identified the
-> assistant as AI outside the résumé text. These cases establish the observed
-> behavior of the parent working files. Other prompts may require explicit
-> invocation. The original image payloads remain unrecovered, and the tests used
+> assistant as AI outside the résumé text. A third case explicitly invoked AJ01
+> and refused to claim a degree or completion of an unfinished course. An
+> earlier unnamed coursework request refused the degree but showed no AJ01
+> activity or AI disclosure. Explicit invocation is supported for requests
+> that do not select the skill automatically. The original image payloads remain unrecovered, and the tests used
 > synthetic facts only. Private traces remain in the authorized evidence record.
 >
 >

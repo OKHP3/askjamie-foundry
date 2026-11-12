@@ -5,8 +5,8 @@
 > and produced a [portable candidate with bounded tests](skill-candidate-acceptance.md).
 > The original dossier below remains historical. The two image attachments
 > observed in the captured v3 configuration have unverified bytes. Source
-> authority and reuse rights, parent-host activation, and full GPT equivalence
-> remain unresolved.
+> authority and reuse rights and full GPT equivalence remain unresolved. The
+> linked acceptance record describes the bounded parent Replit activation.
 
 ## Conversion verdict
 
