@@ -1,5 +1,8 @@
 # AJ02 repository organization: thread closeout
 
+Current migration status is in the [2026-11-12 continuation](#2026-11-12-continuation).
+Earlier sections are historical evidence, not current completion claims.
+
 Source task: `019fd53f-0b23-7513-a20a-6eb23584e387`, **Audit and clean AJ02 repo**. This is a compact summary, not a lossless transcript. Reviewed on 2026-11-05 on the local Mac. Coordination: [issue 58](https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6676412741).
 
 ## Purpose and coverage
@@ -53,3 +56,91 @@ The sections above are the historical cleanup record, not a current-status repor
 The updated record is a compact summary, not a transcript. Earlier history and selected tool results were reviewed as described above; subsequent visible user decisions, GitHub PR states, source-snapshot checks, and the observed Replit cancellation were also considered. No complete export of task 56's history was available. Private retained evidence is a partial checkpoint, not an independent off-host backup of the Replit workspace. Previously deleted or inaccessible standalone sources and child Replit state are not reconstructed by this receipt.
 
 Resume from the existing coordination issue and the activation owner's draft; confirm the exact accepted revision and real parent runtime behavior before calling the migration complete. Do not cancel, reorder, or otherwise disturb unrelated Replit work. A draft PR is not an integrated release, and source restoration is not proof of native skill activation.
+
+## 2026-11-12 continuation
+
+The owner directed continued execution and explicitly discontinued waiting for a
+Support reply as a prerequisite. This supersedes earlier wait-for-Support
+continuations; it does not authorize bypassing an actual safety rejection,
+paid use, queue disturbance, or unverified archival. The final ticket search
+failed, so the existence of a newer response was not established.
+
+### Updated completion ledger
+
+| Obligation | Current evidence and acceptance boundary | Owner and status |
+| --- | --- | --- |
+| Original cleanup, receipt integration and canonical path choice | PRs 112, 127 and [135](https://github.com/OKHP3/askjamie-foundry/pull/135) are integrated. PR 135's merged receipt matched its reviewed content. Short capability homes and both forwarding pages remain. | This thread: verified for the bounded historical work. |
+| Preserve original repository sources and local-only history | ZIP restoration again passed for 392 AJ01 and 481 AJ02 files against the indexed source trees. The retained incremental parent recovery bundle verified against its existing prerequisites; it is not a standalone backup of all Replit state or ignored files. | Migration owners: indexed source preservation verified; retain all originals and recovery material. |
+| Retire stalled task 56 | Cancellation and available partial plan/history preservation remain recorded. The original exact-revision adapter test was retired by owner direction, not passed. | Owner decision: explicitly retired. |
+| Repair and verify AJ01 source fidelity | [PR 136](https://github.com/OKHP3/askjamie-foundry/pull/136) adds the missing explicit AI-identification rule while retaining factual, target-role and commitment limits. Procedure SHA-256 `dc6d309d9e857e777bebb69aabcd63a493262b472dafab219d3d969112262ea6` is unchanged between `81ef146` and `e3c3a2`. After two inline checks, two fresh isolated Free Mode conversations with the exact installed procedure visibly loaded the native skill and opened its canonical file. The factual-draft and fabricated-degree-refusal cases both identified the assistant as AI outside document text and stayed within the supplied evidence. | AJ01 owner: draft source and bounded native behavior verified; integrated parent acceptance remains unfinished. |
+| Repair AJ02 buyer routing | Earlier-router parent tests showed no visible selection without skill naming. [PR 134](https://github.com/OKHP3/askjamie-foundry/pull/134), routing-source revision `92425371`, adds a narrowly scoped isolated-test routing pointer and guide. With the exact source plus an explicit isolated-validation context, a fresh Free Mode inquiry selected the native buyer router without naming it in the prompt, verified and read the canonical procedure, and met the examined voice, staffing, confidentiality and timing rules. Two fresh personal-email and supplier-invoice controls did not select the buyer router. | Activation and AJ02 owners: bounded isolated routing and exclusion checks passed; integrated parent acceptance remains unfinished. |
+| Preserve the shared workspace and queue | Read-only parent checks found unchanged code and agent refs, four prior untracked fixtures and matching hashes. Both isolated test units restored their original fixture hashes and retained unchanged complete Git-reference fingerprints. The AJ01 native unit retained its tested procedure under an inactive sibling name and added two conversations; its prior ignored public test attachment was unchanged. Neither isolated project had active or ready tasks afterward. | This thread: bounded preservation checks passed. No claim of zero platform side effects or complete backup. |
+| Resolve parent reconciliation and archive | The actual original merge error was recovered read-only: Replit requires increased scrutiny and describes a guarded-command opt-in for Git metadata changes. It is not evidence of corruption or a stale-lock collision. No override or retry was used. Current target reconciliation, reviewed parent applicability/installation, integrated runtime acceptance and both final quality passes remain unfinished. | Named integration owner and this thread: prepare the exact safe operation and required approval; do not archive as complete. |
+
+### Evidence and coverage limits
+
+The supported history reader returned 93 available turns across ten pages in the
+renewed review. Outputs had per-item truncation limits; this was a paginated
+inventory with selected detailed review, not a lossless transcript or a claim
+that every attachment and tool output was reread. The original task-56 history
+remains partial. Durable public source, tests and candidate changes stay in
+their existing capability paths and PRs. Private captures, checksums, test
+trace references, recovery artifacts and continuation details remain in the
+established private project evidence locations; they are not copied here.
+
+All local receipt links resolved in this review. The two historical
+standalone AJ02 commit links (`d45b639` and `5b29132`) returned HTTP 404;
+they remain provenance references, not currently retrievable remote evidence.
+The indexed FoundRy source copies and their restoration checks remain available.
+
+The original GPT knowledge images have not been identified by exact bytes.
+That is a potential GPT-knowledge parity gap, not evidence that the indexed
+repository archives are incomplete. The other unresolved source exceptions,
+including component rights/authority and child-Replit ignored or
+platform-managed state, remain in the [source reconciliation boundaries](../../../docs/migrations/aj01-aj02-source-reconciliation.md#replit-and-recovery-boundaries).
+No original GPT, child Repl, recovery copy
+or source repository is retired by these checks. No comprehensive capture in
+Notion, SharePoint, Outlook or LinkedIn is claimed. Browser and computer access
+are inspection surfaces, not durable evidence destinations.
+
+The first AJ01 tests used inline instructions rendered by a rich-text composer
+and do not prove native loading or byte-identical prompt serialization. The
+subsequent exact-file native cases are distinct evidence: factual drafting
+and credential refusal,
+34 and 25 seconds respectively, both Free with no credits used. Skill naming
+was explicit in these two prompts; no separate AI-disclosure instruction was
+added beyond the installed procedure.
+
+AJ02's revised-root buyer case,
+personal-email control
+and supplier-invoice control
+took 45, 9 and 11 seconds, all Free with no credits used. The buyer case
+visibly loaded the router and canonical skill, ran the pinned verifier and
+opened the canonical file. No separate guide-open event was exposed. The
+test-only context suffix and extra public reference copied by the folder
+picker are recorded in the private evidence; no private files were uploaded.
+Afterward all eleven original untracked-file hashes, tracked direct-skill
+hash and complete Git-reference fingerprint matched. The root test instruction
+was retained under an inactive hold name, the original router restored, and
+three new conversations account for the draft-count change. Neither these
+cases nor their passing checks prove deterministic routing or a security boundary.
+
+The examined parent AJ02 directed reply used permitted business `we`; an
+earlier classification of that reply as a voice failure was corrected after
+checking the actual procedure. The separate unnamed-skill case remains a
+routing failure for the earlier setup. The corrected classification and new
+isolated test do not erase that historical case or prove parent acceptance.
+
+Continue with the existing PR owners, exact-source isolated host tests and
+reversible fixture restoration. The two completed isolated units are not to be
+repeated unchanged. Independent read-only source review found no blocking
+integration or privacy defects at PR 134 `39e3d69` and PR 136 `e3c3a2d`, but
+identified that the root pointer is test-only and does not establish ordinary
+parent enablement. The activation owner subsequently prepared a default-disabled
+status-based contract at PR 134 `2c33c777`; all four exact-head CI checks passed,
+but the changed host configuration has not yet been tested. Changed routing
+inputs need affected checks rerun. Preserve the actual parent
+rejection evidence and obtain required approval for the exact guarded Git
+operation, not an indirect retry or unapproved override. Review and
+integrate verified changes through the existing protected-main workflow,
+then verify the actual parent revision and runtime before final closeout.
