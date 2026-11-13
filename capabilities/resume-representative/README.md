@@ -37,7 +37,8 @@ Use Record Location Reconciliation for authorized moves that preserve versions
 and for verifying affected paths and tracker links. Skillz is the canonical
 source for this companion skill.
 [Skillz Forge listing](https://okhp3.github.io/skillz/#/skills/knowledge-operations/okhp3-record-location-reconciliation) ·
-[Canonical SKILL.md](https://github.com/OKHP3/skillz/blob/main/knowledge-operations/okhp3-record-location-reconciliation/SKILL.md)
+[Canonical SKILL.md](https://github.com/OKHP3/skillz/blob/main/knowledge-operations/okhp3-record-location-reconciliation/SKILL.md) ·
+[November 10 field observation](https://github.com/OKHP3/skillz/blob/main/knowledge-operations/okhp3-record-location-reconciliation/benchmarks/field-observation-2026-11-10.md)
 
 The complete pinned GitHub snapshot is imported under
 [origin/repository/](origin/repository/): 392 files and 2,013,468 bytes,
