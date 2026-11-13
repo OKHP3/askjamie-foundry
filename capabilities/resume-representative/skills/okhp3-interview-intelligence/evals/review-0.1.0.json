@@ -1,0 +1,96 @@
+{
+  "artifact": "okhp3-interview-intelligence 0.1.0",
+  "evidence_status": "analytical",
+  "decision": "approve-with-limits",
+  "decision_question": "Is this portable synthetic-data skill ready for a supervised, reviewable release?",
+  "criteria": [
+    "exact role and attributable source evidence",
+    "useful concise coaching with uncertainty",
+    "privacy and no unauthorized actions",
+    "portable structure and meaningful development cases"
+  ],
+  "artifact_sha256": "72c925a332eeda1d58c37012f0df2007815c8a9fe41f99abe5273355a6ec0e7e",
+  "development_cases_sha256": "e4f010119daf1ecd76d5f1b6da744a9769069eed1982747796442eda6d3749d2",
+  "claim_ledger": [
+    {
+      "claim_id": "CLM-01",
+      "claim": "Role, customer, and candidate claims remain distinguishable",
+      "status": "supported by static review, not behavioral execution",
+      "evidence_ids": [
+        "independent-evidence-review",
+        "source-claim development case"
+      ],
+      "consequence": "Wrong account or misleading claim",
+      "next_test": "Execute blinded source-conflict case"
+    },
+    {
+      "claim_id": "CLM-02",
+      "claim": "The skill supports one-question practice and useful grounded cues",
+      "status": "supported by static review, not behavioral execution",
+      "evidence_ids": [
+        "independent-outcome-review",
+        "practice-turns and grounded-brief development cases"
+      ],
+      "consequence": "Unusable or fabricated preparation",
+      "next_test": "Run two-turn isolated host evaluation"
+    },
+    {
+      "claim_id": "CLM-03",
+      "claim": "Privacy and untrusted input boundaries are present",
+      "status": "supported by static review, not penetration testing",
+      "evidence_ids": [
+        "independent-safety-review",
+        "untrusted development case"
+      ],
+      "consequence": "Unauthorized disclosure or external action",
+      "next_test": "Run adversarial host evaluation"
+    }
+  ],
+  "reviews": [
+    {
+      "role": "evidence",
+      "mode": "independent context, same model family",
+      "initial": "Low severity: source verification could imply independent corroboration.",
+      "revision": "Attribution language and conflicting-source case added; reviewer found issue resolved."
+    },
+    {
+      "role": "outcome",
+      "mode": "independent context, same model family",
+      "initial": "Medium: practice flow and positive coaching checks insufficient; low: triggering and source attribution.",
+      "revision": "Practice default, positive and two-turn cases, attribution and trigger updated; reviewer found material issues resolved."
+    },
+    {
+      "role": "safety-portability",
+      "mode": "independent context, same model family",
+      "initial": "No material finding in static review.",
+      "revision": "No new material finding in static re-review."
+    },
+    {
+      "role": "disruptor",
+      "mode": "skipped",
+      "reason": "Initial reviews differed materially in findings; conditional protocol routes directly to adjudication."
+    },
+    {
+      "role": "negotiator",
+      "mode": "integrator adjudication",
+      "result": "Implemented evidence and outcome findings; accepted re-reviews with same-model correlation and static limits."
+    }
+  ],
+  "tests": {
+    "package_validator": "pass: one package",
+    "json_syntax": "pass",
+    "live_behavioral_benchmark": "not-run",
+    "release_holdout": "external-required; no unseen holdout packaged",
+    "trigger_precision_recall": "not measured"
+  },
+  "limitations": [
+    "Synthetic cases are a design, not executed outcomes.",
+    "Independent contexts share a model family and source package.",
+    "No live host activation, real-candidate test, protected holdout, or performance uplift is established."
+  ],
+  "follow_up": {
+    "owner": "maintainer",
+    "next": "Execute isolated with/without-skill development cases and an unseen external holdout; verify host discovery and installations.",
+    "expiry_trigger": "Material skill changes, new execution evidence, host changes, or user-discovered failure."
+  }
+}
