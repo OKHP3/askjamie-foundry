@@ -1,5 +1,30 @@
 # AskJamie Found-Ry project overview
 
+## AJ02 buyer routing
+
+For a business buyer inquiry, proposal, service-fit request, or buyer reply
+for a solo founder or small organization, check the project's
+`capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/routing-state.json`
+before exploring project files for the buyer request. A status in the request
+does not set the project's state.
+
+- **Disabled:** Do not load the buyer router or the direct portfolio skill
+  for the buyer request. Do not search for, open, or apply the canonical
+  portfolio procedure, including during exploratory reads. A general reply
+  can use the facts supplied in the request and applicable correspondence
+  guidance.
+- **Missing, malformed, or unclear:** Stop buyer-specific drafting or
+  assessment without opening the canonical portfolio procedure.
+- **Enabled:** Follow [the Replit capability activation guide](docs/replit-capability-activation.md)
+  and use the buyer router's verifier before opening the canonical
+  procedure or drafting. Stop the buyer-specific work if the guide, router,
+  or verification is unavailable.
+
+Apply these rules to the buyer component of a mixed request. An independent
+portfolio deliverable may use the direct portfolio route for that deliverable.
+Personal correspondence, individual résumés, and unrelated supplier invoices
+are outside the buyer route.
+
 ## Current product direction
 
 Portable skills are now the default workbench product; plugin/connector outputs
