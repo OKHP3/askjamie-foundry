@@ -134,10 +134,11 @@ jobs:
           python-version: "3.11"
 
       - name: Download Pages checksum manifest
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: askjamie-pages-checksum-manifest
           path: ${{ runner.temp }}/pages-release
+          digest-mismatch: error
 
       - name: Deploy to GitHub Pages
         id: deployment
