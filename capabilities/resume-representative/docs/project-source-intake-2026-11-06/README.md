@@ -2,6 +2,10 @@
 
 Use the [shared original-source library](../../../../docs/project-sources/2026-11-06/README.md) for the preserved project attachments and byte inventory. This note routes the useful source findings into the existing AJ01 workstream.
 
+## Preserved originals
+
+The [instruction-block structure PDF](../../../../docs/project-sources/2026-11-06/files/instruction-block-structure.pdf) is an exact-byte match for the AJ01 Project Sources file. The [pinned AJ01 knowledge directory](../../origin/repository/knowledge/) holds the matching research files already preserved with the source snapshot. See the [project-source intake record](../../../../docs/migrations/project-source-intake-2026-11-06.md) for capture counts and custody boundaries.
+
 ## Reviewed extracts
 
 - [Candidate integrity under a recruiter challenge](candidate-integrity-challenge.md)
