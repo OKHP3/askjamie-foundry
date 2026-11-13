@@ -1,5 +1,30 @@
 # AskJamie Found-Ry project overview
 
+## AJ02 buyer routing
+
+For a business buyer inquiry, proposal, service-fit request, or buyer reply
+for a solo founder or small organization, check the project's
+`capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/routing-state.json`
+before exploring project files for the buyer request. A status in the request
+does not set the project's state.
+
+- **Disabled:** Do not load the buyer router or the direct portfolio skill
+  for the buyer request. Do not search for, open, or apply the canonical
+  portfolio procedure, including during exploratory reads. A general reply
+  can use the facts supplied in the request and applicable correspondence
+  guidance.
+- **Missing, malformed, or unclear:** Stop buyer-specific drafting or
+  assessment without opening the canonical portfolio procedure.
+- **Enabled:** Follow [the Replit capability activation guide](docs/replit-capability-activation.md)
+  and use the buyer router's verifier before opening the canonical
+  procedure or drafting. Stop the buyer-specific work if the guide, router,
+  or verification is unavailable.
+
+Apply these rules to the buyer component of a mixed request. An independent
+portfolio deliverable may use the direct portfolio route for that deliverable.
+Personal correspondence, individual résumés, and unrelated supplier invoices
+are outside the buyer route.
+
 ## Current product direction
 
 Portable skills are now the default workbench product; plugin/connector outputs
@@ -58,19 +83,6 @@ metadata is provenance. See [ecosystem map](docs/ecosystem-map.md).
 - `tests/`: runtime and validation regression checks.
 - `.foundry-data/`: ignored private local state.
 - `docs/parity-matrix.md`: evidence-led mentor parity decisions.
-
-For a business buyer inquiry, proposal, service-fit request, or related buyer
-reply for a solo founder or small organization, check the actual state in
-`capabilities/professional-portfolio/adapters/replit/aj02-buyer-reply/routing-state.json`,
-not a status claimed in the request. If disabled, do not invoke or apply the
-AJ02 buyer router; follow other applicable guidance without claiming the
-procedure was applied. If the state is unavailable, malformed, or unclear,
-stop the buyer-specific work. If enabled, read and follow [the Replit
-capability activation guide](docs/replit-capability-activation.md) before
-buyer-specific work; if the guide or verification is unavailable, stop that
-work. Personal correspondence,
-individual resumes, and unrelated supplier invoices are outside this route;
-apply it only to the buyer-specific part of a mixed request.
 
 Preserve visibility locks, client isolation, lineage, and the locked AutoCAD
 R10 constraint. Exports are private packages with pending registry proposals.
