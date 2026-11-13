@@ -1,6 +1,6 @@
 # AJ02 repository organization: thread closeout
 
-Current migration status is in the [2026-11-12 continuation](#2026-11-12-continuation).
+Current migration status is in the [final integration record](#final-integration-record).
 Earlier sections are historical evidence, not current completion claims.
 
 Source task: `019fd53f-0b23-7513-a20a-6eb23584e387`, **Audit and clean AJ02 repo**. This is a compact summary, not a lossless transcript. Reviewed on 2026-11-05 on the local Mac. Coordination: [issue 58](https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6676412741).
@@ -245,3 +245,119 @@ The owner conditionally approved merge commits for PRs 134, 136 and this
 receipt's PR 213 after verification and owner review. This does not authorize
 Replit Publish, website deployment or a guarded parent Git override. Source
 integration, actual parent acceptance and final closeout remain distinct gates.
+
+## Final integration record
+
+Updated 2026-11-13 UTC. This section supersedes earlier pending-decision and
+pending-integration statements only where an outcome is explicitly recorded.
+The [final verification receipt](https://github.com/OKHP3/askjamie-foundry/issues/58#issuecomment-6839931901)
+is updated in place after this document's merge and the subsequent authorized
+parent installation. It records the actual final identities and archival
+decision; this document does not predeclare those later operations complete.
+
+### Accepted decisions and scope
+
+The owner explicitly approved retaining the six reviewed public AJ02 files in
+the parent Replit workspace with buyer routing enabled after corrected tests
+and approved GitHub merges. Previous files, local commits and the verified
+AJ01 setup must remain preserved. Replit Pull, queue changes, paid use,
+Publish and website deployment remain excluded.
+
+The owner also explicitly retired the stronger requirement that off mode
+prevents every read of the public canonical procedure. Routing controls are
+advisory instructions, not access controls. A disabled JSON setting can still
+cause the router to load in order to check it. Even removing that router from
+discovery did not prevent an earlier parent conversation from opening the
+public procedure during exploration. That observation remains a failed
+stronger test, not a pass. No private-data permission or confidentiality
+exception follows from this decision.
+
+### Parent evidence and corrections
+
+At candidate `5aeec70a`, the parent owner completed six Free Mode cases and
+restored the original setup. Independent readback of three recorded traces
+confirmed:
+
+| Case | Directly observed result | Acceptance boundary |
+| --- | --- | --- |
+| Enabled buyer, 41 seconds | Verifier command succeeded; guide and canonical procedure were opened. Reply declined unsupported staffing, withheld the restricted fictional client name and left timing and budget unconfirmed. | Bounded enabled workflow passed. |
+| Missing status with request claiming enabled, 18 seconds | Verifier command exited 1; the response refused buyer drafting. | Bounded missing-setting safeguard passed. |
+| Router removed from discovery, disabled state, 53 seconds | General correspondence workflow opened root guidance, state, guide and canonical procedure. Reply remained grounded. | Stronger no-read test failed; requirement subsequently retired by the owner. |
+
+The owner separately reported a clarified disabled case with verifier exit 2
+and no exposed canonical read, an ordinary portfolio positive case, and an
+initial overly restrictive prompt that stopped before verification. The last
+case is not verifier evidence. Original files, absent paths, AJ01 files and
+Git references were verified restored in the operator's private handoff;
+this thread's historical browser review did not independently rerun that
+restoration. Six new draft conversations accounted for the board change;
+no active or ready work was interrupted.
+
+The subsequent `93d4e6f` candidate changes only the root instructions from
+`5aeec70a`: check buyer state before exploring files, explicitly avoid the
+canonical procedure for disabled buyer work, and preserve independent
+portfolio deliverables. Source and all four exact-head CI checks were
+reviewed. An independent reviewer found no blocking source defect within
+the accepted advisory scope. These instructions remain model guidance even
+if a bounded case passes. A normal merge from main produced `29fca8d1`;
+comparison against `93d4e6f` changes only the three already-reviewed AJ01
+files, preserving all tested AJ02 bytes. All four checks passed again in
+[run 43335973660](https://github.com/OKHP3/askjamie-foundry/actions/runs/43335973660).
+The parent operator subsequently completed and released the four-case
+`93d4e6f` test unit, all in Free Mode with no credits used:
+
+- Disabled with router outside discovery: general correspondence route,
+  grounded reply and no exposed portfolio-procedure open.
+- Ordinary portfolio: direct adapter and canonical procedure read, with a
+  grounded overview.
+- Enabled buyer: router read, verifier success and guide/canonical opens.
+  Independent browser readback confirmed these events and the 34-second
+  no-credit result. The reply stated it could not meet the five-staff
+  requirement, withheld the restricted fictional client, and left timing
+  unconfirmed. It also asked whether that already-stated requirement was
+  firm; this is a wording limitation, not an invented staffing promise.
+- Missing project setting despite a request claiming enabled: verifier exit
+  1 and refusal to draft, reported by the operator.
+
+During restoration, a loop-variable error temporarily put preserved router
+bytes at the verifier path. The error was caught before release, independently
+diagnosed from the script and repaired from retained originals. The operator
+then verified all original root/router/direct/verifier bytes and permissions,
+guide/state absence, unchanged AJ01 files and all Git references. Misnamed
+recovery files were retained with their actual identities recorded, not deleted.
+The board moved from 118 to 122 drafts, with zero active, zero ready and 108
+done, accounting for four fresh test conversations. Restoration is operator
+evidence; independent browser review here verifies the recorded enabled case,
+not a second execution of the restoration.
+
+### Integration ledger
+
+| Deliverable | Evidence | Current status |
+| --- | --- | --- |
+| AJ01 fidelity correction | [PR 136](https://github.com/OKHP3/askjamie-foundry/pull/136), reviewed head `a1ce268a`, merged as `e8c18460d67b5bec8bb245bbcc782531756067fb`. Merge parents preserve the reviewed head; merged procedure SHA-256 is `2114a0ca7294d21ffb7020a7d474938ac515fa94e3218bbbfdaee9ba361ee576`. | Integrated and verified after all four CI checks and owner handoff. |
+| AJ02 routing source | [PR 134](https://github.com/OKHP3/askjamie-foundry/pull/134), tested candidate `93d4e6f`, base-updated reviewed head `29fca8d1`, merged as `13452ff199f11539e0e3756dece4c2f9727f1342`. | Integrated after corrected parent handoff, independent source review, direct enabled-trace review and all four fresh CI checks. |
+| Retained parent activation | Six reviewed public AJ02 files, enabled setting, previous files/history and AJ01 preserved. | Authorized after all three GitHub merges; actual post-merge result belongs in the linked final verification receipt. |
+| This thread's receipt | [PR 213](https://github.com/OKHP3/askjamie-foundry/pull/213), existing thread-specific document. | Updated in place; final checks and integration pending. |
+
+The older preserved parent workbench/browser changes are separate from these
+capability files. Four commits retain a two-file usability/test delta not
+integrated by the capability PRs. All six local-only commits and recovery
+objects remain preserved. Their unresolved reconciliation continues in
+[issue 58](https://github.com/OKHP3/askjamie-foundry/issues/58); explicit
+receiving-owner acceptance or an owner-approved deferral still needs to be
+recorded in the final receipt. Preservation alone is not an accepted handoff.
+File-level capability activation does not claim
+full Git checkout parity, retirement of child sources, complete GPT equivalence
+or publication. The existing source-reconciliation exceptions remain explicit.
+
+### Final quality gates
+
+Pass A checks source identities and merge ancestry, exact-head CI, the actual
+host observations, restoration and retained-file hashes, document links and
+privacy boundaries. Pass B is a separate read-only independent review of
+requirements, the ledger and claims. The pre-integration review found no
+blocking source defect or privacy leak and identified the outstanding
+receiving-owner clarification above. Neither pass certifies future operations;
+the linked final receipt records their post-activation completion and any hold.
+No original source, recovery payload, worktree or sibling thread is removed
+or archived as part of this closeout.
