@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-11-09: Exact destination reconciliation
+
+- Extend integrated application reconciliation v1.5.1 with original-event verification and exact destination readback. Preserve v1.5.0 agency and attempt safeguards.
+- Keep historical reviews separate from current analytical integration evidence; no live benchmark or host acceptance claim.
+
+## 2026-11-09: Staffing-agency application reconciliation
+
+- Extend the Resume Representative reconciliation skill v1.5.0, preserving merged attempt-detail safeguards, with separate agency intake,
+  end-client handoff and receipt, and applicant interview evidence.
+- Deduplicate mirrored correspondence and add synthetic regression cases for
+  ambiguous tracker rows, conflicting claims, and stale write preconditions.
+
+## 2026-11-09: Lifetime career reference, role masters and coaching
+
+- Add three 0.2.0 draftable source skills for a canon-derived lifetime career
+  reference, role-family resume editions and private coaching engagement records.
+- Reuse existing source intake and evidence canon instead of duplicating ledger
+  ownership. Preserve evidence status, disclosure boundaries and guarded saves.
+- Include synthetic development/discovery cases, independent analytical role
+  review and exact Skillz mirror records. Live benchmarks, unseen holdouts and
+  native-host acceptance remain unverified.
+
 ## 2026-11-09: LinkedIn DM context reconciliation
 
 - Add an exact mirror of the Skillz `okhp3-linkedin-dm-reconcile` 1.0.1

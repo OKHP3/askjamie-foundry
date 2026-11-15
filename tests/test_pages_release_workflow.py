@@ -162,12 +162,13 @@ class PagesReleaseWorkflowTests(unittest.TestCase):
             if step.get("name") == "Verify deployed page content"
         )
 
-        self.assertEqual(download["uses"], "actions/download-artifact@v7")
+        self.assertEqual(download["uses"], "actions/download-artifact@v8")
         self.assertEqual(
             download["with"],
             {
                 "name": "askjamie-pages-checksum-manifest",
                 "path": "${{ runner.temp }}/pages-release",
+                "digest-mismatch": "error",
             },
         )
         self.assertLess(names.index(download["name"]), names.index("Deploy to GitHub Pages"))

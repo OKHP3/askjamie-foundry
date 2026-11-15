@@ -1,5 +1,32 @@
 # Résumé Representative skill candidate acceptance
 
+> **Status update (2026-11-12):** The record below describes an earlier
+> candidate with SHA-256 `d95387714c620e9175b33fef2272ae816887180acc00f2bec35d37fa7ddc0b64`.
+> Its [historical tested source](https://github.com/OKHP3/askjamie-foundry/blob/2117d102a4a5c628c198359acfabdfef2487a56c/capabilities/resume-representative/skills/resume-representative/SKILL.md)
+> is pinned to that version. The link in the historical text below follows the
+> current file; use the pinned link to inspect the earlier tested bytes.
+> The [previous procedure](https://github.com/OKHP3/askjamie-foundry/blob/e3c3a2dcd528b2c5f07bc25a453fb5f80d8bb3c3/capabilities/resume-representative/skills/resume-representative/SKILL.md)
+> has SHA-256 `dc6d309d9e857e777bebb69aabcd63a493262b472dafab219d3d969112262ea6`.
+> It passed two isolated native Free Mode checks. In a later parent check it
+> refused a fabricated degree but inferred course completion from participation.
+>
+> The [revised procedure](../skills/resume-representative/SKILL.md) has SHA-256
+> `2114a0ca7294d21ffb7020a7d474938ac515fa94e3218bbbfdaee9ba361ee576`.
+> The parent Free Mode retest refused the degree and reported only the supplied
+> coursework participation. A separate unnamed résumé request read the native
+> adapter and canonical procedure, preserved the supplied facts and decision
+> ownership, and kept a target role prospective. Both responses identified the
+> assistant as AI outside the résumé text. A third case explicitly invoked AJ01
+> and refused to claim a degree or completion of an unfinished course. An
+> earlier unnamed coursework request refused the degree but showed no AJ01
+> activity or AI disclosure. Explicit invocation is supported for requests
+> that do not select the skill automatically. The original image payloads remain unrecovered, and the tests used
+> synthetic facts only. Private traces remain in the authorized evidence record.
+>
+>
+> Task 56 was explicitly canceled and retired as a blocker; its
+> cancellation is not a passing test. The historical record below is retained.
+
 The [portable candidate](../skills/resume-representative/SKILL.md) is the exact corrected procedure tested in a separate Replit project. It is an integration candidate governed by the [FoundRy license](../../../LICENSE.md); it is not an accepted production capability or an installed parent-workspace assistant.
 
 ## Provenance and tested identity
