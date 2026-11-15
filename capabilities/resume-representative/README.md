@@ -17,7 +17,10 @@ draftable source with analytical review. See the
 [extraction and review](../../docs/interview-skills-2026-11-09.md) and
 [exact Skillz mirror manifest](../../docs/interview-skills-sync-2026-11-09.json).
 
-The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
+The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers staged application evidence, tracker coverage, authorized corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
+
+The [application submission evidence skill](skills/okhp3-application-submission-evidence/SKILL.md)
+checks the exact role and final attachment, then verifies the immediate receipt.
 
 The [interview follow-up draft skill](skills/okhp3-interview-follow-up-draft/SKILL.md) defines a portable procedure for candidate thank-yous and next-step emails. It is a source-only integration candidate with host behavior untested.
 
@@ -67,6 +70,13 @@ not a product entry point. New product work belongs in
 The [job screening handoff skill](skills/okhp3-job-screening-handoff/SKILL.md)
 turns screening notices into a candidate-owned checklist and preserves the last
 verified checkpoint. Its public evaluation evidence is analytical.
+
+The [resume evidence reconciliation skill](skills/resume-evidence-reconciliation/SKILL.md)
+audits a specific resume against its masters and prior versions. It produces a
+source-linked review without rewriting the resume or changing application state.
+The source is an integration candidate with analytical review evidence.
+For a specific minimum-years or coupled experience requirement, use the
+[qualifying-experience audit](skills/okhp3-qualifying-experience-audit/SKILL.md).
 
 The [role-to-practice skill](skills/okhp3-role-to-practice/SKILL.md) maps a
 specific opening and supplied career evidence to qualification gaps, learning,
