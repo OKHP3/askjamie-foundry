@@ -67,6 +67,7 @@ class UbuntuMirrorNormalizationTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(result.stdout, "")
         self.assertIn("line 2", result.stderr)
+        self.assertIn("scheme=https host=evil.example", result.stderr)
         self.assertNotIn("secret", result.stderr)
 
 

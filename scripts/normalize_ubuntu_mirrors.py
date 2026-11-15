@@ -2,6 +2,7 @@
 
 import re
 import sys
+from urllib.parse import urlsplit
 
 
 ALLOWED = re.compile(
@@ -10,6 +11,19 @@ ALLOWED = re.compile(
 )
 ARCHIVE = "https://archive.ubuntu.com/ubuntu/"
 SECURITY = "https://security.ubuntu.com/ubuntu/"
+
+
+def describe_entry(line):
+    """Expose only a safe scheme and hostname, never credentials or query data."""
+    try:
+        parts = urlsplit(line)
+        scheme = parts.scheme if parts.scheme in ("http", "https") else "other"
+        host = parts.hostname or "unavailable"
+    except ValueError:
+        return "scheme=other host=unavailable"
+    if not re.fullmatch(r"[a-zA-Z0-9.-]{1,253}", host):
+        host = "unavailable"
+    return f"scheme={scheme} host={host}"
 
 
 def normalize(text):
@@ -22,7 +36,7 @@ def normalize(text):
         match = ALLOWED.fullmatch(line)
         if not match:
             raise ValueError(
-                f"line {number}: unsupported Ubuntu mirror entry; "
+                f"line {number}: unsupported Ubuntu mirror entry ({describe_entry(line)}); "
                 "expected an archive.ubuntu.com, azure.archive.ubuntu.com, "
                 "or security.ubuntu.com /ubuntu/ URL"
             )
