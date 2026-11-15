@@ -1,5 +1,14 @@
 # Professional Portfolio: conversion dossier
 
+> Historical planning record, reviewed 2026-11-12: this dossier predates the
+> current portable [skill candidate](../skills/professional-portfolio/SKILL.md) and its
+> [acceptance record](skill-candidate-acceptance.md). Its proposed architecture
+> and status statements below describe the earlier assessment. See also the
+> [later purpose and scope intake](thread-extraction-intake-2026-11-05.md).
+> The candidate does not establish full GPT equivalence, complete
+> component-specific rights clearance, parent Replit reconciliation, or parent
+> host acceptance. Original knowledge identity and source coverage remain open.
+
 ## Conversion verdict
 
 Disposition: `needs_source_artifacts`.

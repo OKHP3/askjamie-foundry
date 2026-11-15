@@ -1,0 +1,80 @@
+{
+  "skill": "okhp3-targeted-resume",
+  "version": "1.0.0",
+  "status": "analytical",
+  "question": "Is this contract distinct, evidence grounded and safe for supervised source distribution?",
+  "artifact_sha256": {
+    "SKILL.md": "544db84c7c0fc9a07217aa60a478e1e1f0352b8d178ec0309ecd56ecceccc9a6",
+    "references/mapping.md": "c46aed934c341e74ab104b33c7d40a606d46a49318de838342e744c74c6549aa",
+    "evals/evals.json": "bdda3abf8ca01ad859bb24ceb7be0727f5f94e0ffbfe254240c0e9a6f4247a61",
+    "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+  },
+  "source_boundary": "Generalized workflow, public repository contracts, and fictional fixtures. No candidate, employer, private links or private artifacts are reproduced.",
+  "roles": [
+    {
+      "role": "evidence",
+      "context": "separate agent context, shared model family and thread",
+      "finding": "Source matrix and claim boundaries add value; identified unsupported test expectation and insufficient concrete fixtures."
+    },
+    {
+      "role": "outcome",
+      "context": "separate agent context, shared model family and thread",
+      "finding": "Focused companion to broader resume procedure; identified same test-fixture gap and missing review artifact."
+    },
+    {
+      "role": "safety-portability",
+      "context": "separate agent context, shared model family and thread",
+      "finding": "No observed private identifiers or critical safety defect; recommended tighter exclusion handling and noted missing review artifact."
+    }
+  ],
+  "concordance": "Material agreement on differentiated workflow, privacy and analytical evidence limits; development defects identified and corrected.",
+  "disruptor": {
+    "context": "separate agent context, shared model family and thread",
+    "challenges": [
+      "Existing broad skill could make a duplicate unnecessary.",
+      "Owner-selected revision cannot resolve every factual conflict.",
+      "Concurrent interview cue-card work is already claimed.",
+      "Synthetic fixtures may fail to establish asserted facts."
+    ],
+    "resolution": "Contract adds a requirement-to-claim matrix, source precedence with conflict handling, exact maturity and ownership, exclusions, visual review and approval-aware handoff. Separate cue-card and reconciliation work was not duplicated. Fixtures now explicitly provide design leadership and concrete fictional conflicts."
+  },
+  "adjudication": {
+    "decision": "approve-with-limits",
+    "authority": "author-integrator analytical adjudication",
+    "owner": "repository maintainer",
+    "valid_until": "until package, source policy, or platform behavior changes",
+    "scope": "source distribution and supervised evaluation only",
+    "limits": [
+      "No live matched with/without-skill benchmark or behavioral outcome was run.",
+      "No unseen holdout was supplied; external holdout is required.",
+      "No host discovery, rendering, accessibility, or production deployment has been demonstrated.",
+      "Reviewers shared model family and context; this is not a blinded benchmark."
+    ]
+  },
+  "claim_ledger": [
+    {
+      "id": "C1",
+      "claim": "Target role is not proof of candidate experience.",
+      "evidence": "SKILL.md intake and map steps",
+      "status": "supported-by-contract"
+    },
+    {
+      "id": "C2",
+      "claim": "Prototype status, attribution and exclusions survive drafting.",
+      "evidence": "SKILL.md draft step, mapping.md and synthetic development cases",
+      "status": "supported-by-contract; live behavior not run"
+    },
+    {
+      "id": "C3",
+      "claim": "Owner can inspect a draft before any requested upload.",
+      "evidence": "SKILL.md handoff step and renderer/approval development case",
+      "status": "supported-by-contract; live behavior not run"
+    },
+    {
+      "id": "C4",
+      "claim": "Skill improves outcomes or activates on a particular host.",
+      "evidence": "No matched execution or host test",
+      "status": "defer-for-evidence"
+    }
+  ]
+}

@@ -1,5 +1,13 @@
 # Resume Representative: conversion dossier
 
+> **Status note (2026-11-12):** This dossier records the original scaffold and
+> its proposed state. Later work captured the [GPT configuration](../origin/gpt-config/2026-10-29-v3/README.md)
+> and produced a [portable candidate with bounded tests](skill-candidate-acceptance.md).
+> The original dossier below remains historical. The two image attachments
+> observed in the captured v3 configuration have unverified bytes. Source
+> authority and reuse rights and full GPT equivalence remain unresolved. The
+> linked acceptance record describes the bounded parent Replit activation.
+
 ## Conversion verdict
 
 Disposition: `needs_source_artifacts`.

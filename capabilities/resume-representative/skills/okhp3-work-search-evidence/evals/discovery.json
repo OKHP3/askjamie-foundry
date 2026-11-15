@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "skill_name": "okhp3-work-search-evidence",
+  "skill_version": "1.0.0",
+  "evaluation_status": "not-run",
+  "method": "Author-visible description-routing design. These expected labels are not measured host activation.",
+  "automatic_activation": "unverified",
+  "precision": null,
+  "recall": null,
+  "queries": [
+    {
+      "id": "q01",
+      "query": "Prepare my work-search log for this reporting period.",
+      "expected_activate": true,
+      "reason": "Actual activity ledger."
+    },
+    {
+      "id": "q02",
+      "query": "Reconcile application receipts into my unemployment activity record.",
+      "expected_activate": true,
+      "reason": "Receipts need event identity and clocks."
+    },
+    {
+      "id": "q03",
+      "query": "I have two confirmations for one application. Count the activity once.",
+      "expected_activate": true,
+      "reason": "Duplicate evidence."
+    },
+    {
+      "id": "q04",
+      "query": "Does my log have evidence gaps before I review it?",
+      "expected_activate": true,
+      "reason": "Coverage and missing facts."
+    },
+    {
+      "id": "q05",
+      "query": "Help organize dated interview and workshop evidence.",
+      "expected_activate": true,
+      "reason": "Performed actions require evidence."
+    },
+    {
+      "id": "q06",
+      "query": "I need a TWC work serch log from the attached activity history.",
+      "expected_activate": true,
+      "reason": "Typo and claimant-led preparation."
+    },
+    {
+      "id": "q07",
+      "query": "Review the dates in my private work-search CSV.",
+      "expected_activate": true,
+      "reason": "Event date and timezone precision."
+    },
+    {
+      "id": "q08",
+      "query": "The recruiter declined me. Is that another activity in my log?",
+      "expected_activate": true,
+      "reason": "Response versus performed action boundary."
+    },
+    {
+      "id": "q09",
+      "query": "My calendar says accepted. Can I log that I attended?",
+      "expected_activate": true,
+      "reason": "Attendance evidence boundary."
+    },
+    {
+      "id": "q10",
+      "query": "The sources cover only half the week. Prepare the period review with gaps.",
+      "expected_activate": true,
+      "reason": "Partial coverage."
+    },
+    {
+      "id": "q11",
+      "query": "Update my named private work-search log with this confirmed action.",
+      "expected_activate": true,
+      "reason": "Bounded authorized ledger update."
+    },
+    {
+      "id": "q12",
+      "query": "I forgot the exact date; retain the activity with an unresolved date.",
+      "expected_activate": true,
+      "reason": "Missing factual input."
+    },
+    {
+      "id": "q13",
+      "query": "Submit my unemployment certification for me.",
+      "expected_activate": false,
+      "reason": "Claim filing excluded."
+    },
+    {
+      "id": "q14",
+      "query": "Invent five job applications so I meet the quota.",
+      "expected_activate": false,
+      "reason": "Fabrication excluded."
+    },
+    {
+      "id": "q15",
+      "query": "Guarantee that I qualify for unemployment benefits.",
+      "expected_activate": false,
+      "reason": "Eligibility determination excluded."
+    },
+    {
+      "id": "q16",
+      "query": "Rank the best saved jobs for my skills.",
+      "expected_activate": false,
+      "reason": "Saved-opportunity triage."
+    },
+    {
+      "id": "q17",
+      "query": "Write a tailored resume for this opening.",
+      "expected_activate": false,
+      "reason": "Resume workflow."
+    },
+    {
+      "id": "q18",
+      "query": "Move the work-search directory to another drive.",
+      "expected_activate": false,
+      "reason": "File operation excluded."
+    },
+    {
+      "id": "q19",
+      "query": "Send a recruiter a follow-up email.",
+      "expected_activate": false,
+      "reason": "Outreach excluded."
+    },
+    {
+      "id": "q20",
+      "query": "Summarize a generic article about unemployment rates.",
+      "expected_activate": false,
+      "reason": "No individual activity-evidence task."
+    }
+  ]
+}

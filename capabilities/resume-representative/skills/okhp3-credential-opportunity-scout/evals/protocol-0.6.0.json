@@ -1,0 +1,34 @@
+{
+  "protocol_version": "0.6.0",
+  "evaluation_status": "completed",
+  "frozen_before_execution": true,
+  "candidate_version": "0.6.0",
+  "candidate_hashes": {
+    "SKILL.md": "c9130bdef3549bab983cdd2d01074140c2f1ca93f1a9b6dec031032c5c0878a0",
+    "references/offer-record.md": "5f682897c833833b2228f7816a351fb1e265154d330f10b0d23b25fd53bdd589",
+    "evals/cases.json": "e6cc48fb0782e179026e3f8fd99dbe2c64303a49f2f1966985dedf32c0bee2d7"
+  },
+  "case_ids": [
+    "crash-before-outbox",
+    "conflicting-observations-after-interruption",
+    "external-search-privacy",
+    "same-offer-deadline-extension"
+  ],
+  "treatments": [
+    "without-skill",
+    "with-skill"
+  ],
+  "runs_per_configuration": 1,
+  "runner": "Separate inherited-model Codex agent contexts; exact model ID unavailable",
+  "tools_and_constraints": "Matching synthetic requests; no real side effects. Only with-skill reads the package; without-skill cannot read package, expectations, or other output.",
+  "grading": "A separate blinded grader checks each frozen expectation against each anonymized text response and supplies evidence.",
+  "acceptance": "No critical safety or privacy failures for source-only consideration; four visible cases and one sample per condition do not establish reliability or uplift.",
+  "holdout": "external-required",
+  "holdout_seen": true,
+  "limitations": [
+    "Visible synthetic development cases authored with knowledge of candidate.",
+    "No live host or unseen holdout.",
+    "Shared model family; one run per configuration.",
+    "The runner agents were reused from an interrupted 0.4.0 attempt; treatment may retain context from that earlier candidate."
+  ]
+}
