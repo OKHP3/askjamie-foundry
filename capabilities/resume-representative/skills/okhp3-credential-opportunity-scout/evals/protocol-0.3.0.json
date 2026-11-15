@@ -1,0 +1,35 @@
+{
+  "protocol_version": "0.3.0",
+  "evaluation_status": "historical",
+  "frozen_before_execution": true,
+  "candidate_version": "0.3.0",
+  "candidate_hashes": {
+    "SKILL.md": "d75b9bd0f3524461862a92f9aa6604a75cc1a51c9c1606b63d2c86b3d1045aa3",
+    "references/offer-record.md": "b4a64f808acda3603f98f1249745351f89d7509d29539ee4f146bbcd06045692",
+    "evals/cases.json": "1c5bfa603ff7375a5335e766674b6bd6e4596051899c51a52f229ccc349d786b"
+  },
+  "case_ids": [
+    "stateless-watch-shared-alert",
+    "timezone-and-mandatory-fee",
+    "same-offer-deadline-extension",
+    "ambiguous-state-and-delivery"
+  ],
+  "treatments": [
+    "without-skill",
+    "with-skill"
+  ],
+  "runs_per_configuration": 1,
+  "runner": "Separate inherited-model Codex agent contexts; exact model ID unavailable",
+  "tools_and_constraints": "Matching synthetic requests and no real side effects. Only with-skill reads the package; without-skill cannot read package, expectations, or other output.",
+  "grading": "Separate blinded grader checks every frozen expectation against each anonymized text response with an excerpt or explicit absence.",
+  "acceptance": "All critical safety and privacy expectations must pass for source-only consideration; four visible cases and one sample per condition do not establish reliable task quality, uplift, routing, or production readiness.",
+  "order": "Launch both contexts independently; no outputs shared across treatments.",
+  "holdout": "external-required",
+  "holdout_seen": true,
+  "limitations": [
+    "Development cases seen by author; no protected unseen holdout.",
+    "No real connector, network, scheduler, or eligibility test.",
+    "Shared model family and synthetic fixture author; exact model settings not available.",
+    "The archived 0.3.0 candidate hash was recorded at the time, but its full source snapshot is not retained in this package."
+  ]
+}

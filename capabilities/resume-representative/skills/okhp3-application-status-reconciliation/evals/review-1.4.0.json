@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-09",
+  "artifact": {
+    "path": "../SKILL.md",
+    "version": "1.4.0",
+    "sha256": "0bc20e481000eb55f8fb2ff9cd8e86c51c4b449d67cd6d07a00bf9dddefc1f66",
+    "file_sha256": {
+      "SKILL.md": "0bc20e481000eb55f8fb2ff9cd8e86c51c4b449d67cd6d07a00bf9dddefc1f66",
+      "references/reconciliation-record.md": "28545f917dfc6f2d9228d7607e81b8d9eddb4bb5c3fcda37d09be0f5581de2ef",
+      "evals/attempt-detail-cases.json": "f6229f0f6913a14fc008386b2ffff916b534bba1395f2d78b94126fbc720f971",
+      "evals/cases.json": "755ab5e14c896f46bef6e878855c10cbf052f2732adc971d8a79b3934913425a",
+      "evals/portfolio-cases.json": "a6081224c411384a8a45994015b514deea3e0c2fee035ce87e6749e6c4a2c37b",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+    },
+    "baseline_commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
+    "digest_scope": "Instructions, reference, three case suites and license. Historical review records are retained separately."
+  },
+  "decision_question": "Can the existing AskJamie skill publish precise application-attempt, current-field and submitted-artifact reconciliation as portable source?",
+  "acceptance_criteria": [
+    "Unique attempt match before each attempt-specific claim or write.",
+    "Preserve history, uncertain dates, exact submitted evidence and per-source coverage.",
+    "Require guarded overwrites and idempotent or serialized repeatable writes.",
+    "Use synthetic public cases and bound evidence claims to source inspection."
+  ],
+  "source_basis": [
+    "Public AskJamie FoundRy PRs #140, #147, #154, and #148.",
+    "Private workflow patterns were abstracted into synthetic fixtures. No private source data was included.",
+    "Equilibrium Review 1.0.1 and Skill Foundry 3.1.1 governed the review."
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Evidence, outcome, and safety used separate read-only contexts with a shared model family and overlapping source set.",
+      "The outcome reviewer performed the conditional falsification retest. The integration author adjudicated and retargeted the change over the concurrent releases.",
+      "No live execution or blinded grading."
+    ]
+  },
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "approve-with-limits",
+      "finding": "Make date semantics, candidate-reported milestones, and attempt-linked attachment provenance explicit. Preserve upstream case IDs and correct ambiguous expectations."
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "finding": "Keep saved-opportunity triage separate. Reconciliation owns exact-attempt decisions, evidence and verified deltas. Preserve the merged portfolio coverage and conflict rules."
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "Bind every claim and correction to one attempt. Hold conflicting shared stages, require guards, and separate application actions from status maintenance."
+    }
+  ],
+  "concordance": "Material fixture, write-guard, and attempt-scope findings were corrected in the final source.",
+  "disruptor": {
+    "triggered": true,
+    "authority": "analytical source-contract falsification",
+    "falsification_hypotheses": [
+      {
+        "id": "shared-stage",
+        "hypothesis": "An editable shared badge can collapse two distinct attempts.",
+        "test": "External inactivation and active internal receipt share one editable posting badge.",
+        "result": "Hold the shared stage when its schema cannot represent the distinction."
+      },
+      {
+        "id": "blind-overwrite",
+        "hypothesis": "Successful readback can mask an intervening edit.",
+        "test": "Pre-read Draft, second writer sets Interview, first proposes Submitted without a guard.",
+        "result": "Stage the proposed change. Retain the existing same-field-race case."
+      },
+      {
+        "id": "duplicate-append",
+        "hypothesis": "Two writers may append the same event after each sees an empty pre-read.",
+        "test": "Provide plain append only, concurrent writers and no destination deduplication.",
+        "result": "Hold the append. The added duplicate-append case tests the missing guard."
+      }
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "The final unique-attempt and same-claim rules apply across dispositions, receipts, and artifact references.",
+      "The field reference separates current closure and reminders from historical evidence.",
+      "The new attempt detail suite covers stale fields, packet identity, shared stage, agency handoff and duplicate append."
+    ],
+    "unresolved_items": [
+      "No live host or connector mutation behavior was evaluated."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "applicability": "Source distribution in the existing AskJamie capability.",
+  "expiry": "Re-review if hashed files, write policy, or claimed host support change.",
+  "validations": [
+    {
+      "check": "Portable format, relative references, license, frozen SHA-256 and privacy scan",
+      "result": "passed"
+    },
+    {
+      "check": "Case contracts",
+      "count": 27,
+      "new_cases": 5,
+      "result": "analytical design and fixture inspection"
+    },
+    {
+      "check": "Skillz repository package length",
+      "result": "Existing 39-character identifier exceeds its 36-character policy."
+    }
+  ],
+  "limitations": [
+    "Live benchmark, measured uplift, trigger evaluation, platform installation, and unseen holdout were not run.",
+    "Write safety depends on the destination actually enforcing its declared guard. Cross-surface atomicity is unverified.",
+    "Prior release reviews remain historical for this version."
+  ]
+}

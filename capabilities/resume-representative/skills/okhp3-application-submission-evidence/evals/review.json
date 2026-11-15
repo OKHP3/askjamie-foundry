@@ -7,7 +7,7 @@
       "SKILL.md": "e1e19223f0de24e45bbb8394b056ca029bfd8e67bed308247dd9df010d2f1d0c",
       "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
       "references/submission-record.md": "7e0fa7122c7eb9e9fe67186d0889d860c2fbd8a8687a23a857727cc5e420a6fb",
-      "evals/cases.json": "4ecc10b36c48e60134a3345f49767874d3c57aa16c34185f00c6e26897fecb96"
+      "evals/cases.json": "f3e66f66eee4f1bb3023744ef63576e426c00e1c63b54336a81239b6c7c16e90"
     },
     "excluded_from_evaluated_inputs": [
       "evals/review.md",
@@ -17,6 +17,7 @@
   "review_date": "2026-11-09",
   "question": "Does the portable package meet the criteria for source distribution and personal installation?",
   "evaluation_status": "analytical",
+  "integration_note": "A routing example spelling was corrected after the original review; the cases hash was updated. No live execution or new independent review is implied.",
   "compared_base": {
     "commit": "12c699ab90492ec5d8a3bcc41781d8c384500aec",
     "status_reconciliation_version": "1.1.0"

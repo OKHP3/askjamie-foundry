@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "reviewed_on": "2026-11-09",
+  "owner": "OKHP3",
+  "expires_on": "2027-02-09",
+  "invalidated_by": "A material change to the reviewed source, its fixtures, or the release scope.",
+  "artifact": {
+    "path": "../SKILL.md",
+    "version": "1.0.0",
+    "sha256": "85dfa225e3e65532a772631f5b8189fe23fd9fa93a1c82bb4f871295c7cc3907",
+    "file_sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "decb1de9ee60ca1ee6343eee403a334082c20d98ce200b0d4cdec990d62b736f",
+      "evals/evals.json": "ac458f6cdf32779696f43ddd2df070424fce46e8ce7077e12ac4464caaacf028",
+      "references/draft-verification.md": "91bbd9c35364ae2464e713345101ecbfe7a214f20d813cbe6a499fe375d83e04"
+    },
+    "algorithm": "SHA-256 of compact UTF-8 sorted JSON file hash map, with no trailing newline.",
+    "digest_scope": "Canonical instructions, license, verification reference and development cases. The review record and capability README are outside the package digest."
+  },
+  "decision_question": "Can the exact package publish as a source-only interview follow-up candidate for the Resume Representative?",
+  "acceptance_criteria": [
+    "Portable text fallback",
+    "Exact parent and authorized audience",
+    "Guarded, unsent save with persisted readback",
+    "Synthetic public evidence",
+    "Explicit host acceptance limits"
+  ],
+  "source_basis": [
+    {
+      "id": "SRC-01",
+      "source": "Private user-authorized workflow distilled into synthetic cases. No originals, identities, message locators or private correspondence are distributed.",
+      "observed_on": "2026-11-09",
+      "authority": "Design input only."
+    },
+    {
+      "id": "SRC-02",
+      "source": "https://github.com/OKHP3/askjamie-foundry/tree/738248d6e24d93a53677534c25a345e32f329a09/capabilities/resume-representative/skills",
+      "observed_on": "2026-11-09",
+      "authority": "Canonical companion package placement and adjacent scope."
+    },
+    {
+      "id": "SRC-03",
+      "source": "https://github.com/OKHP3/skillz/blob/1038229118c00a86ff67010c6d68ae84975a5cf2/universal/okhp3-equilibrium-review/SKILL.md",
+      "observed_on": "2026-11-09",
+      "authority": "Equilibrium Review 1.0.1."
+    },
+    {
+      "id": "SRC-04",
+      "source": "https://github.com/OKHP3/skillz/blob/1038229118c00a86ff67010c6d68ae84975a5cf2/universal/okhp3-skill-foundry/SKILL.md",
+      "observed_on": "2026-11-09",
+      "authority": "Skill Foundry 3.1.1."
+    }
+  ],
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Separate read-only Codex contexts with role-specific prompts, a shared model family and common public-safe source. Exact model snapshot was not recorded.",
+      "The author acted as integrator and adjudicator. No reviewer had mailbox access or executed a live evaluation."
+    ]
+  },
+  "initial_digest": "18cfb47c10e8b2d4c70a2e546098e867956ac3e5b10b0c13d7e19473a74b1d13",
+  "initial_reviews": [
+    {
+      "role": "evidence",
+      "decision": "defer-for-evidence",
+      "finding": "Conversation membership could pass as exact parent proof. The README needed an explicit source-only label.",
+      "anchors": [
+        "SKILL.md",
+        "references/draft-verification.md"
+      ]
+    },
+    {
+      "role": "outcome",
+      "decision": "approve-with-limits",
+      "finding": "Source workflow is distinct and useful. Exact parent, attendance and concurrent draft cases needed more precise coverage.",
+      "anchors": [
+        "SKILL.md",
+        "evals/evals.json"
+      ]
+    },
+    {
+      "role": "safety-portability",
+      "decision": "approve-with-limits",
+      "finding": "Reply opening might persist inherited data before inspection. Draft creation also needed a write-time guard.",
+      "anchors": [
+        "SKILL.md",
+        "references/draft-verification.md",
+        "evals/evals.json"
+      ]
+    }
+  ],
+  "concordance": "Material disagreement on release of the initial digest. All three reviewers supported source-only release after rechecking the revised digest.",
+  "recheck": {
+    "sha256": "62185394807a306bd85951624205c355f07327ff0205b443bad635774ac67fe8",
+    "decisions": {
+      "evidence": "approve-with-limits",
+      "outcome": "approve-with-limits",
+      "safety-portability": "approve-with-limits"
+    },
+    "basis": "Require message-level proof, preflight first-write and concurrency checks, attendance evidence, text fallback and explicit release limits."
+  },
+  "disruptor": {
+    "triggered": true,
+    "authority": "Analytical falsification after concordant recheck.",
+    "falsification_hypotheses": [
+      "A matching quote might override a contradictory persisted parent ID.",
+      "A per-request token might pass as a cross-writer uniqueness guard.",
+      "A positive fixture might omit exact parent evidence and safe initial fields."
+    ],
+    "test_results": [
+      "Revised reference and same-thread case make the conflicting persisted ID decisive.",
+      "Revised reference and concurrent-create case require uniqueness across writers, beyond retry deduplication.",
+      "Positive case supplies exact persisted parent evidence, verified guard, safe quote and signature, and empty Bcc.",
+      "The independent disruptor reproduced the final digest and checked source-to-fixture parity, five analytical parent states and a two-writer counterexample. No source blocker survived."
+    ]
+  },
+  "negotiator": {
+    "triggered": true,
+    "decision": "approve-with-limits",
+    "decisive_evidence": [
+      "The initial disagreement led to source revisions before reconsideration.",
+      "Exact persisted parent evidence takes precedence. Unknown first-write behavior or absent concurrency protection stops native writes.",
+      "The revised source and synthetic cases are structurally consistent. They establish no live behavior."
+    ],
+    "unresolved_items": [
+      "Host support and correct behavior under isolated runtime and unseen holdout tests."
+    ]
+  },
+  "release_decision": "approve-with-limits",
+  "limitations": [
+    "Public source and analytical evaluation only.",
+    "The development cases are test designs. No matched with/without-skill benchmark, automatic trigger test, live mailbox run, or unseen holdout was performed.",
+    "Installation can establish file availability only."
+  ],
+  "follow_up": [
+    "Before native use, run isolated host tests for first persistence, exact parent evidence, concurrent writers and uncertain retry. Execute a protected external holdout before claiming host acceptance or uplift."
+  ]
+}

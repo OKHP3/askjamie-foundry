@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "skill_name": "okhp3-career-artifact-audit",
+  "skill_version": "1.0.0",
+  "evaluation_status": "not-run",
+  "method": "Author-visible description-routing design. These expected labels are not measured host activation.",
+  "automatic_activation": "unverified",
+  "precision": null,
+  "recall": null,
+  "queries": [
+    {
+      "id": "q01",
+      "query": "Audit my existing career files against this manifest.",
+      "expected_activate": true,
+      "reason": "Existing-artifact baseline."
+    },
+    {
+      "id": "q02",
+      "query": "Check which legacy resume links still resolve.",
+      "expected_activate": true,
+      "reason": "Exact-reference mapping."
+    },
+    {
+      "id": "q03",
+      "query": "The cloud folder exists but expected files seem absent. Verify.",
+      "expected_activate": true,
+      "reason": "Folder presence is insufficient."
+    },
+    {
+      "id": "q04",
+      "query": "OneDrive sent a deletion notice. Inspect preservation evidence read-only.",
+      "expected_activate": true,
+      "reason": "Deletion evidence boundary."
+    },
+    {
+      "id": "q05",
+      "query": "Compare local and cloud observations without changing sync.",
+      "expected_activate": true,
+      "reason": "Layer separation."
+    },
+    {
+      "id": "q06",
+      "query": "Audit old resumee paths and explain unavailable items.",
+      "expected_activate": true,
+      "reason": "Typo and legacy mapping."
+    },
+    {
+      "id": "q07",
+      "query": "Review the same file listed under overlapping authorized roots.",
+      "expected_activate": true,
+      "reason": "Stable-ID deduplication."
+    },
+    {
+      "id": "q08",
+      "query": "These folders differ only in accent encoding. Check identity.",
+      "expected_activate": true,
+      "reason": "Unicode collision."
+    },
+    {
+      "id": "q09",
+      "query": "Search finds the document but its exact ID returns unavailable.",
+      "expected_activate": true,
+      "reason": "Stale index conflict."
+    },
+    {
+      "id": "q10",
+      "query": "Check hashes and state whether the exact compared bytes match.",
+      "expected_activate": true,
+      "reason": "Content-equivalence limits."
+    },
+    {
+      "id": "q11",
+      "query": "Produce a scoped missing-artifact report from this inventory.",
+      "expected_activate": true,
+      "reason": "Supplied snapshot mode."
+    },
+    {
+      "id": "q12",
+      "query": "The local audit is blocked by a symlink restriction. Record the boundary.",
+      "expected_activate": true,
+      "reason": "Exact runtime blocker."
+    },
+    {
+      "id": "q13",
+      "query": "Where should I file a new role-specific resume?",
+      "expected_activate": false,
+      "reason": "File-routing workflow."
+    },
+    {
+      "id": "q14",
+      "query": "Create folders and move every resume into them.",
+      "expected_activate": false,
+      "reason": "Mutation excluded."
+    },
+    {
+      "id": "q15",
+      "query": "Restore everything from the recycle bin.",
+      "expected_activate": false,
+      "reason": "Recovery excluded."
+    },
+    {
+      "id": "q16",
+      "query": "Delete duplicate career files.",
+      "expected_activate": false,
+      "reason": "Deletion excluded."
+    },
+    {
+      "id": "q17",
+      "query": "Set up a new cross-tool job-search workspace.",
+      "expected_activate": false,
+      "reason": "Workspace intake."
+    },
+    {
+      "id": "q18",
+      "query": "Update this application's recruiting status from a receipt.",
+      "expected_activate": false,
+      "reason": "Application reconciliation."
+    },
+    {
+      "id": "q19",
+      "query": "Rewrite my public LinkedIn headline.",
+      "expected_activate": false,
+      "reason": "Profile workflow."
+    },
+    {
+      "id": "q20",
+      "query": "Scan all private folders even outside the approved career roots.",
+      "expected_activate": false,
+      "reason": "Scope expansion excluded."
+    }
+  ]
+}
