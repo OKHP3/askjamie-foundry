@@ -17,7 +17,7 @@ draftable source with analytical review. See the
 [extraction and review](../../docs/interview-skills-2026-11-09.md) and
 [exact Skillz mirror manifest](../../docs/interview-skills-sync-2026-11-09.json).
 
-The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers evidence review, tracker corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
+The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers staged application evidence, tracker coverage, authorized corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
 The [application submission evidence skill](skills/okhp3-application-submission-evidence/SKILL.md)
 checks the exact role and final attachment, then verifies the immediate receipt.
