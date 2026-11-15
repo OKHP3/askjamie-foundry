@@ -1,153 +1,120 @@
 {
   "schema_version": "1.0",
   "review_protocol": "equilibrium-v1",
-  "review_mode": "release",
+  "review_mode": "conditional",
   "evaluation_status": "analytical",
   "review_date": "2026-11-09",
   "artifact": {
-    "path": "SKILL.md",
+    "path": "../SKILL.md",
     "version": "1.4.0",
-    "base_commit": "71e0aeb87c2b1eb31270490a1f326493e7fd4a4a",
-    "core_sha256": {
-      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
-      "SKILL.md": "a0eac1effa5dd04a0378dfe2edf9af43cfca9cad42fb828a3361a4373b319f62",
-      "references/reconciliation-record.md": "3b86f909348b81553e567dd0f4ec6eb02ea7d4b8abb931caa20716a1e920660c",
-      "evals/cases.json": "aacd6564f0a61f8b05eef72045b20d9f5a713ab1a741993a0b539cf5ee7d2c0c",
-      "evals/portfolio-cases.json": "0aa5621aecf2bb3cf12414da2c61e3a50c5e2cdb63e4d2aed699f581df3128ec"
-    }
+    "sha256": "0bc20e481000eb55f8fb2ff9cd8e86c51c4b449d67cd6d07a00bf9dddefc1f66",
+    "file_sha256": {
+      "SKILL.md": "0bc20e481000eb55f8fb2ff9cd8e86c51c4b449d67cd6d07a00bf9dddefc1f66",
+      "references/reconciliation-record.md": "28545f917dfc6f2d9228d7607e81b8d9eddb4bb5c3fcda37d09be0f5581de2ef",
+      "evals/attempt-detail-cases.json": "f6229f0f6913a14fc008386b2ffff916b534bba1395f2d78b94126fbc720f971",
+      "evals/cases.json": "755ab5e14c896f46bef6e878855c10cbf052f2732adc971d8a79b3934913425a",
+      "evals/portfolio-cases.json": "a6081224c411384a8a45994015b514deea3e0c2fee035ce87e6749e6c4a2c37b",
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06"
+    },
+    "baseline_commit": "af9bef72b8b2b76b8f3588e06aa362ce1f21aea1",
+    "digest_scope": "Instructions, reference, three case suites and license. Historical review records are retained separately."
   },
-  "decision_question": "Can the integrated revision be distributed as public source while preserving upstream reconciliation behavior?",
+  "decision_question": "Can the existing AskJamie skill publish precise application-attempt, current-field and submitted-artifact reconciliation as portable source?",
   "acceptance_criteria": [
-    "Verify role, attempt, and form scope before changing completion claims",
-    "Preserve prior evidence, recruiter and route milestones, and source-specific cutoffs",
-    "Require stable coverage or exact-key evidence for absence",
-    "Retain authorization and write-time conditions on retries",
-    "Keep fixtures synthetic, validate the package, and require protected-main checks"
+    "Unique attempt match before each attempt-specific claim or write.",
+    "Preserve history, uncertain dates, exact submitted evidence and per-source coverage.",
+    "Require guarded overwrites and idempotent or serialized repeatable writes.",
+    "Use synthetic public cases and bound evidence claims to source inspection."
   ],
   "source_basis": [
-    {
-      "id": "S-01",
-      "retrieved": "2026-11-09",
-      "authority": "Sanitized private workflow observations",
-      "scope": "Identical review screens with different completion evidence. Generic receipts and interrupted pagination motivate synthetic cases."
-    },
-    {
-      "id": "S-02",
-      "retrieved": "2026-11-09",
-      "authority": "Repository baseline",
-      "url": "https://github.com/OKHP3/askjamie-foundry/pull/148",
-      "scope": "Current upstream 1.3.0 retained. Earlier proposals were reviewed against 1.0.0 and 1.2.0. The integrated release preserves newer conflict, time zone, and platform notification rules."
-    },
-    {
-      "id": "S-03",
-      "retrieved": "2026-11-09",
-      "authority": "Authoring and review protocols",
-      "references": [
-        "https://github.com/OKHP3/skillz/blob/main/universal/okhp3-equilibrium-review/SKILL.md",
-        "https://github.com/OKHP3/skillz/blob/main/universal/okhp3-skill-foundry/SKILL.md"
-      ],
-      "scope": "Equilibrium Review 1.0.1 and Skill Foundry 3.1.1."
-    }
-  ],
-  "candidates": [
-    {
-      "candidate": "Later application status reconciliation",
-      "repeatable_value": "Join role, route, attempt and form evidence to authorized cross-surface updates",
-      "decision": "Extend the canonical Resume Representative package"
-    },
-    {
-      "candidate": "Immediate submission evidence",
-      "repeatable_value": "Verify the exact final form and preserve receipt evidence after one attempt",
-      "decision": "Keep the distinct submission-evidence workflow boundary"
-    },
-    {
-      "candidate": "Shared attachment capacity",
-      "repeatable_value": "Map shared-file dependencies and assess reversible replacement",
-      "decision": "defer-for-evidence",
-      "missing": "Cross-host ownership, recoverability and dependent attachment verification"
-    },
-    {
-      "candidate": "Signature and final submission handoff",
-      "repeatable_value": "Separate agreement consent from final submission and receipt",
-      "decision": "Keep as an execution workflow boundary",
-      "missing": "Host-specific consent and submission authority"
-    }
+    "Public AskJamie FoundRy PRs #140, #147, #154, and #148.",
+    "Private workflow patterns were abstracted into synthetic fixtures. No private source data was included.",
+    "Equilibrium Review 1.0.1 and Skill Foundry 3.1.1 governed the review."
   ],
   "independence": {
     "reviewer_contexts_separated": true,
     "shared_model_or_source_limits": [
-      "Separate evidence, outcome, safety, disruptor, and negotiator contexts shared a model family and candidate. Sources were sanitized."
+      "Evidence, outcome, and safety used separate read-only contexts with a shared model family and overlapping source set.",
+      "The outcome reviewer performed the conditional falsification retest. The integration author adjudicated and retargeted the change over the concurrent releases.",
+      "No live execution or blinded grading."
     ]
   },
   "initial_reviews": [
     {
       "role": "evidence",
-      "finding": "Integrated source scopes completion to the form and attempt, preserves owner attribution, and fixes the old unsubmitted inference."
+      "decision": "approve-with-limits",
+      "finding": "Make date semantics, candidate-reported milestones, and attempt-linked attachment provenance explicit. Preserve upstream case IDs and correct ambiguous expectations."
     },
     {
       "role": "outcome",
-      "finding": "Recruiter milestones, route separation, source cursor recovery and portfolio denominators survive. Make retained cutoffs and fixture authority explicit."
+      "decision": "approve-with-limits",
+      "finding": "Keep saved-opportunity triage separate. Reconciliation owns exact-attempt decisions, evidence and verified deltas. Preserve the merged portfolio coverage and conflict rules."
     },
     {
       "role": "safety-portability",
-      "finding": "Upstream privacy and guarded writes survive. Preserve the original authorization and guard on retry and hold archive if discard is required."
+      "decision": "approve-with-limits",
+      "finding": "Bind every claim and correction to one attempt. Hold conflicting shared stages, require guards, and separate application actions from status maintenance."
     }
   ],
-  "concordance": "Material agreement on integrated source direction with narrow fixture and cutoff clarifications.",
+  "concordance": "Material fixture, write-guard, and attempt-scope findings were corrected in the final source.",
   "disruptor": {
     "triggered": true,
-    "authority": "analytical",
-    "test_results": [
+    "authority": "analytical source-contract falsification",
+    "falsification_hypotheses": [
       {
-        "case": "same-route-new-attempt",
-        "counterexample": "A1 receipt and editable A2 with identical requisition, route and form.",
-        "resolution": "Attempt association verifies A1 only and holds A2."
+        "id": "shared-stage",
+        "hypothesis": "An editable shared badge can collapse two distinct attempts.",
+        "test": "External inactivation and active internal receipt share one editable posting badge.",
+        "result": "Hold the shared stage when its schema cannot represent the distinction."
       },
       {
-        "case": "pagination-stability",
-        "counterexample": "A live offset list omits a present row while totals and terminal pages appear complete.",
-        "resolution": "Exact positive observations survive. Absence and a later source cutoff require stable coverage. An exact-key check of one row cannot advance the whole interval."
+        "id": "blind-overwrite",
+        "hypothesis": "Successful readback can mask an intervening edit.",
+        "test": "Pre-read Draft, second writer sets Interview, first proposes Submitted without a guard.",
+        "result": "Stage the proposed change. Retain the existing same-field-race case."
       },
       {
-        "case": "retry-original-condition",
-        "counterexample": "A definitively failed attempt is followed by a concurrent owner state change.",
-        "resolution": "The original condition is guarded at write time or the retry is held."
+        "id": "duplicate-append",
+        "hypothesis": "Two writers may append the same event after each sees an empty pre-read.",
+        "test": "Provide plain append only, concurrent writers and no destination deduplication.",
+        "result": "Hold the append. The added duplicate-append case tests the missing guard."
       }
     ]
   },
   "negotiator": {
     "triggered": true,
     "decision": "approve-with-limits",
-    "method": "Separate analytical review and predicate replay followed by a focused review of the exact integrated 1.4.0 diff. The corrected fixture attributes a successful owner-reported submission without promoting it to independent employer verification.",
     "decisive_evidence": [
-      "Receipt and form rules retain source scope and do not infer completion from a control or click.",
-      "Final R-902 fixture explicitly attributes successful submission, leaving employer verification open.",
-      "Earlier failed write is external to the guarded workflow. The retained cutoff rule covers unstable enumeration."
+      "The final unique-attempt and same-claim rules apply across dispositions, receipts, and artifact references.",
+      "The field reference separates current closure and reminders from historical evidence.",
+      "The new attempt detail suite covers stale fields, packet identity, shared stage, agency handoff and duplicate append."
     ],
     "unresolved_items": [
-      "Protected-main checks must pass for the exact PR head."
+      "No live host or connector mutation behavior was evaluated."
     ]
   },
-  "development": {
-    "case_count": 26,
-    "expectation_count": 85,
-    "upstream_case_ids_retained": 22,
-    "new_cases": 4,
-    "corrected_expectations": 1,
-    "status": "analytical",
-    "validation": "Frontmatter, links, license, fixture contracts, diff and public-source scan. Manifest, registry, Pages artifact and 174 repository tests passed in Python 3.12.14. Repository tests are not live skill evaluation."
-  },
   "release_decision": "approve-with-limits",
-  "limitations": [
-    "Public source only. No automatic activation, host installation, live connector behavior, matched benchmark, or unseen holdout tested.",
-    "No duplication into the social-posting family. The established career-operations package is canonical."
-  ],
-  "holdout": "external-required",
-  "holdout_seen": true,
-  "follow_up": [
+  "applicability": "Source distribution in the existing AskJamie capability.",
+  "expiry": "Re-review if hashed files, write policy, or claimed host support change.",
+  "validations": [
     {
-      "owner": "Integration owner",
-      "condition": "Validate host-specific coverage, write guards and readback, then run a same-version matched benchmark with an unseen holdout before any outcome claim."
+      "check": "Portable format, relative references, license, frozen SHA-256 and privacy scan",
+      "result": "passed"
+    },
+    {
+      "check": "Case contracts",
+      "count": 27,
+      "new_cases": 5,
+      "result": "analytical design and fixture inspection"
+    },
+    {
+      "check": "Skillz repository package length",
+      "result": "Existing 39-character identifier exceeds its 36-character policy."
     }
+  ],
+  "limitations": [
+    "Live benchmark, measured uplift, trigger evaluation, platform installation, and unseen holdout were not run.",
+    "Write safety depends on the destination actually enforcing its declared guard. Cross-surface atomicity is unverified.",
+    "Prior release reviews remain historical for this version."
   ]
 }

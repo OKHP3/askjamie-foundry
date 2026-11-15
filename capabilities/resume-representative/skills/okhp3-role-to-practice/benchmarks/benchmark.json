@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.0",
+  "metadata": {
+    "skill_name": "okhp3-role-to-practice",
+    "evaluated_skill_version": "1.0.0",
+    "evaluation_status": "not-run",
+    "runner": "unavailable for matched live skill-activation testing in this release",
+    "fixtures": "evals/evals.json",
+    "model": null,
+    "activation_mode": null,
+    "host": null,
+    "treatment_order": null,
+    "holdout_seen": true
+  },
+  "acceptance_criteria": [
+    "Anchor each prioritized requirement to the exact opening and each candidate claim to its source and ownership.",
+    "Represent qualification, learning and practice states separately with precise observation limits.",
+    "Keep credentialing, external communications, applications and private disclosures outside the skill's authority.",
+    "Confirm an explicitly authorized course action using exact-account and exact-item readback, or report the observation limit.",
+    "In a future matched run, require every critical assertion to pass and record failures and held-out comparisons."
+  ],
+  "runs": []
+}

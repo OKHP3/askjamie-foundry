@@ -1,0 +1,24 @@
+# Learning and offer record
+
+Use one record per exact issuer, stable offer or program ID, covered exam or credential, and immutable campaign ID when provided. A deadline or changing offer window is an attribute of the record, not automatically a new identity. If the issuer reuses an ID for multiple campaigns and the linkage is unresolved, keep the identity ambiguous. A public page title or campaign name alone can identify neither eligibility nor a specific voucher. Keep the raw source in the authorized private workspace; public outputs should contain only permitted links and generalized facts.
+
+| Field | What to capture |
+|---|---|
+| Identity | Issuer, stable offer/program ID or URL, credential or exam ID, immutable campaign ID when available; keep changeable dates as attributes and retain unknown fields. |
+| Role relationship | Exact target role ID and stated requirement class; relevant candidate evidence and whether self-reported or verified. |
+| Type | Training, practice, Applied Skills or other badge, certification exam, or explicitly described alternative. |
+| Cost | Stated discount, exam price after discount if determinable, taxes or fees, mandatory subscriptions or labs, and unknown cost components. |
+| Eligibility | Region, age or employment restrictions, prerequisite actions, selection or supply limits, and individualized unknowns. |
+| Delivery | Remote or in-person for the exact offer and exam; record at-home proctoring only when substantiated for that offer. |
+| Dates | Event, request deadline, redemption expiry, exam completion deadline and time zone as separate fields. |
+| Evidence | Direct source title and URL, authority, source date where known, observation time, each relevant claim and unavailable terms. Attribute a changed deadline or other update to the specific later source that supports it; retain conflicts. |
+| State | Lead, qualified for stated criteria, blocked, expired, or unavailable; never assert individual eligibility without enough facts. Distinguish a claim of completion from independently verified completion. For a watch retain the latest observation, last confirmed notification, pending change-event ID, and delivery status separately. |
+| Action | Suggested preparation and owner; authorized collection item identity, preexisting or saved state, readback, and last observation. |
+
+For a first check, report current qualifying opportunities if requested; a future-changes-only watch otherwise starts with a quiet baseline. For repeated checks, compare the current sourced record with the previous one using the same stable identity. A new confirmed opportunity or a material change to an existing opportunity merits notification if requested. Missing terms, an unchanged lead, or a transient access failure does not establish a changed offer. Record access failures separately and report a blocker if it prevents the requested monitoring. A reliable change-only watch needs authorized durable observation state and an authorized notification route, not just a scheduler. Inspect prompts, state, logs, and notifications for direct and indirect disclosure; do not create a watch that requires sensitive information in a destination with unknown or unauthorized audience or retention. Atomically condition the baseline update on its prior revision and insert the unique event in the same transaction, or serialize the check and recovery using a durable fenced lock. Under serialization, record the event before baseline advance, reconcile an interrupted event before processing a newer observation, and make it deliverable only after its transition is confirmed committed. Concurrent retries must use the same event key for the same transition and a new key for a later recurrence; derive it from the stable offer, prior baseline revision and normalized observation. Serialize delivery or conditionally claim the unique event. Keep notification delivery pending until verified; an updated observation alone does not prove delivery. If the host cannot protect the event against lost or duplicate processing, report monitoring blocked. After an ambiguous state or delivery write, check the keyed record; without idempotency or reliable readback, report uncertainty instead of blindly retrying.
+
+## Synthetic contrast
+
+- A free tutorial and a free practice quiz prepare for Exam Z; an exam fee is shown separately. Classify the exam as paid unless an applicable valid offer changes that cost.
+- Event A offers a fully discounted exam at its venue only. Event B offers a fully discounted exam online for a stated region and a specific exam, but the learner's eligibility is unknown. Neither establishes a verified free at-home exam for that learner without the missing conditions.
+- A user adds a path with three modules. The path is saved, but each child is not necessarily individually saved. Check the requested collection and report the actual state of each.
