@@ -81,5 +81,5 @@ for q,target in queries:
 checks['lexical_retrieval_top3_all_queries']=all(r['pass'] for r in retr)
 result={'pass_name':'A: local mechanical artifact validation','run_date':'2026-11-05','page_count':len(doc),'markdown_words_whitespace_delimited':len(md.split()),'source_count':len(sources),'section_count':len(ids),'checks':checks,'unknown_citations':unknown,'missing_pdf_paragraphs':miss,'out_of_bounds_spans':outside,'retrieval_smoke_test':retr,'limits':['No hosted GPT or agent evaluation.','No PDF/UA accessibility conformance certification.','No exhaustive live HTTP link audit; source access depth is recorded separately.','No independent human legal review.','Remote persistence and integration are separate checks.']}
 (P/'validation-pass-a.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
-print(json.dumps(result,ensure_ascii=False,indent=2))
+print(json.dumps(result,ensure_ascii=True,indent=2))
 if not all(checks.values()): raise SystemExit(1)
