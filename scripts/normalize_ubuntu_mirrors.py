@@ -14,16 +14,21 @@ SECURITY = "https://security.ubuntu.com/ubuntu/"
 
 
 def describe_entry(line):
-    """Expose only a safe scheme and hostname, never credentials or query data."""
+    """Expose safe URL shape, never raw path, credentials, query, or extra tokens."""
+    tokens = line.split()
+    suffix = f"tokens={len(tokens)}"
     try:
-        parts = urlsplit(line)
+        parts = urlsplit(tokens[0] if tokens else "")
         scheme = parts.scheme if parts.scheme in ("http", "https") else "other"
         host = parts.hostname or "unavailable"
     except ValueError:
-        return "scheme=other host=unavailable"
+        return f"scheme=other host=unavailable canonical_path=false trailing_slash=false {suffix}"
     if not re.fullmatch(r"[a-zA-Z0-9.-]{1,253}", host):
         host = "unavailable"
-    return f"scheme={scheme} host={host}"
+    canonical_path = str(parts.path.rstrip("/") == "/ubuntu").lower()
+    trailing_slash = str(parts.path.endswith("/")).lower()
+    return (f"scheme={scheme} host={host} canonical_path={canonical_path} "
+            f"trailing_slash={trailing_slash} {suffix}")
 
 
 def normalize(text):

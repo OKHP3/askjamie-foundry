@@ -70,6 +70,16 @@ class UbuntuMirrorNormalizationTests(unittest.TestCase):
         self.assertIn("scheme=https host=evil.example", result.stderr)
         self.assertNotIn("secret", result.stderr)
 
+    def test_diagnostic_reports_shape_without_extra_token_or_query(self):
+        description = MODULE.describe_entry(
+            "https://user:secret@archive.ubuntu.com/ubuntu/?token=hidden priority:42"
+        )
+        self.assertIn("scheme=https host=archive.ubuntu.com", description)
+        self.assertIn("canonical_path=true trailing_slash=true tokens=2", description)
+        self.assertNotIn("secret", description)
+        self.assertNotIn("hidden", description)
+        self.assertNotIn("priority", description)
+
 
 if __name__ == "__main__":
     unittest.main()
