@@ -32,6 +32,14 @@ class UbuntuMirrorNormalizationTests(unittest.TestCase):
             MODULE.ARCHIVE + "\n" + MODULE.SECURITY + "\n",
         )
 
+    def test_known_hosts_without_final_slash_are_canonicalized(self):
+        for scheme in ("http", "https"):
+            with self.subTest(scheme=scheme):
+                self.assertEqual(
+                    MODULE.normalize(f"{scheme}://azure.archive.ubuntu.com/ubuntu\nhttps://security.ubuntu.com/ubuntu\n"),
+                    MODULE.ARCHIVE + "\n" + MODULE.SECURITY + "\n",
+                )
+
     def test_missing_archive_or_security_fails(self):
         for text in ("", "# https://archive.ubuntu.com/ubuntu/\nhttps://security.ubuntu.com/ubuntu/\n", "https://archive.ubuntu.com/ubuntu/\n"):
             with self.subTest(text=text), self.assertRaisesRegex(ValueError, "both Ubuntu archive and security"):
