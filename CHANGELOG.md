@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09: Interview cue-card candidate
+
+- Add a private-input, evidence-grounded interview cue-card skill and synthetic development cases.
+- Record analytical review and defer release claims pending independent review and live evaluation.
+
 ## 2026-11-09: Exact destination reconciliation
 
 - Extend integrated application reconciliation v1.5.1 with original-event verification and exact destination readback. Preserve v1.5.0 agency and attempt safeguards.

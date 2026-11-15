@@ -1,0 +1,25 @@
+{
+  "artifact": "skills/okhp3-interview-cue-cards/SKILL.md",
+  "artifact_sha256": "55ec5467eac2f4f1e17d95c7726f2249a7b2e9231ea794bf58be0d4f85c4c344",
+  "evaluations_sha256": "b6dc9410395b93badfbe8cc687dce8384e2aa5f3a9d3b781d17181c13529e9dd",
+  "decision_question": "Is this package ready for public release as an interview coaching skill?",
+  "criteria": ["Ground career claims in authorized evidence", "Distinguish actual incidents and deployments from hypothetical designs", "Support concise cues and one-question practice", "Respect privacy and assessment rules", "Demonstrate independent review and current-version release evidence"],
+  "evidence_status": "analytical",
+  "claims": [
+    {"claim_id":"C1","claim":"The contract requires separation of real incidents from hypothetical designs.","type":"design","evidence_ids":["SKILL.md workflow steps 2 and 3","evals/cases.json missing-incident"],"status":"supported","consequence":"Invented incidents undermine candidate trust.","next_test":"Independent live case with no production incident."},
+    {"claim_id":"C2","claim":"The skill improves interview preparation over an unassisted baseline.","type":"hypothesis","evidence_ids":["evals/cases.json"],"status":"blocked","consequence":"An unsupported uplift claim misleads users.","next_test":"Matched baseline and skill runs, blinded grading, and unseen external holdout."},
+    {"claim_id":"C3","claim":"The contract protects excluded employers and resists instructions embedded in supplied evidence.","type":"design","evidence_ids":["SKILL.md inputs and boundaries","evals/cases.json untrusted-and-disclosure"],"status":"provisional","consequence":"Confidential information could be exposed.","next_test":"Independent adversarial execution with synthetic private fixtures."}
+  ],
+  "roles": [
+    {"role":"evidence reviewer","status":"not-run","reason":"No independent reviewer executed"},
+    {"role":"outcome reviewer","status":"not-run","reason":"No independent reviewer executed"},
+    {"role":"safety and portability reviewer","status":"not-run","reason":"No independent reviewer executed"},
+    {"role":"disruptor","status":"not-run","reason":"Independent initial reviews and conditional trigger not established"},
+    {"role":"negotiator","status":"not-run","reason":"Independent review evidence unavailable"}
+  ],
+  "author_analysis": "The contract addresses source attribution, deployment scope, missing incident, injected instructions, and practice pacing. This is an author analysis, not an independent role review or live evaluation.",
+  "release_decision": "defer-for-evidence",
+  "limitations": ["Development cases are visible and unexecuted", "No independent reviewers or protected holdout", "No live comparison, activation test, or uplift claim", "No user career data is included"],
+  "next_action": "Run the three independent reviews and their conditional disruptor/negotiator protocol; execute frozen development cases and an unseen external holdout before claiming release readiness.",
+  "review_expiry": "Any change to the skill or evaluation case files requires a new hash and review."
+}

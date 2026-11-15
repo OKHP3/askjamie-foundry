@@ -19,6 +19,8 @@ draftable source with analytical review. See the
 
 The [application status reconciliation skill](skills/okhp3-application-status-reconciliation/SKILL.md) covers staged application evidence, tracker coverage, authorized corrections, and owner closeout. It is a companion workflow with analytical evaluation evidence.
 
+The [interview cue-card skill](skills/okhp3-interview-cue-cards/SKILL.md) turns supplied evidence and prior responses into concise, defensible preparation and practice cues. Its evaluation design is not a live benchmark.
+
 The [application submission evidence skill](skills/okhp3-application-submission-evidence/SKILL.md)
 checks the exact role and final attachment, then verifies the immediate receipt.
 
