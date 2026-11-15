@@ -158,8 +158,8 @@ jobs:
             echo "An HTTP entry remains in the hosted-runner mirror map" >&2
             exit 1
           fi
-          sudo grep -Fxq 'https://archive.ubuntu.com/ubuntu/' "$mirrors"
-          sudo grep -Fxq 'https://security.ubuntu.com/ubuntu/' "$mirrors"
+          sudo grep -Eq '^https://archive[.]ubuntu[.]com/ubuntu/([[:space:]]+priority:[0-9]+)?$' "$mirrors"
+          sudo grep -Eq '^https://security[.]ubuntu[.]com/ubuntu/([[:space:]]+priority:[0-9]+)?$' "$mirrors"
           cat "$normalized"
 
       - name: Install pinned browser-test dependencies

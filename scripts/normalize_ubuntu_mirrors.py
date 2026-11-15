@@ -1,4 +1,10 @@
-"""Normalize a hosted runner's Ubuntu mirror list to approved HTTPS origins."""
+"""Normalize a hosted runner's Ubuntu mirror list to approved HTTPS origins.
+
+The runner image emits optional TAB-separated ``priority:N`` values:
+https://github.com/actions/runner-images/blob/95e6f51a068507e8f43d061d2166a39d0ef36ce8/images/ubuntu/scripts/build/configure-apt-sources.sh
+Each accepted priority is preserved, including two distinct priorities that
+may normalize to the same official archive. Unknown metadata fails closed.
+"""
 
 import re
 import sys
@@ -34,23 +40,37 @@ def describe_entry(line):
 def normalize(text):
     """Validate every active line before returning only canonical HTTPS URLs."""
     mirrors = []
+    priorities = set()
     for number, line in enumerate(text.splitlines(), 1):
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        match = ALLOWED.fullmatch(line)
+        tokens = line.split()
+        if len(tokens) > 2:
+            raise ValueError(f"line {number}: unsupported mirror metadata ({describe_entry(line)})")
+        priority = None
+        if len(tokens) == 2:
+            priority_match = re.fullmatch(r"priority:([1-9][0-9]{0,4})", tokens[1])
+            if not priority_match or int(priority_match.group(1)) > 65535:
+                raise ValueError(f"line {number}: invalid mirror priority ({describe_entry(line)})")
+            priority = int(priority_match.group(1))
+            if priority in priorities:
+                raise ValueError(f"line {number}: duplicate mirror priority")
+            priorities.add(priority)
+        match = ALLOWED.fullmatch(tokens[0])
         if not match:
             raise ValueError(
                 f"line {number}: unsupported Ubuntu mirror entry ({describe_entry(line)}); "
                 "expected an archive.ubuntu.com, azure.archive.ubuntu.com, "
                 "or security.ubuntu.com /ubuntu/ URL"
             )
-        if match.group(1) == "security.ubuntu.com" and not line.startswith("https://"):
+        if match.group(1) == "security.ubuntu.com" and not tokens[0].startswith("https://"):
             raise ValueError(f"line {number}: Ubuntu security mirror must use HTTPS")
         value = SECURITY if match.group(1) == "security.ubuntu.com" else ARCHIVE
-        if value not in mirrors:
-            mirrors.append(value)
-    if ARCHIVE not in mirrors or SECURITY not in mirrors:
+        entry = value if priority is None else f"{value}\tpriority:{priority}"
+        if entry not in mirrors:
+            mirrors.append(entry)
+    if not any(x.split()[0] == ARCHIVE for x in mirrors) or not any(x.split()[0] == SECURITY for x in mirrors):
         raise ValueError("mirror map must contain both Ubuntu archive and security entries")
     return "".join(value + "\n" for value in mirrors)
 

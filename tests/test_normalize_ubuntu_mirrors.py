@@ -32,6 +32,27 @@ class UbuntuMirrorNormalizationTests(unittest.TestCase):
             MODULE.ARCHIVE + "\n" + MODULE.SECURITY + "\n",
         )
 
+    def test_official_runner_priority_format(self):
+        source = (
+            "http://azure.archive.ubuntu.com/ubuntu/\tpriority:1\n"
+            "https://archive.ubuntu.com/ubuntu/\tpriority:2\n"
+            "https://security.ubuntu.com/ubuntu/\tpriority:3\n"
+        )
+        expected = (
+            MODULE.ARCHIVE + "\tpriority:1\n"
+            + MODULE.ARCHIVE + "\tpriority:2\n"
+            + MODULE.SECURITY + "\tpriority:3\n"
+        )
+        self.assertEqual(MODULE.normalize(source), expected)
+
+    def test_invalid_or_duplicate_priority_fails(self):
+        invalid = ("priority:0", "priority:65536", "priority:-1", "priority:1x", "priority:1 extra")
+        for suffix in invalid:
+            with self.subTest(suffix=suffix), self.assertRaises(ValueError):
+                MODULE.normalize(MODULE.ARCHIVE + " " + suffix + "\n" + MODULE.SECURITY + "\n")
+        with self.assertRaisesRegex(ValueError, "duplicate mirror priority"):
+            MODULE.normalize(MODULE.ARCHIVE + " priority:1\n" + MODULE.SECURITY + " priority:1\n")
+
     def test_known_hosts_without_final_slash_are_canonicalized(self):
         for scheme in ("http", "https"):
             with self.subTest(scheme=scheme):
