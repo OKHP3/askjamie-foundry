@@ -1,5 +1,18 @@
 {
-  "artifact": "okhp3-interview-intelligence 0.1.0",
+  "schema_version": "1.0",
+  "review_protocol": "equilibrium-v1",
+  "review_mode": "conditional",
+  "evaluation_status": "analytical",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "0.1.0",
+    "sha256": "72c925a332eeda1d58c37012f0df2007815c8a9fe41f99abe5273355a6ec0e7e",
+    "core_sha256": {
+      "LICENSE.md": "34ef7a21ed8b3eb0ebf87473b543e7940fb7f178113e12622e4783a89f700b38",
+      "SKILL.md": "72c925a332eeda1d58c37012f0df2007815c8a9fe41f99abe5273355a6ec0e7e",
+      "evals/cases.json": "8b5bfaedec6a24e2e99460c6933b55c3362422f3f35568c9116c1e0dc6ee525b"
+    }
+  },
   "evidence_status": "analytical",
   "decision": "approve-with-limits",
   "decision_question": "Is this portable synthetic-data skill ready for a supervised, reviewable release?",
@@ -10,7 +23,7 @@
     "portable structure and meaningful development cases"
   ],
   "artifact_sha256": "72c925a332eeda1d58c37012f0df2007815c8a9fe41f99abe5273355a6ec0e7e",
-  "development_cases_sha256": "e4f010119daf1ecd76d5f1b6da744a9769069eed1982747796442eda6d3749d2",
+  "development_cases_sha256": "8b5bfaedec6a24e2e99460c6933b55c3362422f3f35568c9116c1e0dc6ee525b",
   "claim_ledger": [
     {
       "claim_id": "CLM-01",
@@ -92,5 +105,18 @@
     "owner": "maintainer",
     "next": "Execute isolated with/without-skill development cases and an unseen external holdout; verify host discovery and installations.",
     "expiry_trigger": "Material skill changes, new execution evidence, host changes, or user-discovered failure."
-  }
+  },
+  "artifact_label": "okhp3-interview-intelligence 0.1.0",
+  "case_format_provenance": {
+    "original_sha256": "e4f010119daf1ecd76d5f1b6da744a9769069eed1982747796442eda6d3749d2",
+    "current_sha256": "8b5bfaedec6a24e2e99460c6933b55c3362422f3f35568c9116c1e0dc6ee525b",
+    "change": "JSON formatting only; parsed cases are unchanged. No new behavioral evaluation is claimed."
+  },
+  "independence": {
+    "reviewer_contexts_separated": true,
+    "shared_model_or_source_limits": [
+      "Three independent contexts shared the same model family and source package. Review was analytical, not live execution."
+    ]
+  },
+  "release_decision": "approve-with-limits"
 }
