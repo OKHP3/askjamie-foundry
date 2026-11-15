@@ -33,6 +33,14 @@ and user authorization are checked at runtime.
 New source is canonical here and mirrored exactly into Skillz's AskJamie family.
 The review and synchronization records identify versions and evidence limits.
 
+## Career scenario planning
+
+- Use [AI Career Resilience](okhp3-career-ai-resilience/SKILL.md) to compare AI
+  task exposure, experience advantage, disrupted learning pathways, and
+  conditional 5/10/25-year career scenarios. It does not make hiring decisions
+  or predict precise risk percentiles. This is analytical source; an unseen
+  holdout and live comparison remain open.
+
 ## Professional portrait companions
 
 - Use [Professional Headshot 0.1.0](https://github.com/OKHP3/skillz/tree/9e729371db1901842fae839a12e7dd1146711abd/askjamie/okhp3-professional-headshot)
