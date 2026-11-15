@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "record_type": "bounded-integration-reconciliation",
+  "evaluation_status": "analytical",
+  "review_date": "2026-11-15",
+  "artifact": {
+    "path": "SKILL.md",
+    "version": "1.5.2",
+    "file_sha256": {
+      "LICENSE.md": "9f9a20b5c999d117d21e9d9d372860cf688d82e27ec70d21c9ad99fcaadc0a06",
+      "SKILL.md": "6571f4485da1b65d7332fee30089d3ed096d80f5c772ec8386926358069e7652",
+      "references/reconciliation-record.md": "b83de39a5cad60cefd6bafced0f3ffb5e84f6b9a5515b84ae23f9efd67a05237",
+      "evals/cases.json": "9afd4c5353f7c20ddeac5c86dcadf8756a33574ac56b12ccd36e772a24571b63",
+      "evals/portfolio-cases.json": "7c7b9395204a0ef8f5378ab2a9b864ca7302ac99eb120b860980977a9abf1190",
+      "evals/attempt-detail-cases.json": "f6229f0f6913a14fc008386b2ffff916b534bba1395f2d78b94126fbc720f971",
+      "evals/destination-verification-cases.json": "de22adc9ab5c3ac93b593d11bc6152fa0b119bcf3348bf764cc33e7c5c418564"
+    }
+  },
+  "source_revisions": {
+    "main": "73d259025cc9712b2ef0096f582e17d66ddb0f58",
+    "staged_form_proposal": "9bd21c75c1fb10ec035f78f631394b6f556702dc",
+    "prior_main_review": "evals/review-1.5.1-integration.json",
+    "historical_staged_form_review": "evals/review-1.4.0-staged-forms-history.json"
+  },
+  "scope": "Preserve the newer 1.5.1 agency, attempt, source-authenticity, and exact-destination safeguards while adding distinct staged-form completion, stable enumeration, guarded retry, and separate draft-discard rules from the older proposal.",
+  "validation_limits": [
+    "Prior reviews and their hashes apply only to their original revisions; they are retained as historical evidence.",
+    "Development cases are synthetic source-contract designs. No live host execution, independent new model review, matched benchmark, or unseen holdout is claimed.",
+    "Repository tests and exact-head protected checks must be recorded separately for the integrated revision."
+  ]
+}
