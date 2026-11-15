@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-09: Exact destination reconciliation
+
+- Extend integrated application reconciliation v1.5.1 with original-event verification and exact destination readback. Preserve v1.5.0 agency and attempt safeguards.
+- Keep historical reviews separate from current analytical integration evidence; no live benchmark or host acceptance claim.
+
+## 2026-11-09: Staffing-agency application reconciliation
+
+- Extend the Resume Representative reconciliation skill v1.5.0, preserving merged attempt-detail safeguards, with separate agency intake,
+  end-client handoff and receipt, and applicant interview evidence.
+- Deduplicate mirrored correspondence and add synthetic regression cases for
+  ambiguous tracker rows, conflicting claims, and stale write preconditions.
+
 ## 2026-11-09: Lifetime career reference, role masters and coaching
 
 - Add three 0.2.0 draftable source skills for a canon-derived lifetime career
