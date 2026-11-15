@@ -46,7 +46,7 @@
     },
     {
       "id": "SRC-05",
-      "source": "evals.json",
+      "source": "evals/evals.json",
       "authority": "Public-safe synthetic development designs",
       "retrieved_on": "2026-11-09"
     }

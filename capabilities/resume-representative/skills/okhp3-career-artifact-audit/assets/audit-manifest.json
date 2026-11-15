@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "audit_id": null,
+  "as_of": null,
+  "environment": null,
+  "approved_roots": [],
+  "baseline": {
+    "source": null,
+    "observed_at": null,
+    "identity_basis": null,
+    "limitations": []
+  },
+  "coverage": {
+    "requested_root_count": null,
+    "checked_root_count": null,
+    "expected_reference_count": null,
+    "checked_reference_count": null,
+    "unique_observed_files": null,
+    "unique_observed_folders": null,
+    "enumeration_limits": [],
+    "gaps": []
+  },
+  "items": [],
+  "mappings": [],
+  "sync_status": "unverified",
+  "concurrent_writers": [],
+  "preservation_findings": [],
+  "repair_proposals": [],
+  "report_storage": {
+    "destination": null,
+    "filename": null,
+    "audience": null,
+    "audience_verified": false,
+    "authorized": false,
+    "create_guard": null,
+    "collision_status": "unchecked",
+    "result": "not-saved",
+    "readback": null,
+    "destination_identity": null,
+    "scope_guard": null
+  },
+  "next_checks": []
+}
