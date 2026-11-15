@@ -61,6 +61,19 @@ class UbuntuMirrorNormalizationTests(unittest.TestCase):
                     MODULE.ARCHIVE + "\n" + MODULE.SECURITY + "\n",
                 )
 
+    def test_ec2_regional_archives_normalize_to_canonical_https(self):
+        for region in ("us-east-2", "eu-west-1", "ap-southeast-2", "us-gov-west-1"):
+            for scheme in ("http", "https"):
+                with self.subTest(region=region, scheme=scheme):
+                    source = (
+                        f"{scheme}://{region}.ec2.archive.ubuntu.com/ubuntu/\tpriority:1\n"
+                        + MODULE.SECURITY + "\tpriority:2\n"
+                    )
+                    self.assertEqual(
+                        MODULE.normalize(source),
+                        MODULE.ARCHIVE + "\tpriority:1\n" + MODULE.SECURITY + "\tpriority:2\n",
+                    )
+
     def test_missing_archive_or_security_fails(self):
         for text in ("", "# https://archive.ubuntu.com/ubuntu/\nhttps://security.ubuntu.com/ubuntu/\n", "https://archive.ubuntu.com/ubuntu/\n"):
             with self.subTest(text=text), self.assertRaisesRegex(ValueError, "both Ubuntu archive and security"):
@@ -76,6 +89,13 @@ class UbuntuMirrorNormalizationTests(unittest.TestCase):
             "https://archive.ubuntu.com/ubuntu/extra",
             "ftp://archive.ubuntu.com/ubuntu/",
             "http://unknown.archive.ubuntu.com/ubuntu/",
+            "http://us-east-2.ec2.archive.ubuntu.com.evil.example/ubuntu/",
+            "http://evil.us-east-2.ec2.archive.ubuntu.com/ubuntu/",
+            "http://us-east-2.ec2.archive.ubuntu.com@evil.example/ubuntu/",
+            "http://us-east-2.ec2.archive.ubuntu.com:80/ubuntu/",
+            "http://us-east-2.ec2.archive.ubuntu.com/ubuntu/?key=secret",
+            "http://us-east-2.ec2.archive.ubuntu.com/ubuntu/extra",
+            "http://not-a-region.ec2.archive.ubuntu.com/ubuntu/",
         )
         for text in invalid:
             with self.subTest(text=text), self.assertRaisesRegex(ValueError, "line 2: unsupported"):
