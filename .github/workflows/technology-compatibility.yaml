@@ -145,23 +145,22 @@ jobs:
         run: |
           set -euo pipefail
           mirrors=/etc/apt/apt-mirrors.txt
-          sudo test -f "$mirrors"
-          sudo grep -Fq 'http://azure.archive.ubuntu.com/ubuntu/' "$mirrors" || {
-            echo "Expected hosted-runner Azure Ubuntu mirror entry was not found" >&2
+          sudo test -f "$mirrors" || {
+            echo "Ubuntu mirror map is missing: $mirrors" >&2
             exit 1
           }
-          sudo grep -Fq 'https://security.ubuntu.com/ubuntu/' "$mirrors" || {
-            echo "Expected hosted-runner Ubuntu security mirror entry was not found" >&2
-            exit 1
-          }
-          sudo sed -i 's#http://azure.archive.ubuntu.com/ubuntu/#https://archive.ubuntu.com/ubuntu/#' "$mirrors"
+          normalized=$(mktemp)
+          trap 'rm -f "$normalized"' EXIT
+          python -m unittest discover -s tests -p test_normalize_ubuntu_mirrors.py
+          sudo cat "$mirrors" | python scripts/normalize_ubuntu_mirrors.py > "$normalized"
+          sudo tee "$mirrors" < "$normalized" > /dev/null
           if sudo grep -Eq '^[[:space:]]*http://' "$mirrors"; then
-            echo "An HTTP Ubuntu archive entry remains in the hosted-runner mirror map" >&2
+            echo "An HTTP entry remains in the hosted-runner mirror map" >&2
             exit 1
           fi
-          sudo grep -Fq 'https://archive.ubuntu.com/ubuntu/' "$mirrors"
-          sudo grep -Fq 'https://security.ubuntu.com/ubuntu/' "$mirrors"
-          sudo cat "$mirrors"
+          sudo grep -Eq '^https://archive[.]ubuntu[.]com/ubuntu/([[:space:]]+priority:[0-9]+)?$' "$mirrors"
+          sudo grep -Eq '^https://security[.]ubuntu[.]com/ubuntu/([[:space:]]+priority:[0-9]+)?$' "$mirrors"
+          cat "$normalized"
 
       - name: Install pinned browser-test dependencies
         run: |
