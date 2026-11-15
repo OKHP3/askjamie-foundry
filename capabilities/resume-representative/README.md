@@ -71,6 +71,13 @@ The [job screening handoff skill](skills/okhp3-job-screening-handoff/SKILL.md)
 turns screening notices into a candidate-owned checklist and preserves the last
 verified checkpoint. Its public evaluation evidence is analytical.
 
+The [resume evidence reconciliation skill](skills/resume-evidence-reconciliation/SKILL.md)
+audits a specific resume against its masters and prior versions. It produces a
+source-linked review without rewriting the resume or changing application state.
+The source is an integration candidate with analytical review evidence.
+For a specific minimum-years or coupled experience requirement, use the
+[qualifying-experience audit](skills/okhp3-qualifying-experience-audit/SKILL.md).
+
 The [role-to-practice skill](skills/okhp3-role-to-practice/SKILL.md) maps a
 specific opening and supplied career evidence to qualification gaps, learning,
 and a synthetic practice exercise. Its [release review](skills/okhp3-role-to-practice/evals/review.md)
