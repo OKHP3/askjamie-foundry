@@ -38,8 +38,11 @@ The review and synchronization records identify versions and evidence limits.
 - Use [AI Career Resilience](okhp3-career-ai-resilience/SKILL.md) to compare AI
   task exposure, experience advantage, disrupted learning pathways, and
   conditional 5/10/25-year career scenarios. It does not make hiring decisions
-  or predict precise risk percentiles. This is analytical source; an unseen
-  holdout and live comparison remain open.
+  or predict precise risk percentiles. Version 0.2.0 requires source dates and a
+  recommendation register that retains evidence dependencies and deferrals in
+  handoffs. This is draftable analytical source with independent source review;
+  one synthetic handoff check is recorded, while broader runtime behavior,
+  predictive validity and an unseen holdout remain unverified. See the package's [current review](okhp3-career-ai-resilience/REVIEW.md).
 
 ## Professional portrait companions
 

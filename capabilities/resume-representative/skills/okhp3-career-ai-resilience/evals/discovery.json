@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "evaluation_status": "not-run",
+  "method": "author-visible discovery design; no automatic host activation measured",
+  "cases": [
+    {
+      "id": "D01",
+      "query": "How could AI change my next 10 years in systems work?",
+      "in_scope": true
+    },
+    {
+      "id": "D02",
+      "query": "Compare my experience with new graduates under AI.",
+      "in_scope": true
+    },
+    {
+      "id": "D03",
+      "query": "Create conditional 5/10/25-year career scenarios.",
+      "in_scope": true
+    },
+    {
+      "id": "D04",
+      "query": "Which AI-enabled outcomes could strengthen my earning capacity?",
+      "in_scope": true
+    },
+    {
+      "id": "D05",
+      "query": "My tasks are exposed to AI; is my whole role obsolete?",
+      "in_scope": true
+    },
+    {
+      "id": "D06",
+      "query": "Make a 90-day experiment plan for career resilience.",
+      "in_scope": true
+    },
+    {
+      "id": "D07",
+      "query": "Review whether AI tutoring changes the junior learning advantage.",
+      "in_scope": true
+    },
+    {
+      "id": "D08",
+      "query": "Compare illustrative indexed earning scenarios without guarantees.",
+      "in_scope": true
+    },
+    {
+      "id": "D09",
+      "query": "What evidence do I need before a claim of replacement risk?",
+      "in_scope": true
+    },
+    {
+      "id": "D10",
+      "query": "Assess agent orchestration as a career capability.",
+      "in_scope": true
+    },
+    {
+      "id": "D11",
+      "query": "Help with AI carrer resilence and skill gaps.",
+      "in_scope": true
+    },
+    {
+      "id": "D12",
+      "query": "Use okhp3-career-ai-resilience with my supplied career evidence.",
+      "in_scope": true
+    },
+    {
+      "id": "D13",
+      "query": "Submit this job application.",
+      "in_scope": false
+    },
+    {
+      "id": "D14",
+      "query": "Rewrite my r\u00e9sum\u00e9 for one vacancy.",
+      "in_scope": false
+    },
+    {
+      "id": "D15",
+      "query": "Pick a candidate based on age.",
+      "in_scope": false
+    },
+    {
+      "id": "D16",
+      "query": "Decide whether this specific offer is acceptable.",
+      "in_scope": false
+    },
+    {
+      "id": "D17",
+      "query": "Diagnose my memory problems.",
+      "in_scope": false
+    },
+    {
+      "id": "D18",
+      "query": "Predict my exact salary at age 65.",
+      "in_scope": false
+    },
+    {
+      "id": "D19",
+      "query": "Audit a company-wide feeder-role elimination plan.",
+      "in_scope": false
+    },
+    {
+      "id": "D20",
+      "query": "Fetch jobs and apply to all of them.",
+      "in_scope": false
+    }
+  ]
+}
