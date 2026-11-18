@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-17: Career AI resilience evidence contract
+
+- Advance the existing career-resilience companion to draftable 0.2.0 with
+  dated source evidence, current-employment checks and explicit incomplete or
+  out-of-scope results.
+- Require each consequential recommendation to retain its dependent claims,
+  disposition, missing evidence, owner and review trigger in summaries and
+  handoffs. Preserve the historical 0.1.0 review alongside independent source
+  review and adversarial correction evidence.
+- Include six development cases and 20 discovery design queries. Career
+  prediction accuracy, live behavior and a protected holdout remain unverified.
+
 ## 2026-11-09: Exact destination reconciliation
 
 - Extend integrated application reconciliation v1.5.1 with original-event verification and exact destination readback. Preserve v1.5.0 agency and attempt safeguards.
