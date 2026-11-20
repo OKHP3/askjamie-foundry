@@ -4,6 +4,11 @@ Public child capability of AskJamie FoundRy.
 
 Turn supplied career evidence into role-specific professional narratives.
 
+The [Résumé Generator](skills/okhp3-resume-generator/SKILL.md) turns one
+posting and a candidate's work history into an interview-focused résumé. Start
+there for the finished draft, or use [Targeted Resume](skills/okhp3-targeted-resume/SKILL.md)
+when the candidate also needs the evidence behind individual claims.
+
 The [LinkedIn DM reconciliation skill](skills/okhp3-linkedin-dm-reconcile/SKILL.md)
 reconciles email alerts with incoming and outgoing messages before deciding
 which request remains open. It is an exact portable mirror of the Skillz core,
