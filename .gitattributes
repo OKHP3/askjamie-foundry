@@ -18,3 +18,8 @@
 
 # Keep current contributor verification receipts consistent across checkouts.
 /.agents/skills/okhp3-skill-foundry/** -text -ident -filter
+
+# Keep résumé-generator text identical in both public package locations.
+/capabilities/resume-representative/skills/okhp3-resume-generator/** text eol=lf
+# Preserve the final blank line in the supplied standalone prompt.
+/capabilities/resume-representative/skills/okhp3-resume-generator/prompts/the-resume-that-earns-the-interview.md whitespace=-blank-at-eof

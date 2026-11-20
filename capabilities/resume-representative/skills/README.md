@@ -25,13 +25,22 @@ and user authorization are checked at runtime.
    [evidence canon](okhp3-career-evidence-canon/SKILL.md) own originals and claims.
 2. [Lifetime Career Reference](okhp3-lifetime-career-reference/SKILL.md) is a
    derived private biography and navigable source-linked view.
-3. [Role Master Resumes](okhp3-role-master-resumes/SKILL.md) prepares broad lane
-   baselines; [Targeted Resume](okhp3-targeted-resume/SKILL.md) owns one-job tailoring.
+3. Use [Role Master Resumes](okhp3-role-master-resumes/SKILL.md) for a reusable
+   role-family baseline. Use [Targeted Resume](okhp3-targeted-resume/SKILL.md)
+   when a review needs the source behind each claim for a specific posting.
 4. [Coaching Engagement](okhp3-coaching-engagement/SKILL.md) tracks intake,
    source-attributed provider terms and meeting follow-ups.
 
 New source is canonical here and mirrored exactly into Skillz's AskJamie family.
 The review and synchronization records identify versions and evidence limits.
+
+## Writing a résumé for one opening
+
+Use [Résumé Generator](okhp3-resume-generator/SKILL.md) when the candidate
+wants a finished résumé first. Supply the posting and a current résumé or
+rough work-history notes. The skill draws out the candidate's contribution,
+chooses the evidence a hiring manager should see on page one, and delivers
+the draft for the candidate's review.
 
 ## Career scenario planning
 
