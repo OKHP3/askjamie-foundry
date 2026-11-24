@@ -1,0 +1,39 @@
+{
+  "bytes": 101967,
+  "contents": "service-records.json and screened UTF-8 workflow log text, indexed by SHA-256",
+  "downloaded_log_archives": 21,
+  "file": "service-records.zip",
+  "held_log_entries": 0,
+  "job_records": 45,
+  "log_entries_reviewed": 42,
+  "projects": {
+    "closed": 0,
+    "open": 0
+  },
+  "public_log_entries": 42,
+  "record_counts": {
+    "actions-artifacts": 0,
+    "branches": 1,
+    "deployments": 0,
+    "environments": 1,
+    "labels": 9,
+    "milestones": 0,
+    "open_activity": 0,
+    "releases": 0,
+    "rulesets": 0,
+    "tags": 0,
+    "workflows": 1
+  },
+  "redactions": {
+    "local_accounts": 42
+  },
+  "sha256": "2a7d42b6d50ff6eae96eed694dbed019af7313f6ec7091e013d7487b99c46d6b",
+  "source_attempts": 45,
+  "source_repository": "OKHP3/askjamie-brg05-costco",
+  "source_runs": 45,
+  "unavailable_or_excluded_logs": {
+    "Expired at GitHub (HTTP 410)": 24
+  },
+  "unique_public_log_texts": 42,
+  "verified_utc": "2026-11-24T22:20:22.902617+00:00"
+}

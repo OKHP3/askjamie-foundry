@@ -1,8 +1,15 @@
 {
   "records": [
     {
+      "assignees": [
+        "Copilot",
+        "OKHP3"
+      ],
+      "author": "Copilot",
       "base_sha": "b0527d13cbfa792b61bce7171f924c1d063e5da7",
+      "body": "Set up repository structure and documentation for GPT-BRG11: Scheels — OKHP³ BrandGuard™.\n\n## Changes\n\n- **Folder structure**: Created `/src`, `/prompts`, `/build`, `/eval`, `/web` directories with `.gitkeep` files for git tracking\n- **README.md**: Added tagline \"The outdoors are covered. I covered your name in here too.\" and canonical links section with references to:\n  - SCHEELS official website\n  - AskJamie lens page\n  - Notion BRG11\n  - ChatGPT Project\n  - Custom GPT\n\nRepository is now ready for prompt development, knowledge pack storage, evaluation tests, and web content.\n\n<!-- START COPILOT CODING AGENT SUFFIX -->\n\n\n\n<!-- START COPILOT ORIGINAL PROMPT -->\n\n\n\n<details>\n\n<summary>Original prompt</summary>\n\n> Create a new repo named AskJamie-GPT-BRG11 for GPT-BRG11: Scheels — OKHP³ BrandGuard™. Initialize with README.md. Add folders /src /prompts /build /eval /web. In README include tagline “The outdoors are covered. I covered your name in here too.” and links to scheels.com, AskJamie lens page, Notion BRG11, ChatGPT Project, and Custom GPT.\n> \n\n\n</details>\n\n\n\n<!-- START COPILOT CODING AGENT TIPS -->\n---\n\n💬 We'd love your input! Share your thoughts on Copilot coding agent in our [2 minute survey](https://gh.io/copilot-coding-agent-survey).\n",
       "closed_at": "2025-12-26T15:48:38Z",
+      "comments": [],
       "commit_shas": [
         "dd97369f0d2763354cf2feeb3f62b2bd4b54f809",
         "e5a08ae24c2e44bda77ae141e0c406689f98a82b",
@@ -13,31 +20,44 @@
       "head_sha": "e2e43b28e07d0a64a6c326ffa38378fbdcad9ccd",
       "id": 3758345830,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "9214829fedb1526dc90f44650fe59ff5b1e72ad4",
       "merged": true,
       "merged_at": "2025-12-26T15:48:38Z",
       "number": 1,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/pull/1",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [
         {
+          "author": "OKHP3",
+          "body": "",
           "commit_id": "e5a08ae24c2e44bda77ae141e0c406689f98a82b",
           "id": 3611508828,
-          "state": "APPROVED"
+          "state": "APPROVED",
+          "submitted_at": "2025-12-24T19:49:05Z"
         },
         {
+          "author": "OKHP3",
+          "body": "",
           "commit_id": "e5a08ae24c2e44bda77ae141e0c406689f98a82b",
           "id": 3613631541,
-          "state": "APPROVED"
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:47:59Z"
         }
       ],
       "state": "closed",
+      "title": "Initialize AskJamie-GPT-BRG11 repository structure and documentation",
       "updated_at": "2025-12-26T15:48:38Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "9214829fedb1526dc90f44650fe59ff5b1e72ad4",
+      "body": null,
       "closed_at": "2026-01-02T15:32:13Z",
+      "comments": [],
       "commit_shas": [
         "dd97369f0d2763354cf2feeb3f62b2bd4b54f809",
         "e5a08ae24c2e44bda77ae141e0c406689f98a82b",
@@ -50,12 +70,85 @@
       "head_sha": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
       "id": 3776597018,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "73e7a8a037b19ea8a0e27cdf4d248179242a0a4f",
       "merged": true,
       "merged_at": "2026-01-02T15:32:13Z",
       "number": 2,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/pull/2",
+      "review_comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Align manifest metadata with BRG11 Scheels repo**\n\nThe manifest identifies this as BRG10/Discount Tire (name/description) even though the repository/README is for BRG11 Scheels. If any automation or documentation tooling consumes `gpt_manifest.yaml` to populate brand, model, or canonical URLs, it will mislabel outputs and route users to the wrong company. This mismatch is visible at the top of the manifest and should be updated to Scheels/BRG11 to avoid incorrect branding and links.\n\nUseful? React with 👍 / 👎.",
+          "commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "created_at": "2026-01-02T15:33:24Z",
+          "id": 2657915137,
+          "line": 2,
+          "original_commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "original_line": 2,
+          "path": "gpt_manifest.yaml",
+          "pull_request_review_id": 3623354937,
+          "side": "RIGHT",
+          "updated_at": "2026-01-02T15:33:24Z"
+        },
+        {
+          "author": "Copilot",
+          "body": "The gpt_manifest.yaml specifies \"Discount Tire\" as the brand, but this repository is for \"Scheels\" (GPT-BRG11). The manifest contains links to discounttire.com and references Discount Tire throughout, which is inconsistent with the repository name and stated purpose for Scheels.",
+          "commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "created_at": "2026-01-02T15:34:40Z",
+          "id": 2657917219,
+          "line": 42,
+          "original_commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "original_line": 42,
+          "path": "gpt_manifest.yaml",
+          "pull_request_review_id": 3623356933,
+          "side": "RIGHT",
+          "updated_at": "2026-01-02T15:34:41Z"
+        },
+        {
+          "author": "Copilot",
+          "body": "The name field references \"AskJamie-GPT-BRG10\" but this repository is for BRG11 (Scheels), not BRG10. This creates confusion between different BrandGuard GPT versions.",
+          "commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "created_at": "2026-01-02T15:34:40Z",
+          "id": 2657917222,
+          "line": 1,
+          "original_commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "original_line": 1,
+          "path": "gpt_manifest.yaml",
+          "pull_request_review_id": 3623356933,
+          "side": "RIGHT",
+          "updated_at": "2026-01-02T15:34:42Z"
+        },
+        {
+          "author": "Copilot",
+          "body": "The model field specifies \"GPT-BRG10\" but this repository is for GPT-BRG11 according to the repository name and README.",
+          "commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "created_at": "2026-01-02T15:34:41Z",
+          "id": 2657917225,
+          "line": 40,
+          "original_commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "original_line": 40,
+          "path": "gpt_manifest.yaml",
+          "pull_request_review_id": 3623356933,
+          "side": "RIGHT",
+          "updated_at": "2026-01-02T15:34:42Z"
+        },
+        {
+          "author": "Copilot",
+          "body": "The README.md has been updated to reference \"Discount Tire\" in line 2, but the repository name is \"AskJamie-GPT-BRG11\" which should be for Scheels according to the title. This creates a brand mismatch - the tagline mentions \"Scheels\" while the description talks about \"Discount Tire\".\n```suggestion\nStorage + source-of-truth for GPT-BRG11: Scheels — OKHP³ BrandGuard™ instance for SCHEELS. Contains prompts, knowledge packs, eval tests, and the AskJamie lens webpage. Public-source focused; routes users to official SCHEELS (scheels.com). Canonical links in this README.\n```",
+          "commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "created_at": "2026-01-02T15:34:41Z",
+          "id": 2657917229,
+          "line": 2,
+          "original_commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
+          "original_line": 2,
+          "path": "README.md",
+          "pull_request_review_id": 3623356933,
+          "side": "RIGHT",
+          "updated_at": "2026-01-02T15:34:42Z"
+        }
+      ],
       "review_threads": [
         {
           "comment_ids": [
@@ -100,22 +193,33 @@
       ],
       "reviews": [
         {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "\n### 💡 Codex Review\n\nHere are some automated review suggestions for this pull request.\n    \n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](http://chatgpt.com/codex/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\".\n\nIf Codex has suggestions, it will comment; otherwise it will react with 👍.\n\n\n\n\nCodex can also answer questions or update the PR. Try commenting \"@codex address that feedback\".\n            \n</details>",
           "commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
           "id": 3623354937,
-          "state": "COMMENTED"
+          "state": "COMMENTED",
+          "submitted_at": "2026-01-02T15:33:24Z"
         },
         {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "body": "## Pull request overview\n\nThis PR initializes the repository structure for a BrandGuard GPT project, but contains **critical brand and version mismatches**. The repository is named for GPT-BRG11 (Scheels), but the configuration files reference GPT-BRG10 and Discount Tire instead.\n\n### Key Changes\n- Simplified README.md to a brief tagline\n- Added LICENSE (MIT), .gitignore, CHANGELOG.md, and gpt_manifest.yaml\n- Created directory structure with .gitkeep files and one PDF in knowledge/\n\n### Reviewed changes\n\nCopilot reviewed 4 out of 52 changed files in this pull request and generated 4 comments.\n\n<details>\n<summary>Show a summary per file</summary>\n\n| File | Description |\r\n| ---- | ----------- |\r\n| README.md | Replaced detailed documentation with tagline, but references wrong brand (Discount Tire instead of Scheels) |\r\n| LICENSE | Standard MIT license added |\r\n| .gitignore | Comprehensive ignore patterns for common development artifacts |\r\n| CHANGELOG.md | Basic changelog structure following Keep a Changelog format |\r\n| gpt_manifest.yaml | Configuration manifest with **critical errors** - references BRG10 and Discount Tire instead of BRG11 and Scheels |\r\n| knowledge/BRG11-KNOW17-Reputational-Liability-Inoculation-v01a.pdf | Binary PDF file added |\r\n| Various .gitkeep files | Placeholder files for directory structure |\n</details>\n\n\n\n\n\n\n---\n\n💡 <a href=\"/OKHP3/AskJamie-GPT-BRG11/new/main/.github/instructions?filename=*.instructions.md\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Add Copilot custom instructions</a> for smarter, more guided reviews. <a href=\"https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Learn how to get started</a>.",
           "commit_id": "8ae55c44341d3a4946b5892467d8bcecc3f905fe",
           "id": 3623356933,
-          "state": "COMMENTED"
+          "state": "COMMENTED",
+          "submitted_at": "2026-01-02T15:34:41Z"
         }
       ],
       "state": "closed",
+      "title": "Copilot/initialize repo with structure",
       "updated_at": "2026-01-02T15:34:41Z"
     },
     {
+      "assignees": [],
+      "author": "dependabot[bot]",
       "base_sha": "adc04feaf7109e3024f1b029f665c7d44c25735c",
+      "body": "Bumps [actions/checkout](https://github.com/actions/checkout) from 6 to 7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/releases\">actions/checkout's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>block checking out fork pr for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Bump actions/publish-immutable-action from 0.0.3 to 0.0.4 in the minor-actions-dependencies group across 1 directory by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2458\">actions/checkout#2458</a></li>\n<li>Bump flatted from 3.3.1 to 3.4.2 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2460\">actions/checkout#2460</a></li>\n<li>Bump js-yaml from 4.1.0 to 4.2.0 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2461\">actions/checkout#2461</a></li>\n<li>Bump <code>@​actions/core</code> and <code>@​actions/tool-cache</code> and Remove uuid by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2459\">actions/checkout#2459</a></li>\n<li>upgrade module to esm and update dependencies by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2463\">actions/checkout#2463</a></li>\n<li>Bump the minor-npm-dependencies group across 1 directory with 3 updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2462\">actions/checkout#2462</a></li>\n<li>getting ready for checkout v7 release by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2464\">actions/checkout#2464</a></li>\n<li>update error wording by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2467\">actions/checkout#2467</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v7.0.0\">https://github.com/actions/checkout/compare/v6.0.3...v7.0.0</a></p>\n<h2>v6.1.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li><strong>[BREAKING]</strong> backport <code>allow-unsafe-pr-checkout</code> to v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2500\">actions/checkout#2500</a></li>\n<li>backport fixes to releases-v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2527\">actions/checkout#2527</a></li>\n</ul>\n<p><a href=\"https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/\">https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/</a> for more details about this breaking change</p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v6.1.0\">https://github.com/actions/checkout/compare/v6.0.3...v6.1.0</a></p>\n<h2>v6.0.3</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update changelog by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2357\">actions/checkout#2357</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>Update changelog for v6.0.3 by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2446\">actions/checkout#2446</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6...v6.0.3\">https://github.com/actions/checkout/compare/v6...v6.0.3</a></p>\n<h2>v6.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Add orchestration_id to git user-agent when ACTIONS_ORCHESTRATION_ID is set by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2355\">actions/checkout#2355</a></li>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.1...v6.0.2\">https://github.com/actions/checkout/compare/v6.0.1...v6.0.2</a></p>\n<h2>v6.0.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update all references from v5 and v4 to v6 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2314\">actions/checkout#2314</a></li>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n<li>Clarify v6 README by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2328\">actions/checkout#2328</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/blob/main/CHANGELOG.md\">actions/checkout's changelog</a>.</em></p>\n<blockquote>\n<h1>Changelog</h1>\n<h2>v7.0.1</h2>\n<ul>\n<li>Skip running unsafe pr check if input is default by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2518\">actions/checkout#2518</a></li>\n<li>Trim only ascii whitespace for branch by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2521\">actions/checkout#2521</a></li>\n<li>Escape values passed to --unset by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2530\">actions/checkout#2530</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v7.0.0</h2>\n<ul>\n<li>Block checking out fork PR for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v6.0.3</h2>\n<ul>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<h2>v6.0.2</h2>\n<ul>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<h2>v6.0.1</h2>\n<ul>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n</ul>\n<h2>v6.0.0</h2>\n<ul>\n<li>Persist creds to a separate file by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2286\">actions/checkout#2286</a></li>\n<li>Update README to include Node.js 24 support details and requirements by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2248\">actions/checkout#2248</a></li>\n</ul>\n<h2>v5.0.1</h2>\n<ul>\n<li>Port v6 cleanup to v5 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2301\">actions/checkout#2301</a></li>\n</ul>\n<h2>v5.0.0</h2>\n<ul>\n<li>Update actions checkout to use node 24 by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2226\">actions/checkout#2226</a></li>\n</ul>\n<h2>v4.3.1</h2>\n<ul>\n<li>Port v6 cleanup to v4 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2305\">actions/checkout#2305</a></li>\n</ul>\n<h2>v4.3.0</h2>\n<ul>\n<li>docs: update README.md by <a href=\"https://github.com/motss\"><code>@​motss</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1971\">actions/checkout#1971</a></li>\n<li>Add internal repos for checking out multiple repositories by <a href=\"https://github.com/mouismail\"><code>@​mouismail</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1977\">actions/checkout#1977</a></li>\n<li>Documentation update - add recommended permissions to Readme by <a href=\"https://github.com/benwells\"><code>@​benwells</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2043\">actions/checkout#2043</a></li>\n<li>Adjust positioning of user email note and permissions heading by <a href=\"https://github.com/joshmgross\"><code>@​joshmgross</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2044\">actions/checkout#2044</a></li>\n<li>Update README.md by <a href=\"https://github.com/nebuk89\"><code>@​nebuk89</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2194\">actions/checkout#2194</a></li>\n<li>Update CODEOWNERS for actions by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2224\">actions/checkout#2224</a></li>\n<li>Update package dependencies by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2236\">actions/checkout#2236</a></li>\n</ul>\n<h2>v4.2.2</h2>\n<ul>\n<li><code>url-helper.ts</code> now leverages well-known environment variables by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1941\">actions/checkout#1941</a></li>\n<li>Expand unit test coverage for <code>isGhes</code> by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1946\">actions/checkout#1946</a></li>\n</ul>\n<h2>v4.2.1</h2>\n<ul>\n<li>Check out other refs/* by commit if provided, fall back to ref by <a href=\"https://github.com/orhantoy\"><code>@​orhantoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1924\">actions/checkout#1924</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1\"><code>3d3c42e</code></a> prep v7.0.1 release (<a href=\"https://redirect.github.com/actions/checkout/issues/2531\">#2531</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/28802689a136bfcdb721715abd713740beecbe07\"><code>2880268</code></a> escape values passed to --unset (<a href=\"https://redirect.github.com/actions/checkout/issues/2530\">#2530</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/12cd2235efa0937479335606d7c3ac9f6c0973b1\"><code>12cd223</code></a> trim only ascii whitespace for branch (<a href=\"https://redirect.github.com/actions/checkout/issues/2521\">#2521</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/62661c4e71a304b2823ed026347b8d34c3eac541\"><code>62661c4</code></a> skip running unsafe pr check if input is default (<a href=\"https://redirect.github.com/actions/checkout/issues/2518\">#2518</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8d4307400f9427dba7cb98e488d6ab85f1cec5f\"><code>e8d4307</code></a> Bump the minor-actions-dependencies group with 2 updates (<a href=\"https://redirect.github.com/actions/checkout/issues/2499\">#2499</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/631c942040754b6e095e929c1677c07e10ed4f87\"><code>631c942</code></a> eslint 9 (<a href=\"https://redirect.github.com/actions/checkout/issues/2474\">#2474</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/4f1f4aec02e41874fa0262ea8ff5172d7978ad1e\"><code>4f1f4ae</code></a> Bump actions/upload-artifact from 4 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2476\">#2476</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/ba097532fb203f7e88c9c3c0b899b49469908a92\"><code>ba09753</code></a> Bump actions/checkout from 6 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2488\">#2488</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/b9e0990d219a03df7633c93f6f005a8fecbcab22\"><code>b9e0990</code></a> Bump docker/login-action from 3.3.0 to 4.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2479\">#2479</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8cb398be4a550817e382abf69e4c12c76fce1f2\"><code>e8cb398</code></a> Bump docker/build-push-action from 6.5.0 to 7.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2478\">#2478</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/checkout/compare/v6...v7\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/checkout&package-manager=github_actions&previous-version=6&new-version=7)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nYou can trigger a rebase of this PR by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>\n\n> **Note**\n> Automatic rebases have been disabled on this pull request as it has been open for over 30 days.\n",
       "closed_at": "2026-09-20T15:06:15Z",
+      "comments": [],
       "commit_shas": [
         "f730ee20c1dd7e2eb464250a49f7104f07b6e425"
       ],
@@ -124,20 +228,30 @@
       "head_sha": "f730ee20c1dd7e2eb464250a49f7104f07b6e425",
       "id": 4934037619,
       "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
       "locked": false,
       "merge_commit_sha": "92f8628e99141c5d311a6664de3a44122f897220",
       "merged": true,
       "merged_at": "2026-09-20T15:06:14Z",
       "number": 3,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/pull/3",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Bump actions/checkout from 6 to 7",
       "updated_at": "2026-09-20T15:07:17Z"
     },
     {
+      "assignees": [],
+      "author": "dependabot[bot]",
       "base_sha": "adc04feaf7109e3024f1b029f665c7d44c25735c",
+      "body": "Bumps [actions/setup-python](https://github.com/actions/setup-python) from 6 to 7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/setup-python/releases\">actions/setup-python's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.0</h2>\n<h2>What's Changed</h2>\n<h3>Enhancements</h3>\n<ul>\n<li>Migrate to ESM and upgrade dependencies by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1330\">actions/setup-python#1330</a></li>\n<li>Pin SHA commits and update docs with latest versions by <a href=\"https://github.com/HarithaVattikuti\"><code>@​HarithaVattikuti</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1338\">actions/setup-python#1338</a></li>\n<li>Remove the pip-install input by <a href=\"https://github.com/gowridurgad\"><code>@​gowridurgad</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1336\">actions/setup-python#1336</a></li>\n</ul>\n<h3>Bug Fix</h3>\n<ul>\n<li>Fix to Classify stderr warning messages as warnings instead of errors in annotations by <a href=\"https://github.com/lmvysakh\"><code>@​lmvysakh</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1335\">actions/setup-python#1335</a></li>\n<li>Validate and retry manifest fetch to prevent silent failures by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1332\">actions/setup-python#1332</a></li>\n</ul>\n<h3>Dependency Upgrade</h3>\n<ul>\n<li>Bump certifi from 2020.6.20 to 2024.7.4 in /<strong>tests</strong>/data by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1328\">actions/setup-python#1328</a></li>\n<li>Remove EOL Python versions and Bumps numpy text fixture by <a href=\"https://github.com/priya-kinthali\"><code>@​priya-kinthali</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1333\">actions/setup-python#1333</a></li>\n<li>Upgrade <code>@​actions/cache</code> to 6.2.0 by <a href=\"https://github.com/philip-gai\"><code>@​philip-gai</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1337\">actions/setup-python#1337</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/lmvysakh\"><code>@​lmvysakh</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1335\">actions/setup-python#1335</a></li>\n<li><a href=\"https://github.com/philip-gai\"><code>@​philip-gai</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1337\">actions/setup-python#1337</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/setup-python/compare/v6...v7.0.0\">https://github.com/actions/setup-python/compare/v6...v7.0.0</a></p>\n<h2>v6.3.0</h2>\n<h2>What's Changed</h2>\n<h3>Enhancement</h3>\n<ul>\n<li>Add RHEL support and include Linux distro in cache keys by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1323\">actions/setup-python#1323</a></li>\n<li>Fix pip cache error handling on Windows by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1040\">actions/setup-python#1040</a></li>\n</ul>\n<h3>Dependency update</h3>\n<ul>\n<li>Upgrade minimatch from 3.1.2 to 3.1.5 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1281\">actions/setup-python#1281</a></li>\n<li>Upgrade actions dependencies by <a href=\"https://github.com/gowridurgad\"><code>@​gowridurgad</code></a> with <a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1303\">actions/setup-python#1303</a></li>\n<li>Upgrade <code>@​actions/cache</code> to 5.1.0, log cache write denied by <a href=\"https://github.com/jasongin\"><code>@​jasongin</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1324\">actions/setup-python#1324</a></li>\n<li>Upgrade dependency versions and test workflow configuration by <a href=\"https://github.com/HarithaVattikuti\"><code>@​HarithaVattikuti</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1322\">actions/setup-python#1322</a></li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li>Update advanced-usage.md by <a href=\"https://github.com/Dunky-Z\"><code>@​Dunky-Z</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/811\">actions/setup-python#811</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/gowridurgad\"><code>@​gowridurgad</code></a> with <a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1303\">actions/setup-python#1303</a></li>\n<li><a href=\"https://github.com/jasongin\"><code>@​jasongin</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1324\">actions/setup-python#1324</a></li>\n<li><a href=\"https://github.com/Dunky-Z\"><code>@​Dunky-Z</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/811\">actions/setup-python#811</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/setup-python/compare/v6.2.0...v6.3.0\">https://github.com/actions/setup-python/compare/v6.2.0...v6.3.0</a></p>\n<h2>v6.2.0</h2>\n<h2>What's Changed</h2>\n<h3>Dependency Upgrades</h3>\n<ul>\n<li>Upgrade dependencies to Node 24 compatible versions by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1259\">actions/setup-python#1259</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/setup-python/commit/5fda3b95a4ea91299a34e894583c3862153e4b97\"><code>5fda3b9</code></a> Pin SHA commits and update docs with latest versions (<a href=\"https://redirect.github.com/actions/setup-python/issues/1338\">#1338</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/4ab7e95f05e168b4356aebde89dd84f59c283d8e\"><code>4ab7e95</code></a> Merge pull request <a href=\"https://redirect.github.com/actions/setup-python/issues/1337\">#1337</a> from actions/philip-gai/bump-actions-cache-6-2-0</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/0f3a009f475dbea83c0371cd85d099690fee8c5c\"><code>0f3a009</code></a> Remove the pip-install input (<a href=\"https://redirect.github.com/actions/setup-python/issues/1336\">#1336</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/f8cf4291c8b8e273ddd26e569454615c7315d932\"><code>f8cf429</code></a> Migrate to ESM and upgrade dependencies (<a href=\"https://redirect.github.com/actions/setup-python/issues/1330\">#1330</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/54baeea5b34417d10a7479663a23cca53ea209b5\"><code>54baeea</code></a> Validate and retry manifest fetch to prevent silent failures (<a href=\"https://redirect.github.com/actions/setup-python/issues/1332\">#1332</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/c7092773a316760f4ecfe498e4af668a4dafeac5\"><code>c709277</code></a> Annotation code fix (<a href=\"https://redirect.github.com/actions/setup-python/issues/1335\">#1335</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/6849080452e69b330395e8a6d23cf90f56d76a1a\"><code>6849080</code></a> remove EOL Python versions and Bumps numpy text fixture (<a href=\"https://redirect.github.com/actions/setup-python/issues/1333\">#1333</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/0903b469fbf4441aadfe4f4b249dc5b1fba3a73e\"><code>0903b46</code></a> Bump certifi from 2020.6.20 to 2024.7.4 in /<strong>tests</strong>/data (<a href=\"https://redirect.github.com/actions/setup-python/issues/1328\">#1328</a>)</li>\n<li>See full diff in <a href=\"https://github.com/actions/setup-python/compare/v6...v7\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/setup-python&package-manager=github_actions&previous-version=6&new-version=7)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nYou can trigger a rebase of this PR by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>\n\n> **Note**\n> Automatic rebases have been disabled on this pull request as it has been open for over 30 days.\n",
       "closed_at": "2026-09-20T15:06:14Z",
+      "comments": [],
       "commit_shas": [
         "9553e7cf028f5c13bc00cb97c08d7dc465bdc9cc"
       ],
@@ -146,20 +260,30 @@
       "head_sha": "9553e7cf028f5c13bc00cb97c08d7dc465bdc9cc",
       "id": 4934037803,
       "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
       "locked": false,
       "merge_commit_sha": "e609c103c3428ca88514f205244a2ed85a56625f",
       "merged": true,
       "merged_at": "2026-09-20T15:06:14Z",
       "number": 4,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/pull/4",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Bump actions/setup-python from 6 to 7",
       "updated_at": "2026-09-20T15:07:17Z"
     },
     {
+      "assignees": [],
+      "author": "dependabot[bot]",
       "base_sha": "adc04feaf7109e3024f1b029f665c7d44c25735c",
+      "body": "Bumps [actions/github-script](https://github.com/actions/github-script) from 8 to 9.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/github-script/releases\">actions/github-script's releases</a>.</em></p>\n<blockquote>\n<h2>v9.0.0</h2>\n<p><strong>New features:</strong></p>\n<ul>\n<li><strong><code>getOctokit</code> factory function</strong> — Available directly in the script context. Create additional authenticated Octokit clients with different tokens for multi-token workflows, GitHub App tokens, and cross-org access. See <a href=\"https://github.com/actions/github-script#creating-additional-clients-with-getoctokit\">Creating additional clients with <code>getOctokit</code></a> for details and examples.</li>\n<li><strong>Orchestration ID in user-agent</strong> — The <code>ACTIONS_ORCHESTRATION_ID</code> environment variable is automatically appended to the user-agent string for request tracing.</li>\n</ul>\n<p><strong>Breaking changes:</strong></p>\n<ul>\n<li><strong><code>require('@actions/github')</code> no longer works in scripts.</strong> The upgrade to <code>@actions/github</code> v9 (ESM-only) means <code>require('@actions/github')</code> will fail at runtime. If you previously used patterns like <code>const { getOctokit } = require('@actions/github')</code> to create secondary clients, use the new injected <code>getOctokit</code> function instead — it's available directly in the script context with no imports needed.</li>\n<li><code>getOctokit</code> is now an injected function parameter. Scripts that declare <code>const getOctokit = ...</code> or <code>let getOctokit = ...</code> will get a <code>SyntaxError</code> because JavaScript does not allow <code>const</code>/<code>let</code> redeclaration of function parameters. Use the injected <code>getOctokit</code> directly, or use <code>var getOctokit = ...</code> if you need to redeclare it.</li>\n<li>If your script accesses other <code>@actions/github</code> internals beyond the standard <code>github</code>/<code>octokit</code> client, you may need to update those references for v9 compatibility.</li>\n</ul>\n<h2>What's Changed</h2>\n<ul>\n<li>Add ACTIONS_ORCHESTRATION_ID to user-agent string by <a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> in <a href=\"https://redirect.github.com/actions/github-script/pull/695\">actions/github-script#695</a></li>\n<li>ci: use deployment: false for integration test environments by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/github-script/pull/712\">actions/github-script#712</a></li>\n<li>feat!: add getOctokit to script context, upgrade <code>@​actions/github</code> v9, <code>@​octokit/core</code> v7, and related packages by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/github-script/pull/700\">actions/github-script#700</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/github-script/pull/695\">actions/github-script#695</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/github-script/compare/v8.0.0...v9.0.0\">https://github.com/actions/github-script/compare/v8.0.0...v9.0.0</a></p>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/github-script/commit/3a2844b7e9c422d3c10d287c895573f7108da1b3\"><code>3a2844b</code></a> Merge pull request <a href=\"https://redirect.github.com/actions/github-script/issues/700\">#700</a> from actions/salmanmkc/expose-getoctokit + prepare re...</li>\n<li><a href=\"https://github.com/actions/github-script/commit/ca10bbdd1a7739de09e99a200c7a59f5d73a4079\"><code>ca10bbd</code></a> fix: use <code>@​octokit/core/</code>types import for v7 compatibility</li>\n<li><a href=\"https://github.com/actions/github-script/commit/86e48e20ac85c970ed1f96e718fd068173948b7b\"><code>86e48e2</code></a> merge: incorporate main branch changes</li>\n<li><a href=\"https://github.com/actions/github-script/commit/c1084728b5b935ec4ddc1e4cee877b01797b3ff9\"><code>c108472</code></a> chore: rebuild dist for v9 upgrade and getOctokit factory</li>\n<li><a href=\"https://github.com/actions/github-script/commit/afff112e4f8b57c718168af75b89ce00bc8d091d\"><code>afff112</code></a> Merge pull request <a href=\"https://redirect.github.com/actions/github-script/issues/712\">#712</a> from actions/salmanmkc/deployment-false + fix user-ag...</li>\n<li><a href=\"https://github.com/actions/github-script/commit/ff8117e5b78c415f814f39ad6998f424fee7b817\"><code>ff8117e</code></a> ci: fix user-agent test to handle orchestration ID</li>\n<li><a href=\"https://github.com/actions/github-script/commit/81c6b7876079abe10ff715951c9fc7b3e1ab389d\"><code>81c6b78</code></a> ci: use deployment: false to suppress deployment noise from integration tests</li>\n<li><a href=\"https://github.com/actions/github-script/commit/3953caf8858d318f37b6cc53a9f5708859b5a7b7\"><code>3953caf</code></a> docs: update README examples from <a href=\"https://github.com/v8\"><code>@​v8</code></a> to <a href=\"https://github.com/v9\"><code>@​v9</code></a>, add getOctokit docs and v9 brea...</li>\n<li><a href=\"https://github.com/actions/github-script/commit/c17d55b90dcdb3d554d0027a6c180a7adc2daf78\"><code>c17d55b</code></a> ci: add getOctokit integration test job</li>\n<li><a href=\"https://github.com/actions/github-script/commit/a047196d9a02fe92098771cafbb98c2f1814e408\"><code>a047196</code></a> test: add getOctokit integration tests via callAsyncFunction</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/github-script/compare/v8...v9\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/github-script&package-manager=github_actions&previous-version=8&new-version=9)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nYou can trigger a rebase of this PR by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>\n\n> **Note**\n> Automatic rebases have been disabled on this pull request as it has been open for over 30 days.\n",
       "closed_at": "2026-09-20T15:06:15Z",
+      "comments": [],
       "commit_shas": [
         "02adf589c1986f9b0623a79739cb68931969bb89"
       ],
@@ -168,20 +292,38 @@
       "head_sha": "02adf589c1986f9b0623a79739cb68931969bb89",
       "id": 4934038010,
       "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
       "locked": false,
       "merge_commit_sha": "f873b3a53dcd30876b7333a4b029cb0e46bc8bad",
       "merged": true,
       "merged_at": "2026-09-20T15:06:15Z",
       "number": 5,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/pull/5",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Bump actions/github-script from 8 to 9",
       "updated_at": "2026-09-20T15:07:20Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "61980382d79a7146111f1d6acb6d22d0761dc341",
+      "body": "Replace copied Discount Tire identity and source links with Scheels / BRG11 metadata. Integrate PRs 3–5 and repair the release checker so compressed responses, prereleases, and missing evidence cannot produce misleading success.\n\nThree parser tests pass. Live publisher lookup identifies Python 3.14.7 and NixOS 26.05; the existing Replit channel remains pending provider verification. CI checks pull requests without opening drift issues from unmerged code.",
       "closed_at": "2026-09-20T15:06:13Z",
+      "comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "<!-- codex-pull-request-review-summary -->\n\n## Codex Review Summary\n\nThis comment shows the latest Codex review activity on this pull request.\n\n| Review | Status | Commit | Review trigger |\n| --- | --- | --- | --- |\n| 📝 **Code Review** | ✅ **Completed** <relative-time datetime=\"2026-09-20T15:08:47.184305Z\">2026-09-20T15:08:47.184305Z</relative-time> | `51b01c5` | PR opened |\n\n\n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](https://chatgpt.com/codex/cloud/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\" or \"@codex security review\".\n\nCodex reacts with 👀 while any review is running, comments if it has suggestions, and reacts with 👍 once all reviews finish with no findings.\n\n</details>",
+          "created_at": "2026-09-20T15:05:17Z",
+          "id": 5750613394,
+          "updated_at": "2026-09-20T15:08:49Z"
+        }
+      ],
       "commit_shas": [
         "f730ee20c1dd7e2eb464250a49f7104f07b6e425",
         "9553e7cf028f5c13bc00cb97c08d7dc465bdc9cc",
@@ -197,12 +339,57 @@
       "head_sha": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
       "id": 5518601544,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "273f0c56027ab32abcc3b077749a8356e55fb6d6",
       "merged": true,
       "merged_at": "2026-09-20T15:06:13Z",
       "number": 6,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/pull/6",
+      "review_comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Classify the original version-check result**\n\nWhen the initial check exits 2 because of transient missing publisher or network evidence but this second request succeeds, these lines discard the original status; the step succeeds and line 37 then treats the original generic failure as drift and opens a misleading issue. The inverse transition from exit 1 to exit 2 suppresses a real drift issue, so capture and branch on one invocation's exit code rather than fetching the sources again.\n\nUseful? React with 👍 / 👎.",
+          "commit_id": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
+          "created_at": "2026-09-20T15:08:45Z",
+          "id": 4057257180,
+          "line": 35,
+          "original_commit_id": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
+          "original_line": 35,
+          "path": ".github/workflows/technology-drift.yml",
+          "pull_request_review_id": 5260898939,
+          "side": "RIGHT",
+          "updated_at": "2026-09-20T15:08:45Z"
+        },
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Document the newly verified test command**\n\nAdding this unittest invocation and the new test module makes the canonical guidance at AGENTS.md lines 10 and 93, plus the workflow issue text at line 47, incorrect when they say that no test suite or verified test command exists. Future maintenance work can consequently skip the available regression check, so update the repository status, validation instructions, and issue wording when introducing this command.\n\nAGENTS.md reference: [AGENTS.md:L118-L120](https://github.com/OKHP3/askjamie-brg11-scheels/blob/51b01c5e16fbb60c8b9360df8623c36a7a8d3126/AGENTS.md#L118-L120)\n\nUseful? React with 👍 / 👎.",
+          "commit_id": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
+          "created_at": "2026-09-20T15:08:45Z",
+          "id": 4057257182,
+          "line": 28,
+          "original_commit_id": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
+          "original_line": 28,
+          "path": ".github/workflows/technology-drift.yml",
+          "pull_request_review_id": 5260898939,
+          "side": "RIGHT",
+          "updated_at": "2026-09-20T15:08:45Z"
+        },
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Update the inventory table with the reviewed versions**\n\nThis note says the workflow now uses checkout 7, setup-python 7, and github-script 9, but the primary inventory row at line 23 still reports v4/v5/v7 as in place and v6/v6/v8 as latest, while the document remains dated July 20. Consumers of the technology inventory therefore receive contradictory dependency evidence; update the table and review date rather than leaving the correction only in an appendix.\n\nAGENTS.md reference: [AGENTS.md:L85-L86](https://github.com/OKHP3/askjamie-brg11-scheels/blob/51b01c5e16fbb60c8b9360df8623c36a7a8d3126/AGENTS.md#L85-L86)\n\nUseful? React with 👍 / 👎.",
+          "commit_id": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
+          "created_at": "2026-09-20T15:08:45Z",
+          "id": 4057257186,
+          "line": 49,
+          "original_commit_id": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
+          "original_line": 49,
+          "path": "docs/technology-inventory.md",
+          "pull_request_review_id": 5260898939,
+          "side": "RIGHT",
+          "updated_at": "2026-09-20T15:08:45Z"
+        }
+      ],
       "review_threads": [
         {
           "comment_ids": [
@@ -231,27 +418,49 @@
       ],
       "reviews": [
         {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "\n### 💡 Codex Review\n\nHere are some automated review suggestions for this pull request.\n\n**Reviewed commit:** `51b01c5e16`\n    \n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](https://chatgpt.com/codex/cloud/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\".\n\nIf Codex has suggestions, it will comment; otherwise it will react with 👍.\n\n\n\n\nCodex can also answer questions or update the PR. Try commenting \"@codex address that feedback\".\n            \n</details>",
           "commit_id": "51b01c5e16fbb60c8b9360df8623c36a7a8d3126",
           "id": 5260898939,
-          "state": "COMMENTED"
+          "state": "COMMENTED",
+          "submitted_at": "2026-09-20T15:08:44Z"
         }
       ],
       "state": "closed",
+      "title": "Correct Scheels metadata and maintenance evidence",
       "updated_at": "2026-09-20T15:10:18Z"
     },
     {
+      "assignees": [],
+      "author": "github-actions[bot]",
+      "body": "The scheduled technology check found that an explicitly configured platform version may be behind the latest stable release.\n\nReview the workflow log and update `.replit` only after confirming Replit support and validating the repository artifacts.\n\nThis issue is intentionally not an automatic runtime upgrade: the repository has no application build or test suite yet.",
+      "comments": [],
       "created_at": "2026-09-20T15:07:00Z",
       "id": 5518611864,
       "kind": "issue",
+      "labels": [],
       "locked": false,
       "number": 7,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/issues/7",
       "state": "open",
+      "title": "Technology drift detected",
       "updated_at": "2026-09-20T15:07:00Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "273f0c56027ab32abcc3b077749a8356e55fb6d6",
+      "body": "Classify the exit code from one publisher lookup so a retry cannot turn incomplete evidence into a false drift issue. Update the canonical test instructions and dependency table to reflect the newly verified maintenance workflow.\n\nThree parser regressions pass. Addresses all three review findings on PR #6.",
       "closed_at": "2026-09-20T15:14:18Z",
+      "comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "<!-- codex-pull-request-review-summary -->\n\n## Codex Review Summary\n\nThis comment shows the latest Codex review activity on this pull request.\n\n| Review | Status | Commit | Review trigger |\n| --- | --- | --- | --- |\n| 📝 **Code Review** | ✅ **Completed** <relative-time datetime=\"2026-09-20T15:13:52.470393Z\">2026-09-20T15:13:52.470393Z</relative-time> | `f4359db` | PR opened |\n\n\n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](https://chatgpt.com/codex/cloud/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\" or \"@codex security review\".\n\nCodex reacts with 👀 while any review is running, comments if it has suggestions, and reacts with 👍 once all reviews finish with no findings.\n\n</details>",
+          "created_at": "2026-09-20T15:12:44Z",
+          "id": 5750654068,
+          "updated_at": "2026-09-20T15:13:53Z"
+        }
+      ],
       "commit_shas": [
         "f4359db6e56d5690d0c5befa72de32fb9edf72b6"
       ],
@@ -260,18 +469,21 @@
       "head_sha": "f4359db6e56d5690d0c5befa72de32fb9edf72b6",
       "id": 5518639913,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "3f6133b579821fba932391e5433077aa7c949c64",
       "merged": true,
       "merged_at": "2026-09-20T15:14:18Z",
       "number": 8,
       "original_url": "https://github.com/OKHP3/askjamie-brg11-scheels/pull/8",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Preserve the original maintenance result and current guidance",
       "updated_at": "2026-09-20T15:32:39Z"
     }
   ],
-  "scope": "activity metadata",
+  "scope": "issues, pull requests, comments, reviews, and thread resolution",
   "source_repository": "OKHP3/askjamie-brg11-scheels"
 }

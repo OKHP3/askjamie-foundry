@@ -1,0 +1,42 @@
+name: AskJamie-GPT-BRG11
+description: Scheels — OKHP³ BrandGuard™ GPT Configuration
+version: 1.0.0
+
+# Official and reference links
+links:
+  scheels_official:
+    url: https://www.scheels.com
+    description: Scheels Official Website
+  
+  askjamie_lens:
+    url: https://askjamie.okhp3.com
+    description: AskJamie Lens Page
+  
+  chatgpt_project:
+    url: https://chatgpt.com
+    description: ChatGPT Project
+  
+  notion:
+    url: https://notion.so
+    description: Notion Documentation
+  
+  custom_gpt:
+    url: https://chat.openai.com/gpts
+    description: Custom GPT Platform
+
+# Repository structure
+structure:
+  prompts: "Prompt spine and configurations"
+  knowledge: "Knowledge base and training data"
+  eval: "Evaluation packs and testing materials"
+  web: "Web assets and frontend resources"
+  ops: "Operational configurations and deployment"
+  build: "Build artifacts and compiled resources"
+
+# Metadata
+metadata:
+  brand: "Scheels"
+  framework: "OKHP³ BrandGuard™"
+  model: GPT-BRG11
+  visibility: public
+  data_policy: "Public information only; reference scheels.com for official details"

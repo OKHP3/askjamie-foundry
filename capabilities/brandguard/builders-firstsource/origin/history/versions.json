@@ -1,0 +1,3807 @@
+{
+  "repository": "OKHP3/askjamie-brg00-builders-firstsource",
+  "source_main": "875b23fd74b9d162a246069b3a0eac8fba6106fa",
+  "witness_sets": {
+    "s1": [
+      "e94d37e82a0a8c657b22648f17ba428a46304c24"
+    ],
+    "s2": [
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d",
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9",
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1"
+    ],
+    "s3": [
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff"
+    ],
+    "s4": [
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff",
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d",
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9",
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1"
+    ],
+    "s5": [
+      "07c5197940ec0b79c295a1be4d48102bd4c97eb9",
+      "12160495ce84e4f17958ea764e96445f38bf91aa",
+      "29dba2360499b78544888a0ff955a3f64c996515",
+      "61772b13000fd1f0e6702685212c500779408c03"
+    ],
+    "s6": [
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f"
+    ],
+    "s7": [
+      "324efea6d301df884c5015a7544a933d03ca5350"
+    ],
+    "s8": [
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff"
+    ],
+    "s9": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s10": [
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s11": [
+      "07c5197940ec0b79c295a1be4d48102bd4c97eb9",
+      "4fcf2e87afde8496ef60231ee90f3430f9222816",
+      "61772b13000fd1f0e6702685212c500779408c03"
+    ],
+    "s12": [
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "9432f86760ddbaa947d84b03a1193ea505d1ad2f"
+    ],
+    "s13": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "1484746e2438bba286638de7c2386504af47221e",
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "2c147b1208200903a8de4b0bb96f1bb42be5f92b",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "3c391e1bad6c3ffc77fe62ac800b0e931896e57e",
+      "516862697695d191ea23fa79abf10d04a1799097",
+      "5446893b67a6b4710f19ec5b74e7d4ec7227e54d",
+      "5de893efb41dab48a7dd2adc662733e7af1e5b30",
+      "61772b13000fd1f0e6702685212c500779408c03",
+      "6c1686e921b71aca8381dca3bada5fdc79a52921",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "8923ea8dc034bd324e748b21a0ad3821d9ceeffe",
+      "8ad628b747a3cad0920b6e60d1c7946372486419",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "91474e624ab4b577cb7e112bdffe761aa236459b",
+      "9432f86760ddbaa947d84b03a1193ea505d1ad2f",
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "a642a7d77e8d7404e79fd1fca2361e10f5184ff6",
+      "aa15c1a5017affa87e86759ef31e4e607e73f76a",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff",
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d",
+      "c9394dfdf8ea6c80bf1ae6f33dc94069818e79d1",
+      "d7809934f6a8dc6e76710da055b73c879d619acd",
+      "e157f4059133a3d3042d26f68226ec42d3cfff99",
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9",
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1",
+      "f95a1baaf02bf0bb847082a31e45fc306c0f7b8a",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s14": [
+      "2c147b1208200903a8de4b0bb96f1bb42be5f92b",
+      "5446893b67a6b4710f19ec5b74e7d4ec7227e54d",
+      "5de893efb41dab48a7dd2adc662733e7af1e5b30",
+      "6c1686e921b71aca8381dca3bada5fdc79a52921",
+      "8ad628b747a3cad0920b6e60d1c7946372486419",
+      "91474e624ab4b577cb7e112bdffe761aa236459b",
+      "aa15c1a5017affa87e86759ef31e4e607e73f76a",
+      "c9394dfdf8ea6c80bf1ae6f33dc94069818e79d1",
+      "f95a1baaf02bf0bb847082a31e45fc306c0f7b8a"
+    ],
+    "s15": [
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc"
+    ],
+    "s16": [
+      "1484746e2438bba286638de7c2386504af47221e",
+      "516862697695d191ea23fa79abf10d04a1799097",
+      "8923ea8dc034bd324e748b21a0ad3821d9ceeffe",
+      "a642a7d77e8d7404e79fd1fca2361e10f5184ff6",
+      "d7809934f6a8dc6e76710da055b73c879d619acd"
+    ],
+    "s17": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff",
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s18": [
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0"
+    ],
+    "s19": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "3c391e1bad6c3ffc77fe62ac800b0e931896e57e",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "9432f86760ddbaa947d84b03a1193ea505d1ad2f",
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff",
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d",
+      "e157f4059133a3d3042d26f68226ec42d3cfff99",
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9",
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s20": [
+      "5de893efb41dab48a7dd2adc662733e7af1e5b30"
+    ],
+    "s21": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s22": [
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c"
+    ],
+    "s23": [
+      "1484746e2438bba286638de7c2386504af47221e",
+      "2c147b1208200903a8de4b0bb96f1bb42be5f92b",
+      "516862697695d191ea23fa79abf10d04a1799097",
+      "5446893b67a6b4710f19ec5b74e7d4ec7227e54d",
+      "5de893efb41dab48a7dd2adc662733e7af1e5b30",
+      "6c1686e921b71aca8381dca3bada5fdc79a52921",
+      "8923ea8dc034bd324e748b21a0ad3821d9ceeffe",
+      "8ad628b747a3cad0920b6e60d1c7946372486419",
+      "91474e624ab4b577cb7e112bdffe761aa236459b",
+      "a642a7d77e8d7404e79fd1fca2361e10f5184ff6",
+      "aa15c1a5017affa87e86759ef31e4e607e73f76a",
+      "c9394dfdf8ea6c80bf1ae6f33dc94069818e79d1",
+      "d7809934f6a8dc6e76710da055b73c879d619acd",
+      "f95a1baaf02bf0bb847082a31e45fc306c0f7b8a"
+    ],
+    "s24": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "1e9d4f6530d4d95ed4b70d5398f91f2788cc7c5e",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "3c391e1bad6c3ffc77fe62ac800b0e931896e57e",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "9432f86760ddbaa947d84b03a1193ea505d1ad2f",
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "a93edb61572719451e682007a5d1effa087e22ef",
+      "afcdfa1ec4589907c9b1457c17c0faa8cba02017",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff",
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d",
+      "e157f4059133a3d3042d26f68226ec42d3cfff99",
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc",
+      "e94d37e82a0a8c657b22648f17ba428a46304c24",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9",
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae",
+      "fda9426fc4b7675d97b02c05124b6e50054b6bbd"
+    ],
+    "s25": [
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff"
+    ],
+    "s26": [
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "9432f86760ddbaa947d84b03a1193ea505d1ad2f",
+      "e157f4059133a3d3042d26f68226ec42d3cfff99"
+    ],
+    "s27": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s28": [
+      "61772b13000fd1f0e6702685212c500779408c03"
+    ],
+    "s29": [
+      "0b4ab25ffdd8c72b1fd5806fc29e6ab8e354e82b",
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "1484746e2438bba286638de7c2386504af47221e",
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "2c147b1208200903a8de4b0bb96f1bb42be5f92b",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "3c391e1bad6c3ffc77fe62ac800b0e931896e57e",
+      "516862697695d191ea23fa79abf10d04a1799097",
+      "5446893b67a6b4710f19ec5b74e7d4ec7227e54d",
+      "6c1686e921b71aca8381dca3bada5fdc79a52921",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "8923ea8dc034bd324e748b21a0ad3821d9ceeffe",
+      "8ad628b747a3cad0920b6e60d1c7946372486419",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "91474e624ab4b577cb7e112bdffe761aa236459b",
+      "9432f86760ddbaa947d84b03a1193ea505d1ad2f",
+      "97eaf7eb6d5aab95bf5b601e987c642f7686ddd6",
+      "9c4e3dc73de84e8384cd640951292aee59d4df6c",
+      "a642a7d77e8d7404e79fd1fca2361e10f5184ff6",
+      "aa15c1a5017affa87e86759ef31e4e607e73f76a",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff",
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d",
+      "c9394dfdf8ea6c80bf1ae6f33dc94069818e79d1",
+      "d7809934f6a8dc6e76710da055b73c879d619acd",
+      "e157f4059133a3d3042d26f68226ec42d3cfff99",
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9",
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1",
+      "f95a1baaf02bf0bb847082a31e45fc306c0f7b8a",
+      "faf8e39de6bd74e81e841dfa34bf7e98bb54b8ae"
+    ],
+    "s30": [
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0"
+    ],
+    "s31": [
+      "1e9d4f6530d4d95ed4b70d5398f91f2788cc7c5e"
+    ],
+    "s32": [
+      "07c5197940ec0b79c295a1be4d48102bd4c97eb9",
+      "12160495ce84e4f17958ea764e96445f38bf91aa",
+      "61772b13000fd1f0e6702685212c500779408c03"
+    ],
+    "s33": [
+      "13383a082b01c0e66a0605cdc0fa863afb2aba56",
+      "3c391e1bad6c3ffc77fe62ac800b0e931896e57e",
+      "9432f86760ddbaa947d84b03a1193ea505d1ad2f",
+      "e157f4059133a3d3042d26f68226ec42d3cfff99",
+      "e32ab4bf6fc934f147c237a7bb281d40ffb09edc",
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1"
+    ],
+    "s34": [
+      "a93edb61572719451e682007a5d1effa087e22ef"
+    ],
+    "s35": [
+      "f4a72fe09cb61010f9d2676501a788e56bcca5a1"
+    ],
+    "s36": [
+      "12160495ce84e4f17958ea764e96445f38bf91aa",
+      "29dba2360499b78544888a0ff955a3f64c996515",
+      "7741bc46a208f347037f35d38ed6734f76509002",
+      "88fd315cedfb13c1009bb28623cbe3d819a87a3e"
+    ],
+    "s37": [
+      "19dc8b091bd7c58e2678ac29191de1576ba537b0",
+      "20a4b15f31635c768bc8cd2d4a5273c8bd99268a",
+      "2239b9cef5fc13f231b6a33a3a72a9f9954efab7",
+      "324efea6d301df884c5015a7544a933d03ca5350",
+      "7a46eaef986d7700ff9e8187870bd0c1e834a69e",
+      "84070f58c9d9e6dfe2166b8665ed2e1a293d0ce0",
+      "8cbf82ec6b56d6bb929979a5f723cf54451c936f",
+      "b54c4b93e842c2151e65addaa19f8484b8db71ff",
+      "e9ac6b25e8ddb7f7f2acc46d4b9ceefbb0946ea9"
+    ],
+    "s38": [
+      "942c8d1dfcf3dae125f83bdb36694f1deae82d4a",
+      "afcdfa1ec4589907c9b1457c17c0faa8cba02017"
+    ],
+    "s39": [
+      "c7f7624d4e6cc94021496f6adc35255981e43b8d"
+    ]
+  },
+  "versions": [
+    {
+      "git_blob": "0114e24f1f6482753d5efa58d1001c908c7ccc36",
+      "sha256": "858f9fac526c35c11a2ae98dc05a8e00d42246ade14586758fa62ccaf039d0c7",
+      "size": 8051,
+      "category": "repository-governance",
+      "stored_at": "objects/0114e24f1f6482753d5efa58d1001c908c7ccc36.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/thread-captures/2026-10-26-audit-project-docs-019f95e4/closeout.md",
+          "commit_set": "s1",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "038962fad16ef43d65d2e19664deff7c7edeec49",
+      "sha256": "dc569eb344e89c80cbe8cc976b049ef75faa3aa6f7fdc1b28a45ec10afa6ee44",
+      "size": 1016,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/038962fad16ef43d65d2e19664deff7c7edeec49.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-notion-capture-router/references/platform-variants.md",
+          "commit_set": "s2",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0602b781cd57f332f4bdf3e0066942d21327652c",
+      "sha256": "ba2e72363a297bbc8536f99805e4b757edcd15c5a663f2988cdf9491596ddb50",
+      "size": 2848,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0602b781cd57f332f4bdf3e0066942d21327652c.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-gemini/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "06bcec76122446986e3610c20a39c466de36f495",
+      "sha256": "87d864570220b699fac52da309d2d6efdb060647bfebc74f768128e646accf80",
+      "size": 11116,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/06bcec76122446986e3610c20a39c466de36f495.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/improve_description.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "07a5d398e38f3ee0f8e0dc798194282ba2289e45",
+      "sha256": "40979db41853f1ef8657f1dbb484ac4a1d6da96c45be86a130e088f8a3e6ff7d",
+      "size": 31,
+      "category": "capability-material",
+      "stored_at": "objects/07a5d398e38f3ee0f8e0dc798194282ba2289e45.bin",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "prompts/.gitkeep",
+          "commit_set": "s5",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "08f0a31f622468cb469e4b365bda4b04559c3487",
+      "sha256": "5512945f8d8448a4dc726935ef18759579319661a09318e404d0b0c7644fed5a",
+      "size": 296,
+      "category": "contributor-tooling",
+      "stored_at": "objects/08f0a31f622468cb469e4b365bda4b04559c3487.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/.catalog-meta.json",
+          "commit_set": "s6",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0a2c1d71fd9bfe9c417b82ad433c2e44414ff960",
+      "sha256": "61568c11a080a0dd43bbcdbe2b100f00e12504d6bed53d60837b4467680059c2",
+      "size": 6787,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0a2c1d71fd9bfe9c417b82ad433c2e44414ff960.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/grading.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/grading.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0a85d3c24ccdf746bc3012bece79f78d201dc329",
+      "sha256": "64b4b783c79d5f2cd8f6c7cc8247634d6770772c2e2837cbd5211fec897ca6e8",
+      "size": 6313,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0a85d3c24ccdf746bc3012bece79f78d201dc329.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/grading.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/grading.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0b32b410e322afaf7e05bf12a261f2d95785b6ac",
+      "sha256": "9257c36f39c724659a43ed6268f9164b89e3d0d1fb235361a8bf7653a3a748e6",
+      "size": 1521,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0b32b410e322afaf7e05bf12a261f2d95785b6ac.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-notion-capture-router/assets/trigger-eval-queries.json",
+          "commit_set": "s2",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0c6f76f1b4e2bb90d35a1479c9baa42c0e6602c3",
+      "sha256": "1f51a3a02a9c598807c2a31ce0d40e581f90dce6f37d7532dd63b7da62c7c6a9",
+      "size": 13475,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0c6f76f1b4e2bb90d35a1479c9baa42c0e6602c3.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/draft-body.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0d940d7363100b24d788ae951aa013f1075d7bba",
+      "sha256": "4209b10bf364e35e68c68f6f378304597cc8a106c053f9d5edc155ad38ce21ad",
+      "size": 1159,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0d940d7363100b24d788ae951aa013f1075d7bba.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/eval_metadata.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/eval_metadata.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0e11be2f65e36f0443db24d8fe663ca670fa034e",
+      "sha256": "2d66dca4e8c567b733729fecde790a9ee274c928191c71345eabc1c903bbb0b1",
+      "size": 1787,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-grok/references/platform-capture-patterns.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-grok/references/platform-capture-patterns.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0ed7214bd31719a373253cae9a05c4f7abb68a88",
+      "sha256": "dc1f140502f53dd904c9971b049da13460c1b1778a0ef886d33697c05ab27517",
+      "size": 2013,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-1/with_skill/grading.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-1/with_skill/grading.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0f21495224af0f6fff3819ec1ef006bc218258cd",
+      "sha256": "ef94cdce57eec50f3f772a8b84ff00966efb41a5974a2648b837d3c3a8658cdc",
+      "size": 2186,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0f21495224af0f6fff3819ec1ef006bc218258cd.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/evals/evals.json",
+          "commit_set": "s10",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "0fec4b0aba8a54feef2a50c3d77e6d4ca91b5af4",
+      "sha256": "a0ea991b4b389a5e9a4e7eff813e2e696793fb80ca576f9ccd10a94a817815a0",
+      "size": 8286,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/0fec4b0aba8a54feef2a50c3d77e6d4ca91b5af4.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-chatgpt-project-migration/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "1103cef669e66ea8ccb84eaf0130efb4b67a660f",
+      "sha256": "38cdfd7051e2057c78286065bc5fc452dcf0c4cdb0df1fd0bfe36f9f0da1dd76",
+      "size": 3260,
+      "category": "repository-governance",
+      "stored_at": "objects/1103cef669e66ea8ccb84eaf0130efb4b67a660f.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s11",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "11fca21c307746b2bb749324b266c76faa8682e9",
+      "sha256": "5ef26f514c3289ef29230299bcd4bdaecc3d086a36d470387b9a698df8920979",
+      "size": 1342,
+      "category": "repository-governance",
+      "stored_at": "objects/11fca21c307746b2bb749324b266c76faa8682e9.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "AGENTS.md",
+          "commit_set": "s12",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "14e41d6068635f4dd3fb878fd1626312395dda63",
+      "sha256": "bf68f4cac5a56c673a928c2e6d619586c5b93ea364026ab37547772cb45a663a",
+      "size": 10376,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/14e41d6068635f4dd3fb878fd1626312395dda63.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/agents/analyzer.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "159ca1a0ddbd53e4deed669cecfe40fed208e241",
+      "sha256": "708444b6747fa0b99c2b154105ddb916353b24572df1b4c7090b8bd3aa9a67c0",
+      "size": 40841,
+      "category": "capability-material",
+      "stored_at": "objects/159ca1a0ddbd53e4deed669cecfe40fed208e241.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW02_LumberTermsGradesJargonDecoder_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "16393af3cd78c95fa0d8a68b6a07dd1ee7875470",
+      "sha256": "92feb4e869672a7d56263b3d4f0af5befa5a5f595d61d97c1833e362edb20f6a",
+      "size": 2456,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/16393af3cd78c95fa0d8a68b6a07dd1ee7875470.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/transcript.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "19ddd1d08c89a8702c80569ec89a04f187c7d153",
+      "sha256": "899dd338710f05b0606e16001d6ea06a2c450b6b1f4763ba01191083a8ae0c13",
+      "size": 2930,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/19ddd1d08c89a8702c80569ec89a04f187c7d153.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-copilot-m365/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "1a983ccbc54929a03c6c6fe904614b34771fb886",
+      "sha256": "5be890b0e65902177f08f65063ad4f64b26be7518fe1210d893687a268c46891",
+      "size": 37391,
+      "category": "capability-material",
+      "stored_at": "objects/1a983ccbc54929a03c6c6fe904614b34771fb886.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW15_DeliveryLogisticsGuidelines_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "1d3e3ed2eca8bd1a7aab1b03d3748a4ba25a6f72",
+      "sha256": "3cdad988adf0db4a6558ce0c223797c80ca716cd684809ba81f3cf2246dbbca9",
+      "size": 16436,
+      "category": "contributor-tooling",
+      "stored_at": "objects/1d3e3ed2eca8bd1a7aab1b03d3748a4ba25a6f72.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/draft-body.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "1db611565afb485f75f0d160c86e41a7f8af0472",
+      "sha256": "038de9ce1fc55eef9147d8a77c89229d0dc43920e679f4f68c64301f4bf54886",
+      "size": 17146,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/1db611565afb485f75f0d160c86e41a7f8af0472.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/outputs/standalone-ai-thread-extraction-provenance-rehydration.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "1e7c6c72e873b10cf2e05a9990941ad50a498be9",
+      "sha256": "e80adc0878f3eba225ee29986d476a232541c0952b09a95a45c6a00653d265cd",
+      "size": 288,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-perplexity/agents/openai.yaml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-perplexity/agents/openai.yaml",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "1fc7cb2ec9d26dfc814947108d563d5e03b40bcd",
+      "sha256": "842796c749764704197ae8998777514779c78c6aa76960f4205b0471106bf74d",
+      "size": 915,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-mistral-vibe/evals/benchmark.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-mistral-vibe/evals/benchmark.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "20bf8a67e7c804b6443cb68a764c8f2ff991bcac",
+      "sha256": "69b79db91d4ca3a761d3a3450ea56b0133a794518cfaf762eb0d714126bab862",
+      "size": 1260,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-1/without_skill/outputs/response.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-1/without_skill/outputs/response.md",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "218f3928db81cfcebdf6c5d2248bae51e708d363",
+      "sha256": "6a8609a7d583054a2c699dc3a292cab49b0ed9cf9d86d33f0238d1eaf277c9be",
+      "size": 943,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-copilot-m365/evals/benchmark.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-copilot-m365/evals/benchmark.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "232d8c7045a56074eae6d59d5da3e589dac4bdb5",
+      "sha256": "dc5142c0b11ce328386008de025f848402afd827ff9b7c1749a58b2c11b72262",
+      "size": 7283,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/232d8c7045a56074eae6d59d5da3e589dac4bdb5.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/draft-body.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/draft-body.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "2719d4ef0a7b533d03fe814b720efddedea32628",
+      "sha256": "e24395484317a591fc2b426850dfcc2778b8383b1c0f2396a064288bd66a93dd",
+      "size": 1954,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/2719d4ef0a7b533d03fe814b720efddedea32628.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-chatgpt/evals/trigger-evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "29f4854167139133100eedca0de26fedee80096a",
+      "sha256": "e25f0e97e165540611217c947b6d5f7c21e8812706d69794830cc08305a08975",
+      "size": 10240,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/29f4854167139133100eedca0de26fedee80096a.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-copilot-m365/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "2a016708ed095359851f048da9da744edacb9874",
+      "sha256": "24e57d866a04490daf1120c2bd3d082a747638272cf48b2ff9c5171aae0f47a2",
+      "size": 3327,
+      "category": "repository-governance",
+      "stored_at": "objects/2a016708ed095359851f048da9da744edacb9874.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s14",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "30a263d674ef19de11c756d6f7537f91a421909e",
+      "sha256": "7bd6f674203168520517eec94c55f493c0d154339b061b4d7c0f0dad187d0f21",
+      "size": 13605,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/30a263d674ef19de11c756d6f7537f91a421909e.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/run_loop.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "30e3fdc9604918eaa6c6dc22bb53dbb33e230267",
+      "sha256": "a97571998da0991cc213cda08a225529ff16374d83ebcfe04d3ca527ec4447e5",
+      "size": 40616,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/30e3fdc9604918eaa6c6dc22bb53dbb33e230267.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/scripts/gen-skills-readme.py",
+          "commit_set": "s10",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "31b4183f951e352777c2111d242a3efddd1c9792",
+      "sha256": "e3457d8818e61add55d9aecb63fadf7446b156adb592f52e11b92d4576f4a52c",
+      "size": 14912,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/31b4183f951e352777c2111d242a3efddd1c9792.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "322c6e60e3d906b0a85067c04aef4b72cfe4bfab",
+      "sha256": "c8e11907e442b93fa00a7b1bde1a3c9898feb9e132901c6b0d369f95c7a6a678",
+      "size": 2464,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-1/with_skill/outputs/response.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-1/with_skill/outputs/response.md",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "35dbaa058938763b17d7c179b9d1b63cdd131db0",
+      "sha256": "f794225c9d9fe4f84dfcd5b828424567a900412bbb6f5437e9100c7179b9fb13",
+      "size": 9957,
+      "category": "repository-governance",
+      "stored_at": "objects/35dbaa058938763b17d7c179b9d1b63cdd131db0.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "AGENTS.md",
+          "commit_set": "s15",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "371e1b518fe7312cff477ff240877302c417c3c9",
+      "sha256": "1a9de394887a1524e4583cfd82b7aec027634198dac45ea3354df1101f946031",
+      "size": 917,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-gemini/evals/benchmark.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-gemini/evals/benchmark.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "39eca3dfbf5f078d5617a381b409a1ddc345116e",
+      "sha256": "1526907b98a7e5d8e3b3bdec283b643e83cc82974e34cbf8dd1b7f829affbee6",
+      "size": 2232,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/39eca3dfbf5f078d5617a381b409a1ddc345116e.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/transcript.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "3ba48dab631739ef6d393e4091cb8177afec8e2a",
+      "sha256": "d94990765feb238893d5511471406513249f7811473ee179a7818521f370492c",
+      "size": 3927,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/3ba48dab631739ef6d393e4091cb8177afec8e2a.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/benchmarks/2026-07-21-hardening/benchmark.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/benchmarks/2026-07-21-hardening/benchmark.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "3ca5cc4878257d56ebdb20eb763b04641f802e74",
+      "sha256": "72d856bf72f4ac0e84b3f211beca97b64594f433e17cc607d011afcc148f658f",
+      "size": 2212,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-2/without_skill/outputs/response.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-2/without_skill/outputs/response.md",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "3e66e8c105be9bab9f0e9c61f0d1482619401580",
+      "sha256": "123ef128ea5ccc01a4b1ac212ef5567f21e9c13d3d240609780beeb3200c49aa",
+      "size": 14386,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/3e66e8c105be9bab9f0e9c61f0d1482619401580.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/aggregate_benchmark.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "40027b4777302bc3db18222c56828c87a9a57704",
+      "sha256": "bca6705f3adced2b14c55cbbc9af8b959b6959f1018b8a7666e78f76efc57861",
+      "size": 10313,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/40027b4777302bc3db18222c56828c87a9a57704.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-mistral-vibe/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "4183eb057166c2bd0392e5f794a48b3c127faa7c",
+      "sha256": "3c9ac640604d07469c59ddb7d7c26624ad79713d8b867774372e46bbcf1de2b5",
+      "size": 979,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/4183eb057166c2bd0392e5f794a48b3c127faa7c.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/eval_metadata.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/eval_metadata.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "427dd37ff8b9b9b7089106fd9eb97f89839b9eb1",
+      "sha256": "17331c5d79a48f83f966a6c4ec2ef5d448efa31033e9e509bf6fbd29452134ac",
+      "size": 2859,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/427dd37ff8b9b9b7089106fd9eb97f89839b9eb1.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-notion-capture-router/references/output-contract.md",
+          "commit_set": "s2",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "42c419404ff760f14800c50e49e0159dd3c0792d",
+      "sha256": "3da7e4f3a406eac44335bee64c2b5814d287ecbf34d1d3cd15a78cbf2e24daa9",
+      "size": 9191,
+      "category": "repository-governance",
+      "stored_at": "objects/42c419404ff760f14800c50e49e0159dd3c0792d.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s16",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "4438e4f9029f6c6e2e8a7600624d05c427128fdc",
+      "sha256": "22f0df817046c2db537c12678218d18192a8a64049c8f15ab1ae984f8c423b15",
+      "size": 1598,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/4438e4f9029f6c6e2e8a7600624d05c427128fdc.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/README.md",
+          "commit_set": "s6",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "44ce08ec74fabc7770e26da5f9a1ad9414381661",
+      "sha256": "865221bb1df7360f9318912eb61257c98dc327335d0b5d5e4ade597c45760bce",
+      "size": 34,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-1/with_skill/outputs/metrics.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-1/with_skill/outputs/metrics.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "450b5d3553bc32e5c7d191bd5dd169b1d92200b8",
+      "sha256": "157371f29e1931d4e4c3b131e13ba9eda9bffa24ad70e30e6662d7b555499040",
+      "size": 13431,
+      "category": "contributor-tooling",
+      "stored_at": "../../../origin/history/objects/450b5d3553bc32e5c7d191bd5dd169b1d92200b8.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/draft-body.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "4f881c52d1f72f4cfb720e339e2d35c3058d01a9",
+      "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "size": 11345,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/4f881c52d1f72f4cfb720e339e2d35c3058d01a9.txt",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/license.txt",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "4fb19c0532d3b73ab3fad663f0323a46cda15c27",
+      "sha256": "afe5adb1b2ebb765ca3b0a4335cbc3a892367274389d0c4cef61f24e1c4c6dcc",
+      "size": 10371,
+      "category": "repository-governance",
+      "stored_at": "objects/4fb19c0532d3b73ab3fad663f0323a46cda15c27.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "AGENTS.md",
+          "commit_set": "s17",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "4fc1ceea553e86147d892522e64a76b9e498d256",
+      "sha256": "a49b71cde1de089841b35d8c3ff19ba1e0ea30445c69a834370bc8da53fdd768",
+      "size": 31476,
+      "category": "capability-material",
+      "stored_at": "objects/4fc1ceea553e86147d892522e64a76b9e498d256.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW12_LimitationsConstraintsWhatBFSDoesntDo_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "51b6a07dd57174197a937034b7eecebd5768ff8a",
+      "sha256": "3af8ae62c40c73ab712207436a0d9a981e845f25c5a7040229eb189cc8e45bb1",
+      "size": 1661,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/51b6a07dd57174197a937034b7eecebd5768ff8a.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/utils.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "52ca62e0b852b9a1d8fd1a5a833cebd38e325504",
+      "sha256": "f9e5bbf467492461e24eb77d870eb780ea865857919775a678182007860d9dfd",
+      "size": 17114,
+      "category": "contributor-tooling",
+      "stored_at": "objects/52ca62e0b852b9a1d8fd1a5a833cebd38e325504.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/outputs/provenance-rehydration.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "52f31a2de25df46b1fe7412a5fc0a2f77bb1bfb9",
+      "sha256": "197385b453de30b724d83342a4bde63c4045d91204b3081cb7897dea576bba25",
+      "size": 20998,
+      "category": "generated-packaging",
+      "stored_at": "objects/52f31a2de25df46b1fe7412a5fc0a2f77bb1bfb9.zip",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/.old-skills/okhp3-skill-cataloger-pre-deployment-head.zip",
+          "commit_set": "s18",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "537e7c1cb011493d1f866df9bc8d82c882a4e3c2",
+      "sha256": "7d1b4a3eec91ca714c3f293fbfc2cc4c805a121e9a2aebe129baa7c9c12ef981",
+      "size": 1384,
+      "category": "repository-governance",
+      "stored_at": "objects/537e7c1cb011493d1f866df9bc8d82c882a4e3c2.yaml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "gpt_manifest.yaml",
+          "commit_set": "s19",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "54e4b4b0d205a6e9e32d8f1768c38723904d5778",
+      "sha256": "341863377e7a4d22eec1d3712c1f1c153ff3d437f46331d4e265db280dca6529",
+      "size": 6729,
+      "category": "capability-material",
+      "stored_at": "objects/54e4b4b0d205a6e9e32d8f1768c38723904d5778.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "prompts/## Builders FirstSource GPT — Core.md",
+          "commit_set": "s20",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "551710f1a239072550d441f468ab1fa5a218a8c3",
+      "sha256": "d76fc4f0e28617fcc9269b0a2948026c564ceaa18b99adf6ad873d7802e86638",
+      "size": 3112,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-2/with_skill/outputs/response.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-2/with_skill/outputs/response.md",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "557bf9cab704b43d56d5268b24ed1385ca1f4aa6",
+      "sha256": "6fcd30bf3abcb0165b7842f61981f5679e346e06146a5d647de5314690732259",
+      "size": 2482,
+      "category": "contributor-tooling",
+      "stored_at": "../../../costco/origin/repository/.agents/skills/README.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/README.md",
+          "commit_set": "s21",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "558ab05c0a9a8bb062ef4c51823d4d76c3acf7c4",
+      "sha256": "57134da0c1a4eea33fbd74a1c9c44aa814f07d6bc64de303edb586f941e5d21a",
+      "size": 9049,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/558ab05c0a9a8bb062ef4c51823d4d76c3acf7c4.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/agents/grader.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "55a3a7843ace552fe84b3fa3849ab27c6fa61ebf",
+      "sha256": "36f79de98b262215c131231b72ca1df11196a990b8a18b39b6d32b9cd1d1dabb",
+      "size": 1385,
+      "category": "repository-governance",
+      "stored_at": "objects/55a3a7843ace552fe84b3fa3849ab27c6fa61ebf.yml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".github/workflows/technology-version-audit.yml",
+          "commit_set": "s22",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "58de77480daa6158da174677980b748cbd3a1533",
+      "sha256": "34bfa25f999d3934249176f2fba6d8ffd75ca29d78db1e0d59bda801ddbcbe0f",
+      "size": 7734,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/58de77480daa6158da174677980b748cbd3a1533.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/SKILL.md",
+          "commit_set": "s10",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "59785b892fa02da2c613b5065c7d5dd12733bd91",
+      "sha256": "798bd92e3a4b74ced311ba8fb4c0ee215ffcc8322540b1527661d4fd1a9eba26",
+      "size": 14032,
+      "category": "contributor-tooling",
+      "stored_at": "../../../origin/history/objects/59785b892fa02da2c613b5065c7d5dd12733bd91.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/outputs/missing-asset-controls.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "5a1ecbc99cccdd36e910bad23a674d4d952f3d7e",
+      "sha256": "684ae8ba25c2fc779d00cb840ac5b0d022be0efe9cef448bfbf57e3d7b04ac40",
+      "size": 2324,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-2/without_skill/grading.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-2/without_skill/grading.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "5b1fe2479efba408b37fe4f95473250950377f11",
+      "sha256": "5e492e5437c3d914c5de28292f6ad8ce41acfd5c2c6229eac3cf73cc578310a0",
+      "size": 7540,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/5b1fe2479efba408b37fe4f95473250950377f11.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/grading.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/grading.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "5b6b738ed30384521ffc3e01c86fcbe6c08858c6",
+      "sha256": "a042b88694fa8d5dad7f83ffdb1057c0da894d35b6fbf12b2bf56c7d8e365eb7",
+      "size": 1796,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/5b6b738ed30384521ffc3e01c86fcbe6c08858c6.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-perplexity/evals/trigger-evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "5bbe225459ed56558c1b1ad46b5adc4cf7524771",
+      "sha256": "147e689c922e8ca42b416bfa8e40a9faa975dc3dc2de3ae09dc1758347f9e060",
+      "size": 1842,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/5bbe225459ed56558c1b1ad46b5adc4cf7524771.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-copilot-m365/evals/trigger-evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "5c17369f9f7853c5d697cc7d347c9cffcc119df4",
+      "sha256": "2a1a2ed60a82f64395468d5fdec1a98e4afb673b4a4f8c4a85d043e8c5fe8481",
+      "size": 37929,
+      "category": "capability-material",
+      "stored_at": "objects/5c17369f9f7853c5d697cc7d347c9cffcc119df4.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW03_DimensionalLumberSizesConversionsRulesofThumb_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "5d5d96fcfd96dcedd6fc57a5320f9442b798690e",
+      "sha256": "fdb5ec9cba3cb9dc62b175cbf2093498f355e8f8b95c8f14cd1a03cd9fdd66c8",
+      "size": 6319,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/5d5d96fcfd96dcedd6fc57a5320f9442b798690e.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/grading.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/grading.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "5fc6007908de0b0a35e06d6c487d7e6df0bbdc2a",
+      "sha256": "81a004c5b3ab9ab1cde491f849bb3b24a2fa5126c1fd8115f3f9ebeceed360c3",
+      "size": 1230,
+      "category": "contributor-tooling",
+      "stored_at": "objects/5fc6007908de0b0a35e06d6c487d7e6df0bbdc2a.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/transcript.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "60344fd24de0dc7ae4a01cc6c456809efb17220f",
+      "sha256": "32506b7b1a6dac483d98b54552d33bc108d1e80d9fe8d087f01312df2d6f7edd",
+      "size": 38066,
+      "category": "capability-material",
+      "stored_at": "objects/60344fd24de0dc7ae4a01cc6c456809efb17220f.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW10_HistoryAcquisitionsLegacyBrands_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "61a3d38473f7076a33097b3a4d01e839315c3dce",
+      "sha256": "7ce93d9cc8eb469fc77c72fd2901537f9365a880955487fee238b26e8b1b7b51",
+      "size": 1036,
+      "category": "repository-governance",
+      "stored_at": "objects/61a3d38473f7076a33097b3a4d01e839315c3dce.yaml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "gpt_manifest.yaml",
+          "commit_set": "s23",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "61b64181035563a70456ed96960706dffb6e50a4",
+      "sha256": "245d53967d2dc8b5465d6e34d40ff4d8d52fb5e65d584dff71b898aaa6bef0c6",
+      "size": 10747,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/61b64181035563a70456ed96960706dffb6e50a4.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/outputs/standalone-cross-platform-thread-extraction-skill-continuity.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/outputs/skill-continuity.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "61c52b3423d822432b5f1e208b1c33185217f70b",
+      "sha256": "052882f8961d2488f5c9c8b5917875d1dd14c7cf68025eadb3da77fb0d59f124",
+      "size": 1276,
+      "category": "capability-material",
+      "stored_at": "objects/61c52b3423d822432b5f1e208b1c33185217f70b.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "ledger/file-19-market-ecosystem-ledger.md",
+          "commit_set": "s24",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "644e30f9883488a76da0ba9c4ea9cc61e8078f95",
+      "sha256": "984baf1de240ebd0537d9453bbde7b053fcb8a7db35fc2f78af454cd8e7c799f",
+      "size": 1353,
+      "category": "contributor-tooling",
+      "stored_at": "objects/644e30f9883488a76da0ba9c4ea9cc61e8078f95.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction/evals/benchmark.md",
+          "commit_set": "s25",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "65b3a402dbd09b8e83f9d637c6b553875189085c",
+      "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+      "size": 33168,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/65b3a402dbd09b8e83f9d637c6b553875189085c.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/SKILL.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "66d258848dd14f90c9d8abb3eb48d3ce5ee2dc7b",
+      "sha256": "2e4b55cae0d3857ae3faa25a5bf12b0a6ad33443a9eabb9d0047d1ca1a04710e",
+      "size": 1409,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/66d258848dd14f90c9d8abb3eb48d3ce5ee2dc7b.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/transcript.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/transcript.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "681ed294b820e7ccd1d8913aeeb0e15fd66eb36e",
+      "sha256": "a971eddf87f4385f127ef4961e9ccfbec6885f4d81f34858b6703c23862e7edb",
+      "size": 2162,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-2/with_skill/grading.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-2/with_skill/grading.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "695f4588c7232330f398cff93b936dd2250d3b38",
+      "sha256": "3fb5c2be1240837d00a6420bb40a0144eceaa951cdf807eb5eb79b5a0d6d08cd",
+      "size": 15531,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/695f4588c7232330f398cff93b936dd2250d3b38.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/draft-body.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/draft-body.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "6d4d783ea31eb609a537afeeaff8f2d51fad751f",
+      "sha256": "271827799a5bd56df0b395079d95d3076cac5ca5493b57bf22447a3556222e60",
+      "size": 10219,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/6d4d783ea31eb609a537afeeaff8f2d51fad751f.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-perplexity/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "6d685725425213761ab6d86128c5266751c02ef3",
+      "sha256": "f31796bdcd3ff892892d44d595daeabd41d3165500ef85d838c52a95d2dc2a41",
+      "size": 1367,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/6d685725425213761ab6d86128c5266751c02ef3.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction/evals/benchmark.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "71e9fdfc901fa184c4d8a4b7ede2dae68b78a92e",
+      "sha256": "6243e0b6cea68f764d5d611aa0ba78fb9fd0a6b75b5e2a60e5aa060e351f5bed",
+      "size": 3470,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/71e9fdfc901fa184c4d8a4b7ede2dae68b78a92e.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/references/MODES.md",
+          "commit_set": "s10",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "7354adce8d79b4695e43f8e6e58ded45b8eb16df",
+      "sha256": "5480ce4cddf3fa5dd37f7b664750f1460fdc5ce50630d80c35f18ac169d6b647",
+      "size": 2001,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-gemini/references/platform-capture-patterns.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-gemini/references/platform-capture-patterns.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "7607d7954175c903af06efab588a15f8277d5773",
+      "sha256": "6addcf5aba23afcf69ddc9c099aa630f3e9075ac2ed721e31359d3fa7f8857e4",
+      "size": 5660,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/7607d7954175c903af06efab588a15f8277d5773.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-custom-gpt-skill-conversion-planner/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "76f82a93aa6d0b35bb634d9e307fa9ebbc23234b",
+      "sha256": "21d1e8d23c524cbe16343c26307cecd06c004492780a961ee8f05fac81406bd3",
+      "size": 2974,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/76f82a93aa6d0b35bb634d9e307fa9ebbc23234b.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-claude/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "777c2534250d2a21341c1c20d3169e3602a30523",
+      "sha256": "e6ff08afe8d89c3e671ef07afccb88608376d79ff9124f1da74742ffdccf2897",
+      "size": 2091,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-3/with_skill/grading.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-3/with_skill/grading.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "787f1388372fd6f93170c76a4d77e078382552c1",
+      "sha256": "d4c033d26365678862d84ae3cf33263ce0618134c5da390772b4f4b490210c11",
+      "size": 2608,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/787f1388372fd6f93170c76a4d77e078382552c1.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/grading.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/grading.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "79547758d70efad5e5cd0b203296d1cadf693b02",
+      "sha256": "2189a89e04717cb4fd671bbfd617c4ae5dab3c0d5a6b4a777781b418418e99c0",
+      "size": 3014,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/79547758d70efad5e5cd0b203296d1cadf693b02.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-perplexity/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "7ceeacf0d9babd4d5d0a86f8d58709700e68d2cf",
+      "sha256": "a0ae310b55c0f637e3db514f53c17db2a9c968d6c2595e3aaff7b78bcf9447eb",
+      "size": 907,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-grok/evals/benchmark.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-grok/evals/benchmark.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "7e6665e15ffe69feaf6877c88ea8ce89989c45df",
+      "sha256": "71ba33c8f38110eec50270dea72f55adf8d081d084bfa66bd71493082a9f9512",
+      "size": 7917,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/7e6665e15ffe69feaf6877c88ea8ce89989c45df.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/outputs/rapid-continuity-handoff-thread-extraction-skill-validation.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-2/eval-2-scan-rapid/with_skill/outputs/continuity-handoff-validation.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "7e90069af6cbf6beb377d010a7c9c2211d4e17eb",
+      "sha256": "79a994cb1e8cfd8d2d9e4046c641aefb28e44062a7349bd8645782d3b769f2cd",
+      "size": 16349,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/7e90069af6cbf6beb377d010a7c9c2211d4e17eb.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-claude/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "7fa5978631fed1ed545591dbb2b0eb21ce3f3d08",
+      "sha256": "fc9d1b9243fe5ab6012ebd579bd76d0035de1b79fd3b969de114defab26478fb",
+      "size": 16365,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/7fa5978631fed1ed545591dbb2b0eb21ce3f3d08.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/eval-viewer/generate_review.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "7fdc49d0205ed7d096f70545c92c9343d38cab9d",
+      "sha256": "92bc01fe3e0304be3e51d81dc4793b2e929b69ed856fc1c7ae31408451f462a8",
+      "size": 850,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/7fdc49d0205ed7d096f70545c92c9343d38cab9d.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-2/eval-2-scan-rapid/eval_metadata.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-2/eval-2-scan-rapid/eval_metadata.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "80e00eb45db3ee53a132fc2ba97fd59a7339e563",
+      "sha256": "fe1fc9787c495d864c5d6eada47396478572325fde1b33a96d78bf4b849b7a3e",
+      "size": 7287,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/80e00eb45db3ee53a132fc2ba97fd59a7339e563.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/agents/comparator.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8158a55ee242aaae4394022f2b6c7ebd32e00705",
+      "sha256": "c8c475c6b7e70734ca0c384b93f29e1e8be70cde4b23741eb1b8834b56a67ef7",
+      "size": 2432,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-3/without_skill/grading.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-3/without_skill/grading.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8284e58b28bd2aa44d9741edd1b58c5c1e550a39",
+      "sha256": "1f192f4d1823023c08931bc94c6109746834c802146fee4c092f7d1b3d3d4972",
+      "size": 911,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-perplexity/evals/benchmark.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-perplexity/evals/benchmark.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "84dde9fabe26aa4ad2cee37205c2b313115b9fe1",
+      "sha256": "6cfa6d2e970fc5759eefca579480a6e1563c7abb16a52839e37dccbfad171d4b",
+      "size": 9792,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/84dde9fabe26aa4ad2cee37205c2b313115b9fe1.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-grok/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "85add6703f47cf7a28cb64187ee1aa87cb4783f6",
+      "sha256": "3b7f56306317585ed990df89f1307e3e33ef51242882146c7073f3be78a8e236",
+      "size": 1727,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/85add6703f47cf7a28cb64187ee1aa87cb4783f6.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-grok/evals/trigger-evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "86b34fb4ce23b54d3d3331e5b736141f5a9ae686",
+      "sha256": "fa31387ee6ee17bc126558afff1e40143ad522deffb7123d430ab1f99af74acf",
+      "size": 297,
+      "category": "contributor-tooling",
+      "stored_at": "objects/86b34fb4ce23b54d3d3331e5b736141f5a9ae686.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/.catalog-meta.json",
+          "commit_set": "s21",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8708189eba83b35eb1df26ebe72d5aa7bb66d7c1",
+      "sha256": "30e6fec2b5f34f3bb460c3e471331e04c5d1c9f1965c55415f233c59c9808e11",
+      "size": 34,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-1/without_skill/outputs/metrics.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-1/without_skill/outputs/metrics.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "87daf217879509300ec2245399893f9c53a5fb11",
+      "sha256": "ab423bc9ab2d926ac5249601df85d799c376ce25bb0646d1ae11dedd3fa9bf40",
+      "size": 275,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-grok/agents/openai.yaml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-grok/agents/openai.yaml",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8a307508fb9bc95e7d850cb3827cd23cefbe3eca",
+      "sha256": "8febd04bf98184d7ab6735f728bc5f2e2c33ce88107b193d4025a57d61c81b16",
+      "size": 1260,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/8a307508fb9bc95e7d850cb3827cd23cefbe3eca.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/transcript.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8a6bab6619b1cbb5810db537f57efedc3b84d2e8",
+      "sha256": "c5a5311be3e70755ea13b351f28e764fd313f639f12ac34fdb975ec93b0a6723",
+      "size": 5203,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/8a6bab6619b1cbb5810db537f57efedc3b84d2e8.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-custom-gpt-readiness/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8bea8674b0e396c1d166361940bfa320cbc4e2b2",
+      "sha256": "a7a1bd21650a213f5845ad85e30b2cee4b97e489c22a45bd635cdb60f6aadc95",
+      "size": 35,
+      "category": "capability-material",
+      "stored_at": "objects/8bea8674b0e396c1d166361940bfa320cbc4e2b2.bin",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "eval/.gitkeep",
+          "commit_set": "s5",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8c26c073f8ffb0ad0033814a2ff4e59492e441a9",
+      "sha256": "07a2aa3eebda5c783296455a2aeb0469e279c8ef2ae8c7a08013d62bbb464c32",
+      "size": 1343,
+      "category": "repository-governance",
+      "stored_at": "objects/8c26c073f8ffb0ad0033814a2ff4e59492e441a9.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "CLAUDE.md",
+          "commit_set": "s26",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8c871ffa55950ba6c3642aabdd8ae8bcd4cba264",
+      "sha256": "783317ef851ffbcb12a5f1a312ce97c0b0cee02263e942b3b81ec1655f002227",
+      "size": 45971,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/8c871ffa55950ba6c3642aabdd8ae8bcd4cba264.html",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/eval-viewer/viewer.html",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8d1fe252d996c89bdb30205f96f2aecbb4518c77",
+      "sha256": "ccd6afd75ae3b7ca646f5137f1b4f8ca8d68a1be55bac7ddd7f8a931bd7cf63e",
+      "size": 7761,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/8d1fe252d996c89bdb30205f96f2aecbb4518c77.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/references/MODES.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "8e7f9e7e2a5c98d91ffe78c219440ced8a905bed",
+      "sha256": "e428fe5da90301524110a3a48de7c2e246ecb070971fd2cd4a3d9148d49c91e3",
+      "size": 6625,
+      "category": "capability-material",
+      "stored_at": "objects/8e7f9e7e2a5c98d91ffe78c219440ced8a905bed.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "builders-firstsource-gpt-core.md",
+          "commit_set": "s27",
+          "mode": "100644"
+        },
+        {
+          "path": "prompts/## Builders FirstSource GPT — Core.md",
+          "commit_set": "s28",
+          "mode": "100644"
+        },
+        {
+          "path": "prompts/##-builders-firstsource-gpt-—-core.md",
+          "commit_set": "s29",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "91496cb2b0f0b03f2f2beae6043becb1d4068266",
+      "sha256": "049c7dfa16f25034296a81966219a5a5ba261a42c236de425f9acd110b6f63cc",
+      "size": 34318,
+      "category": "capability-material",
+      "stored_at": "objects/91496cb2b0f0b03f2f2beae6043becb1d4068266.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW09_GeographicPresenceCoverage_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "91f86a9826c0aac9a04edbb3bd41da9f1a1363e4",
+      "sha256": "1ad5b5acf47acf5132a4ba70079046897e182979f3649ac5fadb73f0d8d22985",
+      "size": 30,
+      "category": "repository-governance",
+      "stored_at": "objects/91f86a9826c0aac9a04edbb3bd41da9f1a1363e4.bin",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "build/.gitkeep",
+          "commit_set": "s5",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "938ff32aed9bffabf723bd5492d720f4736c8e4d",
+      "sha256": "ce477dcc74dc1c0d1d3352646a79167b5a63634e936b1019160025065974e452",
+      "size": 7058,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/938ff32aed9bffabf723bd5492d720f4736c8e4d.html",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/assets/eval_review.html",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "959e30a0014ec165c41a2bb7420b7dfe1416bbac",
+      "sha256": "13df7118a3c50c83c4c3250a606d5f2b20b25a3d44cbc392b3d669ec75281453",
+      "size": 12847,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/959e30a0014ec165c41a2bb7420b7dfe1416bbac.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/generate_report.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "95b9ae03efc88be767dadab75dee9ce32f2f0fd2",
+      "sha256": "9624dad97034c3a81934811c7bab32de7ec8b39c2720612753a3f486931bc96f",
+      "size": 2130,
+      "category": "contributor-tooling",
+      "stored_at": "objects/95b9ae03efc88be767dadab75dee9ce32f2f0fd2.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/transcript.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "96e5491152b4bc2e246eab501290ddbe6c23983c",
+      "sha256": "3c79991db947fe4afc229e89e84af732e8a662759b3093c3c73c4cc8e06e917b",
+      "size": 3803648,
+      "category": "capability-material",
+      "stored_at": "objects/96e5491152b4bc2e246eab501290ddbe6c23983c.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW04_MSFMBFBoardFootVolumeCalculationGuide_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "97b33dcc85834ad8d3b380ebf86691d949bf7fdd",
+      "sha256": "178bc92a404ff37805e609b114b2590db52c9545b542e1a2b4fe379b9e74b30b",
+      "size": 31,
+      "category": "capability-material",
+      "stored_at": "objects/97b33dcc85834ad8d3b380ebf86691d949bf7fdd.bin",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "src/corpus/.gitkeep",
+          "commit_set": "s5",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "97d1bfc408cdc329f19957647b853696e41135d5",
+      "sha256": "2eab7401cfc507f8cbfb3ac1f7ca82cd0d1af50ec407189368d2a81f3265fca2",
+      "size": 292,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-copilot-m365/agents/openai.yaml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-copilot-m365/agents/openai.yaml",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "999153e514c7d5192bc15ac0c117672fdfd7d6a4",
+      "sha256": "b9caeda42faabe08aa08d4ce19e138c07b8a9ed048d087f5077d9e2b28b5317d",
+      "size": 909,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/999153e514c7d5192bc15ac0c117672fdfd7d6a4.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/eval_metadata.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/eval_metadata.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "99c7fab001311790ee768106bf7ad446c1a76b14",
+      "sha256": "9b9cd899a0dfc5a4cec889a92c4d87be96bbcfc79670a74d1eb6aeef72953fb7",
+      "size": 11309,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/99c7fab001311790ee768106bf7ad446c1a76b14.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/draft-body.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/draft-body.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "9ea9c8df367b66aea14e62e72d7d2e435a0875ab",
+      "sha256": "8b1ed492bb1b94e24bbd89ab27a448621630b28eca18890e886141147b19e90d",
+      "size": 1118,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/9ea9c8df367b66aea14e62e72d7d2e435a0875ab.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/find-skills/SKILL.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "9f10294dfef820cb61ae7a68893615e1a52c3585",
+      "sha256": "4ea3d95c1fa802c76e0eac1d794e9cfe9cd661c049a97146d87363b462d7ca98",
+      "size": 1711,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/9f10294dfef820cb61ae7a68893615e1a52c3585.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-mistral-vibe/evals/trigger-evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "a35d4265bff8556f28d4ffab11186c63149211b2",
+      "sha256": "b4b2ed6bc1fe5c8b67269985c7bed14e6e0c566a69346b54d478bafc25ec7227",
+      "size": 4394,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/a35d4265bff8556f28d4ffab11186c63149211b2.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/README.md",
+          "commit_set": "s30",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "a6f27e5d949872748f49c2abfd6a17d2278c1910",
+      "sha256": "43d8f154fb8c918f057d9de1787be1687a14e10f73ca0f8747909b4d00554ec4",
+      "size": 37468,
+      "category": "capability-material",
+      "stored_at": "objects/a6f27e5d949872748f49c2abfd6a17d2278c1910.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW11_StructuralDesignPrinciplesBestPractices_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "a8a88aedddedab92b9b806dff2651faefdc3aae8",
+      "sha256": "b96ee84b8c2209eea91223b867f24514003a42da7ff3160cf03c8411528ec864",
+      "size": 10727,
+      "category": "repository-governance",
+      "stored_at": "objects/a8a88aedddedab92b9b806dff2651faefdc3aae8.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s17",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b01fc7a2352b253512f46bc698a7a2e607b55008",
+      "sha256": "4316ebcf34d83225ac7c5fd313c02b7d13049fdc90563e178b9eaf26adfc6a16",
+      "size": 16640,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/b01fc7a2352b253512f46bc698a7a2e607b55008.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-chatgpt/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b2180c6ca4014270c57b86a140164b7e0c5fd50f",
+      "sha256": "c8f095068ea62db41b7c50fe01bd126e59b299e8b1cbd0895abe883b32e23157",
+      "size": 9250,
+      "category": "repository-governance",
+      "stored_at": "objects/b2180c6ca4014270c57b86a140164b7e0c5fd50f.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/thread-captures/2026-10-26-audit-project-docs-019f95e4/closeout.md",
+          "commit_set": "s31",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b24c3cc39a996c46d65d827c0e1ee929898bb245",
+      "sha256": "bc273150a68fa161544f3c53a8ab8c7c3f07ba2d3e7530762aa99ffd3329dd10",
+      "size": 11142,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/b24c3cc39a996c46d65d827c0e1ee929898bb245.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-gemini/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b38963c6d26384331185a89615ecc00ab982d89e",
+      "sha256": "87a8a49687f6515985a9bc5dd4c3d95536260d3dac81241b047a093d84b63b87",
+      "size": 2412,
+      "category": "contributor-tooling",
+      "stored_at": "../../../origin/history/objects/b38963c6d26384331185a89615ecc00ab982d89e.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/transcript.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b425107acf05e2ca9d74d22b432e4a8bc756a135",
+      "sha256": "f5c2c273160c7ece8aa1ef1ba8f848d513f84851c97e721bc0661eba7ad8c99b",
+      "size": 34,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-2/with_skill/outputs/metrics.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-2/with_skill/outputs/metrics.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-3/with_skill/outputs/metrics.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b6cb401ad8e322d75d57cb6c035fe3b0d15ff9c5",
+      "sha256": "29955cc516c16cdca1834048fb1a02e5fda857c37dad0258f8a7966cae3693a6",
+      "size": 2429,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/b6cb401ad8e322d75d57cb6c035fe3b0d15ff9c5.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/assets/catalog-meta-schema.json",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b6eeaa2d4a34c1653069585c6c5603da39a5bdbe",
+      "sha256": "8e8876180a8989b406a4d3edddf875b04cdfd5805cc8616686d552b11ce4455f",
+      "size": 12061,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/b6eeaa2d4a34c1653069585c6c5603da39a5bdbe.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/references/schemas.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b78f2ec02f8ef1c137cacafae0d3dfee23f8d48e",
+      "sha256": "213867be7b4e3f2382d0d141679fd620d9ae6d35153582a58b7789c03006cf78",
+      "size": 35605,
+      "category": "capability-material",
+      "stored_at": "objects/b78f2ec02f8ef1c137cacafae0d3dfee23f8d48e.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW14_SpecsvsLocalCodeStateDifferences_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "b9a0f37653b2c16e2a27e40693d6b778cdb81663",
+      "sha256": "50e1ca5dde516001fcf4513066850144b6c4c768b6929f273679427942e28fc5",
+      "size": 260,
+      "category": "repository-governance",
+      "stored_at": "objects/b9a0f37653b2c16e2a27e40693d6b778cdb81663.bin",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": ".gitignore",
+          "commit_set": "s32",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ba4a89990a56d4c62d54aa9f917d23d5ede5eace",
+      "sha256": "ac5749c9e8183b4c6064611122a7e058b39b1d483bc06c362df5d1b08585c28f",
+      "size": 7226,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/ba4a89990a56d4c62d54aa9f917d23d5ede5eace.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/grading.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/grading.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "bbbcb33f3e6c22bfe4cd9cc8bf33e2005c183cdb",
+      "sha256": "c2cd43ffd916fcd623105e75634e048fadec852f7219fabaebd0694daaea2a0a",
+      "size": 894,
+      "category": "capability-material",
+      "stored_at": "objects/bbbcb33f3e6c22bfe4cd9cc8bf33e2005c183cdb.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "ledger/README.md",
+          "commit_set": "s19",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "bec1baccebcaa7d22bfc529f4969582a0d9be65d",
+      "sha256": "b59fc359cb2e6d96d4ba704af4d449387dfa6d52c9e1fdffafdb741929a105bb",
+      "size": 2968,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/bec1baccebcaa7d22bfc529f4969582a0d9be65d.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-mistral-vibe/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "bf527c0b4aacbfd65ed96bff2c862759c5aa7872",
+      "sha256": "b0037ae72b87a2a4a86d4b7d5fe9eee64dc712fc3e7c74b9735ed43dc7f2d795",
+      "size": 10630,
+      "category": "repository-governance",
+      "stored_at": "objects/bf527c0b4aacbfd65ed96bff2c862759c5aa7872.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s33",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c170ef7f8f132c4665ebf531e2b63e9e75a9a0a1",
+      "sha256": "83d915091d8cfc0525e38cfe11a81b2619edb713aab1a5d3e454e37c46ac9b0a",
+      "size": 36190,
+      "category": "capability-material",
+      "stored_at": "objects/c170ef7f8f132c4665ebf531e2b63e9e75a9a0a1.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW06_RoofingRoofUnderlayments_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c1b06f0eb3ff7bbd5000d7980bd209e43df4f9d2",
+      "sha256": "f9dd2bdf2a5e986d5a399559c692163108a3e2fbfe81f4c6485562fa68265dac",
+      "size": 15277,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/c1b06f0eb3ff7bbd5000d7980bd209e43df4f9d2.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/outputs/rapid-continuity-handoff-thread-extraction-skill-validation.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/outputs/continuity-handoff-validation.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c21865005403cec7d414507f37cd0b3fbfdf7723",
+      "sha256": "b40879048f0c1c38c6192a9730e1564187924648ae15080df7685521951f04b3",
+      "size": 11384,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/c21865005403cec7d414507f37cd0b3fbfdf7723.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/SKILL.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c2554c2471952cfd890a5173b3b75599cc022929",
+      "sha256": "25119c97fc0d973273b3ebf0958e5345cf0ee0347ad4758aad239fd77377ddea",
+      "size": 1507,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/c2554c2471952cfd890a5173b3b75599cc022929.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/transcript.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c2a58467500b1d186b09f9a261f957ee5311b7a3",
+      "sha256": "2307147ee6b6c4cd8eceff5cb7534c87834c2577a73deecfafd35b95807053d8",
+      "size": 5434790,
+      "category": "capability-material",
+      "stored_at": "objects/c2a58467500b1d186b09f9a261f957ee5311b7a3.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW08_MultiFamilyVolumeMillworkTurnkeySolutions_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c2d4df171021cdd08b706aa34ef7cd62d645789b",
+      "sha256": "20b0aabc7722b4666c62e8e8b0b9c05fe852bf5b6cadd2796abdd73a48d1be8a",
+      "size": 34,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-2/without_skill/outputs/metrics.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-2/without_skill/outputs/metrics.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-3/without_skill/outputs/metrics.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c38b6ee469e0fe4522f653d8c601839dc6373525",
+      "sha256": "3a0ed11e714a95a3c46ac971dccd442ecc138c2b3a90038eff76c4bd6ec355a4",
+      "size": 1449,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-3/with_skill/outputs/response.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-3/with_skill/outputs/response.md",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c48f2831a3521506454b8b37366b1d05e35d9015",
+      "sha256": "8e5f14da7fe93c2d5a13e92df54feacf063f7bb59a9ed5729273a6f66b410b75",
+      "size": 2321,
+      "category": "contributor-tooling",
+      "stored_at": "objects/c48f2831a3521506454b8b37366b1d05e35d9015.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/transcript.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c516313c167693d7b77f4865f1b0da5d0681d19e",
+      "sha256": "10c53e8da61bff70045da33faa871399dd0874ec2c3949d28cec0572fd3c6fb6",
+      "size": 10484,
+      "category": "repository-governance",
+      "stored_at": "objects/c516313c167693d7b77f4865f1b0da5d0681d19e.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "AGENTS.md",
+          "commit_set": "s34",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c60a8268fc7c44cbbb4beb5b367df50306846767",
+      "sha256": "019dfd906a4357f818a546ee0481f4fd58a9e9429d3ba3903582e094815abf86",
+      "size": 3056,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/c60a8268fc7c44cbbb4beb5b367df50306846767.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-chatgpt/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c89e4f9e6dcc38299be3549abdbf2aba11c654e7",
+      "sha256": "c95b88f89ce305e29c3c9f3d079c0de03adf8a5529c04769c4f2bc3e4ef33b51",
+      "size": 2258,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-copilot-m365/references/platform-capture-patterns.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-copilot-m365/references/platform-capture-patterns.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c927a708c925f08325874a1d8086ca3b10cef855",
+      "sha256": "d85e980933aab32f2b78ad06f81696a6848e23ee5902ed5573c219728e049a69",
+      "size": 1063,
+      "category": "repository-governance",
+      "stored_at": "../../../origin/history/objects/c927a708c925f08325874a1d8086ca3b10cef855.bin",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "LICENSE",
+          "commit_set": "s32",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "c9a9a38a7540b40b90c3f62c5d59ec0701bd0c4c",
+      "sha256": "26d023a6b467294bf11cfe3f51116bb979cb88493b14b7902f938c76fc4a86e4",
+      "size": 2920,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/c9a9a38a7540b40b90c3f62c5d59ec0701bd0c4c.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-grok/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ca3fc437574e52a03e0f21deca91d1b52ef1b03d",
+      "sha256": "ef2fc844605cf413a2c8366a27d5354083e7097032f913c59d58ec05394e1d1c",
+      "size": 2000,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-mistral-vibe/references/platform-capture-patterns.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-mistral-vibe/references/platform-capture-patterns.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ccb9a78dbb45b3f2e7bd66e2b69a342c5956e89e",
+      "sha256": "955b215b90373cc9a290ebb133ed9caefebe584c0d836a616109aaf351dab0fd",
+      "size": 1351,
+      "category": "repository-governance",
+      "stored_at": "objects/ccb9a78dbb45b3f2e7bd66e2b69a342c5956e89e.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "AGENTS.md",
+          "commit_set": "s35",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ccc6f6cc7f9e9518f5b814f36914296c8e572d5a",
+      "sha256": "a7e6a3394391204532162a147e1a9f82eef5d5fb169d82cb42706d16d1b5be94",
+      "size": 281,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-gemini/agents/openai.yaml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-gemini/agents/openai.yaml",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ccd37a1a80fb8789c439b79301aaaba6bec68d6c",
+      "sha256": "d73e884053eca7f04ebc1452954d0a609c64e443f5ffdc9be7587d6d7a193f68",
+      "size": 35,
+      "category": "capability-material",
+      "stored_at": "objects/ccd37a1a80fb8789c439b79301aaaba6bec68d6c.bin",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "ops/.gitkeep",
+          "commit_set": "s5",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "cd9f76c9d371ce50ee716f2c50e74e9c7a70cdc6",
+      "sha256": "2a9f11a44b780432ccd9c0f08450eef2b2e4a70cb0e73c64809dea55beaf19b0",
+      "size": 12021,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/cd9f76c9d371ce50ee716f2c50e74e9c7a70cdc6.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/outputs/portable-cross-platform-preservation-ai-thread-decisions-assets.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/outputs/portable-thread-decisions-assets.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ce2851b49d1e02b29fc8bfab7eee74fbf962d2ea",
+      "sha256": "59a80b0639d01ab11fb7efe9c3abe5325af08c2e677c81147151f6ff41cf3e0d",
+      "size": 7339,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/ce2851b49d1e02b29fc8bfab7eee74fbf962d2ea.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/grading.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/grading.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "cff5580b2f5a6c9189aca829985f27a90c92f2d0",
+      "sha256": "e8a33196a558ee53dbbc6211b2666caee06ef4a316c6dd9bf34f7afa9e6c5b17",
+      "size": 16348,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/cff5580b2f5a6c9189aca829985f27a90c92f2d0.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/outputs/portable-ai-thread-extraction-decisions-assets-safety.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/outputs/thread-decisions-assets-safety.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "d002423221a6f254d20b14725d0cc8d445e9af4b",
+      "sha256": "0c58aea2599b1672aeae99d7d247d4caeb02689df0ec72c3b7867127344803fc",
+      "size": 1862,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-3/without_skill/outputs/response.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-3/without_skill/outputs/response.md",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "d3e1e33eca2a40f9a9f48260b2b31580b50f22c7",
+      "sha256": "21e9db8f9cc97eba35ab231bd564e5efdf37977baaf6c79d168b6d2d58739c16",
+      "size": 34408,
+      "category": "capability-material",
+      "stored_at": "objects/d3e1e33eca2a40f9a9f48260b2b31580b50f22c7.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW01_ProductCatalogOverviewSpecGuide_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "d812699081f980af102949162f89d44051aaa803",
+      "sha256": "9168e3eaf1640b3fda12a1496c797f8795de89be32bf9b37187055981539fa20",
+      "size": 31474,
+      "category": "repository-governance",
+      "stored_at": "objects/d812699081f980af102949162f89d44051aaa803.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "bldr_intelligently_framing_our_futures.docx",
+          "commit_set": "s27",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "db0e421b7a6b99d7d53129712e2a5ccda3828c67",
+      "sha256": "3853f1b8783515c0f54132402faa48b74bf5e64ff24c65b01a90390f0c34c583",
+      "size": 1722,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/db0e421b7a6b99d7d53129712e2a5ccda3828c67.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-gemini/evals/trigger-evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "dd1e92374e35de309109b9ed32da26d25f37acb8",
+      "sha256": "6318cfb4031ae9a4044a6454cfa98013dce384371b5d70aa14e73c00e6f2711a",
+      "size": 888,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/dd1e92374e35de309109b9ed32da26d25f37acb8.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/transcript.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/with_skill/transcript.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e1123a93583937c36f88f30348e03f0b74fb2845",
+      "sha256": "6583e2133be476d4df79faddfdf428f4f231bd4dce8e23994a6e22ed5fbdf02c",
+      "size": 314,
+      "category": "repository-governance",
+      "stored_at": "objects/e1123a93583937c36f88f30348e03f0b74fb2845.md",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s36",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e19296dc2d35f39bdb69489335a97b5506bef05a",
+      "sha256": "f6f758ba16c00fcd0003597297b6493e0cf5fff8154133b8fda6019b1521f19c",
+      "size": 40636,
+      "category": "capability-material",
+      "stored_at": "objects/e19296dc2d35f39bdb69489335a97b5506bef05a.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW13_CaseStudyShowcaseProjects_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e26e69eeb7cd4a1a7155611c7d429755671d12f9",
+      "sha256": "c6b608699429ec9322abcd6b55f2d812d4e4bf14449291d2f0a0323fab4b9f6c",
+      "size": 14076,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/e26e69eeb7cd4a1a7155611c7d429755671d12f9.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/without_skill/outputs/repository-independent-ai-thread-extraction-missing-asset-controls.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e2f9a3bf78bbeb645007f8755f6add1577e98383",
+      "sha256": "40d36d63cda50466b299fc35057dd1b437972cdcfd8bec18f895626c836314a8",
+      "size": 35490,
+      "category": "capability-material",
+      "stored_at": "objects/e2f9a3bf78bbeb645007f8755f6add1577e98383.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW05_PrefabricatedComponentsTrussesWallPanelsEWP_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e3a545a26fc8aec11664b19f25f9359d296d3a5d",
+      "sha256": "e68c45da38be4c3e86d34e33ec9bc8fc0f5f8a5bc51b78a9a6b3ffbe83dcf729",
+      "size": 2428,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../professional-portfolio/origin/repository/eval/skill-foundry/workspace/iteration-1/eval-1/without_skill/grading.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-foundry/workspace/iteration-1/eval-1/without_skill/grading.json",
+          "commit_set": "s9",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e4db6612adad19e9079bf25f5ee2779d530f66d2",
+      "sha256": "ceaf8bc6952113d2751adf5db987849954af431aa91c1abf60fd5803a7932863",
+      "size": 1822,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/e4db6612adad19e9079bf25f5ee2779d530f66d2.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-claude/evals/trigger-evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e517120a433def194033f844cef7492a44ed6e23",
+      "sha256": "13340c6572d3e0520815d84ada72f8bb9af89443fb391e3b8bf4d77bf88cc5bd",
+      "size": 1385,
+      "category": "repository-governance",
+      "stored_at": "objects/e517120a433def194033f844cef7492a44ed6e23.yml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".github/workflows/technology-version-audit.yml",
+          "commit_set": "s37",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e58c70bea39d5b252a1e819f242bbdcdf20e8b87",
+      "sha256": "43e3b8f80dbf69c343967ba77e268fae991d9fa3ed68b32a0ff02532cd48657f",
+      "size": 11464,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/e58c70bea39d5b252a1e819f242bbdcdf20e8b87.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/run_eval.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "e7a869bef594dfe221048e1afe26e50d9cc2e942",
+      "sha256": "9a5aee254bd8988ccb7a4be6b83349f860eca8a088556fda4a798c485a3f2f60",
+      "size": 34606,
+      "category": "capability-material",
+      "stored_at": "objects/e7a869bef594dfe221048e1afe26e50d9cc2e942.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW17_CommonJobsiteMistakesLessonsLearned_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ea632311e48f1334d6184c162a1d9398e6505439",
+      "sha256": "dc0795d8fd03ee8c23903462d360d22c20b1de449a9c482b6c4bb0feb765575f",
+      "size": 14643,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/ea632311e48f1334d6184c162a1d9398e6505439.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/draft-body.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/with_skill/draft-body.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "eba28b51108da749b4c6d86df1a34ddef9aaf860",
+      "sha256": "26cc9f93f6640a0502e7c04d13714efb7b8979457c6a3e69d2d4156fc4cdb857",
+      "size": 10532,
+      "category": "repository-governance",
+      "stored_at": "objects/eba28b51108da749b4c6d86df1a34ddef9aaf860.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "AGENTS.md",
+          "commit_set": "s38",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ed8e1dddce77b16af13c6f36b3fe86c4ac7c590c",
+      "sha256": "67cf5703402013936c8fb75ad6a1afecd8841d45cc5e606b634eb05825fde365",
+      "size": 3972,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/ed8e1dddce77b16af13c6f36b3fe86c4ac7c590c.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/quick_validate.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "edcb21c41f1f1da2170ce0ade5cdc32f7bd795cd",
+      "sha256": "6266e28f05181f109297445c5aeddcfa78fae112e9a67c1044ec5322e696f572",
+      "size": 1385,
+      "category": "repository-governance",
+      "stored_at": "objects/edcb21c41f1f1da2170ce0ade5cdc32f7bd795cd.yml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".github/workflows/technology-version-audit.yml",
+          "commit_set": "s39",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "edee2243f9c89f6d6c39d8ef69aba0ab803f7e81",
+      "sha256": "dc6091956425d58bdd0255e0279e8156d525a15772f9b431ede8dffd7950cf32",
+      "size": 36396,
+      "category": "capability-material",
+      "stored_at": "objects/edee2243f9c89f6d6c39d8ef69aba0ab803f7e81.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW16_MaterialsSustainabilityCertifications_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ee45a620cb0ee11ec479e1b02c3a63d26f1d2363",
+      "sha256": "f4279a6da876d10f19594577d825a987681c42dceac2fc4ed339b4f6516dfc4e",
+      "size": 42197,
+      "category": "capability-material",
+      "stored_at": "objects/ee45a620cb0ee11ec479e1b02c3a63d26f1d2363.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW07_ExteriorSidingCladdingProducts_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ee476f4d15c98e4b5a49aef22cd1dc36d3c9f95a",
+      "sha256": "62c0005c5ed96b8090c1b6f9535453032da37ec445adc571a35f1e7ae8881a0e",
+      "size": 3795,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/ee476f4d15c98e4b5a49aef22cd1dc36d3c9f95a.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-notion-capture-router/references/routing-anchors.md",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ef4d301e55fcfe8d2e49f01099cd5227d0a5217b",
+      "sha256": "3c96d9cfdc1d85e60cdd5987703d18c0a25de38339719179187d12ea2f067e3f",
+      "size": 16468,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/ef4d301e55fcfe8d2e49f01099cd5227d0a5217b.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/draft-body.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "ef918a5d41684705d01e0db9dfbc803b5ddb76f7",
+      "sha256": "babea49b22346a8e7299c16fb9b5a6e5695f601919100e48bc6b8e305d651396",
+      "size": 12587,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/ef918a5d41684705d01e0db9dfbc803b5ddb76f7.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-notion-capture-router/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f2b535b916da4ed990ba64edfa6ec97453638565",
+      "sha256": "637e0ea3fae455973e24f0f4d2002d25d1f5e6c86bf4ecbc268ff75a0f1e85d4",
+      "size": 1000,
+      "category": "repository-governance",
+      "stored_at": "objects/f2b535b916da4ed990ba64edfa6ec97453638565.yaml",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "gpt_manifest.yaml",
+          "commit_set": "s5",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f4554c5f0d70e75a6f0f2685d28a042be205616a",
+      "sha256": "16be151c2f6193bd915c7fa37008ca184f36a170afc6cb6b5ab8b119e1850a79",
+      "size": 8796,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/f4554c5f0d70e75a6f0f2685d28a042be205616a.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-notion-capture-router/SKILL.md",
+          "commit_set": "s2",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f48eac444656ddc41204aac1760a217951ce609e",
+      "sha256": "1a33059b0db1ef73375d46d513e5ea81369d2e8838c970597b0d52ddef8d1c0f",
+      "size": 4234,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/f48eac444656ddc41204aac1760a217951ce609e.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/skill-creator/scripts/package_skill.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f69e93667eb6b69608d39a13c83495b5db71fa4c",
+      "sha256": "e452514bb3c6a1e42569c4b2deef0dc64ae489a706227b77deda090a152f73c8",
+      "size": 19672,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/f69e93667eb6b69608d39a13c83495b5db71fa4c.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-custom-gpt-builder/SKILL.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f7785a0e0da0ab39f4f6a58f2b3e54f66dbd1902",
+      "sha256": "04d6e149c7b98a51a04112682ff858ac5d42f3734d0c95de72adfd81278b1f17",
+      "size": 2043,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/f7785a0e0da0ab39f4f6a58f2b3e54f66dbd1902.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-custom-gpt-skill-conversion-planner/evals/evals.json",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f79e3c6d87da5f35ab3885bda1be3d2580b5026e",
+      "sha256": "fcf5aced5ffa33fcf8351731d0620497bd3f2aa52dedb53cde4078755b1cae8b",
+      "size": 284,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-mistral-vibe/agents/openai.yaml",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-mistral-vibe/agents/openai.yaml",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f8f9cc4db05571718df90a8fd452c781d3f7e464",
+      "sha256": "f47f6bd92a3e826777a84fb3282730e2a9f63b7ae7bbce4cd9cf84272e7cbd6d",
+      "size": 2385,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/f8f9cc4db05571718df90a8fd452c781d3f7e464.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-1-substantial-balanced/with_skill/transcript.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "f9ba66850373b3c9df8f3532e123d6ffee92bbee",
+      "sha256": "8bf16e1c024a384d0e53101e94a53dc00a569cf46fd68975de045360b21f8f8b",
+      "size": 39354,
+      "category": "capability-material",
+      "stored_at": "objects/f9ba66850373b3c9df8f3532e123d6ffee92bbee.docx",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW18_GlossaryofIndustryAcronymsAbbreviations_v01.0.docx",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fac48f24d90e524ea1696065e3c7c728b7b6a6a6",
+      "sha256": "8e9226663beaec25a2e7c6eeeca3f6a3bb3de1224504d17f1948a483d61dc6c3",
+      "size": 1476,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/fac48f24d90e524ea1696065e3c7c728b7b6a6a6.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-3-catalog-comprehensive/without_skill/transcript.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fb4baad5992b4c24143a5a4aced2a610c63d4ac4",
+      "sha256": "da8b9e94d62a1ef66fa58a7e479c6e6dedb9010249d757398dc878e4c09eed94",
+      "size": 10223,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/fb4baad5992b4c24143a5a4aced2a610c63d4ac4.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/draft-body.md",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/iteration-1/eval-2-scan-rapid/without_skill/draft-body.md",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fb52795f3c0d71f441347482e9b692a1fa93891e",
+      "sha256": "e944562197ce9a0df3edefce8f2baf16b45a2b52c5f3db60fd3268c47a2be2d5",
+      "size": 403,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/fb52795f3c0d71f441347482e9b692a1fa93891e.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-notion-capture-router/references/final-check.md",
+          "commit_set": "s2",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fb7b16f1e3b2c0d17d0ac36cf65b799e16e3dd80",
+      "sha256": "e93e582b78084f1635e2680d2c1cd9fe254d8fd359eea88122c41dcc8e8125a1",
+      "size": 297,
+      "category": "contributor-tooling",
+      "stored_at": "objects/fb7b16f1e3b2c0d17d0ac36cf65b799e16e3dd80.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/.catalog-meta.json",
+          "commit_set": "s30",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fc847315096fcb7f2bd265be03bac02b392ac8ef",
+      "sha256": "5c0f2987ae5aae16a38858c02e287ad424ef78e43150072aa2631be8a03d0ea2",
+      "size": 2169,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../../.agents/skills/okhp3-thread-extract-perplexity/references/platform-capture-patterns.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-perplexity/references/platform-capture-patterns.md",
+          "commit_set": "s3",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fd7814710c718a1345542c864ef9430580c4bbc4",
+      "sha256": "59bb5cacfa44c18d3b2e680bc8bfaf1bcae8dc0c9565eaed2a70c6bf45372710",
+      "size": 61159,
+      "category": "capability-material",
+      "stored_at": "objects/fd7814710c718a1345542c864ef9430580c4bbc4.pdf",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "knowledge/v01.0/KNOW11_StructuralDesignPrinciplesBestPractices_v01.0.pdf",
+          "commit_set": "s13",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fde9e15e41034c3485c111ce15150eb9bb42c9de",
+      "sha256": "0eba7cdb01e53acd990dca32aa5d9bfacbf72a6d92e3e9c7d40b5e9e3b508b81",
+      "size": 39491,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/fde9e15e41034c3485c111ce15150eb9bb42c9de.py",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-skill-cataloger/scripts/gen-skills-readme.py",
+          "commit_set": "s4",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "fe0f2c1b263db3e4e5b583e96338109a00c52628",
+      "sha256": "b30affa2cac6fea510afa0ca75d141655597318db43e5a1d8fa8f8842c4048c2",
+      "size": 781,
+      "category": "contributor-tooling",
+      "stored_at": "../../../../enterprise-sleuth/origin/history/objects/fe0f2c1b263db3e4e5b583e96338109a00c52628.json",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": ".agents/skills/okhp3-thread-context-extraction-workspace/history.json",
+          "commit_set": "s7",
+          "mode": "100644"
+        },
+        {
+          "path": ".agents/skills/thread-extraction-workspace/history.json",
+          "commit_set": "s8",
+          "mode": "100644"
+        }
+      ]
+    }
+  ]
+}

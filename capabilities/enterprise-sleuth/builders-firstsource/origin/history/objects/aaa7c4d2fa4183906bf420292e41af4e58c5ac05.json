@@ -1,0 +1,104 @@
+{
+  "asOf": "2026-08-06",
+  "scope": "Checked-in solution and bundled maintenance assets",
+  "technologies": [
+    {
+      "name": "Microsoft 365 app / Teams manifest schema",
+      "kind": "application schema",
+      "current": "1.28",
+      "latestStable": "1.28",
+      "source": "https://learn.microsoft.com/en-us/microsoft-365/extensibility/schema/?view=m365-app-1.29",
+      "evidence": "manifest.json $schema and manifestVersion",
+      "status": "upgrade-review"
+    },
+    {
+      "name": "Microsoft 365 Copilot declarative-agent schema",
+      "kind": "application schema",
+      "current": "v1.8",
+      "latestStable": "v1.8",
+      "source": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-manifest-1.6",
+      "evidence": "declarativeAgent_0.json version",
+      "status": "upgrade-review"
+    },
+    {
+      "name": "JSON",
+      "kind": "data format",
+      "current": "unspecified",
+      "latestStable": "RFC 8259",
+      "source": "https://www.rfc-editor.org/rfc/rfc8259",
+      "evidence": "manifest.json and declarativeAgent_0.json",
+      "status": "no-version-pinned"
+    },
+    {
+      "name": "Python",
+      "kind": "maintenance scripting language",
+      "current": "3.9+ minimum stated",
+      "latestStable": "3.14.7",
+      "source": "https://www.python.org/downloads/",
+      "evidence": ".agents skills documentation and Python scripts",
+      "status": "minimum-only"
+    },
+    {
+      "name": "NixOS / Nix channel",
+      "kind": "Replit environment configuration",
+      "current": "stable-26_05",
+      "latestStable": "26.05",
+      "source": "https://nixos.org/blog/announcements/2026/nixos-2605/",
+      "evidence": ".replit nix.channel",
+      "status": "upgrade-review"
+    },
+    {
+      "name": "ZIP / DEFLATE packaging",
+      "kind": "distribution format",
+      "current": "unspecified",
+      "latestStable": "format version not pinned",
+      "source": "https://pkware.cachefly.net/webdocs/casdk/APPNOTE.txt",
+      "evidence": "exports/ask-jamie!.zip",
+      "status": "no-version-pinned"
+    },
+    {
+      "name": "PNG",
+      "kind": "image format",
+      "current": "unspecified",
+      "latestStable": "format version not pinned",
+      "source": "https://www.w3.org/TR/PNG/",
+      "evidence": "color.png and outline.png",
+      "status": "no-version-pinned"
+    },
+    {
+      "name": "Git / GitHub",
+      "kind": "version control and hosting",
+      "current": "repository metadata only",
+      "latestStable": "not a solution runtime dependency",
+      "source": "https://git-scm.com/doc",
+      "evidence": ".git directory and GitHub repository metadata",
+      "status": "tooling"
+    }
+  ],
+  "notDetected": [
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "npm",
+    "Vite",
+    "Tailwind CSS",
+    "React",
+    "Vue",
+    "Angular",
+    "Docker",
+    "Terraform",
+    "package.json or lockfile"
+  ],
+  "describedButNotProvenConnected": [
+    "Microsoft Copilot Studio",
+    "Microsoft Graph",
+    "Microsoft Teams",
+    "SharePoint",
+    "OneDrive",
+    "Exchange",
+    "ServiceNow",
+    "Workday",
+    "Salesforce",
+    "SAP S/4HANA"
+  ]
+}

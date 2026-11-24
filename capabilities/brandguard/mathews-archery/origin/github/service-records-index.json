@@ -1,0 +1,37 @@
+{
+  "bytes": 4803,
+  "contents": "service-records.json and screened UTF-8 workflow log text, indexed by SHA-256",
+  "downloaded_log_archives": 0,
+  "file": "service-records.zip",
+  "held_log_entries": 0,
+  "job_records": 45,
+  "log_entries_reviewed": 0,
+  "projects": {
+    "closed": 0,
+    "open": 0
+  },
+  "public_log_entries": 0,
+  "record_counts": {
+    "actions-artifacts": 0,
+    "branches": 3,
+    "deployments": 0,
+    "environments": 1,
+    "labels": 11,
+    "milestones": 0,
+    "open_activity": 0,
+    "releases": 0,
+    "rulesets": 0,
+    "tags": 0,
+    "workflows": 4
+  },
+  "redactions": {},
+  "sha256": "a9033ef47bea76c145581d6f58c5b162e525e8f005428b4c24c3f5624d64e67d",
+  "source_attempts": 45,
+  "source_repository": "OKHP3/askjamie-brg12-mathews-archery",
+  "source_runs": 44,
+  "unavailable_or_excluded_logs": {
+    "Source log text excluded": 45
+  },
+  "unique_public_log_texts": 0,
+  "verified_utc": "2026-11-24T22:21:05.915820+00:00"
+}

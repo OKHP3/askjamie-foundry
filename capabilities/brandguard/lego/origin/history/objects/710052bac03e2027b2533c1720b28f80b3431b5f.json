@@ -1,0 +1,89 @@
+{
+  "checked_on": "2026-07-20",
+  "technologies": [
+    {
+      "name": "Python",
+      "kind": "runtime",
+      "source": "https://www.python.org/downloads/",
+      "declaration": ".replit: modules = [\"python-3.11\"]",
+      "current": "3.11",
+      "latest_stable": "3.14.6",
+      "latest_stable_scope": "latest Python release; keep the deployed major/minor line under review separately"
+    },
+    {
+      "name": "NixOS / Nixpkgs channel",
+      "kind": "build environment",
+      "source": "https://nixos.org/manual/nixos/stable/release-notes",
+      "declaration": ".replit: channel = \"stable-25_05\"",
+      "current": "25.05",
+      "latest_stable": "26.05",
+      "latest_stable_scope": "latest stable NixOS release"
+    },
+    {
+      "name": "HTML",
+      "kind": "markup standard",
+      "source": "https://html.spec.whatwg.org/multipage/",
+      "declaration": "web/index.html",
+      "current": "HTML Living Standard (not version-pinned)",
+      "latest_stable": "HTML Living Standard (updated 2026-07-13)",
+      "latest_stable_scope": "living standard; there is no project-controlled numeric version"
+    },
+    {
+      "name": "CSS",
+      "kind": "styling language",
+      "source": "https://www.w3.org/TR/css-2026/",
+      "declaration": "inline <style> in web/index.html",
+      "current": "CSS modules as implemented by the browser (not version-pinned)",
+      "latest_stable": "CSS Snapshot 2026",
+      "latest_stable_scope": "W3C snapshot; individual CSS modules have their own maturity levels"
+    },
+    {
+      "name": "Git",
+      "kind": "source control",
+      "source": "https://git-scm.com/docs/git",
+      "declaration": ".git repository metadata; no project pin",
+      "current": "2.55.0.windows.2 (local workstation observation)",
+      "latest_stable": "2.55.0",
+      "latest_stable_scope": "upstream Git release; the Windows distribution may append a platform build suffix"
+    },
+    {
+      "name": "YAML",
+      "kind": "configuration/data format",
+      "source": "https://yaml.org/spec/1.2.2/",
+      "declaration": "gpt_manifest.yaml",
+      "current": "not pinned by the repository",
+      "latest_stable": "YAML 1.2.2",
+      "latest_stable_scope": "format specification, not a runtime dependency"
+    },
+    {
+      "name": "Markdown",
+      "kind": "documentation format",
+      "source": "https://spec.commonmark.org/current/",
+      "declaration": "README, changelog, and AGENTS.md",
+      "current": "not pinned by the repository",
+      "latest_stable": "CommonMark current specification (not a project runtime)",
+      "latest_stable_scope": "renderers may implement different Markdown dialects"
+    },
+    {
+      "name": "Replit",
+      "kind": "hosting/workflow platform",
+      "source": "https://docs.replit.com/",
+      "declaration": ".replit",
+      "current": "platform-managed; no version pinned",
+      "latest_stable": "not versioned in a way this repository can reliably pin",
+      "latest_stable_scope": "platform service; review workflow compatibility when Replit changes"
+    }
+  ],
+  "explicitly_not_used": [
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "npm",
+    "Vite",
+    "Tailwind CSS",
+    "React",
+    "Vue",
+    "Svelte",
+    "Bootstrap"
+  ]
+}

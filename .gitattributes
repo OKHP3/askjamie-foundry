@@ -42,3 +42,6 @@
 /capabilities/brandguard/discount-tire/origin/repository/** -text -filter -ident
 /capabilities/brandguard/scheels/origin/repository/** -text -filter -ident
 /capabilities/brandguard/mathews-archery/origin/repository/** -text -filter -ident
+
+# Historical file versions are stored by their original content hash.
+/capabilities/**/origin/history/objects/** -text -filter -ident

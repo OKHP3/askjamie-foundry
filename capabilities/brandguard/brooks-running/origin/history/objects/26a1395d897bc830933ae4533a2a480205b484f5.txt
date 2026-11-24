@@ -1,0 +1,3 @@
+# Runtime dependency used by .agents/skills/skill-creator/scripts/quick_validate.py.
+# Dependabot monitors this file and will open update pull requests.
+PyYAML==6.0.4

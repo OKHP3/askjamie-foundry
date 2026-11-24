@@ -1,0 +1,52 @@
+{
+  "repository": "OKHP3/askjamie-brg09-coca-cola",
+  "source_main": "e7098f021dccc0eca1e1161f2fa6fdad6526c79f",
+  "source_main_tree": "1bc1a53ed7c3462c90da1ae5882d1ff624095108",
+  "refs": [
+    {
+      "name": "automation/technology-updates",
+      "source_ref": "refs/heads/automation/technology-updates",
+      "head": "5147829e912bc99ecc44316f342d1433661e2677",
+      "kind": "branch",
+      "head_tree": "2640a85a47587a556eee5685e3418787ec22087c",
+      "merge_base": "e7098f021dccc0eca1e1161f2fa6fdad6526c79f",
+      "complete": true,
+      "changes": [
+        {
+          "path": "ops/technology-versions.json",
+          "mode": "100644",
+          "git_blob": "9025da8c0ec922fbbe6c162f375bc962e7c9a89a",
+          "stored_at": "objects/9025da8c0ec922fbbe6c162f375bc962e7c9a89a.json"
+        }
+      ],
+      "reconstructed_tree": "2640a85a47587a556eee5685e3418787ec22087c",
+      "stored_reconstructed_tree": "2640a85a47587a556eee5685e3418787ec22087c",
+      "full_tree_recoverable_from_stored_files": true
+    },
+    {
+      "name": "automation/technology-updates",
+      "source_ref": "refs/pull/5/head",
+      "head": "5147829e912bc99ecc44316f342d1433661e2677",
+      "kind": "open-pull-request",
+      "number": 5,
+      "head_repository": "OKHP3/askjamie-brg09-coca-cola",
+      "pr_base_ref": "refs/heads/main",
+      "pr_base_sha": "e7098f021dccc0eca1e1161f2fa6fdad6526c79f",
+      "head_tree": "2640a85a47587a556eee5685e3418787ec22087c",
+      "merge_base": "e7098f021dccc0eca1e1161f2fa6fdad6526c79f",
+      "complete": true,
+      "changes": [
+        {
+          "path": "ops/technology-versions.json",
+          "mode": "100644",
+          "git_blob": "9025da8c0ec922fbbe6c162f375bc962e7c9a89a",
+          "stored_at": "objects/9025da8c0ec922fbbe6c162f375bc962e7c9a89a.json"
+        }
+      ],
+      "reconstructed_tree": "2640a85a47587a556eee5685e3418787ec22087c",
+      "stored_reconstructed_tree": "2640a85a47587a556eee5685e3418787ec22087c",
+      "full_tree_recoverable_from_stored_files": true
+    }
+  ],
+  "stored_base_tree": "1bc1a53ed7c3462c90da1ae5882d1ff624095108"
+}

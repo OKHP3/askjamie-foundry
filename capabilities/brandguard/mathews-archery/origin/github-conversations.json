@@ -1,8 +1,15 @@
 {
   "records": [
     {
+      "assignees": [
+        "Copilot",
+        "OKHP3"
+      ],
+      "author": "Copilot",
       "base_sha": "eec5ee95bcfafd6f6b8aa4939142abbc7e38e383",
+      "body": "Scaffold canonical repository structure for GPT-BRG12 (OKHP³ BrandGuard™ — Mathews Archery) with organized folders for product specs, prompts, knowledge base, GTM materials, and operational artifacts.\n\n## Directory Structure\n\nCreated 15 directories organized by function:\n- **Content & Knowledge**: `product/`, `prompts/`, `knowledge/`, `rag-source/`\n- **Quality & Operations**: `tests/`, `eval/`, `build/`, `ops/`\n- **Go-to-Market**: `gtm/{web,social,kofi,youtube}/`\n- **Project Management**: `docs/`, `releases/`, `assets/`\n\n## Core Files\n\n- **gpt_manifest.yaml**: Project metadata with links to ChatGPT Project, Custom GPT, Notion workspace, AskJamie page, and Mathews Archery brand lens\n- **CHANGELOG.md**: Version history following Keep a Changelog format\n- **LICENSE**: MIT License\n- **.gitignore**: Standard exclusions for OS files, IDEs, dependencies, build artifacts\n\nAll directories contain `.gitkeep` files for git tracking.\n\n<!-- START COPILOT CODING AGENT SUFFIX -->\n\n\n\n<!-- START COPILOT ORIGINAL PROMPT -->\n\n\n\n<details>\n\n<summary>Original prompt</summary>\n\n> Create repo OKHP3/AskJamie-GPT-BRG12 as the canonical container for GPT‑BRG12: OKHP³ BrandGuard™ — Mathews Archery. Scaffold folders: product/, prompts/, knowledge/, rag-source/, tests/, eval/, build/, gtm/web, gtm/social, gtm/kofi, gtm/youtube, docs/, ops/, releases/, assets/. Add README.md, CHANGELOG.md, LICENSE, .gitignore, and gpt_manifest.yaml with links from the Mathews Archery lens, AskJamie page, ChatGPT Project, Notion BRG12, and Custom GPT.\n> \n\n\n</details>\n\n\n\n<!-- START COPILOT CODING AGENT TIPS -->\n---\n\n💡 You can make Copilot smarter by setting up custom instructions, customizing its development environment and configuring Model Context Protocol (MCP) servers. Learn more [Copilot coding agent tips](https://gh.io/copilot-coding-agent-tips) in the docs.",
       "closed_at": "2025-12-31T03:02:10Z",
+      "comments": [],
       "commit_shas": [
         "8949e2cbddfc1fd1bc6fd9e19e0c1dee0145867d",
         "3ba5481147ec3187d1bcf0ae535c185bbd92a807"
@@ -12,20 +19,27 @@
       "head_sha": "3ba5481147ec3187d1bcf0ae535c185bbd92a807",
       "id": 3771848010,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "907cf56a30011aab8950ee7aeca930756ca7c84d",
       "merged": true,
       "merged_at": "2025-12-31T03:02:10Z",
       "number": 1,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/1",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Initialize repository structure for GPT-BRG12: OKHP³ BrandGuard™ — Mathews Archery",
       "updated_at": "2025-12-31T03:02:18Z"
     },
     {
+      "assignees": [],
+      "author": "dependabot[bot]",
       "base_sha": "138a7aa9b4a26bea33ad52ec51c8631e6f7a0899",
+      "body": "Bumps [actions/setup-python](https://github.com/actions/setup-python) from 6 to 7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/setup-python/releases\">actions/setup-python's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.0</h2>\n<h2>What's Changed</h2>\n<h3>Enhancements</h3>\n<ul>\n<li>Migrate to ESM and upgrade dependencies by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1330\">actions/setup-python#1330</a></li>\n<li>Pin SHA commits and update docs with latest versions by <a href=\"https://github.com/HarithaVattikuti\"><code>@​HarithaVattikuti</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1338\">actions/setup-python#1338</a></li>\n<li>Remove the pip-install input by <a href=\"https://github.com/gowridurgad\"><code>@​gowridurgad</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1336\">actions/setup-python#1336</a></li>\n</ul>\n<h3>Bug Fix</h3>\n<ul>\n<li>Fix to Classify stderr warning messages as warnings instead of errors in annotations by <a href=\"https://github.com/lmvysakh\"><code>@​lmvysakh</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1335\">actions/setup-python#1335</a></li>\n<li>Validate and retry manifest fetch to prevent silent failures by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1332\">actions/setup-python#1332</a></li>\n</ul>\n<h3>Dependency Upgrade</h3>\n<ul>\n<li>Bump certifi from 2020.6.20 to 2024.7.4 in /<strong>tests</strong>/data by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1328\">actions/setup-python#1328</a></li>\n<li>Remove EOL Python versions and Bumps numpy text fixture by <a href=\"https://github.com/priya-kinthali\"><code>@​priya-kinthali</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1333\">actions/setup-python#1333</a></li>\n<li>Upgrade <code>@​actions/cache</code> to 6.2.0 by <a href=\"https://github.com/philip-gai\"><code>@​philip-gai</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1337\">actions/setup-python#1337</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/lmvysakh\"><code>@​lmvysakh</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1335\">actions/setup-python#1335</a></li>\n<li><a href=\"https://github.com/philip-gai\"><code>@​philip-gai</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1337\">actions/setup-python#1337</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/setup-python/compare/v6...v7.0.0\">https://github.com/actions/setup-python/compare/v6...v7.0.0</a></p>\n<h2>v6.3.0</h2>\n<h2>What's Changed</h2>\n<h3>Enhancement</h3>\n<ul>\n<li>Add RHEL support and include Linux distro in cache keys by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1323\">actions/setup-python#1323</a></li>\n<li>Fix pip cache error handling on Windows by <a href=\"https://github.com/priyagupta108\"><code>@​priyagupta108</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1040\">actions/setup-python#1040</a></li>\n</ul>\n<h3>Dependency update</h3>\n<ul>\n<li>Upgrade minimatch from 3.1.2 to 3.1.5 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1281\">actions/setup-python#1281</a></li>\n<li>Upgrade actions dependencies by <a href=\"https://github.com/gowridurgad\"><code>@​gowridurgad</code></a> with <a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1303\">actions/setup-python#1303</a></li>\n<li>Upgrade <code>@​actions/cache</code> to 5.1.0, log cache write denied by <a href=\"https://github.com/jasongin\"><code>@​jasongin</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1324\">actions/setup-python#1324</a></li>\n<li>Upgrade dependency versions and test workflow configuration by <a href=\"https://github.com/HarithaVattikuti\"><code>@​HarithaVattikuti</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1322\">actions/setup-python#1322</a></li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li>Update advanced-usage.md by <a href=\"https://github.com/Dunky-Z\"><code>@​Dunky-Z</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/811\">actions/setup-python#811</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/gowridurgad\"><code>@​gowridurgad</code></a> with <a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1303\">actions/setup-python#1303</a></li>\n<li><a href=\"https://github.com/jasongin\"><code>@​jasongin</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/1324\">actions/setup-python#1324</a></li>\n<li><a href=\"https://github.com/Dunky-Z\"><code>@​Dunky-Z</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/setup-python/pull/811\">actions/setup-python#811</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/setup-python/compare/v6.2.0...v6.3.0\">https://github.com/actions/setup-python/compare/v6.2.0...v6.3.0</a></p>\n<h2>v6.2.0</h2>\n<h2>What's Changed</h2>\n<h3>Dependency Upgrades</h3>\n<ul>\n<li>Upgrade dependencies to Node 24 compatible versions by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/setup-python/pull/1259\">actions/setup-python#1259</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/setup-python/commit/5fda3b95a4ea91299a34e894583c3862153e4b97\"><code>5fda3b9</code></a> Pin SHA commits and update docs with latest versions (<a href=\"https://redirect.github.com/actions/setup-python/issues/1338\">#1338</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/4ab7e95f05e168b4356aebde89dd84f59c283d8e\"><code>4ab7e95</code></a> Merge pull request <a href=\"https://redirect.github.com/actions/setup-python/issues/1337\">#1337</a> from actions/philip-gai/bump-actions-cache-6-2-0</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/0f3a009f475dbea83c0371cd85d099690fee8c5c\"><code>0f3a009</code></a> Remove the pip-install input (<a href=\"https://redirect.github.com/actions/setup-python/issues/1336\">#1336</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/f8cf4291c8b8e273ddd26e569454615c7315d932\"><code>f8cf429</code></a> Migrate to ESM and upgrade dependencies (<a href=\"https://redirect.github.com/actions/setup-python/issues/1330\">#1330</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/54baeea5b34417d10a7479663a23cca53ea209b5\"><code>54baeea</code></a> Validate and retry manifest fetch to prevent silent failures (<a href=\"https://redirect.github.com/actions/setup-python/issues/1332\">#1332</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/c7092773a316760f4ecfe498e4af668a4dafeac5\"><code>c709277</code></a> Annotation code fix (<a href=\"https://redirect.github.com/actions/setup-python/issues/1335\">#1335</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/6849080452e69b330395e8a6d23cf90f56d76a1a\"><code>6849080</code></a> remove EOL Python versions and Bumps numpy text fixture (<a href=\"https://redirect.github.com/actions/setup-python/issues/1333\">#1333</a>)</li>\n<li><a href=\"https://github.com/actions/setup-python/commit/0903b469fbf4441aadfe4f4b249dc5b1fba3a73e\"><code>0903b46</code></a> Bump certifi from 2020.6.20 to 2024.7.4 in /<strong>tests</strong>/data (<a href=\"https://redirect.github.com/actions/setup-python/issues/1328\">#1328</a>)</li>\n<li>See full diff in <a href=\"https://github.com/actions/setup-python/compare/v6...v7\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/setup-python&package-manager=github_actions&previous-version=6&new-version=7)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nYou can trigger a rebase of this PR by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>\n\n> **Note**\n> Automatic rebases have been disabled on this pull request as it has been open for over 30 days.\n",
       "closed_at": "2026-09-20T15:06:17Z",
+      "comments": [],
       "commit_shas": [
         "d080d8ffc88a7e5791abb02def77b28c7c850bf3"
       ],
@@ -34,20 +48,30 @@
       "head_sha": "d080d8ffc88a7e5791abb02def77b28c7c850bf3",
       "id": 4934039037,
       "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
       "locked": false,
       "merge_commit_sha": "928f4776b44707c50721c7c62c60142086670114",
       "merged": true,
       "merged_at": "2026-09-20T15:06:17Z",
       "number": 2,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/2",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Bump actions/setup-python from 6 to 7",
       "updated_at": "2026-09-20T15:07:20Z"
     },
     {
+      "assignees": [],
+      "author": "dependabot[bot]",
       "base_sha": "138a7aa9b4a26bea33ad52ec51c8631e6f7a0899",
+      "body": "Bumps [actions/checkout](https://github.com/actions/checkout) from 5 to 7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/releases\">actions/checkout's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>block checking out fork pr for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Bump actions/publish-immutable-action from 0.0.3 to 0.0.4 in the minor-actions-dependencies group across 1 directory by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2458\">actions/checkout#2458</a></li>\n<li>Bump flatted from 3.3.1 to 3.4.2 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2460\">actions/checkout#2460</a></li>\n<li>Bump js-yaml from 4.1.0 to 4.2.0 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2461\">actions/checkout#2461</a></li>\n<li>Bump <code>@​actions/core</code> and <code>@​actions/tool-cache</code> and Remove uuid by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2459\">actions/checkout#2459</a></li>\n<li>upgrade module to esm and update dependencies by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2463\">actions/checkout#2463</a></li>\n<li>Bump the minor-npm-dependencies group across 1 directory with 3 updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2462\">actions/checkout#2462</a></li>\n<li>getting ready for checkout v7 release by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2464\">actions/checkout#2464</a></li>\n<li>update error wording by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2467\">actions/checkout#2467</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v7.0.0\">https://github.com/actions/checkout/compare/v6.0.3...v7.0.0</a></p>\n<h2>v6.1.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li><strong>[BREAKING]</strong> backport <code>allow-unsafe-pr-checkout</code> to v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2500\">actions/checkout#2500</a></li>\n<li>backport fixes to releases-v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2527\">actions/checkout#2527</a></li>\n</ul>\n<p><a href=\"https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/\">https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/</a> for more details about this breaking change</p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v6.1.0\">https://github.com/actions/checkout/compare/v6.0.3...v6.1.0</a></p>\n<h2>v6.0.3</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update changelog by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2357\">actions/checkout#2357</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>Update changelog for v6.0.3 by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2446\">actions/checkout#2446</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6...v6.0.3\">https://github.com/actions/checkout/compare/v6...v6.0.3</a></p>\n<h2>v6.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Add orchestration_id to git user-agent when ACTIONS_ORCHESTRATION_ID is set by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2355\">actions/checkout#2355</a></li>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.1...v6.0.2\">https://github.com/actions/checkout/compare/v6.0.1...v6.0.2</a></p>\n<h2>v6.0.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update all references from v5 and v4 to v6 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2314\">actions/checkout#2314</a></li>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n<li>Clarify v6 README by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2328\">actions/checkout#2328</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/blob/main/CHANGELOG.md\">actions/checkout's changelog</a>.</em></p>\n<blockquote>\n<h1>Changelog</h1>\n<h2>v7.0.1</h2>\n<ul>\n<li>Skip running unsafe pr check if input is default by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2518\">actions/checkout#2518</a></li>\n<li>Trim only ascii whitespace for branch by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2521\">actions/checkout#2521</a></li>\n<li>Escape values passed to --unset by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2530\">actions/checkout#2530</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v7.0.0</h2>\n<ul>\n<li>Block checking out fork PR for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v6.0.3</h2>\n<ul>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<h2>v6.0.2</h2>\n<ul>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<h2>v6.0.1</h2>\n<ul>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n</ul>\n<h2>v6.0.0</h2>\n<ul>\n<li>Persist creds to a separate file by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2286\">actions/checkout#2286</a></li>\n<li>Update README to include Node.js 24 support details and requirements by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2248\">actions/checkout#2248</a></li>\n</ul>\n<h2>v5.0.1</h2>\n<ul>\n<li>Port v6 cleanup to v5 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2301\">actions/checkout#2301</a></li>\n</ul>\n<h2>v5.0.0</h2>\n<ul>\n<li>Update actions checkout to use node 24 by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2226\">actions/checkout#2226</a></li>\n</ul>\n<h2>v4.3.1</h2>\n<ul>\n<li>Port v6 cleanup to v4 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2305\">actions/checkout#2305</a></li>\n</ul>\n<h2>v4.3.0</h2>\n<ul>\n<li>docs: update README.md by <a href=\"https://github.com/motss\"><code>@​motss</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1971\">actions/checkout#1971</a></li>\n<li>Add internal repos for checking out multiple repositories by <a href=\"https://github.com/mouismail\"><code>@​mouismail</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1977\">actions/checkout#1977</a></li>\n<li>Documentation update - add recommended permissions to Readme by <a href=\"https://github.com/benwells\"><code>@​benwells</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2043\">actions/checkout#2043</a></li>\n<li>Adjust positioning of user email note and permissions heading by <a href=\"https://github.com/joshmgross\"><code>@​joshmgross</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2044\">actions/checkout#2044</a></li>\n<li>Update README.md by <a href=\"https://github.com/nebuk89\"><code>@​nebuk89</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2194\">actions/checkout#2194</a></li>\n<li>Update CODEOWNERS for actions by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2224\">actions/checkout#2224</a></li>\n<li>Update package dependencies by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2236\">actions/checkout#2236</a></li>\n</ul>\n<h2>v4.2.2</h2>\n<ul>\n<li><code>url-helper.ts</code> now leverages well-known environment variables by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1941\">actions/checkout#1941</a></li>\n<li>Expand unit test coverage for <code>isGhes</code> by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1946\">actions/checkout#1946</a></li>\n</ul>\n<h2>v4.2.1</h2>\n<ul>\n<li>Check out other refs/* by commit if provided, fall back to ref by <a href=\"https://github.com/orhantoy\"><code>@​orhantoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1924\">actions/checkout#1924</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1\"><code>3d3c42e</code></a> prep v7.0.1 release (<a href=\"https://redirect.github.com/actions/checkout/issues/2531\">#2531</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/28802689a136bfcdb721715abd713740beecbe07\"><code>2880268</code></a> escape values passed to --unset (<a href=\"https://redirect.github.com/actions/checkout/issues/2530\">#2530</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/12cd2235efa0937479335606d7c3ac9f6c0973b1\"><code>12cd223</code></a> trim only ascii whitespace for branch (<a href=\"https://redirect.github.com/actions/checkout/issues/2521\">#2521</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/62661c4e71a304b2823ed026347b8d34c3eac541\"><code>62661c4</code></a> skip running unsafe pr check if input is default (<a href=\"https://redirect.github.com/actions/checkout/issues/2518\">#2518</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8d4307400f9427dba7cb98e488d6ab85f1cec5f\"><code>e8d4307</code></a> Bump the minor-actions-dependencies group with 2 updates (<a href=\"https://redirect.github.com/actions/checkout/issues/2499\">#2499</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/631c942040754b6e095e929c1677c07e10ed4f87\"><code>631c942</code></a> eslint 9 (<a href=\"https://redirect.github.com/actions/checkout/issues/2474\">#2474</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/4f1f4aec02e41874fa0262ea8ff5172d7978ad1e\"><code>4f1f4ae</code></a> Bump actions/upload-artifact from 4 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2476\">#2476</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/ba097532fb203f7e88c9c3c0b899b49469908a92\"><code>ba09753</code></a> Bump actions/checkout from 6 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2488\">#2488</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/b9e0990d219a03df7633c93f6f005a8fecbcab22\"><code>b9e0990</code></a> Bump docker/login-action from 3.3.0 to 4.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2479\">#2479</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8cb398be4a550817e382abf69e4c12c76fce1f2\"><code>e8cb398</code></a> Bump docker/build-push-action from 6.5.0 to 7.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2478\">#2478</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/checkout/compare/v5...v7\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/checkout&package-manager=github_actions&previous-version=5&new-version=7)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nYou can trigger a rebase of this PR by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>\n\n> **Note**\n> Automatic rebases have been disabled on this pull request as it has been open for over 30 days.\n",
       "closed_at": "2026-09-20T15:06:17Z",
+      "comments": [],
       "commit_shas": [
         "af87e2daf02aaf7c5ba4429575115cd6a89947e2"
       ],
@@ -56,31 +80,55 @@
       "head_sha": "af87e2daf02aaf7c5ba4429575115cd6a89947e2",
       "id": 4934039206,
       "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
       "locked": false,
       "merge_commit_sha": "c23b5a5d6a85640f356eb233c8b4d655e0d5ab1c",
       "merged": true,
       "merged_at": "2026-09-20T15:06:17Z",
       "number": 3,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/3",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Bump actions/checkout from 5 to 7",
       "updated_at": "2026-09-20T15:07:20Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
+      "body": "The scheduled technology update check reported that .replit declares stable-25_05 while stable-26_05 is the latest observed NixOS line in run 31376217710.\n\nThis is a compatibility-review task before changing the runtime channel. Original notification: 25008343523.",
       "closed_at": "2026-10-10T20:21:18Z",
+      "comments": [
+        {
+          "author": "OKHP3",
+          "body": "Closing as resolved: PRs #5 and #7 supplied the reviewed repair. The latest technology audit (run 37291774240) confirms stable-26_05 and no tracked channel drift.",
+          "created_at": "2026-10-10T20:21:16Z",
+          "id": 6101795131,
+          "updated_at": "2026-10-10T20:21:16Z"
+        }
+      ],
       "created_at": "2026-08-10T23:55:14Z",
       "id": 5115347854,
       "kind": "issue",
+      "labels": [],
       "locked": false,
       "number": 4,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/issues/4",
       "state": "closed",
+      "title": "Technology version review required",
       "updated_at": "2026-10-10T20:21:18Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "9097f15be64a9473c8cb931d8458f340f7784240",
+      "body": "Fixes the notification-causing check by updating the tracked files and validating the repository-specific workflow input.",
       "closed_at": "2026-08-11T00:11:57Z",
+      "comments": [],
       "commit_shas": [
         "ff8c02a365af294e1ff24f135f82affcd090b49a"
       ],
@@ -89,12 +137,43 @@
       "head_sha": "ff8c02a365af294e1ff24f135f82affcd090b49a",
       "id": 5115381956,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "2ab93ab2b2e24fc4ecdf9bc8fbe1b4f0b45244fe",
       "merged": true,
       "merged_at": "2026-08-11T00:11:57Z",
       "number": 5,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/5",
+      "review_comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Update the Python release source to match 3.14.7**\n\nThe inventory now claims Python 3.14.7 is the latest checked release, but the supporting source at line 29 still links specifically to the 3.14.6 release. This leaves the newly updated version unsupported and sends maintainers to contradictory evidence; update the source label and URL alongside the inventory value.\n\nAGENTS.md reference: [AGENTS.md:L78-L78](https://github.com/OKHP3/askjamie-brg12-mathews-archery/blob/ff8c02a365af294e1ff24f135f82affcd090b49a/AGENTS.md#L78-L78)\n\nUseful? React with 👍 / 👎.",
+          "commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "created_at": "2026-08-11T00:03:42Z",
+          "id": 3754344363,
+          "line": 15,
+          "original_commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "original_line": 15,
+          "path": "docs/technology-inventory.md",
+          "pull_request_review_id": 4901928402,
+          "side": "RIGHT",
+          "updated_at": "2026-08-11T00:03:42Z"
+        },
+        {
+          "author": "Copilot",
+          "body": "The inventory now records Python 3.14.7 as the latest stable checked, but the \"Stable-version sources\" section still links to the 3.14.6 release. This makes the policy doc internally inconsistent; update the source link to match the version in the table.",
+          "commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "created_at": "2026-08-11T00:04:09Z",
+          "id": 3754346100,
+          "line": 16,
+          "original_commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "original_line": 16,
+          "path": "docs/technology-inventory.md",
+          "pull_request_review_id": 4901930099,
+          "side": "RIGHT",
+          "updated_at": "2026-08-11T00:04:10Z"
+        }
+      ],
       "review_threads": [
         {
           "comment_ids": [
@@ -115,22 +194,41 @@
       ],
       "reviews": [
         {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "\n### 💡 Codex Review\n\nHere are some automated review suggestions for this pull request.\n\n**Reviewed commit:** `ff8c02a365`\n    \n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](https://chatgpt.com/codex/cloud/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\".\n\nIf Codex has suggestions, it will comment; otherwise it will react with 👍.\n\n\n\n\nCodex can also answer questions or update the PR. Try commenting \"@codex address that feedback\".\n            \n</details>",
           "commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
           "id": 4901928402,
-          "state": "COMMENTED"
+          "state": "COMMENTED",
+          "submitted_at": "2026-08-11T00:03:42Z"
         },
         {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "body": "## Pull request overview\n\nUpdates repository metadata to match the current stable Nix channel and refreshes the documented technology inventory, supporting the weekly “technology drift” check and reducing false-positive notifications.\n\n**Changes:**\n- Bumps the Replit Nix channel from `stable-25_05` to `stable-26_05`.\n- Refreshes `docs/technology-inventory.md` review date and updates recorded “latest stable checked” values for Python and the Nix channel line.\n\n### Reviewed changes\n\nCopilot reviewed 2 out of 2 changed files in this pull request and generated 1 comment.\n\n| File | Description |\n| ---- | ----------- |\n| docs/technology-inventory.md | Updates review date and inventory entries to reflect the current stable versions/channel. |\n| .replit | Updates the declared Nix channel to the current stable line (`stable-26_05`). |\n\n\n\n\n\n\n\n---\n\n💡 <a href=\"/OKHP3/askjamie-brg12-mathews-archery/new/main?filename=.github/skills/code-review/SKILL.md\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Add a `code-review` agent skill</a> or configure MCP servers for context-aware, tailored reviews. <a href=\"https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review#mcp-servers-and-agent-skills\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more in the docs.</a>",
           "commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
           "id": 4901930099,
-          "state": "COMMENTED"
+          "state": "COMMENTED",
+          "submitted_at": "2026-08-11T00:04:10Z"
         }
       ],
       "state": "closed",
+      "title": "chore: align Replit channel with stable release",
       "updated_at": "2026-08-22T02:15:41Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "2ab93ab2b2e24fc4ecdf9bc8fbe1b4f0b45244fe",
+      "body": "Preserve the old notification-fix branch as a current reviewable branch. Verify the Replit channel/toolchain alignment against current main and CI before squash merging.",
       "closed_at": "2026-09-20T15:05:10Z",
+      "comments": [
+        {
+          "author": "OKHP3",
+          "body": "Reviewed against current main: the complete tree at ff8c02a365af294e1ff24f135f82affcd090b49a is identical to main 2ab93ab2b2e24fc4ecdf9bc8fbe1b4f0b45244fe. PR #5 already incorporated this recovery change. Closing the redundant proposal; its history is retained in the portfolio recovery bundle before branch retirement.",
+          "created_at": "2026-09-20T15:05:09Z",
+          "id": 5750612612,
+          "updated_at": "2026-09-20T15:05:09Z"
+        }
+      ],
       "commit_shas": [
         "ff8c02a365af294e1ff24f135f82affcd090b49a"
       ],
@@ -139,18 +237,33 @@
       "head_sha": "ff8c02a365af294e1ff24f135f82affcd090b49a",
       "id": 5219613574,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merged": false,
       "number": 6,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/6",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "review: reconcile Archery notification fix",
       "updated_at": "2026-09-20T15:10:28Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "2ab93ab2b2e24fc4ecdf9bc8fbe1b4f0b45244fe",
+      "body": "Integrate the checkout 7 and setup-python 7 proposals while preserving the existing knowledge corpus and Replit configuration. The complete recovery tree in PR #6 is already present through PR #5 and was closed as redundant.\n\nThe live standard-library technology checker passes locally. The same workflow is dispatched on this exact integration branch to verify the updated actions before merge.",
       "closed_at": "2026-09-20T15:06:15Z",
+      "comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "<!-- codex-pull-request-review-summary -->\n\n## Codex Review Summary\n\nThis comment shows the latest Codex review activity on this pull request.\n\n| Review | Status | Commit | Review trigger |\n| --- | --- | --- | --- |\n| 📝 **Code Review** | ✅ **Completed** <relative-time datetime=\"2026-09-20T15:06:50.501828Z\">2026-09-20T15:06:50.501828Z</relative-time> | `928f477` | PR opened |\n\n\n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](https://chatgpt.com/codex/cloud/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\" or \"@codex security review\".\n\nCodex reacts with 👀 while any review is running, comments if it has suggestions, and reacts with 👍 once all reviews finish with no findings.\n\n</details>",
+          "created_at": "2026-09-20T15:05:45Z",
+          "id": 5750616145,
+          "updated_at": "2026-09-20T15:06:51Z"
+        }
+      ],
       "commit_shas": [
         "d080d8ffc88a7e5791abb02def77b28c7c850bf3",
         "af87e2daf02aaf7c5ba4429575115cd6a89947e2",
@@ -162,20 +275,35 @@
       "head_sha": "928f4776b44707c50721c7c62c60142086670114",
       "id": 5518604262,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "47a127b292bf1f2e7efe9e1853c92cb4a33a831e",
       "merged": true,
       "merged_at": "2026-09-20T15:06:15Z",
       "number": 7,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/7",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [],
       "state": "closed",
+      "title": "Integrate reviewed maintenance action updates",
       "updated_at": "2026-09-20T15:10:32Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "491f0260c96f430b39990f1885885eb2b2fb950c",
+      "body": "Preserves the BRG12 Project's useful historical work as a static corpus and design packet: 17 unchanged DOCX/PDF pairs with text companions, private editions of all 34 observed expansions, 17 private Project-shared original downloads, portable prompts/worksheets, source extracts and evidence ledgers. The closeout audit reconciles the later S25 intake, corrects stale archive-status wording and keeps every remaining source hold. Raw captures, original methodology documents, account crosswalks and recovery receipts stay outside Git.\n\nValidation: all 34 original corpus hashes and 13 prior payload hashes remain unchanged; the 17-companion checker passes. A fresh full expansion check preserves all 2,413 substantive parents with exact text, root partitions and links. Both private packet manifests and ZIP hashes/CRC pass. A separate XML-to-Markdown sequence check retains all 6,139 nonempty original paragraphs. JSON/Python parsing, local links, privacy/style and whitespace checks pass. The technology checker passes. No required branch review/check policy or ruleset was found; the inspected head has no check runs or commit statuses, so no successful PR CI run is claimed.\n\nThe whole-Project greater-than-60-percent minimum and greater-than-80-percent goal remain NOT DEMONSTRATED. Nineteen generated-file references, original Chat attachment identities and unobserved history remain unresolved. The scoped expansion ratio and file/byte counts are not whole-Project semantic weights. The dated closeout handoff records BLOCKED and the exact source input needed to resume. This PR integrates preserved artifacts; it does not complete the source-recovery objective or authorize thread archival.\n\nHistorical claims remain unverified as current. No tested runtime, formal release approval, rights clearance, deployment, Replit synchronization or new source archive is claimed. No linked Replit project was identified in this harvest's available scope.\n",
       "closed_at": "2026-10-22T10:58:38Z",
+      "comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "<!-- codex-pull-request-review-summary -->\n<!-- codex-review-state:v1 {\"code_review\":{\"commit_sha\":\"36a5cac6cfced006d00768a4edf42a8b1f08df44\",\"has_any_findings\":false,\"has_unresolved_findings\":false,\"status\":\"completed\"},\"security_review\":{\"commit_sha\":null,\"has_any_findings\":null,\"has_unresolved_findings\":null,\"status\":null}} -->\n\n## Codex Review Summary\n\nThis comment shows the latest Codex review activity on this pull request.\n\n| Review | Status | Commit | Review trigger |\n| --- | --- | --- | --- |\n| 📝 **Code Review** | ✅ **Completed** <relative-time datetime=\"2026-10-22T10:59:19.964606Z\">2026-10-22T10:59:19.964606Z</relative-time> | `36a5cac` | Draft marked ready |\n\n\n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](https://chatgpt.com/codex/cloud/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\" or \"@codex security review\".\n\nCodex reacts with 👀 while any review is running, comments if it has suggestions, and reacts with 👍 once all reviews finish with no findings.\n\n</details>",
+          "created_at": "2026-10-22T10:58:29Z",
+          "id": 6339083289,
+          "updated_at": "2026-10-22T10:59:20Z"
+        }
+      ],
       "commit_shas": [
         "9d3ef56c25d57ada9edad6e71b631482cd7947b9",
         "164ddbab0aef1f15f3fe1f810018c02cb1cfd309",
@@ -193,26 +321,44 @@
       "head_sha": "36a5cac6cfced006d00768a4edf42a8b1f08df44",
       "id": 5891876474,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merge_commit_sha": "fa39f6d25c3280d800710872080995378fad7f67",
       "merged": true,
       "merged_at": "2026-10-22T10:58:38Z",
       "number": 8,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/8",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [
         {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "body": "Copilot encountered an error and was unable to review this pull request. You can try again by re-requesting a review.",
           "commit_id": "36a5cac6cfced006d00768a4edf42a8b1f08df44",
           "id": 5613156038,
-          "state": "COMMENTED"
+          "state": "COMMENTED",
+          "submitted_at": "2026-10-22T11:03:44Z"
         }
       ],
       "state": "closed",
+      "title": "Preserve BRG12 harvest artifacts and record source recovery blockers",
       "updated_at": "2026-10-22T11:03:45Z"
     },
     {
+      "assignees": [],
+      "author": "OKHP3",
       "base_sha": "7058aff5b165bf5609699866b4c40d9656252635",
+      "body": "Preserve the organization closeout, correct historical Foundry benchmark provenance, and fix folded skill descriptions in the generated catalog. The same task changes are already present on main at 7058aff; this pull request records the separately prepared closeout branch and should be evaluated with that duplication in mind. Validation included the Foundry structural check, catalog check, four cataloger tests, and independent review; the pre-existing Foundry mirror-path test still fails.",
       "closed_at": "2026-10-27T04:26:44Z",
+      "comments": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "<!-- codex-pull-request-review-summary -->\n<!-- codex-review-state:v1 {\"code_review\":{\"commit_sha\":\"1606f874642ebce2ed9e743676be8b24ab315586\",\"has_any_findings\":false,\"has_unresolved_findings\":false,\"status\":\"completed\"},\"security_review\":{\"commit_sha\":null,\"has_any_findings\":null,\"has_unresolved_findings\":null,\"status\":null}} -->\n\n## Codex Review Summary\n\nThis comment shows the latest Codex review activity on this pull request.\n\n| Review | Status | Commit | Review trigger |\n| --- | --- | --- | --- |\n| 📝 **Code Review** | ✅ **Completed** <relative-time datetime=\"2026-10-27T02:12:24.573042Z\">2026-10-27T02:12:24.573042Z</relative-time> | `1606f87` | PR opened |\n\n\n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo](https://chatgpt.com/codex/cloud/settings/general). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\" or \"@codex security review\".\n\nCodex reacts with 👀 while any review is running, comments if it has suggestions, and reacts with 👍 once all reviews finish with no findings.\n\n</details>",
+          "created_at": "2026-10-27T02:11:07Z",
+          "id": 6432014770,
+          "updated_at": "2026-10-27T02:12:25Z"
+        }
+      ],
       "commit_shas": [
         "1606f874642ebce2ed9e743676be8b24ab315586",
         "257caaa2e4661e43749ca0c9212a04b20fc678ca"
@@ -222,22 +368,28 @@
       "head_sha": "257caaa2e4661e43749ca0c9212a04b20fc678ca",
       "id": 6051590792,
       "kind": "pull_request",
+      "labels": [],
       "locked": false,
       "merged": false,
       "number": 9,
       "original_url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/9",
+      "review_comments": [],
       "review_threads": [],
       "reviews": [
         {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "body": "<!-- ccr-overview-v2 -->\n\n### 🔵 Needs a closer look\n\nThe author states the branch duplicates changes already on `main` and the change touches cross-repository benchmark provenance that cannot be verified from this checkout, so a human should make the merge/publication decision.\n\n**No open issues** 🎉\n\n<details>\n<summary><strong>What changed in this PR</strong></summary>\n\nThis PR documents the closeout of a repository audit/organization task for `OKHP3/askjamie-brg12-mathews-archery`. Its substantive code change is a small, root-cause fix to the skill-catalog generator's dependency-free YAML frontmatter parser so that folded/literal block scalars with chomping indicators are recognized, which repairs five skill rows that previously rendered their description as the raw `>-` marker. The remainder restores historical Foundry benchmark provenance and records a task-specific evidence ledger. Note: the author states these task changes already exist on `main` at `7058aff`, so this branch duplicates landed work, and a pre-existing Foundry mirror-path test still fails (unrelated to this change).\n\n**Changes:**\n- Extend `parse_frontmatter` to treat `|-`, `>-`, `|+`, `>+` as block-scalar starts, and add a regression test covering all six indicators; regenerate the catalog/meta so the five affected descriptions render.\n- Restore the original `benchmark.json` note and the July-28 sync-verification benchmark hash, adding a dated `later_local_correction` provenance block.\n- Add a session handoff closeout ledger documenting scope, completion, artifacts, and verification passes.\n\n| File | Description |\r\n| ---- | ----------- |\r\n| `.agents/​skills/​okhp3-skill-cataloger/​scripts/​gen-skills-readme.py` | Recognizes chomped block-scalar indicators so folded descriptions parse instead of leaking the `>-` marker. |\r\n| `.agents/​skills/​okhp3-skill-cataloger/​tests/​test_write_family_md.py` | Adds a regression test asserting block-scalar descriptions and nested version parse correctly. |\r\n| `.agents/​skills/​README.md` | Regenerated catalog; five previously-broken rows now show real descriptions; timestamp/count updated. |\r\n| `.agents/​skills/​.catalog-meta.json` | Updated `last_indexed` timestamp consistent with the regenerated catalog. |\r\n| `.agents/​skills/​okhp3-skill-foundry/​benchmarks/​benchmark.json` | Restores the original historical workspace note in the notes array. |\r\n| `.agents/​skills/​okhp3-skill-foundry/​benchmarks/​sync-verification-2026-07-28.json` | Restores original benchmark hash and adds a dated local-correction provenance block. |\r\n| `docs/​session-handoffs/​2026-10-26-organize-repository-019fd541/​closeout.md` | New task-closeout evidence ledger and continuation notes. |\n</details>\n\n<sub>Review effort: Balanced</sub>",
           "commit_id": "1606f874642ebce2ed9e743676be8b24ab315586",
           "id": 5661477088,
-          "state": "COMMENTED"
+          "state": "COMMENTED",
+          "submitted_at": "2026-10-27T02:15:27Z"
         }
       ],
       "state": "closed",
+      "title": "Document repository organization closeout",
       "updated_at": "2026-10-27T04:26:44Z"
     }
   ],
-  "scope": "activity metadata",
+  "scope": "issues, pull requests, comments, reviews, and thread resolution",
   "source_repository": "OKHP3/askjamie-brg12-mathews-archery"
 }

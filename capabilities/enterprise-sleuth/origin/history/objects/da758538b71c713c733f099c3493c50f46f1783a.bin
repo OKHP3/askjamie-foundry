@@ -1,0 +1,34 @@
+# Build artifacts
+build/*
+!build/.gitkeep
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp

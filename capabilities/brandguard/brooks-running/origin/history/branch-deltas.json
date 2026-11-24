@@ -1,0 +1,52 @@
+{
+  "repository": "OKHP3/askjamie-brg03-brooks-running",
+  "source_main": "959a5e047729a2b4473a877b2c1faa849a5f4195",
+  "source_main_tree": "ac5d447cc746814344c4d25281b1f267b01dfc93",
+  "refs": [
+    {
+      "name": "dependabot/pip/pyyaml-6.0.4",
+      "source_ref": "refs/heads/dependabot/pip/pyyaml-6.0.4",
+      "head": "4c214ee0a30231cf79a436552c07ce9c2f9bc06d",
+      "kind": "branch",
+      "head_tree": "a038350efb5f113c35d04152238464c9b5a49425",
+      "merge_base": "959a5e047729a2b4473a877b2c1faa849a5f4195",
+      "complete": true,
+      "changes": [
+        {
+          "path": "requirements.txt",
+          "mode": "100644",
+          "git_blob": "26a1395d897bc830933ae4533a2a480205b484f5",
+          "stored_at": "objects/26a1395d897bc830933ae4533a2a480205b484f5.txt"
+        }
+      ],
+      "reconstructed_tree": "a038350efb5f113c35d04152238464c9b5a49425",
+      "stored_reconstructed_tree": "a038350efb5f113c35d04152238464c9b5a49425",
+      "full_tree_recoverable_from_stored_files": true
+    },
+    {
+      "name": "dependabot/pip/pyyaml-6.0.4",
+      "source_ref": "refs/pull/6/head",
+      "head": "4c214ee0a30231cf79a436552c07ce9c2f9bc06d",
+      "kind": "open-pull-request",
+      "number": 6,
+      "head_repository": "OKHP3/askjamie-brg03-brooks-running",
+      "pr_base_ref": "refs/heads/main",
+      "pr_base_sha": "959a5e047729a2b4473a877b2c1faa849a5f4195",
+      "head_tree": "a038350efb5f113c35d04152238464c9b5a49425",
+      "merge_base": "959a5e047729a2b4473a877b2c1faa849a5f4195",
+      "complete": true,
+      "changes": [
+        {
+          "path": "requirements.txt",
+          "mode": "100644",
+          "git_blob": "26a1395d897bc830933ae4533a2a480205b484f5",
+          "stored_at": "objects/26a1395d897bc830933ae4533a2a480205b484f5.txt"
+        }
+      ],
+      "reconstructed_tree": "a038350efb5f113c35d04152238464c9b5a49425",
+      "stored_reconstructed_tree": "a038350efb5f113c35d04152238464c9b5a49425",
+      "full_tree_recoverable_from_stored_files": true
+    }
+  ],
+  "stored_base_tree": "ac5d447cc746814344c4d25281b1f267b01dfc93"
+}

@@ -1,0 +1,21 @@
+name: "GPT-BRG04: PING — OKHP³ BrandGuard™"
+tagline: "The fairway to brand control just opened. Your move."
+description: "AskJamie Lens System for PING brand governance and content control"
+
+links:
+  brand_site: "https://ping.com"
+  lens_hub: "[Lens Hub URL to be provided]"
+  notion: "[Notion spec/roadmap URL to be provided]"
+  chatgpt_project: "[ChatGPT Project workbench URL to be provided]"
+  custom_gpt: "[Custom GPT URL to be provided]"
+
+version: "1.0.0"
+project_id: "BRG04"
+system: "AskJamie Lens System"
+
+directories:
+  source: "/src"
+  prompts: "/prompts"
+  evaluation: "/eval"
+  build: "/build"
+  operations: "/ops"

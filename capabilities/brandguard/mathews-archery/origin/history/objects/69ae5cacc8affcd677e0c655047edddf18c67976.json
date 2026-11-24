@@ -1,0 +1,1414 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "brg12-2026-10-16",
+  "status": "PARTIAL",
+  "capture_date": "2026-10-16",
+  "source_mode": "ui_capture_only",
+  "capture_method": "supported read_thread plus selected-Project UI inventory and asset recovery",
+  "privacy": "Raw captures, stable conversation-ID crosswalk, source URLs and Notion receipts are outside Git. No private application session stores used.",
+  "source_independence": "Baseline companions, design drafts and34 complete observed expansion research editions are portable without the source account. Original payload identity and unseen history remain unresolved.",
+  "counts": {
+    "inventoried": 26,
+    "captured": 26,
+    "turn_groups": 117,
+    "message_items": 269,
+    "truncated_items": 34,
+    "mapping_nodes_retained": null,
+    "truncated_assistant_items": 33,
+    "truncated_user_items": 1
+  },
+  "coverage_statement": "All26 visible threads have dispositions. The initially clipped33 assistant items and one user prompt now have complete observed rendered text recovery. All34 observed expansion reports are standalone private historical editions. Whole-Project greater-than-60/80-percent reusable value remains unproven; scoped block preservation is separately measured.",
+  "value_inventory": {
+    "retained_existing_corpus_topics": 17,
+    "retained_reusable_method_and_asset_units": 12,
+    "method_unit_names": [
+      "Entity resolution method",
+      "Historical identity seed and collision map",
+      "User-selected slogan and placement rationale",
+      "Unofficial instruction draft",
+      "Five-ring audience model",
+      "AskJamie lineage and user correction",
+      "Lifecycle source and projection method",
+      "Landing-content requirements and new draft",
+      "Bounded knowledge expansion method",
+      "Sensitive-topic retrieval and status discipline",
+      "Original icon image",
+      "Original template ZIP privately preserved and reviewed"
+    ],
+    "remaining_value": [
+      "19 original generated knowledge/page payload identities and unobserved internals remain unresolved",
+      "Original uploaded methodology files and citation/image sidecars not fully reconciled; five same-name alternatives are not identity proof",
+      "17 Project-shared source documents separately inventoried; source identity/recovery gaps remain",
+      "Unloaded older messages and hidden alternatives are outside the observed boundary"
+    ],
+    "denominator": "Unknown for total reusable value. These are auditable inventory units, not equal weights or an estimated semantic percentage.",
+    "threshold_status": "NOT DEMONSTRATED for the whole Project; unknown original payload internals have no defensible upper value bound.",
+    "new_retention_routes": [
+      "34 private standalone historical expansion editions",
+      "Complete KNOW17 prompt adapted in prompts/reputation-resilience-forge.md",
+      "Six worksheets in prompts/research-reconciliation-workbook.md",
+      "35 exact source-to-edition meaning mappings in rag-source/2026-10-16-operating-pattern-map.json"
+    ],
+    "inventory_count_scope": "The17 topic and12 method/asset figures are earlier inventory categories, not equal weights or the full current value census. New editions/workflows are recorded separately."
+  },
+  "threads": [
+    {
+      "source_ref": "S01",
+      "title": "BRG12 - Mathews Archery: KNOW16 - FAQ / Knowledge Recap File",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "234e522019a4d2466f21ffb528b32b56d747dd7bab2ff72d85d87b0e48824dad",
+      "normalized_sha256": "72b5d29270b36893bb1f6a4f79e2a1435031a42da198edc3e8a8ec2c2d692496",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW16-FAQ-or-Knowledge-Recap-File-v01a.md",
+        "eval/knowledge-question-bank.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "76ed34ad41a258adb0f87f32c4fb6f1d928de6a94e7cfc58c0fdae4dbc798ba9",
+      "rendered_ui_characters": 210903,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S01-T03-M03",
+          "S01-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW16-E1",
+        "KNOW16-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S02",
+      "title": "BRG12 - Mathews Archery: KNOW14 - Future Outlook & Strategic Trends (documented only; no speculation)",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "50030cc5dd089a1a4d536d6cb9ba77497c92f7e615b0378a834447963d0c9178",
+      "normalized_sha256": "698382c40c0206cad296baffef8ea3784806ae60b37cf333e6b57fb1b4617c3d",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW14-Future-Outlook-and-Strategic-Trends-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "59fbaf2f4170c6fc069b07048b0c40257ccf99637769a91157cecf8f2e86254d",
+      "rendered_ui_characters": 130628,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S02-T03-M03",
+          "S02-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW14-E1",
+        "KNOW14-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S03",
+      "title": "BRG12 - Mathews Archery: KNOW15 - Product Identification & Comparison Module",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "92a0402f1f3a4139e9ba365bd1f32914d536d583af7d8bc23d7ce2c8b6c2c52e",
+      "normalized_sha256": "53b4e5808e57f3b5de612ea35a033c407f99d45b71e0083fa2b52621b9bf1ab2",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW15-Product-Identification-and-Comparison-Module-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "a9ab93e525e6511c3fe6916dd3c809095d0e6bf16306ec800588c5044c83e55c",
+      "rendered_ui_characters": 212980,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S03-T03-M03",
+          "S03-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW15-E1",
+        "KNOW15-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S04",
+      "title": "BRG12 - Mathews Archery: KNOW08 - Partnerships & Acquisitions",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "1d5013d1976f36cccd4aa2a6399844013035e90385b4c818d952a023cd2afad4",
+      "normalized_sha256": "da62b16e4a6832c4ef791a8d927ee9441f545d5ce6e957d607077b498d36ec0e",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW08-Partnerships-and-Acquisitions-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "cc760d4b6423915a4f413dd89dbaa07c4018f67d7b932ade1f36ca48296c57e0",
+      "rendered_ui_characters": 122072,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S04-T03-M03",
+          "S04-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW08-E1",
+        "KNOW08-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S05",
+      "title": "BRG12 - Mathews Archery: KNOW13 - Media Coverage & Public Perception (past 5 years)",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "ecdbde8dd99c0d78895720776ce2ff4c8160b08f18e15edabceceded07bf2a90",
+      "normalized_sha256": "cf15ecdc0ba08276e645ea643de2d458c08fc75ce9cb5722389674deb8545ab7",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW13-Media-Coverage-and-Public-Perception-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "1676c858148d65aa0157612c5d920f4d00ca69dc0dd51bc29cd6c56ee0c5861c",
+      "rendered_ui_characters": 143540,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S05-T03-M03",
+          "S05-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW13-E1",
+        "KNOW13-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S06",
+      "title": "BRG12 - Mathews Archery: KNOW06 - Sustainability & ESG Commitments",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "04cbcbc5a6d8a9ffb2d0f110c65a99722ed6812bd6a871f5611433ce95187531",
+      "normalized_sha256": "b2131d73173ff925c75a497354b84d8b07e281e169a1286374cfb0edd1532778",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW06-Sustainability-and-ESG-Commitments-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "778b9d2109a860d12bd674fe92c0eaa26cb55b14e91636cdead02016f3b3f1c3",
+      "rendered_ui_characters": 150722,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S06-T03-M03",
+          "S06-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW06-E1",
+        "KNOW06-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S07",
+      "title": "BRG12 - Mathews Archery: KNOW11 - Challenges, Risks, & Industry Headwinds",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "50716bba2645523c3af3248bfe685ca311f9a6fd51f2335da7a7b94dd41fe8d2",
+      "normalized_sha256": "0913c809cb3d5a846ec83362de99cd7d19c4224fb20131b7e3bd6deccdf69a6f",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "f91599ce8834fffecacd8f6bb50ac65bae5fd28c81913e1f740e60b90c3a0019",
+      "rendered_ui_characters": 168825,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S07-T03-M03",
+          "S07-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW11-E1",
+        "KNOW11-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S08",
+      "title": "BRG12 - Mathews Archery: KNOW10 - Customer Experience & Loyalty Programs",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "488e1d17d582c3f3a8d60cd8c09955bd3b6a4da45717539a6187df9123bf868b",
+      "normalized_sha256": "63f00b1eedf3c7b01c4c3d52f2cc19ed35f0aebaf84cd4dcb4dd0bf1b0059e5d",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW10-Customer-Experience-and-Loyalty-Programs-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "4f8f3bf37be5155b55920fa7aed6d620da4fe445376265f92035458b2b8ab7b9",
+      "rendered_ui_characters": 173810,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S08-T03-M03",
+          "S08-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW10-E1",
+        "KNOW10-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S09",
+      "title": "BRG12 - Mathews Archery: KNOW07 - Innovations & Technologies",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "e441baabde58e0ef9796dc3e748580696ce7d640a45ec3a517dd4b120a788887",
+      "normalized_sha256": "8a99d4e114786862a5e17e115429e3173d96323be0cc0d61abfac7d9b616921e",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW07-Innovations-and-Technologies-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "c3c4017959509fb54589170ab155370b6f117dd16ef14cf062e0c4f32c2eea56",
+      "rendered_ui_characters": 174863,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S09-T03-M03",
+          "S09-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW07-E1",
+        "KNOW07-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S10",
+      "title": "BRG12 - Mathews Archery: KNOW12 - Competitive Positioning & Landscape",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "f8f78a3d6c8a715c17bb5cf88118232e00ec82b359d6872695a423a85e769c1b",
+      "normalized_sha256": "5ae1a44bc1a05a8a8de03e5210131c6d2b96e770f2ccb74e92f4c2764e433135",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW12-Competitive-Positioning-and-Landscape-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "2c51041a53cd06e17056f46ee2e82816d32a3757423c6422b60441f0a0ae198f",
+      "rendered_ui_characters": 215858,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S10-T03-M03",
+          "S10-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW12-E1",
+        "KNOW12-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S11",
+      "title": "BRG12 - Mathews Archery: KNOW09 - Marketing & Slogans (Cultural Analysis)",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 1,
+      "raw_sha256": "010716fc5ae319218e62120d861d116485b900fa7764b3059538bb3e004240f8",
+      "normalized_sha256": "741e497eebe8a3e204707e9f6646c356dd6cfc6d95225258efabacfdbb352ab6",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW09-Marketing-and-Slogans-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "4e0bde9bd90b93bc27cbde4cc9dbe4da69596c8dc4a8eb16dbf371cd9baf635d",
+      "rendered_ui_characters": 164970,
+      "tail_assessment": {
+        "assistant_items": 1,
+        "aligned_saved_ui_items": 1,
+        "reader_local_ids": [
+          "S11-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW09-E1",
+        "KNOW09-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S12",
+      "title": "BRG12 - Mathews Archery: KNOW05 - Financials / Ownership / Stock Performance (if applicable)",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "ce4d1d5add04dd89bb7b750648d954bcb254c5a44033aa47b4f3b185dcf5177f",
+      "normalized_sha256": "61dc8a78b4a49adf509aacf6c8ca7deb358df0940d267e88de8ea93e190e2345",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "4c77094b70959653f8427926b63a9c4b107610223c6f71698fafacc642c56825",
+      "rendered_ui_characters": 158886,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S12-T03-M03",
+          "S12-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW05-E1",
+        "KNOW05-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S13",
+      "title": "BRG12 - Mathews Archery: KNOW17 - Reputational Liabilities & Narrative Inoculation",
+      "captured_turn_groups": 5,
+      "captured_message_items": 13,
+      "terminal_page": true,
+      "truncated_item_count": 3,
+      "raw_sha256": "99032e537599564fd78088975eee3fa46169e8d8f5ef7afb17206840c65c3d91",
+      "normalized_sha256": "5f264aa751fcce663950ab1a04f0c48736f0e11fa51c0fa6c18fd197aff2c89e",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW17-Reputational-Liability-Inoculation-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "700bb99646c2906e6895832d451e48a1bf143ce73f5287bfb4da21167a6eb31e",
+      "rendered_ui_characters": 165248,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S13-T03-M04",
+          "S13-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW17-E1",
+        "KNOW17-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S14",
+      "title": "BRG12 - Mathews Archery: KNOW04 - Consumer Demographics & Market Reach",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "7547b70f105948a6e9d8652950adad198ca7153095e32cf24e21d9a9b6b3b2ec",
+      "normalized_sha256": "ca0a4b8119197bdd1fa5c6c8861146a5adc3c08aa694c84b8eef73448c2225e9",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW04-Consumer-Demographics-and-Market-Reach-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "d35bceabc402553ecd0b8f71de1d0eb7c766ac43f6cfdcd127492acb9e5d71f9",
+      "rendered_ui_characters": 184709,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S14-T03-M03",
+          "S14-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW04-E1",
+        "KNOW04-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S15",
+      "title": "BRG12 - Mathews Archery: KNOW02 - Mission, Vision, & Brand Philosophy",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "2722aeac1931883746dc2dac74436b6919e3fa053f00ae85429dd52eb5731a27",
+      "normalized_sha256": "84e3aeae68925c16613af079db0da2cf5ef9b0d8058f7384569dfab932050e30",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW02-Mission-Vision-and-Brand-Philosophy-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "9e7eefe4501d492f21c2348a8db22379163e28aecfd7406a022cda0678cfd25a",
+      "rendered_ui_characters": 105634,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S15-T03-M03",
+          "S15-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW02-E1",
+        "KNOW02-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S16",
+      "title": "BRG12 - Mathews Archery: KNOW03 - Product Lines / Services",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "a93207c0159639a97919825fbce13ac21c7b8c811b132911fdb8ac701d451a42",
+      "normalized_sha256": "08956f6461cc70d62d3eeb678cffd87e761b89576289cfa0b80274ebd31ef27f",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW03-Product-Lines-or-Services-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "4f19248c241e9a48bfc1d8d531c19c29fd22fff99e15cfca288bbffebf57a544",
+      "rendered_ui_characters": 174952,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S16-T03-M03",
+          "S16-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW03-E1",
+        "KNOW03-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S17",
+      "title": "BRG12 - Mathews Archery: KNOW01 - Founding & Corporate History",
+      "captured_turn_groups": 5,
+      "captured_message_items": 12,
+      "terminal_page": true,
+      "truncated_item_count": 2,
+      "raw_sha256": "39520782f23b968185d7438b5680a2f99a43409b9e7ae90ccf3b1d4ec0a22ba3",
+      "normalized_sha256": "2c27bfd2afdf775a9ba8d43d3c8964acfeae6ea7c2c003af9fa7f1b17f39df98",
+      "disposition": "observed-expansion-research-retained; original payload gaps held",
+      "routes": [
+        "knowledge/text/BRG12-KNOW01-Founding-and-Corporate-History-v01a.md",
+        "rag-source/2026-10-16-research-leads.json",
+        "prompts/research-reconciliation-workbook.md",
+        "rag-source/2026-10-16-operating-pattern-map.json"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived",
+        "Original generated knowledge payload and uploaded pair identity not established",
+        "Citation sidecars, unloaded older messages and hidden alternatives unresolved"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "978345ae2572e84cf3853af5f662cc4c34d04f55df41557bdf5fbdaaee67afef",
+      "rendered_ui_characters": 296644,
+      "tail_assessment": {
+        "assistant_items": 2,
+        "aligned_saved_ui_items": 2,
+        "reader_local_ids": [
+          "S17-T03-M03",
+          "S17-T05-M03"
+        ],
+        "semantic_review": "Bounded section/sample review; detailed remainder not exhausted",
+        "new_whole_message_copy_requested": false,
+        "original_export_equivalence": "NOT ESTABLISHED",
+        "current_retention": "Both complete observed report versions retained as private historical research editions; current factual verification not performed"
+      },
+      "portable_research_editions": [
+        "KNOW01-E1",
+        "KNOW01-E2"
+      ],
+      "retention_record": "docs/harvest/2026-10-16-retention.json"
+    },
+    {
+      "source_ref": "S18",
+      "title": "BRG12 - Mathews Archery: Detailed Corporate Identity",
+      "captured_turn_groups": 2,
+      "captured_message_items": 4,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "7d3c229aba09de9cfdd0480f9bd7407a8a3dfce90babfa49f2cf89cdbcef27dc",
+      "normalized_sha256": "064e9ae14c89d0b74f4ee70ce8cd141852b354f83f78b66a9ff918de23fe69a1",
+      "disposition": "reviewed-and-routed",
+      "routes": [
+        "product/company-identity-seed.json",
+        "prompts/knowledge-forge-workflow.md"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches. Search-result image omitted as incidental illustration; identity method and historical fields retained.",
+      "rendered_ui_sha256": "489039fbe1fac1157d67bfba1c8c34d52dda3c68ba6e97521b503c52eb7206e5",
+      "rendered_ui_characters": 28683,
+      "historical_candidate_before_current_hold": true
+    },
+    {
+      "source_ref": "S19",
+      "title": "BRG12 - Mathews Archery - OKHP³ BrandGuard™",
+      "captured_turn_groups": 5,
+      "captured_message_items": 9,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "0dac2e05c481cd78cac8e8a53fbfa1314c8943908b9f603e78993da3eb7253af",
+      "normalized_sha256": "34354230f8953e9651a271eff26c1fe34eab8f9ca393a0f8a90d311318dff61d",
+      "disposition": "reviewed-and-routed",
+      "routes": [
+        "product/brg12-capability-brief.md",
+        "assets/reference/brg12-icon-original.png"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches. Original user image preserved; legal clearance remains unresolved and is a follow-up, not an endorsement.",
+      "rendered_ui_sha256": "a4e8bc2d7d45905cbd959fbd66c2513afb8c02696769b2751833467b6ac26139",
+      "rendered_ui_characters": 30181,
+      "historical_candidate_before_current_hold": true
+    },
+    {
+      "source_ref": "S20",
+      "title": "BRG12 - Mathews Archery: Corporate Identity",
+      "captured_turn_groups": 4,
+      "captured_message_items": 8,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "7859fc669d2070fc3134d3524e51b514faa97ccebd74953895528afad6e5c26c",
+      "normalized_sha256": "f9d6c1a2cfcf30fd31fadef0e8142764a21b301ba6109ad4a0e6869322615b17",
+      "disposition": "reviewed-and-routed",
+      "routes": [
+        "product/company-identity-seed.json",
+        "prompts/brg12-instructions-draft.md"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "695207332badea7d440f73ece4642f461f2f317cc34a1e010081e8832ec0dfd6",
+      "rendered_ui_characters": 29542,
+      "historical_candidate_before_current_hold": true
+    },
+    {
+      "source_ref": "S21",
+      "title": "BRG12 - Mathews Archery: Web Page Expanded",
+      "captured_turn_groups": 4,
+      "captured_message_items": 8,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "a9133a65851305407470f1184183985527e51c1720d90311aa6a20cdf20e3614",
+      "normalized_sha256": "163e8ea32c98b4adbb5f49bd9af333af4b3aa3053bb4835ad92c82f512613b78",
+      "disposition": "hold-for-recovery",
+      "routes": [
+        "gtm/web/landing-content-draft.md"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Original input CSS/HTML recovered privately; generated HTML output payload remains unresolved",
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "96417c598871ae74bb0c13f23a8d758e12a37d0b1e5fa204f8bfed31c2c804da",
+      "rendered_ui_characters": 24394
+    },
+    {
+      "source_ref": "S22",
+      "title": "BRG12 - Mathews Archery: Web Page Creation",
+      "captured_turn_groups": 4,
+      "captured_message_items": 8,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "80016586cee156d1cbd22ca5884964f815ba4e3fa113179e1b080a378722ee3e",
+      "normalized_sha256": "3c8fe7f98bce465a8d5518202c8b1ef0b135f3bfa12621adf597834adfb34e7a",
+      "disposition": "hold-for-recovery",
+      "routes": [
+        "gtm/web/landing-content-draft.md"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Original input CSS/HTML recovered privately; generated HTML output payload remains unresolved",
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "3076ebdf5f3dd3808d8dece194f989c23ad79087c479731e2139aac0d6cb18f2",
+      "rendered_ui_characters": 23949
+    },
+    {
+      "source_ref": "S23",
+      "title": "BRG12 - Mathews Archery: GitHub Repo",
+      "captured_turn_groups": 5,
+      "captured_message_items": 11,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "8af8b99a8651c69e6cdef9df85c5075b6cf0ef3bade6d4a5b8678593ef950b3d",
+      "normalized_sha256": "77cdfef7d024c325d034e4fb30e044783d0e25eb4707f60d5aa5dcc01753a2fd",
+      "disposition": "hold-for-recovery",
+      "routes": [
+        "ops/project-harvest-workflow.md",
+        "product/brg12-capability-brief.md"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Ten original source documents not fully reconciled; five same-name Library alternatives do not prove original identity; original source download failed",
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches. Template ZIP is recovered and integrity checked; the remaining document-identity blocker is separate.",
+      "rendered_ui_sha256": "d07334096b144cd91dc5767aa3479c197ddae6695e37f9345074cd76e1a4b5fe",
+      "rendered_ui_characters": 48372,
+      "template_zip": {
+        "status": "recovered-private",
+        "filename": "AskJamie-GPT-Repo-Template.zip",
+        "bytes": 11943,
+        "sha256": "4cf4dec207e9dd287b5c1a8aa76b48e972b7dad6862a9689fa9071f423e92d1c",
+        "entries": 42,
+        "crc_check": "PASS; read-only",
+        "embedded_scripts_executed": false
+      }
+    },
+    {
+      "source_ref": "S24",
+      "title": "BRG12 - Mathews Archery: Mission & Vision",
+      "captured_turn_groups": 4,
+      "captured_message_items": 8,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "325e66a23f394fadf3633b249a8b4728edf1c580c00feb7e5ccd8d275bde659a",
+      "normalized_sha256": "d3f8fc8a5810d7052687d01e439435c6bbe0d2db78ab58c069328d52b6eec841",
+      "disposition": "reviewed-and-routed",
+      "routes": [
+        "product/brg12-capability-brief.md",
+        "prompts/brg12-instructions-draft.md"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches. Personal detail excluded from repository, preserved in private normalized source; user correction supersedes assistant framing.",
+      "rendered_ui_sha256": "ebcf4691040612d59007c5e3955f025ccf134b584b4c136270f15522b451e016",
+      "rendered_ui_characters": 41402,
+      "historical_candidate_before_current_hold": true
+    },
+    {
+      "source_ref": "S25",
+      "title": "BRG12 - Mathews Archery: GPT Bylines and Slogans",
+      "captured_turn_groups": 3,
+      "captured_message_items": 6,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "b505d1ae1c3d1fd906074cceed961cc84cc0b610b97885e4a83799ef74547012",
+      "normalized_sha256": "1d69250bb3c211e374f45ee005678b7280b3043c03cb5f60faa7b3b438724a9a",
+      "disposition": "reviewed-and-routed",
+      "routes": [
+        "product/brg12-capability-brief.md",
+        "gtm/web/landing-content-draft.md"
+      ],
+      "archive_ready": true,
+      "archive_readiness_boundary": "Per-source gates completed on 2026-10-17. The intake instruction authorizes archive of S25 only after preservation, deduplication, Notion readback and validation; all other source holds remain.",
+      "archive_blockers": [],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "4c858091bfb77069ee63f34d4c46e707b81c4d6655d8508cfe491cc0e9f15da2",
+      "rendered_ui_characters": 12336,
+      "historical_candidate_before_current_hold": true,
+      "archive_action": {
+        "status": "archived",
+        "date": "2026-10-17",
+        "verification": "Exact source ID found in ChatGPT archived-thread listing with the expected title and BRG12 Project ID."
+      }
+    },
+    {
+      "source_ref": "S26",
+      "title": "BRG12 - Mathews Archery: Project Instructions",
+      "captured_turn_groups": 1,
+      "captured_message_items": 2,
+      "terminal_page": true,
+      "truncated_item_count": 0,
+      "raw_sha256": "30393b9346ca0a0a79db1e63e943f6d5740d0d3692a04d3ef0897db35ba0a9d9",
+      "normalized_sha256": "6f7fe11e7603359cb84eff1ccbd27a30c95551fe38c47bbb7aaa1f8a31fd4ec0",
+      "disposition": "reviewed-and-routed",
+      "routes": [
+        "prompts/brg12-instructions-draft.md",
+        "product/brg12-capability-brief.md"
+      ],
+      "archive_ready": false,
+      "archive_readiness_boundary": "Current user hold: keep source unarchived regardless of retention score.",
+      "archive_blockers": [
+        "Current user instruction: keep source unarchived"
+      ],
+      "notes": "Reviewed distinct text value routed; readiness covers observed useful content, not hidden branches.",
+      "rendered_ui_sha256": "d24cba88008f25731eaf482a36c14b2e2b22f14b8cd08aeb8947ac07b6c7bd51",
+      "rendered_ui_characters": 10598,
+      "historical_candidate_before_current_hold": true
+    }
+  ],
+  "corpus_pairs": [
+    {
+      "docx": "knowledge/BRG12-KNOW01-Founding-and-Corporate-History-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW01-Founding-and-Corporate-History-v01a.pdf",
+      "docx_sha256": "3fc73c903f9755986c1deec7dcb407289450e53c39f7a1bfd3c7a977eac8a740",
+      "pdf_sha256": "fe079870b5c9a2020247e29f5b40e2d61ca8c3ea54f040c09c5526a3f68718de",
+      "docx_characters": 39088,
+      "pdf_characters": 39762,
+      "pdf_pages": 17,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW02-Mission-Vision-and-Brand-Philosophy-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW02-Mission-Vision-and-Brand-Philosophy-v01a.pdf",
+      "docx_sha256": "cdc474aad11252d299e227e0d4894267bc9b5b15196ccc1184fe369727dfee39",
+      "pdf_sha256": "92e500c511d782168a685d1eabe02c02d5d2482d6f4a0bcd38dc8ad89314aa62",
+      "docx_characters": 32711,
+      "pdf_characters": 33406,
+      "pdf_pages": 14,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW03-Product-Lines-or-Services-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW03-Product-Lines-or-Services-v01a.pdf",
+      "docx_sha256": "51fe7487e9462c6d672f0c47805677fe014a28ca038a1938c706b78e7e27896d",
+      "pdf_sha256": "99d6806bb7c1236b6a2555e6b0af46af649422513d4426f714b75d81dec95d49",
+      "docx_characters": 33320,
+      "pdf_characters": 33907,
+      "pdf_pages": 16,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW04-Consumer-Demographics-and-Market-Reach-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW04-Consumer-Demographics-and-Market-Reach-v01a.pdf",
+      "docx_sha256": "f6587c140ea5fc916716bb9644d2d6cf10964aa115b561cb5f34706d34029e1b",
+      "pdf_sha256": "625b65fee30a813a0d3a399771b966557ddacd413475773beac6a15d5b8724a1",
+      "docx_characters": 21362,
+      "pdf_characters": 21809,
+      "pdf_pages": 10,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01a.pdf",
+      "docx_sha256": "cc372f0a438b5400e85bc09ac47d5301c99881ec2f3ad9f3bac90feb6ae33dbe",
+      "pdf_sha256": "2c614384416f187fc560552fbf6152cb4edbbb3017ae68983c6d76a076237b70",
+      "docx_characters": 31289,
+      "pdf_characters": 32009,
+      "pdf_pages": 13,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW06-Sustainability-and-ESG-Commitments-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW06-Sustainability-and-ESG-Commitments-v01a.pdf",
+      "docx_sha256": "10d9102a787b307885c7377b0dbbcadac803855e57f444e415405b4462d0a157",
+      "pdf_sha256": "010ec54e22cf94c1175d5b6d550b4d62195d86b573045bad49859c95a71d3cd9",
+      "docx_characters": 38153,
+      "pdf_characters": 39360,
+      "pdf_pages": 17,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW07-Innovations-and-Technologies-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW07-Innovations-and-Technologies-v01a.pdf",
+      "docx_sha256": "494af6aa85229a902cf1ff0ce03de48bbb0f1685b276c0a3ea9147f373b0cf8a",
+      "pdf_sha256": "0dfd4bfd68af78af696c2ce4bc449145526251b64d728ccd7c7b4ef57874baa2",
+      "docx_characters": 47849,
+      "pdf_characters": 48968,
+      "pdf_pages": 21,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW08-Partnerships-and-Acquisitions-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW08-Partnerships-and-Acquisitions-v01a.pdf",
+      "docx_sha256": "ca0652cc1a2d07ba51418677865bcc122ac6b8c16278a1006d861f2f1ecee1c7",
+      "pdf_sha256": "abf2ce843e7f9dd0c551b469edcae5e51b74beec27576ed97d461d7f8e4b875a",
+      "docx_characters": 38902,
+      "pdf_characters": 39951,
+      "pdf_pages": 22,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW09-Marketing-and-Slogans-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW09-Marketing-and-Slogans-v01a.pdf",
+      "docx_sha256": "d5569b1d81b28402a0af2d928068ae4f01a8f1465fa59cbd388aa21c1733f6a4",
+      "pdf_sha256": "47c2779b5e38e8a703bf0f76e32b2d6606314674e5e919eae887eee0f829d563",
+      "docx_characters": 27898,
+      "pdf_characters": 28614,
+      "pdf_pages": 14,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW10-Customer-Experience-and-Loyalty-Programs-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW10-Customer-Experience-and-Loyalty-Programs-v01a.pdf",
+      "docx_sha256": "fb7c50ae3ded1477720e73b10fbe27b59eb4bb8933e10f02e1f765c50cf3334a",
+      "pdf_sha256": "e7b6f0c028ef6eb7d6b57d7d4848c0434e191b71be0ed1414411715df7cee410",
+      "docx_characters": 37431,
+      "pdf_characters": 38302,
+      "pdf_pages": 16,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01a.pdf",
+      "docx_sha256": "69a6faff63f1764541495c3c775addf06e4df1defd24add25761f00330bd3e6a",
+      "pdf_sha256": "a4daef19260d3adc1a1cf5c278397bd0dc689fee18d1572b413f888ab8233304",
+      "docx_characters": 37712,
+      "pdf_characters": 38313,
+      "pdf_pages": 15,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW12-Competitive-Positioning-and-Landscape-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW12-Competitive-Positioning-and-Landscape-v01a.pdf",
+      "docx_sha256": "9ccca8fa4c30070c721c0eb41c2e72d32f972317c0db247a2b88ede836918520",
+      "pdf_sha256": "6300513d2325f0f2d5743f6c653610a695dead4408e4f575d2fd164dbcbeea98",
+      "docx_characters": 30715,
+      "pdf_characters": 31431,
+      "pdf_pages": 14,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW13-Media-Coverage-and-Public-Perception-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW13-Media-Coverage-and-Public-Perception-v01a.pdf",
+      "docx_sha256": "5c406492867e4a77ef689784f40fc52df41e4b6f55925b710fb2713cf82fa164",
+      "pdf_sha256": "25040db21f5beebb699a665c4a13cedd207b5a4cdb5a23505a0ee81f2424b9c3",
+      "docx_characters": 42811,
+      "pdf_characters": 43968,
+      "pdf_pages": 19,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW14-Future-Outlook-and-Strategic-Trends-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW14-Future-Outlook-and-Strategic-Trends-v01a.pdf",
+      "docx_sha256": "083f73ae12760de7605181325104186d0d94836b9851e12fd677864bb1acab86",
+      "pdf_sha256": "a18ee80cbda0f062e34a002fb3c0c30bae55f54309871e2de572373aa56e3a39",
+      "docx_characters": 54402,
+      "pdf_characters": 55668,
+      "pdf_pages": 22,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW15-Product-Identification-and-Comparison-Module-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW15-Product-Identification-and-Comparison-Module-v01a.pdf",
+      "docx_sha256": "2d452b9fc1ff20db0f8ae8204b3e21c2bf50344a2d582a17374d37107bea9a0b",
+      "pdf_sha256": "39b686d02633cefd6ff7888d0764cb393334b284154ba28a4ea19055aa00b422",
+      "docx_characters": 31475,
+      "pdf_characters": 32489,
+      "pdf_pages": 16,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW16-FAQ-or-Knowledge-Recap-File-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW16-FAQ-or-Knowledge-Recap-File-v01a.pdf",
+      "docx_sha256": "4021ada4e4ddce284d74b036f7ec5b1014d19eeb88545818e31448b09161243f",
+      "pdf_sha256": "a77c6889edd9c451a2e40e289039d8493f0d72109f84ae84a10b724a9c14d05d",
+      "docx_characters": 30315,
+      "pdf_characters": 30881,
+      "pdf_pages": 14,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    },
+    {
+      "docx": "knowledge/BRG12-KNOW17-Reputational-Liability-Inoculation-v01a.docx",
+      "pdf": "knowledge/BRG12-KNOW17-Reputational-Liability-Inoculation-v01a.pdf",
+      "docx_sha256": "a8a06b405984745ce85af93053699e104e8cb616c72d81fec28d71f1912c1dd3",
+      "pdf_sha256": "b5356803f450e5b52f23e9bddbb9175fdbf3af3d09f479af0c53713ef93828e4",
+      "docx_characters": 36939,
+      "pdf_characters": 38121,
+      "pdf_pages": 20,
+      "text_equal_whitespace_normalized": false,
+      "review_scope": "Both payloads parsed; metadata and selected contents inspected. No full factual or visual revalidation."
+    }
+  ],
+  "assets": [
+    {
+      "asset_ref": "A01",
+      "kind": "user icon PNG",
+      "destination": "assets/reference/brg12-icon-original.png",
+      "sha256": "e836b157d4b92a945a387b482cd34e13c7650ddfa0edf92b868194bbfc547114",
+      "status": "retained",
+      "source_ref": "S19",
+      "legal_clearance": "unresolved"
+    },
+    {
+      "asset_ref": "A02",
+      "kind": "repository template ZIP",
+      "sha256": "4cf4dec207e9dd287b5c1a8aa76b48e972b7dad6862a9689fa9071f423e92d1c",
+      "destination": "private archive",
+      "status": "retained and reviewed; embedded scripts not executed",
+      "source_ref": "S23",
+      "bytes": 11943,
+      "archive_entries": 42,
+      "crc_check": "PASS; read-only"
+    },
+    {
+      "asset_ref": "A03",
+      "kind": "repository scaffold screenshot PNG",
+      "destination": "private archive",
+      "sha256": "a2d9a9cbd601a558605429ea834b24ae8d0fe1a92f1975fd1f731d069cf176ff",
+      "status": "retained",
+      "source_ref": "S23"
+    },
+    {
+      "asset_ref": "A04",
+      "kind": "Project-shared BrandGuard prompt library plan DOCX",
+      "destination": "private archive; method distilled in prompts/knowledge-forge-workflow.md",
+      "sha256": "c0c46bb6903d82eb1dc7e2146d0b9e9fb279effb3d470818dc2a8dcdd973cca0",
+      "status": "retained and assessed",
+      "source_ref": "Project-shared source"
+    },
+    {
+      "asset_ref": "A05",
+      "kind": "illustrative image search result",
+      "destination": null,
+      "status": "omit-with-reason",
+      "reason": "No decision or workflow depends on this third-party illustration; metadata remains privately captured",
+      "source_ref": "S18"
+    },
+    {
+      "asset_ref": "A06",
+      "kind": "original generated files and uploaded source attachments",
+      "destination": "private exception ledger",
+      "status": "flag-missing or identity-unverified",
+      "source_ref": "S01-S17,S21-S23",
+      "excludes_retained_asset_refs": [
+        "A01",
+        "A02",
+        "A03",
+        "A04"
+      ]
+    }
+  ],
+  "archive_ready_refs": [
+    "S25"
+  ],
+  "source_archiving_performed": true,
+  "guidance": {
+    "repository": "OKHP3/skillz",
+    "revision": "c4fb5f9acbd42b7f4a0266c7fef451166959d8dd",
+    "migration_version": "1.1.0",
+    "thread_extraction_versions": "2.1.0",
+    "brand_profile": "AskJamie",
+    "legacy_reference_exceptions": "Three custom-gpts reference paths reported 404 by coordinator; local source schema and active repository paths used"
+  },
+  "addenda": [
+    {
+      "date": "2026-10-16",
+      "source_ref": "S01",
+      "capture_method": "supported browser rendered-main text and observed links; no hidden-history claim",
+      "rendered_characters": 210903,
+      "observed_links": 393,
+      "raw_sha256": "fe71962eb3b77327db2f6973c2f6c34ed08f3dcc9ffb82b7dac0c6de68ff1633",
+      "assessment": "selective question and caveat assessment; full semantic review incomplete",
+      "new_route": "eval/knowledge-question-bank.md",
+      "archive_ready": false
+    },
+    {
+      "date": "2026-10-16",
+      "scope": "All26 supported rendered-main captures recovered privately; all17 KNOW structurally triaged",
+      "know_rendered_characters": 2955244,
+      "route": "rag-source/2026-10-16-research-leads.json",
+      "full_semantic_review": "deferred",
+      "archive_holds": "unchanged; original payloads and unassessed value remain"
+    },
+    {
+      "date": "2026-10-16",
+      "scope": "Continued expansion harvest; historical edition preservation and complete KNOW17 user prompt",
+      "source_reports": 34,
+      "frozen_source_blocks": 3001,
+      "admitted_distinct_parents": 2413,
+      "source_census_sha256": "3d93c64e63c4e2af5fa6d68bc2168b917f9d9f16659eb057bd0d1ebfacb6e62e",
+      "all_source_threads": "HOLD; unarchived",
+      "whole_project_threshold": "Not demonstrated; no substitution by scoped expansion score"
+    },
+    {
+      "date": "2026-10-17",
+      "source_ref": "S25",
+      "scope": "One source-specific intake after complete-input signal",
+      "supplied_capture": "One user-provided text attachment; capture method unknown and completeness partial",
+      "existing_capture": "Private supported rendered-main capture; three groups, six messages, 25 observed links, zero clipped messages; hidden history unknown",
+      "new_route": "docs/thread-extracts/mathews-slogan-framing-ai-brand-exposure.md",
+      "dedup": "Selected candidate already routed to product capability brief and landing draft; this extract preserves only source-specific rationale and verification limits",
+      "archive_gate": "Ready for S25 only after local preservation, Notion readback, and scoped validation; no other source hold changed",
+      "archive_ready": true,
+      "archive_action_performed": true,
+      "archive_verification": "Exact ChatGPT source ID found in archived-thread listing on 2026-10-17; no other source IDs archived."
+    }
+  ],
+  "review_addendum": "docs/harvest/2026-10-16-expansion-review.md",
+  "truncation_count_basis": "Count each message once when its item flag or any content-part flag is true. S13 includes one nested user-text flag previously omitted from the total.",
+  "tail_assessment": {
+    "record": "docs/harvest/2026-10-16-tail-coverage.json",
+    "review": "docs/harvest/2026-10-16-tail-review.md",
+    "assistant_items": 33,
+    "full_short_tail_reads": 2,
+    "section_and_sample_reviews": 31,
+    "rendered_continuation_observed": 33,
+    "original_message_or_export_complete": null,
+    "semantic_value_percent": null,
+    "new_manual_assistant_copy_requests": 0,
+    "manual_gaps_remaining": [
+      "Web Page Expanded generated output",
+      "Web Page Creation generated output"
+    ],
+    "scope": "Rendered continuation alignment and bounded comparison, not full original-message or semantic preservation.",
+    "recovered_user_prompt": {
+      "source_ref": "S13",
+      "end_marker_observed": true,
+      "sha256": "47f3baeb24bfd8877cb15aaa46f5c8c67cd0a6e9eb4119b98fe43db655d99e49",
+      "route": "prompts/reputation-resilience-forge.md",
+      "scope": "Complete observed user prompt after Show more; no hidden-history claim",
+      "captured_region_characters": 21387,
+      "source_contract_characters_through_end_marker": 21197,
+      "capture_boundary": "Rendered user region includes trailing displayed file/title and timing labels; standalone source contract stops at its explicit end marker."
+    }
+  },
+  "historical_archive_candidates": {
+    "source_refs": [
+      "S18",
+      "S19",
+      "S20",
+      "S24",
+      "S25",
+      "S26"
+    ],
+    "basis": "Prior candidate assessment only. Superseded as an action gate by the user hold on 2026-10-16; retained for provenance."
+  },
+  "archive_policy": {
+    "current_action": "S25 archived after per-source gates; other 25 source threads remain on hold",
+    "authority": "Source-specific intake instruction, 2026-10-17; earlier holds remain for all other sources",
+    "source_archiving_authorized": true,
+    "authorized_source_refs": [
+      "S25"
+    ],
+    "source_archiving_performed": true,
+    "verification": "Exact ChatGPT source ID found in archived-thread listing on 2026-10-17."
+  },
+  "expansion_retention": {
+    "record": "docs/harvest/2026-10-16-retention.json",
+    "review": "docs/harvest/2026-10-16-retention-review.md",
+    "scope": "All34 observed expansion reports only; not whole-Project retained value",
+    "source_census_sha256": "3d93c64e63c4e2af5fa6d68bc2168b917f9d9f16659eb057bd0d1ebfacb6e62e",
+    "edition_manifest_sha256": "5a5b8ffa8f64a5b39b346efdffa72c5724f1a92e71499d9fcae8a22556cad608",
+    "reports": 34,
+    "source_blocks": 3001,
+    "admitted_distinct_parents": 2413,
+    "mechanical_fidelity": "PASS",
+    "source_evidence_status": "Historical unverified claims, analysis, proposals and citation leads",
+    "review_status": "Completed analytical adjudication: scoped deterministic preservation supported; formal Equilibrium release approval deferred for missing holdout",
+    "whole_project_percent": null,
+    "current_fact_validation": "NOT RUN",
+    "runtime_ingestion": "NOT AUTHORIZED; no runtime implemented",
+    "uniform_full_parents": 2413,
+    "uniform_total_parents": 2413,
+    "scoped_block_proxy_percent": 100.0,
+    "formal_release_approval": "defer-for-evidence; not required for saving the authorized private drafts",
+    "adjudication_sha256": "669a6050cbe449aa5378d809f88ff11fa0a3f76956db2ea592d7e786ef4b1dd0"
+  },
+  "original_payload_recovery": {
+    "date": "2026-10-17",
+    "record": "docs/harvest/2026-10-17-original-payload-recovery.json",
+    "review": "docs/harvest/2026-10-17-original-payload-recovery.md",
+    "observed_project_shared_originals_recovered": 17,
+    "new_byte_payloads": 14,
+    "identity_limit": "Project-shared source identity established; equality with same-name Chat attachments unverified",
+    "whole_project_percent": null,
+    "source_hold": "ALL26; no source archiving"
+  }
+}
