@@ -41,15 +41,15 @@ Each folder's `origin/history/versions.json` maps historical filenames and sourc
 
 ## GitHub records
 
-The conversation records contain 13 issues and 60 pull requests, including review decisions, inline comments and thread resolution. The service-records archives contain available workflow and job results, plus the retained log text and its checksum. The adjacent indexes record any expired or unavailable logs. Original source Git refs and Windows-only state for the first fifteen repositories were independently restored in the owner's private operations area before retirement.
+The conversation records contain 13 issues and 60 pull requests, including review decisions, inline comments and thread resolution. The service-records archives contain available workflow and job results, plus the retained log text and its checksum. The adjacent indexes record any expired or unavailable logs. Original source Git refs and Windows-only state for the first fifteen repositories were independently restored in the owner's private operations area. The archives cover 675 workflow runs, 687 attempts and 712 jobs. GitHub supplied 398 log archives containing 796 text entries. It reported the other 289 attempts' logs had expired.
 
 ### Open when captured
 
-| Original item | Title | Transferred record |
-| --- | --- | --- |
-| askjamie-brg01-lego #7 | Technology version drift detected | [Original discussion and state](../../capabilities/brandguard/lego/origin/github-conversations.json) |
-| askjamie-brg02-starbucks #4 | Technology drift: review Replit Nix channel | [Original discussion and state](../../capabilities/brandguard/starbucks/origin/github-conversations.json) |
-| askjamie-brg03-brooks-running #6 | build(deps): bump pyyaml from 6.0.3 to 6.0.4 | [Original discussion and state](../../capabilities/brandguard/brooks-running/origin/github-conversations.json) |
-| askjamie-brg07-lvmh #5 | Technology version inventory needs review | [Original discussion and state](../../capabilities/brandguard/lvmh/origin/github-conversations.json) |
-| askjamie-brg09-coca-cola #5 | chore: refresh technology versions | [Original discussion and state](../../capabilities/brandguard/coca-cola/origin/github-conversations.json) |
-| askjamie-brg11-scheels #7 | Technology drift detected | [Original discussion and state](../../capabilities/brandguard/scheels/origin/github-conversations.json) |
+| Original item | Title | Transferred record | FoundRy follow-up |
+| --- | --- | --- | --- |
+| askjamie-brg01-lego #7 | Technology version drift detected | [Original discussion and state](../../capabilities/brandguard/lego/origin/github-conversations.json) | [#227](https://github.com/OKHP3/askjamie-foundry/issues/227) |
+| askjamie-brg02-starbucks #4 | Technology drift: review Replit Nix channel | [Original discussion and state](../../capabilities/brandguard/starbucks/origin/github-conversations.json) | [#228](https://github.com/OKHP3/askjamie-foundry/issues/228) |
+| askjamie-brg03-brooks-running #6 | build(deps): bump pyyaml from 6.0.3 to 6.0.4 | [Original discussion and state](../../capabilities/brandguard/brooks-running/origin/github-conversations.json) | [#229](https://github.com/OKHP3/askjamie-foundry/issues/229) |
+| askjamie-brg07-lvmh #5 | Technology version inventory needs review | [Original discussion and state](../../capabilities/brandguard/lvmh/origin/github-conversations.json) | [#230](https://github.com/OKHP3/askjamie-foundry/issues/230) |
+| askjamie-brg09-coca-cola #5 | chore: refresh technology versions | [Original discussion and state](../../capabilities/brandguard/coca-cola/origin/github-conversations.json) | [#231](https://github.com/OKHP3/askjamie-foundry/issues/231) |
+| askjamie-brg11-scheels #7 | Technology drift detected | [Original discussion and state](../../capabilities/brandguard/scheels/origin/github-conversations.json) | [#232](https://github.com/OKHP3/askjamie-foundry/issues/232) |
