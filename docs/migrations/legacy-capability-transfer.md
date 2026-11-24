@@ -45,6 +45,9 @@ The conversation records contain 13 issues and 60 pull requests, including revie
 
 ### Open when captured
 
+Each folder's `origin/github/timeline.json` preserves event order, authors
+and reactions. The 17 files contain 664 events and 22 reactions.
+
 | Original item | Title | Transferred record | FoundRy follow-up |
 | --- | --- | --- | --- |
 | askjamie-brg01-lego #7 | Technology version drift detected | [Original discussion and state](../../capabilities/brandguard/lego/origin/github-conversations.json) | [#227](https://github.com/OKHP3/askjamie-foundry/issues/227) |

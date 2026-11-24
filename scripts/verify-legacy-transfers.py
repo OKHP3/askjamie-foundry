@@ -51,7 +51,8 @@ def verify_records(revision, dest, repository, source_commit, target_files, hist
 
     service = json.loads(read("github/service-records-index.json"))
     conversations = json.loads(read("github-conversations.json"))
-    if any(record["source_repository"] != repository for record in (service, conversations)):
+    timeline = json.loads(read("github/timeline.json"))
+    if any(record["source_repository"] != repository for record in (service, conversations, timeline)):
         raise ValueError(f"GitHub record identity mismatch at {dest}")
     archive = read("github/service-records.zip")
     if len(archive) != service["bytes"] or hashlib.sha256(archive).hexdigest() != service["sha256"]:
