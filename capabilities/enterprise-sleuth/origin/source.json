@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-aj03-enterprise-sleuth",
+  "source_commit": "ab7341ad27ee0889c46a0ed8f75b2758e8037b1d",
+  "source_tree": "da9ed19bd4c3aa6deb8c6a06b8ee281aa9c01a70",
+  "destination": "capabilities/enterprise-sleuth",
+  "stored_tree": "da9ed19bd4c3aa6deb8c6a06b8ee281aa9c01a70",
+  "source_files": 465,
+  "stored_files": 465,
+  "stored_bytes": 1851121,
+  "path_mode_size_sha256_digest": "a54f07f2bc7583cc9194437bac43315fd19e9676b1993920149d4c7ed2fa6b90"
+}

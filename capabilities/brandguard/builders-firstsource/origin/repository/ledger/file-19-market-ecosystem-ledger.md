@@ -1,0 +1,17 @@
+# File #19 Market and Ecosystem Ledger
+
+Rolling public-source ledger for BRG00.
+
+This file belongs to the **dynamic intelligence layer**. It should collect time-sensitive market and ecosystem observations while the static ontology stays in `README.md`, `prompts/`, `ops/`, and the core repo docs.
+
+## Seed entries
+
+| entry_id | file_no | entry_date | topic | category | public_source | summary | impact | confidence | next_review | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| F19-0001 | 19 | 2026-06-11 | Architecture split | governance | [README.md](../README.md) | The repo now separates static ontology from the rolling ledger. | Establishes the boundary for future public-source updates. | high | 2026-09-01 | Seed row; future entries should be append-only. |
+| F19-0002 | 19 | 2026-06-11 | Public-source routing | routing | [README.md](../README.md) | Official routing remains public and non-transactional, with action directed to BFS-owned public channels. | Keeps the model aligned with the repo's boundary rules. | high | 2026-09-01 | Use this ledger only for public, observable changes. |
+
+## Append rule
+
+Append new rows to the table above. Do not rewrite older rows unless correcting an error or updating a public verification date.
+

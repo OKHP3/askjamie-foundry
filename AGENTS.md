@@ -10,7 +10,7 @@ The product contract is `docs/skill-first-foundry.md`.
 - Use `skills/<name>/SKILL.md` for capability products and `adapters/` for host
   packages. `.agents/skills/` remains contributor tooling.
 - Prefer short capability subtrees at `capabilities/<capability-slug>/`.
-  Organization-specific public routing pages contain navigation only.
+  Organization-specific pages link to the transferred files and verification record where present.
   Registry `repo` identities remain lineage, with explicit migration records.
 - Every registry entry requires migration destination, status, storage, and
   source commit fields. Package kind, portability, and adapter status must agree
@@ -104,10 +104,12 @@ Confirmed by `manifest.yaml`:
 - Parent foundry: `OKHP3/OverKill-Hill`
 - Parent FoundRy relay: `OKHP3/OverKill-Hill-FoundRy`
 
-The registry contains nine governed child-repository entries. Earlier AJ01 and
-BRG00 staged capability material was removed from this checkout on 2026-07-27.
-The remaining entries are cataloged as planned or draft work unless their
-registry status says otherwise.
+The registry contains nineteen governed repository entries. On 2026-11-24 the
+owner selected the 17 legacy AJ03, AJ04 and BrandGuard repositories for transfer
+into the public capability folders. Each transfer records its source and stored
+tree in `origin/source.json`. See `docs/migrations/legacy-capability-transfer.md`
+for coverage and `scripts/verify-legacy-transfers.py` for verification.
+Private workspace and product controls continue to apply to other material.
 
 ## Repository structure and entry points
 

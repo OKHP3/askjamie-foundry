@@ -1,0 +1,245 @@
+{
+  "records": [
+    {
+      "assignees": [
+        "Copilot",
+        "OKHP3"
+      ],
+      "author": "Copilot",
+      "base_sha": "6d383fff233313e03709052e5fe5c681082161f4",
+      "body": "Sets up AskJamie-GPT-BRG09 as a versioned source-of-truth repository for GPT-BRG09: OKHP³ BrandGuard™ — Coca-Cola brand governance.\n\n## Changes\n\n- **Folder structure**: Created `/src`, `/prompts`, `/build`, `/eval`, `/ops` directories with `.gitkeep` files for Git tracking\n- **Manifest**: Added `gpt_manifest.yaml` with project metadata, structure definitions, and integration links\n- **Documentation**: Enhanced README with Quick Links table (AskJamie, Coca-Cola site, Notion, Custom GPT, ChatGPT Project), repository structure overview, and project description\n\n## Quick Links Table\n\n```markdown\n| Resource | Link |\n|----------|------|\n| 🔍 **AskJamie Page** | [askjamie.ai/gpt-brg09](https://askjamie.ai/gpt-brg09) |\n| 🥤 **Coca-Cola Site** | [coca-cola.com](https://www.coca-cola.com) |\n| 📝 **Notion Workspace** | [notion.so/okhp3/gpt-brg09]([private source link omitted]) |\n| 🤖 **Custom GPT** | [chat.openai.com/g/g-brg09]([private source link omitted]) |\n| 💬 **ChatGPT Project** | [chatgpt.com/projects/gpt-brg09]([private source link omitted]) |\n```\n\nRepository now serves as the central hub for versioned prompts, knowledge packs, evaluation harness, and integration wiring.\n\n<!-- START COPILOT CODING AGENT SUFFIX -->\n\n\n\n<!-- START COPILOT ORIGINAL PROMPT -->\n\n\n\n<details>\n\n<summary>Original prompt</summary>\n\n> Create a new GitHub repo named “AskJamie-GPT-BRG09”. Init with README. Purpose: storage + versioned source-of-truth for GPT‑BRG09: OKHP³ BrandGuard™ — Coca‑Cola (“You can’t teach the world to sing if AI forgets your lyrics.”). Add folders: /src /prompts /build /eval /ops. Add gpt_manifest.yaml + README link row (AskJamie page, Coca‑Cola site, Notion, Custom GPT, ChatGPT Project).\n> \n\n\n</details>\n\n\n\n<!-- START COPILOT CODING AGENT TIPS -->\n---\n\n✨ Let Copilot coding agent [set things up for you](https://github.com/OKHP3/AskJamie-GPT-BRG09/issues/new?title=✨+Set+up+Copilot+instructions&body=Configure%20instructions%20for%20this%20repository%20as%20documented%20in%20%5BBest%20practices%20for%20Copilot%20coding%20agent%20in%20your%20repository%5D%28https://gh.io/copilot-coding-agent-tips%29%2E%0A%0A%3COnboard%20this%20repo%3E&assignees=copilot) — coding agent works faster and does higher quality work when set up for your repo.\n",
+      "closed_at": "2025-12-26T15:53:33Z",
+      "comments": [],
+      "commit_shas": [
+        "58b842e8f12f4df3d81ae8e0a26ad88f894ee03f",
+        "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+        "10019016725488040032afe97dbd57bc8a820dbc"
+      ],
+      "created_at": "2025-12-23T20:01:42Z",
+      "draft": false,
+      "head_sha": "10019016725488040032afe97dbd57bc8a820dbc",
+      "id": 3758420393,
+      "kind": "pull_request",
+      "labels": [],
+      "locked": false,
+      "merge_commit_sha": "d0fe1f02d248d3988e1503947c9fe82706e30d5e",
+      "merged": true,
+      "merged_at": "2025-12-26T15:53:33Z",
+      "number": 1,
+      "original_url": "https://github.com/OKHP3/askjamie-brg09-coca-cola/pull/1",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+          "id": 3611508191,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-24T19:47:57Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+          "id": 3613636416,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:52:49Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+          "id": 3613636788,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:53:08Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "10019016725488040032afe97dbd57bc8a820dbc",
+          "id": 3613637393,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:53:44Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "10019016725488040032afe97dbd57bc8a820dbc",
+          "id": 3613637486,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:53:52Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "10019016725488040032afe97dbd57bc8a820dbc",
+          "id": 3613637635,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:54:03Z"
+        }
+      ],
+      "state": "closed",
+      "title": "Initialize repository structure for GPT-BRG09: OKHP³ BrandGuard™",
+      "updated_at": "2025-12-26T15:54:11Z"
+    },
+    {
+      "assignees": [],
+      "author": "dependabot[bot]",
+      "base_sha": "b916f0d4e1e0812285ca931d58353d88ae3869d4",
+      "body": "Bumps the github-actions group with 2 updates in the / directory: [actions/checkout](https://github.com/actions/checkout) and [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request).\n\nUpdates `actions/checkout` from 4 to 7\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/releases\">actions/checkout's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>block checking out fork pr for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Bump actions/publish-immutable-action from 0.0.3 to 0.0.4 in the minor-actions-dependencies group across 1 directory by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2458\">actions/checkout#2458</a></li>\n<li>Bump flatted from 3.3.1 to 3.4.2 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2460\">actions/checkout#2460</a></li>\n<li>Bump js-yaml from 4.1.0 to 4.2.0 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2461\">actions/checkout#2461</a></li>\n<li>Bump <code>@​actions/core</code> and <code>@​actions/tool-cache</code> and Remove uuid by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2459\">actions/checkout#2459</a></li>\n<li>upgrade module to esm and update dependencies by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2463\">actions/checkout#2463</a></li>\n<li>Bump the minor-npm-dependencies group across 1 directory with 3 updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2462\">actions/checkout#2462</a></li>\n<li>getting ready for checkout v7 release by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2464\">actions/checkout#2464</a></li>\n<li>update error wording by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2467\">actions/checkout#2467</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v7.0.0\">https://github.com/actions/checkout/compare/v6.0.3...v7.0.0</a></p>\n<h2>v6.1.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li><strong>[BREAKING]</strong> backport <code>allow-unsafe-pr-checkout</code> to v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2500\">actions/checkout#2500</a></li>\n<li>backport fixes to releases-v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2527\">actions/checkout#2527</a></li>\n</ul>\n<p><a href=\"https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/\">https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/</a> for more details about this breaking change</p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v6.1.0\">https://github.com/actions/checkout/compare/v6.0.3...v6.1.0</a></p>\n<h2>v6.0.3</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update changelog by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2357\">actions/checkout#2357</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>Update changelog for v6.0.3 by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2446\">actions/checkout#2446</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6...v6.0.3\">https://github.com/actions/checkout/compare/v6...v6.0.3</a></p>\n<h2>v6.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Add orchestration_id to git user-agent when ACTIONS_ORCHESTRATION_ID is set by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2355\">actions/checkout#2355</a></li>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.1...v6.0.2\">https://github.com/actions/checkout/compare/v6.0.1...v6.0.2</a></p>\n<h2>v6.0.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update all references from v5 and v4 to v6 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2314\">actions/checkout#2314</a></li>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n<li>Clarify v6 README by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2328\">actions/checkout#2328</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/blob/main/CHANGELOG.md\">actions/checkout's changelog</a>.</em></p>\n<blockquote>\n<h1>Changelog</h1>\n<h2>v7.0.1</h2>\n<ul>\n<li>Skip running unsafe pr check if input is default by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2518\">actions/checkout#2518</a></li>\n<li>Trim only ascii whitespace for branch by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2521\">actions/checkout#2521</a></li>\n<li>Escape values passed to --unset by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2530\">actions/checkout#2530</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v7.0.0</h2>\n<ul>\n<li>Block checking out fork PR for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v6.0.3</h2>\n<ul>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<h2>v6.0.2</h2>\n<ul>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<h2>v6.0.1</h2>\n<ul>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n</ul>\n<h2>v6.0.0</h2>\n<ul>\n<li>Persist creds to a separate file by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2286\">actions/checkout#2286</a></li>\n<li>Update README to include Node.js 24 support details and requirements by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2248\">actions/checkout#2248</a></li>\n</ul>\n<h2>v5.0.1</h2>\n<ul>\n<li>Port v6 cleanup to v5 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2301\">actions/checkout#2301</a></li>\n</ul>\n<h2>v5.0.0</h2>\n<ul>\n<li>Update actions checkout to use node 24 by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2226\">actions/checkout#2226</a></li>\n</ul>\n<h2>v4.3.1</h2>\n<ul>\n<li>Port v6 cleanup to v4 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2305\">actions/checkout#2305</a></li>\n</ul>\n<h2>v4.3.0</h2>\n<ul>\n<li>docs: update README.md by <a href=\"https://github.com/motss\"><code>@​motss</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1971\">actions/checkout#1971</a></li>\n<li>Add internal repos for checking out multiple repositories by <a href=\"https://github.com/mouismail\"><code>@​mouismail</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1977\">actions/checkout#1977</a></li>\n<li>Documentation update - add recommended permissions to Readme by <a href=\"https://github.com/benwells\"><code>@​benwells</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2043\">actions/checkout#2043</a></li>\n<li>Adjust positioning of user email note and permissions heading by <a href=\"https://github.com/joshmgross\"><code>@​joshmgross</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2044\">actions/checkout#2044</a></li>\n<li>Update README.md by <a href=\"https://github.com/nebuk89\"><code>@​nebuk89</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2194\">actions/checkout#2194</a></li>\n<li>Update CODEOWNERS for actions by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2224\">actions/checkout#2224</a></li>\n<li>Update package dependencies by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2236\">actions/checkout#2236</a></li>\n</ul>\n<h2>v4.2.2</h2>\n<ul>\n<li><code>url-helper.ts</code> now leverages well-known environment variables by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1941\">actions/checkout#1941</a></li>\n<li>Expand unit test coverage for <code>isGhes</code> by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1946\">actions/checkout#1946</a></li>\n</ul>\n<h2>v4.2.1</h2>\n<ul>\n<li>Check out other refs/* by commit if provided, fall back to ref by <a href=\"https://github.com/orhantoy\"><code>@​orhantoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1924\">actions/checkout#1924</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1\"><code>3d3c42e</code></a> prep v7.0.1 release (<a href=\"https://redirect.github.com/actions/checkout/issues/2531\">#2531</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/28802689a136bfcdb721715abd713740beecbe07\"><code>2880268</code></a> escape values passed to --unset (<a href=\"https://redirect.github.com/actions/checkout/issues/2530\">#2530</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/12cd2235efa0937479335606d7c3ac9f6c0973b1\"><code>12cd223</code></a> trim only ascii whitespace for branch (<a href=\"https://redirect.github.com/actions/checkout/issues/2521\">#2521</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/62661c4e71a304b2823ed026347b8d34c3eac541\"><code>62661c4</code></a> skip running unsafe pr check if input is default (<a href=\"https://redirect.github.com/actions/checkout/issues/2518\">#2518</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8d4307400f9427dba7cb98e488d6ab85f1cec5f\"><code>e8d4307</code></a> Bump the minor-actions-dependencies group with 2 updates (<a href=\"https://redirect.github.com/actions/checkout/issues/2499\">#2499</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/631c942040754b6e095e929c1677c07e10ed4f87\"><code>631c942</code></a> eslint 9 (<a href=\"https://redirect.github.com/actions/checkout/issues/2474\">#2474</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/4f1f4aec02e41874fa0262ea8ff5172d7978ad1e\"><code>4f1f4ae</code></a> Bump actions/upload-artifact from 4 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2476\">#2476</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/ba097532fb203f7e88c9c3c0b899b49469908a92\"><code>ba09753</code></a> Bump actions/checkout from 6 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2488\">#2488</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/b9e0990d219a03df7633c93f6f005a8fecbcab22\"><code>b9e0990</code></a> Bump docker/login-action from 3.3.0 to 4.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2479\">#2479</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8cb398be4a550817e382abf69e4c12c76fce1f2\"><code>e8cb398</code></a> Bump docker/build-push-action from 6.5.0 to 7.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2478\">#2478</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/checkout/compare/v4...v7\">compare view</a></li>\n</ul>\n</details>\n<br />\n\nUpdates `peter-evans/create-pull-request` from 7 to 8\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/peter-evans/create-pull-request/releases\">peter-evans/create-pull-request's releases</a>.</em></p>\n<blockquote>\n<h2>Create Pull Request v8.0.0</h2>\n<h2>What's new in v8</h2>\n<ul>\n<li>Requires <a href=\"https://github.com/actions/runner/releases/tag/v2.327.1\">Actions Runner v2.327.1</a> or later if you are using a self-hosted runner for Node 24 support.</li>\n</ul>\n<h2>What's Changed</h2>\n<ul>\n<li>chore: Update checkout action version to v6 by <a href=\"https://github.com/yonas\"><code>@​yonas</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4258\">peter-evans/create-pull-request#4258</a></li>\n<li>Update actions/checkout references to <a href=\"https://github.com/v6\"><code>@​v6</code></a> in docs by <a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4259\">peter-evans/create-pull-request#4259</a></li>\n<li>feat: v8 by <a href=\"https://github.com/peter-evans\"><code>@​peter-evans</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4260\">peter-evans/create-pull-request#4260</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/yonas\"><code>@​yonas</code></a> made their first contribution in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4258\">peter-evans/create-pull-request#4258</a></li>\n<li><a href=\"https://github.com/Copilot\"><code>@​Copilot</code></a> made their first contribution in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4259\">peter-evans/create-pull-request#4259</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/peter-evans/create-pull-request/compare/v7.0.11...v8.0.0\">https://github.com/peter-evans/create-pull-request/compare/v7.0.11...v8.0.0</a></p>\n<h2>Create Pull Request v7.0.11</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>fix: restrict remote prune to self-hosted runners by <a href=\"https://github.com/peter-evans\"><code>@​peter-evans</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4250\">peter-evans/create-pull-request#4250</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/peter-evans/create-pull-request/compare/v7.0.10...v7.0.11\">https://github.com/peter-evans/create-pull-request/compare/v7.0.10...v7.0.11</a></p>\n<h2>Create Pull Request v7.0.10</h2>\n<p>⚙️ Fixes an issue where updating a pull request failed when targeting a forked repository with the same owner as its parent.</p>\n<h2>What's Changed</h2>\n<ul>\n<li>build(deps): bump the github-actions group with 2 updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4235\">peter-evans/create-pull-request#4235</a></li>\n<li>build(deps-dev): bump prettier from 3.6.2 to 3.7.3 in the npm group by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4240\">peter-evans/create-pull-request#4240</a></li>\n<li>fix: provider list pulls fallback for multi fork same owner by <a href=\"https://github.com/peter-evans\"><code>@​peter-evans</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4245\">peter-evans/create-pull-request#4245</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/obnyis\"><code>@​obnyis</code></a> made their first contribution in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4064\">peter-evans/create-pull-request#4064</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/peter-evans/create-pull-request/compare/v7.0.9...v7.0.10\">https://github.com/peter-evans/create-pull-request/compare/v7.0.9...v7.0.10</a></p>\n<h2>Create Pull Request v7.0.9</h2>\n<p>⚙️ Fixes an <a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4228\">incompatibility</a> with the recently released <code>actions/checkout@v6</code>.</p>\n<h2>What's Changed</h2>\n<ul>\n<li>~70 dependency updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a></li>\n<li>docs: fix workaround description about <code>ready_for_review</code> by <a href=\"https://github.com/ybiquitous\"><code>@​ybiquitous</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/3939\">peter-evans/create-pull-request#3939</a></li>\n<li>Docs: <code>add-paths</code> default behavior by <a href=\"https://github.com/joeflack4\"><code>@​joeflack4</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/3928\">peter-evans/create-pull-request#3928</a></li>\n<li>docs: update to create-github-app-token v2 by <a href=\"https://github.com/Goooler\"><code>@​Goooler</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4063\">peter-evans/create-pull-request#4063</a></li>\n<li>Fix compatibility with actions/checkout@v6 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4230\">peter-evans/create-pull-request#4230</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/joeflack4\"><code>@​joeflack4</code></a> made their first contribution in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/3928\">peter-evans/create-pull-request#3928</a></li>\n<li><a href=\"https://github.com/Goooler\"><code>@​Goooler</code></a> made their first contribution in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4063\">peter-evans/create-pull-request#4063</a></li>\n<li><a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> made their first contribution in <a href=\"https://redirect.github.com/peter-evans/create-pull-request/pull/4230\">peter-evans/create-pull-request#4230</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/5f6978faf089d4d20b00c7766989d076bb2fc7f1\"><code>5f6978f</code></a> fix: retry post-creation API calls on 422 eventual consistency errors (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4356\">#4356</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/d32e88dac789dcc7906e7d26f69f24116fa9c97d\"><code>d32e88d</code></a> build(deps-dev): bump the npm group with 3 updates (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4349\">#4349</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/8170bccad11c0df62542c04dcaefe36d342dfd39\"><code>8170bcc</code></a> build(deps-dev): bump handlebars from 4.7.8 to 4.7.9 (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4344\">#4344</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/00418193b417f888dbf1d993c5c0d31d27fdc7de\"><code>0041819</code></a> build(deps): bump picomatch (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4339\">#4339</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/b993918c8536b6d44706130734d5456879762b27\"><code>b993918</code></a> build(deps-dev): bump flatted from 3.3.1 to 3.4.2 (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4334\">#4334</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/36d7c8468b48f9c2f8f29e260e82f10d4b90d2bd\"><code>36d7c84</code></a> build(deps-dev): bump undici from 6.23.0 to 6.24.0 (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4328\">#4328</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/a45d1fb447fcaf601166e405fd4f335cde1a8aa8\"><code>a45d1fb</code></a> build(deps): bump <code>@​tootallnate/once</code> and jest-environment-jsdom (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4323\">#4323</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/3499eb61835cc0015c0b786e203d74b1e8f55e43\"><code>3499eb6</code></a> build(deps): bump the github-actions group with 2 updates (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4316\">#4316</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/3f3b473b8c148f5a7520efb4d1f9a70eea3d9d1f\"><code>3f3b473</code></a> build(deps): bump minimatch (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4311\">#4311</a>)</li>\n<li><a href=\"https://github.com/peter-evans/create-pull-request/commit/6699836a213cf8b28c4f0408a404a6ac79d4458a\"><code>6699836</code></a> build(deps-dev): bump the npm group with 2 updates (<a href=\"https://redirect.github.com/peter-evans/create-pull-request/issues/4305\">#4305</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/peter-evans/create-pull-request/compare/v7...v8\">compare view</a></li>\n</ul>\n</details>\n<br />\n",
+      "closed_at": "2026-07-30T21:27:33Z",
+      "comments": [],
+      "commit_shas": [
+        "bd3fcd09c5c2f2cf61238eee155db635e46e48bb"
+      ],
+      "created_at": "2026-07-21T00:01:17Z",
+      "draft": false,
+      "head_sha": "bd3fcd09c5c2f2cf61238eee155db635e46e48bb",
+      "id": 4934038095,
+      "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "locked": false,
+      "merge_commit_sha": "16e5862cfd2c4f029932c5b88f07bc8d0213e177",
+      "merged": true,
+      "merged_at": "2026-07-30T21:27:33Z",
+      "number": 2,
+      "original_url": "https://github.com/OKHP3/askjamie-brg09-coca-cola/pull/2",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [],
+      "state": "closed",
+      "title": "Bump the github-actions group across 1 directory with 2 updates",
+      "updated_at": "2026-07-30T21:27:38Z"
+    },
+    {
+      "assignees": [],
+      "author": "OKHP3",
+      "base_sha": "5d8ead52243cd7c589b44619543a9933e4b26ef9",
+      "body": "## Summary\\n- handle gzip-compressed upstream responses in the technology refresh script\\n- preserve the existing standard-library-only implementation\\n\\n## Root cause\\nThe Python.org endpoint returned a gzip payload despite the identity request header; direct UTF-8 decoding failed on byte 0x8b.\\n\\n## Validation\\n- fetched and decoded the Python.org page locally\\n- git diff --check\\n\\nThe pre-existing generated inventory update remains uncommitted in the local mirror.",
+      "closed_at": "2026-08-10T23:41:46Z",
+      "comments": [],
+      "commit_shas": [
+        "dd338a5f081f09f7de9591a75bdc2413a5801a81"
+      ],
+      "created_at": "2026-08-10T23:41:37Z",
+      "draft": false,
+      "head_sha": "dd338a5f081f09f7de9591a75bdc2413a5801a81",
+      "id": 5115279524,
+      "kind": "pull_request",
+      "labels": [],
+      "locked": false,
+      "merge_commit_sha": "ed98acff3f95039b8dc7a93655f3764ac7bd59dc",
+      "merged": true,
+      "merged_at": "2026-08-10T23:41:46Z",
+      "number": 3,
+      "original_url": "https://github.com/OKHP3/askjamie-brg09-coca-cola/pull/3",
+      "review_comments": [
+        {
+          "author": "Copilot",
+          "body": "`Content-Encoding` can legally include multiple codings (e.g. \"gzip, br\") or vary in casing. Checking for equality with \"gzip\" may miss compressed responses and reintroduce the UTF-8 decode failure. Also, if decompression fails, the exception lacks URL/header context for debugging.",
+          "commit_id": "dd338a5f081f09f7de9591a75bdc2413a5801a81",
+          "created_at": "2026-08-10T23:43:03Z",
+          "id": 3754256336,
+          "line": 26,
+          "original_commit_id": "dd338a5f081f09f7de9591a75bdc2413a5801a81",
+          "original_line": 26,
+          "path": "ops/check_technology_updates.py",
+          "pull_request_review_id": 4901829204,
+          "side": "RIGHT",
+          "updated_at": "2026-08-10T23:43:04Z"
+        }
+      ],
+      "review_threads": [
+        {
+          "comment_ids": [
+            3754256336
+          ],
+          "id": "PRRT_kwDOQt9U6s6YEo0-",
+          "isOutdated": false,
+          "isResolved": false
+        }
+      ],
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "body": "## Pull request overview\n\nThis PR updates the `ops/check_technology_updates.py` technology refresh utility to correctly handle upstream HTTP responses that arrive gzip-compressed, while keeping the script standard-library-only.\n\n**Changes:**\n- Detect gzip-compressed payloads (via `Content-Encoding` header or gzip magic bytes) before UTF-8 decoding.\n- Decompress gzip payloads and then decode to text for downstream parsing.\n\n\n\n\n\n\n\n---\n\n💡 <a href=\"/OKHP3/askjamie-brg09-coca-cola/new/main?filename=.github/skills/code-review/SKILL.md\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Add a `code-review` agent skill</a> or configure MCP servers for context-aware, tailored reviews. <a href=\"https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review#mcp-servers-and-agent-skills\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more in the docs.</a>",
+          "commit_id": "dd338a5f081f09f7de9591a75bdc2413a5801a81",
+          "id": 4901829204,
+          "state": "COMMENTED",
+          "submitted_at": "2026-08-10T23:43:04Z"
+        }
+      ],
+      "state": "closed",
+      "title": "fix: decode compressed technology audit responses",
+      "updated_at": "2026-08-10T23:43:04Z"
+    },
+    {
+      "assignees": [],
+      "author": "github-actions[bot]",
+      "base_sha": "ed98acff3f95039b8dc7a93655f3764ac7bd59dc",
+      "body": "Automated weekly refresh of the stable versions recorded in `ops/technology-versions.json`.\n\nReview upstream release notes and repository compatibility before merging.",
+      "closed_at": "2026-08-10T23:43:26Z",
+      "comments": [],
+      "commit_shas": [
+        "d52efec4964b4407ffa79223452029a3a4602522"
+      ],
+      "created_at": "2026-08-10T23:42:57Z",
+      "draft": false,
+      "head_sha": "d52efec4964b4407ffa79223452029a3a4602522",
+      "id": 5115286399,
+      "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "automation"
+      ],
+      "locked": false,
+      "merge_commit_sha": "ec45b2ace89b8487f84b29be7214ff28beb09a52",
+      "merged": true,
+      "merged_at": "2026-08-10T23:43:26Z",
+      "number": 4,
+      "original_url": "https://github.com/OKHP3/askjamie-brg09-coca-cola/pull/4",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [],
+      "state": "closed",
+      "title": "chore: refresh technology versions",
+      "updated_at": "2026-08-10T23:43:27Z"
+    },
+    {
+      "assignees": [],
+      "author": "github-actions[bot]",
+      "base_sha": "e7098f021dccc0eca1e1161f2fa6fdad6526c79f",
+      "body": "Automated weekly refresh of the stable versions recorded in `ops/technology-versions.json`.\n\nReview upstream release notes and repository compatibility before merging.",
+      "comments": [],
+      "commit_shas": [
+        "5147829e912bc99ecc44316f342d1433661e2677"
+      ],
+      "created_at": "2026-10-05T09:47:24Z",
+      "draft": false,
+      "head_sha": "5147829e912bc99ecc44316f342d1433661e2677",
+      "id": 5709855866,
+      "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "automation"
+      ],
+      "locked": false,
+      "merge_commit_sha": "3b3188364955b92c187fde4d551dbf2e0dcae58d",
+      "merged": false,
+      "number": 5,
+      "original_url": "https://github.com/OKHP3/askjamie-brg09-coca-cola/pull/5",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [],
+      "state": "open",
+      "title": "chore: refresh technology versions",
+      "updated_at": "2026-11-23T09:30:03Z"
+    }
+  ],
+  "scope": "issues, pull requests, comments, reviews, and thread resolution",
+  "source_repository": "OKHP3/askjamie-brg09-coca-cola"
+}

@@ -1,0 +1,20 @@
+name: GPT-BRG06
+title: "OKHP³ BrandGuard™ - Hershey"
+description: "Your brand is melting in the AI sun. I wrapped it up."
+version: 1.0.0
+repository: OKHP3/askjamie-brg06-hershey
+
+structure:
+  prompts: "System prompts and instruction sets"
+  src/corpus: "Public-source corpus and RAG packs"
+  build: "Build artifacts and compiled resources"
+  eval: "Evaluation tests and benchmarks"
+  ops: "Operations, deployment configs, and monitoring"
+
+links:
+  hershey_official: https://www.thehersheycompany.com
+  askjamie_hub: https://askjamie.app
+  source_repo: https://github.com/OKHP3/AskJamie
+  chatgpt_project: https://chatgpt.com
+  notion_workspace: https://www.notion.so
+  custom_gpt: https://chatgpt.com/gpts

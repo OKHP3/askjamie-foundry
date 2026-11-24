@@ -1,0 +1,38 @@
+# Technology inventory
+
+Reviewed 2026-07-20.
+
+This repository is a documentation and asset repository, not a TypeScript/Vite/Tailwind application. No `package.json`, lockfile, Python dependency manifest, JavaScript/TypeScript source tree, Vite configuration, or Tailwind configuration is present.
+
+| Technology or format | Evidence in this repository | Current version in place | Latest stable checked | Action |
+| --- | --- | --- | --- | --- |
+| Python | Maintenance scripts in `.agents/skills/` | Not pinned | 3.14.6 | Add an interpreter policy if these scripts become CI dependencies |
+| Nix/Nixpkgs | `.replit` | `stable-26_05` | 26.05 | Keep the Replit channel on the reviewed stable release |
+| Git | `.git/` and repository workflow | Not pinned in repository | 2.55.0 | Keep developer tooling current outside the repository |
+| Markdown/CommonMark | `.md` files | Not declared | 0.31.2 | No update required unless a renderer/spec is pinned |
+| YAML | `gpt_manifest.yaml`, `.replit` | Not declared | 1.2.2 | Keep parser/tooling choice explicit if automation is added |
+| DOCX/Office Open XML | `knowledge/*.docx` | Not declared | Format standard, not a dependency | Validate archive integrity and rendering when packs change |
+| PDF | `knowledge/*.pdf` | Not declared | Format standard, not a dependency | Validate metadata and page rendering when packs change |
+| JavaScript | No source or manifest detected | N/A | N/A | Not part of the current solution |
+| TypeScript | No source or manifest detected | N/A | N/A | Not part of the current solution |
+| Node.js | No runtime declaration detected | N/A | N/A | Not part of the current solution |
+| Vite | No configuration or manifest detected | N/A | N/A | Not part of the current solution |
+| Tailwind CSS | No CSS/configuration or manifest detected | N/A | N/A | Not part of the current solution |
+| GitHub Actions | Added by this change | `checkout@v6`, `setup-python@v6` | Those major versions | Weekly audit is scheduled and manually runnable |
+
+## Update plan
+
+1. The canonical machine-readable inventory is `ops/technology-inventory.json`.
+2. `scripts/check_technology_versions.py` reads official release pages and detects when the checked-in latest-version snapshot is stale.
+3. `.github/workflows/technology-version-audit.yml` runs weekly and on demand. It opens or comments on one issue when review is required, then fails the job so the drift is visible.
+4. A maintainer reviews the upstream release notes, runs `python scripts/check_technology_versions.py --update`, and updates any in-repository pin such as the Replit Nix channel in a separate change.
+5. If a future application introduces JavaScript, TypeScript, Vite, Tailwind, or Python dependencies, add its manifest and lockfile first. Dependabot or Renovate can then manage package-level updates; this repository currently has no package graph for either tool to inspect.
+
+## Sources
+
+- [Python 3.14.6](https://www.python.org/downloads/release/python-3146/)
+- [NixOS stable release notes](https://nixos.org/manual/nixos/stable/release-notes)
+- [Git documentation](https://git-scm.com/docs/git)
+- [CommonMark current specification](https://spec.commonmark.org/current/)
+- [YAML 1.2.2 specification](https://yaml.org/spec/1.2.2/)
+- [GitHub Actions workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)

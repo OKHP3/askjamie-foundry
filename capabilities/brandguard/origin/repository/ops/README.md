@@ -1,0 +1,3 @@
+# Operations
+
+This folder contains operational scripts, deployment configurations, and infrastructure files.

@@ -1,0 +1,39 @@
+name: Technology version audit
+
+on:
+  schedule:
+    - cron: "17 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+      - name: Compare tracked versions with upstream stable releases
+        id: version-check
+        continue-on-error: true
+        run: python scripts/check_technology_versions.py | tee technology-version-audit.txt
+      - name: Open or update a maintenance issue
+        if: steps.version-check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          body="$(cat technology-version-audit.txt)"
+          issue_number="$(gh issue list --state open --search \"Technology inventory needs attention in:title\" --json number --jq '.[0].number')"
+          if [ -n "$issue_number" ]; then
+            gh issue comment "$issue_number" --body "$body"
+          else
+            gh issue create \
+              --title "Technology inventory needs attention" \
+              --body "The scheduled audit found an upstream version change or could not complete.\n\n$body\n\nUpdate docs/technology-inventory.json and docs/technology-inventory.md after review."
+          fi

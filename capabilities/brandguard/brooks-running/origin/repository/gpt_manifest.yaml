@@ -1,0 +1,25 @@
+name: GPT-BRG03
+title: OKHP³ BrandGuard™ — Brooks Running
+description: AskJamie™ BrandGuard for Brooks Running brand consistency and messaging
+version: 0.1.0
+type: custom-gpt
+
+metadata:
+  brand: Brooks Running
+  project: AskJamie-GPT-BRG03
+  organization: OKHP³
+  tagline: Only you can keep your stride in sync with AI's pace.
+
+links:
+  official_site: https://www.brooksrunning.com
+  lens_page: https://askjamie.bot
+  chatgpt_project: https://chatgpt.com
+  notion: https://notion.so
+  custom_gpt: https://chatgpt.com/gpts
+
+directories:
+  source: src
+  prompts: prompts
+  build: build
+  evaluation: eval
+  operations: ops

@@ -1,0 +1,16 @@
+{
+  "asset": "brg12-icon-original.png",
+  "source_ref": "S19",
+  "status": "historical user-supplied candidate; not legal clearance",
+  "sha256": "e836b157d4b92a945a387b482cd34e13c7650ddfa0edf92b868194bbfc547114",
+  "bytes": 7481258,
+  "dimensions": [
+    2048,
+    2048
+  ],
+  "capture_date": "2026-10-16",
+  "modifications": "none; original recovered bytes",
+  "observation": "Prominent Mathews wordmark with OverKill Hill mascot/credit; no explicit unofficial disclaimer within image",
+  "open_question": "User requested law/trademark confirmation; source assistant did not establish clearance",
+  "use": "Preserved for review; publication needs appropriate review and clear unofficial context"
+}

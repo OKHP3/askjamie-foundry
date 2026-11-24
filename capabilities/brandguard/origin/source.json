@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-aj04-brandguard",
+  "source_commit": "fca19c916ef95f2569762d0e8a8c0867277cc740",
+  "source_tree": "51f381b0b740fc218e67f9eee536ea1e4b3c8979",
+  "destination": "capabilities/brandguard",
+  "stored_tree": "51f381b0b740fc218e67f9eee536ea1e4b3c8979",
+  "source_files": 463,
+  "stored_files": 463,
+  "stored_bytes": 1848978,
+  "path_mode_size_sha256_digest": "04f47b6734baa0e2d017f8ad567200589bc2dab7496dbd56eccc56a517cb031f"
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/buildersfirstsource-askjamie-aj03-enterprise-sleuth",
+  "source_commit": "d852f7c94df24bc0fda274bba1df0ed6586da693",
+  "source_tree": "305526ffcd7377be00a9d387443ff46f7045c442",
+  "destination": "capabilities/enterprise-sleuth/builders-firstsource",
+  "stored_tree": "305526ffcd7377be00a9d387443ff46f7045c442",
+  "source_files": 478,
+  "stored_files": 478,
+  "stored_bytes": 2131455,
+  "path_mode_size_sha256_digest": "06d5229cd34e343c987f75a2e5b9a38c505dd0beb07cdfd625564fef725af8f8"
+}

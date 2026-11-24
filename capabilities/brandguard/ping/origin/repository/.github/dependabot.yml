@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - github-actions
+
+  # Add npm, pip, cargo, or another ecosystem here when this scaffold gains
+  # the corresponding manifest or lockfile. Dependabot only updates declared
+  # dependencies, so configuration alone does not invent a runtime.

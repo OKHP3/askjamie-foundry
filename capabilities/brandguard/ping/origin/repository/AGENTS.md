@@ -1,0 +1,126 @@
+# askjamie-brg04-ping
+
+## Project identity
+
+- Suite: AskJamie / BrandGuard
+- Project: BRG04, PING BrandGuard
+- Repository: https://github.com/OKHP3/askjamie-brg04-ping
+- Root: /Volumes/OKH-Local/04_GitHub_Mirrors/askjamie-brg04-ping
+- License: MIT, per LICENSE
+- Current status: In development. This repository is a content and packaging scaffold, not a running application.
+
+## Purpose and direction
+
+Confirmed by README.md, gpt_manifest.yaml, and the knowledge/ files:
+
+- The repository stores versioned source material for GPT-BRG04, a PING-focused AskJamie BrandGuard lens system.
+- Its intended value is evidence-backed PING brand governance and content control.
+- The knowledge set covers PING history, mission and philosophy, products and services, audiences, innovation, sustainability, reputation risks, product comparison, FAQs, and related research.
+- Intended external references include ping.com, a Notion project anchor, a ChatGPT Project workbench, and a published Custom GPT. The manifest currently leaves several of those URLs as placeholders.
+
+Inferred from the repository layout, not yet implemented:
+
+- Mission: turn the maintained PING knowledge and prompt source into a reliable BrandGuard assistant that can identify brand risks, explain evidence, and guide compliant content decisions.
+- Vision: provide a durable PING brand-control workflow from source research through retrieval, evaluation, build, release, and operational monitoring.
+
+Do not describe this repository as a live monitor, production service, deployed Custom GPT, or completed compliance system. No executable application, prompt pack, evaluation suite, build pipeline, deployment configuration, or runtime integration is present in the current tree.
+
+Standalone project line:
+
+The fairway to brand control just opened. Your move.
+
+## Scope boundaries
+
+In scope:
+
+- Maintaining versioned PING reference material and its provenance.
+- Adding the future prompt, source, evaluation, build, release, operations, site, or web artifacts described by the repository layout.
+- Keeping project metadata and agent guidance accurate.
+
+Out of scope unless explicitly requested:
+
+- Treating research notes as official PING policy or as automatically current.
+- Claiming a fact is verified merely because it appears in a knowledge file. Check the cited primary source when accuracy matters.
+- Changing external Notion, ChatGPT, Custom GPT, or PING systems from this repository.
+- Adding credentials, private anchors, personal information, or generated build output to Git.
+- Editing application code, dependencies, CI behavior, or unrelated project files during a context-maintenance task.
+
+## Repository structure
+
+- knowledge/: 17 topic packs, each currently present as v01a and v01d DOCX/PDF pairs. The v01d files appear to be the later checked-in revisions by filename, but no repository rule declares them canonical. Preserve both revisions unless the owner defines a retention policy.
+- gpt_manifest.yaml: GPT-BRG04 identity, tagline, links, version, project ID, and expected directory roles. Several links are intentionally marked as pending.
+- README.md: public project orientation, repository map, and evidence boundaries.
+- LIFECYCLE.md: lifecycle states and retention rules for source material and future implementation artifacts.
+- docs/knowledge-index.md: topic map, revision relationship, and provenance expectations for the PING knowledge set.
+- src/: intended application or source-code area. Currently contains only .gitkeep.
+- prompts/: intended prompt area. Currently contains only .gitkeep.
+- eval/: intended evaluation area. Currently contains only .gitkeep.
+- build/: intended build output area. Currently contains only .gitkeep. Do not commit generated output unless a future build policy says otherwise.
+- ops/: intended operations area. Currently contains only .gitkeep.
+- rag-source/: intended retrieval-source area. Currently contains only .gitkeep.
+- releases/: intended release-artifact area. Currently contains only .gitkeep.
+- site/ and web/: reserved web or documentation surfaces. Currently contain only .gitkeep.
+- assets/ and tests/: reserved supporting areas. Currently contain only placeholders.
+- docs/: supporting documentation area containing the knowledge index.
+- .agents/skills/: local and incubating Agent Skills used to support repository work. These are agent tooling, not the BRG04 runtime. Treat their package contents as a separate maintained layer from the PING knowledge base.
+- skills/: promoted/generated skill packages. A promoted package may mirror an editable package under `.agents/skills/`; the relationship is governed by that skill's promotion and synchronization records.
+- CLAUDE.md: a pointer to this file using @AGENTS.md. Keep it aligned if its scope changes.
+- technology-inventory.md: dated technology and version inventory, including explicit absences and update policy.
+- .github/dependabot.yml: weekly Dependabot configuration for GitHub Actions, with future ecosystems to be added when manifests exist.
+
+There are no nested repositories or additional AGENTS.md, agents.md, CLAUDE.md, or CONTRIBUTING.md files in the project tree.
+
+## Technology and interfaces
+
+Confirmed:
+
+- The tracked project artifacts are Markdown, YAML, DOCX, PDF, and placeholder files.
+- No package.json, pyproject.toml, requirements.txt, Cargo.toml, Dockerfile, test runner, or application entry point exists.
+- .replit contains a best-effort Replit fallback configuration, but it does not establish a runnable app or deployment process.
+
+Expected but not yet implemented:
+
+- A source and prompt layer will feed retrieval and response behavior.
+- Evaluation artifacts should validate factual grounding, brand compliance, and risk handling before release.
+- Build and release artifacts should be kept separate from editable source.
+
+Do not infer a runtime language, framework, hosting provider, API contract, data store, or deployment model until the repository adds evidence for it.
+
+## Safe working conventions
+
+- Read this file and CLAUDE.md before making changes. The root AGENTS.md is canonical.
+- Preserve existing user changes and use non-destructive Git operations.
+- Keep changes narrowly scoped. Do not rewrite knowledge packs or source material as part of unrelated work.
+- Use clear, stable names for topic keys, prompt files, evaluation cases, and release artifacts. Preserve the existing BRG04-KNOW## naming pattern for knowledge topics.
+- Keep source, evaluation, build, operations, and release artifacts in their designated directories once those surfaces are implemented.
+- Preserve source citations and distinguish primary PING statements, public records, secondary reporting, inference, and speculation.
+- Treat forward-looking sections in knowledge packs as scenarios, not commitments.
+- Do not expose secrets or private connector URLs. Use placeholders until an approved owner supplies a public or runtime-managed link.
+- Follow the project brand rules: no em dashes in generated content, preserve standalone punchy lines, and keep explanations proportionate to the understanding they produce. AutoCAD R10 is a suite-wide locked rule, but no AutoCAD-specific implementation exists in this repository.
+
+## Validation
+
+No project-specific build, test, lint, or start command is currently verified. Until executable surfaces are added, use these checks when changing guidance or metadata:
+
+    git status --short --branch
+    git diff --check
+    rg --files -g '!knowledge/*.docx' -g '!knowledge/*.pdf'
+
+For knowledge changes, inspect the corresponding DOCX/PDF pair, confirm the topic key and revision naming, and verify citations or source links where practical. Do not claim successful application validation when only repository-structure checks ran.
+
+## Known gaps and risks
+
+- gpt_manifest.yaml contains placeholder URLs for the lens hub, Notion roadmap, ChatGPT Project, and Custom GPT.
+- The manifest version is 1.0.0, but the repository has no release process or generated build artifact to establish what that version means.
+- The two knowledge revisions are not labeled as draft, approved, or canonical by repository metadata.
+- There is no repository-wide lifecycle or provenance index beyond the topic files themselves; `LIFECYCLE.md` and `docs/knowledge-index.md` provide the current policy baseline but do not establish owner approval.
+- The local skill collection contains 49 packages and is materially larger than the BRG04 content layer. Its continued scope in this repository remains an owner decision.
+- Knowledge files include research claims and future scenarios with varying source quality. They need an explicit review and provenance policy before serving as authoritative compliance rules.
+- There is no executable implementation, automated evaluation, CI workflow, deployment definition, or operational monitoring configuration.
+- Ownership, approval authority, target users, supported response boundaries, and the intended integration path remain unknown from the repository.
+
+## Keeping this guide current
+
+Update this file when the project adds or removes a runtime, entry point, validation command, deployment path, source-of-truth policy, or material integration. Mark new claims as confirmed, inferred, or unknown. Keep CLAUDE.md as a short pointer unless it gains genuinely Claude-specific instructions. Re-check this guide whenever the top-level layout or manifest changes.
+
+## Imported Claude Cowork project instructions

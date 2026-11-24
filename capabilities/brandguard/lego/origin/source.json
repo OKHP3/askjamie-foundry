@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg01-lego",
+  "source_commit": "6e59fbc4e54ebc25877c2ebd4e26188d96d308c7",
+  "source_tree": "4858efe03f37c1746eb1d1459bd99f32df132a5f",
+  "destination": "capabilities/brandguard/lego",
+  "stored_tree": "4858efe03f37c1746eb1d1459bd99f32df132a5f",
+  "source_files": 539,
+  "stored_files": 539,
+  "stored_bytes": 19854103,
+  "path_mode_size_sha256_digest": "079859f92ca9d5e894ed44ed5279722a016491dfd2fcb49b8fe75947e8f454d6"
+}

@@ -1,0 +1,56 @@
+{
+  "records": [
+    {
+      "assignees": [
+        "Copilot",
+        "OKHP3"
+      ],
+      "author": "Copilot",
+      "base_sha": "09d566d876a9a118b9963d744840971a5a5ce167",
+      "body": "Repository setup for GPT-BRG08: OKHP³ BrandGuard™ — Dollar General with canonical structure and manifest.\n\n## Files Added\n\n- **gpt_manifest.yaml** - Canonical manifest with repository links, directory mappings, and project metadata\n- **LICENSE** - MIT License (OKHP³ 2025)\n- **.gitignore** - Standard patterns for OS files, IDEs, dependencies, build artifacts, and logs\n\n## Directory Structure\n\nCreated six standardized directories with placeholder READMEs:\n- `/prompts` - Prompt spine and configurations\n- `/knowledge` - Public-source knowledge packs\n- `/eval` - Evaluation harness\n- `/web` - Web/Notion/project linkage\n- `/ops` - Operational configurations\n- `/build` - Build artifacts\n\nThe gpt_manifest.yaml provides a single source of truth for repository structure and canonical links:\n\n```yaml\nrepository:\n  url: \"https://github.com/OKHP3/AskJamie-GPT-BRG08\"\n  branch: \"main\"\n\ndirectories:\n  prompts: \"./prompts\"\n  knowledge: \"./knowledge\"\n  eval: \"./eval\"\n  web: \"./web\"\n  ops: \"./ops\"\n  build: \"./build\"\n```\n\n<!-- START COPILOT CODING AGENT SUFFIX -->\n\n\n\n<!-- START COPILOT ORIGINAL PROMPT -->\n\n\n\n<details>\n\n<summary>Original prompt</summary>\n\n> Create a new GitHub repo named AskJamie-GPT-BRG08 for GPT-BRG08: OKHP³ BrandGuard™ — Dollar General. Initialize with README.md, gpt_manifest.yaml (canonical links), LICENSE, .gitignore, and folders /prompts /knowledge /eval /web /ops /build. Add the tagline in README: “You saved everyone money. I saved your digital name.”\n> \n\n\n</details>\n\n\n\n<!-- START COPILOT CODING AGENT TIPS -->\n---\n\n💡 You can make Copilot smarter by setting up custom instructions, customizing its development environment and configuring Model Context Protocol (MCP) servers. Learn more [Copilot coding agent tips](https://gh.io/copilot-coding-agent-tips) in the docs.",
+      "closed_at": "2025-12-26T15:55:06Z",
+      "comments": [],
+      "commit_shas": [
+        "39efb18e83a563830996edbcc3aeec8312270a72",
+        "1e37ac31d4bb6b04811cf531e231e29d9b33455d"
+      ],
+      "created_at": "2025-12-23T20:03:11Z",
+      "draft": false,
+      "head_sha": "1e37ac31d4bb6b04811cf531e231e29d9b33455d",
+      "id": 3758423349,
+      "kind": "pull_request",
+      "labels": [],
+      "locked": false,
+      "merge_commit_sha": "fba57811c371e263d44631508d9e3824016815a3",
+      "merged": true,
+      "merged_at": "2025-12-26T15:55:06Z",
+      "number": 1,
+      "original_url": "https://github.com/OKHP3/askjamie-brg08-dollar-general/pull/1",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "1e37ac31d4bb6b04811cf531e231e29d9b33455d",
+          "id": 3611508054,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-24T19:47:44Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "1e37ac31d4bb6b04811cf531e231e29d9b33455d",
+          "id": 3613638318,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:54:53Z"
+        }
+      ],
+      "state": "closed",
+      "title": "Initialize AskJamie-GPT-BRG08 repository structure",
+      "updated_at": "2025-12-26T15:55:29Z"
+    }
+  ],
+  "scope": "issues, pull requests, comments, reviews, and thread resolution",
+  "source_repository": "OKHP3/askjamie-brg08-dollar-general"
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg02-starbucks",
+  "source_commit": "ff276562d486751ac9aa99a56b6cc573032e565b",
+  "source_tree": "acf4482f9441e65c4ca49f374b891bc3325e361d",
+  "destination": "capabilities/brandguard/starbucks",
+  "stored_tree": "acf4482f9441e65c4ca49f374b891bc3325e361d",
+  "source_files": 555,
+  "stored_files": 555,
+  "stored_bytes": 16199949,
+  "path_mode_size_sha256_digest": "7075231f025a42a69993f4af35a636f30fe4404ea5a94c6ea0461ddd9a28f4b7"
+}

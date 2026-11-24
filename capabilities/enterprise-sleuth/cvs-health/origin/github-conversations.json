@@ -1,0 +1,200 @@
+{
+  "records": [
+    {
+      "assignees": [],
+      "author": "dependabot[bot]",
+      "base_sha": "9219f506258cd379e617cdf18769291a8681c8f3",
+      "body": "Bumps [actions/checkout](https://github.com/actions/checkout) from 6 to 7.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/releases\">actions/checkout's releases</a>.</em></p>\n<blockquote>\n<h2>v7.0.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>block checking out fork pr for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Bump actions/publish-immutable-action from 0.0.3 to 0.0.4 in the minor-actions-dependencies group across 1 directory by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2458\">actions/checkout#2458</a></li>\n<li>Bump flatted from 3.3.1 to 3.4.2 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2460\">actions/checkout#2460</a></li>\n<li>Bump js-yaml from 4.1.0 to 4.2.0 by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2461\">actions/checkout#2461</a></li>\n<li>Bump <code>@​actions/core</code> and <code>@​actions/tool-cache</code> and Remove uuid by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2459\">actions/checkout#2459</a></li>\n<li>upgrade module to esm and update dependencies by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2463\">actions/checkout#2463</a></li>\n<li>Bump the minor-npm-dependencies group across 1 directory with 3 updates by <a href=\"https://github.com/dependabot\"><code>@​dependabot</code></a>[bot] in <a href=\"https://redirect.github.com/actions/checkout/pull/2462\">actions/checkout#2462</a></li>\n<li>getting ready for checkout v7 release by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2464\">actions/checkout#2464</a></li>\n<li>update error wording by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2467\">actions/checkout#2467</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v7.0.0\">https://github.com/actions/checkout/compare/v6.0.3...v7.0.0</a></p>\n<h2>v6.1.0</h2>\n<h2>What's Changed</h2>\n<ul>\n<li><strong>[BREAKING]</strong> backport <code>allow-unsafe-pr-checkout</code> to v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2500\">actions/checkout#2500</a></li>\n<li>backport fixes to releases-v6 by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2527\">actions/checkout#2527</a></li>\n</ul>\n<p><a href=\"https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/\">https://github.blog/changelog/2026-06-18-safer-pull_request_target-defaults-for-github-actions-checkout/</a> for more details about this breaking change</p>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.3...v6.1.0\">https://github.com/actions/checkout/compare/v6.0.3...v6.1.0</a></p>\n<h2>v6.0.3</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update changelog by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2357\">actions/checkout#2357</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>Update changelog for v6.0.3 by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2446\">actions/checkout#2446</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> made their first contribution in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6...v6.0.3\">https://github.com/actions/checkout/compare/v6...v6.0.3</a></p>\n<h2>v6.0.2</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Add orchestration_id to git user-agent when ACTIONS_ORCHESTRATION_ID is set by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2355\">actions/checkout#2355</a></li>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/actions/checkout/compare/v6.0.1...v6.0.2\">https://github.com/actions/checkout/compare/v6.0.1...v6.0.2</a></p>\n<h2>v6.0.1</h2>\n<h2>What's Changed</h2>\n<ul>\n<li>Update all references from v5 and v4 to v6 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2314\">actions/checkout#2314</a></li>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n<li>Clarify v6 README by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2328\">actions/checkout#2328</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/actions/checkout/blob/main/CHANGELOG.md\">actions/checkout's changelog</a>.</em></p>\n<blockquote>\n<h1>Changelog</h1>\n<h2>v7.0.1</h2>\n<ul>\n<li>Skip running unsafe pr check if input is default by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2518\">actions/checkout#2518</a></li>\n<li>Trim only ascii whitespace for branch by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2521\">actions/checkout#2521</a></li>\n<li>Escape values passed to --unset by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2530\">actions/checkout#2530</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v7.0.0</h2>\n<ul>\n<li>Block checking out fork PR for pull_request_target and workflow_run by <a href=\"https://github.com/aiqiaoy\"><code>@​aiqiaoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2454\">actions/checkout#2454</a></li>\n<li>Various dependency updates</li>\n</ul>\n<h2>v6.0.3</h2>\n<ul>\n<li>Fix checkout init for SHA-256 repositories by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2439\">actions/checkout#2439</a></li>\n<li>fix: expand merge commit SHA regex and add SHA-256 test cases by <a href=\"https://github.com/yaananth\"><code>@​yaananth</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2414\">actions/checkout#2414</a></li>\n</ul>\n<h2>v6.0.2</h2>\n<ul>\n<li>Fix tag handling: preserve annotations and explicit fetch-tags by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2356\">actions/checkout#2356</a></li>\n</ul>\n<h2>v6.0.1</h2>\n<ul>\n<li>Add worktree support for persist-credentials includeIf by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2327\">actions/checkout#2327</a></li>\n</ul>\n<h2>v6.0.0</h2>\n<ul>\n<li>Persist creds to a separate file by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2286\">actions/checkout#2286</a></li>\n<li>Update README to include Node.js 24 support details and requirements by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2248\">actions/checkout#2248</a></li>\n</ul>\n<h2>v5.0.1</h2>\n<ul>\n<li>Port v6 cleanup to v5 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2301\">actions/checkout#2301</a></li>\n</ul>\n<h2>v5.0.0</h2>\n<ul>\n<li>Update actions checkout to use node 24 by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2226\">actions/checkout#2226</a></li>\n</ul>\n<h2>v4.3.1</h2>\n<ul>\n<li>Port v6 cleanup to v4 by <a href=\"https://github.com/ericsciple\"><code>@​ericsciple</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2305\">actions/checkout#2305</a></li>\n</ul>\n<h2>v4.3.0</h2>\n<ul>\n<li>docs: update README.md by <a href=\"https://github.com/motss\"><code>@​motss</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1971\">actions/checkout#1971</a></li>\n<li>Add internal repos for checking out multiple repositories by <a href=\"https://github.com/mouismail\"><code>@​mouismail</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1977\">actions/checkout#1977</a></li>\n<li>Documentation update - add recommended permissions to Readme by <a href=\"https://github.com/benwells\"><code>@​benwells</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2043\">actions/checkout#2043</a></li>\n<li>Adjust positioning of user email note and permissions heading by <a href=\"https://github.com/joshmgross\"><code>@​joshmgross</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2044\">actions/checkout#2044</a></li>\n<li>Update README.md by <a href=\"https://github.com/nebuk89\"><code>@​nebuk89</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2194\">actions/checkout#2194</a></li>\n<li>Update CODEOWNERS for actions by <a href=\"https://github.com/TingluoHuang\"><code>@​TingluoHuang</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2224\">actions/checkout#2224</a></li>\n<li>Update package dependencies by <a href=\"https://github.com/salmanmkc\"><code>@​salmanmkc</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/2236\">actions/checkout#2236</a></li>\n</ul>\n<h2>v4.2.2</h2>\n<ul>\n<li><code>url-helper.ts</code> now leverages well-known environment variables by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1941\">actions/checkout#1941</a></li>\n<li>Expand unit test coverage for <code>isGhes</code> by <a href=\"https://github.com/jww3\"><code>@​jww3</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1946\">actions/checkout#1946</a></li>\n</ul>\n<h2>v4.2.1</h2>\n<ul>\n<li>Check out other refs/* by commit if provided, fall back to ref by <a href=\"https://github.com/orhantoy\"><code>@​orhantoy</code></a> in <a href=\"https://redirect.github.com/actions/checkout/pull/1924\">actions/checkout#1924</a></li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1\"><code>3d3c42e</code></a> prep v7.0.1 release (<a href=\"https://redirect.github.com/actions/checkout/issues/2531\">#2531</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/28802689a136bfcdb721715abd713740beecbe07\"><code>2880268</code></a> escape values passed to --unset (<a href=\"https://redirect.github.com/actions/checkout/issues/2530\">#2530</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/12cd2235efa0937479335606d7c3ac9f6c0973b1\"><code>12cd223</code></a> trim only ascii whitespace for branch (<a href=\"https://redirect.github.com/actions/checkout/issues/2521\">#2521</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/62661c4e71a304b2823ed026347b8d34c3eac541\"><code>62661c4</code></a> skip running unsafe pr check if input is default (<a href=\"https://redirect.github.com/actions/checkout/issues/2518\">#2518</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8d4307400f9427dba7cb98e488d6ab85f1cec5f\"><code>e8d4307</code></a> Bump the minor-actions-dependencies group with 2 updates (<a href=\"https://redirect.github.com/actions/checkout/issues/2499\">#2499</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/631c942040754b6e095e929c1677c07e10ed4f87\"><code>631c942</code></a> eslint 9 (<a href=\"https://redirect.github.com/actions/checkout/issues/2474\">#2474</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/4f1f4aec02e41874fa0262ea8ff5172d7978ad1e\"><code>4f1f4ae</code></a> Bump actions/upload-artifact from 4 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2476\">#2476</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/ba097532fb203f7e88c9c3c0b899b49469908a92\"><code>ba09753</code></a> Bump actions/checkout from 6 to 7 (<a href=\"https://redirect.github.com/actions/checkout/issues/2488\">#2488</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/b9e0990d219a03df7633c93f6f005a8fecbcab22\"><code>b9e0990</code></a> Bump docker/login-action from 3.3.0 to 4.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2479\">#2479</a>)</li>\n<li><a href=\"https://github.com/actions/checkout/commit/e8cb398be4a550817e382abf69e4c12c76fce1f2\"><code>e8cb398</code></a> Bump docker/build-push-action from 6.5.0 to 7.2.0 (<a href=\"https://redirect.github.com/actions/checkout/issues/2478\">#2478</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/actions/checkout/compare/v6...v7\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=actions/checkout&package-manager=github_actions&previous-version=6&new-version=7)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n\n\n</details>",
+      "closed_at": "2026-07-23T00:23:17Z",
+      "comments": [],
+      "commit_shas": [
+        "cda410c15070834fb964a8032dc8924b48ac33a6"
+      ],
+      "created_at": "2026-07-20T23:59:29Z",
+      "draft": false,
+      "head_sha": "cda410c15070834fb964a8032dc8924b48ac33a6",
+      "id": 4934029454,
+      "kind": "pull_request",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "locked": false,
+      "merge_commit_sha": "1020a1b7b79c09912238fc0654f95d6b2624e7a4",
+      "merged": true,
+      "merged_at": "2026-07-23T00:23:17Z",
+      "number": 1,
+      "original_url": "https://github.com/OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth/pull/1",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [],
+      "state": "closed",
+      "title": "Bump actions/checkout from 6 to 7",
+      "updated_at": "2026-07-23T00:23:21Z"
+    },
+    {
+      "assignees": [],
+      "author": "OKHP3",
+      "body": "The scheduled technology drift check failed in run 31394658654 because the declared versions are behind the upstream signals:\n- Teams manifest: 1.21 declared, 1.30 latest observed\n- Declarative Agent: v1.5 declared, v1.8 latest observed\n\nThis is a compatibility-review signal, not an instruction to blindly rewrite the manifest. Review the Teams schema and Declarative Agent compatibility before changing the repository. Source workflow: .github/workflows/technology-drift.yml. Original notification/check: 25011896549.",
+      "closed_at": "2026-10-10T20:21:20Z",
+      "comments": [
+        {
+          "author": "OKHP3",
+          "body": "Closing as resolved: PR #3 aligned the schemas. The latest technology audit (run 37318185759) confirms Teams 1.30 and Declarative Agent v1.8, with no actionable drift.",
+          "created_at": "2026-10-10T20:21:19Z",
+          "id": 6101795516,
+          "updated_at": "2026-10-10T20:21:19Z"
+        }
+      ],
+      "created_at": "2026-08-10T23:55:14Z",
+      "id": 5115347842,
+      "kind": "issue",
+      "labels": [],
+      "locked": false,
+      "number": 2,
+      "original_url": "https://github.com/OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth/issues/2",
+      "state": "closed",
+      "state_reason": "completed",
+      "title": "Technology version review required",
+      "updated_at": "2026-10-10T20:21:20Z"
+    },
+    {
+      "assignees": [],
+      "author": "OKHP3",
+      "base_sha": "d7a821fb1f6f47c9054af7e54d8258ea9ae26421",
+      "body": "Fixes the notification-causing check by updating the tracked files and validating the repository-specific workflow input.",
+      "closed_at": "2026-08-11T00:11:56Z",
+      "comments": [],
+      "commit_shas": [
+        "b7cd8ea7ad04c885418c8b205e3f47d624780fc7"
+      ],
+      "created_at": "2026-08-11T00:02:05Z",
+      "draft": false,
+      "head_sha": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+      "id": 5115382008,
+      "kind": "pull_request",
+      "labels": [],
+      "locked": false,
+      "merge_commit_sha": "64bb9e5f813526c74e45d709a92ff16cd154e271",
+      "merged": true,
+      "merged_at": "2026-08-11T00:11:56Z",
+      "number": 3,
+      "original_url": "https://github.com/OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth/pull/3",
+      "review_comments": [
+        {
+          "author": "Copilot",
+          "body": "The source link still points to the manifest schema docs with `view=m365-app-1.29`, which contradicts the updated `1.30` schema version recorded in this row. This makes it harder to verify the version claim from the linked reference.",
+          "commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "created_at": "2026-08-11T00:03:51Z",
+          "id": 3754344969,
+          "line": 11,
+          "original_commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "original_line": 11,
+          "path": "docs/technology-inventory.md",
+          "pull_request_review_id": 4901928981,
+          "side": "RIGHT",
+          "updated_at": "2026-08-11T00:03:52Z"
+        },
+        {
+          "author": "Copilot",
+          "body": "This section updates the Teams manifest schema version to `1.30`, but the next bullet still says the Declarative Agent definition is version `1.5`. That is now inconsistent with `ask-jamie!/declarativeAgent_0.json` (currently `v1.8`).",
+          "commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "created_at": "2026-08-11T00:03:52Z",
+          "id": 3754344993,
+          "line": 60,
+          "original_commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "original_line": 60,
+          "path": "AGENTS.md",
+          "pull_request_review_id": 4901928981,
+          "side": "RIGHT",
+          "updated_at": "2026-08-11T00:03:52Z"
+        },
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Synchronize the remaining schema-version references**\n\nAfter these version bumps, repository-wide search still finds `replit.md:11` describing the Teams schema as v1.21 and `AGENTS.md:60` describing the Declarative Agent as v1.5. Since these are orientation and canonical operational documents, they now contradict this inventory and the package itself; update the remaining references to 1.30 and v1.8.\n\nAGENTS.md reference: [AGENTS.md:L89-L89](https://github.com/OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth/blob/b7cd8ea7ad04c885418c8b205e3f47d624780fc7/AGENTS.md#L89-L89)\n\nUseful? React with 👍 / 👎.",
+          "commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "created_at": "2026-08-11T00:04:41Z",
+          "id": 3754347764,
+          "line": 12,
+          "original_commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "original_line": 12,
+          "path": "docs/technology-inventory.md",
+          "pull_request_review_id": 4901931914,
+          "side": "RIGHT",
+          "updated_at": "2026-08-11T00:04:41Z"
+        },
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Point the schema source link at version 1.30**\n\nWhen a reader follows the source intended to support the new 1.30 claim, the URL still explicitly selects `view=m365-app-1.29`, so it points at the prior schema version rather than the version recorded in this row. Change the moniker to `m365-app-1.30` so the documented compatibility claim has a matching direct source.\n\nAGENTS.md reference: [AGENTS.md:L88-L88](https://github.com/OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth/blob/b7cd8ea7ad04c885418c8b205e3f47d624780fc7/AGENTS.md#L88-L88)\n\nUseful? React with 👍 / 👎.",
+          "commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "created_at": "2026-08-11T00:04:41Z",
+          "id": 3754347768,
+          "line": 11,
+          "original_commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "original_line": 11,
+          "path": "docs/technology-inventory.md",
+          "pull_request_review_id": 4901931914,
+          "side": "RIGHT",
+          "updated_at": "2026-08-11T00:04:41Z"
+        }
+      ],
+      "review_threads": [
+        {
+          "comment_ids": [
+            3754344969
+          ],
+          "id": "PRRT_kwDOSvRscM6YE3Jx",
+          "isOutdated": false,
+          "isResolved": false
+        },
+        {
+          "comment_ids": [
+            3754344993
+          ],
+          "id": "PRRT_kwDOSvRscM6YE3J_",
+          "isOutdated": false,
+          "isResolved": false
+        },
+        {
+          "comment_ids": [
+            3754347764
+          ],
+          "id": "PRRT_kwDOSvRscM6YE3n3",
+          "isOutdated": false,
+          "isResolved": false
+        },
+        {
+          "comment_ids": [
+            3754347768
+          ],
+          "id": "PRRT_kwDOSvRscM6YE3n6",
+          "isOutdated": false,
+          "isResolved": false
+        }
+      ],
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "body": "## Pull request overview\n\nThis PR updates the repository’s tracked Microsoft manifest schema versions to match what the technology-drift checker considers current, reducing workflow noise and keeping the configuration snapshot aligned with documented schemas.\n\n**Changes:**\n- Bump Teams app manifest schema reference from 1.21 to 1.30 in `ask-jamie!/manifest.json`.\n- Bump Declarative Agent manifest version from v1.5 to v1.8 in `ask-jamie!/declarativeAgent_0.json`.\n- Refresh schema version documentation in `docs/technology-inventory.md` and `AGENTS.md`, plus update the Replit Nix channel.\n\n### Reviewed changes\n\nCopilot reviewed 5 out of 5 changed files in this pull request and generated 2 comments.\n\n<details>\n<summary>Show a summary per file</summary>\n\n| File | Description |\r\n| ---- | ----------- |\r\n| docs/technology-inventory.md | Updates the recorded Teams and Declarative Agent schema versions and related findings. |\r\n| ask-jamie!/manifest.json | Updates Teams manifest `$schema` URL and `manifestVersion` to 1.30. |\r\n| ask-jamie!/declarativeAgent_0.json | Updates Declarative Agent manifest version to v1.8. |\r\n| AGENTS.md | Updates documentation references for the Teams manifest schema version. |\r\n| .replit | Updates the Nix channel used by Replit. |\n</details>\n\n\n\n\n\n\n\n\n---\n\n💡 <a href=\"/OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth/new/main?filename=.github/skills/code-review/SKILL.md\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Add a `code-review` agent skill</a> or configure MCP servers for context-aware, tailored reviews. <a href=\"https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review#mcp-servers-and-agent-skills\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more in the docs.</a>",
+          "commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "id": 4901928981,
+          "state": "COMMENTED",
+          "submitted_at": "2026-08-11T00:03:52Z"
+        },
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "body": "\n### 💡 Codex Review\n\nHere are some automated review suggestions for this pull request.\n\n**Reviewed commit:** `b7cd8ea7ad`\n    \n\n<details> <summary>ℹ️ About Codex in GitHub</summary>\n<br/>\n\n[Your team has set up Codex to review pull requests in this repo]([private source link omitted]). Reviews are triggered when you\n- Open a pull request for review\n- Mark a draft as ready\n- Comment \"@codex review\".\n\nIf Codex has suggestions, it will comment; otherwise it will react with 👍.\n\n\n\n\nCodex can also answer questions or update the PR. Try commenting \"@codex address that feedback\".\n            \n</details>",
+          "commit_id": "b7cd8ea7ad04c885418c8b205e3f47d624780fc7",
+          "id": 4901931914,
+          "state": "COMMENTED",
+          "submitted_at": "2026-08-11T00:04:40Z"
+        }
+      ],
+      "state": "closed",
+      "title": "chore: align Microsoft manifest schemas",
+      "updated_at": "2026-08-22T02:12:13Z"
+    }
+  ],
+  "scope": "issues, pull requests, comments, reviews, and thread resolution",
+  "source_repository": "OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth"
+}

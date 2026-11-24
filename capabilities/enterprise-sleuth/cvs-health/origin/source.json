@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth",
+  "source_commit": "0d7df4d886943ac0f33d7f999a0e949e60340619",
+  "source_tree": "bcc9d760071c66309a4844e87db419da12350625",
+  "destination": "capabilities/enterprise-sleuth/cvs-health",
+  "stored_tree": "bcc9d760071c66309a4844e87db419da12350625",
+  "source_files": 478,
+  "stored_files": 478,
+  "stored_bytes": 3219156,
+  "path_mode_size_sha256_digest": "dd809ab6111d1e8fe005c3204661663b52f0826003494db60e96c47ba2f031e7"
+}

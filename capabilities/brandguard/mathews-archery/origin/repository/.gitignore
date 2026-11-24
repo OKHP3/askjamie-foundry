@@ -1,0 +1,75 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.AppleDouble
+.LSOverride
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vscode-test/
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency Directories
+node_modules/
+vendor/
+.pnp
+.pnp.js
+
+# Build Outputs
+dist/
+build/output/
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test Coverage
+coverage/
+.nyc_output/
+*.cover
+.coverage
+.pytest_cache/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# Package Manager Files
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Secrets and Keys
+*.pem
+*.key
+secrets/
+credentials/
+
+# Cache Directories
+.cache/
+.parcel-cache/
+
+# macOS
+.Spotlight-V100
+.Trashes

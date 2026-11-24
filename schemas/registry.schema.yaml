@@ -92,11 +92,14 @@ properties:
           properties:
             destination:
               type: string
-              pattern: '^capabilities/[a-z0-9]+(-[a-z0-9]+)*$'
+              pattern: '^capabilities/[a-z0-9]+(-[a-z0-9]+)*(/[a-z0-9]+(-[a-z0-9]+)*)?$'
             status:
               enum: [planned, source-inventoried, imported, verified]
             storage:
               enum: [private-external, public-subtree]
+            public_source_record:
+              description: Byte-verification record for a separately authorized legacy repository transfer.
+              const: origin/source.json
             source_commit:
               type: string
               pattern: '^$|^[a-f0-9]{40}$|^[a-f0-9]{64}$'

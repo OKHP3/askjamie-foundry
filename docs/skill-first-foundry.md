@@ -83,9 +83,11 @@ As of 2026-10-19, AJ01 and AJ02 have owner-approved public child destinations,
 complete tracked GitHub snapshots with original bytes, SHA-256 indexes and
 pinned source commits. Their registry migrations are imported. Portable skills,
 configured GPT capture, component reuse rights and platform reconciliation remain
-open; source import does not establish working replacement behavior. The other
-seven migrations remain planned with private storage. Existing `active` values describe catalog lifecycle, not
-migration completion or remote existence. See the [selected-child plan](migrations/aj01-aj02-2026-10-19.md).
+open for those two capabilities. Their October migration is documented in the
+[selected-child plan](migrations/aj01-aj02-2026-10-19.md).
+
+The November 24 repository transfer records appear under the named AJ03, AJ04 and BrandGuard destinations. The optional registry field `public_source_record` identifies the verified legacy files at that path. The capability's storage and graduation fields govern the working product. The [transfer record](migrations/legacy-capability-transfer.md) describes source coverage.
+
 Private capabilities use the same relative layout in private storage **outside
 this public checkout**. Permanent-private locks remain permanent.
 

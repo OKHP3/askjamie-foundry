@@ -1,0 +1,44 @@
+# GPT-BRG00 OKHP³ BrandGuard™ Manifest
+# GPT-BFS01: "BFS Framing Intelligent Futures"
+# Builders FirstSource Knowledge Pack
+
+name: GPT-BRG00
+description: OKHP³ BrandGuard™ Sentinel for Builders FirstSource
+version: 0.2.0
+gpt_id: GPT-BFS01
+gpt_name: "BFS Framing Intelligent Futures"
+
+# Canonical Links
+canonical_links:
+  official_site: https://www.bldr.com
+  builders_firstsource: https://www.bldr.com
+  company_info: https://www.bldr.com/about
+  investor_relations: https://www.bldr.com/investors
+  careers: https://www.bldr.com/careers
+
+# Repository Structure
+structure:
+  corpus: src/corpus
+  prompts: prompts
+  evaluations: eval
+  ledger: ledger
+  build: build
+  operations: ops
+
+# Versioning
+versioning:
+  source_of_truth: GitHub repository
+  companion_spec: Notion BRG00 spec
+  alignment_rule: Keep the Notion spec and GitHub release on the same semantic version when the static ontology changes.
+  ledger_rule: "Append public-source updates to the File #19 ledger without rewriting the ontology unless scope changes."
+
+# Disclaimer
+disclaimer: |
+  This is a public-only prototype for independent R&D purposes.
+  NOT an official Builders FirstSource product.
+  For official information and services, please visit https://www.bldr.com
+
+# Contact & Support
+support:
+  official_website: https://www.bldr.com
+  redirect_users_to: https://www.bldr.com

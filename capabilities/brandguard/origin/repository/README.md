@@ -1,0 +1,2 @@
+# AskJamie-GPT-AJ04
+Repo for GPT-AJ04: AskJamie™ — OKHP³ BrandGuard™. Guardrails for tone, ethics, identity &amp; framing (Tone Keeper / Ethics Sentinel / Framing Navigator). Stores prompts, knowledge packs, eval checklists, and release notes; crosslinked to Notion and askjamie.bot.

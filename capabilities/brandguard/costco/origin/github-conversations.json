@@ -1,0 +1,57 @@
+{
+  "records": [
+    {
+      "assignees": [
+        "Copilot",
+        "OKHP3"
+      ],
+      "author": "Copilot",
+      "base_sha": "14b003f4412be1f4e4e6fbf8a94d8b6f4ea7a59f",
+      "body": "Initialize AskJamie-GPT-BRG05 repository for GPT-BRG05: Costco - OKHP³ BrandGuard™ with required structure and documentation.\n\n## Changes\n\n- **LICENSE**: Added MIT License with OKHP³ copyright\n- **Folder structure**: Created `/prompts`, `/knowledge`, `/eval`, `/site` directories with `.gitkeep` files\n- **README.md**: Added Quick Links section with references to:\n  - Costco.com\n  - AskJamie BrandGuard Costco lens page\n  - AskJamie website\n  - Notion BRG05 page (placeholder URL)\n  - ChatGPT Project (placeholder URL)\n  - Custom GPT (placeholder URL)\n\n## Note\n\nNotion, ChatGPT Project, and Custom GPT links use generic domain URLs pending specific page URLs.\n\n<!-- START COPILOT CODING AGENT SUFFIX -->\n\n\n\n<!-- START COPILOT ORIGINAL PROMPT -->\n\n\n\n<details>\n\n<summary>Original prompt</summary>\n\n> Create a new GitHub repo named AskJamie-GPT-BRG05 for “GPT-BRG05: Costco - OKHP³ BrandGuard™”. Initialize with README.md, LICENSE, and folders /prompts /knowledge /eval /site. README must include: Costco: “This space was bulk unclaimed. I stocked it for you.” Add a Quick Links section pointing to Costco.com, the AskJamie BrandGuard Costco lens page, the AskJamie source file, the Notion BRG05 page, the ChatGPT Project, and the Custom GPT.\n> \n\n\n</details>\n\n\n\n<!-- START COPILOT CODING AGENT TIPS -->\n---\n\n✨ Let Copilot coding agent [set things up for you](https://github.com/OKHP3/AskJamie-GPT-BRG05/issues/new?title=✨+Set+up+Copilot+instructions&body=Configure%20instructions%20for%20this%20repository%20as%20documented%20in%20%5BBest%20practices%20for%20Copilot%20coding%20agent%20in%20your%20repository%5D%28https://gh.io/copilot-coding-agent-tips%29%2E%0A%0A%3COnboard%20this%20repo%3E&assignees=copilot) — coding agent works faster and does higher quality work when set up for your repo.\n",
+      "closed_at": "2025-12-26T15:58:21Z",
+      "comments": [],
+      "commit_shas": [
+        "52874d3b947c81ea9e2696a041211c3a2ef51460",
+        "26532a24e1cae16675fecb1cf1c2e65b5b8a19da",
+        "ca08e2b5c19c863c00fb14da7760b38e6385ed2b"
+      ],
+      "created_at": "2025-12-23T20:28:53Z",
+      "draft": false,
+      "head_sha": "ca08e2b5c19c863c00fb14da7760b38e6385ed2b",
+      "id": 3758488899,
+      "kind": "pull_request",
+      "labels": [],
+      "locked": false,
+      "merge_commit_sha": "d29731b9f3c75ab85153708d40689ba925c80d58",
+      "merged": true,
+      "merged_at": "2025-12-26T15:58:21Z",
+      "number": 1,
+      "original_url": "https://github.com/OKHP3/askjamie-brg05-costco/pull/1",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "26532a24e1cae16675fecb1cf1c2e65b5b8a19da",
+          "id": 3611507627,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-24T19:47:03Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "26532a24e1cae16675fecb1cf1c2e65b5b8a19da",
+          "id": 3613640831,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:57:51Z"
+        }
+      ],
+      "state": "closed",
+      "title": "Initialize repository with LICENSE, folders, and Quick Links",
+      "updated_at": "2025-12-26T15:58:31Z"
+    }
+  ],
+  "scope": "issues, pull requests, comments, reviews, and thread resolution",
+  "source_repository": "OKHP3/askjamie-brg05-costco"
+}

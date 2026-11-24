@@ -1,0 +1,60 @@
+# Project documentation audit: closeout and continuation
+
+## Provenance and coverage
+
+- Task: Audit project docs and structure, ID `019f95e4-fbd0-7270-937d-79a72896175d`.
+- Source: local Codex task on a Mac, repository root `askjamie-brg00-builders-firstsource`, branch `main`. Repository remote: `https://github.com/OKHP3/askjamie-brg00-builders-firstsource.git`.
+- Audit date: 2026-07-24. Closeout date: 2026-10-26. This is a summary and evidence ledger, not a lossless transcript.
+- Coverage: the supported task history reader returned the original audit turn and this closeout turn, with `hasMore: false`. The original prompt, prior final answer, visible commentary, current closeout attachment, current repository guidance, relevant tracked files and Git state were reviewed. The history reader did not expose the original turn's tool outputs; this record uses the visible original answer and current direct checks, not a claim that those outputs were recovered. The attachment contained the closeout request and had no separately identified generated artifacts. No attached PRs or worktrees were listed.
+- The initial audit was limited to this repository and asked for its synthesis in the conversation. The later closeout request authorized a durable project record and scoped local completion work. It did not authorize publication or a product prompt rewrite.
+
+## Decision record
+
+The repository is the public-source, independent Builders FirstSource: BrandGuard educational prototype within AskJamie / OKHP3 BrandGuard. Its purpose is clear: help builders and other readers understand BFS and the residential construction supply ecosystem, while routing official actions to BFS or qualified professionals. It is a Git-backed content and governance project, not an evidenced application runtime.
+
+The original audit found `AGENTS.md` substantive and `CLAUDE.md` a useful `@AGENTS.md` pointer, so it made no edits. It also flagged the then-current core prompt for claiming BFS representation and requesting reasoning styles. This was a finding, not an authorized prompt-rewrite commitment. The product prompt has since been moved and revised in separate repository activity: `prompts/builders-firstsource-gpt-core.md` now states that the demonstration is independent and directs against impersonation and exposing private reasoning. The current guide retained the old finding, so this closeout corrects those two stale bullets. Current factual scale and certification claims in the prompt still need source verification before reuse; the original audit did not authorize that research or a product revision.
+
+The README describes intended build, evaluation, changelog, tagging and upload steps. The repository does not presently supply a project build, test or deployment pipeline or root `CHANGELOG.md`. The project timeline and release decisions remain owner questions, not invented commitments. No earlier options were explicitly cancelled or delegated in the accessible history.
+
+## Completion ledger
+
+| Obligation and source | Acceptance criterion and evidence | Owner | Status |
+| --- | --- | --- | --- |
+| Repository recon, original prompt | Root documentation, layout, Git activity, workflow and stack assessed; original in-chat answer describes them. Current `README.md`, `AGENTS.md`, `gpt_manifest.yaml`, `LICENSE`, workflow and tree corroborate the main conclusions. The original tool-output transcript is unavailable from the history reader. | This task | Verified complete, with historical evidence limitation |
+| Purpose, architecture and clarity, original prompt | Original answer provided purpose, audiences, architecture and a CLEAR purpose verdict, while flagging the prompt contradiction as it existed then. | This task | Verified complete |
+| Audit and minimally patch `AGENTS.md` and `CLAUDE.md`, original prompt | Original audit left both intact; `CLAUDE.md` remains `@AGENTS.md`. In October, direct prompt inspection revealed two stale `AGENTS.md` bullets, corrected in this closeout. | This task | Verified complete |
+| Report unresolved issues, original prompt | Original answer flagged prompt drift and unavailable build/release automation. The prompt's representation issue was later corrected elsewhere; source-dependent factual claims and implementation timing remain project issues. | This task | Verified complete as reporting; project issues remain open |
+| Preserve a task-specific record, closeout request | This file records purpose, scope, decisions, evidence, limitations and continuation. | This task | Verified complete in the saved file; Git commit verification follows |
+| Two quality passes, closeout request | Pass A inspected content, scope, paths and privacy; independent Pass B challenged the original completion claim and current prompt. See results below. | This task | Verified complete, with final staged diff check to follow |
+| Git reconciliation, closeout request | Commit `e94d37e82a0a8c657b22648f17ba428a46304c24` contains the guidance correction and initial record. Commit `1e9d4f6530d4d95ed4b70d5398f91f2788cc7c5e` contains the synchronization hold; both were verified on remote `main`. The owner subsequently authorized committing the final addendum even if it synchronizes to GitHub. | This task | Verified through the recorded commits; verify the commit containing this final receipt |
+| Archive this exact task, closeout request | Archive only after the final receipt is committed and verified and no reviewer remains active. | This task | Ready after final Git verification |
+
+## Artifact manifest
+
+- `AGENTS.md`: canonical project instructions; two known-gap bullets corrected to reflect the current prompt.
+- `CLAUDE.md`: unchanged canonical guidance pointer.
+- `prompts/builders-firstsource-gpt-core.md`: current product prompt, inspected but unchanged here.
+- `docs/thread-captures/2026-10-26-audit-project-docs-019f95e4/closeout.md`: this durable summary, ledger and receipt. Its commit can be located with `git log --follow -- <path>`.
+
+## Validation and limitations
+
+Initial local state: `main` was clean, one worktree was listed, no stashes were listed, and local `HEAD`, `origin/main` and the live remote main ref all resolved to `afcdfa1ec4589907c9b1457c17c0faa8cba02017`. No task-owned PR or worktree attachment was listed. No existing matching task closeout was found in repository text or documentation filenames.
+
+- Pass A, implementation and artifact review: PASS for direct inspection of the current prompt, the two corrected guidance bullets, the record's referenced files, and the original and current scope. `git diff --check` passed for the tracked guidance edit. A targeted credential-pattern scan found no matches in either task-owned file; this is a limited scan, not a guarantee. The final staged diff must also be checked.
+- Pass B, independent challenge: PASS for the original audit's reporting obligations and current prompt identity, according to a separate read-only reviewer. The reviewer identified the then-uncommitted files and pending closeout, commit and archive gates; those remain explicit here until completed. The reviewer did not edit files.
+- WARN: the original turn's tool outputs were unavailable through the supported history reader; the original answer and current sources are the available evidence. Historical claims are distinguished from current state.
+- NOT RUN: no project build, test or deployment command is defined. The networked technology-version audit checks upstream technology versions, not this Markdown guidance change. No external publication or deployment was requested.
+
+Receipt prepared for archival: purpose CLEAR; original audit delivered; stale guidance corrected; task-specific record saved; checks and independent review completed subject to final staged verification. The commit containing this record is the local receipt. The archive outcome is reported by the task interface after the archive action; this pre-archive record does not assert that the action succeeded.
+
+### Git synchronization hold, 2026-10-26
+
+After the initial task commit, `git ls-remote origin refs/heads/main` returned `e94d37e82a0a8c657b22648f17ba428a46304c24`; before the commit it returned `afcdfa1ec4589907c9b1457c17c0faa8cba02017`. The local remote-tracking reflog says `update by push`, but no push was issued by this agent and the repository's hooks directory contained only sample hooks. The actor or mechanism is unknown. The initial commit's contents were public-safe and the remote revision was directly checked, but further commits could trigger the same unexplained synchronization. Do not treat the publication as authorized or undo it without a separate decision.
+
+Resolution: the owner authorized the final closeout addendum even if it synchronizes to GitHub. The previously uncommitted hold was found committed as `1e9d4f6530d4d95ed4b70d5398f91f2788cc7c5e` and the same revision was verified on remote `main`; the actor or mechanism remains unknown. No PR, deployment, or deliberate push was performed by this task.
+
+Final receipt: the requested audit, guidance correction, durable record, direct validation and independent review are complete. The original history tool outputs remain unavailable. After committing this receipt, verify its exact revision and clean working tree, then request archival of task `019f95e4-fbd0-7270-937d-79a72896175d`. Record the archive outcome in the task response; this pre-archive receipt does not assert it succeeded.
+
+## Continuation
+
+For a future product task, inspect the current prompt and verify time-sensitive public claims against current sources before reuse. Decide separately whether to implement build, regression evaluation and release tooling. Do not infer a deployment, ownership transfer, or recipient from this record.

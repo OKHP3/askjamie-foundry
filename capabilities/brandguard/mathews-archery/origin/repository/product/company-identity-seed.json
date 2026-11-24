@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "status": "historical-assistant-seed-needs-verification",
+  "source_refs": [
+    "S18",
+    "S20",
+    "S22"
+  ],
+  "source_claim_period": "2025-12-30 through 2025-12-31",
+  "review_date": "2026-10-16",
+  "current_primary_source_verification": false,
+  "brandguard_id": "BRG12",
+  "brand_display_name": "Mathews Archery",
+  "historical_source_values": {
+    "legal_entity_name": "MATHEWS ARCHERY, INC.",
+    "jurisdiction_country": "US",
+    "jurisdiction_region": "US-WI",
+    "primary_domain": "mathewsinc.com",
+    "entity_status": "ACTIVE",
+    "entity_creation_date": "1995-12-04",
+    "founded_year_brand_story": 1992,
+    "lei": "254900T80N02NWCDS630",
+    "wisconsin_registration_authority_entity_id": "M045177",
+    "ein": "39-1837798",
+    "hq_address": "919 River Road, Sparta, WI 54656, United States",
+    "primary_phone": "+1-608-269-2728",
+    "primary_support_email": "customerservice@mathewsinc.com",
+    "is_public": false,
+    "stock_ticker": null,
+    "duns_or_dnb_number": null,
+    "sec_cik": null,
+    "related_domains": [
+      "stories.mathewsinc.com",
+      "missionarchery.com",
+      "missioncrossbows.com",
+      "genesisbow.com",
+      "zebrastrings.com"
+    ]
+  },
+  "source_asserted_evidence": [
+    {
+      "name": "Florida Division of Corporations filing",
+      "supports": [
+        "legal name",
+        "EIN",
+        "Wisconsin registration",
+        "principal address"
+      ],
+      "exact_source_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forp-f13000003333-d5ffb3d0-30c7-4c9c-a6e9-4436d1d810ff&directionType=PreviousList&inquirytype=EntityName&listNameOrder=MATHEWS+P020000889460&searchNameOrder=MATHEWSARCHERY+F130000033331&searchTerm=MATHEWS++LLC"
+    },
+    {
+      "name": "LEI record described as Bloomberg LEI",
+      "supports": [
+        "LEI",
+        "Wisconsin authority ID",
+        "legal creation date",
+        "domain"
+      ],
+      "exact_source_url": "https://lei.bloomberg.com/leis/view/254900T80N02NWCDS630"
+    },
+    {
+      "name": "Mathews contact, privacy, and company-history pages",
+      "supports": [
+        "operating identity",
+        "contact information",
+        "founder narrative"
+      ],
+      "exact_source_url": "https://mathewsinc.com/pages/contact",
+      "additional_source_urls": [
+        "https://mathewsinc.com/pages/who-we-are"
+      ]
+    },
+    {
+      "name": "Court corporate disclosure",
+      "supports": [
+        "no parent corporation and no publicly held 10-percent owner as described by source"
+      ],
+      "exact_source_url": "https://dockets.justia.com/docket/pennsylvania/pawdce/2%3A2024cv01772/315604",
+      "source_quality": "Secondary docket lead only; not a captured primary disclosure document"
+    }
+  ],
+  "source_alias_candidates": [
+    "Mathews",
+    "Mathews Archery Inc.",
+    "Mathews Inc.",
+    "Mathew's Solocam"
+  ],
+  "collision_candidates": [
+    {
+      "name": "Matthews International Corporation",
+      "source_ticker": "MATW",
+      "rule": "Different spelling and entity; verify before attributing securities information"
+    },
+    {
+      "name": "Matthews commercial real estate",
+      "source_domain": "matthews.com",
+      "rule": "Do not merge by similar name"
+    },
+    {
+      "name": "Mathews Company grain equipment",
+      "source_domain": "mathewscompany.com",
+      "rule": "Do not merge by similar name"
+    }
+  ],
+  "canonical_id_proposals": [
+    "BG:mathews-archery:US:mathews-archery-inc",
+    "BG:mathews-archery:US-WI:mathews-archery-inc"
+  ],
+  "accepted_canonical_id": null,
+  "unresolved": [
+    "Initial reader exposed citation markers only. Later rendered UI capture supplied URL leads; their destinations and current contents have not been verified.",
+    "Do not equate operational founding with incorporation or assume a founding location from jurisdiction",
+    "Ownership, facility size, Mission/Genesis legal relationships, and current status require source reconciliation",
+    "A court disclosure about parent or 10-percent ownership alone does not establish all current ownership or exchange-listing facts",
+    "Related domains are historical candidates, not a current allowlist or proof of common legal ownership",
+    "Select a stable canonical ID only after verification and owner review; preserve aliases during migration",
+    "Sunbiz query mismatch: S18 uses EntityName and MATHEWSARCHERY search keys; inherited S20/S22 links use OfficerRegisteredAgentName and SIMONDS search keys, despite the same aggregateId. Preserve raw URLs privately and inspect the actual returned record before inferring identity support from link labels."
+  ],
+  "acceptance": "Verify dated authoritative evidence per field, reconcile conflicting sources, record exact URLs and accepted/rejected candidates, then promote a reviewed version."
+}

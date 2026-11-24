@@ -1,0 +1,21 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Changed
+- Removed empty placeholder directories and their `.gitkeep` files from the repository root.
+- Updated the README, repository guidance, and manifest to distinguish populated areas from future capabilities.
+
+### Added
+- Initial repository structure
+- README.md with tagline and Quick Links
+- CHANGELOG.md
+- gpt_manifest.yaml
+- Directory structure: /src, /prompts, /build, /eval, /ops
+- Technology inventory with repository evidence, version status, latest stable references, and maintenance plan
+- Dependabot configuration for current and future GitHub Actions, npm, pip, and Docker dependencies

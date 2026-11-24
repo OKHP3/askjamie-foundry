@@ -1,0 +1,35 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+*.cache
+
+# Build artifacts in subdirectories
+dist/
+*.pyc
+__pycache__/
+node_modules/
+
+# Environment files
+.env
+.env.local
+*.secret
+
+# OS generated files
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini

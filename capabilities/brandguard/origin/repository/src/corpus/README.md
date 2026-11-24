@@ -1,0 +1,3 @@
+# Corpus
+
+This folder contains the knowledge base and reference materials for AskJamie.

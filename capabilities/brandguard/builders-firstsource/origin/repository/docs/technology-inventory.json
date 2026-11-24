@@ -1,0 +1,25 @@
+{
+  "reviewed_on": "2026-07-20",
+  "tracked": [
+    {
+      "name": "Git",
+      "kind": "git_docs",
+      "in_use": "2.55.0",
+      "source": "https://git-scm.com/docs/git"
+    },
+    {
+      "name": "Python",
+      "kind": "python_downloads",
+      "in_use": "3.9+",
+      "source": "https://www.python.org/downloads/"
+    },
+    {
+      "name": "Mermaid",
+      "kind": "github_release",
+      "repository": "mermaid-js/mermaid",
+      "in_use": "unpinned syntax only",
+      "compare": false,
+      "source": "https://github.com/mermaid-js/mermaid/releases"
+    }
+  ]
+}

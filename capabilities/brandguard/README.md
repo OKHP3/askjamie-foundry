@@ -1,6 +1,6 @@
 # BrandGuard
 
-Public navigation for the BrandGuard capability family.
+Sources for the BrandGuard capability family.
 
 - [Builders FirstSource](builders-firstsource/README.md)
 - [LEGO](lego/README.md)
@@ -16,4 +16,10 @@ Public navigation for the BrandGuard capability family.
 - [SCHEELS](scheels/README.md)
 - [Mathews Archery](mathews-archery/README.md)
 
-Organization-specific source material and workspace records follow the [FoundRy visibility rules](../../docs/governance.md).
+## Transferred repository
+
+463 of 463 tracked files from the source main branch are here.
+
+- [Browse the original directory layout](origin/repository/)
+- [Read the source commit, tree identities, and byte counts](origin/source.json)
+- [Read the original GitHub issue and pull request records](origin/github-conversations.json)

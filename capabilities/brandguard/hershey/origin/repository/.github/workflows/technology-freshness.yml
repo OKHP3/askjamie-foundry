@@ -1,0 +1,44 @@
+name: Technology freshness
+
+on:
+  schedule:
+    - cron: '17 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-nix-channel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Compare configured channel with latest stable NixOS channel
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          configured="$(sed -n 's/^channel = "stable-\([0-9][0-9]_[0-9][0-9]\)"$/\1/p' .replit)"
+          # channels.nixos.org renders its directory listing with JavaScript.
+          # Query the backing S3 listing so CI receives machine-readable data.
+          latest="$(curl --fail --silent --show-error --location 'https://nix-channels.s3.amazonaws.com/?delimiter=/' | grep -oE 'nixos-[0-9]{2}\.[0-9]{2}' | sed 's/^nixos-//' | sort -V | tail -n 1 | tr '.' '_')"
+          if [[ -z "$configured" || -z "$latest" ]]; then
+            echo "Could not determine configured or latest NixOS stable channel" >&2
+            exit 1
+          fi
+          if [[ "$configured" == "$latest" ]]; then
+            echo "NixOS stable channel is current: stable-$configured"
+            exit 0
+          fi
+          title="Technology update available: NixOS stable-$latest"
+          body="The repository is configured for stable-$configured in .replit, while the NixOS channel index reports stable-$latest as the newest stable channel. Review docs/technology-inventory.md and update .replit after checking Replit compatibility."
+          existing="$(gh issue list --state open --search "$title in:title" --json number --jq 'length')"
+          if [[ "$existing" == "0" ]]; then
+            gh issue create --title "$title" --body "$body"
+          else
+            echo "An open tracking issue already exists"
+          fi
