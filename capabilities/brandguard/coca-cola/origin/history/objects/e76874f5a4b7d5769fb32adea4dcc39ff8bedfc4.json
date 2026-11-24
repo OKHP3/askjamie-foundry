@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "technologies": [
+    {
+      "name": "Python",
+      "role": "Runtime for repository-local skill scripts",
+      "current_in_repo": "3.9+ documented; no repository pin",
+      "current_workstation": "3.14.0rc1",
+      "latest_stable": "3.14.6",
+      "source": "https://www.python.org/doc/versions/",
+      "check": "python"
+    },
+    {
+      "name": "PyYAML",
+      "role": "Imported by the skill validation script",
+      "current_in_repo": "Unpinned and not declared in a dependency manifest",
+      "current_workstation": "Not verified",
+      "latest_stable": "6.0.3",
+      "source": "https://pypi.org/project/PyYAML/",
+      "check": "pypi:PyYAML"
+    },
+    {
+      "name": "Git",
+      "role": "Version control",
+      "current_in_repo": "Not pinned",
+      "current_workstation": "2.55.0.windows.2",
+      "latest_stable": "2.55.0",
+      "source": "https://git-scm.com/docs/git",
+      "check": "git"
+    }
+  ]
+}

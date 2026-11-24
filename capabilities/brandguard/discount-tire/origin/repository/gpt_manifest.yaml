@@ -1,0 +1,50 @@
+name: AskJamie-GPT-BRG10
+description: Discount Tire — OKHP³ BrandGuard™ GPT Configuration
+version: 1.0.0
+
+# Official and reference links
+links:
+  discount_tire_official:
+    url: https://www.discounttire.com
+    description: Discount Tire Official Website
+  
+  askjamie_lens:
+    url: https://askjamie.okhp3.com
+    description: AskJamie Lens Page
+  
+  chatgpt_project:
+    url: https://chatgpt.com
+    description: ChatGPT Project
+  
+  notion:
+    url: https://notion.so
+    description: Notion Documentation
+  
+  custom_gpt:
+    url: https://chat.openai.com/gpts
+    description: Custom GPT Platform
+
+# Repository structure
+structure:
+  knowledge: "Populated public-information knowledge corpus"
+  docs: "Repository documentation and technology inventory"
+  agents: "Repository-local agent guidance and skills"
+  skills: "Publication mirror for promoted local skills"
+
+# Planned areas are not materialized until their contents exist.
+planned_structure:
+  prompts: "Prompt spine and configurations"
+  eval: "Evaluation packs and testing materials"
+  rag-source: "Retrieval-source material"
+  web: "Web assets and frontend resources"
+  ops: "Operational configurations and deployment"
+  build: "Build artifacts and compiled resources"
+  releases: "Release material"
+
+# Metadata
+metadata:
+  brand: "Discount Tire"
+  framework: "OKHP³ BrandGuard™"
+  model: GPT-BRG10
+  visibility: public
+  data_policy: "Public information only; reference discounttire.com for official details"

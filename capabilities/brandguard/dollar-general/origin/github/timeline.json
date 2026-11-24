@@ -1,0 +1,132 @@
+{
+  "comment_reactions": [],
+  "counts": {
+    "comment_reactions": 0,
+    "comments_checked_for_reactions": 0,
+    "events": 14,
+    "issue_reactions": 1,
+    "records": 1
+  },
+  "issue_and_pull_request_timelines": [
+    {
+      "events": [
+        {
+          "actor": "Copilot",
+          "assignee": "Copilot",
+          "created_at": "2025-12-23T20:03:11Z",
+          "event": "assigned",
+          "id": 21731858395
+        },
+        {
+          "commit_time": "2025-12-23T20:03:11Z",
+          "event": "committed",
+          "parents": [
+            "09d566d876a9a118b9963d744840971a5a5ce167"
+          ],
+          "sha": "39efb18e83a563830996edbcc3aeec8312270a72",
+          "tree_sha": "69fcaf7a24cb003c2b15eb4696b7b14aad1e0421"
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "OKHP3",
+          "created_at": "2025-12-23T20:03:12Z",
+          "event": "assigned",
+          "id": 21731858437
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T20:04:09Z",
+          "event": "copilot_work_started",
+          "id": 21731870129
+        },
+        {
+          "commit_time": "2025-12-23T20:06:31Z",
+          "event": "committed",
+          "parents": [
+            "39efb18e83a563830996edbcc3aeec8312270a72"
+          ],
+          "sha": "1e37ac31d4bb6b04811cf531e231e29d9b33455d",
+          "tree_sha": "ce1e5d64f16ef67ef710aea3b50f2fc3e7bffa9a"
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:07:23Z",
+          "event": "renamed",
+          "id": 21731912186,
+          "rename": {
+            "from": "[WIP] Create initial structure for AskJamie-GPT-BRG08 repo",
+            "to": "Initialize AskJamie-GPT-BRG08 repository structure"
+          }
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:07:31Z",
+          "event": "review_requested",
+          "id": 21731913548,
+          "requested_reviewer": "OKHP3",
+          "review_requester": "Copilot"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T20:07:31Z",
+          "event": "copilot_work_finished",
+          "id": 21731913576
+        },
+        {
+          "commit_id": "1e37ac31d4bb6b04811cf531e231e29d9b33455d",
+          "event": "reviewed",
+          "id": 3611508054,
+          "state": "approved",
+          "submitted_at": "2025-12-24T19:47:44Z",
+          "updated_at": "2025-12-24T19:47:44Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:54:51Z",
+          "event": "ready_for_review",
+          "id": 21760249280
+        },
+        {
+          "commit_id": "1e37ac31d4bb6b04811cf531e231e29d9b33455d",
+          "event": "reviewed",
+          "id": 3613638318,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:54:53Z",
+          "updated_at": "2025-12-26T15:54:53Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "fba57811c371e263d44631508d9e3824016815a3",
+          "created_at": "2025-12-26T15:55:06Z",
+          "event": "merged",
+          "id": 21760250658
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:55:06Z",
+          "event": "closed",
+          "id": 21760250664
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:55:29Z",
+          "event": "head_ref_deleted",
+          "id": 21760252803
+        }
+      ],
+      "number": 1,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2025-12-26T15:55:42Z",
+          "id": 250453892
+        }
+      ]
+    }
+  ],
+  "redactions": {},
+  "source_repository": "OKHP3/askjamie-brg08-dollar-general"
+}

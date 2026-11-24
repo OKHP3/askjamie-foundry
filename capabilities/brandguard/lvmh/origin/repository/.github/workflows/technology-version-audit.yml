@@ -1,0 +1,45 @@
+name: Technology version audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 14 * * 1"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Audit official release pages
+        id: audit
+        continue-on-error: true
+        run: python scripts/check_technology_versions.py
+
+      - name: Open or update an issue when versions move
+        if: steps.audit.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Technology version inventory needs review"
+          body="The scheduled audit found a technology version change or an official release-page format change. Review the workflow log and run: python scripts/check_technology_versions.py --update"
+          existing=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi
+
+      - name: Fail when review is required
+        if: steps.audit.outcome == 'failure'
+        run: exit 1

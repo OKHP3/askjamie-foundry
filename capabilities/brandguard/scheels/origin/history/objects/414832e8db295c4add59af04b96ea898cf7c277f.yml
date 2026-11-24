@@ -1,0 +1,62 @@
+name: Technology drift
+
+on:
+  pull_request:
+  schedule:
+    - cron: "23 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Compare configured and latest stable releases
+        id: versions
+        continue-on-error: true
+        run: python ops/check-technology-versions.py
+      - name: Test release parsing
+        run: python -m unittest discover -s ops -p 'test_*.py'
+      - name: Reject incomplete evidence
+        if: steps.versions.outcome == 'failure'
+        run: |
+          set +e
+          python ops/check-technology-versions.py
+          status=$?
+          if [ "$status" -gt 1 ]; then exit "$status"; fi
+      - name: Open or update drift issue
+        if: github.event_name != 'pull_request' && steps.versions.outcome == 'failure'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const title = 'Technology drift detected';
+            const body = [
+              'The scheduled technology check found that an explicitly configured platform version may be behind the latest stable release.',
+              '',
+              'Review the workflow log and update `.replit` only after confirming Replit support and validating the repository artifacts.',
+              '',
+              'This issue is intentionally not an automatic runtime upgrade: the repository has no application build or test suite yet.'
+            ].join('\n');
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open'
+            });
+            if (issues.some(issue => issue.title === title)) {
+              return;
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body
+            });

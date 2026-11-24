@@ -1,0 +1,20 @@
+name: Technology version check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+      - name: Check declared technology versions
+        run: python ops/check_technology_versions.py

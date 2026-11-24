@@ -106,7 +106,9 @@ The named adaptation under review is deliberately narrow:
 This is an evidence and review adaptation, not adoption of a mentor governance
 or graduation surface. The owner decision is recorded in
 [`regional-governance-decision.yaml`](regional-governance-decision.yaml) and
-is bound to the registry digest in that file.
+is bound to the registry digest in that file. The November 24 legacy repository
+transfer changed the registry. The November 5 decision remains historical
+evidence for its recorded digest. A current audit must evaluate the current digest.
 
 ## Required audit record
 

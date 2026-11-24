@@ -2,12 +2,11 @@
 
 ## Subtree migration records
 
-The nine records retain source identities and catalog lifecycle statuses. On
+The nineteen records retain source identities and catalog lifecycle statuses. On
 2026-10-19 Jamie selected public destinations for AJ01 and AJ02. Their source
 commits are pinned and complete tracked snapshots are preserved unchanged under
 each capability origin/repository directory. Their migration status is imported;
-source consolidation does not imply skill or host acceptance. Seven other
-entries retain their private controls. See [the selected-child migration plan](../docs/migrations/aj01-aj02-2026-10-19.md)
+source consolidation does not imply skill or host acceptance. The AJ03, AJ04 and BrandGuard entries now point to their public legacy source records. The storage and visibility fields describe the capability and its workspace. See [the selected-child migration plan](../docs/migrations/aj01-aj02-2026-10-19.md)
 and [the migration contract](../docs/skill-first-foundry.md).
 
 
@@ -32,21 +31,9 @@ The authoritative list of every repository in the AskJamie ecosystem. Each entry
 declares the repo's identity, capability code, family, status, visibility, and
 any client/firewall flags.
 
-### Currently Registered Repos (9)
+### Registered repositories
 
-| Repo | Code | Family | Status | Visibility |
-|---|---|---|---|---|
-| `askjamie-aj01-resume-representative` | `aj01` | core-capability | active | public |
-| `askjamie-aj02-professional-portfolio` | `aj02` | core-capability | draft | public |
-| `askjamie-aj03-enterprise-sleuth` | `aj03` | enterprise-sleuth | draft | private |
-| `askjamie-aj04-brandguard` | `aj04` | brandguard | draft | private |
-| `askjamie-brg00-builders-firstsource` | `brg00` | brandguard | active | private 🔒 |
-| `askjamie-brg01-lego` | `brg01` | brandguard | draft | private 🔒 |
-| `askjamie-brg12-mathews-archery` | `brg12` | brandguard | draft | private 🔒 |
-| `buildersfirstsource-askjamie-aj03-enterprise-sleuth` | `aj03` | client-overlay | draft | private 🔒 |
-| `cvshealth-askjamie-aj03-enterprise-sleuth` | `aj03` | client-overlay | draft | private 🔒 |
-
-🔒 = `visibility_lock: permanent-private` — public graduation not allowed
+The [registry index](index.yaml) records all nineteen identities. Each November 24 transfer has a public source record relative to its migration destination. The record gives both file counts and tree IDs, including transfers with outstanding files.
 
 ### Status Values
 

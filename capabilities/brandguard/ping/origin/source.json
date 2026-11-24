@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg04-ping",
+  "source_commit": "58df713636cea1b1353e5cb4283753deee008894",
+  "source_tree": "3897ca83a17e665cd939fa800d8f7631e70195a0",
+  "destination": "capabilities/brandguard/ping",
+  "stored_tree": "3897ca83a17e665cd939fa800d8f7631e70195a0",
+  "source_files": 549,
+  "stored_files": 549,
+  "stored_bytes": 21858638,
+  "path_mode_size_sha256_digest": "ae1324ba068cba0d78764c6a969f83e314110f8f4ef23adcc572baf39815d66a"
+}

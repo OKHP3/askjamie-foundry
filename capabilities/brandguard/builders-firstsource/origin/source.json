@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg00-builders-firstsource",
+  "source_commit": "875b23fd74b9d162a246069b3a0eac8fba6106fa",
+  "source_tree": "3abde263b463e63032cf9f49e747548486ac772f",
+  "destination": "capabilities/brandguard/builders-firstsource",
+  "stored_tree": "3abde263b463e63032cf9f49e747548486ac772f",
+  "source_files": 478,
+  "stored_files": 478,
+  "stored_bytes": 56008464,
+  "path_mode_size_sha256_digest": "12cc6d4496d7e8acdc82eea6f49fffc3e7dbae5b5a9fa7bfc18c597c43f9d8be"
+}

@@ -23,3 +23,25 @@
 /capabilities/resume-representative/skills/okhp3-resume-generator/** text eol=lf
 # Preserve the final blank line in the supplied standalone prompt.
 /capabilities/resume-representative/skills/okhp3-resume-generator/prompts/the-resume-that-earns-the-interview.md whitespace=-blank-at-eof
+
+# Preserve original repository bytes in the 17 named legacy transfers.
+/capabilities/enterprise-sleuth/origin/repository/** -text -filter -ident
+/capabilities/enterprise-sleuth/builders-firstsource/origin/repository/** -text -filter -ident
+/capabilities/enterprise-sleuth/cvs-health/origin/repository/** -text -filter -ident
+/capabilities/brandguard/origin/repository/** -text -filter -ident
+/capabilities/brandguard/builders-firstsource/origin/repository/** -text -filter -ident
+/capabilities/brandguard/lego/origin/repository/** -text -filter -ident
+/capabilities/brandguard/starbucks/origin/repository/** -text -filter -ident
+/capabilities/brandguard/brooks-running/origin/repository/** -text -filter -ident
+/capabilities/brandguard/ping/origin/repository/** -text -filter -ident
+/capabilities/brandguard/costco/origin/repository/** -text -filter -ident
+/capabilities/brandguard/hershey/origin/repository/** -text -filter -ident
+/capabilities/brandguard/lvmh/origin/repository/** -text -filter -ident
+/capabilities/brandguard/dollar-general/origin/repository/** -text -filter -ident
+/capabilities/brandguard/coca-cola/origin/repository/** -text -filter -ident
+/capabilities/brandguard/discount-tire/origin/repository/** -text -filter -ident
+/capabilities/brandguard/scheels/origin/repository/** -text -filter -ident
+/capabilities/brandguard/mathews-archery/origin/repository/** -text -filter -ident
+
+# Historical file versions are stored by their original content hash.
+/capabilities/**/origin/history/objects/** -text -filter -ident

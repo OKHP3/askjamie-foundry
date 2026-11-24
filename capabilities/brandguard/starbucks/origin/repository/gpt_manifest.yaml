@@ -1,0 +1,34 @@
+name: GPT-BRG02
+title: OKHP³ BrandGuard™ — Starbucks
+description: AskJamie™ BrandGuard for Starbucks brand consistency and messaging
+version: 0.1.0
+type: custom-gpt
+
+metadata:
+  brand: Starbucks
+  project: AskJamie-GPT-BRG02
+  organization: OKHP³
+  tagline: This GPT drinks your brand equity one sip at a time - unless you brew it first.
+
+links:
+  official_site: https://www.starbucks.com
+  lens_page: https://askjamie.bot/lens-system/okhp3-brandguard/starbucks/index.html
+  lens_page_github: https://github.com/OKHP3/AskJamie/blob/main/lens-system/okhp3-brandguard/starbucks/index.html
+  chatgpt_project: https://chatgpt.com/g/g-p-694a19cd224c8191b642f0ee4dcbfcfb-gpt-brg02-starbucks-okhp3-brandguardtm/project
+  notion: https://www.notion.so/overkillhill/BRG02-Starbucks-BrandGuard-Sentinel-14956d6e37db4d76a177173bfd96af74
+  custom_gpt: https://chatgpt.com/g/g-694ac7b0f8b88191ab788b14898ba340-starbucks
+
+directories:
+  source: src
+  knowledge: knowledge
+  prompts: prompts
+  evaluation: eval
+  build: build
+  releases: releases
+  assets: assets
+  rag_source: rag-source
+  site: site
+  web: web
+  tests: tests
+  documentation: docs
+  operations: ops

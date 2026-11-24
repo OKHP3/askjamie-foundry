@@ -1,0 +1,259 @@
+{
+  "schema": "brg12-original-payload-recovery-v1",
+  "date": "2026-10-17",
+  "status": "PARTIAL",
+  "source_boundary": "17 filenames on the observed Project Sources list",
+  "capture": "supported browser exact-file Download controls; local paths, byte sizes and SHA-256 verified",
+  "counts": {
+    "project_shared_originals_recovered": 17,
+    "newly_recovered_project_shared_originals": 16,
+    "previously_unretained_byte_payloads": 14,
+    "same_byte_matches_to_prior_files": 3,
+    "original_docx_bytes": 1480436,
+    "body_blocks_for_search": 3178,
+    "tables_in_originals": 7,
+    "media_parts_in_originals": 3,
+    "methodology_attachment_names_with_available_candidate_content": 8,
+    "methodology_attachment_names": 10,
+    "generated_original_references_still_unresolved": 19
+  },
+  "files": [
+    {
+      "id": "PS01",
+      "name": "beyond-equilibrium-a-unified-view-of-prompt-stability-semantic-interference-and-multiagent-llm-coordination-detailed.docx",
+      "bytes": 82488,
+      "sha256": "64693c447cafeac07133e2baed291b29b64e1f09abbd652cdea0b9e596eb3957",
+      "body_blocks": 301,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS02",
+      "name": "building-the-ideal-custom-gpt-in-late-2025.docx",
+      "bytes": 50251,
+      "sha256": "e22014a93c59a19ba06bf7fad6e9c225a5318390253cda44111bfcdd20a7f5d7",
+      "body_blocks": 154,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS03",
+      "name": "state-of-the-art-practices-for-building-ideal-custom-gpts-openai-gemini-gems.docx",
+      "bytes": 70503,
+      "sha256": "d31d729bf9752646b1a1638763f1eda5b661958ca32019c3df1a1950973364ce",
+      "body_blocks": 232,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": [
+        {
+          "path": "library-copies/state-of-the-art-practices-for-building-ideal-custom-gpts-openai-gemini-gems.docx",
+          "byte_equal": true,
+          "sha256": "d31d729bf9752646b1a1638763f1eda5b661958ca32019c3df1a1950973364ce"
+        }
+      ]
+    },
+    {
+      "id": "PS04",
+      "name": "the-gpt-journey-how-generative-ai-evolved-and-why-it-matters.docx",
+      "bytes": 238671,
+      "sha256": "62709d9846487fc82c6258c84a6d070a6e2c50b4bdc02892ee08602eba30ea9d",
+      "body_blocks": 166,
+      "tables": 0,
+      "media_parts": 1,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS05",
+      "name": "the-overkill-hillp3tm-method-gpt-manufacturing-cookbook-nov2025.docx",
+      "bytes": 66013,
+      "sha256": "b976a8103a0d4e9d72aec11bdf14ccbacc341680a2f58cc1e6f816d908af2851",
+      "body_blocks": 404,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS06",
+      "name": "the-llm-interface-economy-how-gpts-will-replace-browsers-and-reshape-commerce.docx",
+      "bytes": 48504,
+      "sha256": "4d8c09aabbfe4e154f974f6350b4dbe6d9e349d71c7b84c49e142e49825ea610",
+      "body_blocks": 134,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS07",
+      "name": "brand-guarding-the-ai-frontier-overkill-hillp3tm-askjamietm-and-the-interface-economy.docx",
+      "bytes": 97211,
+      "sha256": "17898d1408994624946999069bf8219f7a6f30c49af74bbc861832844172271b",
+      "body_blocks": 309,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS08",
+      "name": "optimal-formation-of-gpt-knowledge-file.docx",
+      "bytes": 66469,
+      "sha256": "1f2ca7bc73dbca6c87988067b490b3b66f091445e9521fd5fd3a95fc6b539a67",
+      "body_blocks": 332,
+      "tables": 1,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS09",
+      "name": "chatgpts-custom-gpt-marketplace-state-of-play-in-late-2025.docx",
+      "bytes": 40633,
+      "sha256": "46212da6f5be2a37c5682fba3957c71d61bf88f04b28ab1b984def3c1092ff1a",
+      "body_blocks": 167,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS10",
+      "name": "guide-to-mastering-custom-gpt-creation-november-2025.docx",
+      "bytes": 541247,
+      "sha256": "0a6b9cf302fa9f1293e2d9a23def49dd5e7f5bb4dd154f469c0be154877221aa",
+      "body_blocks": 169,
+      "tables": 0,
+      "media_parts": 2,
+      "embedded_object_or_macro_parts": [],
+      "matches": [
+        {
+          "path": "library-copies/guide-to-mastering-custom-gpt-creation-november-2025.docx",
+          "byte_equal": true,
+          "sha256": "0a6b9cf302fa9f1293e2d9a23def49dd5e7f5bb4dd154f469c0be154877221aa"
+        }
+      ]
+    },
+    {
+      "id": "PS11",
+      "name": "custom-gpts-in-digital-commerce-a-disruptive-force-in-sales-engagement-and-brand-authority.docx",
+      "bytes": 33541,
+      "sha256": "c6649b742187ed416089363bae63453df75eb055adcc5f1e186cb775ff25bc30",
+      "body_blocks": 98,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS12",
+      "name": "designing-a-modular-multiphase-master-prompt-cookbook.docx",
+      "bytes": 37079,
+      "sha256": "8f5892eed76b165e1b1a543318c3e83b169868a736f24a24aca9e49305e39313",
+      "body_blocks": 155,
+      "tables": 1,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS13",
+      "name": "execution-and-gpts-plan.docx",
+      "bytes": 18011,
+      "sha256": "5298567b343eb3463637ad75a52fdf6c8437cc8b2134a5454ab068e5226f05f6",
+      "body_blocks": 97,
+      "tables": 2,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS14",
+      "name": "mastering-gpt-art-2025.docx",
+      "bytes": 26219,
+      "sha256": "94e759e6e22891bed8e04a8881aab043eec9a69429846f7c95319b44c76db852",
+      "body_blocks": 172,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS15",
+      "name": "gpt-marketplace-analysis.docx",
+      "bytes": 24312,
+      "sha256": "67437c3d4f049b99e1b5c258a9bfa3a11f9f2ae57aaebc23e41e8aff30e8276c",
+      "body_blocks": 114,
+      "tables": 3,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS16",
+      "name": "optimal-instruction-block-structure-for-a-custom-gpt.docx",
+      "bytes": 24804,
+      "sha256": "292dc8b29b877eb1c17935aae2e92f50aec996cd9781ac7d7b896c871b9a8265",
+      "body_blocks": 93,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": []
+    },
+    {
+      "id": "PS17",
+      "name": "brandguard-prompt-library-plan.docx",
+      "bytes": 14480,
+      "sha256": "c0c46bb6903d82eb1dc7e2146d0b9e9fb279effb3d470818dc2a8dcdd973cca0",
+      "body_blocks": 81,
+      "tables": 0,
+      "media_parts": 0,
+      "embedded_object_or_macro_parts": [],
+      "matches": [
+        {
+          "path": "downloads/brandguard-prompt-library-plan.docx",
+          "byte_equal": true,
+          "sha256": "c0c46bb6903d82eb1dc7e2146d0b9e9fb279effb3d470818dc2a8dcdd973cca0"
+        }
+      ]
+    }
+  ],
+  "reusable_adaptations": [
+    {
+      "id": "R01",
+      "source": "PS08 B124-B133; B159-B164",
+      "purpose": "diagnose missing source use with explicit observed retrieval gaps"
+    },
+    {
+      "id": "R02",
+      "source": "PS01 B124-B148",
+      "purpose": "check observable output constraints and preserve evidence"
+    },
+    {
+      "id": "R03",
+      "source": "PS05 B237-B244; B337-B356",
+      "purpose": "distinguish context prepared, saved, read back, supplied and tested"
+    }
+  ],
+  "limits": [
+    "Original Project-shared file recovery establishes that source identity, not equality with same-name Chat attachments.",
+    "Search companions cover body text/table rows; complete formatting, media and other parts remain in the untouched DOCX originals.",
+    "All source documents remain historical; no current platform capability, effectiveness, marketplace or company claim verified.",
+    "No exhaustive semantic census or whole-Project denominator established.",
+    "No model evaluation, runtime, deployment, formal review release approval or source archive performed."
+  ],
+  "whole_project_reusable_value_percent": null,
+  "minimum_over_60": "NOT DEMONSTRATED",
+  "goal_over_80": "NOT DEMONSTRATED",
+  "archive_ready": false,
+  "source_archiving_performed": false,
+  "source_hold": "ALL26",
+  "private_evidence": "Dated original-payload recovery packet in the established owner-controlled private harvest archive",
+  "worksheet": "prompts/recovered-method-worksheets.md"
+}

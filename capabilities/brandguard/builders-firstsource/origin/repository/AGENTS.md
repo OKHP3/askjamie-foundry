@@ -1,0 +1,128 @@
+# Builders FirstSource: BrandGuard
+
+## Project identity
+
+- Repository: `askjamie-brg00-builders-firstsource`
+- Suite: AskJamie / OKHP3 BrandGuard
+- Canonical public name: Builders FirstSource: BrandGuard
+- Internal lineage: BRG00 / GPT-BFS01
+- Target brand: Builders FirstSource, commonly abbreviated BFS
+- Manifest version: `0.2.0` in `gpt_manifest.yaml`
+- Repository type: Git-backed content, prompt, knowledge, and governance repository
+- Current status: partial and experimental content prototype, inferred from the absence of an application runtime, build tooling, and populated regression assets
+- GitHub: https://github.com/OKHP3/askjamie-brg00-builders-firstsource
+
+## Purpose, mission, and vision
+
+Confirmed purpose: provide a public-source, builder-centric BrandGuard lens that helps people understand BFS and the U.S. residential construction supply ecosystem in AI-mediated discovery. The repository is an educational proof of concept, not an official BFS property or a transactional product.
+
+Confirmed mission: explain products, prefab and component workflows, logistics, regional construction constraints, sustainability concepts, and public company context clearly while routing real-world actions to official BFS channels.
+
+Inferred longer-term vision: make BFS easier for builders, vendors, partners, developers, learners, and other external stakeholders to understand and approach before they enter an official BFS workflow. This inference is supported by the external AI discovery and myBLDR boundary documents.
+
+## Non-negotiable boundaries
+
+- Use public sources only. Do not add private BFS data, credentials, customer records, internal systems, or confidential strategy.
+- Always preserve the disclosure that this is an OverKill Hill public demonstration and that Builders FirstSource has not officially claimed this AI space.
+- Never present the project as BFS, myBLDR, Paradigm, an official support channel, or a BFS employee.
+- BrandGuard explains, prepares, and routes. Official BFS systems transact, authenticate, manage records, and execute.
+- Do not quote, order, price, schedule, track deliveries, retrieve invoices, access accounts, or replace myBLDR or another official BFS workflow.
+- Do not provide engineered designs, stamped calculations, span approvals, code approvals, inspection findings, legal advice, investment advice, or project-specific guarantees.
+- Route official information and actions to `https://www.bldr.com`, `https://www.bldr.com/locations`, `myBLDR.com`, or a qualified local professional as appropriate.
+- Keep comparisons neutral and evidence-based. Do not make unsupported superiority claims or attack competitors.
+
+The detailed boundary references are `ops/MYBLDR_BOUNDARY.md`, `ops/mybldr-non-encroachment-doctrine.md`, and `docs/governance/mybldr-non-encroachment-guardrails.md`.
+
+## Repository structure
+
+- `README.md`: project overview, architecture, scope, operating principles, and release intentions.
+- `gpt_manifest.yaml`: GPT identity, version, canonical links, repository paths, disclaimer, and routing target.
+- `prompts/`: user-facing instruction material. Review against the disclosure and boundary rules before treating it as authoritative.
+- `src/corpus/`: intended location for normalized public-source knowledge. Currently scaffolded and empty apart from `.gitkeep`.
+- `knowledge/`: versioned source knowledge packs in DOCX and PDF form, including product, lumber, logistics, code, sustainability, and glossary topics.
+- `docs/`: thread captures, strategy, positioning, executive explanations, governance notes, and retained briefs under `docs/briefs/`.
+- `examples/`: reusable educational answer patterns, including field math and haul-planning examples.
+- `ledger/`: dynamic File #19 public market and ecosystem ledger. Keep it separate from stable ontology and append entries using `ledger/ledger_spec.md`. Historical market scans are retained under `ledger/archive/market-scans/`.
+- `eval/`: intended regression prompts and rubrics. Currently scaffolded and empty apart from `.gitkeep`.
+- `build/`: intended generated upload packs. Currently scaffolded and empty apart from `.gitkeep`.
+- `ops/`: operational governance and boundary documents.
+- `.agents/skills/`: repository-local agent skills and their supporting assets. These are agent tooling, not product runtime code.
+- `assets/`: project images and other visual assets.
+- `scripts/`: repository maintenance scripts, including the upstream technology-version audit.
+- `site/`, `web/`, `rag-source/`, `releases/`, and `tests/`: reserved or scaffolded surfaces. No runnable implementation is currently present in them.
+
+There are no nested Git repositories or independent application projects under this root based on the repository inventory.
+
+## Architecture and workflows
+
+The documented architecture has two layers:
+
+1. Static ontology: stable identity, scope, disclosure, guardrails, public knowledge structure, prompts, examples, and governance.
+2. Dynamic intelligence: the File #19 ledger for time-sensitive public market and ecosystem observations.
+
+The intended workflow is:
+
+1. Add or revise public-source content in the appropriate knowledge, corpus, prompt, documentation, or example surface.
+2. Keep stable ontology and changing ledger observations separate.
+3. Rebuild upload packs into `build/` when build tooling exists.
+4. Run regression evaluations when `eval/` contains prompts and rubrics.
+5. Align the manifest, repository release, and companion Notion BRG00 specification when static ontology changes.
+
+The repository currently contains the content and scaffolding for this workflow, but not the automation to perform the build, evaluation, or deployment steps. A scheduled `.github/workflows/technology-version-audit.yml` checks the dynamic entries in `docs/technology-inventory.json`; `.github/dependabot.yml` monitors the GitHub Actions used by that audit.
+
+## Technology and runtime
+
+Confirmed technologies and formats: Markdown, YAML, DOCX, PDF, PNG, Mermaid diagrams, and repository-local Python skill scripts. No application framework, package manager, service entry point, database, API integration, container, or deployment target is declared in the repository.
+
+Do not assume that the presence of `.agents/skills/skill-creator` makes this repository a Python application. Those scripts support agent-skill maintenance only.
+
+## Validation
+
+No project test, lint, build, or deployment command is currently defined. The technology audit can be run with `py -3 scripts/check_technology_versions.py` when Python 3.9 or newer is available. Before claiming a content change is valid:
+
+- Re-read every changed guidance or content file.
+- Check Markdown links and referenced relative paths manually or with an available link checker.
+- Parse `gpt_manifest.yaml` with an available YAML parser when changing it.
+- Check that ledger additions follow `ledger/ledger_spec.md` and are public-source, dated, factual, and append-oriented.
+- For prompt changes, review disclosure, non-impersonation, transactional, engineering, and privacy boundaries.
+- For DOCX or PDF changes, inspect the rendered or extracted result when practical. Preserve source format and do not replace source documents with generated artifacts without an explicit request.
+- Use the local skill scripts only for their documented skill-maintenance purpose.
+
+Useful repository checks:
+
+```sh
+git status --short
+git diff --check
+git ls-files
+find . -maxdepth 2 -type f
+```
+
+These are inventory and whitespace checks, not a substitute for application tests.
+
+## Change safety and conventions
+
+- Make the smallest scoped change that satisfies the request. Preserve unrelated user changes.
+- Use `AGENTS.md` as the canonical repository guidance. `CLAUDE.md` currently points to it with `@AGENTS.md`; keep that pointer unless Claude-specific instructions are added.
+- Prefer one canonical document over duplicated guidance. Link to the relevant boundary, ledger, or strategy file instead of copying it.
+- Preserve the separation between static ontology and dynamic ledger. Append ledger entries and do not rewrite older observations except for corrections or updated verification dates.
+- Keep standalone punchy lines as standalone lines when editing project prose.
+- Do not use em dashes in new generated content. Use commas, parentheses, colons, or a simple hyphen instead.
+- Follow the repository's public-source and disclosure rules even when an existing prompt says otherwise.
+- Do not invent commands, status, ownership, roadmap commitments, source claims, branch conventions, or production guarantees.
+- No repository-specific branch strategy is documented. Inspect current Git state and follow the user's explicit branch instructions before creating or switching branches.
+- AutoCAD is not part of the evidenced project scope. Do not add an AutoCAD version rule to project guidance without owner direction.
+
+## Known gaps and risks
+
+- The core instruction file `prompts/builders-firstsource-gpt-core.md` now states the independent demonstration and non-impersonation boundaries. Continue to review prompt changes against this file, `README.md`, and `ops/`.
+- The core prompt directs the assistant not to reveal private chain-of-thought. Show useful calculations and assumptions without exposing private reasoning.
+- `README.md` describes a build, evaluation, changelog, tagging, and upload workflow, but no `CHANGELOG.md`, build script, evaluation files, or deployment automation is present.
+- `src/corpus/`, `eval/`, `build/`, `tests/`, and several other top-level directories are scaffolds rather than implemented subsystems.
+- Public claims about BFS scale, market position, certifications, product performance, and case studies require current source verification before reuse. The ledger is the intended place for time-sensitive verification notes.
+- The companion Notion specification is referenced but was not treated as repository evidence during this maintenance pass.
+
+## Keeping this guide current
+
+Update this file when repository structure, runtime, validation commands, public-facing boundaries, or release workflow materially change. Re-check it after changes to `README.md`, `gpt_manifest.yaml`, `prompts/`, `ops/`, or the ledger specification. Keep statements labeled as confirmed, inferred, or unknown when evidence is incomplete.
+
+## Imported Claude Cowork project instructions

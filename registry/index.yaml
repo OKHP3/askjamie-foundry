@@ -1,6 +1,6 @@
 schema_version: "1.0"
 foundry: OKHP3/AskJamie-FoundRy
-updated: "2026-11-06"
+updated: "2026-11-24"
 
 # ---------------------------------------------------------------------------
 # Registry of all child repositories governed by AskJamie FoundRy
@@ -52,10 +52,11 @@ repositories:
 
   - repo: OKHP3/askjamie-aj03-enterprise-sleuth
     migration:
-      destination: capabilities/askjamie-aj03-enterprise-sleuth
-      status: planned
+      destination: capabilities/enterprise-sleuth
+      status: source-inventoried
       storage: private-external
-      source_commit: ""
+      source_commit: "ab7341ad27ee0889c46a0ed8f75b2758e8037b1d"
+      public_source_record: origin/source.json
     display_name: "AskJamie™ — Enterprise Sleuth"
     code: aj03
     family: enterprise-sleuth
@@ -65,14 +66,15 @@ repositories:
     description: >
       Organizational intelligence and research assistant. Designed to help
       users investigate companies, roles, and hiring contexts at depth.
-    notes: "Planned. Not yet scaffolded."
+    notes: "The public source record identifies the transferred legacy files. Capability and workspace custody is tracked separately."
 
   - repo: OKHP3/askjamie-aj04-brandguard
     migration:
-      destination: capabilities/askjamie-aj04-brandguard
-      status: planned
+      destination: capabilities/brandguard
+      status: source-inventoried
       storage: private-external
-      source_commit: ""
+      source_commit: "fca19c916ef95f2569762d0e8a8c0867277cc740"
+      public_source_record: origin/source.json
     display_name: "AskJamie™ — BrandGuard"
     code: aj04
     family: brandguard
@@ -82,16 +84,17 @@ repositories:
     description: >
       Core BrandGuard identity and governance framework. Defines brand
       protection rules, tone enforcement, and identity consistency systems.
-    notes: "Planned. Not yet scaffolded."
+    notes: "The public source record identifies the transferred legacy files. Capability and workspace custody is tracked separately."
 
   # ── BrandGuard Sentinels ─────────────────────────────────────────────────
 
   - repo: OKHP3/askjamie-brg00-builders-firstsource
     migration:
-      destination: capabilities/askjamie-brg00-builders-firstsource
-      status: planned
+      destination: capabilities/brandguard/builders-firstsource
+      status: source-inventoried
       storage: private-external
-      source_commit: ""
+      source_commit: "875b23fd74b9d162a246069b3a0eac8fba6106fa"
+      public_source_record: origin/source.json
     display_name: "BrandGuard — Builders FirstSource"
     code: brg00
     family: brandguard
@@ -104,14 +107,15 @@ repositories:
       BrandGuard Sentinel for Builders FirstSource (NYSE: BLDR). Covers
       wood-frame construction knowledge, BFS product catalog, logistics,
       and brand voice standards.
-    notes: "Historical staged source material was removed from this checkout on 2026-07-27. Client overlay, permanently private."
+    notes: "The public source record identifies the transferred legacy files. Capability and workspace custody is tracked separately."
 
   - repo: OKHP3/askjamie-brg01-lego
     migration:
-      destination: capabilities/askjamie-brg01-lego
-      status: planned
+      destination: capabilities/brandguard/lego
+      status: source-inventoried
       storage: private-external
-      source_commit: ""
+      source_commit: "6e59fbc4e54ebc25877c2ebd4e26188d96d308c7"
+      public_source_record: origin/source.json
     display_name: "BrandGuard — LEGO"
     code: brg01
     family: brandguard
@@ -119,14 +123,15 @@ repositories:
     visibility: private
     public_graduation_allowed: false
     visibility_lock: permanent-private
-    notes: "Planned."
+    notes: "The public source record identifies the transferred legacy files. Capability and workspace custody is tracked separately."
 
   - repo: OKHP3/askjamie-brg12-mathews-archery
     migration:
-      destination: capabilities/askjamie-brg12-mathews-archery
-      status: planned
+      destination: capabilities/brandguard/mathews-archery
+      status: source-inventoried
       storage: private-external
-      source_commit: ""
+      source_commit: "94aada6422255d5566b9ad89c33886bba30a2862"
+      public_source_record: origin/source.json
     display_name: "BrandGuard — Mathews Archery"
     code: brg12
     family: brandguard
@@ -134,16 +139,17 @@ repositories:
     visibility: private
     public_graduation_allowed: false
     visibility_lock: permanent-private
-    notes: "Planned."
+    notes: "The public source record identifies the transferred legacy files. Capability and workspace custody is tracked separately."
 
   # ── Client Overlays ───────────────────────────────────────────────────────
 
   - repo: OKHP3/buildersfirstsource-askjamie-aj03-enterprise-sleuth
     migration:
-      destination: capabilities/buildersfirstsource-askjamie-aj03-enterprise-sleuth
-      status: planned
+      destination: capabilities/enterprise-sleuth/builders-firstsource
+      status: source-inventoried
       storage: private-external
-      source_commit: ""
+      source_commit: "d852f7c94df24bc0fda274bba1df0ed6586da693"
+      public_source_record: origin/source.json
     display_name: "Builders FirstSource × AskJamie Enterprise Sleuth"
     code: aj03
     family: client-overlay
@@ -153,14 +159,15 @@ repositories:
     public_graduation_allowed: false
     bfs_firewall: true
     visibility_lock: permanent-private
-    notes: "Planned. Client overlay — permanently private."
+    notes: "The public source record identifies the transferred legacy files. Capability and workspace custody is tracked separately."
 
   - repo: OKHP3/cvshealth-askjamie-aj03-enterprise-sleuth
     migration:
-      destination: capabilities/cvshealth-askjamie-aj03-enterprise-sleuth
-      status: planned
+      destination: capabilities/enterprise-sleuth/cvs-health
+      status: source-inventoried
       storage: private-external
-      source_commit: ""
+      source_commit: "0d7df4d886943ac0f33d7f999a0e949e60340619"
+      public_source_record: origin/source.json
     display_name: "CVS Health × AskJamie Enterprise Sleuth"
     code: aj03
     family: client-overlay
@@ -169,4 +176,144 @@ repositories:
     visibility: private
     public_graduation_allowed: false
     visibility_lock: permanent-private
-    notes: "Planned. Client overlay — permanently private."
+    notes: "The public source record identifies the transferred legacy files. Capability and workspace custody is tracked separately."
+
+  - repo: OKHP3/askjamie-brg02-starbucks
+    migration:
+      destination: capabilities/brandguard/starbucks
+      status: source-inventoried
+      storage: private-external
+      source_commit: "ff276562d486751ac9aa99a56b6cc573032e565b"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - Starbucks"
+    code: brg02
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg03-brooks-running
+    migration:
+      destination: capabilities/brandguard/brooks-running
+      status: source-inventoried
+      storage: private-external
+      source_commit: "959a5e047729a2b4473a877b2c1faa849a5f4195"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - Brooks Running"
+    code: brg03
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg04-ping
+    migration:
+      destination: capabilities/brandguard/ping
+      status: source-inventoried
+      storage: private-external
+      source_commit: "58df713636cea1b1353e5cb4283753deee008894"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - PING"
+    code: brg04
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg05-costco
+    migration:
+      destination: capabilities/brandguard/costco
+      status: source-inventoried
+      storage: private-external
+      source_commit: "20ae929079abbb57de1bd6dd4793c06d9b6e460c"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - Costco"
+    code: brg05
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg06-hershey
+    migration:
+      destination: capabilities/brandguard/hershey
+      status: source-inventoried
+      storage: private-external
+      source_commit: "17362fdce3e8582168ebb37f83f097e770710411"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - Hershey"
+    code: brg06
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg07-lvmh
+    migration:
+      destination: capabilities/brandguard/lvmh
+      status: source-inventoried
+      storage: private-external
+      source_commit: "6e6b87961142a4069236fb38c0c630db3bc10364"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - LVMH"
+    code: brg07
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg08-dollar-general
+    migration:
+      destination: capabilities/brandguard/dollar-general
+      status: source-inventoried
+      storage: private-external
+      source_commit: "d9e7194e52ccbe7212e96558a8f3520a9f6c3d06"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - Dollar General"
+    code: brg08
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg09-coca-cola
+    migration:
+      destination: capabilities/brandguard/coca-cola
+      status: source-inventoried
+      storage: private-external
+      source_commit: "e7098f021dccc0eca1e1161f2fa6fdad6526c79f"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - Coca-Cola"
+    code: brg09
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg10-discount-tire
+    migration:
+      destination: capabilities/brandguard/discount-tire
+      status: source-inventoried
+      storage: private-external
+      source_commit: "c8397fa5168d0b4462a0186d040ddb74822dcbb5"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - Discount Tire"
+    code: brg10
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false
+
+  - repo: OKHP3/askjamie-brg11-scheels
+    migration:
+      destination: capabilities/brandguard/scheels
+      status: source-inventoried
+      storage: private-external
+      source_commit: "b888027d8b19c40317d3038b6afa83c44255064b"
+      public_source_record: origin/source.json
+    display_name: "BrandGuard - SCHEELS"
+    code: brg11
+    family: brandguard
+    status: draft
+    visibility: private
+    public_graduation_allowed: false

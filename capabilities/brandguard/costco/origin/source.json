@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg05-costco",
+  "source_commit": "20ae929079abbb57de1bd6dd4793c06d9b6e460c",
+  "source_tree": "680b4f7399ac0ff3338d1adc4c1c68770b592ecb",
+  "destination": "capabilities/brandguard/costco",
+  "stored_tree": "680b4f7399ac0ff3338d1adc4c1c68770b592ecb",
+  "source_files": 451,
+  "stored_files": 451,
+  "stored_bytes": 28455977,
+  "path_mode_size_sha256_digest": "2935dfb3edf580961b1b1b3eb71b270870f9273d29e158e5966c2cd93d76d93a"
+}

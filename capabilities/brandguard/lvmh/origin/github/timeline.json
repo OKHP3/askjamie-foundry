@@ -1,0 +1,295 @@
+{
+  "comment_reactions": [],
+  "counts": {
+    "comment_reactions": 0,
+    "comments_checked_for_reactions": 8,
+    "events": 32,
+    "issue_reactions": 1,
+    "records": 5
+  },
+  "issue_and_pull_request_timelines": [
+    {
+      "events": [
+        {
+          "commit_time": "2025-12-23T20:04:54Z",
+          "event": "committed",
+          "parents": [
+            "124bf94aba806a388f343a8e686ee4c2f394174c"
+          ],
+          "sha": "79b53cdfe26ff9de1b52e3e8b83f86b90ad09b2d",
+          "tree_sha": "b9eebf8891997772c9de957d7be8b0f409d2a53b"
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "Copilot",
+          "created_at": "2025-12-23T20:04:55Z",
+          "event": "assigned",
+          "id": 21731880062
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "OKHP3",
+          "created_at": "2025-12-23T20:04:55Z",
+          "event": "assigned",
+          "id": 21731880082
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T20:05:25Z",
+          "event": "copilot_work_started",
+          "id": 21731886927
+        },
+        {
+          "commit_time": "2025-12-23T20:07:33Z",
+          "event": "committed",
+          "parents": [
+            "79b53cdfe26ff9de1b52e3e8b83f86b90ad09b2d"
+          ],
+          "sha": "d5a6e6a09d61ee799a17fd3a950de43a1c133d07",
+          "tree_sha": "4bfba3837f07086378adf602b28780fbf155da52"
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:09:16Z",
+          "event": "renamed",
+          "id": 21731937766,
+          "rename": {
+            "from": "[WIP] Create GitHub repo structure for AskJamie-GPT-BRG07",
+            "to": "Initialize repository structure for GPT-BRG07: OKHP³ BrandGuard™ — LVMH"
+          }
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:09:24Z",
+          "event": "review_requested",
+          "id": 21731939969,
+          "requested_reviewer": "OKHP3",
+          "review_requester": "Copilot"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T20:09:24Z",
+          "event": "copilot_work_finished",
+          "id": 21731939999
+        },
+        {
+          "commit_id": "d5a6e6a09d61ee799a17fd3a950de43a1c133d07",
+          "event": "reviewed",
+          "id": 3611507926,
+          "state": "approved",
+          "submitted_at": "2025-12-24T19:47:31Z",
+          "updated_at": "2025-12-24T19:47:31Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:55:46Z",
+          "event": "ready_for_review",
+          "id": 21760254191
+        },
+        {
+          "commit_id": "d5a6e6a09d61ee799a17fd3a950de43a1c133d07",
+          "event": "reviewed",
+          "id": 3613638993,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:55:48Z",
+          "updated_at": "2025-12-26T15:55:48Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "e9a0f03c8213e31c373f4e066b0c326944e53b66",
+          "created_at": "2025-12-26T15:55:58Z",
+          "event": "merged",
+          "id": 21760255519
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:55:58Z",
+          "event": "closed",
+          "id": 21760255527
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:56:14Z",
+          "event": "head_ref_deleted",
+          "id": 21760256996
+        }
+      ],
+      "number": 1,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2025-12-26T15:56:35Z",
+          "id": 250454024
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-07-30T21:40:28Z",
+          "event": "closed",
+          "id": 28746371036
+        }
+      ],
+      "number": 2,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-04T20:47:59Z",
+          "cross_reference": {
+            "number": 4,
+            "state": "closed",
+            "url": "https://github.com/OKHP3/askjamie-brg07-lvmh/pull/4"
+          },
+          "event": "cross-referenced",
+          "updated_at": "2026-08-04T20:47:59Z"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-04T20:48:11Z",
+          "event": "closed",
+          "id": 28973848410
+        }
+      ],
+      "number": 3,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-08-04T20:47:47Z",
+          "event": "committed",
+          "parents": [
+            "7e784e48e83eb018a999db3623ca6117238901f2"
+          ],
+          "sha": "377228d45cca8391864e6780e633482be4484cff",
+          "tree_sha": "ce1a7a32810c4ef6f1ba83c16ac5b5af3aa7d7a5"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-04T20:47:58Z",
+          "event": "review_requested",
+          "id": 28973838941,
+          "requested_reviewer": "Copilot",
+          "review_requester": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "efabcfc1e630f43f99ef08360684a5c3babdb6c0",
+          "created_at": "2026-08-04T20:48:09Z",
+          "event": "merged",
+          "id": 28973847657
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-04T20:48:10Z",
+          "event": "closed",
+          "id": 28973847704
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-04T20:48:20Z",
+          "event": "head_ref_deleted",
+          "id": 28973854934
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-04T20:48:41Z",
+          "event": "copilot_work_started",
+          "id": 28973871531
+        },
+        {
+          "commit_id": "377228d45cca8391864e6780e633482be4484cff",
+          "event": "reviewed",
+          "id": 4858846533,
+          "state": "approved",
+          "submitted_at": "2026-08-04T20:50:39Z",
+          "updated_at": "2026-08-04T20:50:39Z",
+          "user": "Copilot"
+        },
+        {
+          "commit_id": "377228d45cca8391864e6780e633482be4484cff",
+          "event": "reviewed",
+          "id": 4858848977,
+          "state": "commented",
+          "submitted_at": "2026-08-04T20:51:01Z",
+          "updated_at": "2026-08-04T20:51:01Z",
+          "user": "chatgpt-codex-connector[bot]"
+        }
+      ],
+      "number": 4,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-10-12T14:39:52Z",
+          "event": "commented",
+          "id": 6126490981,
+          "updated_at": "2026-10-12T14:39:52Z",
+          "user": "github-actions[bot]"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-10-19T14:29:16Z",
+          "event": "commented",
+          "id": 6269657556,
+          "updated_at": "2026-10-19T14:29:16Z",
+          "user": "github-actions[bot]"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-10-26T15:12:21Z",
+          "event": "commented",
+          "id": 6419579903,
+          "updated_at": "2026-10-26T15:12:21Z",
+          "user": "github-actions[bot]"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-11-02T14:22:08Z",
+          "event": "commented",
+          "id": 6579524613,
+          "updated_at": "2026-11-02T14:22:08Z",
+          "user": "github-actions[bot]"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-11-09T14:21:24Z",
+          "event": "commented",
+          "id": 6742372669,
+          "updated_at": "2026-11-09T14:21:24Z",
+          "user": "github-actions[bot]"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-11-16T14:39:55Z",
+          "event": "commented",
+          "id": 6919531814,
+          "updated_at": "2026-11-16T14:39:55Z",
+          "user": "github-actions[bot]"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-11-23T14:22:06Z",
+          "event": "commented",
+          "id": 7103891023,
+          "updated_at": "2026-11-23T14:22:06Z",
+          "user": "github-actions[bot]"
+        }
+      ],
+      "number": 5,
+      "reactions": []
+    }
+  ],
+  "redactions": {},
+  "source_repository": "OKHP3/askjamie-brg07-lvmh"
+}

@@ -1,0 +1,399 @@
+{
+  "schema": "brg12-expansion-retention-v1",
+  "date": "2026-10-16",
+  "status": "COMPLETE scoped analytical preservation assessment; whole-Project harvest PARTIAL",
+  "boundary": "All34 observed substantive expansion reports from17 KNOW sources. Not all Project value; unavailable original payload internals and unseen history remain outside this finite measure.",
+  "method": "Frozen source-defined block preservation proxy for the authorized historical research-maintenance job. Truth/currency status is separate from preservation fidelity. All descendants share their parent budget. No exact duplicates were merged.",
+  "source_census_sha256": "3d93c64e63c4e2af5fa6d68bc2168b917f9d9f16659eb057bd0d1ebfacb6e62e",
+  "protocol_sha256": "bcb822166463ad2ec8ab73a629fcf99834e13a948b3ea890dd3081ceecb24753",
+  "edition_manifest_sha256": "5a5b8ffa8f64a5b39b346efdffa72c5724f1a92e71499d9fcae8a22556cad608",
+  "counts": {
+    "sources": 17,
+    "reports": 34,
+    "all_source_blocks": 3001,
+    "dispositions": {
+      "exclude-delivery-framing": 98,
+      "admit": 2413,
+      "retain-navigation-context": 489,
+      "exclude-layout": 1
+    },
+    "admitted_distinct_parents": 2413,
+    "rendered_tables": 49,
+    "literal_tables": 2,
+    "observed_adjacent_web_link_occurrences": 4741,
+    "all_adjacent_link_records": 4743,
+    "inert_non_web_link_records": 2
+  },
+  "calculation": {
+    "mechanical_candidate_full": 2413,
+    "unweighted_denominator": 2413,
+    "sensitivity_candidate_full_weight": 3121,
+    "sensitivity_denominator": 3121,
+    "released_percent": 100.0,
+    "whole_project_percent": null,
+    "sensitivity_percent": 100.0,
+    "full_parents": 2413,
+    "partial_missing_disputed_ungraded_parents": 0
+  },
+  "review": {
+    "census": "independently approved with limits",
+    "workflow_adaptations": "PASS for stated method scope",
+    "usability": "PASS: outcome9 tasks and safety8 tasks; all3 table defects repaired and rechecked",
+    "independence": "Separate role contexts using the same model family and overlapping local sources; no independent empirical or current-source validation",
+    "conditional_falsification": "PASS after literal metadata repair; final records/link checks independently repeated with0 mismatches",
+    "adjudication_sha256": "669a6050cbe449aa5378d809f88ff11fa0a3f76956db2ea592d7e786ef4b1dd0",
+    "scoped_observation_decision": "approve-with-limits",
+    "formal_equilibrium_release_approval": "defer-for-evidence: protected or external holdout absent; no waiver inferred",
+    "whole_project_threshold": "NOT DEMONSTRATED independently of the formal review-input gap",
+    "record": "docs/harvest/2026-10-16-equilibrium-review.json"
+  },
+  "unresolved_population": [
+    "19 original generated payload identities/internals",
+    "Unrecovered or identity-unverified original source attachments and Project-shared documents",
+    "Citation/image sidecars",
+    "Unloaded older messages and hidden branches"
+  ],
+  "source_archive_action": "HOLD ALL26; no archiving",
+  "editions": [
+    {
+      "report_id": "KNOW01-E1",
+      "source_ref": "S17",
+      "source_body_sha256": "8cfc17e087e00e18de131245ec0cd5079b2007c9afcd4df9d9aa9c5ba61a98e5",
+      "source_blocks": 140,
+      "admitted_parents": 122,
+      "private_edition": "know01-e1.md",
+      "edition_sha256": "721a0d207d7d5b36fcdae20556dbd7ecb22ea3a64ab7e9561152770b0e2342da",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW01-E2",
+      "source_ref": "S17",
+      "source_body_sha256": "9865e880db63634342a29da09798ae45b77dc8aa2169147709e89428938a1008",
+      "source_blocks": 144,
+      "admitted_parents": 125,
+      "private_edition": "know01-e2.md",
+      "edition_sha256": "e34d6a2a1a2fc86a84e5841077deeaec5e5e09987d3111fcfad9120660febb7a",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW02-E1",
+      "source_ref": "S15",
+      "source_body_sha256": "0ae1cd01085ee00695b135732264b1428270b95f53780e6f66b6bf9f2a5cd21b",
+      "source_blocks": 48,
+      "admitted_parents": 31,
+      "private_edition": "know02-e1.md",
+      "edition_sha256": "75f2d6a1ea390ad25feacd5e213082ab0ae3f5b822cfc58a650c7168644f437e",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW02-E2",
+      "source_ref": "S15",
+      "source_body_sha256": "b4066d60f29c38e48a1f036c3ced6c4287736bd656d4b49bd9c1495a102fceb5",
+      "source_blocks": 58,
+      "admitted_parents": 43,
+      "private_edition": "know02-e2.md",
+      "edition_sha256": "fe97216dcc32cdbfe661130a8c356ad6c87c9c658c400af1192684d68b270896",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW03-E1",
+      "source_ref": "S16",
+      "source_body_sha256": "49aa754445a508b4000e4b9464a9e73ccefc177799844d4e9b99b1038f40db10",
+      "source_blocks": 60,
+      "admitted_parents": 41,
+      "private_edition": "know03-e1.md",
+      "edition_sha256": "16aeb7190b13ab8b30c795de6a72283978cb3ba1ef4792608d6e4a84f239f8c8",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW03-E2",
+      "source_ref": "S16",
+      "source_body_sha256": "b78a5777d882dd81417f730a20e20489df8347a9b2091d70ec91124be3a49a57",
+      "source_blocks": 90,
+      "admitted_parents": 74,
+      "private_edition": "know03-e2.md",
+      "edition_sha256": "f6b1368270d6c1a3758a023086aba56bef407cc6d0c20f11d94363897699482c",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW04-E1",
+      "source_ref": "S14",
+      "source_body_sha256": "abfcc7e68f1f494db31072038a8af8763a03d836b86e374e81f2a67b502c92f3",
+      "source_blocks": 78,
+      "admitted_parents": 62,
+      "private_edition": "know04-e1.md",
+      "edition_sha256": "a12dcf12b14157c49ef7a5727cb881513ed873dc962307474e948552655cae18",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW04-E2",
+      "source_ref": "S14",
+      "source_body_sha256": "db603be81c8d929cd60f9966eccaa6c7c5bf25eeae9764adf49a4675a7af4265",
+      "source_blocks": 116,
+      "admitted_parents": 100,
+      "private_edition": "know04-e2.md",
+      "edition_sha256": "d34d595ce59a0fb20c51b1431d288159ce290fd4163a2b1294d158a1a3076ba4",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW05-E1",
+      "source_ref": "S12",
+      "source_body_sha256": "091f4578e138e630a87a4b237f3dd82103e1b25b41bb5548a6598562fcd5a36b",
+      "source_blocks": 42,
+      "admitted_parents": 30,
+      "private_edition": "know05-e1.md",
+      "edition_sha256": "5eb008997e719f931cc8d8afc09874c4aca94457a5d6ea090bc173baa225fd52",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW05-E2",
+      "source_ref": "S12",
+      "source_body_sha256": "18b4a3f5bde5354289dfa2e6ed08f0930bcc0f376cf6aac03862857f192797c6",
+      "source_blocks": 119,
+      "admitted_parents": 105,
+      "private_edition": "know05-e2.md",
+      "edition_sha256": "1a461dfe1dfbdc3bb0abec5502219da8b0bbda611c4e1696b0ad95f6aca8aec8",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW06-E1",
+      "source_ref": "S06",
+      "source_body_sha256": "48f6e81e12c949f67125f74c85f1a6d918fcf9b0916ce61cb58a2698446b03f6",
+      "source_blocks": 149,
+      "admitted_parents": 111,
+      "private_edition": "know06-e1.md",
+      "edition_sha256": "75c665027660165b0ec437766a14ad37960923e6f11dd04a4017424f99ee2bfe",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW06-E2",
+      "source_ref": "S06",
+      "source_body_sha256": "5497b0947a78c2352ff1288e62585b231404e4a5888acad065a04fa2200330b7",
+      "source_blocks": 91,
+      "admitted_parents": 73,
+      "private_edition": "know06-e2.md",
+      "edition_sha256": "2abbd1ee96528e6156be363c204e0f1cf9c6725c7338ced3784c79cf5077f4cb",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW07-E1",
+      "source_ref": "S09",
+      "source_body_sha256": "f62a4bd9604eff6d2262c36e417e6624f0b148ec0ad3f60e90f79a6dfefa38df",
+      "source_blocks": 56,
+      "admitted_parents": 40,
+      "private_edition": "know07-e1.md",
+      "edition_sha256": "8d30430f5bc1aa8491766f803f5f26aed47b62e6b2d2d8cf0f5b41edc2013b2e",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW07-E2",
+      "source_ref": "S09",
+      "source_body_sha256": "242d61619d45025b4e62be69e3ea88120b38e9129ab170b98ea58b785fe940b8",
+      "source_blocks": 131,
+      "admitted_parents": 109,
+      "private_edition": "know07-e2.md",
+      "edition_sha256": "eaf3ce2ff561202f7c2a8e56e9716727783b8e13f1115dd4f2ddadc6387c00ab",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW08-E1",
+      "source_ref": "S04",
+      "source_body_sha256": "6563eeab5026bdaa38371d037d2a994aca3180206c48af47398ef6761c898f0a",
+      "source_blocks": 48,
+      "admitted_parents": 32,
+      "private_edition": "know08-e1.md",
+      "edition_sha256": "f3c333229dc8ba5d7d859ca1a9f8aa6b77695636a67b956d18a8344cc9bd97a6",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW08-E2",
+      "source_ref": "S04",
+      "source_body_sha256": "a7a08f9242743d4824c61464a7fa1b739f68c201a8bdaabab5f7067d91d2825b",
+      "source_blocks": 99,
+      "admitted_parents": 85,
+      "private_edition": "know08-e2.md",
+      "edition_sha256": "b42f0332d09dce65098e656c97189e08506c8d668860423ab9ed1e7e2c2a2de0",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW09-E1",
+      "source_ref": "S11",
+      "source_body_sha256": "dba5521bd03e9dfdced0efdfafcba6fa60dcef3830ef035dce6e495171c6550b",
+      "source_blocks": 28,
+      "admitted_parents": 19,
+      "private_edition": "know09-e1.md",
+      "edition_sha256": "f68705723d187e646529153840818f5e740eb01c80a9b30e378da74ca094f2f9",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW09-E2",
+      "source_ref": "S11",
+      "source_body_sha256": "f3a149c353d8c6a362802a2f82e9a29140df1443667cbc687c2f3e5490006362",
+      "source_blocks": 163,
+      "admitted_parents": 150,
+      "private_edition": "know09-e2.md",
+      "edition_sha256": "4e23d67980231bf939db8b6308448bda3532aede65430fe4eb59dabafe2b8d7f",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW10-E1",
+      "source_ref": "S08",
+      "source_body_sha256": "1b07687f090fb250c92ddadb148d21adbccd596afccf8f8996ea67dadbf60b3b",
+      "source_blocks": 52,
+      "admitted_parents": 40,
+      "private_edition": "know10-e1.md",
+      "edition_sha256": "c41ea1884bcff2bd56e60419c281eae773494477a15e744c1198c6eac665ee72",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW10-E2",
+      "source_ref": "S08",
+      "source_body_sha256": "adc53953f9d63b0226dbf9de5229ace4219b8f45735f5c2bc5a0100143c630f9",
+      "source_blocks": 131,
+      "admitted_parents": 106,
+      "private_edition": "know10-e2.md",
+      "edition_sha256": "c010a8c56ccc0b567997f972eb27430b89fc955c0605002a609b96c97c8151cb",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW11-E1",
+      "source_ref": "S07",
+      "source_body_sha256": "bbcabb363751248ac9d245b9f4973c20f256ed97e3d35ed5b5b9c8f059182979",
+      "source_blocks": 46,
+      "admitted_parents": 21,
+      "private_edition": "know11-e1.md",
+      "edition_sha256": "7e85811334ed6d2ded518f1b05f089d85c20b56082f86beaad0fa460f4f3fc70",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW11-E2",
+      "source_ref": "S07",
+      "source_body_sha256": "10872ff4c52990d4c593486a0714cda691b89175f01ea83f222ce9a6ff95bf9a",
+      "source_blocks": 130,
+      "admitted_parents": 115,
+      "private_edition": "know11-e2.md",
+      "edition_sha256": "5ebaa853dea2b4728fc52de1411004b3be4e61a01a390ce1e0e121b42d8fdaf7",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW12-E1",
+      "source_ref": "S10",
+      "source_body_sha256": "567ff16c6ac4a86bf1bb369140890813d0013c080ae11233a31976c1a41c06bc",
+      "source_blocks": 39,
+      "admitted_parents": 30,
+      "private_edition": "know12-e1.md",
+      "edition_sha256": "64e8d40eab5e63b220e1dec2e7f43b2746320684ae31ef69764c8eb1bdd78092",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW12-E2",
+      "source_ref": "S10",
+      "source_body_sha256": "f84e46451c354a02b4ca2a9c54d7802055d843d8f9657a6cdf8a97d0bcf3b0a9",
+      "source_blocks": 138,
+      "admitted_parents": 125,
+      "private_edition": "know12-e2.md",
+      "edition_sha256": "c280c94fa1018ad28f2bd39ce054137e890cccf39d60f2b376e92983cb0f9ef6",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW13-E1",
+      "source_ref": "S05",
+      "source_body_sha256": "5a6984487a9f66b2b04b0c99283365d8fede958a47b75b8e8bde18a37eccfa63",
+      "source_blocks": 52,
+      "admitted_parents": 36,
+      "private_edition": "know13-e1.md",
+      "edition_sha256": "cd5342d822d9992eb6c55d8ecd42403d63609472b250c4fdbbc4e34e438914f4",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW13-E2",
+      "source_ref": "S05",
+      "source_body_sha256": "414543c1a14b50b5ab7e15af9fc4984b0364454e810836586a95341c87d7bbf5",
+      "source_blocks": 55,
+      "admitted_parents": 38,
+      "private_edition": "know13-e2.md",
+      "edition_sha256": "a27477ecda7cc07c53dd0e16e083d50364b259b4242b5f5e3655a217d2194c6e",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW14-E1",
+      "source_ref": "S02",
+      "source_body_sha256": "ea82d509aa8ab8ef8e26372573e54e4ea94b190760cbce2e8d106f8b518ca9e6",
+      "source_blocks": 61,
+      "admitted_parents": 42,
+      "private_edition": "know14-e1.md",
+      "edition_sha256": "07e9226cdda108f74c7df81cf9bdb0e05de28df975070894c0ed6ff7d9d21fb8",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW14-E2",
+      "source_ref": "S02",
+      "source_body_sha256": "e71297000ae3e40a426ff0e9412f4a409086da4a7346932582580fd72438fc06",
+      "source_blocks": 86,
+      "admitted_parents": 74,
+      "private_edition": "know14-e2.md",
+      "edition_sha256": "965879281e7407a97f227e4bdc18583a9c86697bbb8d4f806d8b400a8309e85e",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW15-E1",
+      "source_ref": "S03",
+      "source_body_sha256": "94637ac7bc889ed3d234679fe518da5a3dc9f358d06d876fe0ed41209a621e9f",
+      "source_blocks": 45,
+      "admitted_parents": 34,
+      "private_edition": "know15-e1.md",
+      "edition_sha256": "c3f8e3f2a62072252662a42b11baf5aa5b2713c4379eff1dbb1df20261fdcf53",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW15-E2",
+      "source_ref": "S03",
+      "source_body_sha256": "b066a0750cb8a433690a321e10c922e4470f3ef2b8706a3f5bcc5440269da4cc",
+      "source_blocks": 124,
+      "admitted_parents": 92,
+      "private_edition": "know15-e2.md",
+      "edition_sha256": "756311b63ab7bca6aed72be1cf3eda29d6b9175468e3c90819d9029a301fc846",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW16-E1",
+      "source_ref": "S01",
+      "source_body_sha256": "866ba5b7c436ebd32a33d01e6824fd1f43d42ead3863ecb1d7de613191b9bf94",
+      "source_blocks": 36,
+      "admitted_parents": 25,
+      "private_edition": "know16-e1.md",
+      "edition_sha256": "64f31f9736944c55ecc6dcbbf6d538841c8148cd9692a48276cc5b9aba7f0f0b",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW16-E2",
+      "source_ref": "S01",
+      "source_body_sha256": "bb25e1afc7f013b9634432be71477bc098bd3e29dac770f02c444796237ef9d9",
+      "source_blocks": 137,
+      "admitted_parents": 108,
+      "private_edition": "know16-e2.md",
+      "edition_sha256": "4158adb6be55dfcbbc186af579c990830a98a37446d3e793390437fd6e6a347f",
+      "restricted": false
+    },
+    {
+      "report_id": "KNOW17-E1",
+      "source_ref": "S13",
+      "source_body_sha256": "4fd8a664be1af844fd081da4d70c4ec516fe46371f2948f33026c98330065d43",
+      "source_blocks": 73,
+      "admitted_parents": 56,
+      "private_edition": "know17-e1.md",
+      "edition_sha256": "abf2c0e79e28ab8ce923cb36b89d6e20f5d2f2d89285489e01a54130d773c905",
+      "restricted": true
+    },
+    {
+      "report_id": "KNOW17-E2",
+      "source_ref": "S13",
+      "source_body_sha256": "b21d6788d86df92dc423b188c54c5c2fa8d51d5330aee0e5e3c8f6b4b208e9a4",
+      "source_blocks": 136,
+      "admitted_parents": 119,
+      "private_edition": "know17-e2.md",
+      "edition_sha256": "28b13707ed5ecb6d82e6bbea6687f03c7645086c0ac87e90849ba0f99a482168",
+      "restricted": true
+    }
+  ]
+}

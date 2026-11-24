@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg03-brooks-running",
+  "source_commit": "959a5e047729a2b4473a877b2c1faa849a5f4195",
+  "source_tree": "ac5d447cc746814344c4d25281b1f267b01dfc93",
+  "destination": "capabilities/brandguard/brooks-running",
+  "stored_tree": "ac5d447cc746814344c4d25281b1f267b01dfc93",
+  "source_files": 522,
+  "stored_files": 522,
+  "stored_bytes": 16625492,
+  "path_mode_size_sha256_digest": "0b85f6e62f24dc8503c2d0fd9da3b194cd46a3c03cb2a270b6b6ec2366d44fed"
+}

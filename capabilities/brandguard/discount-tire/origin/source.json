@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg10-discount-tire",
+  "source_commit": "c8397fa5168d0b4462a0186d040ddb74822dcbb5",
+  "source_tree": "697fa9c226b68a728202e15c95685d4cbb6f1dee",
+  "destination": "capabilities/brandguard/discount-tire",
+  "stored_tree": "697fa9c226b68a728202e15c95685d4cbb6f1dee",
+  "source_files": 537,
+  "stored_files": 537,
+  "stored_bytes": 11531741,
+  "path_mode_size_sha256_digest": "201a74fab32c87fca3c7ebf6abacf0ba3ac9678e9b50d163601911e3829ad47e"
+}

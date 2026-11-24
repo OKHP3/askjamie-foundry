@@ -1,0 +1,238 @@
+{
+  "comment_reactions": [],
+  "counts": {
+    "comment_reactions": 0,
+    "comments_checked_for_reactions": 0,
+    "events": 25,
+    "issue_reactions": 2,
+    "records": 2
+  },
+  "issue_and_pull_request_timelines": [
+    {
+      "events": [
+        {
+          "commit_time": "2025-12-23T19:59:02Z",
+          "event": "committed",
+          "parents": [
+            "8a975aad8b3e73f8a5244001200713cfde32852f"
+          ],
+          "sha": "3192e347e2aaa18bcf16375230c0e8f9568b6d78",
+          "tree_sha": "a62a29fb88c78660eedf5f6befc3ae22cb09c63c"
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "Copilot",
+          "created_at": "2025-12-23T19:59:03Z",
+          "event": "assigned",
+          "id": 21731802418
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "OKHP3",
+          "created_at": "2025-12-23T19:59:03Z",
+          "event": "assigned",
+          "id": 21731802447
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T19:59:33Z",
+          "event": "copilot_work_started",
+          "id": 21731810227
+        },
+        {
+          "commit_time": "2025-12-23T20:02:20Z",
+          "event": "committed",
+          "parents": [
+            "3192e347e2aaa18bcf16375230c0e8f9568b6d78"
+          ],
+          "sha": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "tree_sha": "327a4c88eb9a65f226786771031f2a88e0f54a8e"
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:03:12Z",
+          "event": "renamed",
+          "id": 21731858443,
+          "rename": {
+            "from": "[WIP] Initialize AskJamie-GPT-BRG10 with essential files and structure",
+            "to": "Initialize repository structure with core files and folder organization"
+          }
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:03:20Z",
+          "event": "review_requested",
+          "id": 21731860479,
+          "requested_reviewer": "OKHP3",
+          "review_requester": "Copilot"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T20:03:21Z",
+          "event": "copilot_work_finished",
+          "id": 21731860551
+        },
+        {
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "event": "reviewed",
+          "id": 3611508335,
+          "state": "approved",
+          "submitted_at": "2025-12-24T19:48:14Z",
+          "updated_at": "2025-12-24T19:48:14Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:50:28Z",
+          "event": "ready_for_review",
+          "id": 21760223693
+        },
+        {
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "event": "reviewed",
+          "id": 3613634104,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:50:29Z",
+          "updated_at": "2025-12-26T15:50:29Z",
+          "user": "OKHP3"
+        },
+        {
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "event": "reviewed",
+          "id": 3613634354,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:50:42Z",
+          "updated_at": "2025-12-26T15:50:42Z",
+          "user": "OKHP3"
+        },
+        {
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "event": "reviewed",
+          "id": 3613634697,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:51:07Z",
+          "updated_at": "2025-12-26T15:51:07Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:51:15Z",
+          "event": "closed",
+          "id": 21760228825
+        }
+      ],
+      "number": 1,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2025-12-26T15:51:58Z",
+          "id": 250453390
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2025-12-23T19:59:02Z",
+          "event": "committed",
+          "parents": [
+            "8a975aad8b3e73f8a5244001200713cfde32852f"
+          ],
+          "sha": "3192e347e2aaa18bcf16375230c0e8f9568b6d78",
+          "tree_sha": "a62a29fb88c78660eedf5f6befc3ae22cb09c63c"
+        },
+        {
+          "commit_time": "2025-12-23T20:02:20Z",
+          "event": "committed",
+          "parents": [
+            "3192e347e2aaa18bcf16375230c0e8f9568b6d78"
+          ],
+          "sha": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "tree_sha": "327a4c88eb9a65f226786771031f2a88e0f54a8e"
+        },
+        {
+          "commit_time": "2025-12-26T15:51:39Z",
+          "event": "committed",
+          "parents": [
+            "8dccb10484cfc830def868fe6faf4d0ae483d891",
+            "a65a705c18d3c37840a44259592680af6db81508"
+          ],
+          "sha": "9f95af91a6e87484bf57d4a6ea47b91523ecefa8",
+          "tree_sha": "a91497f91cf812d14b70b28043ab04aadbb45d21"
+        },
+        {
+          "commit_time": "2025-12-26T18:03:59Z",
+          "event": "committed",
+          "parents": [
+            "9f95af91a6e87484bf57d4a6ea47b91523ecefa8"
+          ],
+          "sha": "313494667ec0d1f96a0ac8e568d39b94bfd33e36",
+          "tree_sha": "0bbaeb2fe78c3bc6d046a821ff0a92033aaded3a"
+        },
+        {
+          "commit_time": "2026-01-02T15:07:15Z",
+          "event": "committed",
+          "parents": [
+            "313494667ec0d1f96a0ac8e568d39b94bfd33e36"
+          ],
+          "sha": "45ea1d443437321dd949e6bed407d3a93536850e",
+          "tree_sha": "36f44ffe519afeba2efd5a7e26eba53b5bb472ea"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-01-02T15:31:02Z",
+          "event": "review_requested",
+          "id": 21828725552,
+          "requested_reviewer": "Copilot",
+          "review_requester": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "6a2094b15cee8032f9f9d0b90b8785d657229ecb",
+          "created_at": "2026-01-02T15:31:19Z",
+          "event": "merged",
+          "id": 21828728161
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-01-02T15:31:19Z",
+          "event": "closed",
+          "id": 21828728175
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-01-02T15:31:24Z",
+          "event": "copilot_work_started",
+          "id": 21828728911
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-01-02T15:31:25Z",
+          "event": "head_ref_deleted",
+          "id": 21828729062
+        },
+        {
+          "commit_id": "45ea1d443437321dd949e6bed407d3a93536850e",
+          "event": "reviewed",
+          "id": 3623353898,
+          "state": "commented",
+          "submitted_at": "2026-01-02T15:32:44Z",
+          "updated_at": "2026-01-02T15:32:44Z",
+          "user": "Copilot"
+        }
+      ],
+      "number": 2,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2026-01-02T15:32:10Z",
+          "id": 251704215
+        }
+      ]
+    }
+  ],
+  "redactions": {},
+  "source_repository": "OKHP3/askjamie-brg10-discount-tire"
+}

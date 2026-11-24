@@ -1,0 +1,40 @@
+{
+  "bytes": 234480,
+  "contents": "service-records.json and screened UTF-8 workflow log text, indexed by SHA-256",
+  "downloaded_log_archives": 39,
+  "file": "service-records.zip",
+  "held_log_entries": 0,
+  "job_records": 63,
+  "log_entries_reviewed": 78,
+  "projects": {
+    "closed": 0,
+    "open": 0
+  },
+  "public_log_entries": 78,
+  "record_counts": {
+    "actions-artifacts": 0,
+    "branches": 2,
+    "deployments": 0,
+    "environments": 1,
+    "labels": 12,
+    "milestones": 0,
+    "open_activity": 1,
+    "releases": 0,
+    "rulesets": 0,
+    "tags": 0,
+    "workflows": 3
+  },
+  "redactions": {
+    "credential_context_lines": 13,
+    "local_accounts": 52
+  },
+  "sha256": "3a41f84f8635bd26371438f71e73a9513fca91489a1188cce542118baba2b9e2",
+  "source_attempts": 63,
+  "source_repository": "OKHP3/askjamie-brg03-brooks-running",
+  "source_runs": 62,
+  "unavailable_or_excluded_logs": {
+    "Expired at GitHub (HTTP 410)": 24
+  },
+  "unique_public_log_texts": 78,
+  "verified_utc": "2026-11-24T22:20:20.298159+00:00"
+}

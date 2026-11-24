@@ -1,0 +1,3 @@
+# Operations
+
+This directory contains operational files and configurations for GPT-BRG08: OKHP³ BrandGuard™ — Dollar General.

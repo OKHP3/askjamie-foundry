@@ -7,8 +7,7 @@ host-specific adapters. Capability subtrees replace separate child repositories
 as the preferred layout; legacy repository identities remain lineage.
 Follow [the skill-first contract](skill-first-foundry.md). Earlier child-repository
 rules below still apply to retained sources and private capabilities.
-Public subtree imports require public graduation; private and protected sources
-remain outside this public checkout. A path or package does not confer access control.
+Public capability graduation requires a registry decision. On 2026-11-24 the owner authorized publication of the named legacy repository sources. Each applicable registry entry points to an exact transfer record. Workbench data, independent client workspaces and later revisions retain their existing controls.
 
 
 ## Authority Chain

@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg08-dollar-general",
+  "source_commit": "d9e7194e52ccbe7212e96558a8f3520a9f6c3d06",
+  "source_tree": "c8a3d14c5620ee021fb5c8743e62d84621739ca5",
+  "destination": "capabilities/brandguard/dollar-general",
+  "stored_tree": "c8a3d14c5620ee021fb5c8743e62d84621739ca5",
+  "source_files": 545,
+  "stored_files": 545,
+  "stored_bytes": 22467937,
+  "path_mode_size_sha256_digest": "f492ef688bb5f9e30b5cde827cafccff4d98d73c1c95265b60b70cac9e92a88b"
+}

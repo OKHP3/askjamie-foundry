@@ -88,7 +88,7 @@ covers the full flow, backups, import, project duplication, and confirmed deleti
 |---|---|
 | **[Public website](https://okhp3.github.io/askjamie-foundry/)** | Read-only orientation, ecosystem links, and shareable brand assets. Built only from [`public/`](public/). |
 | **[Local workbench](workbench/)** | Single-user authoring, revisions, evaluations, and private exports. Python serves a plain HTML/CSS/JavaScript interface; SQLite stores drafts in ignored `.foundry-data/`. |
-| **[Governed registry](registry/index.yaml)** | Nine child-repository records with lineage and visibility controls. AJ01 and AJ02 have complete pinned GitHub source snapshots with per-file integrity checks; skill conversion and platform reconciliation remain open. [Migration plan](docs/migrations/aj01-aj02-2026-10-19.md). |
+| **[Governed registry](registry/index.yaml)** | Nineteen repository records with lineage, visibility controls, and pointers to transferred legacy sources. AJ01 and AJ02 have complete pinned GitHub source snapshots with per-file integrity checks; skill conversion and platform reconciliation remain open. [Migration plan](docs/migrations/aj01-aj02-2026-10-19.md). |
 
 The workbench binds to loopback only and makes no model-provider calls.
 Assistant and workflow checks examine responses you supply; they are not live

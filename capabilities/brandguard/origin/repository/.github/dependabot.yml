@@ -1,0 +1,10 @@
+version: 2
+updates:
+  # Keep maintenance workflows current. Dependabot will monitor workflow files
+  # if and when this repository adds them under .github/workflows.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+

@@ -1,0 +1,30 @@
+---
+# GPT-BRG07: OKHP³ BrandGuard™ — LVMH
+# Manifest for AskJamie-GPT-BRG07
+
+name: "GPT-BRG07: OKHP³ BrandGuard™ — LVMH"
+version: "1.0.0"
+description: "Storage + build hub for GPT-BRG07: OKHP³ BrandGuard™ — LVMH. Houses prompts, public-only knowledge packs, eval tests, web assets, and release notes."
+
+# Canonical Tagline
+tagline: "Luxury should never be automated without your blessing."
+
+# Important Links
+links:
+  official_site: "https://www.lvmh.com"
+  askjamie_lens: "https://askjamie.ai/lens/brg07-lvmh"
+  chatgpt_project: "https://chatgpt.com/g/g-brg07-okhp3-brandguard-lvmh"
+  notion_page: "https://notion.so/okhp3/brg07-brandguard-lvmh"
+  custom_gpt: "https://chat.openai.com/g/g-brg07-okhp3-brandguard-lvmh"
+
+# Disclaimer
+disclaimer: "Not affiliated with LVMH; routes users to official sources."
+
+# Repository Structure
+structure:
+  prompts: "System and user prompts for the GPT"
+  src: "Source code and utilities"
+  build: "Build artifacts and distribution files"
+  eval: "Evaluation tests and quality assurance"
+  ops: "Operations, deployment, and infrastructure"
+  web: "Web assets, documentation, and public materials"

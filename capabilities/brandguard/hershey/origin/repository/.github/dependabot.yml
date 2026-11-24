@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Keeps future GitHub Actions references current.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+  # These entries are dormant until the corresponding manifests are added.
+  # Dependabot will begin updating them without another policy change.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0

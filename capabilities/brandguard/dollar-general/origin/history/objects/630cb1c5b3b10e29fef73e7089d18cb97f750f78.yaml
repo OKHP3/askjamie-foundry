@@ -1,0 +1,27 @@
+# GPT-BRG08: OKHP³ BrandGuard™ — Dollar General
+# Canonical Manifest
+
+name: "AskJamie-GPT-BRG08"
+version: "1.0.0"
+description: "GPT-BRG08: OKHP³ BrandGuard™ — Dollar General"
+tagline: "You saved everyone money. I saved your digital name."
+
+# Canonical Links
+repository:
+  url: "https://github.com/OKHP3/AskJamie-GPT-BRG08"
+  branch: "main"
+
+directories:
+  prompts: "./prompts"
+  knowledge: "./knowledge"
+  eval: "./eval"
+  web: "./web"
+  ops: "./ops"
+  build: "./build"
+
+# Configuration
+metadata:
+  organization: "OKHP³"
+  brand: "BrandGuard™"
+  client: "Dollar General"
+  gpt_id: "GPT-BRG08"

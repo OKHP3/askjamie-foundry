@@ -1,0 +1,37 @@
+# GPT-BRG09: OKHP³ BrandGuard™ — Coca-Cola
+# "You can't teach the world to sing if AI forgets your lyrics."
+
+metadata:
+  name: GPT-BRG09
+  title: "OKHP³ BrandGuard™ — Coca-Cola"
+  tagline: "You can't teach the world to sing if AI forgets your lyrics."
+  version: "1.0.0"
+  repository: "OKHP3/AskJamie-GPT-BRG09"
+  status: "content-and-release-repository-in-development"
+  runtime: "none-evidenced-in-this-checkout"
+
+description: |
+  BrandGuard™ for Coca-Cola: A versioned source-of-truth repository for
+  GPT-BRG09, containing prompts, knowledge packs, evaluation harness,
+  and wiring manifest for brand consistency and AI governance.
+
+structure:
+  knowledge: "Versioned Coca-Cola knowledge files and DOCX/PDF exports"
+  prompts: "Versioned system and user prompts"
+  build: "Build artifacts and compiled outputs"
+  eval: "Evaluation harness and test datasets"
+  ops: "Technology-maintenance utility and recorded tooling inventory"
+  agents: "Repository-local Agent Skills and agent support"
+  skills: "Skill-promotion mirror and related release material, subject to source-of-truth review"
+
+links:
+  askjamie_page: "https://askjamie.ai/gpt-brg09"
+  coca_cola_site: "https://www.coca-cola.com"
+  notion: "https://notion.so/okhp3/gpt-brg09"
+  custom_gpt: "https://chat.openai.com/g/g-brg09"
+  chatgpt_project: "https://chatgpt.com/projects/gpt-brg09"
+
+disclaimer: |
+  This repository is not affiliated with, endorsed by, or sponsored by
+  The Coca-Cola Company. All trademarks and brand references are used
+  for educational and demonstration purposes only.

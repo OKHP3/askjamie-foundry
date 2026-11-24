@@ -1,0 +1,24 @@
+name: GPT-AJ04
+title: OKHP³ BrandGuard™ — AskJamie Template
+description: AskJamie™ BrandGuard template lens for tone, ethics, identity, and framing consistency. Canonical source that brand-specific BrandGuard lenses (e.g. BRG03) are cast from.
+version: 0.1.0
+type: custom-gpt
+
+metadata:
+  brand: AskJamie (template — no single brand)
+  project: AskJamie-GPT-AJ04
+  organization: OKHP³
+  tagline: Guardrails for tone, ethics, identity, and framing.
+
+links:
+  lens_page: https://askjamie.bot
+  chatgpt_project: https://chatgpt.com
+  notion: https://notion.so
+  custom_gpt: https://chatgpt.com/gpts
+
+directories:
+  source: src
+  prompts: prompts
+  build: build
+  evaluation: eval
+  operations: ops

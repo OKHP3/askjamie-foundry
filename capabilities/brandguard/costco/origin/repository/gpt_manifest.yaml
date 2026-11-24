@@ -1,0 +1,25 @@
+name: GPT-BRG05
+title: "OKHP3 BrandGuard - Costco"
+description: "Costco-specific BrandGuard prompts, knowledge packs, evaluation assets, and lens support files."
+version: 1.0.0
+repository: OKHP3/askjamie-brg05-costco
+
+structure:
+  prompts: "System prompts and instruction sets"
+  knowledge: "Versioned Costco knowledge packs"
+  src/corpus: "Corpus staging and RAG material"
+  rag-source: "Source material for corpus work"
+  eval: "Evaluation tests and benchmarks"
+  tests: "Regression and validation assets"
+  site: "Canonical lens page assets"
+  web: "Web support assets"
+  assets: "Supporting media and static assets"
+  build: "Build artifacts and compiled resources"
+  releases: "Distributable release material"
+  ops: "Operations, deployment configs, and monitoring"
+
+authoritative_links:
+  costco_official: https://www.costco.com
+  lens_canonical: https://askjamie.bot/lens-system/okhp3-brandguard/costco/index.html
+  github: https://github.com/OKHP3/askjamie-brg05-costco
+  notion_anchor: https://app.notion.com/p/bcc4f8faaa8f4412bd4098a5815144c4

@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-07-20",
+  "scope": "Technologies detected in the repository, plus explicitly requested technologies checked for presence.",
+  "entries": [
+    {
+      "name": "Python",
+      "role": "Repository-local maintenance scripts under .agents/skills",
+      "status": "detected",
+      "current_version": "not pinned",
+      "latest_stable": "3.14.6",
+      "source": "https://www.python.org/downloads/release/python-3146/",
+      "tracking": "official-release-page"
+    },
+    {
+      "name": "Nix/Nixpkgs",
+      "role": "Replit environment channel",
+      "status": "detected",
+      "current_version": "stable-26_05",
+      "latest_stable": "26.05",
+      "source": "https://nixos.org/manual/nixos/stable/release-notes",
+      "tracking": "official-release-notes"
+    },
+    {
+      "name": "Git",
+      "role": "Source control metadata and workflow",
+      "status": "detected",
+      "current_version": "not pinned in repository",
+      "latest_stable": "2.55.0",
+      "source": "https://git-scm.com/docs/git",
+      "tracking": "official-documentation"
+    },
+    {
+      "name": "Markdown/CommonMark",
+      "role": "Repository documentation",
+      "status": "detected",
+      "current_version": "not declared",
+      "latest_stable": "0.31.2",
+      "source": "https://spec.commonmark.org/current/",
+      "tracking": "official-specification"
+    },
+    {
+      "name": "YAML",
+      "role": "Manifest and environment configuration",
+      "status": "detected",
+      "current_version": "not declared",
+      "latest_stable": "1.2.2",
+      "source": "https://yaml.org/spec/1.2.2/",
+      "tracking": "official-specification"
+    },
+    {
+      "name": "DOCX/Office Open XML",
+      "role": "Knowledge-pack artifact format",
+      "status": "detected",
+      "current_version": "not declared",
+      "latest_stable": "N/A: format standard, not a repository dependency",
+      "source": "https://www.ecma-international.org/publications-and-standards/standards/ecma-376/",
+      "tracking": "manual-format-review"
+    },
+    {
+      "name": "PDF",
+      "role": "Knowledge-pack artifact format",
+      "status": "detected",
+      "current_version": "not declared",
+      "latest_stable": "N/A: format standard, not a repository dependency",
+      "source": "https://www.iso.org/standard/75839.html",
+      "tracking": "manual-format-review"
+    },
+    {
+      "name": "JavaScript",
+      "role": "Explicitly checked; no source files or package manifest detected",
+      "status": "not_detected",
+      "current_version": "N/A",
+      "latest_stable": "N/A",
+      "source": "https://tc39.es/ecma262/",
+      "tracking": "not_applicable"
+    },
+    {
+      "name": "TypeScript",
+      "role": "Explicitly checked; no source files or package manifest detected",
+      "status": "not_detected",
+      "current_version": "N/A",
+      "latest_stable": "N/A",
+      "source": "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html",
+      "tracking": "not_applicable"
+    },
+    {
+      "name": "Node.js",
+      "role": "Explicitly checked; no package manifest or runtime declaration detected",
+      "status": "not_detected",
+      "current_version": "N/A",
+      "latest_stable": "N/A",
+      "source": "https://nodejs.org/en/about/previous-releases",
+      "tracking": "not_applicable"
+    },
+    {
+      "name": "Vite",
+      "role": "Explicitly checked; no package manifest or Vite configuration detected",
+      "status": "not_detected",
+      "current_version": "N/A",
+      "latest_stable": "N/A",
+      "source": "https://vite.dev/releases",
+      "tracking": "not_applicable"
+    },
+    {
+      "name": "Tailwind CSS",
+      "role": "Explicitly checked; no package manifest, CSS, or Tailwind configuration detected",
+      "status": "not_detected",
+      "current_version": "N/A",
+      "latest_stable": "N/A",
+      "source": "https://tailwindcss.com/blog/tailwindcss-v4-3",
+      "tracking": "not_applicable"
+    },
+    {
+      "name": "GitHub Actions",
+      "role": "Proposed automation layer added by this change",
+      "status": "planned",
+      "current_version": "workflow syntax is service-defined; actions are versioned individually",
+      "latest_stable": "actions/checkout@v6, actions/setup-python@v6",
+      "source": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax",
+      "tracking": "major-version-pinned"
+    }
+  ]
+}

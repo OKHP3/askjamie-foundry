@@ -1,0 +1,100 @@
+{
+  "refs": [
+    {
+      "changes": [
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-audit-repository-019f95e8/closeout.md"
+        },
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-audit-repository-019f95e8/original-audit-memo.md"
+        },
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-audit-repository-019f95e8/original-audit-prompt.md"
+        }
+      ],
+      "complete": true,
+      "head": "257caaa2e4661e43749ca0c9212a04b20fc678ca",
+      "head_tree": "9d0594fda80c611e3afd3b89f088220ed1b3b394",
+      "merge_base": "fa39f6d25c3280d800710872080995378fad7f67",
+      "name": "codex/brg12-organization-closeout",
+      "source_ref": "refs/heads/codex/brg12-organization-closeout",
+      "stored_reconstructed_tree": "a12cca5d661a04cfd7edad975b72faa80f32a660",
+      "full_tree_recoverable_from_stored_files": false
+    },
+    {
+      "changes": [
+        {
+          "git_blob": "97f8a2b0387c7da8ab9c11da4328bc9eeac2ce61",
+          "mode": "100644",
+          "path": ".agents/skills/.catalog-meta.json",
+          "stored_at": "objects/97f8a2b0387c7da8ab9c11da4328bc9eeac2ce61.json"
+        },
+        {
+          "git_blob": "e38eba548f37465c043acecc8041a93730418e06",
+          "mode": "100644",
+          "path": ".agents/skills/README.md",
+          "stored_at": "../../../coca-cola/origin/repository/.agents/skills/README.md"
+        },
+        {
+          "git_blob": "831c357cc262fb7d0f22a294bac4489d52456eb3",
+          "mode": "100644",
+          "path": ".agents/skills/okhp3-skill-cataloger/scripts/gen-skills-readme.py",
+          "stored_at": "../../../origin/repository/.agents/skills/okhp3-skill-cataloger/scripts/gen-skills-readme.py"
+        },
+        {
+          "git_blob": "6791d2693e7742d735dfef42c2c48f6a0a47deec",
+          "mode": "100644",
+          "path": ".agents/skills/okhp3-skill-cataloger/tests/test_write_family_md.py",
+          "stored_at": "../../../origin/repository/.agents/skills/okhp3-skill-cataloger/tests/test_write_family_md.py"
+        },
+        {
+          "git_blob": "37f7e9a79abcf52b3db875fe67ca9376959e8d56",
+          "mode": "100644",
+          "path": ".agents/skills/okhp3-skill-foundry/benchmarks/benchmark.json",
+          "stored_at": "objects/37f7e9a79abcf52b3db875fe67ca9376959e8d56.json"
+        },
+        {
+          "git_blob": "bab9d8100137786d7b1d9130a71265a29ff02a17",
+          "mode": "100644",
+          "path": ".agents/skills/okhp3-skill-foundry/benchmarks/sync-verification-2026-07-28.json",
+          "stored_at": "objects/bab9d8100137786d7b1d9130a71265a29ff02a17.json"
+        },
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-audit-repository-019f95e8/closeout.md"
+        },
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-audit-repository-019f95e8/original-audit-memo.md"
+        },
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-audit-repository-019f95e8/original-audit-prompt.md"
+        },
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-organize-repository-019fd541/closeout.md"
+        },
+        {
+          "deleted": true,
+          "path": "docs/session-handoffs/2026-10-26-organize-repository-019fd541/delivery-receipt.md"
+        }
+      ],
+      "complete": true,
+      "head": "36a5cac6cfced006d00768a4edf42a8b1f08df44",
+      "head_tree": "c8fd951f75256ec8a6af5bdc0c7b7d008ae30a8a",
+      "merge_base": "36a5cac6cfced006d00768a4edf42a8b1f08df44",
+      "name": "codex/brg12-project-harvest",
+      "source_ref": "refs/heads/codex/brg12-project-harvest",
+      "stored_reconstructed_tree": "873b280ccb47f79460e9393ca31dcf31e88ac0c8",
+      "full_tree_recoverable_from_stored_files": false
+    }
+  ],
+  "repository": "OKHP3/askjamie-brg12-mathews-archery",
+  "source_main": "94aada6422255d5566b9ad89c33886bba30a2862",
+  "source_main_tree": "e57846033aa2e464c47d7fe50f4406bc559e3fa5",
+  "stored_base_tree": "0009df26854ffc72341d4ff5d1ebea954a9a985c"
+}

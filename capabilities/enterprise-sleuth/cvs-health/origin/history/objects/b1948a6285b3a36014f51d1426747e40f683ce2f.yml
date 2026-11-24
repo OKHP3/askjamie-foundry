@@ -1,0 +1,32 @@
+name: Technology drift check
+
+on:
+  push:
+    paths:
+      - 'ask-jamie!/*.json'
+      - 'scripts/check-technology-versions.ps1'
+      - '.github/workflows/technology-drift.yml'
+  pull_request:
+    paths:
+      - 'ask-jamie!/*.json'
+      - 'scripts/check-technology-versions.ps1'
+      - '.github/workflows/technology-drift.yml'
+  schedule:
+    - cron: '17 13 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Validate JSON and check official versions
+        shell: pwsh
+        run: |
+          Get-Content -Raw 'ask-jamie!/manifest.json' | ConvertFrom-Json | Out-Null
+          Get-Content -Raw 'ask-jamie!/declarativeagent_0.json' | ConvertFrom-Json | Out-Null
+          ./scripts/check-technology-versions.ps1 -FailOnDrift

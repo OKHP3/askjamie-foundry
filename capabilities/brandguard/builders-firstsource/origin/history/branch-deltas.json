@@ -1,0 +1,21 @@
+{
+  "repository": "OKHP3/askjamie-brg00-builders-firstsource",
+  "source_main": "875b23fd74b9d162a246069b3a0eac8fba6106fa",
+  "source_main_tree": "3abde263b463e63032cf9f49e747548486ac772f",
+  "refs": [
+    {
+      "name": "codex/reconcile-preserved-ledger",
+      "source_ref": "refs/heads/codex/reconcile-preserved-ledger",
+      "head": "fee6a8bb0c32c63e0c9f88c420ee919c49724685",
+      "kind": "branch",
+      "head_tree": "3abde263b463e63032cf9f49e747548486ac772f",
+      "merge_base": "fee6a8bb0c32c63e0c9f88c420ee919c49724685",
+      "complete": true,
+      "changes": [],
+      "reconstructed_tree": "3abde263b463e63032cf9f49e747548486ac772f",
+      "stored_reconstructed_tree": "3abde263b463e63032cf9f49e747548486ac772f",
+      "full_tree_recoverable_from_stored_files": true
+    }
+  ],
+  "stored_base_tree": "3abde263b463e63032cf9f49e747548486ac772f"
+}

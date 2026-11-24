@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-24 Legacy repository transfers
+
+- Record the 17 owner-selected Enterprise Sleuth and BrandGuard sources in their canonical folders. Each source record gives the original commit, stored Git tree and exact coverage.
+- Support nested capability destinations and separate public legacy source receipts from ongoing capability graduation and workspace custody.
+
 ## 2026-11-17: Career AI resilience evidence contract
 
 - Advance the existing career-resilience companion to draftable 0.2.0 with

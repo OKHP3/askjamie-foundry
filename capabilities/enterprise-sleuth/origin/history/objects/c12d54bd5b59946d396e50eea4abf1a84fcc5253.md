@@ -1,0 +1,2 @@
+# AskJamie-GPT-AJ03
+Storage + build repo for AskJamie™ GPT‑AJ03: Enterprise Sleuth—an AI detective for enterprise knowledge. Holds prompt architecture, knowledge-pack sources, eval tests, and release artifacts for the portable “recipe pack” (CIR/OCE/IKM/CGC/ADO/CCI). Canonical page: https://askjamie.bot/lens-system/enterprise-sleuth/

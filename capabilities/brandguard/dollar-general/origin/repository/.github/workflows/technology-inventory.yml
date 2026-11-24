@@ -1,0 +1,26 @@
+name: Technology inventory
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 9 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Check inventory freshness
+        shell: pwsh
+        run: ./scripts/check-technology-inventory.ps1
+
+      - name: Check whitespace
+        run: git diff --check

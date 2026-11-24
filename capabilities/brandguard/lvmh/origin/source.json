@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg07-lvmh",
+  "source_commit": "6e6b87961142a4069236fb38c0c630db3bc10364",
+  "source_tree": "f09201fd61183bd65adf71d4350309e23bcadf52",
+  "destination": "capabilities/brandguard/lvmh",
+  "stored_tree": "f09201fd61183bd65adf71d4350309e23bcadf52",
+  "source_files": 552,
+  "stored_files": 552,
+  "stored_bytes": 10181727,
+  "path_mode_size_sha256_digest": "6bd56ce289a60cbb5edb6ce9bad04eb57982228aa9f3deb55d670aab21091727"
+}

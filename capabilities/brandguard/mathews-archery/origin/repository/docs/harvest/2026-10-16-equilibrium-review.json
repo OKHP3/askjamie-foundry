@@ -1,0 +1,189 @@
+{
+  "schema": "brg12-retention-adjudication-public-v1",
+  "date": "2026-10-16",
+  "private_adjudication_sha256": "669a6050cbe449aa5378d809f88ff11fa0a3f76956db2ea592d7e786ef4b1dd0",
+  "source_census_sha256": "3d93c64e63c4e2af5fa6d68bc2168b917f9d9f16659eb057bd0d1ebfacb6e62e",
+  "edition_manifest_sha256": "5a5b8ffa8f64a5b39b346efdffa72c5724f1a92e71499d9fcae8a22556cad608",
+  "protocol_sha256": "bcb822166463ad2ec8ab73a629fcf99834e13a948b3ea890dd3081ceecb24753",
+  "decisions": {
+    "deterministic_observations_and_private_historical_drafts": "approve-with-limits",
+    "formal_equilibrium_release_approval": "defer-for-evidence; no protected/external holdout, no waiver",
+    "whole_project_greater_than_60_or_80_percent": "NOT DEMONSTRATED",
+    "source_archiving": "NOT AUTHORIZED; HOLD ALL26"
+  },
+  "claim_ledger": [
+    {
+      "claim_id": "CLM-01",
+      "claim": "The frozen census covers all 34 observed substantive expansion reports, two per KNOW01-KNOW17, with no substantive root gap and no scored parent/child duplication.",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "SRC-CENSUS",
+        "REV-EVIDENCE",
+        "CHECK-NEGOTIATOR"
+      ],
+      "status": "supported",
+      "source_truth_status": "Historical rendered-source population only; original-export equivalence and unseen history remain unknown.",
+      "preservation_status": "Source boundary accepted for the scoped calculation.",
+      "consequence": "A missing root range or doublecount would invalidate the denominator.",
+      "next_test": "Keep this exact census hash. Reopen and version the census only on supported new source evidence, with before/after results."
+    },
+    {
+      "claim_id": "CLM-02",
+      "claim": "On the final manifest, all 2413 admitted parent blocks are preserved under protocol 2.1, yielding 2413/2413 = 100% of the frozen observed-expansion source-block proxy; package-weight sensitivity is 3121/3121 = 100%.",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "SRC-PROTOCOL",
+        "SRC-CENSUS",
+        "SRC-MANIFEST",
+        "SRC-FIDELITY",
+        "REV-OUTCOME",
+        "REV-SAFETY",
+        "REV-DISRUPTOR",
+        "CHECK-NEGOTIATOR"
+      ],
+      "status": "supported",
+      "source_truth_status": "The source propositions remain historical unverified assertions, analysis, proposals and citation leads.",
+      "preservation_status": "Full for all 2413 admitted parents under the declared rubric; partial 0, missing 0, disputed-fidelity 0, ungraded 0.",
+      "consequence": "An unqualified 100% label could be mistaken for total Project meaning, current truth or general task quality.",
+      "next_test": "Report the exact boundary, numerator/denominator and historical status beside the figures. Rerun affected fidelity and usability checks after a frozen component changes."
+    },
+    {
+      "claim_id": "CLM-03",
+      "claim": "The packet permits the authorized maintainer to retrieve, compare and reconcile useful historical research without the source account in the selected reader tasks.",
+      "claim_type": "interpretation",
+      "evidence_ids": [
+        "SRC-INDEX",
+        "REV-OUTCOME",
+        "REV-SAFETY",
+        "REV-DISRUPTOR"
+      ],
+      "status": "supported",
+      "source_truth_status": "No current company fact or linked-source support is confirmed by reader-task success.",
+      "preservation_status": "Supported for the defined historical maintenance job and tested tasks, with no surviving discovered usability defect.",
+      "consequence": "Generalizing purposive tasks into all-user success or a population error rate would exceed the evidence.",
+      "next_test": "Keep the job-specific wording. A broader usability or outcome claim needs an appropriate independent evaluation design."
+    },
+    {
+      "claim_id": "CLM-04",
+      "claim": "The final packet retains the checked table relationships, metadata delimiters/indentation and observed citation associations after versioned repairs without changing the frozen source denominator.",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "SRC-REPAIRS",
+        "SRC-TABLES",
+        "REV-OUTCOME",
+        "REV-SAFETY",
+        "REV-DISRUPTOR",
+        "CHECK-NEGOTIATOR"
+      ],
+      "status": "supported",
+      "source_truth_status": "Observed leads and unresolved citation markers are preserved without being promoted as valid support.",
+      "preservation_status": "Three table-view defects and one bounded literal-metadata display defect were repaired and rechecked; no surviving defect was identified.",
+      "consequence": "Exact stored strings alone can conceal reader-facing structure loss.",
+      "next_test": "After generator or formatting changes, repeat literal delimiter/indentation, all repaired cell/marker/link checks, and full records/link checks."
+    },
+    {
+      "claim_id": "CLM-05",
+      "claim": "The scoped 100% result demonstrates greater than 60% or the preferred greater than 80% of total Project reusable value retained.",
+      "claim_type": "hypothesis",
+      "evidence_ids": [
+        "SRC-PROTOCOL",
+        "REV-EVIDENCE",
+        "REV-OUTCOME",
+        "REV-SAFETY",
+        "REV-DISRUPTOR",
+        "PUB-LEDGER"
+      ],
+      "status": "blocked",
+      "source_truth_status": "Whole-Project denominator and unobserved original contents are unknown.",
+      "preservation_status": "No whole-Project percentage or finite retained-value lower bound is demonstrated.",
+      "consequence": "Substituting the expansion boundary would falsely declare the owners broader objective complete and could encourage source loss.",
+      "next_test": "Recover original payload bytes or a supported export, reconcile identity and unique useful contents, bound the whole-Project denominator, then recalculate under an explicit value measure."
+    },
+    {
+      "claim_id": "CLM-06",
+      "claim": "Historical preservation credit requires current factual verification of every source assertion first.",
+      "claim_type": "design choice",
+      "evidence_ids": [
+        "SRC-PROTOCOL",
+        "REV-EVIDENCE",
+        "REV-OUTCOME",
+        "REV-SAFETY",
+        "REV-DISRUPTOR"
+      ],
+      "status": "disputed",
+      "source_truth_status": "Historical truth/currency remains unverified and separate from fidelity.",
+      "preservation_status": "A disputed or unverified historical proposition can be fully preserved. Only disputed preservation fidelity/usability loses conservative credit.",
+      "consequence": "Conflating truth with retention would erase historical value, replace details with warnings and misstate the rubric.",
+      "next_test": "No current-fact check is needed for faithful historical credit. Run issue-specific primary-source review only before current-answer use or factual promotion."
+    },
+    {
+      "claim_id": "CLM-07",
+      "claim": "The packet and review establish tested model behavior, a product runtime, deployment, publication/rights clearance or owner acceptance.",
+      "claim_type": "hypothesis",
+      "evidence_ids": [
+        "REV-OUTCOME",
+        "REV-SAFETY",
+        "REV-DISRUPTOR",
+        "PUB-NARRATIVE"
+      ],
+      "status": "blocked",
+      "source_truth_status": "These claims are not established.",
+      "preservation_status": "Draft recovery and static file review do not supply these outcomes.",
+      "consequence": "A reader could rely on an unimplemented or untested surface or infer consent and clearance.",
+      "next_test": "Use the separate implementation, evaluation, rights and owner-acceptance workflows only when such claims are proposed."
+    },
+    {
+      "claim_id": "CLM-08",
+      "claim": "A passing retention figure authorizes archiving any of the 26 source chats.",
+      "claim_type": "design choice",
+      "evidence_ids": [
+        "SRC-PROTOCOL",
+        "PUB-LEDGER",
+        "REV-SAFETY",
+        "REV-DISRUPTOR"
+      ],
+      "status": "disputed",
+      "source_truth_status": "The current owner hold forbids source archiving; no reviewer performed an archive action.",
+      "preservation_status": "All 26 source records remain held regardless of any scoped score.",
+      "consequence": "Archiving could violate the owners instruction and impair recovery of still-unbounded value.",
+      "next_test": "Maintain the hold. A new direct owner instruction is required to change archive authority; this review supplies none."
+    },
+    {
+      "claim_id": "CLM-09",
+      "claim": "All required inputs for an unrestricted formal Equilibrium release approval are present.",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "GOV-SKILL",
+        "GOV-PROTOCOL",
+        "REV-OUTCOME",
+        "REV-SAFETY",
+        "REV-DISRUPTOR"
+      ],
+      "status": "blocked",
+      "source_truth_status": "No protected or external holdout is supplied; reviewer-selected tasks were exposed during repair.",
+      "preservation_status": "This does not negate exhaustive observed arithmetic or completion of authorized draft recovery.",
+      "consequence": "Calling this a fully satisfied formal release gate would silently waive a required skill input.",
+      "next_test": "If formal Equilibrium release approval is later sought, supply a valid protected or external holdout tied to the final artifact and preserve its selection, isolation, execution and adjudication record. No waiver is claimed."
+    },
+    {
+      "claim_id": "CLM-10",
+      "claim": "The public draft and source ledger correctly keep the whole-Project target unknown and source archiving held while identifying the final frozen packet.",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "PUB-NARRATIVE",
+        "PUB-RECORD",
+        "PUB-LEDGER",
+        "CHECK-NEGOTIATOR"
+      ],
+      "status": "supported",
+      "source_truth_status": "This checks preservation/scope wording and version references, not all ancillary prompt, baseline-corpus or factual claims in the wider harvest.",
+      "preservation_status": "Final manifest and census references match. Public review statuses and released_percent remain intentionally pending in the reviewed pre-adjudication snapshots.",
+      "consequence": "A stale pending label or overbroad final label could obscure what this adjudication decided.",
+      "next_test": "Update status wording to report completed analytical adjudication and the supported deterministic figures, while preserving formal release deferral, whole_project_percent null and all holds."
+    }
+  ],
+  "independence": "Separate contexts using the same model family and overlapping captured evidence. No protected/external holdout or independent current-fact corroboration.",
+  "final_consistency": "All68 output/record hashes,34 root partitions,2902 retained blocks,2413 admitted weights and4743 adjacent-link records checked with0 mismatches.",
+  "remaining_dependency": "Original payload bytes or supported export for identity and unique-content reconciliation.",
+  "source_evidence_status": "Historical unverified research; no current-fact or product behavior approval"
+}

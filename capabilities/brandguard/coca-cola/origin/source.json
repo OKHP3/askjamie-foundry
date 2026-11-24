@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg09-coca-cola",
+  "source_commit": "e7098f021dccc0eca1e1161f2fa6fdad6526c79f",
+  "source_tree": "1bc1a53ed7c3462c90da1ae5882d1ff624095108",
+  "destination": "capabilities/brandguard/coca-cola",
+  "stored_tree": "1bc1a53ed7c3462c90da1ae5882d1ff624095108",
+  "source_files": 538,
+  "stored_files": 538,
+  "stored_bytes": 20923524,
+  "path_mode_size_sha256_digest": "ed5a63dada58b084fdf85443c3f4a954207a6b7c2b3d11e259570ef42ac94a90"
+}

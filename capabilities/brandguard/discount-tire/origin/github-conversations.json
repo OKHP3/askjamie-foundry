@@ -1,0 +1,112 @@
+{
+  "records": [
+    {
+      "assignees": [
+        "Copilot",
+        "OKHP3"
+      ],
+      "author": "Copilot",
+      "base_sha": "8a975aad8b3e73f8a5244001200713cfde32852f",
+      "body": "Sets up AskJamie-GPT-BRG10 as a structured GPT project repository for Discount Behre's OKHP³ BrandGuard™ framework.\n\n## Changes\n\n- **README.md**: Added tagline \"I rotated your brand into GPTs so no one else drives off with it.\"\n- **LICENSE**: MIT License for OKHP³\n- **.gitignore**: Standard exclusions for IDEs, temp files, and build artifacts\n- **Folder structure**: Created `/prompts`, `/knowledge`, `/eval`, `/web`, `/ops`, `/build` with `.gitkeep` files\n- **gpt_manifest.yaml**: Configuration manifest linking Discount Tire official site, AskJamie Lens, ChatGPT Project, Notion, and Custom GPT platform\n\nThe manifest provides structured metadata and resource links:\n\n```yaml\nlinks:\n  discount_tire_official:\n    url: https://www.discounttire.com\n  askjamie_lens:\n    url: https://askjamie.okhp3.com\n  chatgpt_project:\n    url: https://chatgpt.com\n```\n\n<!-- START COPILOT CODING AGENT SUFFIX -->\n\n\n\n<!-- START COPILOT ORIGINAL PROMPT -->\n\n\n\n<details>\n\n<summary>Original prompt</summary>\n\n> Create GitHub repo \"AskJamie-GPT-BRG10\". Initialize with README.md, LICENSE, .gitignore. Add folders: /prompts /knowledge /eval /web /ops /build. Add gpt_manifest.yaml linking Discount Tire official site, AskJamie Lens page, ChatGPT Project, Notion, and Custom GPT. README tagline: “I rotated your brand into GPTs so no one else drives off with it.”\n> \n\n\n</details>\n\n\n\n<!-- START COPILOT CODING AGENT TIPS -->\n---\n\n✨ Let Copilot coding agent [set things up for you](https://github.com/OKHP3/AskJamie-GPT-BRG10/issues/new?title=✨+Set+up+Copilot+instructions&body=Configure%20instructions%20for%20this%20repository%20as%20documented%20in%20%5BBest%20practices%20for%20Copilot%20coding%20agent%20in%20your%20repository%5D%28https://gh.io/copilot-coding-agent-tips%29%2E%0A%0A%3COnboard%20this%20repo%3E&assignees=copilot) — coding agent works faster and does higher quality work when set up for your repo.\n",
+      "closed_at": "2025-12-26T15:51:15Z",
+      "comments": [],
+      "commit_shas": [
+        "3192e347e2aaa18bcf16375230c0e8f9568b6d78",
+        "8dccb10484cfc830def868fe6faf4d0ae483d891"
+      ],
+      "created_at": "2025-12-23T19:59:03Z",
+      "draft": false,
+      "head_sha": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+      "id": 3758414268,
+      "kind": "pull_request",
+      "labels": [],
+      "locked": false,
+      "merged": false,
+      "number": 1,
+      "original_url": "https://github.com/OKHP3/askjamie-brg10-discount-tire/pull/1",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "id": 3611508335,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-24T19:48:14Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "id": 3613634104,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:50:29Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "id": 3613634354,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:50:42Z"
+        },
+        {
+          "author": "OKHP3",
+          "body": "",
+          "commit_id": "8dccb10484cfc830def868fe6faf4d0ae483d891",
+          "id": 3613634697,
+          "state": "APPROVED",
+          "submitted_at": "2025-12-26T15:51:07Z"
+        }
+      ],
+      "state": "closed",
+      "title": "Initialize repository structure with core files and folder organization",
+      "updated_at": "2025-12-26T15:51:15Z"
+    },
+    {
+      "assignees": [],
+      "author": "OKHP3",
+      "base_sha": "a65a705c18d3c37840a44259592680af6db81508",
+      "body": null,
+      "closed_at": "2026-01-02T15:31:19Z",
+      "comments": [],
+      "commit_shas": [
+        "3192e347e2aaa18bcf16375230c0e8f9568b6d78",
+        "8dccb10484cfc830def868fe6faf4d0ae483d891",
+        "9f95af91a6e87484bf57d4a6ea47b91523ecefa8",
+        "313494667ec0d1f96a0ac8e568d39b94bfd33e36",
+        "45ea1d443437321dd949e6bed407d3a93536850e"
+      ],
+      "created_at": "2026-01-02T15:31:01Z",
+      "draft": false,
+      "head_sha": "45ea1d443437321dd949e6bed407d3a93536850e",
+      "id": 3776595275,
+      "kind": "pull_request",
+      "labels": [],
+      "locked": false,
+      "merge_commit_sha": "6a2094b15cee8032f9f9d0b90b8785d657229ecb",
+      "merged": true,
+      "merged_at": "2026-01-02T15:31:19Z",
+      "number": 2,
+      "original_url": "https://github.com/OKHP3/askjamie-brg10-discount-tire/pull/2",
+      "review_comments": [],
+      "review_threads": [],
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "body": "## Pull request overview\n\nThis PR initializes the repository structure and foundational files for GPT-BRG10, a Discount Tire BrandGuard™ GPT configuration project. The changes establish the project framework with directory scaffolding, configuration files, documentation, and initial knowledge base documents.\n\n**Key Changes:**\n- Created standardized directory structure with .gitkeep placeholders for 12 directories\n- Added project configuration and documentation files (manifest, README, LICENSE, CHANGELOG, .gitignore)\n- Included two knowledge base documents in PDF and DOCX formats\n\n### Reviewed changes\n\nCopilot reviewed 4 out of 52 changed files in this pull request and generated no comments.\n\n<details>\n<summary>Show a summary per file</summary>\n\n| File | Description |\r\n| ---- | ----------- |\r\n| gpt_manifest.yaml | Project manifest defining links, repository structure, and metadata |\r\n| README.md | Simplified project description with tagline |\r\n| LICENSE | MIT License with 2025 copyright |\r\n| CHANGELOG.md | Initial changelog following Keep a Changelog format |\r\n| .gitignore | Standard ignore patterns for general, IDE, and build artifacts |\r\n| Directory .gitkeep files | Placeholder files for 12 empty directories (web, tests, src, site, releases, rag-source, prompts, ops, knowledge, eval, docs, build, assets) |\r\n| knowledge/BRG10-KNOW17-Reputational-Liability-Inoculation-v01a.pdf | Knowledge base PDF document |\r\n| knowledge/BRG10-KNOW17-Reputational-Liability-Inoculation-v01a.docx | Knowledge base DOCX document |\n</details>\n\n\n\n\n\n\n---\n\n💡 <a href=\"/OKHP3/AskJamie-GPT-BRG10/new/main/.github/instructions?filename=*.instructions.md\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Add Copilot custom instructions</a> for smarter, more guided reviews. <a href=\"https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot\" class=\"Link--inTextBlock\" target=\"_blank\" rel=\"noopener noreferrer\">Learn how to get started</a>.",
+          "commit_id": "45ea1d443437321dd949e6bed407d3a93536850e",
+          "id": 3623353898,
+          "state": "COMMENTED",
+          "submitted_at": "2026-01-02T15:32:44Z"
+        }
+      ],
+      "state": "closed",
+      "title": "Copilot/init repo structure and files",
+      "updated_at": "2026-01-02T15:32:44Z"
+    }
+  ],
+  "scope": "issues, pull requests, comments, reviews, and thread resolution",
+  "source_repository": "OKHP3/askjamie-brg10-discount-tire"
+}

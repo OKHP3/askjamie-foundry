@@ -1,0 +1,426 @@
+{
+  "comment_reactions": [],
+  "counts": {
+    "comment_reactions": 0,
+    "comments_checked_for_reactions": 1,
+    "events": 49,
+    "issue_reactions": 2,
+    "records": 5
+  },
+  "issue_and_pull_request_timelines": [
+    {
+      "events": [
+        {
+          "commit_time": "2025-12-23T20:01:42Z",
+          "event": "committed",
+          "parents": [
+            "bf26ca0bcea30f950c7fcc12c97dabccdab1d14d"
+          ],
+          "sha": "58b842e8f12f4df3d81ae8e0a26ad88f894ee03f",
+          "tree_sha": "dc46076b8c4d2f4d7e92ccbe58ff9ca885fd28e5"
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "Copilot",
+          "created_at": "2025-12-23T20:01:43Z",
+          "event": "assigned",
+          "id": 21731840674
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "OKHP3",
+          "created_at": "2025-12-23T20:01:43Z",
+          "event": "assigned",
+          "id": 21731840698
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T20:02:06Z",
+          "event": "copilot_work_started",
+          "id": 21731845282
+        },
+        {
+          "commit_time": "2025-12-23T20:04:20Z",
+          "event": "committed",
+          "parents": [
+            "58b842e8f12f4df3d81ae8e0a26ad88f894ee03f"
+          ],
+          "sha": "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+          "tree_sha": "849cbb026da975a1f0dbb60563adc4b67d56958a"
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:05:04Z",
+          "event": "renamed",
+          "id": 21731881700,
+          "rename": {
+            "from": "[WIP] Initialize GitHub repo for GPT-BRG09",
+            "to": "Initialize repository structure for GPT-BRG09: OKHP³ BrandGuard™"
+          }
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-23T20:05:11Z",
+          "event": "review_requested",
+          "id": 21731883037,
+          "requested_reviewer": "OKHP3",
+          "review_requester": "Copilot"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-23T20:05:11Z",
+          "event": "copilot_work_finished",
+          "id": 21731883110
+        },
+        {
+          "commit_id": "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+          "event": "reviewed",
+          "id": 3611508191,
+          "state": "approved",
+          "submitted_at": "2025-12-24T19:47:57Z",
+          "updated_at": "2025-12-24T19:47:57Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:52:47Z",
+          "event": "ready_for_review",
+          "id": 21760237779
+        },
+        {
+          "commit_id": "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+          "event": "reviewed",
+          "id": 3613636416,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:52:49Z",
+          "updated_at": "2025-12-26T15:52:49Z",
+          "user": "OKHP3"
+        },
+        {
+          "commit_id": "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+          "event": "reviewed",
+          "id": 3613636788,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:53:08Z",
+          "updated_at": "2025-12-26T15:53:08Z",
+          "user": "OKHP3"
+        },
+        {
+          "commit_time": "2025-12-26T15:53:08Z",
+          "event": "committed",
+          "parents": [
+            "814158217a303bfc84056e8f4f1722c5fbcf02d0",
+            "6d383fff233313e03709052e5fe5c681082161f4"
+          ],
+          "sha": "10019016725488040032afe97dbd57bc8a820dbc",
+          "tree_sha": "20704ccafee6f151ed7359e57c9e7cca6b16b72e"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "d0fe1f02d248d3988e1503947c9fe82706e30d5e",
+          "created_at": "2025-12-26T15:53:33Z",
+          "event": "merged",
+          "id": 21760241854
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:53:33Z",
+          "event": "closed",
+          "id": 21760241863
+        },
+        {
+          "commit_id": "10019016725488040032afe97dbd57bc8a820dbc",
+          "event": "reviewed",
+          "id": 3613637393,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:53:44Z",
+          "updated_at": "2025-12-26T15:53:44Z",
+          "user": "OKHP3"
+        },
+        {
+          "commit_id": "10019016725488040032afe97dbd57bc8a820dbc",
+          "event": "reviewed",
+          "id": 3613637486,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:53:52Z",
+          "updated_at": "2025-12-26T15:53:52Z",
+          "user": "OKHP3"
+        },
+        {
+          "commit_id": "10019016725488040032afe97dbd57bc8a820dbc",
+          "event": "reviewed",
+          "id": 3613637635,
+          "state": "approved",
+          "submitted_at": "2025-12-26T15:54:03Z",
+          "updated_at": "2025-12-26T15:54:03Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-26T15:54:11Z",
+          "event": "head_ref_deleted",
+          "id": 21760245388
+        }
+      ],
+      "number": 1,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2025-12-26T15:53:52Z",
+          "id": 250453635
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:17Z",
+          "event": "labeled",
+          "id": 28240845679,
+          "label": "dependencies"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:17Z",
+          "event": "labeled",
+          "id": 28240845690,
+          "label": "github_actions"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:18Z",
+          "event": "labeled",
+          "id": 28240845867,
+          "label": "dependencies"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:18Z",
+          "event": "labeled",
+          "id": 28240845975,
+          "label": "github_actions"
+        },
+        {
+          "commit_time": "2026-07-28T20:14:16Z",
+          "event": "committed",
+          "parents": [
+            "b916f0d4e1e0812285ca931d58353d88ae3869d4"
+          ],
+          "sha": "bd3fcd09c5c2f2cf61238eee155db635e46e48bb",
+          "tree_sha": "daf2ec1237d156897a3ecc28da43ae383509a068"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-28T20:14:17Z",
+          "event": "renamed",
+          "id": 28621385935,
+          "rename": {
+            "from": "Bump the github-actions group with 2 updates",
+            "to": "Bump the github-actions group across 1 directory with 2 updates"
+          }
+        },
+        {
+          "actor": "dependabot[bot]",
+          "commit_id": "bd3fcd09c5c2f2cf61238eee155db635e46e48bb",
+          "created_at": "2026-07-28T20:14:17Z",
+          "event": "head_ref_force_pushed",
+          "id": 28621386414
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "16e5862cfd2c4f029932c5b88f07bc8d0213e177",
+          "created_at": "2026-07-30T21:27:33Z",
+          "event": "merged",
+          "id": 28745915113
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-07-30T21:27:33Z",
+          "event": "closed",
+          "id": 28745915154
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-07-30T21:27:38Z",
+          "event": "head_ref_deleted",
+          "id": 28745917670
+        }
+      ],
+      "number": 2,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-08-10T23:41:33Z",
+          "event": "committed",
+          "parents": [
+            "5d8ead52243cd7c589b44619543a9933e4b26ef9"
+          ],
+          "sha": "dd338a5f081f09f7de9591a75bdc2413a5801a81",
+          "tree_sha": "42e8924284dffa1ffcf74d09080cb406f12cde3c"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-10T23:41:38Z",
+          "event": "review_requested",
+          "id": 29252074875,
+          "requested_reviewer": "Copilot",
+          "review_requester": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "ed98acff3f95039b8dc7a93655f3764ac7bd59dc",
+          "created_at": "2026-08-10T23:41:46Z",
+          "event": "merged",
+          "id": 29252078585
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-10T23:41:46Z",
+          "event": "closed",
+          "id": 29252078611
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-10T23:41:48Z",
+          "event": "head_ref_deleted",
+          "id": 29252079152
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-10T23:42:07Z",
+          "event": "copilot_work_started",
+          "id": 29252087842
+        },
+        {
+          "commit_id": "dd338a5f081f09f7de9591a75bdc2413a5801a81",
+          "event": "reviewed",
+          "id": 4901829204,
+          "state": "commented",
+          "submitted_at": "2026-08-10T23:43:04Z",
+          "updated_at": "2026-08-10T23:43:04Z",
+          "user": "Copilot"
+        }
+      ],
+      "number": 3,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2026-08-10T23:43:39Z",
+          "id": 447532754
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-08-10T23:42:05Z",
+          "event": "committed",
+          "parents": [
+            "ed98acff3f95039b8dc7a93655f3764ac7bd59dc"
+          ],
+          "sha": "d52efec4964b4407ffa79223452029a3a4602522",
+          "tree_sha": "e664d9cb34f067b1cf411235696211ade8b47cd1"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-08-10T23:42:58Z",
+          "event": "labeled",
+          "id": 29252108949,
+          "label": "dependencies"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-08-10T23:42:58Z",
+          "event": "labeled",
+          "id": 29252108974,
+          "label": "automation"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "ec45b2ace89b8487f84b29be7214ff28beb09a52",
+          "created_at": "2026-08-10T23:43:26Z",
+          "event": "merged",
+          "id": 29252121624
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-10T23:43:26Z",
+          "event": "closed",
+          "id": 29252121656
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-10T23:43:27Z",
+          "event": "head_ref_deleted",
+          "id": 29252122175
+        }
+      ],
+      "number": 4,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-10-05T09:47:25Z",
+          "event": "labeled",
+          "id": 32495906340,
+          "label": "automation"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "created_at": "2026-10-05T09:47:25Z",
+          "event": "labeled",
+          "id": 32495906483,
+          "label": "dependencies"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "commit_id": "8db1bafeb780d9f3a122d7d35ce51c1658fa0773",
+          "created_at": "2026-10-12T09:51:52Z",
+          "event": "head_ref_force_pushed",
+          "id": 33036186075
+        },
+        {
+          "actor": "github-actions[bot]",
+          "commit_id": "c024a4dc89927a3ce4dee5d97486d40dd3c46e4d",
+          "created_at": "2026-10-26T09:46:10Z",
+          "event": "head_ref_force_pushed",
+          "id": 34244578083
+        },
+        {
+          "actor": "github-actions[bot]",
+          "commit_id": "ab072e67a74fda0d7a7d290f0199d268c755e918",
+          "created_at": "2026-11-02T09:27:52Z",
+          "event": "head_ref_force_pushed",
+          "id": 34893723153
+        },
+        {
+          "commit_time": "2026-11-23T09:29:59Z",
+          "event": "committed",
+          "parents": [
+            "e7098f021dccc0eca1e1161f2fa6fdad6526c79f"
+          ],
+          "sha": "5147829e912bc99ecc44316f342d1433661e2677",
+          "tree_sha": "2640a85a47587a556eee5685e3418787ec22087c"
+        },
+        {
+          "actor": "github-actions[bot]",
+          "commit_id": "5147829e912bc99ecc44316f342d1433661e2677",
+          "created_at": "2026-11-23T09:30:02Z",
+          "event": "head_ref_force_pushed",
+          "id": 36990441465
+        }
+      ],
+      "number": 5,
+      "reactions": []
+    }
+  ],
+  "redactions": {},
+  "source_repository": "OKHP3/askjamie-brg09-coca-cola"
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "OKHP3/askjamie-brg06-hershey",
+  "source_commit": "17362fdce3e8582168ebb37f83f097e770710411",
+  "source_tree": "12530714be49390defe9c4dc41c37ce42969b1b9",
+  "destination": "capabilities/brandguard/hershey",
+  "stored_tree": "12530714be49390defe9c4dc41c37ce42969b1b9",
+  "source_files": 545,
+  "stored_files": 545,
+  "stored_bytes": 13283077,
+  "path_mode_size_sha256_digest": "f9e7b9de64ec35daa3bd84b8c2c70cd6b60143c9c39ae255c46af53f541a5be4"
+}

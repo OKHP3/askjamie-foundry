@@ -1,0 +1,763 @@
+{
+  "comment_reactions": [],
+  "counts": {
+    "comment_reactions": 0,
+    "comments_checked_for_reactions": 7,
+    "events": 85,
+    "issue_reactions": 4,
+    "records": 9
+  },
+  "issue_and_pull_request_timelines": [
+    {
+      "events": [
+        {
+          "commit_time": "2025-12-31T02:57:22Z",
+          "event": "committed",
+          "parents": [
+            "eec5ee95bcfafd6f6b8aa4939142abbc7e38e383"
+          ],
+          "sha": "8949e2cbddfc1fd1bc6fd9e19e0c1dee0145867d",
+          "tree_sha": "3b5df77d8c5ca43ac191d2c365c699ce3d5281d9"
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "Copilot",
+          "created_at": "2025-12-31T02:57:24Z",
+          "event": "assigned",
+          "id": 21803696283
+        },
+        {
+          "actor": "Copilot",
+          "assignee": "OKHP3",
+          "created_at": "2025-12-31T02:57:24Z",
+          "event": "assigned",
+          "id": 21803696292
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-31T02:57:51Z",
+          "event": "copilot_work_started",
+          "id": 21803699162
+        },
+        {
+          "commit_time": "2025-12-31T03:00:24Z",
+          "event": "committed",
+          "parents": [
+            "8949e2cbddfc1fd1bc6fd9e19e0c1dee0145867d"
+          ],
+          "sha": "3ba5481147ec3187d1bcf0ae535c185bbd92a807",
+          "tree_sha": "28c09d2a3533d663a38308e13f34e24453e44c2d"
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-31T03:01:41Z",
+          "event": "renamed",
+          "id": 21803721387,
+          "rename": {
+            "from": "[WIP] Create scaffold for AskJamie-GPT-BRG12 repository",
+            "to": "[Source-specific text held.]"
+          }
+        },
+        {
+          "actor": "Copilot",
+          "created_at": "2025-12-31T03:01:48Z",
+          "event": "review_requested",
+          "id": 21803722046,
+          "requested_reviewer": "OKHP3",
+          "review_requester": "Copilot"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-31T03:01:49Z",
+          "event": "copilot_work_finished",
+          "id": 21803722080
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-31T03:01:55Z",
+          "event": "ready_for_review",
+          "id": 21803722897
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "907cf56a30011aab8950ee7aeca930756ca7c84d",
+          "created_at": "2025-12-31T03:02:10Z",
+          "event": "merged",
+          "id": 21803725468
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-31T03:02:10Z",
+          "event": "closed",
+          "id": 21803725473
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2025-12-31T03:02:18Z",
+          "event": "head_ref_deleted",
+          "id": 21803726188
+        }
+      ],
+      "number": 1,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2025-12-31T03:02:53Z",
+          "id": 251300327
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-07-21T00:01:27Z",
+          "event": "committed",
+          "parents": [
+            "138a7aa9b4a26bea33ad52ec51c8631e6f7a0899"
+          ],
+          "sha": "d080d8ffc88a7e5791abb02def77b28c7c850bf3",
+          "tree_sha": "53158cfd8662409507edc42a852ca11927b641d1"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:28Z",
+          "event": "labeled",
+          "id": 28240852230,
+          "label": "dependencies"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:28Z",
+          "event": "labeled",
+          "id": 28240852240,
+          "label": "github_actions"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:29Z",
+          "event": "labeled",
+          "id": 28240852430,
+          "label": "dependencies"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:29Z",
+          "event": "labeled",
+          "id": 28240852493,
+          "label": "github_actions"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "928f4776b44707c50721c7c62c60142086670114",
+          "created_at": "2026-09-20T15:06:17Z",
+          "event": "merged",
+          "id": 31484228993
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:06:18Z",
+          "event": "closed",
+          "id": 31484229041
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-09-20T15:06:26Z",
+          "event": "head_ref_deleted",
+          "id": 31484232336
+        }
+      ],
+      "number": 2,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-07-21T00:01:29Z",
+          "event": "committed",
+          "parents": [
+            "138a7aa9b4a26bea33ad52ec51c8631e6f7a0899"
+          ],
+          "sha": "af87e2daf02aaf7c5ba4429575115cd6a89947e2",
+          "tree_sha": "24f94bf21173312b05f6376d7ea14579d1ebce31"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:31Z",
+          "event": "labeled",
+          "id": 28240853155,
+          "label": "dependencies"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:31Z",
+          "event": "labeled",
+          "id": 28240853172,
+          "label": "github_actions"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:32Z",
+          "event": "labeled",
+          "id": 28240853622,
+          "label": "dependencies"
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-07-21T00:01:32Z",
+          "event": "labeled",
+          "id": 28240853734,
+          "label": "github_actions"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "c23b5a5d6a85640f356eb233c8b4d655e0d5ab1c",
+          "created_at": "2026-09-20T15:06:17Z",
+          "event": "merged",
+          "id": 31484228977
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:06:17Z",
+          "event": "closed",
+          "id": 31484229026
+        },
+        {
+          "actor": "dependabot[bot]",
+          "created_at": "2026-09-20T15:06:26Z",
+          "event": "head_ref_deleted",
+          "id": 31484232428
+        }
+      ],
+      "number": 3,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-10T20:21:16Z",
+          "event": "commented",
+          "id": 6101795131,
+          "updated_at": "2026-10-10T20:21:16Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-10T20:21:18Z",
+          "event": "closed",
+          "id": 32956891807
+        }
+      ],
+      "number": 4,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-08-11T00:02:00Z",
+          "event": "committed",
+          "parents": [
+            "9097f15be64a9473c8cb931d8458f340f7784240"
+          ],
+          "sha": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "tree_sha": "b905f3b12164af2ed6710e2470ce4c4a365f7c5b"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-11T00:02:05Z",
+          "event": "review_requested",
+          "id": 29252636625,
+          "requested_reviewer": "Copilot",
+          "review_requester": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-11T00:02:36Z",
+          "event": "copilot_work_started",
+          "id": 29252651157
+        },
+        {
+          "commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "event": "reviewed",
+          "id": 4901928402,
+          "state": "commented",
+          "submitted_at": "2026-08-11T00:03:42Z",
+          "updated_at": "2026-08-11T00:03:42Z",
+          "user": "chatgpt-codex-connector[bot]"
+        },
+        {
+          "commit_id": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "event": "reviewed",
+          "id": 4901930099,
+          "state": "commented",
+          "submitted_at": "2026-08-11T00:04:10Z",
+          "updated_at": "2026-08-11T00:04:10Z",
+          "user": "Copilot"
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "2ab93ab2b2e24fc4ecdf9bc8fbe1b4f0b45244fe",
+          "created_at": "2026-08-11T00:11:57Z",
+          "event": "merged",
+          "id": 29252922477
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-11T00:11:57Z",
+          "event": "closed",
+          "id": 29252922505
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-08-22T02:15:41Z",
+          "event": "head_ref_deleted",
+          "id": 29835998272
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:05:10Z",
+          "cross_reference": {
+            "number": 6,
+            "state": "closed",
+            "url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/6"
+          },
+          "event": "cross-referenced",
+          "updated_at": "2026-09-20T15:05:10Z"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:05:34Z",
+          "cross_reference": {
+            "number": 7,
+            "state": "closed",
+            "url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/7"
+          },
+          "event": "cross-referenced",
+          "updated_at": "2026-09-20T15:05:34Z"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-10T20:21:18Z",
+          "cross_reference": {
+            "number": 4,
+            "state": "closed",
+            "url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/issues/4"
+          },
+          "event": "cross-referenced",
+          "updated_at": "2026-10-10T20:21:18Z"
+        }
+      ],
+      "number": 5,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-08-11T00:02:00Z",
+          "event": "committed",
+          "parents": [
+            "9097f15be64a9473c8cb931d8458f340f7784240"
+          ],
+          "sha": "ff8c02a365af294e1ff24f135f82affcd090b49a",
+          "tree_sha": "b905f3b12164af2ed6710e2470ce4c4a365f7c5b"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:05:09Z",
+          "event": "commented",
+          "id": 5750612612,
+          "updated_at": "2026-09-20T15:05:09Z",
+          "user": "OKHP3"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:05:10Z",
+          "event": "closed",
+          "id": 31484202838
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:05:34Z",
+          "cross_reference": {
+            "number": 7,
+            "state": "closed",
+            "url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/pull/7"
+          },
+          "event": "cross-referenced",
+          "updated_at": "2026-09-20T15:05:34Z"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:10:28Z",
+          "event": "head_ref_deleted",
+          "id": 31484324442
+        }
+      ],
+      "number": 6,
+      "reactions": []
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-07-21T00:01:27Z",
+          "event": "committed",
+          "parents": [
+            "138a7aa9b4a26bea33ad52ec51c8631e6f7a0899"
+          ],
+          "sha": "d080d8ffc88a7e5791abb02def77b28c7c850bf3",
+          "tree_sha": "53158cfd8662409507edc42a852ca11927b641d1"
+        },
+        {
+          "commit_time": "2026-07-21T00:01:29Z",
+          "event": "committed",
+          "parents": [
+            "138a7aa9b4a26bea33ad52ec51c8631e6f7a0899"
+          ],
+          "sha": "af87e2daf02aaf7c5ba4429575115cd6a89947e2",
+          "tree_sha": "24f94bf21173312b05f6376d7ea14579d1ebce31"
+        },
+        {
+          "commit_time": "2026-09-20T15:04:11Z",
+          "event": "committed",
+          "parents": [
+            "2ab93ab2b2e24fc4ecdf9bc8fbe1b4f0b45244fe",
+            "af87e2daf02aaf7c5ba4429575115cd6a89947e2"
+          ],
+          "sha": "c23b5a5d6a85640f356eb233c8b4d655e0d5ab1c",
+          "tree_sha": "3aed86e6ccff4018dbc351c99a7afb75ff8d2483"
+        },
+        {
+          "commit_time": "2026-09-20T15:04:11Z",
+          "event": "committed",
+          "parents": [
+            "c23b5a5d6a85640f356eb233c8b4d655e0d5ab1c",
+            "d080d8ffc88a7e5791abb02def77b28c7c850bf3"
+          ],
+          "sha": "928f4776b44707c50721c7c62c60142086670114",
+          "tree_sha": "99ec4d85293e8175003fd1f956cd497de4501169"
+        },
+        {
+          "actor": "chatgpt-codex-connector[bot]",
+          "created_at": "2026-09-20T15:05:45Z",
+          "event": "commented",
+          "id": 5750616145,
+          "updated_at": "2026-09-20T15:06:51Z",
+          "user": "chatgpt-codex-connector[bot]"
+        },
+        {
+          "actor": "codex",
+          "created_at": "2026-09-20T15:05:47Z",
+          "event": "mentioned",
+          "id": 31484217686
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "47a127b292bf1f2e7efe9e1853c92cb4a33a831e",
+          "created_at": "2026-09-20T15:06:15Z",
+          "event": "merged",
+          "id": 31484228082
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:06:15Z",
+          "event": "closed",
+          "id": 31484228119
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-09-20T15:10:32Z",
+          "event": "head_ref_deleted",
+          "id": 31484325943
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-10T20:21:18Z",
+          "cross_reference": {
+            "number": 4,
+            "state": "closed",
+            "url": "https://github.com/OKHP3/askjamie-brg12-mathews-archery/issues/4"
+          },
+          "event": "cross-referenced",
+          "updated_at": "2026-10-10T20:21:18Z"
+        }
+      ],
+      "number": 7,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2026-09-20T15:06:53Z",
+          "id": 515625854
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-10-16T21:52:11Z",
+          "event": "committed",
+          "parents": [
+            "491f0260c96f430b39990f1885885eb2b2fb950c"
+          ],
+          "sha": "9d3ef56c25d57ada9edad6e71b631482cd7947b9",
+          "tree_sha": "97bb180b1c37e6f613678da2199836987c5afb01"
+        },
+        {
+          "commit_time": "2026-10-16T22:23:56Z",
+          "event": "committed",
+          "parents": [
+            "9d3ef56c25d57ada9edad6e71b631482cd7947b9"
+          ],
+          "sha": "164ddbab0aef1f15f3fe1f810018c02cb1cfd309",
+          "tree_sha": "e536c4fbb4b7bba0b4ddb30ee811df71ec56151f"
+        },
+        {
+          "commit_time": "2026-10-16T22:44:38Z",
+          "event": "committed",
+          "parents": [
+            "164ddbab0aef1f15f3fe1f810018c02cb1cfd309"
+          ],
+          "sha": "dc41d6a76e5b25c2a315dbbe14950d07f2b7711b",
+          "tree_sha": "5249e3d8e24e315f763dcf2b0c6a43668ad13155"
+        },
+        {
+          "commit_time": "2026-10-16T23:01:31Z",
+          "event": "committed",
+          "parents": [
+            "dc41d6a76e5b25c2a315dbbe14950d07f2b7711b"
+          ],
+          "sha": "f4a6ba2c09f1f50f3afac742dc18c7f3cfcc834a",
+          "tree_sha": "190577e6c0c11381e234bdd7df84ed5864e90f66"
+        },
+        {
+          "commit_time": "2026-10-16T23:52:22Z",
+          "event": "committed",
+          "parents": [
+            "f4a6ba2c09f1f50f3afac742dc18c7f3cfcc834a"
+          ],
+          "sha": "97f8f60ce3b4a26d03693fd5e65a0192d023b673",
+          "tree_sha": "54e8ba459e0db302b42a6df79cd7c957e85fd312"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-16T23:52:42Z",
+          "event": "renamed",
+          "id": 33492477247,
+          "rename": {
+            "from": "Preserve reviewed BRG12 Project harvest and portable corpus",
+            "to": "Retain BRG12 corpus and complete observed expansion research"
+          }
+        },
+        {
+          "commit_time": "2026-10-16T23:52:58Z",
+          "event": "committed",
+          "parents": [
+            "97f8f60ce3b4a26d03693fd5e65a0192d023b673"
+          ],
+          "sha": "bc96a60f595fca83673c3ed7f3a78d99649be4d9",
+          "tree_sha": "db96e6986ac9361897dd9bcd6ed9858abc2c410c"
+        },
+        {
+          "commit_time": "2026-10-17T00:01:53Z",
+          "event": "committed",
+          "parents": [
+            "bc96a60f595fca83673c3ed7f3a78d99649be4d9"
+          ],
+          "sha": "a2e9a82b612fb5f470742343d8856e4b222fcb0a",
+          "tree_sha": "1a87a27634fc375d1f04f31562b461fdae2136fc"
+        },
+        {
+          "commit_time": "2026-10-17T05:19:58Z",
+          "event": "committed",
+          "parents": [
+            "a2e9a82b612fb5f470742343d8856e4b222fcb0a"
+          ],
+          "sha": "45b2daf067870ce0db9f5f7bb73a38371d8bb75d",
+          "tree_sha": "b576a63cd6293ef1187a5a91a71cfd1fee00bc57"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-17T05:20:28Z",
+          "event": "renamed",
+          "id": 33504823005,
+          "rename": {
+            "from": "Retain BRG12 corpus and complete observed expansion research",
+            "to": "Retain BRG12 corpus, expansions and original methodology"
+          }
+        },
+        {
+          "commit_time": "2026-10-17T05:44:33Z",
+          "event": "committed",
+          "parents": [
+            "45b2daf067870ce0db9f5f7bb73a38371d8bb75d"
+          ],
+          "sha": "c1f203292ebe7132f237fce357d3c29b84b31624",
+          "tree_sha": "98323309d587fea903fde3bd2f243cf6ca2523f0"
+        },
+        {
+          "commit_time": "2026-10-22T10:58:16Z",
+          "event": "committed",
+          "parents": [
+            "c1f203292ebe7132f237fce357d3c29b84b31624"
+          ],
+          "sha": "36a5cac6cfced006d00768a4edf42a8b1f08df44",
+          "tree_sha": "c8fd951f75256ec8a6af5bdc0c7b7d008ae30a8a"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-22T10:58:18Z",
+          "event": "renamed",
+          "id": 33941475180,
+          "rename": {
+            "from": "Retain BRG12 corpus, expansions and original methodology",
+            "to": "Preserve BRG12 harvest artifacts and record source recovery blockers"
+          }
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-22T10:58:20Z",
+          "event": "ready_for_review",
+          "id": 33941477168
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-22T10:58:21Z",
+          "event": "review_requested",
+          "id": 33941478519,
+          "requested_reviewer": "Copilot",
+          "review_requester": "OKHP3"
+        },
+        {
+          "actor": "chatgpt-codex-connector[bot]",
+          "created_at": "2026-10-22T10:58:29Z",
+          "event": "commented",
+          "id": 6339083289,
+          "updated_at": "2026-10-22T10:59:20Z",
+          "user": "chatgpt-codex-connector[bot]"
+        },
+        {
+          "actor": "codex",
+          "created_at": "2026-10-22T10:58:30Z",
+          "event": "mentioned",
+          "id": 33941490028
+        },
+        {
+          "actor": "OKHP3",
+          "commit_id": "fa39f6d25c3280d800710872080995378fad7f67",
+          "created_at": "2026-10-22T10:58:38Z",
+          "event": "merged",
+          "id": 33941500567
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-22T10:58:38Z",
+          "event": "closed",
+          "id": 33941500714
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-22T10:58:54Z",
+          "event": "copilot_work_started",
+          "id": 33941521155
+        },
+        {
+          "commit_id": "36a5cac6cfced006d00768a4edf42a8b1f08df44",
+          "event": "reviewed",
+          "id": 5613156038,
+          "state": "commented",
+          "submitted_at": "2026-10-22T11:03:44Z",
+          "updated_at": "2026-10-22T11:03:44Z",
+          "user": "Copilot"
+        }
+      ],
+      "number": 8,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2026-10-22T10:59:23Z",
+          "id": 588557147
+        }
+      ]
+    },
+    {
+      "events": [
+        {
+          "commit_time": "2026-10-27T01:51:53Z",
+          "event": "committed",
+          "parents": [
+            "fa39f6d25c3280d800710872080995378fad7f67"
+          ],
+          "sha": "1606f874642ebce2ed9e743676be8b24ab315586",
+          "tree_sha": "a53467549d2eb0cdf37dbfa07e5b8d2cd35864b1"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-27T02:11:00Z",
+          "event": "review_requested",
+          "id": 34323667394,
+          "requested_reviewer": "Copilot",
+          "review_requester": "OKHP3"
+        },
+        {
+          "actor": "chatgpt-codex-connector[bot]",
+          "created_at": "2026-10-27T02:11:07Z",
+          "event": "commented",
+          "id": 6432014770,
+          "updated_at": "2026-10-27T02:12:25Z",
+          "user": "chatgpt-codex-connector[bot]"
+        },
+        {
+          "actor": "codex",
+          "created_at": "2026-10-27T02:11:09Z",
+          "event": "mentioned",
+          "id": 34323675213
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-27T02:11:32Z",
+          "event": "copilot_work_started",
+          "id": 34323695683
+        },
+        {
+          "commit_time": "2026-10-27T02:12:18Z",
+          "event": "committed",
+          "parents": [
+            "1606f874642ebce2ed9e743676be8b24ab315586"
+          ],
+          "sha": "257caaa2e4661e43749ca0c9212a04b20fc678ca",
+          "tree_sha": "9d0594fda80c611e3afd3b89f088220ed1b3b394"
+        },
+        {
+          "commit_id": "1606f874642ebce2ed9e743676be8b24ab315586",
+          "event": "reviewed",
+          "id": 5661477088,
+          "state": "commented",
+          "submitted_at": "2026-10-27T02:15:27Z",
+          "updated_at": "2026-10-27T02:15:27Z",
+          "user": "Copilot"
+        },
+        {
+          "actor": "OKHP3",
+          "created_at": "2026-10-27T04:26:44Z",
+          "event": "closed",
+          "id": 34330441097
+        }
+      ],
+      "number": 9,
+      "reactions": [
+        {
+          "author": "chatgpt-codex-connector[bot]",
+          "content": "+1",
+          "created_at": "2026-10-27T02:12:27Z",
+          "id": 600469971
+        }
+      ]
+    }
+  ],
+  "redactions": {
+    "source-specific field held": 1
+  },
+  "source_repository": "OKHP3/askjamie-brg12-mathews-archery"
+}
