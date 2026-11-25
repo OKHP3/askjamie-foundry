@@ -1,5 +1,7 @@
 # BrandGuard
 
+[Original GPT configuration and starters](origin/gpt-config/2026-11-24/config.json) · [Hosted plugin and restored knowledge files](../../docs/migrations/askjamie-gpt-plugin-inventory.md#hosted-release-files)
+
 Sources for the BrandGuard capability family.
 
 - [Builders FirstSource](builders-firstsource/README.md)

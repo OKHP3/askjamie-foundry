@@ -1,5 +1,7 @@
 # Professional Portfolio
 
+[Original GPT configuration and starters](origin/gpt-config/2026-11-24/config.json) · [Hosted plugin and restored knowledge files](../../docs/migrations/askjamie-gpt-plugin-inventory.md#hosted-release-files)
+
 Public child capability of AskJamie FoundRy.
 
 Help solo founders and small organizations present their services, methods,

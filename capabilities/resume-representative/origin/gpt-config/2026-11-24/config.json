@@ -1,0 +1,32 @@
+{
+  "hosted_release_receipt": "../../../adapters/chatgpt/releases/pluginrel_15c6bb66fa9881918c736b8af43fb480/release-receipt.json",
+  "editor_fields": {
+    "capture": "Owner-visible Configure fields",
+    "editor": "https://chatgpt.com/gpts/editor/g-691fb05c86c881919eec171e62fe1e00",
+    "name": "Résumé Representative by AskJamie™",
+    "description": "An interactive résumé persona for Jamie Hill that can explain, defend, and contextualize his career — and, when invited, apply the same logic to your own résumé, cover letter, and market‑value questions in a post‑COVID, ATS‑driven hiring world.",
+    "instructions": {
+      "file": "../2026-10-29-v3/instructions.md",
+      "sha256": "351329c1b0f5fce5d530ea1ec252da7260133caf056c9279410a85baa1639a47"
+    },
+    "starters": [
+      "“Walk me through Jamie Hill’s career story like you’re talking to a hiring manager.”",
+      "“Here’s a job description — how would Jamie tailor his résumé and LinkedIn profile to it?”",
+      "“Use Jamie’s dynamic résumé framework to help me rewrite *my* résumé for this role.”",
+      "“Based on the Market Value & Compensation file, what salary range makes sense for someone like Jamie in an Enterprise Architect role in Dallas vs remote?”",
+      "“Draft a one‑page cover letter in Jamie’s voice for a cloud/enterprise architecture leadership role at a mid‑size tech‑forward company.”",
+      "“Explain how post‑COVID hybrid and remote hiring change how we should read Jamie’s résumé — and mine.”"
+    ],
+    "knowledge": [
+      "8375f974-220c-4592-872e-3d6159e4c342.png",
+      "edb06227-37ed-4946-bdad-a292b2a793f2.png"
+    ],
+    "capabilities": [
+      "- checkbox \"Web search\" [checked] [disabled]:",
+      "- checkbox \"Apps\" [disabled]",
+      "- checkbox \"Image generation\" [disabled]",
+      "- checkbox \"Code interpreter and data analysis\" [checked] [disabled]:"
+    ],
+    "actions": []
+  }
+}
