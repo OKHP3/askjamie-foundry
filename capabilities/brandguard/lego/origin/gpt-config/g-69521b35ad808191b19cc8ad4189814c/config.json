@@ -52,5 +52,6 @@
       "🛡️ Review this copy for brand/risk issues: [paste text]",
       "📩 How do I contact this GPT's builder/support?"
     ]
-  }
+  },
+  "hosted_release_receipt": "../../chatgpt-releases/pluginrel_c2b8bd0601ec8191b7c472dc0e3b5df6/release-receipt.json"
 }

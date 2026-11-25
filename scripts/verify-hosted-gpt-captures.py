@@ -1,6 +1,7 @@
 """Verify the core AskJamie editor capture and the optional BrandGuard fork captures."""
 
 import argparse
+from collections import Counter
 import hashlib
 import io
 import json
@@ -38,9 +39,12 @@ def verified_release_files(revision, code, receipt_path):
     verify(len(archive) == receipt["archive_bytes"], f"{code} archive size")
     verify(hashlib.sha256(archive).hexdigest() == receipt["archive_sha256"], f"{code} archive digest")
     with tarfile.open(fileobj=io.BytesIO(archive), mode="r:gz") as package:
-        files = {member.name: package.extractfile(member).read() for member in package if member.isfile()}
+        members = [member for member in package if member.isfile()]
+        files = {member.name: package.extractfile(member).read() for member in members}
+        verify(len(files) == len(members), f"{code} unique archive member paths")
     files[COMPATIBILITY_MANIFEST] = git_blob(revision, f"{release}/{COMPATIBILITY_MANIFEST}")
     expected = {item["path"]: item for item in receipt["files"]}
+    verify(len(expected) == len(receipt["files"]), f"{code} unique receipt paths")
     verify(files.keys() == expected.keys(), f"{code} release paths")
     for path, data in files.items():
         verify(len(data) == expected[path]["bytes"], f"{code} {path} size")
@@ -79,11 +83,35 @@ def verify_capture(revision, code, slug):
     return fields
 
 
+def verify_fork_release(revision, folder, ident, record, instructions):
+    receipt_path = posixpath.normpath(posixpath.join(folder, record["hosted_release_receipt"]))
+    release_dir = posixpath.dirname(receipt_path)
+    comparison = json.loads(git_blob(revision, f"{release_dir}/editor-comparison.json"))
+    receipt = json.loads(git_blob(revision, receipt_path))
+    fields = record["editor_fields"]
+    verify(comparison["source_editor"] == fields["editor"], f"{ident} editor and release pairing")
+    verify(comparison["source_capture_sha256"] == FORK_EDITOR_DIGEST, f"{ident} editor evidence digest")
+    verify(comparison["release_id"] == receipt["release"]["release_id"] == posixpath.basename(release_dir), f"{ident} release identity")
+    files = verified_release_files(revision, ident, receipt_path)
+    header, separator, body = files[NATIVE_SKILL].partition(b"\n---\n\n")
+    verify(header.startswith(b"---\n") and separator and body == instructions, f"{ident} native skill body")
+    manifest = json.loads(files["plugin.json"])
+    interface = manifest["extensions"]["com.openai"]["interface"]
+    verify(interface["displayName"] == fields["name"] and manifest["description"] == fields["description"], f"{ident} identity")
+    prompts = interface["defaultPrompt"]
+    verify(prompts == [s[:128] for s in fields["starters"][:3]], f"{ident} hosted starter presentations")
+    index = json.loads(files["skills/instructions/lookup/knowledge-index.json"])["files"]
+    verify(Counter(item["name"] for item in index) == Counter(fields["knowledge"]), f"{ident} knowledge filenames and counts")
+    verify(all(f"skills/instructions/{item['path']}" in files for item in index), f"{ident} knowledge references")
+    return len(files)
+
+
 def verify_brandguard_forks(revision):
     family = "capabilities/brandguard"
     tracked = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "-z", revision, family])
     pattern = re.compile(rf"({family}/[^/]+)/origin/gpt-config/(g-[a-f0-9]{{32}})/config\.json")
     entries = {}
+    release_totals = []
     for path in tracked.decode("utf-8").split("\0"):
         route = pattern.fullmatch(path)
         if not route:
@@ -99,6 +127,8 @@ def verify_brandguard_forks(revision):
         prompt = fields["instructions"]
         instructions = git_blob(revision, posixpath.join(folder, prompt["file"]))
         verify(hashlib.sha256(instructions).hexdigest() == prompt["sha256"], f"{ident} source instructions")
+        if "hosted_release_receipt" in record:
+            release_totals.append(verify_fork_release(revision, folder, ident, record, instructions))
         fields["instructions"] = instructions.decode("utf-8")
         fields["starters"] = "\n".join(fields["starters"])
         order = record["source_order"]
@@ -113,6 +143,7 @@ def verify_brandguard_forks(revision):
     raw = json.dumps(source, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     verify(hashlib.sha256(raw).hexdigest() == FORK_EDITOR_DIGEST, "BrandGuard fork editor capture digest")
     print(f"Verified {len(entries)} BrandGuard configurations and the {len(raw):,}-byte editor capture: {FORK_EDITOR_DIGEST}")
+    print(f"Verified {len(release_totals)} BrandGuard releases containing {sum(release_totals)} files")
 
 
 def main():

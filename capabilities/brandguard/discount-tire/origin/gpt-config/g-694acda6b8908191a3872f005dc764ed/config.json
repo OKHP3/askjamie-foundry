@@ -28,5 +28,6 @@
       "“Using SCAMPER, mutate this core brand story into 5 campaign directions without breaking trust.”",
       "“Outline the knowledge/RAG schema we’d need to back a serious BrandGuard GPT for this brand.”"
     ]
-  }
+  },
+  "hosted_release_receipt": "../../chatgpt-releases/pluginrel_40aa4fa9b5c48191a831ddf2e290949a/release-receipt.json"
 }
