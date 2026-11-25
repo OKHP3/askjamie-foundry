@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [LVMH](https://chatgpt.com/g/g-694adbdf17548191beedb2b973071bfa) · [Original editor configuration](origin/gpt-config/g-694adbdf17548191beedb2b973071bfa/config.json)
+- [LVMH](https://chatgpt.com/g/g-694adbdf17548191beedb2b973071bfa) · [Original editor configuration](origin/gpt-config/g-694adbdf17548191beedb2b973071bfa/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_a07f7f9040a881919e06bd1c3aed83b8) · [Release files](origin/chatgpt-releases/pluginrel_642c0e47919081918b924a610db50019/)
 
 ## Transferred repository
 

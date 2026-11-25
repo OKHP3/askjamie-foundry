@@ -1,0 +1,58 @@
+{
+  "source_capture_sha256": "3b70e0aa6170eee86746b0480a84f0a892b7b3aa9d64b58ba112375e330f7e0c",
+  "source_editor": "https://chatgpt.com/gpts/editor/g-694adbdf17548191beedb2b973071bfa",
+  "display_name": "LVMH",
+  "release_id": "pluginrel_642c0e47919081918b924a610db50019",
+  "verified_skill_body_equal": true,
+  "display_name_equal": true,
+  "description_equal": true,
+  "starter_count": 6,
+  "native_starter_presentations": 3,
+  "starters_sha256": "7898e36515a96c5ca06cf89e005a80b8aa9037c48fca69d3938e4b86153d06e1",
+  "starter_comparison": [
+    {
+      "ordinal": 1,
+      "source_chars": 120,
+      "rendered_chars": 120,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 2,
+      "source_chars": 87,
+      "rendered_chars": 87,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 3,
+      "source_chars": 99,
+      "rendered_chars": 99,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 4,
+      "source_chars": 101,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 5,
+      "source_chars": 96,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 6,
+      "source_chars": 93,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    }
+  ],
+  "action_count": 0,
+  "source_upload_occurrences": 18,
+  "hosted_index_occurrences": 18,
+  "filename_order_equal": false,
+  "filename_multiset_equal": true,
+  "source_filenames_missing": [],
+  "hosted_filenames_extra": [],
+  "duplicate_name_groups": []
+}

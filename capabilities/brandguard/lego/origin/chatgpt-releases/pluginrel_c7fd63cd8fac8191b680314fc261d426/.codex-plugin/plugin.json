@@ -1,0 +1,28 @@
+{
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Other",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [
+      "\ud83e\uddf1 What's LEGO's mission & values in plain English?",
+      "\ud83c\udf81 Recommend a LEGO set for a 7-year-old who loves space.",
+      "\u2699\ufe0f Technic vs City vs Friends: best for an 11-year-old?"
+    ],
+    "developerName": "cardholder",
+    "displayName": "Brick Toys \u2014 Billund in 1932",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "LEGO: OKHP\u00b3 BrandGuard is a not an official LEGO channel. It helps users understand LEGO\u2019s mission (\u201cto inspire and develop the builders of tomorrow\u201d) and keeps outputs aligned to Imagination, Creativity, Fun, Learning, Caring, and Quality.",
+    "shortDescription": "LEGO: OKHP\u00b3 BrandGuard is a not an official LEGO channel. It helps users understand LEGO\u2019s mission (\u201cto inspire and develop the builders of tomorrow\u201d) and keeps outputs aligned to Imagination, Creativity, Fun, Learning, Caring, and Quality."
+  },
+  "name": "gpt-fb19437fd4b0bcc13834ee51d153e8db",
+  "version": "0.13.1+bundle.63916098862a28bc5582f714caa10f23",
+  "description": "LEGO: OKHP\u00b3 BrandGuard is a not an official LEGO channel. It helps users understand LEGO\u2019s mission (\u201cto inspire and develop the builders of tomorrow\u201d) and keeps outputs aligned to Imagination, Creativity, Fun, Learning, Caring, and Quality.",
+  "author": {
+    "name": "cardholder",
+    "url": "https://overkillhill.com"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

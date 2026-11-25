@@ -5,7 +5,7 @@
 ## BrandGuard GPT forks
 
 - [LEGO](https://chatgpt.com/g/g-69521b35ad808191b19cc8ad4189814c) · [Original editor configuration](origin/gpt-config/g-69521b35ad808191b19cc8ad4189814c/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_d5584ab2f4108191b64ab7a2d77e9465) · [Release files](origin/chatgpt-releases/pluginrel_c2b8bd0601ec8191b7c472dc0e3b5df6/)
-- [Brick Toys — Billund in 1932](https://chatgpt.com/g/g-694adab7e534819197ebfce0f5862c21) · [Original editor configuration](origin/gpt-config/g-694adab7e534819197ebfce0f5862c21/config.json)
+- [Brick Toys — Billund in 1932](https://chatgpt.com/g/g-694adab7e534819197ebfce0f5862c21) · [Original editor configuration](origin/gpt-config/g-694adab7e534819197ebfce0f5862c21/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_7b17611a3938819189d6bec7f8721e77) · [Release files](origin/chatgpt-releases/pluginrel_c7fd63cd8fac8191b680314fc261d426/)
 
 ## Transferred repository
 

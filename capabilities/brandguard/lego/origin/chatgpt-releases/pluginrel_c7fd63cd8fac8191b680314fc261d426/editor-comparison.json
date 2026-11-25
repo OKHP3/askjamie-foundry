@@ -1,0 +1,112 @@
+{
+  "source_capture_sha256": "3b70e0aa6170eee86746b0480a84f0a892b7b3aa9d64b58ba112375e330f7e0c",
+  "source_editor": "https://chatgpt.com/gpts/editor/g-694adab7e534819197ebfce0f5862c21",
+  "display_name": "Brick Toys \u2014 Billund in 1932",
+  "release_id": "pluginrel_c7fd63cd8fac8191b680314fc261d426",
+  "verified_skill_body_equal": true,
+  "display_name_equal": true,
+  "description_equal": true,
+  "starter_count": 12,
+  "native_starter_presentations": 3,
+  "starters_sha256": "af2c835c465f87ab068343f312a43e6bf6185ffc12fcd9db2fceefc24a9f4da3",
+  "starter_comparison": [
+    {
+      "ordinal": 1,
+      "source_chars": 50,
+      "rendered_chars": 50,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 2,
+      "source_chars": 56,
+      "rendered_chars": 56,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 3,
+      "source_chars": 55,
+      "rendered_chars": 55,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 4,
+      "source_chars": 53,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 5,
+      "source_chars": 46,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 6,
+      "source_chars": 59,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 7,
+      "source_chars": 58,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 8,
+      "source_chars": 55,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 9,
+      "source_chars": 55,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 10,
+      "source_chars": 61,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 11,
+      "source_chars": 55,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 12,
+      "source_chars": 46,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    }
+  ],
+  "action_count": 0,
+  "source_upload_occurrences": 19,
+  "hosted_index_occurrences": 19,
+  "filename_order_equal": false,
+  "filename_multiset_equal": true,
+  "source_filenames_missing": [],
+  "hosted_filenames_extra": [],
+  "duplicate_name_groups": [
+    {
+      "filename": "BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "source_occurrences": 2,
+      "hosted_entries": [
+        {
+          "path": "skills/instructions/references/BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+          "sha256": "1612870f3c9b5285fdc52fc1917b649d03c39fd9b41003981ab1a86b5714df9d",
+          "bytes": 43982
+        },
+        {
+          "path": "skills/instructions/references/BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d_1.docx",
+          "sha256": "1612870f3c9b5285fdc52fc1917b649d03c39fd9b41003981ab1a86b5714df9d",
+          "bytes": 43982
+        }
+      ],
+      "independent_editor_file_digests": null
+    }
+  ]
+}

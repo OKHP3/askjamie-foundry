@@ -83,7 +83,7 @@ def verify_capture(revision, code, slug):
     return fields
 
 
-def verify_fork_release(revision, folder, ident, record, instructions):
+def verify_fork_release(revision, folder, ident, record, instructions, tracked):
     receipt_path = posixpath.normpath(posixpath.join(folder, record["hosted_release_receipt"]))
     release_dir = posixpath.dirname(receipt_path)
     comparison = json.loads(git_blob(revision, f"{release_dir}/editor-comparison.json"))
@@ -103,16 +103,32 @@ def verify_fork_release(revision, folder, ident, record, instructions):
     index = json.loads(files["skills/instructions/lookup/knowledge-index.json"])["files"]
     verify(Counter(item["name"] for item in index) == Counter(fields["knowledge"]), f"{ident} knowledge filenames and counts")
     verify(all(f"skills/instructions/{item['path']}" in files for item in index), f"{ident} knowledge references")
+    comparison_path = f"{release_dir}/public-source-comparison.json"
+    if comparison_path in tracked:
+        matches = json.loads(git_blob(revision, comparison_path))["blobs"]
+        verify(Counter(item["name"] for item in matches) == Counter(fields["knowledge"]), f"{ident} source comparison coverage")
+        for item in matches:
+            blob = files[item["hosted_path"]]
+            verify(hashlib.sha256(blob).hexdigest() == item["sha256"], f"{ident} comparison hash for {item['name']}")
+            source_path = item["current_public_source_path"]
+            if source_path:
+                git_hash = hashlib.sha1(f"blob {len(blob)}\0".encode() + blob).hexdigest()
+                verify(git_hash == item["git_blob"] == tracked.get(source_path), f"{ident} public source {source_path}")
     return len(files)
 
 
 def verify_brandguard_forks(revision):
     family = "capabilities/brandguard"
-    tracked = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "-z", revision, family])
+    tree = subprocess.check_output(["git", "ls-tree", "-rz", revision, family]).decode("utf-8")
+    tracked = {}
+    for entry in tree.split("\0"):
+        if entry:
+            metadata, path = entry.split("\t", 1)
+            tracked[path] = metadata.split()[2]
     pattern = re.compile(rf"({family}/[^/]+)/origin/gpt-config/(g-[a-f0-9]{{32}})/config\.json")
     entries = {}
     release_totals = []
-    for path in tracked.decode("utf-8").split("\0"):
+    for path in tracked:
         route = pattern.fullmatch(path)
         if not route:
             continue
@@ -128,7 +144,7 @@ def verify_brandguard_forks(revision):
         instructions = git_blob(revision, posixpath.join(folder, prompt["file"]))
         verify(hashlib.sha256(instructions).hexdigest() == prompt["sha256"], f"{ident} source instructions")
         if "hosted_release_receipt" in record:
-            release_totals.append(verify_fork_release(revision, folder, ident, record, instructions))
+            release_totals.append(verify_fork_release(revision, folder, ident, record, instructions, tracked))
         fields["instructions"] = instructions.decode("utf-8")
         fields["starters"] = "\n".join(fields["starters"])
         order = record["source_order"]

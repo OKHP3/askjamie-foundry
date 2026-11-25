@@ -1,0 +1,131 @@
+{
+  "landed_source_revision": "30bffa6fd9f05b534712fa295e5e3da08f715599",
+  "blobs": [
+    {
+      "name": "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "hosted_path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "git_blob": "6d5f4067ab54d10e0c5d6bc0bd38e6b82c3776c3",
+      "current_public_source_path": null
+    },
+    {
+      "name": "BRG03-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "sha256": "fdd759d05a41d0afb1aee361ceb3cad72c20feda5ec1bd02185bf25b64cf7638",
+      "git_blob": "05c146f186fb88631471253bcb2427aafc3cff28",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW01-Founding-and-Corporate-History-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "sha256": "0dc63d16f83e6abf497fca93f67700f8e28267b6d123be79bcc78992dbe56e05",
+      "git_blob": "6437ca3c70fdf732af684a694fc44a0d2d84d3a6",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "sha256": "7cb5277e7e7f4f58e261fbeae1f571e5e3aa3100b14011dff23200c09367854c",
+      "git_blob": "4c6bd7f1b7685c8acc8cbb5dbe7d8b11fe73ad9b",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW03-Product-Lines-or-Services-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "sha256": "1e6ec85d1abda21ab440ec82e782fae136ee32d9a390f5fb3686330b4abe0f49",
+      "git_blob": "e52ca01e3e252f052e6ac248690f4dfbbd2d89f4",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "sha256": "ec7428b885266a866f842c75eefe66a52c474b3f89485b5a2665f5cc914064ee",
+      "git_blob": "67b9d1196490ebe466ea70cfa0b0e444e5f926f4",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "sha256": "b83574f7e7556fd5ea92c247276429bdd0857ede7766a82feb4f636b2f9a14be",
+      "git_blob": "b17e69f8bb1397d99ac5b03f2d7cc630e55d634e",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "sha256": "0123526df00538f3122d61ed7ce34c0bcde4bc206794d1485141e10be1819faa",
+      "git_blob": "6972b2e86970e26a5fc8f101f0405db53b6b6b94",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW07-Innovations-and-Technologies-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "sha256": "7fffbc7ae85b4d0beb6612f81b4a8e1ee489fbf28cd060669eff68dac4cee129",
+      "git_blob": "116c2996d62b7aec12275f84eaca31bf20c708d3",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW08-Partnerships-and-Acquisitions-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "sha256": "2a2cee14a965d1b1379be552214adb39fc3293caf4a3003838be96d58f5dec78",
+      "git_blob": "14e9f6777d77a6677957b565c1f8077d91667096",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW09-Marketing-and-Slogans-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "sha256": "215506d7390b6c682e97bec4614d5f81be40b492cffb259684047ed065877d28",
+      "git_blob": "ce45a4ca38a1f305a664bef291f414b0573a0d46",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "sha256": "6447423256b99dde747aaf08a706f90d4c56485c9ee9573f8fbf65c4be186ea8",
+      "git_blob": "245aaacb3c1d5c3a2fdc55426375d584cf38788b",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "sha256": "f690eebe844d99b4a97ad0aa3257ceef2e634e5cdb40734afa74f061532c1227",
+      "git_blob": "128b7d232ae012c56c9820329a49e970b2e97c4a",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "sha256": "7d243875fca9ff24531e1ff8497e75e81ce9534aa60ffd2f2ab7f0b5b8025af8",
+      "git_blob": "956c3f79dd9124cdc9a19b194791d34c53f6db8d",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "sha256": "261fdc2f348607516aec3655bf29a8c45c5896eced4043682686d7e866a4d6cc",
+      "git_blob": "41eddc02913e14ca43d95af958702727d34d0302",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "sha256": "0bc813288b35bcb450a494f2565f05774e7738f487f21ee4cebc4e98398f3b35",
+      "git_blob": "4562dc6b3086ea8a894b63023fa6a7a8fac9b4d8",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "sha256": "4765b373f5807fe4549d5f5c8446548b8367ccf1e2a6f42853622275536144bf",
+      "git_blob": "c05e09994bac4a3373ce3099bb68255d34c41e18",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx"
+    },
+    {
+      "name": "BRG03-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG03-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "sha256": "46941c7a4a5ea1f08956ec155601ca4675d24e59287bc73b7859a81b44968c0f",
+      "git_blob": "5187f7d82982197dd159d641286658390f471cd8",
+      "current_public_source_path": "capabilities/brandguard/brooks-running/origin/repository/knowledge/BRG03-KNOW17-Reputational-Liability-Inoculation-v01d.docx"
+    }
+  ]
+}
