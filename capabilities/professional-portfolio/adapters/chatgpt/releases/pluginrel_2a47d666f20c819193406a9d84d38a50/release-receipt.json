@@ -1,0 +1,94 @@
+{
+  "release": {
+    "release_id": "pluginrel_2a47d666f20c819193406a9d84d38a50",
+    "version": "0.3.1+bundle.5364199629c1672ed404b95f73c9dd26",
+    "created_at": "2026-11-06T22:22:58.947752Z",
+    "is_current": true,
+    "creator_account_user_id": null
+  },
+  "plugin": {
+    "plugin_id": "plugin_66eac919e61881919eac8cab7b0e9e53",
+    "name": "gpt-8744a712e370e19a62281d7acc5a9bc1",
+    "description": "An AI portfolio architect and brand ambassador that helps solo founders and small companies present themselves like a sharp, credible boutique firm\u2014without faking scale.",
+    "version": "0.3.1+bundle.5364199629c1672ed404b95f73c9dd26",
+    "current_release_id": "pluginrel_2a47d666f20c819193406a9d84d38a50",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  "archive_filename": "package.tar.gz",
+  "archive_sha256": "9a2ab49d88a44162fa34c612c0010f57487d9654c0a3985148dcd661c401182a",
+  "archive_bytes": 614371,
+  "verification": "The pinned owned release archive and file-list interface differed by one compatibility manifest. All regular tar members matched the Creator list by path and size; the list-only manifest was recovered separately as UTF-8. All five hosted text entries were independently compared against the file API.",
+  "files": [
+    {
+      "path": "plugin.json",
+      "bytes": 1688,
+      "sha256": "4a6571d3a3a6cff0db334040c03590c0bdc3e01f7cd365244befc35ad6adbeb8",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "assets/gpt-icon.png",
+      "bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/SKILL.md",
+      "bytes": 7360,
+      "sha256": "b668ce6682ff8c3e11c57d26c988f6fb4aeae4c9cc21ef0d3aa32c6d246e031d",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/agents/openai.yaml",
+      "bytes": 335,
+      "sha256": "69d87684ccfbc4a4f775cde657bab192d877e0b9ea869e6e3c6689233c7e6a12",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/lookup/knowledge-index.json",
+      "bytes": 898,
+      "sha256": "f94a31f1e07e2ca17e007f8fb0e964a958bd0b8c6a0bfce1e16348977c51ecc7",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/5c423c02-f206-4f34-aaf2-3834497c8f4a.png",
+      "bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "bytes": 1581,
+      "sha256": "c7ce3eaced63b09f33ffbde3804f7c650e0c563766d69fc7613c1cec6c0d2915",
+      "recovery": "get_plugin_files; stored beside pinned tar"
+    }
+  ],
+  "packaged_conversation_starters": [
+    "\u201cTurn my one\u2011person consulting practice into a portfolio that feels like a small but serious firm. I\u2019ll paste my current website",
+    "\u201cHere are three projects I\u2019ve done. Turn them into client\u2011ready case studies with problem, approach, and outcomes.\u201d",
+    "\u201cI\u2019m a freelance designer who wants to look like a boutique studio. Rewrite my About and Services pages to match.\u201d"
+  ],
+  "prior_editor_starter_count": 8,
+  "instruction_comparison": {
+    "editor_text_is_exact_byte_subsequence": true,
+    "prior_editor_file": "aj02-instructions-ui.txt",
+    "prior_editor_sha256": "7ed808416bbca681413e1931f8a748c50c25151a4e0569bd578e2d575e75387f",
+    "prior_editor_bytes": 7194,
+    "body_matches_after_normalizing_newlines_outer_whitespace": true,
+    "editor_text_start_byte_in_skill": 166
+  },
+  "knowledge_index": [
+    {
+      "name": "5c423c02-f206-4f34-aaf2-3834497c8f4a.png",
+      "path": "references/5c423c02-f206-4f34-aaf2-3834497c8f4a.png",
+      "packaged_bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "identical_to_packaged_icon": true
+    }
+  ],
+  "limits": [
+    "Knowledge file names are the migrated lookup index names. Identity against owner-editor original binary hashes requires independent evidence.",
+    "Packaged starters are verbatim from plugin.json. October's owner-editor capture reported additional starters.",
+    "Package recovery does not establish retrieval and ChatGPT behavior parity."
+  ]
+}

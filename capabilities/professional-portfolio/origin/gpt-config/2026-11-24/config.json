@@ -1,0 +1,33 @@
+{
+  "hosted_release_receipt": "../../../adapters/chatgpt/releases/pluginrel_2a47d666f20c819193406a9d84d38a50/release-receipt.json",
+  "editor_fields": {
+    "capture": "Owner-visible Configure fields",
+    "editor": "https://chatgpt.com/gpts/editor/g-691fa5845230819199d4ffb89b13e9ab",
+    "name": "Professional Portfolio by AskJamie™",
+    "description": "An AI portfolio architect and brand ambassador that helps solo founders and small companies present themselves like a sharp, credible boutique firm—without faking scale.",
+    "instructions": {
+      "file": "../2026-10-29/instructions.txt",
+      "sha256": "7ed808416bbca681413e1931f8a748c50c25151a4e0569bd578e2d575e75387f"
+    },
+    "starters": [
+      "“Turn my one‑person consulting practice into a portfolio that feels like a small but serious firm. I’ll paste my current website and LinkedIn below.”",
+      "“Here are three projects I’ve done. Turn them into client‑ready case studies with problem, approach, and outcomes.”",
+      "“I’m a freelance designer who wants to look like a boutique studio. Rewrite my About and Services pages to match.”",
+      "“Help me explain why a founder should hire my tiny agency instead of a big agency. I’ll tell you who we serve and what we do.”",
+      "“Take this messy mix of notes, proposals, and DMs and turn it into a clean company overview and ‘How we work’ section.”",
+      "“I’m just starting my solo business. Interview me, then build a first‑draft professional portfolio I can use on my site and in proposals.”",
+      "“Rewrite my current portfolio to emphasize systems, process, and reliability, not just my personal skills.”",
+      "“Compare my current website copy to the portfolio structure you recommend, and show me what’s missing or confusing.”"
+    ],
+    "knowledge": [
+      "5c423c02-f206-4f34-aaf2-3834497c8f4a.png"
+    ],
+    "capabilities": [
+      "- checkbox \"Web search\" [checked] [disabled]:",
+      "- checkbox \"Apps\" [disabled]",
+      "- checkbox \"Image generation\" [checked] [disabled]:",
+      "- checkbox \"Code interpreter and data analysis\" [checked] [disabled]:"
+    ],
+    "actions": []
+  }
+}

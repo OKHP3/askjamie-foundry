@@ -1,0 +1,59 @@
+{
+  "source": "https://github.com/OKHP3/askjamie-foundry/blob/992327d27c20e856249338dfd51946fa82c0ce5a/capabilities/resume-representative/origin/gpt-config/2026-10-29-v3/config.yaml",
+  "source_type": "owner-session GPT configuration capture",
+  "source_file_sha256": "50c57c5ce4c41488dfd15c4203aa06b8a899df264f7b54383462808c77269e65",
+  "starter_count": 6,
+  "starter_comparison": [
+    {
+      "ordinal": 1,
+      "original_or_draft_characters": 84,
+      "release_characters": 84,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 2,
+      "original_or_draft_characters": 90,
+      "release_characters": 90,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 3,
+      "original_or_draft_characters": 84,
+      "release_characters": 84,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 4,
+      "original_or_draft_characters": 154,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    },
+    {
+      "ordinal": 5,
+      "original_or_draft_characters": 136,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    },
+    {
+      "ordinal": 6,
+      "original_or_draft_characters": 102,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    }
+  ],
+  "configured_attachment_evidence": [
+    {
+      "original_name": "8375f974-220c-4592-872e-3d6159e4c342.png",
+      "source_bytes": 304380,
+      "matches_release_index_name": true,
+      "matches_release_byte_count": true
+    },
+    {
+      "original_name": "edb06227-37ed-4946-bdad-a292b2a793f2.png",
+      "source_bytes": 304380,
+      "matches_release_index_name": true,
+      "matches_release_byte_count": true
+    }
+  ],
+  "independent_original_attachment_digests_available": false
+}

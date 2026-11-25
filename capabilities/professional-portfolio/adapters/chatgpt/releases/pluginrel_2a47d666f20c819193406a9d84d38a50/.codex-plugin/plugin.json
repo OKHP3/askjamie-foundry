@@ -1,0 +1,28 @@
+{
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Productivity",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [
+      "\u201cTurn my one\u2011person consulting practice into a portfolio that feels like a small but serious firm. I\u2019ll paste my current website",
+      "\u201cHere are three projects I\u2019ve done. Turn them into client\u2011ready case studies with problem, approach, and outcomes.\u201d",
+      "\u201cI\u2019m a freelance designer who wants to look like a boutique studio. Rewrite my About and Services pages to match.\u201d"
+    ],
+    "developerName": "cardholder",
+    "displayName": "Professional Portfolio by AskJamie\u2122",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "An AI portfolio architect and brand ambassador that helps solo founders and small companies present themselves like a sharp, credible boutique firm\u2014without faking scale.",
+    "shortDescription": "An AI portfolio architect and brand ambassador that helps solo founders and small companies present themselves like a sharp, credible boutique firm\u2014without faking scale."
+  },
+  "name": "gpt-8744a712e370e19a62281d7acc5a9bc1",
+  "version": "0.3.1+bundle.5364199629c1672ed404b95f73c9dd26",
+  "description": "An AI portfolio architect and brand ambassador that helps solo founders and small companies present themselves like a sharp, credible boutique firm\u2014without faking scale.",
+  "author": {
+    "name": "cardholder",
+    "url": "https://overkillhill.com"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

@@ -1,0 +1,23 @@
+gpt_id: g-691fa5845230819199d4ffb89b13e9ab
+observed_on: "2026-10-29"
+source: owner-visible ChatGPT editor
+instructions:
+  file: instructions.txt
+  encoding: UTF-8
+  bytes: 7194
+  sha256: 7ed808416bbca681413e1931f8a748c50c25151a4e0569bd578e2d575e75387f
+  verification: The retained text matched the editor field after restoration of the saved draft.
+starters:
+  populated_count: 8
+  text_capture: Count recorded in the October observation.
+knowledge:
+  displayed_attachments: 1
+  displayed_type: PNG
+  byte_capture: Unavailable in the October observation.
+capabilities:
+  web_search: true
+  canvas: true
+  image_generation: true
+  code_interpreter: true
+recommended_model: No selection displayed.
+actions: []

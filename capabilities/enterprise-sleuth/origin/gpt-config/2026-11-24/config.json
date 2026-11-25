@@ -1,0 +1,33 @@
+{
+  "hosted_release_receipt": "../../chatgpt-releases/pluginrel_0819f4b0db6081918338768bc91816a3/release-receipt.json",
+  "editor_fields": {
+    "capture": "Owner-visible Configure fields",
+    "editor": "https://chatgpt.com/gpts/editor/g-691f9a52f5088191b4f552770ffb5886",
+    "name": "Enterprise Sleuth by AskJamie™",
+    "description": "A detective‑grade enterprise sensemaker that hunts through messy org context, maps structure, and explains what’s really going on — in clear, corporate plain‑speak.",
+    "instructions": {
+      "file": "instructions.md",
+      "sha256": "d770f75b18c8819a10f6feaa67ef17187eee3fa3eb7cb3c5cb56eeb000d2a5e7"
+    },
+    "starters": [
+      "“Here’s a messy folder / SharePoint structure. Help me map the real information architecture and suggest a cleaner version.”",
+      "“Read this policy, this org chart, and these meeting notes. Reconstruct the decision history and identify unresolved questions.”",
+      "“We’re designing a custom GPT for our company. Use your Enterprise Sleuth hat to sketch roles, data sources, risks, and a simple governance model.”",
+      "“Take this slide deck and write the ‘story behind the slides’ so an executive can grasp what’s really going on in 2–3 minutes.”",
+      "“Act as a skeptical but supportive reviewer of this AI initiative. Where are the hidden assumptions, landmines, and missing stakeholders?”",
+      "“I’ll paste some process steps, systems, and teams. Build an organizational map: who owns what, where data flows, and where failure is most likely.”",
+      "“Teach me the six AskJamie capability lenses (CIR, OCE, IKM, CGC, ADO, CCI) using a concrete example from a typical enterprise.”",
+      "“Critique and iterate on the current AskJamie — Enterprise Sleuth instructions. What would you change for v0.2?”"
+    ],
+    "knowledge": [
+      "1bd4646f-162e-4324-85b0-99f5c221fdc3.png"
+    ],
+    "capabilities": [
+      "- checkbox \"Web search\" [checked]:",
+      "- checkbox \"Apps\" [disabled]",
+      "- checkbox \"Image generation\"",
+      "- checkbox \"Code interpreter and data analysis\" [checked]:"
+    ],
+    "actions": []
+  }
+}
