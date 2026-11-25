@@ -1,0 +1,28 @@
+{
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Education & Research",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [
+      "\u201cHere\u2019s a messy folder / SharePoint structure. Help me map the real information architecture and suggest a cleaner version.\u201d",
+      "\u201cRead this policy, this org chart, and these meeting notes. Reconstruct the decision history and identify unresolved questions.\u201d",
+      "\u201cWe\u2019re designing a custom GPT for our company. Use your Enterprise Sleuth hat to sketch roles, data sources, risks, and a simple governance model.\u201d"
+    ],
+    "developerName": "cardholder",
+    "displayName": "Enterprise Sleuth by AskJamie\u2122",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "A detective\u2011grade enterprise sensemaker that hunts through messy org context, maps structure, and explains what\u2019s really going on \u2014 in clear, corporate plain\u2011speak.",
+    "shortDescription": "A detective\u2011grade enterprise sensemaker that hunts through messy org context, maps structure, and explains what\u2019s really going on \u2014 in clear, corporate plain\u2011speak."
+  },
+  "name": "gpt-950f3b6cb3d9aacf51311e79ea9aec90",
+  "version": "0.3.1+bundle.d15680f306f5322227e8cb07e13b38ba",
+  "description": "A detective\u2011grade enterprise sensemaker that hunts through messy org context, maps structure, and explains what\u2019s really going on \u2014 in clear, corporate plain\u2011speak.",
+  "author": {
+    "name": "cardholder",
+    "url": "https://overkillhill.com"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

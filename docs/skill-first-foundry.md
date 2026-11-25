@@ -88,6 +88,8 @@ open for those two capabilities. Their October migration is documented in the
 
 The November 24 repository transfer records appear under the named AJ03, AJ04 and BrandGuard destinations. The optional registry field `public_source_record` identifies the verified legacy files at that path. The capability's storage and graduation fields govern the working product. The [transfer record](migrations/legacy-capability-transfer.md) describes source coverage.
 
+The [AskJamie GPT and plugin inventory](migrations/askjamie-gpt-plugin-inventory.md) identifies the four original GPTs by ID, records their ChatGPT migrations, and links their source captures and verified release files.
+
 Private capabilities use the same relative layout in private storage **outside
 this public checkout**. Permanent-private locks remain permanent.
 

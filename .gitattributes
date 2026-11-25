@@ -3,6 +3,7 @@
 /capabilities/professional-portfolio/origin/repository/** -text -ident -filter
 /capabilities/**/origin/gpt-config/**/instructions.* -text -ident -filter
 /capabilities/**/adapters/chatgpt/releases/**/.codex-plugin/plugin.json -text -ident -filter
+/capabilities/**/origin/chatgpt-releases/**/.codex-plugin/plugin.json -text -ident -filter
 /capabilities/resume-representative/origin/replit/.replit -text -ident -filter
 /capabilities/professional-portfolio/origin/replit/.replit -text -ident -filter
 
