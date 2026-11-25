@@ -8,7 +8,7 @@
 
 ## Transferred repository
 
-496 of 548 tracked files from the source main branch are here in their original form. The [business research and project excerpts](origin/reviewed-extracts/README.md) preserve additional source material. All 195 distinct earlier file versions are indexed below.
+498 of 548 tracked files from the source main branch are here in their original form. The [business research and project excerpts](origin/reviewed-extracts/README.md) preserve additional source material. All 195 distinct earlier file versions are indexed below.
 
 - [Browse the original directory layout](origin/repository/)
 - [Read the source commit, tree identities, and byte counts](origin/source.json)
