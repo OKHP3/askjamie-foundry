@@ -7,5 +7,9 @@
   "source_files": 548,
   "stored_files": 495,
   "stored_bytes": 9889515,
-  "path_mode_size_sha256_digest": "d5225cd7f14711a7025baf88d1e37a8bbf59cf515336d404ef54262debd9d5fc"
+  "path_mode_size_sha256_digest": "d5225cd7f14711a7025baf88d1e37a8bbf59cf515336d404ef54262debd9d5fc",
+  "github_profile": {
+    "description": "Repository for GPT‑BRG12: OKHP³ BrandGuard™ — Mathews Archery. Housing mission, specs, prompts, curated knowledge, tests, packs, web landing content, social media drafts, Ko‑fi sales copy, YouTube scripts and transcripts, release artifacts, and automation for aligned Custom GPT creation across web, Notion, chatbot project, and BrandGuard pages.",
+    "topics": []
+  }
 }

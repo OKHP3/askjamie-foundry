@@ -7,5 +7,10 @@
   "source_files": 254,
   "stored_files": 254,
   "stored_bytes": 3073112,
-  "path_mode_size_sha256_digest": "6bd5dfe6b98947f05f13bfbaf5455edf6e51d085b2a7065b0ba07eec103b3978"
+  "path_mode_size_sha256_digest": "6bd5dfe6b98947f05f13bfbaf5455edf6e51d085b2a7065b0ba07eec103b3978",
+  "github_profile": {
+    "description": "Storage + source-of-truth for GPT-BRG11: Scheels — OKHP³ BrandGuard™. Contains prompts, knowledge packs, eval tests, and the AskJamie lens webpage. Public-source focused; routes users to official SCHEELS (scheels.com). Canonical links in README.",
+    "topics": [],
+    "homepage": "https://askjamie.bot/lens-system/okhp3-brandguard/scheels/index.html"
+  }
 }
