@@ -1,6 +1,7 @@
 # Preserve historical snapshots byte for byte across Windows and POSIX checkouts.
 /capabilities/resume-representative/origin/repository/** -text -ident -filter
 /capabilities/professional-portfolio/origin/repository/** -text -ident -filter
+/capabilities/**/origin/gpt-config/**/instructions.* -text -ident -filter
 /capabilities/resume-representative/origin/replit/.replit -text -ident -filter
 /capabilities/professional-portfolio/origin/replit/.replit -text -ident -filter
 
