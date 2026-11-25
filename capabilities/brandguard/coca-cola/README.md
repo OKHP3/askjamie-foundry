@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [Coca-Cola](https://chatgpt.com/g/g-694adb61d4ec819183d8652bb8d50fe1)
+
 ## Transferred repository
 
 538 of 538 tracked files from the source main branch are here.

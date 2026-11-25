@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [Mathews Archery](https://chatgpt.com/g/g-69544ab093dc8191a1f0d0f901a2ada5)
+
 ## Transferred repository
 
 495 of 548 tracked files from the source main branch are here.

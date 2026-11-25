@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [Discount Tire](https://chatgpt.com/g/g-694acda6b8908191a3872f005dc764ed)
+
 ## Transferred repository
 
 537 of 537 tracked files from the source main branch are here.

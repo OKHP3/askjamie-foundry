@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [Dollar General](https://chatgpt.com/g/g-694ac9b7d9048191b81085d5b270cb79)
+
 ## Transferred repository
 
 545 of 545 tracked files from the source main branch are here.

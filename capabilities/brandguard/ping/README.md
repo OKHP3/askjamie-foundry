@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [PING](https://chatgpt.com/g/g-694add8864c08191a89b1fcb119e956c)
+
 ## Transferred repository
 
 549 of 549 tracked files from the source main branch are here.

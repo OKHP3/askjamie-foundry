@@ -2,7 +2,9 @@
 
 [Original GPT configuration and starters](origin/gpt-config/2026-11-24/config.json) · [Hosted plugin and restored knowledge files](../../docs/migrations/askjamie-gpt-plugin-inventory.md#hosted-release-files)
 
-Sources for the BrandGuard capability family.
+## Organization GPT forks
+
+The owner identified 16 GPTs derived from [OKHP³ BrandGuard™ by AskJamie™](https://chatgpt.com/g/g-691fa3532a588191b5b362f2fc07e8b3). Each organization folder lists its GPTs by their stable ChatGPT IDs. Builders FirstSource has three, LEGO has two, and the other eleven organizations have one each.
 
 - [Builders FirstSource](builders-firstsource/README.md)
 - [LEGO](lego/README.md)
