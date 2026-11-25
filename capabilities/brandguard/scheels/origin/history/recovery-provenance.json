@@ -1,0 +1,372 @@
+{
+  "commit_receipts": [
+    {
+      "author_epoch": 1791489420,
+      "author_utc_offset": "-0500",
+      "commit": "09c0f5583f866c96ecc6dd5cb0b3437800315264",
+      "committer_epoch": 1791489420,
+      "committer_utc_offset": "-0500",
+      "identity_witness_commit": "0096b429b9a51df84dbd7ed92528b48b2b13ef38",
+      "identity_witness_field": "author",
+      "message": "\tmodified:   AGENTS.md\n",
+      "tree": "df230942daa7116d3bb008b613155993ffef778a"
+    },
+    {
+      "author_epoch": 1793065145,
+      "author_utc_offset": "-0500",
+      "commit": "b888027d8b19c40317d3038b6afa83c44255064b",
+      "committer_epoch": 1793065145,
+      "committer_utc_offset": "-0500",
+      "identity_witness_commit": "00955a9cf42561596bdd4e779ff21fa0df2f60c8",
+      "identity_witness_field": "author",
+      "message": "Record repository audit closeout and open decisions\n",
+      "tree": "bc5d734000ed9b0afabb5989e12acbc77f6e1b60"
+    }
+  ],
+  "format": 1,
+  "interpreter_caches": [
+    {
+      "bytes": 7585,
+      "cache": ".agents/skills/okhp3-skill-promotion/tests/__pycache__/test_sync_skill_mirror.cpython-314.pyc",
+      "retained_blob": "7612af43ff4d87b7a63e431589a401e909877a68",
+      "sha256": "1edbd222d5965c7418ac1a0bc591253c2c3f5b30715a494bae74bc536e8d6b6b"
+    },
+    {
+      "bytes": 4277,
+      "cache": "ops/__pycache__/check-technology-versions.cpython-314.pyc",
+      "filename_style": "windows-native",
+      "magic": "290e0d0a",
+      "sha256": "8febb1b93777256daf8e515e2e3212db0070c76432e25bbc86b4f7f120349d08",
+      "source_size": 2359,
+      "source_timestamp": 1789916807,
+      "tracked_source": "ops/check-technology-versions.py"
+    },
+    {
+      "bytes": 2432,
+      "cache": "ops/__pycache__/test_technology_versions.cpython-314.pyc",
+      "filename_style": "windows-native",
+      "magic": "290e0d0a",
+      "sha256": "0fbc09258638314c4a9984c02685574474027c992b1f5868e8712a8f871543a3",
+      "source_size": 977,
+      "source_timestamp": 1789916807,
+      "tracked_source": "ops/test_technology_versions.py"
+    }
+  ],
+  "method": {
+    "caches": "Use the identified retained blob, or compile the tracked source with its original Windows clone root as input for the embedded filename. CPython magic and timestamp/size are supplied. No cache is executed.",
+    "commits": "Use the Git identity field from the existing witness object for both email/name headers. Enumerate retained source commits as single-parent candidates until the reconstructed commit matches the required SHA. The message includes its original final newline.",
+    "objects": "Load prior verified migration packs and the named SCHEELS bundles. Obtain the three transferred blob objects by ID from FoundRy. Apply each tree delta to its named base tree using ordinary Git tree ordering.",
+    "working_bytes": "Restore branch references from the existing private source inventory. Check out the source head with the recorded core.autocrlf value, then apply the listed line-ending conversions. Mixed line numbers start at zero. The path digest concatenates UTF-8 paths in sorted order, a NUL byte, and the 32 raw SHA-256 digest bytes for each working file."
+  },
+  "prerequisite_bundles": [
+    {
+      "file": "askjamie-brg11-scheels-final-recovery.bundle",
+      "sha256": "2f879f4b0ef44b7ee60692b369f94e086b707e94319b0957d1ccc7de178af845"
+    },
+    {
+      "file": "askjamie-brg11-scheels-recovery.bundle",
+      "sha256": "4f2811eadb2e985095151ac9154f953768b9ee9543f6988c823fa23853423ee6"
+    }
+  ],
+  "purpose": "Reconstruct source object identities and Windows working bytes using previously retained bundles and the transferred file blobs.",
+  "source": "OKHP3/askjamie-brg11-scheels",
+  "target_blobs": [
+    "11e4c8d8a3c3960f457cb02b44b7cf6532a9ef46",
+    "1b985cda8b2f7d24343bb01aa2feb878193674f8",
+    "2a3b3c60bd77909b20ad9b6f8a86d18098f92c0a"
+  ],
+  "tree_repairs": [
+    {
+      "base_tree": "6aab4039c386fe4cc47326ea8518ad1e53ae4383",
+      "remove": [],
+      "replace": [
+        [
+          "thread-closeouts",
+          "40000",
+          "fc11ab57087c86f690bbed7edf3e02c537ca60d5"
+        ]
+      ],
+      "tree": "7aa736fa8d2b48a6252422cb0e4fbc6c52073074"
+    },
+    {
+      "base_tree": "00ae604d612d620b5751adc7fa32046cb5f557fe",
+      "remove": [
+        "validate-skill.test.mjs"
+      ],
+      "replace": [
+        [
+          "2026-10-26-audit-closeout.md",
+          "100644",
+          "11e4c8d8a3c3960f457cb02b44b7cf6532a9ef46"
+        ]
+      ],
+      "tree": "8584a33faa410337aeed4526f3acb07eaa654d64"
+    },
+    {
+      "base_tree": "06b422dfa13747372b80188389ebfd7ebed1216d",
+      "remove": [],
+      "replace": [
+        [
+          "README.md",
+          "100644",
+          "2a3b3c60bd77909b20ad9b6f8a86d18098f92c0a"
+        ]
+      ],
+      "tree": "9d5144d43a18a3be69c8001345f4612bea64f3c5"
+    },
+    {
+      "base_tree": "4b87d37a05a3fc377441f481f8a0c58edac0e6a7",
+      "remove": [],
+      "replace": [
+        [
+          "AGENTS.md",
+          "100644",
+          "1b985cda8b2f7d24343bb01aa2feb878193674f8"
+        ],
+        [
+          "docs",
+          "40000",
+          "7aa736fa8d2b48a6252422cb0e4fbc6c52073074"
+        ]
+      ],
+      "tree": "bc5d734000ed9b0afabb5989e12acbc77f6e1b60"
+    },
+    {
+      "base_tree": "4b87d37a05a3fc377441f481f8a0c58edac0e6a7",
+      "remove": [],
+      "replace": [
+        [
+          "AGENTS.md",
+          "100644",
+          "1b985cda8b2f7d24343bb01aa2feb878193674f8"
+        ]
+      ],
+      "tree": "df230942daa7116d3bb008b613155993ffef778a"
+    },
+    {
+      "base_tree": "00ae604d612d620b5751adc7fa32046cb5f557fe",
+      "remove": [
+        "validate-skill.test.mjs"
+      ],
+      "replace": [
+        [
+          "019f95e8-d929-7b73-b9e5-5c123ae6c25f",
+          "40000",
+          "8584a33faa410337aeed4526f3acb07eaa654d64"
+        ]
+      ],
+      "tree": "fc11ab57087c86f690bbed7edf3e02c537ca60d5"
+    }
+  ],
+  "verification": {
+    "advertised_remote_refs_including_HEAD": 9,
+    "all_reflog_targets_recoverable": true,
+    "historical_private_ancestry_imported": false,
+    "ignored_file_count": 3,
+    "local_refs": 13,
+    "original_previous_head": "09c0f5583f866c96ecc6dd5cb0b3437800315264",
+    "reflog_rows": 102,
+    "source_object_id_digest": "ee283ca670e6ced80349f24ad35461ec6f54011f27451f17dc74315fd00d54c4",
+    "source_object_types": {
+      "blob": 577,
+      "commit": 40,
+      "tree": 405
+    },
+    "source_objects": 1022,
+    "stashes": 0,
+    "tracked_file_count": 254,
+    "untracked_user_files": 0,
+    "working_tree_count": 1
+  },
+  "working_tree": {
+    "autocrlf": "true",
+    "branch": "refs/heads/main",
+    "eol_exceptions": {
+      ".agents/prompts/gpt-project-onboarding.md": "lf",
+      ".agents/prompts/gpt-to-agent-skill-migration.md": "lf",
+      ".agents/prompts/project-context-audit-and-spa-readiness-bootstrap.md": "lf",
+      ".agents/prompts/project-context-audit-foundry-bootstrap.md": "lf",
+      ".agents/prompts/project-context-bootstrap.md": "lf",
+      ".agents/skills/okhp3-artifact-validation/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/profile-seeds/askjamie.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/profile-seeds/glee-fully.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/profile-seeds/overkill-hill.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/specialization-seeds/README.md": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/specialization-seeds/okhp3-askjamie-brand/SKILL.md.template": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/specialization-seeds/okhp3-askjamie-brand/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/specialization-seeds/okhp3-glee-fully-brand/SKILL.md.template": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/specialization-seeds/okhp3-glee-fully-brand/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/specialization-seeds/okhp3-overkill-hill-brand/SKILL.md.template": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/specialization-seeds/okhp3-overkill-hill-brand/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/assets/style-library.example.yaml": "lf",
+      ".agents/skills/okhp3-brand-style-registry/evals/evals.json": "lf",
+      ".agents/skills/okhp3-brand-style-registry/references/application-playbook.md": "lf",
+      ".agents/skills/okhp3-brand-style-registry/references/source-sampling.md": "lf",
+      ".agents/skills/okhp3-brand-style-registry/references/style-profile-schema.md": "lf",
+      ".agents/skills/okhp3-brand-style-registry/scripts/extract_css_signals.py": "lf",
+      ".agents/skills/okhp3-custom-gpt-builder/CHANGELOG.md": {
+        "different_lines": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "normally": "crlf"
+      },
+      ".agents/skills/okhp3-custom-gpt-builder/MANIFEST.md": {
+        "different_lines": [
+          6,
+          11
+        ],
+        "normally": "crlf"
+      },
+      ".agents/skills/okhp3-custom-gpt-builder/SKILL.md": "lf",
+      ".agents/skills/okhp3-custom-gpt-builder/evals/evals.json": {
+        "different_lines": [
+          2,
+          16,
+          17,
+          30,
+          31,
+          183,
+          184,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211
+        ],
+        "normally": "crlf"
+      },
+      ".agents/skills/okhp3-custom-gpt-readiness/SKILL.md": "lf",
+      ".agents/skills/okhp3-custom-gpt-readiness/evals/evals.json": "lf",
+      ".agents/skills/okhp3-custom-gpt-readiness/references/readiness-dossier-schema.md": "lf",
+      ".agents/skills/okhp3-equilibrium-review/SKILL.md": "lf",
+      ".agents/skills/okhp3-equilibrium-review/scripts/run_equilibrium_review.py": "lf",
+      ".agents/skills/okhp3-evidence-standard/SKILL.md": "lf",
+      ".agents/skills/okhp3-evidence-standard/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-evidence-standard/evals/evals.json": "lf",
+      ".agents/skills/okhp3-gpt-skill-conversion-plan/SKILL.md": "lf",
+      ".agents/skills/okhp3-gpt-skill-conversion-plan/evals/evals.json": "lf",
+      ".agents/skills/okhp3-gpt-skill-conversion-plan/references/conversion-dossier-schema.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/SKILL.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/agents/openai.yaml": {
+        "different_lines": [
+          0,
+          1
+        ],
+        "normally": "lf"
+      },
+      ".agents/skills/okhp3-repository-organizer/evals/evals.json": "lf",
+      ".agents/skills/okhp3-repository-organizer/evals/results.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/evals/trigger-cases.json": "lf",
+      ".agents/skills/okhp3-repository-organizer/references/agent-skills-quality.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/references/archetype-rubric.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/references/cross-platform-naming.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/references/github-baseline.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/references/scaffold-matrix.md": "lf",
+      ".agents/skills/okhp3-repository-organizer/scripts/inventory_repo.py": "lf",
+      ".agents/skills/okhp3-session-handoff/SKILL.md": "lf",
+      ".agents/skills/okhp3-session-handoff/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-session-handoff/evals/evals.json": "lf",
+      ".agents/skills/okhp3-skill-cataloger/.claude/commands/catalog-skills.md": "lf",
+      ".agents/skills/okhp3-skill-cataloger/.claude/commands/index-skills.md": "lf",
+      ".agents/skills/okhp3-skill-cataloger/SKILL.md": "lf",
+      ".agents/skills/okhp3-skill-cataloger/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-skill-cataloger/assets/catalog-meta-schema.json": "lf",
+      ".agents/skills/okhp3-skill-cataloger/evals/evals.json": "lf",
+      ".agents/skills/okhp3-skill-cataloger/references/MODES.md": "lf",
+      ".agents/skills/okhp3-skill-cataloger/scripts/gen-skills-readme.py": "lf",
+      ".agents/skills/okhp3-skill-cataloger/tests/test_write_family_md.py": "lf",
+      ".agents/skills/okhp3-skill-foundry/SKILL.md": "lf",
+      ".agents/skills/okhp3-skill-foundry/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-skill-foundry/assets/equilibrium-review-record.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/assets/skill-template.md": "lf",
+      ".agents/skills/okhp3-skill-foundry/assets/sync-manifest-template.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/benchmarks/benchmark.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/benchmarks/equilibrium-review-2026-07-28.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/benchmarks/evolution-review-2026-07-27.md": "lf",
+      ".agents/skills/okhp3-skill-foundry/benchmarks/learning-ledger-2026-07-27.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/benchmarks/learning-ledger-2026-07-28.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/benchmarks/sync-verification-2026-07-28.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/evals/evals.json": "lf",
+      ".agents/skills/okhp3-skill-foundry/references/brand-standard.md": "lf",
+      ".agents/skills/okhp3-skill-foundry/references/equilibrium-review-protocol.md": "lf",
+      ".agents/skills/okhp3-skill-foundry/references/eval-patterns.md": "lf",
+      ".agents/skills/okhp3-skill-foundry/references/grading-schema.md": "lf",
+      ".agents/skills/okhp3-skill-foundry/scripts/validate-skill-suite.cjs": "lf",
+      ".agents/skills/okhp3-skill-foundry/tests/validate-foundry-evidence.test.cjs": "lf",
+      ".agents/skills/okhp3-skill-promotion/SKILL.md": "lf",
+      ".agents/skills/okhp3-skill-promotion/assets/promotion-manifest-template.json": "lf",
+      ".agents/skills/okhp3-skill-promotion/benchmarks/equilibrium-review-2026-08-02.json": "lf",
+      ".agents/skills/okhp3-skill-promotion/benchmarks/structural-integrity-2026-08-02.json": "lf",
+      ".agents/skills/okhp3-skill-promotion/benchmarks/sync-verification-2026-08-02.json": "lf",
+      ".agents/skills/okhp3-skill-promotion/evals/evals.json": "lf",
+      ".agents/skills/okhp3-skill-promotion/references/promotion-manifest.md": "lf",
+      ".agents/skills/okhp3-skill-promotion/scripts/sync_skill_mirror.py": "lf",
+      ".agents/skills/okhp3-skill-promotion/tests/test_sync_skill_mirror.py": "lf",
+      ".agents/skills/okhp3-source-backed-research/SKILL.md": "lf",
+      ".agents/skills/okhp3-source-backed-research/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-source-backed-research/evals/evals.json": "lf",
+      ".agents/skills/okhp3-vite-github-pages/SKILL.md": "lf",
+      ".agents/skills/okhp3-vite-github-pages/agents/openai.yaml": "lf",
+      ".agents/skills/okhp3-vite-github-pages/evals/evals.json": "lf",
+      ".github/dependabot.yml": "lf",
+      "AGENTS.md": {
+        "different_lines": [
+          120,
+          121
+        ],
+        "normally": "crlf"
+      },
+      "skills/okhp3-skill-promotion/SKILL.md": "lf",
+      "skills/okhp3-skill-promotion/assets/promotion-manifest-template.json": "lf",
+      "skills/okhp3-skill-promotion/benchmarks/equilibrium-review-2026-08-02.json": "lf",
+      "skills/okhp3-skill-promotion/benchmarks/structural-integrity-2026-08-02.json": "lf",
+      "skills/okhp3-skill-promotion/benchmarks/sync-verification-2026-08-02.json": "lf",
+      "skills/okhp3-skill-promotion/evals/evals.json": "lf",
+      "skills/okhp3-skill-promotion/references/promotion-manifest.md": "lf",
+      "skills/okhp3-skill-promotion/scripts/sync_skill_mirror.py": "lf",
+      "skills/okhp3-skill-promotion/tests/test_sync_skill_mirror.py": "lf"
+    },
+    "files": 254,
+    "path_and_byte_digest": "837f2f4313c845c1c6c940956e57b6161bd1ef04923ff0254eeddd5da1e02d99",
+    "staged_entry_digest": "2f78b65d133a367deb99ea6224ba4ecd0c8605bd0f183027044aa3f18f760583"
+  }
+}

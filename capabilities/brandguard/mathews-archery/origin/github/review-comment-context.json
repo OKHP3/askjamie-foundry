@@ -1,0 +1,17 @@
+{
+  "3754344363": {
+    "diff_hunk": "@@ -12,8 +12,8 @@ This repository is currently a static knowledge and configuration repository. It\n | --- | --- | --- | --- | --- |\n | Git | Repository metadata and history | Not pinned by the repository | 2.55.0 | Documented only. The maintainer's Git installation is external to this repository. |\n | GitHub | Remote repository and planned hosting surface | Repository hosting is configured; platform version is not pinned | Continuously hosted service | Platform-managed. |\n-| Python | `.agents/skills/*/*.py` support scripts | Python 3.9 or newer required by the seeded skills; exact local interpreter is not pinned | 3.14.6 | Weekly checker reports the latest feature release. Keep the minimum compatible with the seeded skills. |\n-| Nix / NixOS channel | `.replit` | `stable-25_05` | 26.05, current stable line | Weekly checker flags the channel. Update `.replit` only after validating Replit compatibility. |\n+| Python | `.agents/skills/*/*.py` support scripts | Python 3.9 or newer required by the seeded skills; exact local interpreter is not pinned | 3.14.7 | Weekly checker records the latest feature release. |",
+    "original_position": 14,
+    "position": 14,
+    "subject_type": "line"
+  },
+  "3754346100": {
+    "diff_hunk": "@@ -12,8 +12,8 @@ This repository is currently a static knowledge and configuration repository. It\n | --- | --- | --- | --- | --- |\n | Git | Repository metadata and history | Not pinned by the repository | 2.55.0 | Documented only. The maintainer's Git installation is external to this repository. |\n | GitHub | Remote repository and planned hosting surface | Repository hosting is configured; platform version is not pinned | Continuously hosted service | Platform-managed. |\n-| Python | `.agents/skills/*/*.py` support scripts | Python 3.9 or newer required by the seeded skills; exact local interpreter is not pinned | 3.14.6 | Weekly checker reports the latest feature release. Keep the minimum compatible with the seeded skills. |\n-| Nix / NixOS channel | `.replit` | `stable-25_05` | 26.05, current stable line | Weekly checker flags the channel. Update `.replit` only after validating Replit compatibility. |\n+| Python | `.agents/skills/*/*.py` support scripts | Python 3.9 or newer required by the seeded skills; exact local interpreter is not pinned | 3.14.7 | Weekly checker records the latest feature release. |\n+| Nix / NixOS channel | `.replit` | `stable-26_05` | 26.05, current stable line | The declared channel now matches the current stable line. |",
+    "original_position": 15,
+    "original_start_line": 15,
+    "position": 15,
+    "start_line": 15,
+    "start_side": "RIGHT",
+    "subject_type": "line"
+  }
+}
