@@ -1,0 +1,65 @@
+{
+  "source": "aj02-corrected-alpha-691f9614-source-extract.md",
+  "source_type": "historical proposed builder draft",
+  "source_file_sha256": "2b5c12c8ad410cf510640ce3ccdd62afe0220a685b6b02a917af53617afd83a3",
+  "starter_count": 8,
+  "starter_comparison": [
+    {
+      "ordinal": 1,
+      "original_or_draft_characters": 149,
+      "release_characters": 128,
+      "comparison": "prefix_only"
+    },
+    {
+      "ordinal": 2,
+      "original_or_draft_characters": 115,
+      "release_characters": 115,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 3,
+      "original_or_draft_characters": 114,
+      "release_characters": 114,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 4,
+      "original_or_draft_characters": 126,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    },
+    {
+      "ordinal": 5,
+      "original_or_draft_characters": 119,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    },
+    {
+      "ordinal": 6,
+      "original_or_draft_characters": 138,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    },
+    {
+      "ordinal": 7,
+      "original_or_draft_characters": 107,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    },
+    {
+      "ordinal": 8,
+      "original_or_draft_characters": 116,
+      "release_characters": null,
+      "comparison": "absent_from_release_presentation"
+    }
+  ],
+  "configured_attachment_evidence": [
+    {
+      "original_name": "5c423c02-f206-4f34-aaf2-3834497c8f4a.png",
+      "source_bytes": null,
+      "matches_release_index_name": true,
+      "matches_release_byte_count": null
+    }
+  ],
+  "independent_original_attachment_digests_available": false
+}

@@ -1,0 +1,28 @@
+{
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Productivity",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [
+      "\u201cWalk me through Jamie Hill\u2019s career story like you\u2019re talking to a hiring manager.\u201d",
+      "\u201cHere\u2019s a job description \u2014 how would Jamie tailor his r\u00e9sum\u00e9 and LinkedIn profile to it?\u201d",
+      "\u201cUse Jamie\u2019s dynamic r\u00e9sum\u00e9 framework to help me rewrite *my* r\u00e9sum\u00e9 for this role.\u201d"
+    ],
+    "developerName": "cardholder",
+    "displayName": "R\u00e9sum\u00e9 Representative by AskJamie\u2122",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "An interactive r\u00e9sum\u00e9 persona for Jamie Hill that can explain, defend, and contextualize his career \u2014 and, when invited, apply the same logic to your own r\u00e9sum\u00e9, cover letter, and market\u2011value questions in a post\u2011COVID, ATS\u2011driven hiring world.",
+    "shortDescription": "An interactive r\u00e9sum\u00e9 persona for Jamie Hill that can explain, defend, and contextualize his career \u2014 and, when invited, apply the same logic to your own r\u00e9sum\u00e9, cover letter, and market\u2011value questions in a post\u2011COVID, ATS\u2011driven hiring wo"
+  },
+  "name": "gpt-96834302fd4ea698d06dbfa2f6f036cb",
+  "version": "0.3.1+bundle.eaf31c4f35140a68ade8d4bb0c9ab1be",
+  "description": "An interactive r\u00e9sum\u00e9 persona for Jamie Hill that can explain, defend, and contextualize his career \u2014 and, when invited, apply the same logic to your own r\u00e9sum\u00e9, cover letter, and market\u2011value questions in a post\u2011COVID, ATS\u2011driven hiring world.",
+  "author": {
+    "name": "cardholder",
+    "url": "https://overkillhill.com"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

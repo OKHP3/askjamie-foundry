@@ -11,9 +11,20 @@ On November 24, 2026, the owner's My GPTs list contained 89 entries. Four displa
 
 ## Source coverage
 
-The October 29 captures preserve AJ01 and AJ02's instruction text. The source Git blobs reproduce the UTF-8 captures exactly. Their SHA-256 digests are `351329c1b0f5fce5d530ea1ec252da7260133caf056c9279410a85baa1639a47` (AJ01) and `7ed808416bbca681413e1931f8a748c50c25151a4e0569bd578e2d575e75387f` (AJ02). The AJ01 configuration names two PNG attachments and lists six conversation starters. The AJ02 editor showed one PNG attachment and eight populated conversation starters. The October capture did not recover any of the three attachment originals.
+The October 29 captures preserve AJ01 and AJ02's instruction text. Their UTF-8 bytes also appear within the corresponding hosted `skills/instructions/SKILL.md`. Their SHA-256 digests are `351329c1b0f5fce5d530ea1ec252da7260133caf056c9279410a85baa1639a47` (AJ01) and `7ed808416bbca681413e1931f8a748c50c25151a4e0569bd578e2d575e75387f` (AJ02).
 
-AJ01's instructions refer to six additional text sources. They were absent from the GPT attachment list. Related documents in its repository and ChatGPT project have separate provenance. The two FoundRy portable skills have version-specific Replit acceptance records. Equivalence between either FoundRy procedure and its hosted ChatGPT skill requires a direct comparison. [AJ01 acceptance](../../capabilities/resume-representative/docs/skill-candidate-acceptance.md) · [AJ02 acceptance](../../capabilities/professional-portfolio/docs/skill-candidate-acceptance.md)
+The two AJ01 PNG names and the one AJ02 PNG name appear in the migrated knowledge indexes. All three files were recovered from the releases. They are byte-identical to the public AskJamie icon (304,380 bytes each, SHA-256 `9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262`). The original editor captures did not supply independent attachment digests. AJ01's instructions refer to six additional text sources that were absent from its GPT attachment list. Related documents in its repository and ChatGPT project have separate provenance. [AskJamie icon](https://github.com/OKHP3/askjamie/blob/ebe80378a67adc47c3429ddb5a3adf3bc72cd00e/assets/img/favicons/android-chrome-512x512.png)
+
+The original AJ01 configuration lists six starters. Its hosted manifest presents the first three verbatim. The AJ02 editor displayed eight populated starters. Its hosted manifest presents three. An older AJ02 design draft contains eight proposed starters, the first of which is longer than the hosted text. The second and third match the hosted text. The complete wording of AJ02's eight saved editor starters remains unverified. [AJ01 starter comparison](../../capabilities/resume-representative/adapters/chatgpt/releases/pluginrel_15c6bb66fa9881918c736b8af43fb480/source-comparison.json) · [AJ02 starter comparison](../../capabilities/professional-portfolio/adapters/chatgpt/releases/pluginrel_2a47d666f20c819193406a9d84d38a50/source-comparison.json)
+
+## Hosted release files
+
+| GPT | Pinned ChatGPT release | Recovery |
+| --- | --- | --- |
+| AJ01 | [Release directory](../../capabilities/resume-representative/adapters/chatgpt/releases/pluginrel_15c6bb66fa9881918c736b8af43fb480/) | 918,295-byte archive and separately retrieved compatibility manifest, 8 verified file paths. [Checksums](../../capabilities/resume-representative/adapters/chatgpt/releases/pluginrel_15c6bb66fa9881918c736b8af43fb480/release-receipt.json) |
+| AJ02 | [Release directory](../../capabilities/professional-portfolio/adapters/chatgpt/releases/pluginrel_2a47d666f20c819193406a9d84d38a50/) | 614,371-byte archive and separately retrieved compatibility manifest, 7 verified file paths. [Checksums](../../capabilities/professional-portfolio/adapters/chatgpt/releases/pluginrel_2a47d666f20c819193406a9d84d38a50/release-receipt.json) |
+
+To reconstruct either release, extract its `package.tar.gz` into an empty directory and copy the adjacent `.codex-plugin` directory into that directory. The release receipt records the archive SHA-256 and every file's path, size and SHA-256. The hosted plugins have private, user-scoped visibility. The FoundRy portable skills have separately versioned Replit acceptance records. Retrieval and behavioral equivalence on ChatGPT remain untested. [AJ01 acceptance](../../capabilities/resume-representative/docs/skill-candidate-acceptance.md) · [AJ02 acceptance](../../capabilities/professional-portfolio/docs/skill-candidate-acceptance.md)
 
 ## Related organization titles
 

@@ -1,0 +1,107 @@
+{
+  "release": {
+    "release_id": "pluginrel_15c6bb66fa9881918c736b8af43fb480",
+    "version": "0.3.1+bundle.eaf31c4f35140a68ade8d4bb0c9ab1be",
+    "created_at": "2026-11-06T22:21:13.762459Z",
+    "is_current": true,
+    "creator_account_user_id": null
+  },
+  "plugin": {
+    "plugin_id": "plugin_85e9ceacaf6081918bf7e533d704becb",
+    "name": "gpt-96834302fd4ea698d06dbfa2f6f036cb",
+    "description": "An interactive r\u00e9sum\u00e9 persona for Jamie Hill that can explain, defend, and contextualize his career \u2014 and, when invited, apply the same logic to your own r\u00e9sum\u00e9, cover letter, and market\u2011value questions in a post\u2011COVID, ATS\u2011driven hiring world.",
+    "version": "0.3.1+bundle.eaf31c4f35140a68ade8d4bb0c9ab1be",
+    "current_release_id": "pluginrel_15c6bb66fa9881918c736b8af43fb480",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  "archive_filename": "package.tar.gz",
+  "archive_sha256": "acd4955cb3f10c98c5ba1cb651b20c0b5a3b39181a8901ea7a595b9ae340d8e4",
+  "archive_bytes": 918295,
+  "verification": "The pinned owned release archive and file-list interface differed by one compatibility manifest. All regular tar members matched the Creator list by path and size; the list-only manifest was recovered separately as UTF-8. All five hosted text entries were independently compared against the file API.",
+  "files": [
+    {
+      "path": "plugin.json",
+      "bytes": 1849,
+      "sha256": "31bd30279f973ee1a3044a6ddadffa059e80ab767f04c6bf9b4b216247ed6db3",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "assets/gpt-icon.png",
+      "bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/SKILL.md",
+      "bytes": 7056,
+      "sha256": "aacd0145c93e81fbd3af28bc8bfedae50f80c243000204680c06a31381d0108a",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/agents/openai.yaml",
+      "bytes": 273,
+      "sha256": "4b6e6e58f69c0326abcac8cfeafdeca9d97f6c5da7d9a4e122ec4c4e9032bf15",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/lookup/knowledge-index.json",
+      "bytes": 1037,
+      "sha256": "5047282de65c2a11259f7183ab746fa47792ab621f3f62a6bdedf29387d80b12",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/8375f974-220c-4592-872e-3d6159e4c342.png",
+      "bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/edb06227-37ed-4946-bdad-a292b2a793f2.png",
+      "bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "bytes": 1852,
+      "sha256": "06e88e2d14d0ce53ede4bca522ccc1ef34ef93b8129871149224d1be9a9ee0fc",
+      "recovery": "get_plugin_files; stored beside pinned tar"
+    }
+  ],
+  "packaged_conversation_starters": [
+    "\u201cWalk me through Jamie Hill\u2019s career story like you\u2019re talking to a hiring manager.\u201d",
+    "\u201cHere\u2019s a job description \u2014 how would Jamie tailor his r\u00e9sum\u00e9 and LinkedIn profile to it?\u201d",
+    "\u201cUse Jamie\u2019s dynamic r\u00e9sum\u00e9 framework to help me rewrite *my* r\u00e9sum\u00e9 for this role.\u201d"
+  ],
+  "prior_editor_starter_count": 6,
+  "instruction_comparison": {
+    "editor_text_is_exact_byte_subsequence": true,
+    "prior_editor_file": "aj01-instructions-ui.txt",
+    "prior_editor_sha256": "351329c1b0f5fce5d530ea1ec252da7260133caf056c9279410a85baa1639a47",
+    "prior_editor_bytes": 6889,
+    "body_matches_after_normalizing_newlines_outer_whitespace": true,
+    "editor_text_start_byte_in_skill": 167
+  },
+  "knowledge_index": [
+    {
+      "name": "8375f974-220c-4592-872e-3d6159e4c342.png",
+      "path": "references/8375f974-220c-4592-872e-3d6159e4c342.png",
+      "packaged_bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "identical_to_packaged_icon": true
+    },
+    {
+      "name": "edb06227-37ed-4946-bdad-a292b2a793f2.png",
+      "path": "references/edb06227-37ed-4946-bdad-a292b2a793f2.png",
+      "packaged_bytes": 304380,
+      "sha256": "9f950d2b2b60837ff6c7db8e912bc5f8d769aa81794cbb98d42926bd1d90d262",
+      "identical_to_packaged_icon": true
+    }
+  ],
+  "limits": [
+    "Knowledge file names are the migrated lookup index names. Identity against owner-editor original binary hashes requires independent evidence.",
+    "Packaged starters are verbatim from plugin.json. October's owner-editor capture reported additional starters.",
+    "Package recovery does not establish retrieval and ChatGPT behavior parity."
+  ]
+}
