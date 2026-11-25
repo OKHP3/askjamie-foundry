@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Starbucks](https://chatgpt.com/g/g-694ac7b0f8b88191ab788b14898ba340) · [Original editor configuration](origin/gpt-config/g-694ac7b0f8b88191ab788b14898ba340/config.json)
+- [Starbucks](https://chatgpt.com/g/g-694ac7b0f8b88191ab788b14898ba340) · [Original editor configuration](origin/gpt-config/g-694ac7b0f8b88191ab788b14898ba340/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_39261f2ccf7c81919f925e63453bd631) · [Release files](origin/chatgpt-releases/pluginrel_8c4692e477a08191919f8ad1b2382aa0/)
 
 ## Transferred repository
 

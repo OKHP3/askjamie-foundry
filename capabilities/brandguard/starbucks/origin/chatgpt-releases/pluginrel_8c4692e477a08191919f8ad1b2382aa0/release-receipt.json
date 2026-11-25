@@ -1,0 +1,307 @@
+{
+  "release": {
+    "release_id": "pluginrel_8c4692e477a08191919f8ad1b2382aa0",
+    "version": "0.3.1+bundle.b4fdc3d0cb2b2b3f6c10acd9999f9dd5",
+    "created_at": "2026-11-25T03:11:43.620145Z",
+    "is_current": true,
+    "creator_account_user_id": null
+  },
+  "plugin": {
+    "plugin_id": "plugin_39261f2ccf7c81919f925e63453bd631",
+    "name": "gpt-60d56f17814f69328d9599f6c1cfd086",
+    "description": "Prototype BrandGuard architect that helps design, stress-test, and govern brand-native GPTs inside the OverKill Hill P\u00b3 ecosystem.",
+    "version": "0.3.1+bundle.b4fdc3d0cb2b2b3f6c10acd9999f9dd5",
+    "current_release_id": "pluginrel_8c4692e477a08191919f8ad1b2382aa0",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  "archive_filename": "package.tar.gz",
+  "archive_sha256": "d11d05d0533faffe19e9df118126c865e72b2df318756958f12f4bda0bfea7c6",
+  "archive_bytes": 8798217,
+  "verification": "Pinned tar members matched Creator's complete list by path and size. Host file-API text was independently hashed and checked, and non-archive compatibility content is listed separately.",
+  "files": [
+    {
+      "path": "plugin.json",
+      "bytes": 1482,
+      "sha256": "e1cea690ca7d31f4df29ca7b48b90e9fe6324269257078fadfa6739729a822aa",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "assets/gpt-icon.png",
+      "bytes": 596291,
+      "sha256": "654bf4194b2fb530277baa294b6755175e0b299f4332d9dcc121b92be7819001",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/SKILL.md",
+      "bytes": 6628,
+      "sha256": "72ba67a80480c4e264ff9a4add5122ab0f1c1d5c40fd00352f0435cb63a372bb",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/agents/openai.yaml",
+      "bytes": 276,
+      "sha256": "6cdee7932124d96b7c83843ea9caf798c6d1c6e86098fa0bc86a2f370af1c93c",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/lookup/knowledge-index.json",
+      "bytes": 3835,
+      "sha256": "a14ee96b5104be90bbfbe31db4bb5f498e0268b8d3e583de8ba01d80f49f106f",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "bytes": 2137667,
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "bytes": 2797807,
+      "sha256": "169cd931b40a26e458215d9111bd8877970b57f2bf63901133ff1395af5b3d08",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "bytes": 96324,
+      "sha256": "f1b02ca1ac2b3c5647611531ec4def8ee10dec7b7363395a086af39fda0dfceb",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "bytes": 76503,
+      "sha256": "b40f58533b051a261504d54b282997af54236336a6a5bbb9731540551b3f5352",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "bytes": 64079,
+      "sha256": "e2ee30b68f758831d8e3ca482d3004795d03a0ed4b85a46f89f79d2b3600f9ad",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "bytes": 67859,
+      "sha256": "96a67c33062c99606e8fefc9a517e999ee6a3031649ed1fb3735a00a0fa73528",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "bytes": 75907,
+      "sha256": "88a4d4b3c1e986945864857d026794982e4eacb5173b2d0dc3299f6b4fd1197d",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "bytes": 87821,
+      "sha256": "8fc6cca3257493e29fe2b064ad266e82934731ca1cece2868748e0212eaacac5",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "bytes": 66109,
+      "sha256": "a7710cf42eb88f076fc06d985dfe9ea9f93db1a1892496ecd1781f697a83ba42",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "bytes": 63219,
+      "sha256": "7dfc5d102ae9d648a880c6ad9bb96488d1418fda56ce38a0c9d02065e87882c2",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "bytes": 74238,
+      "sha256": "3d2e430aeaa1d5815a49a7ea34b860d7986c46aa9ebfa417e09870046c606ae4",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "bytes": 2176854,
+      "sha256": "67baa40c0f98d3fa80d82a6c6a4bb0993a65aafe1f4ba81d2904bdb43d5bb5b6",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "bytes": 79705,
+      "sha256": "7e24d4aba64b1126d16ca0a552a9f105eae381180491d9326422846a8143f602",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "bytes": 76722,
+      "sha256": "0c1819fa10d4bd8d479381e75c285dc89d979a0a567c01e59eabfacb7f1b059c",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "bytes": 76516,
+      "sha256": "1ea43065591252748a91446157e7a483e0a35001aa2c318b1dae2186614b80c2",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "bytes": 65048,
+      "sha256": "21013738b26347cb8b2c18d4c985673ac2a993271ce0334f92eb9ce1899abdd1",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "bytes": 93588,
+      "sha256": "aa07b8b9e300efa5c6cb8b6958dbc3ace279a938f17517fceddd319b22638155",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/BRG02-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "bytes": 61715,
+      "sha256": "d15a3e9b95f56842e4f8940fa3746594f33edddc86ff0094904bf6c121b18dec",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "bytes": 1375,
+      "sha256": "cc7f3698665490b6c1283c470b21f896d34c5693ca04190f1590f7e2feba4d14",
+      "recovery": "get_plugin_files; separately stored beside pinned tar"
+    }
+  ],
+  "packaged_conversation_starters": [
+    "\u201cHelp me sketch a BrandGuard GPT for [BrandName] from scratch \u2013 start with ledgers and instruction structure, not copy.\u201d",
+    "\u201cTake this messy brand doc and turn it into a clean Equilibrium\u2013Harmony\u2013Disruptor map.\u201d",
+    "\u201cDesign a v0.1 instruction block for a BrandGuard GPT that protects [BrandName]\u2019s voice and canon.\u201d"
+  ],
+  "packaged_skill_bodies": {
+    "skills/instructions/SKILL.md": {
+      "sha256": "a7772d9d6883bb8b0beee2b8641221454e268a1e8ad924e73b00e0317612c335",
+      "bytes": 6490
+    }
+  },
+  "knowledge_index": [
+    {
+      "name": "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "packaged_bytes": 2137667,
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "packaged_bytes": 2797807,
+      "sha256": "169cd931b40a26e458215d9111bd8877970b57f2bf63901133ff1395af5b3d08",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "packaged_bytes": 96324,
+      "sha256": "f1b02ca1ac2b3c5647611531ec4def8ee10dec7b7363395a086af39fda0dfceb",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "packaged_bytes": 76503,
+      "sha256": "b40f58533b051a261504d54b282997af54236336a6a5bbb9731540551b3f5352",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "packaged_bytes": 64079,
+      "sha256": "e2ee30b68f758831d8e3ca482d3004795d03a0ed4b85a46f89f79d2b3600f9ad",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "packaged_bytes": 67859,
+      "sha256": "96a67c33062c99606e8fefc9a517e999ee6a3031649ed1fb3735a00a0fa73528",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "packaged_bytes": 75907,
+      "sha256": "88a4d4b3c1e986945864857d026794982e4eacb5173b2d0dc3299f6b4fd1197d",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "packaged_bytes": 87821,
+      "sha256": "8fc6cca3257493e29fe2b064ad266e82934731ca1cece2868748e0212eaacac5",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "packaged_bytes": 66109,
+      "sha256": "a7710cf42eb88f076fc06d985dfe9ea9f93db1a1892496ecd1781f697a83ba42",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "packaged_bytes": 63219,
+      "sha256": "7dfc5d102ae9d648a880c6ad9bb96488d1418fda56ce38a0c9d02065e87882c2",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "packaged_bytes": 74238,
+      "sha256": "3d2e430aeaa1d5815a49a7ea34b860d7986c46aa9ebfa417e09870046c606ae4",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "packaged_bytes": 2176854,
+      "sha256": "67baa40c0f98d3fa80d82a6c6a4bb0993a65aafe1f4ba81d2904bdb43d5bb5b6",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "packaged_bytes": 79705,
+      "sha256": "7e24d4aba64b1126d16ca0a552a9f105eae381180491d9326422846a8143f602",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "packaged_bytes": 76722,
+      "sha256": "0c1819fa10d4bd8d479381e75c285dc89d979a0a567c01e59eabfacb7f1b059c",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "packaged_bytes": 76516,
+      "sha256": "1ea43065591252748a91446157e7a483e0a35001aa2c318b1dae2186614b80c2",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "packaged_bytes": 65048,
+      "sha256": "21013738b26347cb8b2c18d4c985673ac2a993271ce0334f92eb9ce1899abdd1",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "packaged_bytes": 93588,
+      "sha256": "aa07b8b9e300efa5c6cb8b6958dbc3ace279a938f17517fceddd319b22638155",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "BRG02-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "path": "skills/instructions/references/BRG02-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "packaged_bytes": 61715,
+      "sha256": "d15a3e9b95f56842e4f8940fa3746594f33edddc86ff0094904bf6c121b18dec",
+      "identical_to_packaged_icon": false
+    }
+  ]
+}

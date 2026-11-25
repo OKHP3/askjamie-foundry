@@ -111,6 +111,12 @@ tree in `origin/source.json`. See `docs/migrations/legacy-capability-transfer.md
 for coverage and `scripts/verify-legacy-transfers.py` for verification.
 Private workspace and product controls continue to apply to other material.
 
+The four core GPTs and 16 owner-identified BrandGuard forks have original editor
+records in their capability folders. Organization READMEs route forks by stable
+GPT ID. Use `python scripts/verify-hosted-gpt-captures.py --brandguard-forks` to
+reconstruct the two editor captures and check stored cloud release files. The
+inventory in `docs/migrations/askjamie-gpt-plugin-inventory.md` gives coverage.
+
 ## Repository structure and entry points
 
 Read these files first when orienting to a task:

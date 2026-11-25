@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-24 BrandGuard GPT forks
+
+- Route 16 distinct GPTs into 13 organization folders, including both LEGO editions and all three Builders FirstSource editions.
+- Preserve the owner-editor configurations, 126 conversation starters and 226 knowledge upload entries. Verify the native skill instructions and release files against their corresponding editor records.
+
 ## 2026-11-24 Legacy repository transfers
 
 - Record the 17 owner-selected Enterprise Sleuth and BrandGuard sources in their canonical folders. Each source record gives the original commit, stored Git tree and exact coverage.

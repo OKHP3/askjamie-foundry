@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Hershey](https://chatgpt.com/g/g-694ac93c34f08191931aa28bd8b3571f) · [Original editor configuration](origin/gpt-config/g-694ac93c34f08191931aa28bd8b3571f/config.json)
+- [Hershey](https://chatgpt.com/g/g-694ac93c34f08191931aa28bd8b3571f) · [Original editor configuration](origin/gpt-config/g-694ac93c34f08191931aa28bd8b3571f/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_cfcc1b3c4104819180d5d3d641f5be41) · [Release files](origin/chatgpt-releases/pluginrel_7184e65a829c81918abd81ad5ba5375a/)
 
 ## Transferred repository
 

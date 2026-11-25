@@ -1,0 +1,124 @@
+{
+  "landed_source_revision": "30bffa6fd9f05b534712fa295e5e3da08f715599",
+  "blobs": [
+    {
+      "name": "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "hosted_path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "git_blob": "6d5f4067ab54d10e0c5d6bc0bd38e6b82c3776c3",
+      "current_public_source_path": null
+    },
+    {
+      "name": "BRG05-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "sha256": "30b2d29ded733fa753de7537b8c7b40452c150e96358321374051bed182d6130",
+      "git_blob": "04a6fee8a2300503da9fd60020fa8bad38292f7e",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "sha256": "8fa8c9c3e0e6478b8f77c598f542d13f7d5f9385b238f033d1ad1441dfe2f202",
+      "git_blob": "bc7c9fab0ea4037c91146183de89eb4b49acef51",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW03-Product-Lines-or-Services-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "sha256": "9c53295fb5670551092efed5582f26d8d2c8f38b03572a7b049c6c45e92dfa84",
+      "git_blob": "31867cc3db8686c5de38d7e967cacdbcd9a56c3f",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "sha256": "b9fb9ac06eb949864d571aa9bd0cec3930c404b1e4e3802205a2d334e83ccced",
+      "git_blob": "37fb2bb7f57cf884a6fb60685885cdccaac8c318",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "sha256": "f9963adb5fa6c6cba97cdb0004a74aae9682ad0d0b33c596ede29c7577886fa0",
+      "git_blob": "2c54c7be0055b4105e65619484949d336b112f46",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "sha256": "17c88435f4bd4ec474786916b71affd0dacd0be2d09cf9219629f2c908cfbec4",
+      "git_blob": "2e271edf1060849cb4ed11d0b5c7efc555deaf22",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW07-Innovations-and-Technologies-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "sha256": "473ccbee9fec1b59ae4761e51d9df34b329b5d2692eb1f3ac2a0228b44d0b768",
+      "git_blob": "27af57020229f3ecab6f0aaae843d1cab06f59e6",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW08-Partnerships-and-Acquisitions-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "sha256": "d5828d6f42176c21d270a3e122d253549e37038b6ec12ed605aafeeaf6e6b015",
+      "git_blob": "1e7fb55477129115e656241a7593d089ae13cd73",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW09-Marketing-and-Slogans-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "sha256": "47b285bf38d22cc9e63c487a321ac4138db7dcd00ed5a9712faad33dded106a5",
+      "git_blob": "4190f41a6f6999b2b7d5643cb07c60c5ee0b6a5a",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "sha256": "2d9501201862a940a58df21c81bdcabb61c1fe939306661109fc565439b4e95b",
+      "git_blob": "0667f780058e05ae5cfd360b19c5d275015d72a9",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "sha256": "fc6a29c860f2ceb268e6d718f383a021f08a80ac9d37d59c452b386ff305d76c",
+      "git_blob": "b69d0d9915b93c07b236436f614ede2e224e3b90",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "sha256": "b99fdb0a15d3a128c3b885513dc1e434cbce76f6fc655391d8118fefac959f66",
+      "git_blob": "82e932cc81d1a9cc9684f782c5b63985cc552e07",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "sha256": "4b14120ffaa19a03dc7367a277162080459ee2dd73c0553bd0e757cd81dafce0",
+      "git_blob": "451be0d3402266a41ab61b92e8a2cd42afd6294d",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "sha256": "a06508d8d790d6cfe9ee0ef5f2a23ff77c1e8285942cf0ba45f804c454db5b0e",
+      "git_blob": "f11798566ad2277f7531c29666ac0afa4cc634fb",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "sha256": "e185af58cbd429aecb52ed3bc6eff111bc6ce5aaaa068aecdbf6f0adacfc361a",
+      "git_blob": "bad9f2b1c4fc4675d2da71c9e8161619b5257d82",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx"
+    },
+    {
+      "name": "BRG05-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG05-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "sha256": "94d8cf0d8f6043a164401d20335756b06e39bf37b58597ef5d818dd59cfc67ab",
+      "git_blob": "b9a95d4e4c46dd506a1c5d081067675782e9f651",
+      "current_public_source_path": "capabilities/brandguard/costco/origin/repository/knowledge/BRG05-KNOW17-Reputational-Liability-Inoculation-v01d.docx"
+    }
+  ]
+}
