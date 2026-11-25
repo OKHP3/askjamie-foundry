@@ -20,10 +20,10 @@ On November 24, 2026, Jamie designated these 17 folders as the destinations for 
 | `askjamie-brg09-coca-cola` | [brandguard/coca-cola](../../capabilities/brandguard/coca-cola/README.md) | 538 / 538 |
 | `askjamie-brg10-discount-tire` | [brandguard/discount-tire](../../capabilities/brandguard/discount-tire/README.md) | 537 / 537 |
 | `askjamie-brg11-scheels` | [brandguard/scheels](../../capabilities/brandguard/scheels/README.md) | 254 / 254 |
-| `askjamie-brg12-mathews-archery` | [brandguard/mathews-archery](../../capabilities/brandguard/mathews-archery/README.md) | 496 / 548 |
-| **Total** | | **8,445 / 8,497** |
+| `askjamie-brg12-mathews-archery` | [brandguard/mathews-archery](../../capabilities/brandguard/mathews-archery/README.md) | 498 / 548 |
+| **Total** | | **8,447 / 8,497** |
 
-The SCHEELS folder includes all 254 default-branch files and all 332 historical file versions outside that tree. Mathews Archery includes 496 of 548 default-branch files and all 195 historical file versions outside that tree. The [Mathews business research and project excerpts](../../capabilities/brandguard/mathews-archery/origin/reviewed-extracts/README.md) preserve additional material from the 16 research dossiers and four project records. The 52 outstanding originals total 2,864,300 bytes. Full recovery still requires the source repository or its complete local checkout.
+The SCHEELS folder includes all 254 default-branch files and all 332 historical file versions outside that tree. Mathews Archery includes 498 of 548 default-branch files and all 195 historical file versions outside that tree. The [Mathews business research and project excerpts](../../capabilities/brandguard/mathews-archery/origin/reviewed-extracts/README.md) preserve additional material from the 16 research dossiers and four project records. The complete [knowledge question bank](../../capabilities/brandguard/mathews-archery/origin/repository/eval/knowledge-question-bank.md) and [operating-pattern map](../../capabilities/brandguard/mathews-archery/origin/repository/rag-source/2026-10-16-operating-pattern-map.json) are now in their original locations within the snapshot. The 50 outstanding originals total 2,809,226 bytes. They consist of 16 dossiers in Markdown, Word and PDF, a workbook with worked tackle-selection examples, and a research bibliography that includes links to model-specific configuration and servicing information. Deleting both the legacy repository and its checkout requires verifying all 548 original paths, modes and file contents in FoundRy first.
 
 ## Finding and verifying a file
 
@@ -39,7 +39,7 @@ The operating capability's registry storage and graduation fields govern authori
 
 ## Historical file versions
 
-Each folder's `origin/history/versions.json` maps historical filenames and source Git witnesses to the stored bytes. Across the 17 sources these indexes describe 2,791 source/version pairs drawn from 825 distinct blobs. When historical bytes already exist in FoundRy the index points to that file. The branch delta records in the applicable history folders describe paths added, changed or removed relative to each pinned main tree.
+Each folder's `origin/history/versions.json` maps historical filenames and source Git witnesses to the stored bytes. Across the 17 sources these indexes describe 2,795 source/version pairs drawn from 829 distinct blobs. When historical bytes already exist in FoundRy the index points to that file. The branch delta records in the applicable history folders describe paths added, changed or removed relative to each pinned main tree.
 
 ## GitHub records
 
