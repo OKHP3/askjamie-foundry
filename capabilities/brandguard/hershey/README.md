@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [Hershey](https://chatgpt.com/g/g-694ac93c34f08191931aa28bd8b3571f)
+
 ## Transferred repository
 
 545 of 545 tracked files from the source main branch are here.

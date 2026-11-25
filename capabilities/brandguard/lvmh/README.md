@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [LVMH](https://chatgpt.com/g/g-694adbdf17548191beedb2b973071bfa)
+
 ## Transferred repository
 
 552 of 552 tracked files from the source main branch are here.

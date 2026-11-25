@@ -2,6 +2,12 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT forks
+
+- [BFS: Framing Intelligent Futures 🔨🧠](https://chatgpt.com/g/g-68e8927c5cd48191863e613f04ee042d) (BFS01)
+- [BLDR](https://chatgpt.com/g/g-69240038e6888191984eb5411d621f9c)
+- [Builders FirstSource](https://chatgpt.com/g/g-6923ffb3dfe88191a9c480e4ce338bce)
+
 ## Transferred repository
 
 478 of 478 tracked files from the source main branch are here.

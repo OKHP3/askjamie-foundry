@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [Scheels](https://chatgpt.com/g/g-694acd390b4c81919e17a209752adf49)
+
 ## Transferred repository
 
 254 of 254 tracked files from the source main branch are here.

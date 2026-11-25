@@ -2,6 +2,10 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT fork
+
+- [Starbucks](https://chatgpt.com/g/g-694ac7b0f8b88191ab788b14898ba340)
+
 ## Transferred repository
 
 555 of 555 tracked files from the source main branch are here.

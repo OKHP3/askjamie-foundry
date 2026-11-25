@@ -2,6 +2,11 @@
 
 [Family index](../README.md)
 
+## BrandGuard GPT forks
+
+- [LEGO](https://chatgpt.com/g/g-69521b35ad808191b19cc8ad4189814c)
+- [Brick Toys — Billund in 1932](https://chatgpt.com/g/g-694adab7e534819197ebfce0f5862c21)
+
 ## Transferred repository
 
 539 of 539 tracked files from the source main branch are here.
