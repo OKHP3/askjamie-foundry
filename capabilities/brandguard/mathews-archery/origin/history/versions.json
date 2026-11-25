@@ -280,6 +280,46 @@
       "164ddbab0aef1f15f3fe1f810018c02cb1cfd309",
       "9d3ef56c25d57ada9edad6e71b631482cd7947b9",
       "dc41d6a76e5b25c2a315dbbe14950d07f2b7711b"
+    ],
+    "s48": [
+      "0a5213a342e3c8638e33e7ba013a26290b0224fe",
+      "138a7aa9b4a26bea33ad52ec51c8631e6f7a0899",
+      "29699f14eacb953f9bbbc8dfcea6a2f0dbefe8d2",
+      "2ab93ab2b2e24fc4ecdf9bc8fbe1b4f0b45244fe",
+      "2e9763d69539004f595f1ae152fda9682153a313",
+      "47a127b292bf1f2e7efe9e1853c92cb4a33a831e",
+      "491f0260c96f430b39990f1885885eb2b2fb950c",
+      "52782e15542cb62cdac78aa5835a2225c60de1a9",
+      "5e4cb3773af0b9c2e19d3ba0014ba496410030b6",
+      "6505986af4c0c9a20ef7ebea747c4102dc2ddfb8",
+      "663795864cef36beebb27cd4c43a10497cae1f3f",
+      "781b721d52b4545e5ddbf4eb4b486974522c8a6c",
+      "8dfe4e073f5e2393d7dcd591b75f077b0a4428f6",
+      "9097f15be64a9473c8cb931d8458f340f7784240",
+      "928f4776b44707c50721c7c62c60142086670114",
+      "ab758cc44466a3a04af70deb1c639e73931fb4cc",
+      "af87e2daf02aaf7c5ba4429575115cd6a89947e2",
+      "b543c0d5c4cbfc7abb510fc205b7f2b8abb990a8",
+      "b9e9731fb66d8aa99c4b6053226ff30c4dd9def3",
+      "c11df5e63cb219497effbde1d67c3c755fd8c9c2",
+      "c23b5a5d6a85640f356eb233c8b4d655e0d5ab1c",
+      "d080d8ffc88a7e5791abb02def77b28c7c850bf3",
+      "db0e18e0392ea5e71ed5aef15f2e038ffe8f64f6",
+      "e562409f952d8580f034fcd118eb1875320cc9fe",
+      "f3c4bea843bc9b3964cab95dfd0ad4442232c391",
+      "ff8c02a365af294e1ff24f135f82affcd090b49a"
+    ],
+    "s49": [
+      "45b2daf067870ce0db9f5f7bb73a38371d8bb75d",
+      "97f8f60ce3b4a26d03693fd5e65a0192d023b673",
+      "a2e9a82b612fb5f470742343d8856e4b222fcb0a",
+      "bc96a60f595fca83673c3ed7f3a78d99649be4d9",
+      "c1f203292ebe7132f237fce357d3c29b84b31624"
+    ],
+    "s50": [
+      "23781e4e4a126db751e6c7a2e8e46700ba68f9c6",
+      "81ab43bb23c208d8252ec8671cafe4b6c4548d9d",
+      "907cf56a30011aab8950ee7aeca930756ca7c84d"
     ]
   },
   "versions": [
@@ -360,6 +400,22 @@
         {
           "path": ".agents/skills/skill-creator/scripts/improve_description.py",
           "commit_set": "s5"
+        }
+      ]
+    },
+    {
+      "git_blob": "07574c47320b4b10629a11b58fe9027753d21f59",
+      "sha256": "56a4e5a0fc0a94a2fde3bab8c289353467b32d28f386e4b3354330da808abcf2",
+      "size": 3824,
+      "category": "repository-governance",
+      "stored_at": "objects/07574c47320b4b10629a11b58fe9027753d21f59.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s49"
         }
       ]
     },
@@ -588,6 +644,22 @@
         {
           "path": ".agents/skills/tcx-ws/i1/e1-balanced/no-skill/transcript.md",
           "commit_set": "s12"
+        }
+      ]
+    },
+    {
+      "git_blob": "18f8ea89482c68a5050a8960c2c680328abea907",
+      "sha256": "46a941e683c6c4184e82ad88d2cb1286064f9ae7326560c2a76f328585dc8bf9",
+      "size": 3007,
+      "category": "repository-governance",
+      "stored_at": "objects/18f8ea89482c68a5050a8960c2c680328abea907.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s35"
         }
       ]
     },
@@ -2066,6 +2138,22 @@
       ]
     },
     {
+      "git_blob": "9016c0a9cfce6f021f02d3ebdbd7cbce1266fe28",
+      "sha256": "24b30f6e10ac3051fc06362fd4fd72e8fe3d70739226dd09d5ad6f03a7f67ecc",
+      "size": 1937,
+      "category": "repository-governance",
+      "stored_at": "objects/9016c0a9cfce6f021f02d3ebdbd7cbce1266fe28.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s48"
+        }
+      ]
+    },
+    {
       "git_blob": "92d32cb3c586ce0ade33abd705365bb21f963a5a",
       "sha256": "87d3cf3be6528c28dc2ecc08b480d3f3f305efd9032c392fab6c2209b8882d24",
       "size": 8837,
@@ -2142,6 +2230,22 @@
         {
           "path": ".agents/skills/skill-creator/scripts/generate_report.py",
           "commit_set": "s5"
+        }
+      ]
+    },
+    {
+      "git_blob": "9797499fdb7e988387a71a5cd250170d8c18b621",
+      "sha256": "53b93d4e961b69dca3f441bd45d323d3ad4562ec87c4f2b3b0b3df27e2d80c31",
+      "size": 1912,
+      "category": "repository-governance",
+      "stored_at": "objects/9797499fdb7e988387a71a5cd250170d8c18b621.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s50"
         }
       ]
     },

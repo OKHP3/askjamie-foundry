@@ -1,0 +1,362 @@
+{
+  "date": "2026-10-16",
+  "scope": "17 rendered KNOW thread captures",
+  "combined_rendered_characters": 2955244,
+  "capture_boundary": "visible rendered main text and observed links; no hidden branch or export claim",
+  "source_statement_warning": "CanonSeal assertions, scores, predictions, prices, technical terms, and scenarios are not independently validated",
+  "sources": [
+    {
+      "source_ref": "S17",
+      "topic": "KNOW01",
+      "rendered_characters": 296644,
+      "ui_sha256": "978345ae2572e84cf3853af5f662cc4c34d04f55df41557bdf5fbdaaee67afef",
+      "observed_links": 582,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 27,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/pages/team-mathews",
+        "https://www.rmef.org/media/mathewsarcheryjoinsforceswithrmef/",
+        "https://mathewsinc.com/pages/target-team"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S15",
+      "topic": "KNOW02",
+      "rendered_characters": 105634,
+      "ui_sha256": "9e7eefe4501d492f21c2348a8db22379163e28aecfd7406a022cda0678cfd25a",
+      "observed_links": 213,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://www.rmef.org/media/mathewsarcheryjoinsforceswithrmef/",
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year",
+        "https://mathewsinc.com/pages/target-team"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S16",
+      "topic": "KNOW03",
+      "rendered_characters": 174952,
+      "ui_sha256": "4f19248c241e9a48bfc1d8d531c19c29fd22fff99e15cfca288bbffebf57a544",
+      "observed_links": 335,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year",
+        "https://mathewsinc.com/pages/become-a-retailer",
+        "https://mathewsinc.com/pages/team-mathews",
+        "https://mathewsinc.com/blogs/experience/team-mathews-dominates-the-2019-asa-season"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S14",
+      "topic": "KNOW04",
+      "rendered_characters": 184709,
+      "ui_sha256": "d35bceabc402553ecd0b8f71de1d0eb7c766ac43f6cfdcd127492acb9e5d71f9",
+      "observed_links": 251,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 9,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://www.mathewsinc.com/",
+        "https://archerytrade.org/survey-results-bow-preferences-and-buying-habits-for-three-generations/",
+        "https://archerytrade.org/keywords-that-hook-and-resonate-with-newcomers/",
+        "https://mathewsinc.com/",
+        "https://mathewsinc.com/pages/team-mathews",
+        "https://mathewsinc.com/pages/target-team",
+        "https://www.usarchery.org/article/Archery-Boom-Equals-Sustained-Interest",
+        "https://archerytrade.org/ata-creates-a-diversity-equity-and-inclusion-committee/",
+        "https://mathewsinc.com/pages/who-we-are"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S12",
+      "topic": "KNOW05",
+      "rendered_characters": 158886,
+      "ui_sha256": "4c77094b70959653f8427926b63a9c4b107610223c6f71698fafacc642c56825",
+      "observed_links": 316,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 22,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/team-mathews",
+        "https://mathewsinc.com/pages/who-we-are"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S06",
+      "topic": "KNOW06",
+      "rendered_characters": 150722,
+      "ui_sha256": "778b9d2109a860d12bd674fe92c0eaa26cb55b14e91636cdead02016f3b3f1c3",
+      "observed_links": 244,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year",
+        "https://www.rmef.org/partners/",
+        "https://mathewsinc.com/blogs/experience/mathews-acres-1",
+        "https://www.rmef.org/media/mathewsarcheryjoinsforceswithrmef/",
+        "https://stories.mathewsinc.com/",
+        "https://archerytrade.org/ata-announces-2020-trade-show-award-winners/"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S09",
+      "topic": "KNOW07",
+      "rendered_characters": 174863,
+      "ui_sha256": "c3c4017959509fb54589170ab155370b6f117dd16ef14cf062e0c4f32c2eea56",
+      "observed_links": 106,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://www.usarchery.org/news/dream-come-true-as-compound-mixed-team-added-to-2028-olympic-games-in-la"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S04",
+      "topic": "KNOW08",
+      "rendered_characters": 122072,
+      "ui_sha256": "cc760d4b6423915a4f413dd89dbaa07c4018f67d7b932ade1f36ca48296c57e0",
+      "observed_links": 180,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year",
+        "https://mathewsinc.com/pages/team-mathews",
+        "https://mathewsinc.com/pages/become-a-retailer",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://www.rmef.org/media/mathewsarcheryjoinsforceswithrmef/"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S11",
+      "topic": "KNOW09",
+      "rendered_characters": 164970,
+      "ui_sha256": "4e0bde9bd90b93bc27cbde4cc9dbe4da69596c8dc4a8eb16dbf371cd9baf635d",
+      "observed_links": 204,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/",
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/team-mathews"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S08",
+      "topic": "KNOW10",
+      "rendered_characters": 173810,
+      "ui_sha256": "4f8f3bf37be5155b55920fa7aed6d620da4fe445376265f92035458b2b8ab7b9",
+      "observed_links": 270,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 16,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/warranty",
+        "https://mathewsinc.com/pages/team-mathews",
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/target-team",
+        "https://mathewsinc.com/pages/terms-of-use"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S07",
+      "topic": "KNOW11",
+      "rendered_characters": 168825,
+      "ui_sha256": "f91599ce8834fffecacd8f6bb50ac65bae5fd28c81913e1f740e60b90c3a0019",
+      "observed_links": 258,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 10,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://archerytrade.org/bowhunting-and-archery-trends-what-we-learned-at-the-ata-summit/",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/pages/careers",
+        "https://mathewsinc.com/pages/team-mathews"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S10",
+      "topic": "KNOW12",
+      "rendered_characters": 215858,
+      "ui_sha256": "2c51041a53cd06e17056f46ee2e82816d32a3757423c6422b60441f0a0ae198f",
+      "observed_links": 296,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 9,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/warranty"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S05",
+      "topic": "KNOW13",
+      "rendered_characters": 143540,
+      "ui_sha256": "1676c858148d65aa0157612c5d920f4d00ca69dc0dd51bc29cd6c56ee0c5861c",
+      "observed_links": 235,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://www.rmef.org/media/mathewsarcheryjoinsforceswithrmef/"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S02",
+      "topic": "KNOW14",
+      "rendered_characters": 130628,
+      "ui_sha256": "59fbaf2f4170c6fc069b07048b0c40257ccf99637769a91157cecf8f2e86254d",
+      "observed_links": 207,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 7,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://www.usarchery.org/news/dream-come-true-as-compound-mixed-team-added-to-2028-olympic-games-in-la",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/target-team",
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S03",
+      "topic": "KNOW15",
+      "rendered_characters": 212980,
+      "ui_sha256": "a9ab93e525e6511c3fe6916dd3c809095d0e6bf16306ec800588c5044c83e55c",
+      "observed_links": 432,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 17,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://mathewsinc.com/pages/team-mathews",
+        "https://mathewsinc.com/blogs/experience/making-an-impact"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S01",
+      "topic": "KNOW16",
+      "rendered_characters": 210903,
+      "ui_sha256": "76ed34ad41a258adb0f87f32c4fb6f1d928de6a94e7cfc58c0fdae4dbc798ba9",
+      "observed_links": 393,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 51,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://mathewsinc.com/pages/warranty",
+        "https://mathewsinc.com/pages/who-we-are",
+        "https://www.usarchery.org/article/with-shared-goals-and-common-values-mathews-and-usa-archery-team-up-for-another-year",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://www.usarchery.org/news/dream-come-true-as-compound-mixed-team-added-to-2028-olympic-games-in-la",
+        "https://www.rmef.org/media/mathewsarcheryjoinsforceswithrmef/"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    },
+    {
+      "source_ref": "S13",
+      "topic": "KNOW17",
+      "rendered_characters": 165248,
+      "ui_sha256": "700bb99646c2906e6895832d451e48a1bf143ce73f5287bfb4da21167a6eb31e",
+      "observed_links": 238,
+      "explicit_user_display_markers": 5,
+      "explicit_assistant_display_markers": 5,
+      "question_line_count_heuristic": 0,
+      "review_scope": "structural and selected question/closing-claim triage; not full semantic or factual validation",
+      "disposition": "retain rendered source privately; compress selected needs into review queue; defer current factual promotion",
+      "primary_source_leads": [
+        "https://www.cpsc.gov/es/Noticias/2014/mission-archery-recalls-crossbows",
+        "https://mathewsinc.com/blogs/experience/making-an-impact",
+        "https://mathewsinc.com/pages/target-team"
+      ],
+      "leads_status": "observed in source UI; not fetched or verified current by harvest executor",
+      "archive_ready": false
+    }
+  ]
+}
