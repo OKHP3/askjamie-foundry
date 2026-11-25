@@ -1,0 +1,83 @@
+name: GPT-BRG12
+full_name: "OKHP³ BrandGuard™ — Mathews Archery"
+version: "0.1.0"
+description: |
+  Custom GPT for Mathews Archery brand alignment, mission delivery, 
+  and content generation across web, social, Ko-fi, and YouTube platforms.
+
+repository:
+  url: https://github.com/OKHP3/AskJamie-GPT-BRG12
+  owner: OKHP3
+  name: AskJamie-GPT-BRG12
+
+links:
+  # Main Project Links
+  chatgpt_project:
+    name: "ChatGPT Project"
+    url: "https://chatgpt.com/g/g-BRG12"
+    description: "Custom GPT instance for Mathews Archery BrandGuard"
+  
+  custom_gpt:
+    name: "Custom GPT"
+    url: "https://chat.openai.com/g/g-BRG12"
+    description: "OpenAI Custom GPT configuration"
+  
+  notion_brg12:
+    name: "Notion BRG12"
+    url: "https://notion.so/brg12"
+    description: "Notion workspace for BRG12 project management"
+  
+  askjamie_page:
+    name: "AskJamie Page"
+    url: "https://askjamie.ai/brg12"
+    description: "Public-facing AskJamie BRG12 landing page"
+  
+  mathews_lens:
+    name: "Mathews Archery Lens"
+    url: "https://mathewsarchery.com/brandguard"
+    description: "Mathews Archery brand lens and guidelines"
+
+structure:
+  folders:
+    - name: product
+      description: "Product specifications and requirements"
+    - name: prompts
+      description: "GPT prompts and instructions"
+    - name: knowledge
+      description: "Curated knowledge base and training data"
+    - name: rag-source
+      description: "Source materials for RAG (Retrieval-Augmented Generation)"
+    - name: tests
+      description: "Test suites and validation scripts"
+    - name: eval
+      description: "Evaluation metrics and benchmarks"
+    - name: build
+      description: "Build artifacts and scripts"
+    - name: gtm
+      description: "Go-to-market materials"
+      subfolders:
+        - web: "Web landing content and assets"
+        - social: "Social media drafts and content"
+        - kofi: "Ko-fi sales copy and materials"
+        - youtube: "YouTube scripts and transcripts"
+    - name: docs
+      description: "Documentation and guides"
+    - name: ops
+      description: "Operations and automation scripts"
+    - name: releases
+      description: "Release artifacts and version history"
+    - name: assets
+      description: "Shared assets (images, media, templates)"
+
+maintainers:
+  - name: "OKHP³ Team"
+    email: "team@okhp3.com"
+
+license: MIT
+
+tags:
+  - brandguard
+  - mathews-archery
+  - custom-gpt
+  - okhp3
+  - content-generation

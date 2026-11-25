@@ -3,6 +3,7 @@
 ## 2026-11-24 Legacy repository transfers
 
 - Record the 17 owner-selected Enterprise Sleuth and BrandGuard sources in their canonical folders. Each source record gives the original commit, stored Git tree and exact coverage.
+- Complete the SCHEELS source tree and historical file index. Add ten Mathews Archery project records and eight earlier versions, and verify both recorded Mathews branch comparisons against the expanded tree.
 - Support nested capability destinations and separate public legacy source receipts from ongoing capability graduation and workspace custody.
 
 ## 2026-11-17: Career AI resilience evidence contract

@@ -1,0 +1,65 @@
+{
+  "2657915137": {
+    "diff_hunk": "@@ -0,0 +1,42 @@\n+name: AskJamie-GPT-BRG10\n+description: Discount Tire — OKHP³ BrandGuard™ GPT Configuration",
+    "original_position": 2,
+    "original_start_line": 1,
+    "position": 2,
+    "start_line": 1,
+    "start_side": "RIGHT",
+    "subject_type": "line"
+  },
+  "2657917219": {
+    "diff_hunk": "@@ -0,0 +1,42 @@\n+name: AskJamie-GPT-BRG10\n+description: Discount Tire — OKHP³ BrandGuard™ GPT Configuration\n+version: 1.0.0\n+\n+# Official and reference links\n+links:\n+  discount_tire_official:\n+    url: https://www.discounttire.com\n+    description: Discount Tire Official Website\n+  \n+  askjamie_lens:\n+    url: https://askjamie.okhp3.com\n+    description: AskJamie Lens Page\n+  \n+  chatgpt_project:\n+    url: https://chatgpt.com\n+    description: ChatGPT Project\n+  \n+  notion:\n+    url: https://notion.so\n+    description: Notion Documentation\n+  \n+  custom_gpt:\n+    url: https://chat.openai.com/gpts\n+    description: Custom GPT Platform\n+\n+# Repository structure\n+structure:\n+  prompts: \"Prompt spine and configurations\"\n+  knowledge: \"Knowledge base and training data\"\n+  eval: \"Evaluation packs and testing materials\"\n+  web: \"Web assets and frontend resources\"\n+  ops: \"Operational configurations and deployment\"\n+  build: \"Build artifacts and compiled resources\"\n+\n+# Metadata\n+metadata:\n+  brand: \"Discount Tire\"\n+  framework: \"OKHP³ BrandGuard™\"\n+  model: GPT-BRG10\n+  visibility: public\n+  data_policy: \"Public information only; reference discounttire.com for official details\"",
+    "original_position": 42,
+    "original_start_line": 1,
+    "position": 42,
+    "start_line": 1,
+    "start_side": "RIGHT",
+    "subject_type": "line"
+  },
+  "2657917222": {
+    "diff_hunk": "@@ -0,0 +1,42 @@\n+name: AskJamie-GPT-BRG10",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "line"
+  },
+  "2657917225": {
+    "diff_hunk": "@@ -0,0 +1,42 @@\n+name: AskJamie-GPT-BRG10\n+description: Discount Tire — OKHP³ BrandGuard™ GPT Configuration\n+version: 1.0.0\n+\n+# Official and reference links\n+links:\n+  discount_tire_official:\n+    url: https://www.discounttire.com\n+    description: Discount Tire Official Website\n+  \n+  askjamie_lens:\n+    url: https://askjamie.okhp3.com\n+    description: AskJamie Lens Page\n+  \n+  chatgpt_project:\n+    url: https://chatgpt.com\n+    description: ChatGPT Project\n+  \n+  notion:\n+    url: https://notion.so\n+    description: Notion Documentation\n+  \n+  custom_gpt:\n+    url: https://chat.openai.com/gpts\n+    description: Custom GPT Platform\n+\n+# Repository structure\n+structure:\n+  prompts: \"Prompt spine and configurations\"\n+  knowledge: \"Knowledge base and training data\"\n+  eval: \"Evaluation packs and testing materials\"\n+  web: \"Web assets and frontend resources\"\n+  ops: \"Operational configurations and deployment\"\n+  build: \"Build artifacts and compiled resources\"\n+\n+# Metadata\n+metadata:\n+  brand: \"Discount Tire\"\n+  framework: \"OKHP³ BrandGuard™\"\n+  model: GPT-BRG10",
+    "original_position": 40,
+    "position": 40,
+    "subject_type": "line"
+  },
+  "2657917229": {
+    "diff_hunk": "@@ -1,55 +1,2 @@\n # AskJamie-GPT-BRG11\n-## GPT-BRG11: Scheels — OKHP³ BrandGuard™\n-\n-> **Scheels:** “The outdoors are covered. I covered your name in here too.”\n-\n-This repository is the dedicated storage + version-control home for all assets related to:\n-\n-**GPT-BRG11: Scheels - OKHP³ BrandGuard™**\n-\n-It exists to keep the BRG11 system aligned across the public web page, the Custom GPT, the ChatGPT Project workbench, and the Notion operating page.\n-\n----\n-\n-## Canonical links (do not drift)\n-- **SCHEELS (official site):**\n-  - https://www.scheels.com\n-- **AskJamie lens page (public hub for this lens):**\n-  - https://askjamie.bot/lens-system/okhp3-brandguard/scheels/index.html\n-- **Current upstream source path (AskJamie monorepo reference):**\n-  - https://github.com/OKHP3/AskJamie/blob/main/lens-system/okhp3-brandguard/scheels/index.html\n-- **ChatGPT Project (workbench):**\n-  - https://chatgpt.com/g/g-p-694a1c44eadc819199029ef08d186cc6-gpt-brg11-scheels-okhp3-brandguardtm/project\n-- **Notion (BRG11 Sentinel / operating page):**\n-  - https://www.notion.so/overkillhill/BRG11-Scheels-BrandGuard-Sentinel-86eb315889cc41d2b4fd7f686e5030d2\n-- **Custom GPT (runtime surface):**\n-  - https://chatgpt.com/g/g-694acd390b4c81919e17a209752adf49-scheels\n-\n----\n-\n-## What lives in this repo\n-- **Prompt / instruction spine** (the “BrandGuard™ lens” behavior)\n-- **Knowledge / RAG packs** (compiled, public-source content intended for GPT Knowledge uploads)\n-- **Eval / regression tests** (prompts that probe behavior + edge cases)\n-- **Web lens page assets** (content that supports the AskJamie lens-system page)\n-\n----\n-\n-## Alignment rules (BRG11 governance)\n-1. **Name must match everywhere:** `GPT-BRG11` + `Scheels` + `OKHP³ BrandGuard™`\n-2. **Links must match everywhere:** Website ↔ Repo ↔ Notion ↔ Project ↔ Custom GPT\n-3. **Public-source only:** store only materials appropriate for public-facing reference; route authoritative info to **scheels.com**\n-4. **Update flow:** edit → rebuild packs → update GPT Knowledge / Project files → update README + Notes\n-\n----\n-\n-## Suggested repo structure\n-```text\n-/\n-├─ README.md\n-├─ gpt_manifest.yaml          # optional: single-source link registry\n-├─ /src                       # raw public-source notes/corpus\n-├─ /prompts                   # system + style + guardrails\n-├─ /build                     # compiled packs for upload\n-├─ /eval                      # test harness + rubrics\n-└─ /web                       # lens page assets / fragments\n+Storage + source-of-truth for GPT-BRG11: Scheels — OKHP³ BrandGuard™. Contains prompts, knowledge packs, eval tests, and the AskJamie lens webpage. Public-source focused; routes users to official SCHEELS (scheels.com). Canonical links in README.",
+    "original_position": 56,
+    "position": 56,
+    "subject_type": "line"
+  },
+  "4057257180": {
+    "diff_hunk": "@@ -14,18 +15,27 @@ jobs:\n     runs-on: ubuntu-latest\n     steps:\n       - name: Check out repository\n-        uses: actions/checkout@v6\n+        uses: actions/checkout@v7\n       - name: Set up Python\n-        uses: actions/setup-python@v6\n+        uses: actions/setup-python@v7\n         with:\n           python-version: \"3.12\"\n       - name: Compare configured and latest stable releases\n         id: versions\n         continue-on-error: true\n         run: python ops/check-technology-versions.py\n-      - name: Open or update drift issue\n+      - name: Test release parsing\n+        run: python -m unittest discover -s ops -p 'test_*.py'\n+      - name: Reject incomplete evidence\n         if: steps.versions.outcome == 'failure'\n-        uses: actions/github-script@v8\n+        run: |\n+          set +e\n+          python ops/check-technology-versions.py\n+          status=$?\n+          if [ \"$status\" -gt 1 ]; then exit \"$status\"; fi",
+    "original_position": 33,
+    "original_start_line": 33,
+    "position": 33,
+    "start_line": 33,
+    "start_side": "RIGHT",
+    "subject_type": "line"
+  },
+  "4057257182": {
+    "diff_hunk": "@@ -14,18 +15,27 @@ jobs:\n     runs-on: ubuntu-latest\n     steps:\n       - name: Check out repository\n-        uses: actions/checkout@v6\n+        uses: actions/checkout@v7\n       - name: Set up Python\n-        uses: actions/setup-python@v6\n+        uses: actions/setup-python@v7\n         with:\n           python-version: \"3.12\"\n       - name: Compare configured and latest stable releases\n         id: versions\n         continue-on-error: true\n         run: python ops/check-technology-versions.py\n-      - name: Open or update drift issue\n+      - name: Test release parsing\n+        run: python -m unittest discover -s ops -p 'test_*.py'",
+    "original_position": 25,
+    "original_start_line": 27,
+    "position": 25,
+    "start_line": 27,
+    "start_side": "RIGHT",
+    "subject_type": "line"
+  },
+  "4057257186": {
+    "diff_hunk": "@@ -43,3 +43,13 @@ application stack.\n - [Nix release announcements](https://discourse.nixos.org/c/announcements/nix-releases/30)\n - [CommonMark specification](https://spec.commonmark.org/current/)\n - [YAML specification](https://yaml.org/spec/1.2.2/)\n+\n+## September 20 maintenance review\n+\n+The workflow now uses checkout 7, setup-python 7, and github-script 9.",
+    "original_position": 7,
+    "original_start_line": 47,
+    "position": 7,
+    "start_line": 47,
+    "start_side": "RIGHT",
+    "subject_type": "line"
+  }
+}

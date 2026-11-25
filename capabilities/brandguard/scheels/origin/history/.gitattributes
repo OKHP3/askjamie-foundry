@@ -1,0 +1,2 @@
+# Keep the verified recovery receipts byte-identical on Windows and POSIX.
+*-provenance.json text eol=lf
