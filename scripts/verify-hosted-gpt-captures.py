@@ -88,10 +88,13 @@ def verify_fork_release(revision, folder, ident, record, instructions, tracked):
     release_dir = posixpath.dirname(receipt_path)
     comparison = json.loads(git_blob(revision, f"{release_dir}/editor-comparison.json"))
     receipt = json.loads(git_blob(revision, receipt_path))
+    plugin = receipt["plugin"]
     fields = record["editor_fields"]
     verify(comparison["source_editor"] == fields["editor"], f"{ident} editor and release pairing")
     verify(comparison["source_capture_sha256"] == FORK_EDITOR_DIGEST, f"{ident} editor evidence digest")
     verify(comparison["release_id"] == receipt["release"]["release_id"] == posixpath.basename(release_dir), f"{ident} release identity")
+    verify(plugin["current_release_id"] == comparison["release_id"], f"{ident} recorded current release")
+    verify(plugin["scope"] == "USER" and plugin["discoverability"] == "PRIVATE", f"{ident} captured hosted visibility")
     files = verified_release_files(revision, ident, receipt_path)
     header, separator, body = files[NATIVE_SKILL].partition(b"\n---\n\n")
     verify(header.startswith(b"---\n") and separator and body == instructions, f"{ident} native skill body")
@@ -114,7 +117,7 @@ def verify_fork_release(revision, folder, ident, record, instructions, tracked):
             if source_path:
                 git_hash = hashlib.sha1(f"blob {len(blob)}\0".encode() + blob).hexdigest()
                 verify(git_hash == item["git_blob"] == tracked.get(source_path), f"{ident} public source {source_path}")
-    return len(files)
+    return plugin["plugin_id"], comparison["release_id"], len(files)
 
 
 def verify_brandguard_forks(revision):
@@ -127,7 +130,9 @@ def verify_brandguard_forks(revision):
             tracked[path] = metadata.split()[2]
     pattern = re.compile(rf"({family}/[^/]+)/origin/gpt-config/(g-[a-f0-9]{{32}})/config\.json")
     entries = {}
-    release_totals = []
+    plugins = set()
+    releases = set()
+    file_count = 0
     for path in tracked:
         route = pattern.fullmatch(path)
         if not route:
@@ -139,12 +144,16 @@ def verify_brandguard_forks(revision):
         verify(fields["editor"].endswith(f"/{ident}"), f"{ident} GPT identity")
         source_link = posixpath.relpath(path, edition)
         readme = git_blob(revision, f"{edition}/README.md").decode("utf-8")
-        verify(any(ident in line and f"({source_link})" in line for line in readme.splitlines()), f"{ident} edition route")
         prompt = fields["instructions"]
         instructions = git_blob(revision, posixpath.join(folder, prompt["file"]))
         verify(hashlib.sha256(instructions).hexdigest() == prompt["sha256"], f"{ident} source instructions")
-        if "hosted_release_receipt" in record:
-            release_totals.append(verify_fork_release(revision, folder, ident, record, instructions, tracked))
+        plugin, release, count = verify_fork_release(revision, folder, ident, record, instructions, tracked)
+        verify(plugin not in plugins and release not in releases, f"{ident} distinct plugin and release")
+        plugins.add(plugin)
+        releases.add(release)
+        file_count += count
+        links = (f"https://chatgpt.com/g/{ident})", f"({source_link})", f"(https://chatgpt.com/plugins/{plugin})")
+        verify(any(all(link in line for link in links) for line in readme.splitlines()), f"{ident} linked GPT, source and plugin")
         fields["instructions"] = instructions.decode("utf-8")
         fields["starters"] = "\n".join(fields["starters"])
         order = record["source_order"]
@@ -159,7 +168,7 @@ def verify_brandguard_forks(revision):
     raw = json.dumps(source, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     verify(hashlib.sha256(raw).hexdigest() == FORK_EDITOR_DIGEST, "BrandGuard fork editor capture digest")
     print(f"Verified {len(entries)} BrandGuard configurations and the {len(raw):,}-byte editor capture: {FORK_EDITOR_DIGEST}")
-    print(f"Verified {len(release_totals)} BrandGuard releases containing {sum(release_totals)} files")
+    print(f"Verified {len(plugins)} distinct BrandGuard plugins and {len(releases)} releases containing {file_count} files")
 
 
 def main():

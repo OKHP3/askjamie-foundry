@@ -1,0 +1,94 @@
+{
+  "source_capture_sha256": "3b70e0aa6170eee86746b0480a84f0a892b7b3aa9d64b58ba112375e330f7e0c",
+  "source_editor": "https://chatgpt.com/gpts/editor/g-68e8927c5cd48191863e613f04ee042d",
+  "display_name": "BFS: Framing Intelligent Futures \ud83d\udd28\ud83e\udde0",
+  "release_id": "pluginrel_8813d25e8dd081919cb2b016e9e28b18",
+  "verified_skill_body_equal": true,
+  "display_name_equal": true,
+  "description_equal": true,
+  "starter_count": 12,
+  "native_starter_presentations": 3,
+  "starters_sha256": "709611d12144deccc2336d0a61d12ff45e9a302989d869ecb5a26085b678a40d",
+  "starter_comparison": [
+    {
+      "ordinal": 1,
+      "source_chars": 54,
+      "rendered_chars": 54,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 2,
+      "source_chars": 61,
+      "rendered_chars": 61,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 3,
+      "source_chars": 58,
+      "rendered_chars": 58,
+      "comparison": "exact"
+    },
+    {
+      "ordinal": 4,
+      "source_chars": 60,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 5,
+      "source_chars": 66,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 6,
+      "source_chars": 66,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 7,
+      "source_chars": 60,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 8,
+      "source_chars": 60,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 9,
+      "source_chars": 63,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 10,
+      "source_chars": 64,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 11,
+      "source_chars": 67,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    },
+    {
+      "ordinal": 12,
+      "source_chars": 61,
+      "rendered_chars": null,
+      "comparison": "source_only"
+    }
+  ],
+  "action_count": 0,
+  "source_upload_occurrences": 20,
+  "hosted_index_occurrences": 20,
+  "filename_order_equal": false,
+  "filename_multiset_equal": true,
+  "source_filenames_missing": [],
+  "hosted_filenames_extra": [],
+  "duplicate_name_groups": []
+}

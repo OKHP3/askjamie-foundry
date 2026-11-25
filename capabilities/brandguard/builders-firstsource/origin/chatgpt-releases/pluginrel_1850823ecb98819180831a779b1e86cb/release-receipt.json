@@ -1,0 +1,333 @@
+{
+  "release": {
+    "release_id": "pluginrel_1850823ecb98819180831a779b1e86cb",
+    "version": "0.3.1+bundle.f0efa7ea83d88469d665de355aba6e7e",
+    "created_at": "2026-11-25T03:12:36.122809Z",
+    "is_current": true,
+    "creator_account_user_id": null
+  },
+  "plugin": {
+    "plugin_id": "plugin_2c9e14cb7f888191a5665ed45beb0301",
+    "name": "gpt-597df22e89753d54e42d6455769ce3d0",
+    "description": "The Builders FirstSource GPT is the master craftsman of U.S. construction\u2014your expert on lumber, trusses, doors, windows, and other materials. Learn how America builds with BFS insight and connect directly at BLDR.com. \ud83e\udeb5\ud83d\udd2e",
+    "version": "0.3.1+bundle.f0efa7ea83d88469d665de355aba6e7e",
+    "current_release_id": "pluginrel_1850823ecb98819180831a779b1e86cb",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  "archive_filename": "package.tar.gz",
+  "archive_sha256": "347e1d329117ea9fac2d9cd49ca44f2cae21f2b2e5ba370bfffd5a3dce642b35",
+  "archive_bytes": 22660394,
+  "verification": "Pinned tar members matched Creator's complete list by path and size. Host file-API text was independently hashed and checked, and non-archive compatibility content is listed separately.",
+  "files": [
+    {
+      "path": "plugin.json",
+      "bytes": 1631,
+      "sha256": "f81dfc1b773df30d93a93df5a12e1b7e16bf62ad5929f5d4312b8fab6fee133d",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "assets/gpt-icon.png",
+      "bytes": 350724,
+      "sha256": "d5e5702ed6a36059a88edc3d89a257dec0ed7012b862a31b15110240012e732d",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/SKILL.md",
+      "bytes": 7265,
+      "sha256": "731cf55c3a0ba179569393f31c12bb7509cdbd1dc388508c5f558baea5c4738b",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/agents/openai.yaml",
+      "bytes": 198,
+      "sha256": "747d8d7957c2ae00867526bc4e9a4af37be091028039b5a2d2c1f5eff3e29c4a",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/lookup/knowledge-index.json",
+      "bytes": 4085,
+      "sha256": "e32dc6883788336f7bce7033786ad1d8377175f9816a85a1578d64d34d9d0cf5",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/Brand-Guarding the AI Frontier_ OverKill Hill P\u00b3\u2122, AskJamie\u2122, and the Interface Economy.docx",
+      "bytes": 111695,
+      "sha256": "4fcd2ef22cc203ea70cc7358dda7bf21c62dcec161afa67101228655a2f07a97",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW01_ProductCatalogOverviewSpecGuide_v02.0.docx",
+      "bytes": 41646,
+      "sha256": "21dbc016118fedb2261420a89f9d6122fc0ea846835e0f7b732023a9bc67e2ee",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW02_LumberTermsGradesJargonDecoder_v02.0.docx",
+      "bytes": 35146,
+      "sha256": "e37d51dc5bd5063d2b610da4a64cdd79e48e53293d470fde6d316bfd78f60c5b",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW03_DimensionalLumberSizesConversionsRulesofThumb_v02.0.docx",
+      "bytes": 3098032,
+      "sha256": "8f2cfca8fc3da37ea12fce69507d190d6c70a081b82275d55c8b55d06d46fb16",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW04_MSFMBFBoardFootVolumeCalculationGuide_v02.0.docx",
+      "bytes": 3607399,
+      "sha256": "34dfd7b526569c08ea348983be6ed13648169142513513c7b34d444e78f4436c",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW05_PrefabricatedComponentsTrussesWallPanelsEWP_v02.0.docx",
+      "bytes": 32442,
+      "sha256": "05a8b28da3074106b161eba924625bbe232502bd19dc099fc2157f0eb2dfbd60",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW06_RoofingRoofUnderlayments_v02.0.docx",
+      "bytes": 34538,
+      "sha256": "c92f5e111169c7a525a32ab608f4508e3200814707c2ae92615c8c25762469d5",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW07_ExteriorSidingCladdingProducts_v02.0.docx",
+      "bytes": 31258,
+      "sha256": "4457490690d6275af02c128b18b8d58250f4ec4f00893e9323b62d5127cfa15b",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW08_MultiFamilyVolumeMillworkTurnkeySolutions_v02.0.docx",
+      "bytes": 2937131,
+      "sha256": "6ff7d9bd0d86e7afc7c0e81e478aa845da674e21c7761e946366ea134cfa61f7",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW09_GeographicPresenceCoverage_v02.0.docx",
+      "bytes": 2871619,
+      "sha256": "69f6e690b16a8c1bde991c43424c567627c8e70ccfe192bbf751c5641ee7f6d6",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW10_HistoryAcquisitionsLegacyBrands_v02.0.docx",
+      "bytes": 33692,
+      "sha256": "3d52755532f94ac2158ea85c149d2200c093696e56b8db4456937057e9fe1dec",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW11_StructuralDesignPrinciplesBestPractices_v02.0.docx",
+      "bytes": 38435,
+      "sha256": "f946bd1e37501b9e656d1ff95b1cb3ef5869fea7bd7eeec26a7b83b041ca7df3",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW12_LimitationsConstraintsWhatBFSDoesntDo_v02.0.docx",
+      "bytes": 34592,
+      "sha256": "c986b399cc457511650b84542ac45ee5381590b8a7f91c111dc6fb8a07b55d80",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW13_CaseStudyShowcaseProjects_v02.0.docx",
+      "bytes": 5677555,
+      "sha256": "732cf34b2a562752fe9d0dff6f829d3b9db5564934138a58170cad8e65d76e56",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW14_SpecsvsLocalCodeStateDifferences_v02.0.docx",
+      "bytes": 31525,
+      "sha256": "574a3474d9fc9bc01d40e50a23c93917d834391e99094e00a111654a687364c2",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW15_DeliveryLogisticsGuidelines_v02.0.docx",
+      "bytes": 3594001,
+      "sha256": "b3a096601552253e5e5aa83f8c0ac5782cad651f2b82ed41cb9a0da67a3a06db",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW16_MaterialsSustainabilityCertifications_v02.0.docx",
+      "bytes": 35833,
+      "sha256": "2806d1f208ca3d4e7f8e7a7f3a40b285c8c2f979752810f0f7031048e6f2eaa4",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW17_CommonJobsiteMistakesLessonsLearned_v02.0.docx",
+      "bytes": 32381,
+      "sha256": "dbf8a3c490508d3ec5a73530ed9ea1817eb85721f5cb7d7b7a4f38b5b7ad81c7",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW18_GlossaryofIndustryAcronymsAbbreviations_v02.0.docx",
+      "bytes": 38857,
+      "sha256": "0c5171a6eadb9a0d18276b6fa2899f3a9b2ebb8d3dd787d6de46ff821845031b",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/KNOW19_ MonthlyBFSNewsMarketScan_v02.0.docx",
+      "bytes": 22072,
+      "sha256": "fab0ad3699b89a8f6aaf9a1a06ffe5a87f303adb57f9183bbefddc878c951788",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "bytes": 1569,
+      "sha256": "19698c4f8077d7b244480bca6ef05fe6e0016abb56a0e6cb52993cef09eb6822",
+      "recovery": "get_plugin_files; separately stored beside pinned tar"
+    }
+  ],
+  "packaged_conversation_starters": [
+    "\ud83e\udeb5 How do I calculate board-feet for my lumber takeoff?",
+    "\ud83e\uddf1 What\u2019s the real difference between LVL, LSL, and PSL beams?",
+    "\ud83c\udf2a\ufe0f How do wind and snow loads change framing requirements?"
+  ],
+  "packaged_skill_bodies": {
+    "skills/instructions/SKILL.md": {
+      "sha256": "42c8cd21a624aa8663fda1c71cb876b3550fb453c07afa65abe9e364c8e03614",
+      "bytes": 7132
+    }
+  },
+  "knowledge_index": [
+    {
+      "name": "Brand-Guarding the AI Frontier_ OverKill Hill P\u00b3\u2122, AskJamie\u2122, and the Interface Economy.docx",
+      "path": "skills/instructions/references/Brand-Guarding the AI Frontier_ OverKill Hill P\u00b3\u2122, AskJamie\u2122, and the Interface Economy.docx",
+      "packaged_bytes": 111695,
+      "sha256": "4fcd2ef22cc203ea70cc7358dda7bf21c62dcec161afa67101228655a2f07a97",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW01_ProductCatalogOverviewSpecGuide_v02.0.docx",
+      "path": "skills/instructions/references/KNOW01_ProductCatalogOverviewSpecGuide_v02.0.docx",
+      "packaged_bytes": 41646,
+      "sha256": "21dbc016118fedb2261420a89f9d6122fc0ea846835e0f7b732023a9bc67e2ee",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW02_LumberTermsGradesJargonDecoder_v02.0.docx",
+      "path": "skills/instructions/references/KNOW02_LumberTermsGradesJargonDecoder_v02.0.docx",
+      "packaged_bytes": 35146,
+      "sha256": "e37d51dc5bd5063d2b610da4a64cdd79e48e53293d470fde6d316bfd78f60c5b",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW03_DimensionalLumberSizesConversionsRulesofThumb_v02.0.docx",
+      "path": "skills/instructions/references/KNOW03_DimensionalLumberSizesConversionsRulesofThumb_v02.0.docx",
+      "packaged_bytes": 3098032,
+      "sha256": "8f2cfca8fc3da37ea12fce69507d190d6c70a081b82275d55c8b55d06d46fb16",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW04_MSFMBFBoardFootVolumeCalculationGuide_v02.0.docx",
+      "path": "skills/instructions/references/KNOW04_MSFMBFBoardFootVolumeCalculationGuide_v02.0.docx",
+      "packaged_bytes": 3607399,
+      "sha256": "34dfd7b526569c08ea348983be6ed13648169142513513c7b34d444e78f4436c",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW05_PrefabricatedComponentsTrussesWallPanelsEWP_v02.0.docx",
+      "path": "skills/instructions/references/KNOW05_PrefabricatedComponentsTrussesWallPanelsEWP_v02.0.docx",
+      "packaged_bytes": 32442,
+      "sha256": "05a8b28da3074106b161eba924625bbe232502bd19dc099fc2157f0eb2dfbd60",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW06_RoofingRoofUnderlayments_v02.0.docx",
+      "path": "skills/instructions/references/KNOW06_RoofingRoofUnderlayments_v02.0.docx",
+      "packaged_bytes": 34538,
+      "sha256": "c92f5e111169c7a525a32ab608f4508e3200814707c2ae92615c8c25762469d5",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW07_ExteriorSidingCladdingProducts_v02.0.docx",
+      "path": "skills/instructions/references/KNOW07_ExteriorSidingCladdingProducts_v02.0.docx",
+      "packaged_bytes": 31258,
+      "sha256": "4457490690d6275af02c128b18b8d58250f4ec4f00893e9323b62d5127cfa15b",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW08_MultiFamilyVolumeMillworkTurnkeySolutions_v02.0.docx",
+      "path": "skills/instructions/references/KNOW08_MultiFamilyVolumeMillworkTurnkeySolutions_v02.0.docx",
+      "packaged_bytes": 2937131,
+      "sha256": "6ff7d9bd0d86e7afc7c0e81e478aa845da674e21c7761e946366ea134cfa61f7",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW09_GeographicPresenceCoverage_v02.0.docx",
+      "path": "skills/instructions/references/KNOW09_GeographicPresenceCoverage_v02.0.docx",
+      "packaged_bytes": 2871619,
+      "sha256": "69f6e690b16a8c1bde991c43424c567627c8e70ccfe192bbf751c5641ee7f6d6",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW10_HistoryAcquisitionsLegacyBrands_v02.0.docx",
+      "path": "skills/instructions/references/KNOW10_HistoryAcquisitionsLegacyBrands_v02.0.docx",
+      "packaged_bytes": 33692,
+      "sha256": "3d52755532f94ac2158ea85c149d2200c093696e56b8db4456937057e9fe1dec",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW11_StructuralDesignPrinciplesBestPractices_v02.0.docx",
+      "path": "skills/instructions/references/KNOW11_StructuralDesignPrinciplesBestPractices_v02.0.docx",
+      "packaged_bytes": 38435,
+      "sha256": "f946bd1e37501b9e656d1ff95b1cb3ef5869fea7bd7eeec26a7b83b041ca7df3",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW12_LimitationsConstraintsWhatBFSDoesntDo_v02.0.docx",
+      "path": "skills/instructions/references/KNOW12_LimitationsConstraintsWhatBFSDoesntDo_v02.0.docx",
+      "packaged_bytes": 34592,
+      "sha256": "c986b399cc457511650b84542ac45ee5381590b8a7f91c111dc6fb8a07b55d80",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW13_CaseStudyShowcaseProjects_v02.0.docx",
+      "path": "skills/instructions/references/KNOW13_CaseStudyShowcaseProjects_v02.0.docx",
+      "packaged_bytes": 5677555,
+      "sha256": "732cf34b2a562752fe9d0dff6f829d3b9db5564934138a58170cad8e65d76e56",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW14_SpecsvsLocalCodeStateDifferences_v02.0.docx",
+      "path": "skills/instructions/references/KNOW14_SpecsvsLocalCodeStateDifferences_v02.0.docx",
+      "packaged_bytes": 31525,
+      "sha256": "574a3474d9fc9bc01d40e50a23c93917d834391e99094e00a111654a687364c2",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW15_DeliveryLogisticsGuidelines_v02.0.docx",
+      "path": "skills/instructions/references/KNOW15_DeliveryLogisticsGuidelines_v02.0.docx",
+      "packaged_bytes": 3594001,
+      "sha256": "b3a096601552253e5e5aa83f8c0ac5782cad651f2b82ed41cb9a0da67a3a06db",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW16_MaterialsSustainabilityCertifications_v02.0.docx",
+      "path": "skills/instructions/references/KNOW16_MaterialsSustainabilityCertifications_v02.0.docx",
+      "packaged_bytes": 35833,
+      "sha256": "2806d1f208ca3d4e7f8e7a7f3a40b285c8c2f979752810f0f7031048e6f2eaa4",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW17_CommonJobsiteMistakesLessonsLearned_v02.0.docx",
+      "path": "skills/instructions/references/KNOW17_CommonJobsiteMistakesLessonsLearned_v02.0.docx",
+      "packaged_bytes": 32381,
+      "sha256": "dbf8a3c490508d3ec5a73530ed9ea1817eb85721f5cb7d7b7a4f38b5b7ad81c7",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW18_GlossaryofIndustryAcronymsAbbreviations_v02.0.docx",
+      "path": "skills/instructions/references/KNOW18_GlossaryofIndustryAcronymsAbbreviations_v02.0.docx",
+      "packaged_bytes": 38857,
+      "sha256": "0c5171a6eadb9a0d18276b6fa2899f3a9b2ebb8d3dd787d6de46ff821845031b",
+      "identical_to_packaged_icon": false
+    },
+    {
+      "name": "KNOW19_ MonthlyBFSNewsMarketScan_v02.0.docx",
+      "path": "skills/instructions/references/KNOW19_ MonthlyBFSNewsMarketScan_v02.0.docx",
+      "packaged_bytes": 22072,
+      "sha256": "fab0ad3699b89a8f6aaf9a1a06ffe5a87f303adb57f9183bbefddc878c951788",
+      "identical_to_packaged_icon": false
+    }
+  ]
+}
