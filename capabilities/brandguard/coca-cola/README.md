@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Coca-Cola](https://chatgpt.com/g/g-694adb61d4ec819183d8652bb8d50fe1)
+- [Coca-Cola](https://chatgpt.com/g/g-694adb61d4ec819183d8652bb8d50fe1) · [Original editor configuration](origin/gpt-config/g-694adb61d4ec819183d8652bb8d50fe1/config.json)
 
 ## Transferred repository
 

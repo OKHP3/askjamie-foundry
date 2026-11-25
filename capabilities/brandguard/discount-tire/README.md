@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Discount Tire](https://chatgpt.com/g/g-694acda6b8908191a3872f005dc764ed)
+- [Discount Tire](https://chatgpt.com/g/g-694acda6b8908191a3872f005dc764ed) · [Original editor configuration](origin/gpt-config/g-694acda6b8908191a3872f005dc764ed/config.json)
 
 ## Transferred repository
 

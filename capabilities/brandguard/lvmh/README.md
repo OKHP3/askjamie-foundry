@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [LVMH](https://chatgpt.com/g/g-694adbdf17548191beedb2b973071bfa)
+- [LVMH](https://chatgpt.com/g/g-694adbdf17548191beedb2b973071bfa) · [Original editor configuration](origin/gpt-config/g-694adbdf17548191beedb2b973071bfa/config.json)
 
 ## Transferred repository
 

@@ -1,0 +1,57 @@
+{
+  "observed_date": "2026-11-24",
+  "source_order": 14,
+  "editor_fields": {
+    "editor": "https://chatgpt.com/gpts/editor/g-69240038e6888191984eb5411d621f9c",
+    "actions": [],
+    "capabilities": [
+      "- checkbox \"Web search\" [checked]:",
+      "- checkbox \"Apps\" [disabled]",
+      "- checkbox \"Image generation\"",
+      "- checkbox \"Code interpreter and data analysis\" [checked]:"
+    ],
+    "description": "The Builders FirstSource GPT is the master craftsman of U.S. construction—your expert on lumber, trusses, doors, windows, and other materials. Learn how America builds with BFS insight and connect directly at BLDR.com. 🪵🔮",
+    "instructions": {
+      "file": "../g-6923ffb3dfe88191a9c480e4ce338bce/instructions.md",
+      "sha256": "42c8cd21a624aa8663fda1c71cb876b3550fb453c07afa65abe9e364c8e03614"
+    },
+    "interfaceFields": 4,
+    "knowledge": [
+      "KNOW06_RoofingRoofUnderlayments_v02.0.docx",
+      "KNOW07_ExteriorSidingCladdingProducts_v02.0.docx",
+      "KNOW05_PrefabricatedComponentsTrussesWallPanelsEWP_v02.0.docx",
+      "KNOW02_LumberTermsGradesJargonDecoder_v02.0.docx",
+      "KNOW10_HistoryAcquisitionsLegacyBrands_v02.0.docx",
+      "KNOW01_ProductCatalogOverviewSpecGuide_v02.0.docx",
+      "KNOW08_MultiFamilyVolumeMillworkTurnkeySolutions_v02.0.docx",
+      "KNOW03_DimensionalLumberSizesConversionsRulesofThumb_v02.0.docx",
+      "KNOW04_MSFMBFBoardFootVolumeCalculationGuide_v02.0.docx",
+      "KNOW09_GeographicPresenceCoverage_v02.0.docx",
+      "KNOW18_GlossaryofIndustryAcronymsAbbreviations_v02.0.docx",
+      "KNOW16_MaterialsSustainabilityCertifications_v02.0.docx",
+      "KNOW14_SpecsvsLocalCodeStateDifferences_v02.0.docx",
+      "KNOW19_ MonthlyBFSNewsMarketScan_v02.0.docx",
+      "KNOW12_LimitationsConstraintsWhatBFSDoesntDo_v02.0.docx",
+      "KNOW17_CommonJobsiteMistakesLessonsLearned_v02.0.docx",
+      "KNOW11_StructuralDesignPrinciplesBestPractices_v02.0.docx",
+      "KNOW15_DeliveryLogisticsGuidelines_v02.0.docx",
+      "KNOW13_CaseStudyShowcaseProjects_v02.0.docx",
+      "Brand-Guarding the AI Frontier_ OverKill Hill P³™, AskJamie™, and the Interface Economy.docx"
+    ],
+    "name": "BLDR",
+    "starters": [
+      "🪵 How do I calculate board-feet for my lumber takeoff?",
+      "🧱 What’s the real difference between LVL, LSL, and PSL beams?",
+      "🌪️ How do wind and snow loads change framing requirements?",
+      "🏠 What’s READY-FRAME® and how does it speed up construction?",
+      "📐 What’s the span limit for a 2×10 floor joist at 16-inch spacing?",
+      "🌲 Which lumber grades are best for exterior or structural framing?",
+      "🚚 How does Builders FirstSource manage delivery and staging?",
+      "🧰 What’s the proper way to store trusses and panels on-site?",
+      "🔩 How do code specs differ between Florida and Colorado builds?",
+      "🪟 How can BFS help with multi-family door and millwork packages?",
+      "🌎 What sustainability certifications does Builders FirstSource use?",
+      "🪚 What are the most common jobsite framing mistakes to avoid?"
+    ]
+  }
+}

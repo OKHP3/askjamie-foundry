@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Scheels](https://chatgpt.com/g/g-694acd390b4c81919e17a209752adf49)
+- [Scheels](https://chatgpt.com/g/g-694acd390b4c81919e17a209752adf49) · [Original editor configuration](origin/gpt-config/g-694acd390b4c81919e17a209752adf49/config.json)
 
 ## Transferred repository
 

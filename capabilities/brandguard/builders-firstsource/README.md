@@ -4,9 +4,9 @@
 
 ## BrandGuard GPT forks
 
-- [BFS: Framing Intelligent Futures 🔨🧠](https://chatgpt.com/g/g-68e8927c5cd48191863e613f04ee042d) (BFS01)
-- [BLDR](https://chatgpt.com/g/g-69240038e6888191984eb5411d621f9c)
-- [Builders FirstSource](https://chatgpt.com/g/g-6923ffb3dfe88191a9c480e4ce338bce)
+- [BFS: Framing Intelligent Futures 🔨🧠](https://chatgpt.com/g/g-68e8927c5cd48191863e613f04ee042d) (BFS01) · [Original editor configuration](origin/gpt-config/g-68e8927c5cd48191863e613f04ee042d/config.json)
+- [BLDR](https://chatgpt.com/g/g-69240038e6888191984eb5411d621f9c) · [Original editor configuration](origin/gpt-config/g-69240038e6888191984eb5411d621f9c/config.json)
+- [Builders FirstSource](https://chatgpt.com/g/g-6923ffb3dfe88191a9c480e4ce338bce) · [Original editor configuration](origin/gpt-config/g-6923ffb3dfe88191a9c480e4ce338bce/config.json)
 
 ## Transferred repository
 

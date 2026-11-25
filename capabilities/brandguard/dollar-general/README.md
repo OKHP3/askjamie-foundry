@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Dollar General](https://chatgpt.com/g/g-694ac9b7d9048191b81085d5b270cb79)
+- [Dollar General](https://chatgpt.com/g/g-694ac9b7d9048191b81085d5b270cb79) · [Original editor configuration](origin/gpt-config/g-694ac9b7d9048191b81085d5b270cb79/config.json)
 
 ## Transferred repository
 

@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Costco](https://chatgpt.com/g/g-694ac90f7dbc81918a6e27ff35b34de6)
+- [Costco](https://chatgpt.com/g/g-694ac90f7dbc81918a6e27ff35b34de6) · [Original editor configuration](origin/gpt-config/g-694ac90f7dbc81918a6e27ff35b34de6/config.json)
 
 ## Transferred repository
 

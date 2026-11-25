@@ -1,10 +1,11 @@
-"""Verify the November 24 GPT editor capture and four pinned ChatGPT releases."""
+"""Verify the core AskJamie editor capture and the optional BrandGuard fork captures."""
 
 import argparse
 import hashlib
 import io
 import json
 import posixpath
+import re
 import subprocess
 import tarfile
 
@@ -16,6 +17,7 @@ CAPABILITIES = {
     "aj04": "brandguard",
 }
 EDITOR_DIGEST = "3cdc97662315f282ed3a56c9a7e178e827a33280e6e83678fec1d91585124f91"
+FORK_EDITOR_DIGEST = "3b70e0aa6170eee86746b0480a84f0a892b7b3aa9d64b58ba112375e330f7e0c"
 NATIVE_SKILL = "skills/instructions/SKILL.md"
 COMPATIBILITY_MANIFEST = ".codex-plugin/plugin.json"
 
@@ -29,14 +31,7 @@ def git_blob(revision, path):
     return subprocess.check_output(["git", "cat-file", "blob", f"{revision}:{posixpath.normpath(path)}"])
 
 
-def verify_capture(revision, code, slug):
-    folder = f"capabilities/{slug}/origin/gpt-config/2026-11-24"
-    capture = json.loads(git_blob(revision, f"{folder}/config.json"))
-    fields = capture["editor_fields"]
-    prompt = fields["instructions"]
-    instructions = git_blob(revision, f"{folder}/{prompt['file']}")
-    verify(hashlib.sha256(instructions).hexdigest() == prompt["sha256"], f"{code} source instructions")
-    receipt_path = posixpath.normpath(posixpath.join(folder, capture["hosted_release_receipt"]))
+def verified_release_files(revision, code, receipt_path):
     receipt = json.loads(git_blob(revision, receipt_path))
     release = posixpath.dirname(receipt_path)
     archive = git_blob(revision, f"{release}/{receipt['archive_filename']}")
@@ -50,6 +45,18 @@ def verify_capture(revision, code, slug):
     for path, data in files.items():
         verify(len(data) == expected[path]["bytes"], f"{code} {path} size")
         verify(hashlib.sha256(data).hexdigest() == expected[path]["sha256"], f"{code} {path} digest")
+    return files
+
+
+def verify_capture(revision, code, slug):
+    folder = f"capabilities/{slug}/origin/gpt-config/2026-11-24"
+    capture = json.loads(git_blob(revision, f"{folder}/config.json"))
+    fields = capture["editor_fields"]
+    prompt = fields["instructions"]
+    instructions = git_blob(revision, f"{folder}/{prompt['file']}")
+    verify(hashlib.sha256(instructions).hexdigest() == prompt["sha256"], f"{code} source instructions")
+    receipt_path = posixpath.normpath(posixpath.join(folder, capture["hosted_release_receipt"]))
+    files = verified_release_files(revision, code, receipt_path)
 
     skill_header, separator, body = files[NATIVE_SKILL].partition(b"\n---\n\n")
     verify(skill_header.startswith(b"---\n") and separator and body == instructions, f"{code} skill instructions")
@@ -72,15 +79,54 @@ def verify_capture(revision, code, slug):
     return fields
 
 
+def verify_brandguard_forks(revision):
+    family = "capabilities/brandguard"
+    tracked = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", "-z", revision, family])
+    pattern = re.compile(rf"({family}/[^/]+)/origin/gpt-config/(g-[a-f0-9]{{32}})/config\.json")
+    entries = {}
+    for path in tracked.decode("utf-8").split("\0"):
+        route = pattern.fullmatch(path)
+        if not route:
+            continue
+        edition, ident = route.groups()
+        folder = posixpath.dirname(path)
+        record = json.loads(git_blob(revision, path))
+        fields = record["editor_fields"]
+        verify(fields["editor"].endswith(f"/{ident}"), f"{ident} GPT identity")
+        source_link = posixpath.relpath(path, edition)
+        readme = git_blob(revision, f"{edition}/README.md").decode("utf-8")
+        verify(any(ident in line and f"({source_link})" in line for line in readme.splitlines()), f"{ident} edition route")
+        prompt = fields["instructions"]
+        instructions = git_blob(revision, posixpath.join(folder, prompt["file"]))
+        verify(hashlib.sha256(instructions).hexdigest() == prompt["sha256"], f"{ident} source instructions")
+        fields["instructions"] = instructions.decode("utf-8")
+        fields["starters"] = "\n".join(fields["starters"])
+        order = record["source_order"]
+        verify(order not in entries, f"{ident} unique source order")
+        entries[order] = fields
+    verify(sorted(entries) == list(range(1, 17)), "16 BrandGuard editor records")
+    source = {
+        "capture": "brandguard-owner-editors-v1",
+        "source": "ChatGPT owner Configure tab",
+        "entries": [entries[order] for order in sorted(entries)],
+    }
+    raw = json.dumps(source, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    verify(hashlib.sha256(raw).hexdigest() == FORK_EDITOR_DIGEST, "BrandGuard fork editor capture digest")
+    print(f"Verified {len(entries)} BrandGuard configurations and the {len(raw):,}-byte editor capture: {FORK_EDITOR_DIGEST}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--revision", default="HEAD", help="Git revision that contains the source records")
+    parser.add_argument("--brandguard-forks", action="store_true", help="also verify the 16 organization GPTs")
     args = parser.parse_args()
     configurations = {code: verify_capture(args.revision, code, slug) for code, slug in CAPABILITIES.items()}
     capture = {"capture": "owner-editor-config-v1", "observedDate": "2026-11-24", "configurations": configurations}
     original = json.dumps(capture, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     verify(len(original) == 34081 and hashlib.sha256(original).hexdigest() == EDITOR_DIGEST, "editor capture digest")
     print(f"Verified the {len(original):,}-byte editor capture: {EDITOR_DIGEST}")
+    if args.brandguard_forks:
+        verify_brandguard_forks(args.revision)
 
 
 if __name__ == "__main__":
