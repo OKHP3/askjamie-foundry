@@ -1,0 +1,33 @@
+{
+  "observed_date": "2026-11-24",
+  "source_order": 5,
+  "editor_fields": {
+    "editor": "https://chatgpt.com/gpts/editor/g-694adb61d4ec819183d8652bb8d50fe1",
+    "actions": [],
+    "capabilities": [
+      "- checkbox \"Web search\" [checked]:",
+      "- checkbox \"Apps\" [disabled]",
+      "- checkbox \"Image generation\"",
+      "- checkbox \"Code interpreter and data analysis\" [checked]:"
+    ],
+    "description": "Prototype BrandGuard architect that helps design, stress-test, and govern brand-native GPTs inside the OverKill Hill P³ ecosystem.",
+    "instructions": {
+      "file": "../../../../origin/gpt-config/2026-11-24/instructions.md",
+      "sha256": "a7772d9d6883bb8b0beee2b8641221454e268a1e8ad924e73b00e0317612c335"
+    },
+    "interfaceFields": 4,
+    "knowledge": [
+      "29f261cf-2f0a-497f-90d3-246efbf8068a.png"
+    ],
+    "name": "Coca-Cola",
+    "starters": [
+      "“Help me sketch a BrandGuard GPT for [BrandName] from scratch – start with ledgers and instruction structure, not copy.”",
+      "“Take this messy brand doc and turn it into a clean Equilibrium–Harmony–Disruptor map.”",
+      "“Design a v0.1 instruction block for a BrandGuard GPT that protects [BrandName]’s voice and canon.”",
+      "“Audit this draft brand narrative for drift, contradictions, and missing canon – then propose fixes.”",
+      "“Using SCAMPER, mutate this core brand story into 5 campaign directions without breaking trust.”",
+      "“Outline the knowledge/RAG schema we’d need to back a serious BrandGuard GPT for this brand.”"
+    ]
+  },
+  "hosted_release_receipt": "../../chatgpt-releases/pluginrel_076d22836c448191bd9295095c6eb0b1/release-receipt.json"
+}

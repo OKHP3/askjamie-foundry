@@ -1,0 +1,124 @@
+{
+  "landed_source_revision": "30bffa6fd9f05b534712fa295e5e3da08f715599",
+  "blobs": [
+    {
+      "name": "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "hosted_path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "git_blob": "6d5f4067ab54d10e0c5d6bc0bd38e6b82c3776c3",
+      "current_public_source_path": null
+    },
+    {
+      "name": "BRG06-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "sha256": "1de19197eaef35d4bd0888b24684f98de41181dcc9371ab80de5e61e3991911c",
+      "git_blob": "a0419160bc63ffbb1aab60bfe0a70c56afc4989e",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW01-Founding-and-Corporate-History-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "sha256": "f8845c4db1dd53c8dd47be6b4d8a053e2ae42f59b2da0a4443c5d3b68edc904a",
+      "git_blob": "eaff2798f44a69ef6cf6aacac5e81e12726406f9",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "sha256": "56040c5dcb32c4253e97dfc2329c492a78b21cb6a2b757189fda008b87b5c859",
+      "git_blob": "496945f92edc5d822457eabc1a533eb9d4697f1d",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW03-Product-Lines-or-Services-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "sha256": "c1ebafa79af9615c8bdd7ab245e847ebc1ce742be7e7901ab508613c000bb440",
+      "git_blob": "3bea5f475e2d2a58a314b6a96655658ebf580e18",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "sha256": "372983c607a16000035fac670ce5892cdacf6f74575532f784f842ad9ff607d3",
+      "git_blob": "f12ba14ef2748320ea6fcee2887c739a61ff8967",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "sha256": "61aa30dfffde62ddf60c694b52270d48657e66d5abadab626fda4ad0b2db8146",
+      "git_blob": "0872cd880a776233462cbd3d51a727174fadb17b",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "sha256": "55ea24b008703c5e30cea2865edbee033674c610eba6d3a190af716ac7f8d77e",
+      "git_blob": "c99797a49500e03ae4ebb64e4c84990ea8690013",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW07-Innovations-and-Technologies-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "sha256": "6d29b1d1cffcd7122dbe089c7da2972eb2d7acb887ae504bea4d9ed484a30850",
+      "git_blob": "0c29e674b2b727a29efd8c0438fac51fe9f4dc0e",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW08-Partnerships-and-Acquisitions-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "sha256": "034d6122e00e3539771275e474f3232b46e10438814bd71fb9f1ef403096883d",
+      "git_blob": "ca1918a73c1b834f9d6fac4317397a5e7593b7e6",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW09-Marketing-and-Slogans-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "sha256": "446c579cf313ea1f3f4d67c87dfd51eeac2508bfbbd9943757cc2ec1e88ea4f6",
+      "git_blob": "8b5db3629959b27516424db2bd4e375edee6731e",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "sha256": "a9d6119dfaa06f54bd7e571cb02ebb6f6a4efc067597d2c9f7193a3d6edd8302",
+      "git_blob": "8f065a63c13854084cf647bf36e67db1913242df",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "sha256": "e6c3ddb0f0a1cd98e3ca6b6f3c9e4f79e091f15d0dbd2f5f1f96012feb023615",
+      "git_blob": "37488974221d464dc48d6fbe17bb4add36d0b303",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "sha256": "b9631c7baeb8daba828dbbce0c14df077a6b35836e26f8caed7a107ea4912a3e",
+      "git_blob": "7ceb490102bdbaab68cfa78fe087596083d6f786",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "sha256": "d52dc5c55347cf607fa422a427eb9f98cde11eda0b0b35cb75a65ed9ca1d7a5d",
+      "git_blob": "e3a8ba09564cac35cf3ec74436235967aca5f064",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "sha256": "c1f9c2dc9a9c510b17a628feec5539db9badfe916d2b99f1c68cabe8e65de75c",
+      "git_blob": "53e4b6952e4c69a648376246cc9ebe03a61b6abc",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx"
+    },
+    {
+      "name": "BRG06-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG06-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "sha256": "6c1ae9ddb6c71d5bd7d84f516bdffffb489a263feffe2790d18a6fdc67dc4ff4",
+      "git_blob": "3a5f1cf38f48b8950deecc510e36736926bb124e",
+      "current_public_source_path": "capabilities/brandguard/hershey/origin/repository/knowledge/BRG06-KNOW17-Reputational-Liability-Inoculation-v01d.docx"
+    }
+  ]
+}

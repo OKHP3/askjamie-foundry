@@ -1,0 +1,138 @@
+{
+  "landed_source_revision": "30bffa6fd9f05b534712fa295e5e3da08f715599",
+  "blobs": [
+    {
+      "name": "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "hosted_path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "git_blob": "6d5f4067ab54d10e0c5d6bc0bd38e6b82c3776c3",
+      "current_public_source_path": null
+    },
+    {
+      "name": "BRG01-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "sha256": "48aef2e8aa5e4ac8a8f752dee0ed46e574946b32ea47499e179ba28acef7adbc",
+      "git_blob": "0d8c1d252c0138eccb25f8c2847cad5462c9fa04",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW01-Founding-and-Corporate-History-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "sha256": "3e6b18f6a09e45b9b24c866f23986355f17805a8e9dee3fb5b60fd8ce3ed4a76",
+      "git_blob": "a556d338536cab135bb2c5435743fe473e4d38b5",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "sha256": "dc51d50ed717534b33fd48ce6d6260232e37dca30641c03bf963c311c9ab6d1c",
+      "git_blob": "e9e41b21f79062bb1b741dab540cf1315a11ca66",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW03-Product-Lines-or-Services-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "sha256": "a9bfe892936e44a99272d283b48d85eff60f51f1872366e976a764397bfed187",
+      "git_blob": "8a669dcdccb24d3739f9ff294a85a9a44cd5d4f6",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "sha256": "e23e6f66ac5e00ca7eb8580fb79b0f1ac7d135f1f227600582d78d4717c24d1f",
+      "git_blob": "23b22aaacc753704bb3636dd54c17cbf1cd3c5d4",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "sha256": "b410e2548e678377bdf6e1a632e2ede0d4028299870a6753be4a7d515b781ab8",
+      "git_blob": "f24cc0c31eb30d6f2b41c7ead406442bb5e952df",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "sha256": "89454c6ee42b0f0b2e306579cdb301f27c209d8bac0f4892ce8dc7095b2c92a2",
+      "git_blob": "21dd621d2300d2b5c6fa7b8b2fbebfd57a5ee8a3",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW07-Innovations-and-Technologies-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "sha256": "4fc19c4c4599197028e64f777f614a4bb926d8729ec64c1723ee5c7a20500c0f",
+      "git_blob": "e6961f83d219316007d210129d1ca9c4c5f993bb",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW08-Partnerships-and-Acquisitions-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "sha256": "439c81f9da7207c0c02da19d09af37badc920ec5770c85120d4f3ebfc6f4d6b6",
+      "git_blob": "62926994c72b6b94a01b2ae50c8bc5595088a4f1",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW09-Marketing-and-Slogans-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "sha256": "1612870f3c9b5285fdc52fc1917b649d03c39fd9b41003981ab1a86b5714df9d",
+      "git_blob": "c714709f9bf00e1f102b0cef011280bc86ef662c",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d_1.docx",
+      "sha256": "1612870f3c9b5285fdc52fc1917b649d03c39fd9b41003981ab1a86b5714df9d",
+      "git_blob": "c714709f9bf00e1f102b0cef011280bc86ef662c",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "sha256": "f01be4aa9cb539e9be07cfa362edf65b765296769a058b673105b77a24ba8ce8",
+      "git_blob": "93abc5b435b99d79895881f0eac648378f475801",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "sha256": "71bb24d51391d27fec816e4ca20c768e2421ad664194042ef2973491da24b618",
+      "git_blob": "a317eb5c14d9e83f817dfef28e7ac18a5542f846",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "sha256": "8b738090eb4ffec20158592045f135a297d3327ccbb78e061dd66f4a688c4beb",
+      "git_blob": "daea3e731a0599f3cfaca6dba1f6c50938eba894",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "sha256": "81d27f176f36178a44bc8a31066f48e9e303b65217435a5511a980fa243e7ca1",
+      "git_blob": "010ad2c3c5abf0453b5bdeb6397389bbf43fe8af",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "sha256": "bcb05c72a487e42810bd0343c7b052737314ae036cf5fc6ea2b5a82376aa0f20",
+      "git_blob": "955013a6460cd355407d4ca40cc4069fc68184fd",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "sha256": "d243a3031bce8ba7378b53289076974f70ace5fbda180b468cf256e35945499f",
+      "git_blob": "58e9454b675ea3cc170054a3fd7dda7443715161",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx"
+    },
+    {
+      "name": "BRG01-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "hosted_path": "skills/instructions/references/BRG01-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "sha256": "2dc09875106f5532e02ed3f36cedfd7f6bb019f3039dbd965e0494b93267e15a",
+      "git_blob": "18f61c4b32333fce2c279914fb16eecf21697ba6",
+      "current_public_source_path": "capabilities/brandguard/lego/origin/repository/knowledge/BRG01-KNOW17-Reputational-Liability-Inoculation-v01d.docx"
+    }
+  ]
+}

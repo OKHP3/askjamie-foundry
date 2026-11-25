@@ -1,0 +1,57 @@
+{
+  "observed_date": "2026-11-24",
+  "source_order": 2,
+  "editor_fields": {
+    "editor": "https://chatgpt.com/gpts/editor/g-69521b35ad808191b19cc8ad4189814c",
+    "actions": [],
+    "capabilities": [
+      "- checkbox \"Web search\" [checked]:",
+      "- checkbox \"Apps\" [disabled]",
+      "- checkbox \"Image generation\"",
+      "- checkbox \"Code interpreter and data analysis\" [checked]:"
+    ],
+    "description": "LEGO: OKHP³ BrandGuard is a not an official LEGO channel. It helps users understand LEGO’s mission (“to inspire and develop the builders of tomorrow”) and keeps outputs aligned to Imagination, Creativity, Fun, Learning, Caring, and Quality.",
+    "instructions": {
+      "file": "instructions.md",
+      "sha256": "8806f35ba38d6aef8abc821ef00c9644aabfb12e023f494839a84c9293ad68dc"
+    },
+    "interfaceFields": 4,
+    "knowledge": [
+      "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "BRG01-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "BRG01-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "BRG01-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "BRG01-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "BRG01-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "BRG01-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "BRG01-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "BRG01-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "BRG01-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "BRG01-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "BRG01-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "BRG01-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "BRG01-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "BRG01-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "BRG01-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "BRG01-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx",
+      "BRG01-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx"
+    ],
+    "name": "LEGO",
+    "starters": [
+      "🧱 What's LEGO's mission & values in plain English?",
+      "🎁 Recommend a LEGO set for a 7-year-old who loves space.",
+      "⚙️ Technic vs City vs Friends: best for an 11-year-old?",
+      "🌍 Summarize LEGO's sustainability goals in 5 bullets.",
+      "🏷️ What is LEGO Insiders and how does it work?",
+      "💬 Help me respond to 'LEGO is overpriced' in a caring tone.",
+      "📰 Draft partner copy on learning through play (120 words).",
+      "✨ Give 3 kid-safe campaign ideas with 'Rebuild' energy.",
+      "🧩 Where can I find official LEGO customer service help?",
+      "🧠 Explain Learning Through Play for teachers + 3 class ideas.",
+      "🛡️ Review this copy for brand/risk issues: [paste text]",
+      "📩 How do I contact this GPT's builder/support?"
+    ]
+  },
+  "hosted_release_receipt": "../../chatgpt-releases/pluginrel_c2b8bd0601ec8191b7c472dc0e3b5df6/release-receipt.json"
+}

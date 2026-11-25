@@ -1,0 +1,50 @@
+{
+  "observed_date": "2026-11-24",
+  "source_order": 4,
+  "editor_fields": {
+    "editor": "https://chatgpt.com/gpts/editor/g-694adbdf17548191beedb2b973071bfa",
+    "actions": [],
+    "capabilities": [
+      "- checkbox \"Web search\" [checked]:",
+      "- checkbox \"Apps\" [disabled]",
+      "- checkbox \"Image generation\"",
+      "- checkbox \"Code interpreter and data analysis\" [checked]:"
+    ],
+    "description": "Prototype BrandGuard architect that helps design, stress-test, and govern brand-native GPTs inside the OverKill Hill P³ ecosystem.",
+    "instructions": {
+      "file": "../../../../origin/gpt-config/2026-11-24/instructions.md",
+      "sha256": "a7772d9d6883bb8b0beee2b8641221454e268a1e8ad924e73b00e0317612c335"
+    },
+    "interfaceFields": 4,
+    "knowledge": [
+      "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "BRG07-KNOW07-Innovations-and-Technologies-v01d.docx",
+      "BRG07-KNOW10-Customer-Experience-and-Loyalty-Programs-v01d.docx",
+      "BRG07-KNOW06-Sustainability-and-ESG-Commitments-v01d.docx",
+      "BRG07-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01d.docx",
+      "BRG07-KNOW03-Product-Lines-or-Services-v01d.docx",
+      "BRG07-KNOW02-Mission-Vision-and-Brand-Philosophy-v01d.docx",
+      "BRG07-KNOW04-Consumer-Demographics-and-Market-Reach-v01d.docx",
+      "BRG07-KNOW08-Partnerships-and-Acquisitions-v01d.docx",
+      "BRG07-KNOW01-Founding-and-Corporate-History-v01d.docx",
+      "BRG07-KNOW09-Marketing-and-Slogans-v01d.docx",
+      "BRG07-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01d.docx",
+      "BRG07-KNOW15-Product-Identification-and-Comparison-Module-v01d.docx",
+      "BRG07-KNOW16-FAQ-or-Knowledge-Recap-File-v01d.docx",
+      "BRG07-KNOW14-Future-Outlook-and-Strategic-Trends-v01d.docx",
+      "BRG07-KNOW13-Media-Coverage-and-Public-Perception-v01d.docx",
+      "BRG07-KNOW17-Reputational-Liability-Inoculation-v01d.docx",
+      "BRG07-KNOW12-Competitive-Positioning-and-Landscape-v01d.docx"
+    ],
+    "name": "LVMH",
+    "starters": [
+      "“Help me sketch a BrandGuard GPT for [BrandName] from scratch – start with ledgers and instruction structure, not copy.”",
+      "“Take this messy brand doc and turn it into a clean Equilibrium–Harmony–Disruptor map.”",
+      "“Design a v0.1 instruction block for a BrandGuard GPT that protects [BrandName]’s voice and canon.”",
+      "“Audit this draft brand narrative for drift, contradictions, and missing canon – then propose fixes.”",
+      "“Using SCAMPER, mutate this core brand story into 5 campaign directions without breaking trust.”",
+      "“Outline the knowledge/RAG schema we’d need to back a serious BrandGuard GPT for this brand.”"
+    ]
+  },
+  "hosted_release_receipt": "../../chatgpt-releases/pluginrel_642c0e47919081918b924a610db50019/release-receipt.json"
+}

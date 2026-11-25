@@ -1,0 +1,28 @@
+{
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Other",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [
+      "\u201cHelp me sketch a BrandGuard GPT for [BrandName] from scratch \u2013 start with ledgers and instruction structure, not copy.\u201d",
+      "\u201cTake this messy brand doc and turn it into a clean Equilibrium\u2013Harmony\u2013Disruptor map.\u201d",
+      "\u201cDesign a v0.1 instruction block for a BrandGuard GPT that protects [BrandName]\u2019s voice and canon.\u201d"
+    ],
+    "developerName": "cardholder",
+    "displayName": "PING",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "Prototype BrandGuard architect that helps design, stress-test, and govern brand-native GPTs inside the OverKill Hill P\u00b3 ecosystem.",
+    "shortDescription": "Prototype BrandGuard architect that helps design, stress-test, and govern brand-native GPTs inside the OverKill Hill P\u00b3 ecosystem."
+  },
+  "name": "gpt-6521b60b54b98c9d823b3bcf99ca20c7",
+  "version": "0.4.1+bundle.68d4240b7bf42a6983b8e6ff2ac366bd",
+  "description": "Prototype BrandGuard architect that helps design, stress-test, and govern brand-native GPTs inside the OverKill Hill P\u00b3 ecosystem.",
+  "author": {
+    "name": "cardholder",
+    "url": "https://overkillhill.com"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

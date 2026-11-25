@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Brooks Running](https://chatgpt.com/g/g-694ad15940f88191a87082759ca1dda1)
+- [Brooks Running](https://chatgpt.com/g/g-694ad15940f88191a87082759ca1dda1) · [Original editor configuration](origin/gpt-config/g-694ad15940f88191a87082759ca1dda1/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_f2e44be9b85481919501aa957d309b37) · [Release files](origin/chatgpt-releases/pluginrel_376ae3c54b348191b10e981128d858af/)
 
 ## Transferred repository
 

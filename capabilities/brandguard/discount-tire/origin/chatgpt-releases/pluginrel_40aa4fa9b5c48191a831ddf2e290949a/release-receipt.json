@@ -1,0 +1,86 @@
+{
+  "release": {
+    "release_id": "pluginrel_40aa4fa9b5c48191a831ddf2e290949a",
+    "version": "0.2.1+bundle.44d7df5287983f9411ae28dd7f1c52e4",
+    "created_at": "2026-11-25T03:02:26.527811Z",
+    "is_current": true,
+    "creator_account_user_id": null
+  },
+  "plugin": {
+    "plugin_id": "plugin_dece3fb17ac48191a184f0bf5b7d67a2",
+    "name": "gpt-be7fc9010f8a91d8a6ab152fd382f351",
+    "description": "Prototype BrandGuard architect that helps design, stress-test, and govern brand-native GPTs inside the OverKill Hill P\u00b3 ecosystem.",
+    "version": "0.2.1+bundle.44d7df5287983f9411ae28dd7f1c52e4",
+    "current_release_id": "pluginrel_40aa4fa9b5c48191a831ddf2e290949a",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  "archive_filename": "package.tar.gz",
+  "archive_sha256": "a06acb15f243cf72262227da8bc10eb40cd4cacdd70bc34578b2db879e22739b",
+  "archive_bytes": 2689373,
+  "verification": "Pinned tar members matched Creator's complete list by path and size. Host file-API text was independently hashed and checked, and non-archive compatibility content is listed separately.",
+  "files": [
+    {
+      "path": "plugin.json",
+      "bytes": 1486,
+      "sha256": "4b78b4d362729c26f29ec01063380d9a62288d6e6a574f74f4ddef3aad6ce60a",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "assets/gpt-icon.png",
+      "bytes": 570076,
+      "sha256": "d96cb7879e2f12af9a51a70c51d11c93de89219062a103373b5fc741793026c8",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/SKILL.md",
+      "bytes": 6632,
+      "sha256": "5c59d039f81a7adbdb94645c5138cc0b80ce87973896fb9db1c42a4127bc3f6e",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/agents/openai.yaml",
+      "bytes": 280,
+      "sha256": "08c3435dd45e80e93511caac1a5aad2642f692af01a7afffc7cf75f2f494da6d",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/lookup/knowledge-index.json",
+      "bytes": 898,
+      "sha256": "bdcde9f255092a4a73380ecf59119e8190772ab495abaa92804bf3edf6451489",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "bytes": 2137667,
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "recovery": "pinned-tar"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "bytes": 1379,
+      "sha256": "00836ddb48c3d8c8180a4d2d5684bdcbb72c9920d0379c1325c205dd13b4b07b",
+      "recovery": "get_plugin_files; separately stored beside pinned tar"
+    }
+  ],
+  "packaged_conversation_starters": [
+    "\u201cHelp me sketch a BrandGuard GPT for [BrandName] from scratch \u2013 start with ledgers and instruction structure, not copy.\u201d",
+    "\u201cTake this messy brand doc and turn it into a clean Equilibrium\u2013Harmony\u2013Disruptor map.\u201d",
+    "\u201cDesign a v0.1 instruction block for a BrandGuard GPT that protects [BrandName]\u2019s voice and canon.\u201d"
+  ],
+  "packaged_skill_bodies": {
+    "skills/instructions/SKILL.md": {
+      "sha256": "a7772d9d6883bb8b0beee2b8641221454e268a1e8ad924e73b00e0317612c335",
+      "bytes": 6490
+    }
+  },
+  "knowledge_index": [
+    {
+      "name": "29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "path": "skills/instructions/references/29f261cf-2f0a-497f-90d3-246efbf8068a.png",
+      "packaged_bytes": 2137667,
+      "sha256": "1b0deaea8681f8780bc6b9b3aaa2b7a974d4de9e37b6d8a7374bac6562fb8a55",
+      "identical_to_packaged_icon": false
+    }
+  ]
+}

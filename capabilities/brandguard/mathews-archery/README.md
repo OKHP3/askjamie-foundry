@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [Mathews Archery](https://chatgpt.com/g/g-69544ab093dc8191a1f0d0f901a2ada5)
+- [Mathews Archery](https://chatgpt.com/g/g-69544ab093dc8191a1f0d0f901a2ada5) · [Original editor configuration](origin/gpt-config/g-69544ab093dc8191a1f0d0f901a2ada5/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_4cfcce05f0d8819182a5647928d3c589) · [Release files](origin/chatgpt-releases/pluginrel_73b4fdedd5988191b3fb1aee0e841b08/)
 
 ## Transferred repository
 

@@ -1,0 +1,145 @@
+{
+  "landed_source_revision": "30bffa6fd9f05b534712fa295e5e3da08f715599",
+  "blobs": [
+    {
+      "name": "Brand-Guarding the AI Frontier_ OverKill Hill P\u00b3\u2122, AskJamie\u2122, and the Interface Economy.docx",
+      "hosted_path": "skills/instructions/references/Brand-Guarding the AI Frontier_ OverKill Hill P\u00b3\u2122, AskJamie\u2122, and the Interface Economy.docx",
+      "sha256": "4fcd2ef22cc203ea70cc7358dda7bf21c62dcec161afa67101228655a2f07a97",
+      "git_blob": "5426ccabe8dd065f7cf39dd622b17708260ce6e9",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW01_ProductCatalogOverviewSpecGuide_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW01_ProductCatalogOverviewSpecGuide_v02.0.docx",
+      "sha256": "21dbc016118fedb2261420a89f9d6122fc0ea846835e0f7b732023a9bc67e2ee",
+      "git_blob": "d762576f1b89ecc108dc53d1992af21dfe8cdb33",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW02_LumberTermsGradesJargonDecoder_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW02_LumberTermsGradesJargonDecoder_v02.0.docx",
+      "sha256": "e37d51dc5bd5063d2b610da4a64cdd79e48e53293d470fde6d316bfd78f60c5b",
+      "git_blob": "b38a49f64b2bfadeee3fd8140d6d698898b394b4",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW03_DimensionalLumberSizesConversionsRulesofThumb_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW03_DimensionalLumberSizesConversionsRulesofThumb_v02.0.docx",
+      "sha256": "8f2cfca8fc3da37ea12fce69507d190d6c70a081b82275d55c8b55d06d46fb16",
+      "git_blob": "7b1bd36c2ccb3751f94bd8967cc1d55f6d013553",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW04_MSFMBFBoardFootVolumeCalculationGuide_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW04_MSFMBFBoardFootVolumeCalculationGuide_v02.0.docx",
+      "sha256": "34dfd7b526569c08ea348983be6ed13648169142513513c7b34d444e78f4436c",
+      "git_blob": "19c1a41465c2fb8d4373fdca6bd8ad06e6f8e7ba",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW05_PrefabricatedComponentsTrussesWallPanelsEWP_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW05_PrefabricatedComponentsTrussesWallPanelsEWP_v02.0.docx",
+      "sha256": "05a8b28da3074106b161eba924625bbe232502bd19dc099fc2157f0eb2dfbd60",
+      "git_blob": "89b5e4cad0d0a73176d75d2d4afe080064657a04",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW06_RoofingRoofUnderlayments_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW06_RoofingRoofUnderlayments_v02.0.docx",
+      "sha256": "c92f5e111169c7a525a32ab608f4508e3200814707c2ae92615c8c25762469d5",
+      "git_blob": "e0394561a61a9a524610f7a6e0023d75f139928c",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW07_ExteriorSidingCladdingProducts_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW07_ExteriorSidingCladdingProducts_v02.0.docx",
+      "sha256": "4457490690d6275af02c128b18b8d58250f4ec4f00893e9323b62d5127cfa15b",
+      "git_blob": "55b65ab6ed15f81b5a59d93271efce3911eec769",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW08_MultiFamilyVolumeMillworkTurnkeySolutions_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW08_MultiFamilyVolumeMillworkTurnkeySolutions_v02.0.docx",
+      "sha256": "6ff7d9bd0d86e7afc7c0e81e478aa845da674e21c7761e946366ea134cfa61f7",
+      "git_blob": "2a7ef93025c28a62fb2b13139de6f27ed64b1971",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW09_GeographicPresenceCoverage_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW09_GeographicPresenceCoverage_v02.0.docx",
+      "sha256": "69f6e690b16a8c1bde991c43424c567627c8e70ccfe192bbf751c5641ee7f6d6",
+      "git_blob": "25f9ac63e9ae10e40648ed091f49b76780809703",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW10_HistoryAcquisitionsLegacyBrands_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW10_HistoryAcquisitionsLegacyBrands_v02.0.docx",
+      "sha256": "3d52755532f94ac2158ea85c149d2200c093696e56b8db4456937057e9fe1dec",
+      "git_blob": "d7cffc22af4e3293e1b6643779e0fefca6c349a2",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW11_StructuralDesignPrinciplesBestPractices_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW11_StructuralDesignPrinciplesBestPractices_v02.0.docx",
+      "sha256": "f946bd1e37501b9e656d1ff95b1cb3ef5869fea7bd7eeec26a7b83b041ca7df3",
+      "git_blob": "7b294a720367fa11224473d048afddc5fdf7d7f7",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW12_LimitationsConstraintsWhatBFSDoesntDo_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW12_LimitationsConstraintsWhatBFSDoesntDo_v02.0.docx",
+      "sha256": "c986b399cc457511650b84542ac45ee5381590b8a7f91c111dc6fb8a07b55d80",
+      "git_blob": "8f945e82c0059d45bf0b51d47f66dc32db3e938b",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW13_CaseStudyShowcaseProjects_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW13_CaseStudyShowcaseProjects_v02.0.docx",
+      "sha256": "732cf34b2a562752fe9d0dff6f829d3b9db5564934138a58170cad8e65d76e56",
+      "git_blob": "ea90596fd3d5660216bfd595fddb3971e9c7225a",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW14_SpecsvsLocalCodeStateDifferences_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW14_SpecsvsLocalCodeStateDifferences_v02.0.docx",
+      "sha256": "574a3474d9fc9bc01d40e50a23c93917d834391e99094e00a111654a687364c2",
+      "git_blob": "17c7487fca0a8c16bb020959389e6956f9d90e29",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW15_DeliveryLogisticsGuidelines_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW15_DeliveryLogisticsGuidelines_v02.0.docx",
+      "sha256": "b3a096601552253e5e5aa83f8c0ac5782cad651f2b82ed41cb9a0da67a3a06db",
+      "git_blob": "d06563fdc9a1b4561d20ba86a2a81cd9494e0de6",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW16_MaterialsSustainabilityCertifications_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW16_MaterialsSustainabilityCertifications_v02.0.docx",
+      "sha256": "2806d1f208ca3d4e7f8e7a7f3a40b285c8c2f979752810f0f7031048e6f2eaa4",
+      "git_blob": "f54cc827328cfd2a54218e89d3f3612dd944320a",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW17_CommonJobsiteMistakesLessonsLearned_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW17_CommonJobsiteMistakesLessonsLearned_v02.0.docx",
+      "sha256": "dbf8a3c490508d3ec5a73530ed9ea1817eb85721f5cb7d7b7a4f38b5b7ad81c7",
+      "git_blob": "70ae68888cd391380310d8211191ca6aee7ab620",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW18_GlossaryofIndustryAcronymsAbbreviations_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW18_GlossaryofIndustryAcronymsAbbreviations_v02.0.docx",
+      "sha256": "0c5171a6eadb9a0d18276b6fa2899f3a9b2ebb8d3dd787d6de46ff821845031b",
+      "git_blob": "b455ba86634460235b3ba394ea7c32c037cab0ca",
+      "current_public_source_path": null
+    },
+    {
+      "name": "KNOW19_ MonthlyBFSNewsMarketScan_v02.0.docx",
+      "hosted_path": "skills/instructions/references/KNOW19_ MonthlyBFSNewsMarketScan_v02.0.docx",
+      "sha256": "fab0ad3699b89a8f6aaf9a1a06ffe5a87f303adb57f9183bbefddc878c951788",
+      "git_blob": "dd0807661e421f41436f29eeea08c73149c73748",
+      "current_public_source_path": null
+    }
+  ]
+}

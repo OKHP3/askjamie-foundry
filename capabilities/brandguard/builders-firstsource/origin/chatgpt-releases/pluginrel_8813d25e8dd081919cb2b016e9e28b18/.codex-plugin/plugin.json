@@ -1,0 +1,28 @@
+{
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Other",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [
+      "\ud83e\udeb5 How do I calculate board-feet for my lumber takeoff?",
+      "\ud83e\uddf1 What\u2019s the real difference between LVL, LSL, and PSL beams?",
+      "\ud83c\udf2a\ufe0f How do wind and snow loads change framing requirements?"
+    ],
+    "developerName": "cardholder",
+    "displayName": "BFS: Framing Intelligent Futures \ud83d\udd28\ud83e\udde0",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "The Builders FirstSource GPT is the master craftsman of U.S. construction\u2014your expert on lumber, trusses, doors, windows, and other materials. Learn how America builds with BFS insight and connect directly at BLDR.com. \ud83e\udeb5\ud83d\udd2e",
+    "shortDescription": "The Builders FirstSource GPT is the master craftsman of U.S. construction\u2014your expert on lumber, trusses, doors, windows, and other materials. Learn how America builds with BFS insight and connect directly at BLDR.com. \ud83e\udeb5\ud83d\udd2e"
+  },
+  "name": "gpt-2bad278432a318d8818e390b75810481",
+  "version": "0.9.1+bundle.e17ab88981325e522f97384cf3deacd4",
+  "description": "The Builders FirstSource GPT is the master craftsman of U.S. construction\u2014your expert on lumber, trusses, doors, windows, and other materials. Learn how America builds with BFS insight and connect directly at BLDR.com. \ud83e\udeb5\ud83d\udd2e",
+  "author": {
+    "name": "cardholder",
+    "url": "https://overkillhill.com"
+  },
+  "keywords": [],
+  "skills": "./skills"
+}

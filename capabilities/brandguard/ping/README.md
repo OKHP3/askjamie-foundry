@@ -4,7 +4,7 @@
 
 ## BrandGuard GPT fork
 
-- [PING](https://chatgpt.com/g/g-694add8864c08191a89b1fcb119e956c)
+- [PING](https://chatgpt.com/g/g-694add8864c08191a89b1fcb119e956c) · [Original editor configuration](origin/gpt-config/g-694add8864c08191a89b1fcb119e956c/config.json) · [Private plugin](https://chatgpt.com/plugins/plugin_76c0112afd98819184e3c06ceed9bc61) · [Release files](origin/chatgpt-releases/pluginrel_e2269bcfca888191b29cd568279ae936/)
 
 ## Transferred repository
 
