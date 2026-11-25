@@ -1,0 +1,1250 @@
+{
+  "repository": "OKHP3/askjamie-brg12-mathews-archery",
+  "source_commit": "94aada6422255d5566b9ad89c33886bba30a2862",
+  "selections": [
+    {
+      "source_path": "knowledge/text/BRG12-KNOW01-Founding-and-Corporate-History-v01a.md",
+      "source_blob": "a1203738ee4b7bafd1d39d205848fc77406fe224",
+      "source_sha256": "9b918e5c358a396ca1e0710b2de83993cfcc4bc7f6f83ff7173caf59e32f94e7",
+      "file": "dossiers/know01.md",
+      "sha256": "4850a1a2753ad7bc2d1ceffc1fd25214876ea634b6ebfa9a366604df22cf58c1",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            34
+          ],
+          [
+            36,
+            38
+          ],
+          [
+            92,
+            97
+          ],
+          [
+            113,
+            138
+          ],
+          [
+            146,
+            146
+          ],
+          [
+            156,
+            185
+          ],
+          [
+            193,
+            219
+          ],
+          [
+            241,
+            255
+          ],
+          [
+            267,
+            271
+          ],
+          [
+            324,
+            332
+          ],
+          [
+            338,
+            350
+          ],
+          [
+            398,
+            400
+          ],
+          [
+            406,
+            416
+          ],
+          [
+            422,
+            424
+          ],
+          [
+            434,
+            436
+          ]
+        ],
+        "selected_source_bytes": 19658
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW02-Mission-Vision-and-Brand-Philosophy-v01a.md",
+      "source_blob": "76c1e3db030a6ebda0d2333cd6cf0605c181fd07",
+      "source_sha256": "ff38c612992465bcdea539ce050b256f4c542f67a13d730429ba76edcf683d59",
+      "file": "dossiers/know02.md",
+      "sha256": "ee8ccf0bdd8964f55a20e1b0ca0d9d35c5600e615d59aa4fcd581fc5c0b45c37",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            35
+          ],
+          [
+            84,
+            88
+          ],
+          [
+            103,
+            125
+          ],
+          [
+            129,
+            134
+          ],
+          [
+            136,
+            136
+          ],
+          [
+            138,
+            152
+          ],
+          [
+            156,
+            164
+          ],
+          [
+            167,
+            203
+          ],
+          [
+            223,
+            231
+          ],
+          [
+            237,
+            237
+          ],
+          [
+            247,
+            247
+          ],
+          [
+            295,
+            313
+          ],
+          [
+            317,
+            329
+          ],
+          [
+            389,
+            391
+          ]
+        ],
+        "selected_source_bytes": 17672
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW03-Product-Lines-or-Services-v01a.md",
+      "source_blob": "a905fc9818f98afac87702e495ed54e96f1d1e0b",
+      "source_sha256": "7d2f437f97174a3d1114acf024600b698d3871379e9da921d043cd0799858159",
+      "file": "dossiers/know03.md",
+      "sha256": "0aa2163dbe8c32bbd07f702ba1066ea7b1747426d7376515a567a0471ff7e043",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            22
+          ],
+          [
+            26,
+            34
+          ],
+          [
+            96,
+            98
+          ],
+          [
+            111,
+            129
+          ],
+          [
+            133,
+            140
+          ],
+          [
+            144,
+            145
+          ],
+          [
+            159,
+            173
+          ]
+        ],
+        "selected_source_bytes": 8127
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW04-Consumer-Demographics-and-Market-Reach-v01a.md",
+      "source_blob": "172cdda5a32db177c2989ce60024cc83d5db4449",
+      "source_sha256": "e2d3cb850bbf0f2789e6048480416c5a8fd0cffa47f31e32db1f278fa6ff83ae",
+      "file": "dossiers/know04.md",
+      "sha256": "ac6968939ea8c6718f2e29b74f56f94da4449a53b5fdebcb3a7ace3203efe29d",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            35
+          ],
+          [
+            81,
+            85
+          ],
+          [
+            98,
+            120
+          ],
+          [
+            122,
+            159
+          ],
+          [
+            167,
+            171
+          ]
+        ],
+        "selected_source_bytes": 10586
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW05-Financials-or-Ownership-or-Stock-Performance-v01a.md",
+      "source_blob": "7de3b549f49b61a1d73ce53f9bf1d547c8a96c35",
+      "source_sha256": "2983b1dce822c9f3eea474e8880f5ced6003c5e88c7b2ba89f358a86eaaf45ad",
+      "file": "dossiers/know05.md",
+      "sha256": "510d723e978ea6b41c4392d1f54eee0e5aa31b57d4f27dbc1b2ff78faad86edc",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            24
+          ],
+          [
+            42,
+            44
+          ],
+          [
+            63,
+            70
+          ],
+          [
+            86,
+            106
+          ],
+          [
+            116,
+            139
+          ],
+          [
+            141,
+            163
+          ],
+          [
+            166,
+            169
+          ],
+          [
+            294,
+            296
+          ],
+          [
+            322,
+            324
+          ],
+          [
+            330,
+            332
+          ]
+        ],
+        "selected_source_bytes": 16850
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW06-Sustainability-and-ESG-Commitments-v01a.md",
+      "source_blob": "233dfbd5781b759b5fe133786ccb62e4f81f4547",
+      "source_sha256": "ba293dfa600d49862e934aeeaa9ff10a03304d31edb5b6c4c95eaada7daa0704",
+      "file": "dossiers/know06.md",
+      "sha256": "5be88670b01f744a88942ee2d6ca3353af5d5878f53a0e6c9b1d4d483696e7f9",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            37
+          ],
+          [
+            113,
+            161
+          ],
+          [
+            183,
+            229
+          ],
+          [
+            249,
+            271
+          ],
+          [
+            275,
+            287
+          ],
+          [
+            291,
+            293
+          ],
+          [
+            339,
+            345
+          ],
+          [
+            349,
+            377
+          ],
+          [
+            453,
+            463
+          ],
+          [
+            469,
+            471
+          ]
+        ],
+        "selected_source_bytes": 21599
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW07-Innovations-and-Technologies-v01a.md",
+      "source_blob": "031e088bb2ed1bb4ff24d251bb39b88d71cf5770",
+      "source_sha256": "ddd944c175b72174e445483db64efc3e564ec912c63bde983cdfb3e2f061738e",
+      "file": "dossiers/know07.md",
+      "sha256": "77465a44fce6aff783bcf0943e1c6fb7bdfa4f59e6a59135e93564b871102a4a",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            34
+          ],
+          [
+            171,
+            196
+          ],
+          [
+            204,
+            204
+          ],
+          [
+            219,
+            219
+          ],
+          [
+            224,
+            232
+          ],
+          [
+            236,
+            245
+          ],
+          [
+            247,
+            247
+          ],
+          [
+            250,
+            254
+          ],
+          [
+            262,
+            268
+          ],
+          [
+            276,
+            290
+          ],
+          [
+            330,
+            336
+          ],
+          [
+            342,
+            344
+          ],
+          [
+            354,
+            354
+          ],
+          [
+            424,
+            430
+          ],
+          [
+            434,
+            438
+          ],
+          [
+            442,
+            444
+          ],
+          [
+            490,
+            492
+          ],
+          [
+            502,
+            504
+          ],
+          [
+            558,
+            564
+          ]
+        ],
+        "selected_source_bytes": 14586
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW08-Partnerships-and-Acquisitions-v01a.md",
+      "source_blob": "1ff6eed84fce0d4708ca64fb1d62cb3c84d957f8",
+      "source_sha256": "5983d8b8aed47787fca7bbe3770c62a06ccf80aef7b8aefc6ccedff12d245c76",
+      "file": "dossiers/know08.md",
+      "sha256": "83d65e9e8cde855cba5b8988b1259cc4755ff3e86da0e1815bc51beb657b6c0e",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            33
+          ],
+          [
+            35,
+            37
+          ],
+          [
+            39,
+            40
+          ],
+          [
+            113,
+            144
+          ],
+          [
+            148,
+            150
+          ],
+          [
+            159,
+            160
+          ],
+          [
+            163,
+            175
+          ],
+          [
+            179,
+            199
+          ],
+          [
+            207,
+            221
+          ],
+          [
+            235,
+            249
+          ],
+          [
+            253,
+            253
+          ],
+          [
+            263,
+            263
+          ],
+          [
+            307,
+            319
+          ],
+          [
+            323,
+            327
+          ],
+          [
+            333,
+            341
+          ],
+          [
+            391,
+            393
+          ],
+          [
+            407,
+            409
+          ],
+          [
+            443,
+            449
+          ]
+        ],
+        "selected_source_bytes": 17372
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW09-Marketing-and-Slogans-v01a.md",
+      "source_blob": "7a73a498f9203b416f95e3fcab97b0a7f094e081",
+      "source_sha256": "8ba3e9a561fd9e7693ae3fe218662384d63180356ae2805048bffc8ab17b5c52",
+      "file": "dossiers/know09.md",
+      "sha256": "ec7e1ee1c78c5f9450818b70347efa4ea832417f69dde9f4d1c64526d01dc353",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            26
+          ],
+          [
+            63,
+            89
+          ],
+          [
+            91,
+            93
+          ],
+          [
+            97,
+            99
+          ],
+          [
+            103,
+            120
+          ],
+          [
+            122,
+            122
+          ],
+          [
+            125,
+            127
+          ],
+          [
+            135,
+            147
+          ],
+          [
+            149,
+            150
+          ],
+          [
+            152,
+            153
+          ]
+        ],
+        "selected_source_bytes": 12422
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW10-Customer-Experience-and-Loyalty-Programs-v01a.md",
+      "source_blob": "c6575b25ea67723c733e710a6a77375b2eff8128",
+      "source_sha256": "69776b644cc61a6af9a676615602a187d6a041759b1fd5574ee2eea1039c8db4",
+      "file": "dossiers/know10.md",
+      "sha256": "8f63b7424ab5ef0e152bb28d69a750e54a18792067e07bde297ad1f861bc9ce5",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            22
+          ],
+          [
+            36,
+            36
+          ],
+          [
+            101,
+            109
+          ],
+          [
+            111,
+            125
+          ],
+          [
+            137,
+            139
+          ],
+          [
+            143,
+            145
+          ],
+          [
+            149,
+            155
+          ],
+          [
+            158,
+            159
+          ],
+          [
+            171,
+            171
+          ]
+        ],
+        "selected_source_bytes": 8952
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW11-Challenges-Risks-and-Industry-Headwinds-v01a.md",
+      "source_blob": "b4f9a24227592d969aa9c877dbcafc9e1d84123b",
+      "source_sha256": "f9bf24353861b0f74016750c9a9fd0c55e2fa2ce22ccd25533e6109f42c3b446",
+      "file": "dossiers/know11.md",
+      "sha256": "32fa7acdbf5d2ed2acb7fd734a85bf3d8c65a1bccf72a2a0061f75675976a2d0",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            75,
+            77
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            105,
+            114
+          ],
+          [
+            116,
+            119
+          ],
+          [
+            123,
+            125
+          ],
+          [
+            129,
+            133
+          ],
+          [
+            137,
+            165
+          ],
+          [
+            171,
+            171
+          ],
+          [
+            175,
+            177
+          ],
+          [
+            181,
+            199
+          ],
+          [
+            205,
+            207
+          ]
+        ],
+        "selected_source_bytes": 12677
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW12-Competitive-Positioning-and-Landscape-v01a.md",
+      "source_blob": "b7027835ccd5c1da15d6f2fde4c5b4e335f86075",
+      "source_sha256": "f58d225463c679d6172912c031b1648c5ce38331b3493b63b920285cb4408afb",
+      "file": "dossiers/know12.md",
+      "sha256": "2c7019561901f9d51cf8c7edfdbbfcc91a7805a8a7375417eedf681abeef167f",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            26
+          ],
+          [
+            111,
+            115
+          ],
+          [
+            125,
+            125
+          ],
+          [
+            131,
+            137
+          ],
+          [
+            145,
+            167
+          ],
+          [
+            171,
+            173
+          ],
+          [
+            219,
+            223
+          ],
+          [
+            227,
+            231
+          ]
+        ],
+        "selected_source_bytes": 7001
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW13-Media-Coverage-and-Public-Perception-v01a.md",
+      "source_blob": "acae10c31201a142e6cb47df3a63be03e365427d",
+      "source_sha256": "84aeb8a028b4540743d8dc2cb8abf45f3063ccdda03d4544c98523276866cf64",
+      "file": "dossiers/know13.md",
+      "sha256": "c8f1865a6f57ea4e80d8cb81b4a3328c6c012f4a752663ff14531f106debbd2d",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            22
+          ],
+          [
+            28,
+            30
+          ],
+          [
+            90,
+            110
+          ],
+          [
+            126,
+            128
+          ],
+          [
+            134,
+            155
+          ],
+          [
+            159,
+            165
+          ],
+          [
+            169,
+            171
+          ],
+          [
+            201,
+            227
+          ]
+        ],
+        "selected_source_bytes": 11377
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW14-Future-Outlook-and-Strategic-Trends-v01a.md",
+      "source_blob": "909fd5f8e8a35ebc7be7cb67c02aac69b1a03fa4",
+      "source_sha256": "bab7c67fe8e54c6585219d9698cb10a875a5a367d5a3456f4124f3081507137f",
+      "file": "dossiers/know14.md",
+      "sha256": "c6cd560b53674fc586c922b72c4c4c883252ccd8b6f534456e68f714cf1707fa",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            33
+          ],
+          [
+            35,
+            44
+          ],
+          [
+            122,
+            130
+          ],
+          [
+            134,
+            136
+          ],
+          [
+            156,
+            166
+          ],
+          [
+            170,
+            170
+          ],
+          [
+            190,
+            196
+          ],
+          [
+            202,
+            205
+          ],
+          [
+            207,
+            211
+          ],
+          [
+            213,
+            231
+          ],
+          [
+            237,
+            245
+          ],
+          [
+            265,
+            273
+          ],
+          [
+            277,
+            289
+          ]
+        ],
+        "selected_source_bytes": 14912
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW15-Product-Identification-and-Comparison-Module-v01a.md",
+      "source_blob": "60388f3c7fa05735954040f5ed4b733807757e33",
+      "source_sha256": "31aa7ea1fb0854e7bfa3ab01cec89879bd8ddd24049495e0b7468a44bbee973e",
+      "file": "dossiers/know15.md",
+      "sha256": "defa70e62a534d1702e7f86f6e33f782b97e55cb502b2c02b85a6fbf74d72734",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            22
+          ],
+          [
+            101,
+            110
+          ],
+          [
+            112,
+            114
+          ],
+          [
+            122,
+            135
+          ],
+          [
+            137,
+            138
+          ],
+          [
+            166,
+            166
+          ],
+          [
+            170,
+            170
+          ],
+          [
+            174,
+            175
+          ],
+          [
+            185,
+            185
+          ]
+        ],
+        "selected_source_bytes": 7395
+      }
+    },
+    {
+      "source_path": "knowledge/text/BRG12-KNOW16-FAQ-or-Knowledge-Recap-File-v01a.md",
+      "source_blob": "c53cc5d17037690b89a6ca9e3c9d0c61c5e3801e",
+      "source_sha256": "1848ed03db37a92200e9a4f5140d0e72bf0ade7f2ab9e1696c042b75fa4419d0",
+      "file": "dossiers/know16.md",
+      "sha256": "3f9981b890bca1578fe6b32dcce46200e1988b959b0886a4f64917033938e164",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            5
+          ],
+          [
+            18,
+            18
+          ],
+          [
+            20,
+            35
+          ],
+          [
+            108,
+            141
+          ],
+          [
+            145,
+            153
+          ],
+          [
+            157,
+            173
+          ],
+          [
+            179,
+            185
+          ],
+          [
+            189,
+            193
+          ],
+          [
+            207,
+            211
+          ],
+          [
+            217,
+            219
+          ],
+          [
+            223,
+            223
+          ],
+          [
+            227,
+            233
+          ]
+        ],
+        "selected_source_bytes": 11779
+      }
+    },
+    {
+      "source_path": "eval/knowledge-question-bank.md",
+      "source_blob": "ce5af29c5ff0c61d8c0704b959b824b96f140621",
+      "source_sha256": "37b5545165cc6686797396e15b3f0d54d94f16c72e3c9aceb58602bde971fae2",
+      "file": "project/knowledge-question-bank.md",
+      "sha256": "7ef8b2fa3bb2cbd8c1044af5e497c2f5322122d764c96a040f64ea42990a9c1e",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            10
+          ],
+          [
+            19,
+            19
+          ],
+          [
+            22,
+            34
+          ]
+        ],
+        "selected_source_bytes": 2882
+      }
+    },
+    {
+      "source_path": "prompts/research-reconciliation-workbook.md",
+      "source_blob": "06e580e52c7dd62d56478dd06fd003177cec33c8",
+      "source_sha256": "2f67085ae48e1da0bfc9a7195ddbe0b8b825589a79ff36c8d3b658d7cda49db6",
+      "file": "project/research-reconciliation-workbook.md",
+      "sha256": "f9562868da15b71fd9eece230ee702bea9de9f73a94d608f11120cd5fd80f1b8",
+      "selection": {
+        "source_lines": [
+          [
+            1,
+            6
+          ],
+          [
+            44,
+            46
+          ],
+          [
+            50,
+            78
+          ],
+          [
+            82,
+            117
+          ]
+        ],
+        "selected_source_bytes": 8800
+      }
+    },
+    {
+      "source_path": "rag-source/2026-10-16-operating-pattern-map.json",
+      "source_blob": "9b98f0cd3d228633682f05b6c4cd2e87ad8d7065",
+      "source_sha256": "395a5104454006b24c4f8e6e01319251c01a1cbdf6e179698895ba90c94cbfb0",
+      "file": "project/2026-10-16-operating-pattern-map.json",
+      "sha256": "6095b3484945f944078df0e4030dce0480d1eb93288fe539a8f9829aa563e738",
+      "selection": {
+        "array_field": "meanings",
+        "id_field": "meaning_id",
+        "retained_record_ids": [
+          "D02-04",
+          "D02-06",
+          "D02-07",
+          "D02-08",
+          "D03-01",
+          "D03-02",
+          "D03-03",
+          "D03-04",
+          "D03-05",
+          "D04-01",
+          "D04-02",
+          "D04-03",
+          "D04-04",
+          "D04-05",
+          "D04-06",
+          "D05-01",
+          "D05-02",
+          "D05-03",
+          "D05-04",
+          "D05-05",
+          "D06-01",
+          "D06-02",
+          "D06-03",
+          "D06-04",
+          "D06-05",
+          "D06-06"
+        ]
+      }
+    },
+    {
+      "source_path": "rag-source/2026-10-16-research-leads.json",
+      "source_blob": "00c71829c1cd4b58b950d17e2f4a430ad5ed2563",
+      "source_sha256": "af9f0ae969a5487e2b3638aa91cb0ed6d00f4e92909750cb8255212547a27245",
+      "file": "project/2026-10-16-research-leads.json",
+      "sha256": "99a40cacb53f9fe423c0e31290f27326710fec5c8b4f53345fde2fef13cf8638",
+      "selection": {
+        "array_field": "sources",
+        "id_field": "topic",
+        "subarray_field": "primary_source_leads",
+        "retained_zero_based_indices": {
+          "KNOW01": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "KNOW02": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "KNOW03": [
+            0,
+            1,
+            7,
+            8,
+            9,
+            10
+          ],
+          "KNOW04": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "KNOW05": [
+            0,
+            1,
+            2
+          ],
+          "KNOW06": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "KNOW07": [
+            5
+          ],
+          "KNOW08": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "KNOW09": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "KNOW10": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            8
+          ],
+          "KNOW11": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "KNOW12": [
+            0,
+            1,
+            4
+          ],
+          "KNOW13": [
+            1,
+            2,
+            3
+          ],
+          "KNOW14": [
+            0,
+            1,
+            2,
+            5,
+            8
+          ],
+          "KNOW15": [
+            8,
+            9,
+            11
+          ],
+          "KNOW16": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            11
+          ],
+          "KNOW17": [
+            0,
+            1,
+            2
+          ]
+        }
+      }
+    }
+  ]
+}

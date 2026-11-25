@@ -1,0 +1,945 @@
+{
+  "schema": "brg12-operating-pattern-map-v1",
+  "date": "2026-10-16",
+  "status": "35 targeted meaning mappings; not a full Project value census or measured behavior",
+  "source_census_sha256": "3d93c64e63c4e2af5fa6d68bc2168b917f9d9f16659eb057bd0d1ebfacb6e62e",
+  "meanings": [
+    {
+      "meaning_id": "D02-04",
+      "group": "D02",
+      "source_meaning": "Optional personalization preserves context across channels and may offer a follow-up, not require surveillance or a sale.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S08-T03-M03",
+          "tail_sha256": "844efaefe9fbf2cacf3b05764ea568c4dff80571487a7a560534b218179b7636",
+          "tail_line_start": 1,
+          "tail_line_end": 10,
+          "private_edition": "know10-e1.md",
+          "source_block_ids": [
+            "KNOW10-E1-B032",
+            "KNOW10-E1-B033",
+            "KNOW10-E1-B034",
+            "KNOW10-E1-B035"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S08-T03-M03",
+          "tail_sha256": "844efaefe9fbf2cacf3b05764ea568c4dff80571487a7a560534b218179b7636",
+          "tail_line_start": 43,
+          "tail_line_end": 45,
+          "private_edition": "know10-e1.md",
+          "source_block_ids": [
+            "KNOW10-E1-B044"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D02-06",
+      "group": "D02",
+      "source_meaning": "After purchase, keep registration/service questions coherent and escalate when the assistant cannot answer.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S08-T03-M03",
+          "tail_sha256": "844efaefe9fbf2cacf3b05764ea568c4dff80571487a7a560534b218179b7636",
+          "tail_line_start": 49,
+          "tail_line_end": 51,
+          "private_edition": "know10-e1.md",
+          "source_block_ids": [
+            "KNOW10-E1-B044",
+            "KNOW10-E1-B045"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S08-T03-M03",
+          "tail_sha256": "844efaefe9fbf2cacf3b05764ea568c4dff80571487a7a560534b218179b7636",
+          "tail_line_start": 67,
+          "tail_line_end": 76,
+          "private_edition": "know10-e1.md",
+          "source_block_ids": [
+            "KNOW10-E1-B049"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D02-07",
+      "group": "D02",
+      "source_meaning": "Alternative intents need different branches rather than one conversion funnel.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S08-T03-M03",
+          "tail_sha256": "844efaefe9fbf2cacf3b05764ea568c4dff80571487a7a560534b218179b7636",
+          "tail_line_start": 51,
+          "tail_line_end": 53,
+          "private_edition": "know10-e1.md",
+          "source_block_ids": [
+            "KNOW10-E1-B045",
+            "KNOW10-E1-B046"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S08-T03-M03",
+          "tail_sha256": "844efaefe9fbf2cacf3b05764ea568c4dff80571487a7a560534b218179b7636",
+          "tail_line_start": 55,
+          "tail_line_end": 104,
+          "private_edition": "know10-e1.md",
+          "source_block_ids": [
+            "KNOW10-E1-B047",
+            "KNOW10-E1-B048",
+            "KNOW10-E1-B049",
+            "KNOW10-E1-B050"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D02-08",
+      "group": "D02",
+      "source_meaning": "The source adapts SCAMPER to touchpoints, with concrete candidate improvements.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S08-T03-M03",
+          "tail_sha256": "844efaefe9fbf2cacf3b05764ea568c4dff80571487a7a560534b218179b7636",
+          "tail_line_start": 53,
+          "tail_line_end": 53,
+          "private_edition": "know10-e1.md",
+          "source_block_ids": [
+            "KNOW10-E1-B046"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D03-01",
+      "group": "D03",
+      "source_meaning": "DTC and dealer emphasis are alternative channel strategies with different benefits, costs and sub-decisions.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S02-T03-M03",
+          "tail_sha256": "b08009bf24b9e8601e159302296deea9e3f3bb970bcac5f70c5262fcb9d8d6ec",
+          "tail_line_start": 39,
+          "tail_line_end": 73,
+          "private_edition": "know14-e1.md",
+          "source_block_ids": [
+            "KNOW14-E1-B045",
+            "KNOW14-E1-B046",
+            "KNOW14-E1-B047",
+            "KNOW14-E1-B048",
+            "KNOW14-E1-B049",
+            "KNOW14-E1-B050",
+            "KNOW14-E1-B051",
+            "KNOW14-E1-B052"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D03-02",
+      "group": "D03",
+      "source_meaning": "The source links market observation to a response, distribution consequence and feedback rule.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S02-T03-M03",
+          "tail_sha256": "b08009bf24b9e8601e159302296deea9e3f3bb970bcac5f70c5262fcb9d8d6ec",
+          "tail_line_start": 24,
+          "tail_line_end": 37,
+          "private_edition": "know14-e1.md",
+          "source_block_ids": [
+            "KNOW14-E1-B042",
+            "KNOW14-E1-B043",
+            "KNOW14-E1-B044"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D03-03",
+      "group": "D03",
+      "source_meaning": "Risk scenarios contain concrete sensitivity-test inputs and counter-strategies.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S07-T03-M03",
+          "tail_sha256": "db2ccb21719e5eb4e294d871056d6795a7056559658f6b77a6cf73ae498ec21b",
+          "tail_line_start": 7,
+          "tail_line_end": 19,
+          "private_edition": "know11-e1.md",
+          "source_block_ids": [
+            "KNOW11-E1-B034",
+            "KNOW11-E1-B035",
+            "KNOW11-E1-B036",
+            "KNOW11-E1-B037"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D03-04",
+      "group": "D03",
+      "source_meaning": "Uncertainty about private-company finances must retain conflicting estimates and lack of disclosure without claiming an interpolated truth.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S12-T03-M03",
+          "tail_sha256": "5a2748b116a5f170060f18ff7f63a2446bd082cc5ba37d0dc264b23ddd611645",
+          "tail_line_start": 11,
+          "tail_line_end": 28,
+          "private_edition": "know05-e1.md",
+          "source_block_ids": [
+            "KNOW05-E1-B033",
+            "KNOW05-E1-B034",
+            "KNOW05-E1-B035",
+            "KNOW05-E1-B036"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S12-T03-M03",
+          "tail_sha256": "5a2748b116a5f170060f18ff7f63a2446bd082cc5ba37d0dc264b23ddd611645",
+          "tail_line_start": 32,
+          "tail_line_end": 39,
+          "private_edition": "know05-e1.md",
+          "source_block_ids": [
+            "KNOW05-E1-B038"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S12-T03-M03",
+          "tail_sha256": "5a2748b116a5f170060f18ff7f63a2446bd082cc5ba37d0dc264b23ddd611645",
+          "tail_line_start": 60,
+          "tail_line_end": 75,
+          "private_edition": "know05-e1.md",
+          "source_block_ids": [
+            "KNOW05-E1-B038"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D03-05",
+      "group": "D03",
+      "source_meaning": "Growth and plateau scenarios preserve distinct capacity and quality implications.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S12-T05-M03",
+          "tail_sha256": "139fe6dd4fd582ac60ad1eb11efd912f6bf46fbd659c4cf33c91224dd38f597e",
+          "tail_line_start": 410,
+          "tail_line_end": 417,
+          "private_edition": "know05-e2.md",
+          "source_block_ids": [
+            "KNOW05-E2-B101",
+            "KNOW05-E2-B102",
+            "KNOW05-E2-B103"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D04-01",
+      "group": "D04",
+      "source_meaning": "A manufacturing evidence card must keep the claimed process, date, metric definition and source distinct.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S06-T05-M03",
+          "tail_sha256": "1af60724fb29f97258d1a3c51c20fd1c37bfe632847bc711438857dabe1af64c",
+          "tail_line_start": 25,
+          "tail_line_end": 39,
+          "private_edition": "know06-e2.md",
+          "source_block_ids": [
+            "KNOW06-E2-B032",
+            "KNOW06-E2-B033"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S06-T05-M03",
+          "tail_sha256": "1af60724fb29f97258d1a3c51c20fd1c37bfe632847bc711438857dabe1af64c",
+          "tail_line_start": 243,
+          "tail_line_end": 257,
+          "private_edition": "know06-e2.md",
+          "source_block_ids": [
+            "KNOW06-E2-B088"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D04-02",
+      "group": "D04",
+      "source_meaning": "The source explicitly distinguishes unmeasured energy savings from plausible future renewable investment.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S06-T05-M03",
+          "tail_sha256": "1af60724fb29f97258d1a3c51c20fd1c37bfe632847bc711438857dabe1af64c",
+          "tail_line_start": 49,
+          "tail_line_end": 49,
+          "private_edition": "know06-e2.md",
+          "source_block_ids": [
+            "KNOW06-E2-B036"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 139,
+          "tail_line_end": 145,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B081",
+            "KNOW06-E1-B082",
+            "KNOW06-E1-B083"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D04-03",
+      "group": "D04",
+      "source_meaning": "The material-footprint table and bow life-cycle table use different functional units and evidence classes.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 211,
+          "tail_line_end": 261,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B107",
+            "KNOW06-E1-B108",
+            "KNOW06-E1-B109",
+            "KNOW06-E1-B110",
+            "KNOW06-E1-B111",
+            "KNOW06-E1-B112",
+            "KNOW06-E1-B113",
+            "KNOW06-E1-B114",
+            "KNOW06-E1-B115"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D04-04",
+      "group": "D04",
+      "source_meaning": "Life-cycle mitigation and material substitution are testable design alternatives with performance constraints.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 5,
+          "tail_line_end": 29,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B047",
+            "KNOW06-E1-B048",
+            "KNOW06-E1-B049",
+            "KNOW06-E1-B050",
+            "KNOW06-E1-B051"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 179,
+          "tail_line_end": 201,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B096",
+            "KNOW06-E1-B097",
+            "KNOW06-E1-B098",
+            "KNOW06-E1-B099",
+            "KNOW06-E1-B100",
+            "KNOW06-E1-B101",
+            "KNOW06-E1-B102"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D04-05",
+      "group": "D04",
+      "source_meaning": "The seven applied SCAMPER categories preserve concrete options, not just a mnemonic.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 49,
+          "tail_line_end": 66,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B057",
+            "KNOW06-E1-B058",
+            "KNOW06-E1-B059",
+            "KNOW06-E1-B060"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D04-06",
+      "group": "D04",
+      "source_meaning": "Supplier/governance questions need records and monitoring rather than an inferred good-culture verdict.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 94,
+          "tail_line_end": 145,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B068",
+            "KNOW06-E1-B069",
+            "KNOW06-E1-B070",
+            "KNOW06-E1-B071",
+            "KNOW06-E1-B072",
+            "KNOW06-E1-B073",
+            "KNOW06-E1-B074",
+            "KNOW06-E1-B075",
+            "KNOW06-E1-B076",
+            "KNOW06-E1-B077",
+            "KNOW06-E1-B078",
+            "KNOW06-E1-B079",
+            "KNOW06-E1-B080",
+            "KNOW06-E1-B081",
+            "KNOW06-E1-B082",
+            "KNOW06-E1-B083"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 263,
+          "tail_line_end": 295,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B116",
+            "KNOW06-E1-B117",
+            "KNOW06-E1-B118",
+            "KNOW06-E1-B119",
+            "KNOW06-E1-B120",
+            "KNOW06-E1-B121",
+            "KNOW06-E1-B122",
+            "KNOW06-E1-B123"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S06-T03-M03",
+          "tail_sha256": "87c77f4f88d07acc937890a25689a01d7c86abeb0e432678b0d9e0451380c89e",
+          "tail_line_start": 311,
+          "tail_line_end": 326,
+          "private_edition": "know06-e1.md",
+          "source_block_ids": [
+            "KNOW06-E1-B128",
+            "KNOW06-E1-B129",
+            "KNOW06-E1-B130",
+            "KNOW06-E1-B131"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D05-01",
+      "group": "D05",
+      "source_meaning": "Accessory co-development is not ownership.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S04-T05-M03",
+          "tail_sha256": "25d8ffb6370150b32799d341d3a9e6aa445088e8b70e7f18837a844f14d8f70b",
+          "tail_line_start": 1,
+          "tail_line_end": 12,
+          "private_edition": "know08-e2.md",
+          "source_block_ids": [
+            "KNOW08-E2-B019"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D05-02",
+      "group": "D05",
+      "source_meaning": "Licensing has a direction, subject IP and purpose distinct from a merger.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S04-T05-M03",
+          "tail_sha256": "25d8ffb6370150b32799d341d3a9e6aa445088e8b70e7f18837a844f14d8f70b",
+          "tail_line_start": 14,
+          "tail_line_end": 16,
+          "private_edition": "know08-e2.md",
+          "source_block_ids": [
+            "KNOW08-E2-B019"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D05-03",
+      "group": "D05",
+      "source_meaning": "Dealer distribution and service are program roles with mutual contributions.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S04-T05-M03",
+          "tail_sha256": "25d8ffb6370150b32799d341d3a9e6aa445088e8b70e7f18837a844f14d8f70b",
+          "tail_line_start": 30,
+          "tail_line_end": 60,
+          "private_edition": "know08-e2.md",
+          "source_block_ids": [
+            "KNOW08-E2-B022",
+            "KNOW08-E2-B023",
+            "KNOW08-E2-B024",
+            "KNOW08-E2-B025",
+            "KNOW08-E2-B026",
+            "KNOW08-E2-B027",
+            "KNOW08-E2-B028",
+            "KNOW08-E2-B029",
+            "KNOW08-E2-B030",
+            "KNOW08-E2-B031"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D05-04",
+      "group": "D05",
+      "source_meaning": "Media sponsorship, athlete contract and open contingency eligibility differ.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S04-T05-M03",
+          "tail_sha256": "25d8ffb6370150b32799d341d3a9e6aa445088e8b70e7f18837a844f14d8f70b",
+          "tail_line_start": 18,
+          "tail_line_end": 28,
+          "private_edition": "know08-e2.md",
+          "source_block_ids": [
+            "KNOW08-E2-B019",
+            "KNOW08-E2-B020",
+            "KNOW08-E2-B021"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S04-T05-M03",
+          "tail_sha256": "25d8ffb6370150b32799d341d3a9e6aa445088e8b70e7f18837a844f14d8f70b",
+          "tail_line_start": 62,
+          "tail_line_end": 84,
+          "private_edition": "know08-e2.md",
+          "source_block_ids": [
+            "KNOW08-E2-B032",
+            "KNOW08-E2-B033",
+            "KNOW08-E2-B034",
+            "KNOW08-E2-B035",
+            "KNOW08-E2-B036",
+            "KNOW08-E2-B037",
+            "KNOW08-E2-B038",
+            "KNOW08-E2-B039",
+            "KNOW08-E2-B040"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D05-05",
+      "group": "D05",
+      "source_meaning": "Acquisition, divestiture and internally created brands require separate event rows.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S04-T05-M03",
+          "tail_sha256": "25d8ffb6370150b32799d341d3a9e6aa445088e8b70e7f18837a844f14d8f70b",
+          "tail_line_start": 86,
+          "tail_line_end": 141,
+          "private_edition": "know08-e2.md",
+          "source_block_ids": [
+            "KNOW08-E2-B041",
+            "KNOW08-E2-B042",
+            "KNOW08-E2-B043",
+            "KNOW08-E2-B044",
+            "KNOW08-E2-B045",
+            "KNOW08-E2-B046",
+            "KNOW08-E2-B047",
+            "KNOW08-E2-B048",
+            "KNOW08-E2-B049",
+            "KNOW08-E2-B050",
+            "KNOW08-E2-B051",
+            "KNOW08-E2-B052",
+            "KNOW08-E2-B053"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D06-01",
+      "group": "D06",
+      "source_meaning": "Announcement and model-year dates can both be correct while describing different events.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S17-T03-M03",
+          "tail_sha256": "a6ad1ef324c738c3da89a554a7686894133924c2a129cf191acf6551bc0bf71e",
+          "tail_line_start": 205,
+          "tail_line_end": 212,
+          "private_edition": "know01-e1.md",
+          "source_block_ids": [
+            "KNOW01-E1-B042"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S03-T05-M03",
+          "tail_sha256": "ab0975976a29f6e101dcfd454f9987ee1515d0aeed05be2225af13623dc1f62d",
+          "tail_line_start": 32,
+          "tail_line_end": 34,
+          "private_edition": "know15-e2.md",
+          "source_block_ids": [
+            "KNOW15-E2-B020",
+            "KNOW15-E2-B021"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D06-02",
+      "group": "D06",
+      "source_meaning": "Chronology conflict examples should survive as paired source assertions.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S17-T03-M03",
+          "tail_sha256": "a6ad1ef324c738c3da89a554a7686894133924c2a129cf191acf6551bc0bf71e",
+          "tail_line_start": 175,
+          "tail_line_end": 212,
+          "private_edition": "know01-e1.md",
+          "source_block_ids": [
+            "KNOW01-E1-B042"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S17-T05-M03",
+          "tail_sha256": "e34ae3b6ff27f9b8f1615960d2f094f99d8b41b9be264eb6c6cde0063877b448",
+          "tail_line_start": 5,
+          "tail_line_end": 11,
+          "private_edition": "know01-e2.md",
+          "source_block_ids": [
+            "KNOW01-E2-B030",
+            "KNOW01-E2-B031"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S17-T05-M03",
+          "tail_sha256": "e34ae3b6ff27f9b8f1615960d2f094f99d8b41b9be264eb6c6cde0063877b448",
+          "tail_line_start": 76,
+          "tail_line_end": 104,
+          "private_edition": "know01-e2.md",
+          "source_block_ids": [
+            "KNOW01-E2-B040",
+            "KNOW01-E2-B041",
+            "KNOW01-E2-B042",
+            "KNOW01-E2-B043",
+            "KNOW01-E2-B044",
+            "KNOW01-E2-B045",
+            "KNOW01-E2-B046"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D06-03",
+      "group": "D06",
+      "source_meaning": "Technology-to-model lineage should retain what changed and why the source says it mattered.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S17-T03-M03",
+          "tail_sha256": "a6ad1ef324c738c3da89a554a7686894133924c2a129cf191acf6551bc0bf71e",
+          "tail_line_start": 175,
+          "tail_line_end": 216,
+          "private_edition": "know01-e1.md",
+          "source_block_ids": [
+            "KNOW01-E1-B042",
+            "KNOW01-E1-B043",
+            "KNOW01-E1-B044"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S17-T05-M03",
+          "tail_sha256": "e34ae3b6ff27f9b8f1615960d2f094f99d8b41b9be264eb6c6cde0063877b448",
+          "tail_line_start": 66,
+          "tail_line_end": 110,
+          "private_edition": "know01-e2.md",
+          "source_block_ids": [
+            "KNOW01-E2-B038",
+            "KNOW01-E2-B039",
+            "KNOW01-E2-B040",
+            "KNOW01-E2-B041",
+            "KNOW01-E2-B042",
+            "KNOW01-E2-B043",
+            "KNOW01-E2-B044",
+            "KNOW01-E2-B045",
+            "KNOW01-E2-B046",
+            "KNOW01-E2-B047"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D06-04",
+      "group": "D06",
+      "source_meaning": "Dates for scale metrics describe a particular period and facility scope, not a permanent company attribute.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S17-T05-M03",
+          "tail_sha256": "e34ae3b6ff27f9b8f1615960d2f094f99d8b41b9be264eb6c6cde0063877b448",
+          "tail_line_start": 13,
+          "tail_line_end": 32,
+          "private_edition": "know01-e2.md",
+          "source_block_ids": [
+            "KNOW01-E2-B032"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D06-05",
+      "group": "D06",
+      "source_meaning": "Quotation, service anecdote and company commitment are separate claim kinds.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S15-T05-M03",
+          "tail_sha256": "047cd0dcacc4eaab0dd21865468b7d6be047c993dc41cbb27161b82cd32563bc",
+          "tail_line_start": 16,
+          "tail_line_end": 20,
+          "private_edition": "know02-e2.md",
+          "source_block_ids": [
+            "KNOW02-E2-B028"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        },
+        {
+          "reader_local_id": "S15-T05-M03",
+          "tail_sha256": "047cd0dcacc4eaab0dd21865468b7d6be047c993dc41cbb27161b82cd32563bc",
+          "tail_line_start": 26,
+          "tail_line_end": 40,
+          "private_edition": "know02-e2.md",
+          "source_block_ids": [
+            "KNOW02-E2-B031",
+            "KNOW02-E2-B032"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": false
+        }
+      ]
+    },
+    {
+      "meaning_id": "D06-06",
+      "group": "D06",
+      "source_meaning": "The restricted issue pattern connects a neutral user question to an issue record, evidence, procedural status and update trigger.",
+      "source_evidence_status": "Historical unverified research; not current claim validation",
+      "preservation_route": "Complete private historical edition; see source block anchors",
+      "method_adaptation_route": "prompts/research-reconciliation-workbook.md",
+      "adaptation_coverage": "Group-level method adaptation; exact historical details remain in the private edition",
+      "source_mappings": [
+        {
+          "reader_local_id": "S13-T03-M04",
+          "tail_sha256": "19a9010f2ff721c1b062015c3cbeb24a8bacbb08f59aed0b278d067cc8b07d96",
+          "tail_line_start": 19,
+          "tail_line_end": 36,
+          "private_edition": "know17-e1.md",
+          "source_block_ids": [
+            "KNOW17-E1-B026",
+            "KNOW17-E1-B027",
+            "KNOW17-E1-B028",
+            "KNOW17-E1-B029",
+            "KNOW17-E1-B030"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": true
+        },
+        {
+          "reader_local_id": "S13-T03-M04",
+          "tail_sha256": "19a9010f2ff721c1b062015c3cbeb24a8bacbb08f59aed0b278d067cc8b07d96",
+          "tail_line_start": 175,
+          "tail_line_end": 200,
+          "private_edition": "know17-e1.md",
+          "source_block_ids": [
+            "KNOW17-E1-B042",
+            "KNOW17-E1-B043",
+            "KNOW17-E1-B044",
+            "KNOW17-E1-B045",
+            "KNOW17-E1-B046",
+            "KNOW17-E1-B047"
+          ],
+          "range_alignment": "Exact content after whitespace-only layout normalization",
+          "restricted": true
+        }
+      ]
+    }
+  ],
+  "source_threads": "All26 held unarchived"
+}
