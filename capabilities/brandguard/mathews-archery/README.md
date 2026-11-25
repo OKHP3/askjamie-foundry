@@ -4,7 +4,7 @@
 
 ## Transferred repository
 
-485 of 548 tracked files from the source main branch are here.
+495 of 548 tracked files from the source main branch are here.
 
 - [Browse the original directory layout](origin/repository/)
 - [Read the source commit, tree identities, and byte counts](origin/source.json)

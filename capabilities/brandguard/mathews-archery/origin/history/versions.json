@@ -271,6 +271,15 @@
     "s45": [
       "97f8f60ce3b4a26d03693fd5e65a0192d023b673",
       "bc96a60f595fca83673c3ed7f3a78d99649be4d9"
+    ],
+    "s46": [
+      "97f8f60ce3b4a26d03693fd5e65a0192d023b673",
+      "f4a6ba2c09f1f50f3afac742dc18c7f3cfcc834a"
+    ],
+    "s47": [
+      "164ddbab0aef1f15f3fe1f810018c02cb1cfd309",
+      "9d3ef56c25d57ada9edad6e71b631482cd7947b9",
+      "dc41d6a76e5b25c2a315dbbe14950d07f2b7711b"
     ]
   },
   "versions": [
@@ -735,6 +744,23 @@
       ]
     },
     {
+      "git_blob": "25d79f674f210611fcc661d91abdcd2f368289fe",
+      "sha256": "ba99571bcd1c9ca4a22325cbb83b2b0a7c2abc70fa70c95788c17e1efdd4c1f3",
+      "size": 11814,
+      "category": "repository-governance",
+      "stored_at": "objects/25d79f674f210611fcc661d91abdcd2f368289fe.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/thread-extracts/mathews-brandguard-knowledge-governance-portable-project-handoff.md",
+          "commit_set": "s39",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
       "git_blob": "2719d4ef0a7b533d03fe814b720efddedea32628",
       "sha256": "e24395484317a591fc2b426850dfcc2778b8383b1c0f2396a064288bd66a93dd",
       "size": 1954,
@@ -779,6 +805,40 @@
         {
           "path": ".agents/skills/okhp3-thread-context-extraction-copilot-m365/SKILL.md",
           "commit_set": "s4"
+        }
+      ]
+    },
+    {
+      "git_blob": "2d16c47d3f41e3758b03d6e85535ea2d45ed6d7e",
+      "sha256": "1193c05495bbedd3cc0146c50ced1859e2b343d1a983b6d362392dd4e9dd1cac",
+      "size": 9700,
+      "category": "repository-governance",
+      "stored_at": "objects/2d16c47d3f41e3758b03d6e85535ea2d45ed6d7e.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/harvest/2026-10-16-retention-review.md",
+          "commit_set": "s20",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "git_blob": "2fbb1e6606d087669d8d6b02ae40b4a79622c5df",
+      "sha256": "90394882cbd9da6466f2cba961b71434dbe48fb53a649f432282aa4c06e7a0ea",
+      "size": 12738,
+      "category": "repository-governance",
+      "stored_at": "objects/2fbb1e6606d087669d8d6b02ae40b4a79622c5df.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/thread-extracts/mathews-brandguard-knowledge-governance-portable-project-handoff.md",
+          "commit_set": "s27",
+          "mode": "100644"
         }
       ]
     },
@@ -1080,6 +1140,23 @@
         {
           "path": "docs/harvest/2026-10-16-source-ledger.json",
           "commit_set": "s20"
+        }
+      ]
+    },
+    {
+      "git_blob": "4dc12b40aa82613dd10e5537446cc389116e18a4",
+      "sha256": "9a4de698386875c007392aa37555a5254ec63751bb8d5e0ec6edd3e42721abb0",
+      "size": 6650,
+      "category": "repository-governance",
+      "stored_at": "objects/4dc12b40aa82613dd10e5537446cc389116e18a4.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/harvest/2026-10-16-expansion-review.md",
+          "commit_set": "s47",
+          "mode": "100644"
         }
       ]
     },
@@ -1872,6 +1949,23 @@
       ]
     },
     {
+      "git_blob": "86c02f52681018ccaae92bcef1542da846b15077",
+      "sha256": "7d99ab37f4294dbe214e0d3f5397f4e3d10727c4a8c6d649d8540ab604a17976",
+      "size": 12563,
+      "category": "repository-governance",
+      "stored_at": "objects/86c02f52681018ccaae92bcef1542da846b15077.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/thread-extracts/mathews-brandguard-knowledge-governance-portable-project-handoff.md",
+          "commit_set": "s43",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
       "git_blob": "8708189eba83b35eb1df26ebe72d5aa7bb66d7c1",
       "sha256": "30e6fec2b5f34f3bb460c3e471331e04c5d1c9f1965c55415f233c59c9808e11",
       "size": 34,
@@ -2237,6 +2331,23 @@
       ]
     },
     {
+      "git_blob": "a94e154da751bb07ef87305d1134bc6df6d29c40",
+      "sha256": "9a945564a4a4a90c7a7d1fec9d36f12a836663f33fe1894be95157870c2de67e",
+      "size": 7460,
+      "category": "repository-governance",
+      "stored_at": "objects/a94e154da751bb07ef87305d1134bc6df6d29c40.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/harvest/2026-10-16-expansion-review.md",
+          "commit_set": "s28",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
       "git_blob": "b01fc7a2352b253512f46bc698a7a2e607b55008",
       "sha256": "4316ebcf34d83225ac7c5fd313c02b7d13049fdc90563e178b9eaf26adfc6a16",
       "size": 16640,
@@ -2402,6 +2513,23 @@
         {
           "path": ".agents/skills/okhp3-skill-foundry/benchmarks/sync-verification-2026-07-28.json",
           "commit_set": "s16"
+        }
+      ]
+    },
+    {
+      "git_blob": "bbd4add2be4054e33f8cc7495b0079f9cc973a1b",
+      "sha256": "10630eb2dca11ccf23b1b2a2b3f384461cd33b7694e6c1b4ef0bed74efb40e23",
+      "size": 13169,
+      "category": "repository-governance",
+      "stored_at": "objects/bbd4add2be4054e33f8cc7495b0079f9cc973a1b.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "docs/thread-extracts/mathews-brandguard-knowledge-governance-portable-project-handoff.md",
+          "commit_set": "s46",
+          "mode": "100644"
         }
       ]
     },
@@ -2833,6 +2961,24 @@
         {
           "path": ".agents/skills/tcx-ws/i1/e3-catalog/skill/transcript.md",
           "commit_set": "s12"
+        }
+      ]
+    },
+    {
+      "git_blob": "e0f5927aea737f8dcf94fcaf4f705770ebd25911",
+      "sha256": "a36703f3051d9464cd992afc384a2fb3fb03a0c7005c307522651f87f9d5c953",
+      "size": 2445,
+      "category": "repository-governance",
+      "stored_at": "objects/e0f5927aea737f8dcf94fcaf4f705770ebd25911.yaml",
+      "source_history": [
+        "main-history",
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "gpt_manifest.yaml",
+          "commit_set": "s22",
+          "mode": "100644"
         }
       ]
     },

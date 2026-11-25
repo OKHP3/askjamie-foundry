@@ -19,9 +19,11 @@ On November 24, 2026, Jamie designated these 17 folders as the destinations for 
 | `askjamie-brg08-dollar-general` | [brandguard/dollar-general](../../capabilities/brandguard/dollar-general/README.md) | 545 / 545 |
 | `askjamie-brg09-coca-cola` | [brandguard/coca-cola](../../capabilities/brandguard/coca-cola/README.md) | 538 / 538 |
 | `askjamie-brg10-discount-tire` | [brandguard/discount-tire](../../capabilities/brandguard/discount-tire/README.md) | 537 / 537 |
-| `askjamie-brg11-scheels` | [brandguard/scheels](../../capabilities/brandguard/scheels/README.md) | 252 / 254 |
-| `askjamie-brg12-mathews-archery` | [brandguard/mathews-archery](../../capabilities/brandguard/mathews-archery/README.md) | 485 / 548 |
-| **Total** | | **8,432 / 8,497** |
+| `askjamie-brg11-scheels` | [brandguard/scheels](../../capabilities/brandguard/scheels/README.md) | 254 / 254 |
+| `askjamie-brg12-mathews-archery` | [brandguard/mathews-archery](../../capabilities/brandguard/mathews-archery/README.md) | 495 / 548 |
+| **Total** | | **8,444 / 8,497** |
+
+The SCHEELS folder includes all 254 default-branch files and all 332 historical file versions outside that tree. Mathews Archery includes 495 of 548 default-branch files and 191 of 195 historical file versions. The 53 outstanding current files consist of 16 research dossiers in three formats and five related project files. The original Mathews repository and Windows checkout remain necessary for full recovery.
 
 ## Finding and verifying a file
 
@@ -37,7 +39,7 @@ The operating capability's registry storage and graduation fields govern authori
 
 ## Historical file versions
 
-Each folder's `origin/history/versions.json` maps historical filenames and source Git witnesses to the stored bytes. Across the 17 sources these indexes describe 2,780 source/version pairs drawn from 814 distinct blobs. When historical bytes already exist in FoundRy the index points to that file. The branch delta records in the applicable history folders describe paths added, changed or removed relative to each pinned main tree.
+Each folder's `origin/history/versions.json` maps historical filenames and source Git witnesses to the stored bytes. Across the 17 sources these indexes describe 2,791 source/version pairs drawn from 825 distinct blobs. When historical bytes already exist in FoundRy the index points to that file. The branch delta records in the applicable history folders describe paths added, changed or removed relative to each pinned main tree.
 
 ## GitHub records
 

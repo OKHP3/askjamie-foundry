@@ -1,0 +1,117 @@
+# BRG12 Mathews Archery BrandGuard Sentinel
+
+## Project identity
+
+- Suite: AskJamie / BrandGuard
+- Repository: https://github.com/OKHP3/askjamie-brg12-mathews-archery
+- Notion anchor: https://app.notion.com/p/27a1efa2939b45dc8da0f43bdff26f1c
+- Root: this repository
+- Type: Git repository containing a static brand knowledge corpus and planned Custom GPT support artifacts
+- Current status: static knowledge corpus with a reviewed 2026-10-16 harvest packet. Product, prompt, GTM, and evaluation design drafts, historical text companions, a recovered reference icon, and harvest operations are present. All 34 observed expansion reports are now retained as private standalone historical research editions with a frozen source-block census. The complete KNOW17 source prompt and six reconciliation worksheets have portable adaptations. Scoped preservation does not establish a whole-Project reusable-value percentage. No tested product runtime, build pack, deployment, release, or replacement plugin is established.
+- Related repositories: `askjamie-aj04-brandguard` and `askjamie-brg11-scheels`
+
+## Purpose, mission, and vision
+
+- Confirmed project mission from `README.md`: protect the Mathews Archery legacy from AI-driven brand drift.
+- Inferred product value: give downstream content and GPT workflows a curated, evidence-aware reference base for Mathews Archery brand-aligned answers and content.
+- Inferred longer-term vision from `README.md` and `product/gpt_manifest.yaml`: become the maintained source for a Custom GPT, ChatGPT Project, web content, social content, video content, and monetization materials. Those downstream surfaces are planned, not present in this checkout.
+- Intended users are not explicitly documented. The repository appears intended for OKHP3 maintainers and future content or GPT build workflows, with public-facing outputs as a later delivery surface.
+- This is an unofficial educational resource. The knowledge files state that they are compiled from public sources and are not affiliated with or endorsed by Mathews Archery.
+
+## Scope and boundaries
+
+In scope:
+
+- Curated Mathews Archery background, product, technology, market, customer, risk, and comparison knowledge.
+- Future prompts, retrieval sources, tests, evaluations, build packs, release snapshots, GTM content, and operating checklists described by the scaffold.
+- Agent guidance and repository metadata needed to maintain those artifacts safely.
+
+Out of scope unless explicitly added by the owner:
+
+- A runnable application, API, deployment service, or automated publishing pipeline. None is present in this repository.
+- Treating the corpus as official Mathews Archery policy, current product documentation, legal advice, or a guarantee of production behavior.
+- Proactively surfacing sensitive reputational material in ordinary product or marketing responses.
+
+## Repository structure and architecture
+
+The current repository is a single Git project. No nested repository was found.
+
+- `knowledge/`: 17 historical knowledge topics, each stored as an unchanged DOCX/PDF pair. Files carry topic metadata, version `1.0`, status `canonical`, creation and update dates, public-source disclaimers, and source references. `knowledge/text/` contains mechanical Markdown companions, explicitly historical and unverified as current. See `docs/knowledge-corpus-review.md`.
+- `product/`: legacy manifest plus a reviewed capability brief and historical identity seed needing primary-source verification.
+- `prompts/`: an untested instruction draft, portable knowledge-forge workflow, complete KNOW17 generation-contract adaptation, six research reconciliation worksheets and three recovered-method worksheets. These are design artifacts, not tested behavior.
+- `rag-source/`: contains a dated research-lead register derived from historical rendered source captures. Leads are observed URLs, not verified current citations. A 35-meaning operating-pattern map links selected source ranges to private historical edition blocks. Raw source and the full research editions remain private outside Git.
+- `tests/`: reserved for future executable tests. `eval/` contains manual evaluation designs and a question bank; no model-run results are established.
+- `build/`: reserved for build packs and scripts; currently contains only `.gitkeep`.
+- `gtm/`: `web/landing-content-draft.md` is newly authored portable page copy, not recovered HTML or a deployed page. Other channel folders remain placeholders.
+- `docs/` contains a source/asset/value ledger, review, thread extract, corpus guide, and session handoff. `ops/` includes the harvest workflow, companion extraction/check script, and existing technology checker. `assets/reference/` holds the recovered icon and provenance; legal clearance is unresolved. `releases/` remains a placeholder. Raw chats, full source-ID crosswalks, and Notion receipts stay in the durable private archive outside Git.
+- `.github/`: weekly technology drift workflow and Dependabot configuration.
+- `.agents/skills/`: seeded local Agent Skills. These are repository support capabilities, not the product runtime. The cataloger skill is for explicit skill inventory or catalog work.
+- `product/gpt_manifest.yaml`: intended GPT metadata and planned folder map. It is not evidence that those folders or links are implemented or current.
+- `.replit`: Replit metadata only. It declares a stable Nix channel and best-effort fallback stack, but no run command or application entry point.
+- `CLAUDE.md`: a short pointer to this file. Keep it as a pointer unless Claude-specific guidance is genuinely needed.
+
+The implemented architecture is therefore a static artifact collection. The intended future flow is knowledge corpus -> prompts and retrieval sources -> tests and evaluations -> build or release artifacts -> downstream content surfaces. No executable implementation of that flow was found.
+
+## Knowledge handling rules
+
+- Treat the DOCX and PDF of each topic as a pair. Do not update one without checking whether its counterpart must also be regenerated or replaced.
+- Preserve the metadata, public-source disclaimer, citations, and unofficial-resource disclosure when revising knowledge files.
+- Verify time-sensitive claims before publication or current-answer use. All 17 knowledge files report `created_date` and `last_updated` as `2026-01-02`, and several include claims about 2025 or 2026 products, litigation, or partnerships.
+- Use `KNOW17` primarily for explicit questions about controversies, lawsuits, recalls, safety, ethics, or negative press. Keep it dormant for unrelated product and marketing questions.
+- Label allegations, reports, investigations, settlements, adjudications, remediation, and ongoing matters precisely. Do not speculate, defame, or imply wrongdoing beyond the cited source.
+- Resolve conflicting claims before treating them as canonical. For example, `KNOW01` describes ownership as Matt and Sherry McPherson family ownership, while `KNOW05` describes Matt McPherson as sole owner and CEO. The corpus also contains differing facility-size and mission wording. These are open source-reconciliation issues, not facts to silently merge.
+- Do not present the knowledge corpus as an official Mathews Archery communication or imply endorsement.
+
+## Development and validation
+
+The repository has no application runtime or package manifest. The technology drift checker is a standard-library-only Python script at `ops/check-technology-updates.py`, run by `.github/workflows/check-technology-updates.yml`.
+
+Verified repository checks:
+
+- Before this guidance change, `git status --short --branch` showed a clean `main` branch tracking `origin/main`.
+- `git remote -v` points to the repository listed above.
+- `git ls-files` confirms the static scaffold, 17 DOCX/PDF knowledge pairs, and seeded local skills.
+- `textutil -convert txt -stdout knowledge/<file>.docx` successfully extracts text from the knowledge DOCX files on macOS.
+- `pdfinfo knowledge/<file>.pdf` successfully reports PDF metadata for the knowledge PDFs.
+- `git diff --check` is the minimum formatting check for repository text changes.
+
+For a knowledge change, inspect both file formats, review citations and freshness, and record any unresolved source conflict. For an agent-guidance change, re-read `AGENTS.md` and `CLAUDE.md`, run `git diff --check`, and inspect `git status`. For technology changes, update `docs/technology-inventory.md` and run `python ops/check-technology-updates.py`.
+
+Verified companion commands: `python3 ops/extract-knowledge-text.py --write` generates the 17 historical Markdown companions; `python3 ops/extract-knowledge-text.py` checks them without writing. These commands use only the standard library and do not modify original pairs. They do not validate factual currency, PDF equivalence, or behavior.
+
+Do not invent a run, test, build, or deployment command until the corresponding implementation exists and the command has been verified.
+
+## Safe change conventions
+
+- Make the smallest change that satisfies the request. Preserve existing user changes and do not use destructive version-control commands.
+- `AGENTS.md` is the canonical repository guide. Update it when the structure, commands, status, or operating rules change.
+- Keep `CLAUDE.md` as `@AGENTS.md` unless a real Claude-specific requirement appears.
+- Use clear topic filenames matching the existing `BRG12-KNOW##-...-v##a` pattern for new knowledge artifacts.
+- Keep generated content free of em dashes. Preserve standalone punchy lines rather than folding them into paragraphs. Apply the ROY principle: explanation should earn its space.
+- AutoCAD version is R10 and is locked when AutoCAD material is introduced.
+- Never add secrets, credentials, private personal information, or unsupported production claims.
+- The repository documents no branch or release strategy beyond the current `main` branch tracking `origin/main`. Ask the owner or inspect project history before introducing a new branching or release convention.
+
+## Known gaps and open questions
+
+Important current gaps:
+
+- Product and prompt drafts and manual evaluation designs now exist. No retrieval pipeline, executable product tests, measured evaluation results, build pack, release implementation, or deployment exists.
+- `README.md` describes planned folders as if they support active workflows. Treat it as a project vision and scaffold description until those folders contain implementation.
+- `product/gpt_manifest.yaml` contains a repository URL and several placeholder-style links that do not match the local repository or the canonical links in `README.md`. Do not use it as the routing source without owner review.
+- Ownership, facility scale, founding-location details, product dates, and other claims need source reconciliation and freshness review before publication.
+- No owner-confirmed project status, branch policy, release policy, runtime, deployment target, or acceptance criteria is documented.
+
+When resolving these gaps, prefer evidence from current repository files and cited primary sources. Mark conclusions as confirmed, inferred, or unknown rather than filling gaps with assumptions.
+
+## Keeping this guide current
+
+Update this file when a planned surface becomes implemented, when a verified command is added or removed, when the knowledge schema or safety rules change, or when repository ownership and release conventions are confirmed. Keep status statements tied to observable files or executable checks.
+
+The source ledger records a separate S25 archive after its per-source gates on 2026-10-17. Retain every remaining source archive hold. The 2026-10-22 harvest closeout authorizes no new source archive; it remains blocked on original payload and source-completeness evidence. A preservation score never authorizes archiving. Keep full KNOW17 research editions private, inert, and outside ordinary product/marketing retrieval. All 17 observed Project-shared original DOCX files are preserved in the established private source lane; they are not evidence of equality with same-name Chat attachments.
+
+Per-source Work intakes are temporary. Follow `ops/project-harvest-workflow.md`: after complete pasted input, local preservation, deduplication, Notion routing and coverage verification, step 6 archives the legacy Chat, step 7 commits/pushes artifacts and verifies GitHub, and step 8 archives the Work intake. Retain the intake on any prerequisite or push failure. This lifecycle does not clear current source holds or authorize a batch, deletion or automatic reopening of archived intakes.
+
+No em dashes in generated content.
+
+## Imported Claude Cowork project instructions

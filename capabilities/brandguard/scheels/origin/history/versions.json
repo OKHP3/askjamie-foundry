@@ -311,6 +311,15 @@
       "e8bc265b59bf0bd78797cc6aa2f05f49beb07c85",
       "f730ee20c1dd7e2eb464250a49f7104f07b6e425",
       "fd8748d81be5235decef1170f6dae1a309406f1e"
+    ],
+    "s40": [
+      "9d5144d43a18a3be69c8001345f4612bea64f3c5"
+    ],
+    "s41": [
+      "e5a08ae24c2e44bda77ae141e0c406689f98a82b"
+    ],
+    "s42": [
+      "b0527d13cbfa792b61bce7171f924c1d063e5da7"
     ]
   },
   "versions": [
@@ -1247,6 +1256,23 @@
       ]
     },
     {
+      "git_blob": "2a3b3c60bd77909b20ad9b6f8a86d18098f92c0a",
+      "sha256": "d0e9ccb95df11b2cdf8fc191b1654e8e28aa065caa68efed81e4d98a6704c877",
+      "size": 3136,
+      "category": "repository-governance",
+      "stored_at": "objects/2a3b3c60bd77909b20ad9b6f8a86d18098f92c0a.md",
+      "source_history": [
+        "unreferenced-object"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "tree_set": "s40",
+          "mode": "100644"
+        }
+      ]
+    },
+    {
       "git_blob": "2c1426523f73f4d4f45c2e0d35424b14ef6f0d76",
       "sha256": "2c28158c2d9934659d03cdc9f19fc5f608d28bad5cdc3557a258c69bc1fdc2b5",
       "size": 5472,
@@ -2045,6 +2071,23 @@
         {
           "path": ".agents/skills/okhp3-thread-extract-chatgpt/SKILL.md",
           "commit_set": "s1"
+        }
+      ]
+    },
+    {
+      "git_blob": "4d874d6fa693019612deed4119089a50a7b922ce",
+      "sha256": "9fe928576cfe88a45e789e659df63b0aa38cc2c05c85d8a4b5eb0488f92ffe3f",
+      "size": 618,
+      "category": "repository-governance",
+      "stored_at": "objects/4d874d6fa693019612deed4119089a50a7b922ce.md",
+      "source_history": [
+        "pull-request"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s41",
+          "mode": "100644"
         }
       ]
     },
@@ -3177,6 +3220,23 @@
         {
           "path": ".agents/skills/thread-extract-ws/iteration-2/eval-2-rapid/with_skill/grading.json",
           "commit_set": "s7"
+        }
+      ]
+    },
+    {
+      "git_blob": "78a0161c44bac49147b3dfb06266d860f00af165",
+      "sha256": "6f13ba578b9e7c8eea5fead0044c729ccb7e7fba44a11f765541dd70e8d61f65",
+      "size": 2498,
+      "category": "repository-governance",
+      "stored_at": "objects/78a0161c44bac49147b3dfb06266d860f00af165.md",
+      "source_history": [
+        "main-history"
+      ],
+      "source_paths": [
+        {
+          "path": "README.md",
+          "commit_set": "s42",
+          "mode": "100644"
         }
       ]
     },

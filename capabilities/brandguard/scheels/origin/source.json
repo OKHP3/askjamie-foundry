@@ -3,9 +3,9 @@
   "source_commit": "b888027d8b19c40317d3038b6afa83c44255064b",
   "source_tree": "bc5d734000ed9b0afabb5989e12acbc77f6e1b60",
   "destination": "capabilities/brandguard/scheels",
-  "stored_tree": "940b96933a664510ab040f7de1b00d08d8d61e65",
+  "stored_tree": "bc5d734000ed9b0afabb5989e12acbc77f6e1b60",
   "source_files": 254,
-  "stored_files": 252,
-  "stored_bytes": 2959294,
-  "path_mode_size_sha256_digest": "fb0ed32b2287b7c0026dfbebe21cfd3b1a876f76bbf77e904dd3eaf64f8a3732"
+  "stored_files": 254,
+  "stored_bytes": 3073112,
+  "path_mode_size_sha256_digest": "6bd5dfe6b98947f05f13bfbaf5455edf6e51d085b2a7065b0ba07eec103b3978"
 }
